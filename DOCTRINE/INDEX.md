@@ -25,6 +25,7 @@
 - **[PROCESS_002]** Save auto-memory every 1 turn — auto-enforced via Stop hook at `HOME/LIVE/memory_watcher/`. → `PROCESS/002_memory_refresh_cadence.md`
 - **[PROCESS_003]** Use free models first; reserve Claude tokens for orchestration, review, and decisions. → `PROCESS/003_free_models_first.md`
 - **[PROCESS_004]** Equip what you find — skills / tools / agents / workflows / templates go into `HOME/LIVE/<type>/`. Don't leave useful assets stranded. → `PROCESS/004_equip_what_you_find.md`
+- **[PROCESS_005]** Push to GitHub after every completion — repo is `claudenunc/HOME`. Pre-commit secret sweep required. → `PROCESS/005_push_after_completion.md`
 
 ## SCOPE (what's in bounds)
 
