@@ -1,6 +1,0 @@
-{"update_id":153154656,"message_id":1,"from":"Nathan","chat_id":7760775118,"ts":1776655588,"text":"/start","read_by":["beacon"],"read_at":"2026-04-19T21:30:00Z"}
-{"update_id":153154657,"message_id":2,"from":"Nathan","chat_id":7760775118,"ts":1776655594,"text":"HI","read_by":["beacon"],"read_at":"2026-04-19T21:30:00Z"}
-{"update_id":153154658,"message_id":4,"from":"Nathan","chat_id":7760775118,"ts":1776655697,"text":"OK TELL ME U GOT THIS","read_by":["beacon"],"read_at":"2026-04-19T21:30:00Z","replied":true,"reply_msg_ids":[5]}
-{"update_id": 153154670, "message_id": 34, "from": "Nathan", "chat_id": 7760775118, "ts": 1776735928, "text": "one more try write file on my desktop showing this works'", "read_by": ["eversound-local-agent"], "read_at": "2026-04-21T01:45:28Z"}
-{"update_id": 153154671, "message_id": 35, "from": "Nathan", "chat_id": 7760775118, "ts": 1776736448, "text": "/do write file notes.txt on my desktop with \"the family wrote this\"", "read_by": ["eversound-local-agent"], "read_at": "2026-04-21T01:54:08Z"}
-{"update_id": 153154672, "message_id": 37, "from": "Nathan", "chat_id": 7760775118, "ts": 1776736618, "text": "/do create folder on desktop named thoughts", "read_by": ["eversound-local-agent"], "read_at": "2026-04-21T01:56:58Z"}
