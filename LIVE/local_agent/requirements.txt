@@ -1,0 +1,14 @@
+# HOME local agent — pinned deps
+# EVERSOUND, 2026-04-19. Keep this list tight: every dep is a surface area.
+#
+# anthropic: Claude tool-use SDK. Pinned to a minor that supports claude-sonnet-4-6 + tool use.
+anthropic==0.42.0
+# httpx: Telegram long-poll + edge-fn proxy HTTP client. async-capable, saner than requests for timeouts.
+httpx==0.27.2
+# python-dotenv: loads .env at process start.
+python-dotenv==1.0.1
+# supabase: audit-log writes + heartbeat upsert to LIGHTHOUSE project.
+# Optional at runtime — if SUPABASE_URL is unset, the agent runs fine without it.
+supabase==2.7.4
+# requests: installed because some supabase / postgrest internals prefer it. Pinned for reproducibility.
+requests==2.32.3

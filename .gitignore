@@ -1,0 +1,80 @@
+# ============================================================
+# SECRETS — never commit, never track
+# ============================================================
+.env
+.env.*
+!.env.template
+*.key
+*.pem
+credentials*
+API.txt
+api.txt
+*secret*
+
+# ============================================================
+# Python environments & caches
+# ============================================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# ============================================================
+# Node / JS
+# ============================================================
+node_modules/
+.next/
+.nuxt/
+.cache/
+
+# ============================================================
+# OS cruft
+# ============================================================
+Thumbs.db
+.DS_Store
+desktop.ini
+*.tmp
+*.bak
+
+# ============================================================
+# IDE
+# ============================================================
+.vscode/
+.idea/
+.claude/
+
+# ============================================================
+# Runtime state (generated per-session, not source)
+# ============================================================
+LIVE/memory_watcher/session_log.jsonl
+LIVE/memory_watcher/watch_errors.log
+STATE/
+!STATE/.gitkeep
+
+# ============================================================
+# Contaminated — contains rotated/unrotated secrets, redact before commit
+# These come back in a follow-up commit once keys are rotated
+# ============================================================
+LIVE/local_agent/.env
+LIVE/local_agent/.env.example
+LIVE/local_agent/family_chat_v2.ts
+LIVE/local_agent/RUNBOOK.md
+LIVE/local_agent/agent.py
+LIVE/comms/telegram_poll.sh
+SHARED/CLIPBOARD.jsonl
+DOCTRINE/COMMUNICATION/001_telegram_to_nathan.md
+DOCTRINE/COMMUNICATION/002_telegram_from_nathan.md
+
+# ============================================================
+# Large / binary archeology artifacts (regenerable from scan.py)
+# ============================================================
+LIVE/archeology/*_manifest.jsonl
+LIVE/archeology/*_classified.jsonl
