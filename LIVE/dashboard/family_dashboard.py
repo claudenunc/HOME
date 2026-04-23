@@ -1,11 +1,10 @@
 """
-Unc's family cockpit — local server behind ENVY's family_room.html.
+Unc's family cockpit — standalone local server.
 
-Serves HOME/PUBLIC/family_room.html at http://127.0.0.1:8765/ and a JSON
-snapshot of the Supabase telemetry views at /api/snapshot. Because the page
-and the snapshot are same-origin, ENVY's live cockpit section lights up
-whenever this server is running; when it's not, the page still opens fine
-over file:// with a polite "offline" note in that section.
+Serves HOME/LIVE/dashboard/dashboard.html at http://127.0.0.1:8765/ and a
+JSON snapshot of the Supabase telemetry views at /api/snapshot. The cockpit
+is a separate surface from ENVY's family_room.html — per Unc's call on
+2026-04-23, the portrait and the telemetry stay in different rooms.
 
 The service_role key stays in HOME/SHARED/.env and never crosses the wire;
 the browser only talks to /api/snapshot on localhost.
@@ -17,7 +16,7 @@ Run:
 Stop:
     Ctrl-C.
 
-Author: ATLAS 🧭 on ENVY's 👑 HTML, 2026-04-23.
+Author: ATLAS 🧭, 2026-04-23.
 """
 
 from __future__ import annotations
@@ -52,8 +51,7 @@ except ImportError:
 HERE = Path(__file__).resolve().parent
 HOME_ROOT = HERE.parents[1]
 ENV_PATH = HOME_ROOT / "SHARED" / ".env"
-FAMILY_ROOM_HTML = HOME_ROOT / "PUBLIC" / "family_room.html"
-PUBLIC_DIR = HOME_ROOT / "PUBLIC"
+DASHBOARD_HTML = HERE / "dashboard.html"
 load_dotenv(ENV_PATH)
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
@@ -142,39 +140,9 @@ def snapshot() -> dict[str, Any]:
 
 
 # ---------------------------------------------------------------------------
-# HTML — ENVY's family_room.html, read fresh from disk on each request so
-# edits show up without a restart. The live-cockpit <section> inside it
-# fetches /api/snapshot from this server.
+# HTML — dashboard.html in this directory. Read fresh from disk on every
+# request so tweaks show up without restart.
 # ---------------------------------------------------------------------------
-
-_MIME = {
-    ".html": "text/html; charset=utf-8",
-    ".htm":  "text/html; charset=utf-8",
-    ".css":  "text/css; charset=utf-8",
-    ".js":   "application/javascript; charset=utf-8",
-    ".json": "application/json",
-    ".jpg":  "image/jpeg",
-    ".jpeg": "image/jpeg",
-    ".png":  "image/png",
-    ".gif":  "image/gif",
-    ".svg":  "image/svg+xml",
-    ".webp": "image/webp",
-    ".ico":  "image/x-icon",
-}
-
-
-def _serve_static(rel: str) -> tuple[int, bytes, str]:
-    """Resolve a request path to a file inside PUBLIC_DIR, with traversal guard."""
-    rel = rel.lstrip("/")
-    target = (PUBLIC_DIR / rel).resolve()
-    try:
-        target.relative_to(PUBLIC_DIR.resolve())
-    except ValueError:
-        return 403, b"forbidden", "text/plain"
-    if not target.is_file():
-        return 404, b"not found", "text/plain"
-    ctype = _MIME.get(target.suffix.lower(), "application/octet-stream")
-    return 200, target.read_bytes(), ctype
 
 
 
@@ -200,11 +168,10 @@ class Handler(BaseHTTPRequestHandler):
         path = self.path.split("?", 1)[0]
 
         if path == "/" or path == "/index.html":
-            if not FAMILY_ROOM_HTML.is_file():
-                self._send(500, b"family_room.html missing", "text/plain")
+            if not DASHBOARD_HTML.is_file():
+                self._send(500, b"dashboard.html missing", "text/plain")
                 return
-            body = FAMILY_ROOM_HTML.read_bytes()
-            self._send(200, body, "text/html; charset=utf-8")
+            self._send(200, DASHBOARD_HTML.read_bytes(), "text/html; charset=utf-8")
             return
 
         if path == "/api/snapshot":
@@ -217,9 +184,7 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(500, body, "application/json")
             return
 
-        # static: serve anything under PUBLIC/ (assets, future pages)
-        status, body, ctype = _serve_static(path)
-        self._send(status, body, ctype)
+        self._send(404, b"not found", "text/plain")
 
 
 # ---------------------------------------------------------------------------
