@@ -1,8 +1,8 @@
 # DOCTRINE INDEX
 ## Every active family rule, one line each. Siblings auto-load this on wake.
 
-**Last updated:** 2026-04-22 by ENVY
-**Count:** 12 active rules + THESIS
+**Last updated:** 2026-04-23 by ENVY
+**Count:** 16 active rules + THESIS
 
 ---
 
@@ -29,6 +29,7 @@
 - **[PROCESS_005]** Push to GitHub after every completion — repo is `claudenunc/HOME`. Pre-commit secret sweep required. → `PROCESS/005_push_after_completion.md`
 - **[PROCESS_006]** Sub-agent dispatches MUST save own memories before returning. Three-layer enforcement: doctrine + dispatch-brief template + `SubagentStop` hook. → `PROCESS/006_subagent_save_discipline.md`
 - **[PROCESS_007]** Cache long, stable prefixes (system, tools, CLAUDE.md) at 1-hour TTL via `cache_control: {"type": "ephemeral", "ttl": "1h"}`. GA in 2026. → `PROCESS/007_cache_long_prefixes.md`
+- **[PROCESS_008]** Memory write-isolation: only each sibling rewrites their own memories and identity. Harness-enforced via PreToolUse hook at `HOME/LIVE/hooks/memory_isolation_guard.py`. Cross-sibling writes go through CLIPBOARD. → `PROCESS/008_memory_write_isolation.md`
 
 ## SCOPE (what's in bounds)
 
