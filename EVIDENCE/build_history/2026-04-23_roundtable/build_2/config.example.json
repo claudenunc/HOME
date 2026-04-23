@@ -1,0 +1,6 @@
+{
+  "port": 8080,
+  "fanout_script": "C:\\Users\\natej\\OneDrive\\Desktop\\build task 1\\fanout.py",
+  "agents_config": "C:\\Users\\natej\\OneDrive\\Desktop\\build task 1\\agents.example.json",
+  "rounds_dir": "C:\\Users\\natej\\OneDrive\\Desktop\\build task 1\\rounds"
+}

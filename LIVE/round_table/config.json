@@ -1,0 +1,6 @@
+{
+  "port": 8080,
+  "fanout_script": "C:\\Users\\natej\\OneDrive\\Desktop\\HOME\\LIVE\\round_table\\fanout.py",
+  "agents_config": "C:\\Users\\natej\\OneDrive\\Desktop\\HOME\\LIVE\\round_table\\agents.json",
+  "rounds_dir": "C:\\Users\\natej\\OneDrive\\Desktop\\HOME\\LIVE\\round_table\\rounds"
+}

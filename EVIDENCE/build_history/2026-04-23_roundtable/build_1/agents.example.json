@@ -1,0 +1,19 @@
+{
+  "agents": [
+    {
+      "name": "alpha",
+      "emoji": "🔵",
+      "system_prompt_file": "test_prompts/alpha.md"
+    },
+    {
+      "name": "bravo",
+      "emoji": "🟢",
+      "system_prompt_file": "test_prompts/bravo.md"
+    },
+    {
+      "name": "charlie",
+      "emoji": "🟣",
+      "system_prompt_file": "test_prompts/charlie.md"
+    }
+  ]
+}

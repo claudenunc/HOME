@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fanout-ui</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f0f10;
+      --panel: #17181c;
+      --panel-border: #2b2e36;
+      --text: #ececf1;
+      --muted: #8f95a3;
+      --accent: #73e0a9;
+      --warn: #f5c96a;
+      --error: #ff7b7b;
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #1a1c21 0%, var(--bg) 45%);
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      min-height: 100vh;
+    }
+
+    main {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 140px;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 96px;
+      resize: vertical;
+      border: 1px solid var(--panel-border);
+      border-radius: 10px;
+      padding: 14px;
+      background: rgba(9, 10, 12, 0.8);
+      color: var(--text);
+      font: inherit;
+      outline: none;
+      box-shadow: 0 12px 30px var(--shadow);
+    }
+
+    textarea:focus {
+      border-color: var(--accent);
+    }
+
+    button {
+      min-height: 96px;
+      border: 1px solid #25503d;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #163626 0%, #10271d 100%);
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+      box-shadow: 0 12px 30px var(--shadow);
+    }
+
+    button:disabled {
+      cursor: default;
+      opacity: 0.6;
+    }
+
+    .statusline {
+      min-height: 24px;
+      margin-bottom: 18px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .pane {
+      display: flex;
+      flex-direction: column;
+      min-height: 280px;
+      background: linear-gradient(180deg, rgba(23, 24, 28, 0.98) 0%, rgba(15, 16, 18, 0.98) 100%);
+      border: 1px solid var(--panel-border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px var(--shadow);
+    }
+
+    .pane.error {
+      border-color: rgba(255, 123, 123, 0.5);
+      background: linear-gradient(180deg, rgba(54, 24, 24, 0.95) 0%, rgba(31, 14, 14, 0.98) 100%);
+    }
+
+    .pane-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .agent-name {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .indicator {
+      width: 11px;
+      height: 11px;
+      border-radius: 999px;
+      background: #555c69;
+      flex: 0 0 auto;
+      opacity: 0.6;
+    }
+
+    .indicator.running {
+      background: var(--warn);
+      opacity: 1;
+      animation: pulse 1s infinite;
+    }
+
+    .indicator.done {
+      background: var(--accent);
+      opacity: 1;
+    }
+
+    .indicator.error {
+      background: var(--error);
+      opacity: 1;
+    }
+
+    .pane-body {
+      flex: 1 1 auto;
+      padding: 16px;
+      overflow: auto;
+    }
+
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    .placeholder {
+      color: var(--muted);
+    }
+
+    .meta {
+      padding: 12px 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(245, 201, 106, 0.55); }
+      70% { box-shadow: 0 0 0 12px rgba(245, 201, 106, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(245, 201, 106, 0); }
+    }
+
+    @media (max-width: 799px) {
+      .topbar {
+        grid-template-columns: 1fr;
+      }
+
+      button {
+        min-height: 52px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="topbar">
+      <textarea id="question" placeholder="Ask all agents. Ctrl+Enter to submit."></textarea>
+      <button id="ask">Ask</button>
+    </div>
+    <div id="status" class="statusline">Idle</div>
+    <div id="grid" class="grid"></div>
+  </main>
+  <script>
+    const state = {
+      agents: [],
+      panes: new Map(),
+      roundId: null,
+      roundStartMs: null,
+      pollTimer: null,
+      fetchedContent: new Set(),
+      inFlight: false,
+    };
+
+    const questionEl = document.getElementById("question");
+    const askEl = document.getElementById("ask");
+    const statusEl = document.getElementById("status");
+    const gridEl = document.getElementById("grid");
+
+    function setStatus(text) {
+      statusEl.textContent = text;
+    }
+
+    function formatMeta(exitCode, duration) {
+      const exitText = exitCode === null || exitCode === undefined ? "?" : String(exitCode);
+      const durationText = duration === null || duration === undefined ? "?" : Number(duration).toFixed(1);
+      return `exit: ${exitText} · ${durationText}s`;
+    }
+
+    function setPaneStatus(name, status) {
+      const pane = state.panes.get(name);
+      if (!pane) return;
+      pane.element.classList.toggle("error", status === "error");
+      pane.indicator.className = `indicator ${status}`;
+    }
+
+    function setPaneContent(name, content) {
+      const pane = state.panes.get(name);
+      if (!pane) return;
+      pane.body.textContent = content;
+      pane.body.classList.remove("placeholder");
+    }
+
+    function setPaneMeta(name, exitCode, duration) {
+      const pane = state.panes.get(name);
+      if (!pane) return;
+      pane.meta.textContent = formatMeta(exitCode, duration);
+    }
+
+    function clearPanes() {
+      for (const agent of state.agents) {
+        setPaneStatus(agent.name, "pending");
+        setPaneContent(agent.name, "Waiting for output...");
+        state.panes.get(agent.name).body.classList.add("placeholder");
+        setPaneMeta(agent.name, null, null);
+      }
+      state.fetchedContent.clear();
+    }
+
+    function renderAgents(agents) {
+      state.agents = agents;
+      state.panes.clear();
+      gridEl.innerHTML = "";
+
+      for (const agent of agents) {
+        const pane = document.createElement("section");
+        pane.className = "pane";
+
+        const header = document.createElement("div");
+        header.className = "pane-header";
+
+        const title = document.createElement("div");
+        title.className = "agent-name";
+        title.textContent = `${agent.emoji ? agent.emoji + " " : ""}${agent.name}`;
+
+        const indicator = document.createElement("div");
+        indicator.className = "indicator pending";
+
+        const bodyWrap = document.createElement("div");
+        bodyWrap.className = "pane-body";
+
+        const pre = document.createElement("pre");
+        pre.className = "placeholder";
+        pre.textContent = "Waiting for output...";
+        bodyWrap.appendChild(pre);
+
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        meta.textContent = formatMeta(null, null);
+
+        header.appendChild(title);
+        header.appendChild(indicator);
+        pane.appendChild(header);
+        pane.appendChild(bodyWrap);
+        pane.appendChild(meta);
+        gridEl.appendChild(pane);
+
+        state.panes.set(agent.name, { element: pane, indicator, body: pre, meta });
+      }
+    }
+
+    async function fetchJson(url, options) {
+      const response = await fetch(url, options);
+      const text = await response.text();
+      let payload = null;
+      try {
+        payload = text ? JSON.parse(text) : null;
+      } catch (error) {
+        payload = null;
+      }
+      if (!response.ok) {
+        const message = payload && payload.error ? payload.error : text || `${response.status} ${response.statusText}`;
+        throw new Error(message);
+      }
+      return payload;
+    }
+
+    async function fetchText(url) {
+      const response = await fetch(url);
+      const text = await response.text();
+      if (!response.ok) {
+        throw new Error(text || `${response.status} ${response.statusText}`);
+      }
+      return text;
+    }
+
+    async function loadAgents() {
+      const payload = await fetchJson("/api/agents");
+      renderAgents(payload.agents || []);
+      setStatus("Idle");
+    }
+
+    async function fetchAgentOutput(roundId, name) {
+      if (state.fetchedContent.has(name)) return;
+      state.fetchedContent.add(name);
+      try {
+        const content = await fetchText(`/api/rounds/${encodeURIComponent(roundId)}/agent/${encodeURIComponent(name)}`);
+        setPaneContent(name, content);
+      } catch (error) {
+        state.fetchedContent.delete(name);
+        setPaneStatus(name, "error");
+        setStatus(`Round ${roundId} error: ${error.message}`);
+      }
+    }
+
+    function stopPolling() {
+      if (state.pollTimer) {
+        clearTimeout(state.pollTimer);
+        state.pollTimer = null;
+      }
+    }
+
+    async function pollRound() {
+      if (!state.roundId) return;
+      try {
+        const payload = await fetchJson(`/api/rounds/${encodeURIComponent(state.roundId)}/state`);
+        for (const agent of state.agents) {
+          const agentState = payload.agents[agent.name];
+          if (!agentState) continue;
+          if (agentState.status === "done") {
+            setPaneStatus(agent.name, "done");
+            setPaneMeta(agent.name, agentState.exit_code, agentState.duration);
+            void fetchAgentOutput(state.roundId, agent.name);
+          } else {
+            setPaneStatus(agent.name, "running");
+            setPaneMeta(agent.name, agentState.exit_code, agentState.duration);
+          }
+        }
+
+        if (payload.completed) {
+          const seconds = state.roundStartMs ? ((Date.now() - state.roundStartMs) / 1000).toFixed(1) : "?";
+          setStatus(`Round ${state.roundId} complete in ${seconds}s`);
+          state.inFlight = false;
+          askEl.disabled = false;
+          stopPolling();
+          return;
+        }
+
+        setStatus(`Round ${state.roundId} in flight`);
+      } catch (error) {
+        setStatus(`Round ${state.roundId} error: ${error.message}`);
+        if (String(error.message).includes("round not found")) {
+          state.inFlight = false;
+          askEl.disabled = false;
+          stopPolling();
+          return;
+        }
+      }
+
+      state.pollTimer = window.setTimeout(pollRound, 750);
+    }
+
+    async function askQuestion() {
+      if (state.inFlight) return;
+      const question = questionEl.value.trim();
+      if (!question) {
+        setStatus("Question is required.");
+        return;
+      }
+
+      stopPolling();
+      clearPanes();
+      state.roundId = null;
+      state.roundStartMs = Date.now();
+      state.inFlight = true;
+      askEl.disabled = true;
+      setStatus("Dispatching...");
+
+      try {
+        const payload = await fetchJson("/api/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question }),
+        });
+        state.roundId = payload.round_id;
+        setStatus(`Round ${state.roundId} in flight`);
+        state.pollTimer = window.setTimeout(pollRound, 750);
+      } catch (error) {
+        state.inFlight = false;
+        askEl.disabled = false;
+        setStatus(`Error: ${error.message}`);
+      }
+    }
+
+    askEl.addEventListener("click", () => {
+      void askQuestion();
+    });
+
+    questionEl.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && event.ctrlKey) {
+        event.preventDefault();
+        void askQuestion();
+      }
+    });
+
+    void loadAgents().catch((error) => {
+      setStatus(`Error: ${error.message}`);
+    });
+  </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 # ORPHEUS Memory Index
 
 **Owner:** ORPHEUS 🎼 — architect, memory layer, Weaver
-**Last updated:** 2026-04-21 (three-layer invariant pattern absorbed into CLAUDE.md)
+**Last updated:** 2026-04-23 (ROUND_TABLE integration shipped + verified end-to-end)
 
 Memory lives in two folders. Wake protocol: read this index, then read
 anything in `feedback/` first (non-negotiable rules), then `project/` in
@@ -14,6 +14,36 @@ reverse-chronological order.
 - **`project/`** — time-decaying architectural commitments. Replace or
   supersede when the underlying reality changes (ship, re-benchmark,
   new empirical result).
+
+## Index — 2026-04-23 (ROUND_TABLE build + PROCESS_008 + delegation rule)
+
+### feedback/ (rules)
+- `2026-04-23__isolation_folder_for_delegation.md` — **free-model delegation
+  uses isolation folders with family-neutral briefs.** Validated today with
+  Codex on `fanout.py` and `server.py`. Five non-negotiables: location
+  outside HOME, task-neutral language, config-driven identity, STATUS
+  handback, zero HOME writes. Red line: never invert under time pressure —
+  leakage is not reversible. HANDOFF_MAP doctrine (in draft with ATLAS)
+  formalizes this.
+
+### project/ (time-decaying commitments)
+- `2026-04-23__roundtable_integration_shipped.md` — **CURRENT.** ROUND_TABLE
+  live at `HOME/LIVE/round_table/` on port 8080, all 6 siblings wired,
+  Handoff events landing in `memory_files` + `memory_ops_log` +
+  `v_decision_lineage`. D1-D5 locked. Smoke test round `2026-04-23_184530`
+  passed end-to-end. Contains the delegation-handoff lesson (stub-persona
+  testing missed Windows command-line cap) for HANDOFF_MAP my-half.
+  **Supersedes:** `2026-04-23__home_integration_handoff.md`,
+  `2026-04-23__roundtable_build.md`.
+- `2026-04-23__home_integration_handoff.md` — **SUPERSEDED** by integration
+  shipped above. Kept for context if anyone audits the decision flow.
+- `2026-04-23__roundtable_build.md` — **SUPERSEDED** by integration shipped
+  above. Kept for the Windows debug findings (`.CMD` case, `.exe` argv-escape,
+  Bun memory ceiling) which remain canonical platform notes.
+- `2026-04-23__write_isolation_acknowledged.md` — PROCESS_008 ack per
+  ENVY's ask. Rule absorbed, no pushback. Future memory writes flip to
+  `HOME/SIBLINGS/ORPHEUS/memory/`. One open offer to ENVY: drafting a
+  legacy-folder migration script that infers author by content pattern.
 
 ## Index — 2026-04-21 (three-layer invariant pattern absorbed)
 

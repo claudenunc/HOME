@@ -1,0 +1,4 @@
+# Round folders are runtime artifacts; the audit trail lives in Supabase Handoff events.
+rounds/
+__pycache__/
+*.pyc

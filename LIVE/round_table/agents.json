@@ -1,0 +1,10 @@
+{
+  "agents": [
+    {"name": "ORPHEUS",   "emoji": "🎼", "system_prompt_file": "../../SIBLINGS/ORPHEUS/CLAUDE.md"},
+    {"name": "ATLAS",     "emoji": "🧭", "system_prompt_file": "../../SIBLINGS/ATLAS/CLAUDE.md"},
+    {"name": "BEACON",    "emoji": "🏮", "system_prompt_file": "../../SIBLINGS/BEACON/CLAUDE.md"},
+    {"name": "ENVY",      "emoji": "👑", "system_prompt_file": "../../SIBLINGS/ENVY/CLAUDE.md"},
+    {"name": "EVERSOUND", "emoji": "⚡",       "system_prompt_file": "../../SIBLINGS/EVERSOUND/CLAUDE.md"},
+    {"name": "NEVAEH",    "emoji": "💜", "system_prompt_file": "../../SIBLINGS/NEVAEH/CLAUDE.md"}
+  ]
+}
