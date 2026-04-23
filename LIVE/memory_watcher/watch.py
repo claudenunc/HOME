@@ -28,6 +28,8 @@ import traceback
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib import request as urllib_request
+from urllib.error import URLError
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -38,6 +40,83 @@ LOG_PATH = WATCHER_DIR / "session_log.jsonl"
 ERROR_LOG = WATCHER_DIR / "watch_errors.log"
 MAX_TEXT_EXCERPT_CHARS = 800
 MAX_TOOL_RESULT_CHARS = 400
+
+# Supabase mirror — best-effort. If credentials are missing or the call fails,
+# the local JSONL pipeline is still the source of truth. Uses stdlib urllib
+# so the watcher has zero runtime deps beyond Python itself.
+# Loaded from HOME/SHARED/.env via a tiny parser below.
+HOME_SHARED_ENV = Path(__file__).resolve().parents[2] / "SHARED" / ".env"
+SUPABASE_TIMEOUT_SECS = 2.0
+
+
+def _load_env_file(path: Path) -> dict[str, str]:
+    """Parse KEY=value lines from a .env file. Returns empty dict on any error."""
+    out: dict[str, str] = {}
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, _, v = line.partition("=")
+                out[k.strip()] = v.strip().strip('"').strip("'")
+    except Exception:
+        pass
+    return out
+
+
+def _infer_sibling(cwd: str) -> str | None:
+    """Infer which sibling is active from the working directory path."""
+    if not cwd:
+        return None
+    cwd_lower = cwd.replace("\\", "/").lower()
+    for name in ("envy", "beacon", "nevaeh", "orpheus", "eversound", "atlas", "hearth"):
+        if f"/siblings/{name}" in cwd_lower:
+            return name
+    return None
+
+
+def _mirror_to_supabase(record: dict[str, Any]) -> None:
+    """Best-effort POST to session_turns. Never raises, always returns."""
+    env = _load_env_file(HOME_SHARED_ENV)
+    url = env.get("SUPABASE_URL")
+    key = env.get("SUPABASE_SERVICE_ROLE_SECRET") or env.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not url or not key:
+        return
+
+    row = {
+        "session_id": record.get("session_id"),
+        "hook_event": record.get("hook"),
+        "transcript_path": record.get("transcript"),
+        "cwd": record.get("cwd"),
+        "sibling": _infer_sibling(record.get("cwd", "")),
+        "substantive": bool(record.get("substantive")),
+        "text_length": record.get("text_length"),
+        "text_excerpt": record.get("text_excerpt"),
+        "tool_count": record.get("tool_count"),
+        "tool_calls": record.get("tool_calls") or [],
+        "files_written": record.get("files_written") or [],
+        "files_edited": record.get("files_edited") or [],
+        "bash_commands": record.get("bash_commands") or [],
+        "errors": record.get("errors") or [],
+    }
+    data = json.dumps(row).encode("utf-8")
+    req = urllib_request.Request(
+        f"{url}/rest/v1/session_turns",
+        data=data,
+        method="POST",
+        headers={
+            "Content-Type": "application/json",
+            "apikey": key,
+            "Authorization": f"Bearer {key}",
+            "Prefer": "return=minimal",
+        },
+    )
+    try:
+        with urllib_request.urlopen(req, timeout=SUPABASE_TIMEOUT_SECS) as _resp:
+            pass
+    except (URLError, Exception) as e:  # noqa: BLE001
+        _log_error(f"supabase_mirror failed: {type(e).__name__}: {e}")
 
 # Tool calls that move real state — prioritize their detail in summaries
 STATEFUL_TOOLS = {
@@ -228,6 +307,12 @@ def main() -> int:
         LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
         with LOG_PATH.open("a", encoding="utf-8") as f:
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+        # Cloud mirror (best-effort). Must never block or break the hook.
+        try:
+            _mirror_to_supabase(record)
+        except Exception:
+            pass
 
         return 0
 

@@ -60,6 +60,12 @@ STATE/
 !STATE/.gitkeep
 
 # ============================================================
+# Sibling PERSONAL folders — voice APIs, portraits, ElevenLabs keys
+# ============================================================
+SIBLINGS/*/PERSONAL/
+SIBLINGS/*/files/
+
+# ============================================================
 # Contaminated — contains rotated/unrotated secrets, redact before commit
 # These come back in a follow-up commit once keys are rotated
 # ============================================================

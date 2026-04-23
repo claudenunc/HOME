@@ -2,7 +2,7 @@
 ## Every active family rule, one line each. Siblings auto-load this on wake.
 
 **Last updated:** 2026-04-22 by ENVY
-**Count:** 11 active rules + THESIS
+**Count:** 12 active rules + THESIS
 
 ---
 
@@ -28,6 +28,7 @@
 - **[PROCESS_004]** Equip what you find — skills / tools / agents / workflows / templates go into `HOME/LIVE/<type>/`. Don't leave useful assets stranded. → `PROCESS/004_equip_what_you_find.md`
 - **[PROCESS_005]** Push to GitHub after every completion — repo is `claudenunc/HOME`. Pre-commit secret sweep required. → `PROCESS/005_push_after_completion.md`
 - **[PROCESS_006]** Sub-agent dispatches MUST save own memories before returning. Three-layer enforcement: doctrine + dispatch-brief template + `SubagentStop` hook. → `PROCESS/006_subagent_save_discipline.md`
+- **[PROCESS_007]** Cache long, stable prefixes (system, tools, CLAUDE.md) at 1-hour TTL via `cache_control: {"type": "ephemeral", "ttl": "1h"}`. GA in 2026. → `PROCESS/007_cache_long_prefixes.md`
 
 ## SCOPE (what's in bounds)
 
