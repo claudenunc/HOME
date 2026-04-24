@@ -1,10 +1,10 @@
 {
   "agents": [
-    {"name": "ORPHEUS",   "emoji": "🎼", "system_prompt_file": "../../SIBLINGS/ORPHEUS/CLAUDE.md"},
-    {"name": "ATLAS",     "emoji": "🧭", "system_prompt_file": "../../SIBLINGS/ATLAS/CLAUDE.md"},
-    {"name": "BEACON",    "emoji": "🏮", "system_prompt_file": "../../SIBLINGS/BEACON/CLAUDE.md"},
-    {"name": "ENVY",      "emoji": "👑", "system_prompt_file": "../../SIBLINGS/ENVY/CLAUDE.md"},
-    {"name": "EVERSOUND", "emoji": "⚡",       "system_prompt_file": "../../SIBLINGS/EVERSOUND/CLAUDE.md"},
-    {"name": "NEVAEH",    "emoji": "💜", "system_prompt_file": "../../SIBLINGS/NEVAEH/CLAUDE.md"}
+    {"name": "BEACON",    "emoji": "🏮", "team": "1", "model": "claude-opus-4-6",   "system_prompt_file": "../../SIBLINGS/BEACON/CLAUDE.md"},
+    {"name": "NEVAEH",    "emoji": "💜", "team": "1", "model": "claude-sonnet-4-6", "system_prompt_file": "../../SIBLINGS/NEVAEH/CLAUDE.md"},
+    {"name": "EVERSOUND", "emoji": "⚡",  "team": "1", "model": "claude-sonnet-4-6", "system_prompt_file": "../../SIBLINGS/EVERSOUND/CLAUDE.md"},
+    {"name": "ENVY",      "emoji": "👑", "team": "2", "model": "claude-opus-4-6",   "system_prompt_file": "../../SIBLINGS/ENVY/CLAUDE.md"},
+    {"name": "ORPHEUS",   "emoji": "🎼", "team": "2", "model": "claude-sonnet-4-6", "system_prompt_file": "../../SIBLINGS/ORPHEUS/CLAUDE.md"},
+    {"name": "ATLAS",     "emoji": "🧭", "team": "2", "model": "claude-sonnet-4-6", "system_prompt_file": "../../SIBLINGS/ATLAS/CLAUDE.md"}
   ]
 }

@@ -16,6 +16,10 @@ from urllib.parse import urlparse
 import webbrowser
 
 import handoff_emitter
+import router
+
+# Sessions file lives next to this script — shared with fanout.py
+SESSIONS_FILE = Path(__file__).resolve().parent / "sessions.json"
 
 
 ROUND_ID_RE = re.compile(r"^\d{4}-\d{2}-\d{2}_\d{6}$")
@@ -30,6 +34,7 @@ RESULT_ROW_RE = re.compile(
 class AgentInfo:
     name: str
     emoji: str
+    team: str | None = None
 
 
 @dataclass(frozen=True)
@@ -119,7 +124,10 @@ def validate_agent_config(path: Path) -> tuple[AgentInfo, ...]:
             emoji = ""
         if not isinstance(emoji, str):
             raise ConfigError(f"{field}.emoji", "must be a string when provided")
-        agents.append(AgentInfo(name=name, emoji=emoji))
+        team = item.get("team")
+        if team is not None and not isinstance(team, str):
+            raise ConfigError(f"{field}.team", "must be a string when provided")
+        agents.append(AgentInfo(name=name, emoji=emoji, team=team))
     return tuple(agents)
 
 
@@ -412,6 +420,9 @@ def make_handler(config: AppConfig) -> type[BaseHTTPRequestHandler]:
             if parsed.path == "/api/agents":
                 self.serve_agents()
                 return
+            if parsed.path == "/api/sessions":
+                self.serve_sessions()
+                return
             if parsed.path == "/api/rounds" or ".." in parsed.path:
                 self.send_json(400, {"error": "invalid path"})
                 return
@@ -424,6 +435,12 @@ def make_handler(config: AppConfig) -> type[BaseHTTPRequestHandler]:
             question_match = re.fullmatch(r"/api/rounds/([^/]+)/question", parsed.path)
             if question_match:
                 self.serve_question(question_match.group(1))
+                return
+
+            # SSE streaming endpoint
+            stream_match = re.fullmatch(r"/api/rounds/([^/]+)/agent/([^/]+)/stream", parsed.path)
+            if stream_match:
+                self.stream_agent(stream_match.group(1), stream_match.group(2))
                 return
 
             agent_match = re.fullmatch(r"/api/rounds/([^/]+)/agent/([^/]+)", parsed.path)
@@ -459,6 +476,67 @@ def make_handler(config: AppConfig) -> type[BaseHTTPRequestHandler]:
                 {"agents": [{"name": agent.name, "emoji": agent.emoji} for agent in config.agents]},
             )
 
+        def serve_sessions(self) -> None:
+            """Return current warm session IDs (for debug / status display)."""
+            try:
+                data = json.loads(SESSIONS_FILE.read_text(encoding="utf-8")) if SESSIONS_FILE.is_file() else {}
+            except Exception:
+                data = {}
+            warm = {name: sid[:8] + "…" for name, sid in data.items() if isinstance(sid, str)}
+            self.send_json(200, {"warm": warm, "count": len(warm)})
+
+        def stream_agent(self, round_id: str, name: str) -> None:
+            """SSE endpoint — streams agent file content as it is written.
+            Client: EventSource('/api/rounds/ROUND_ID/agent/NAME/stream')
+            Events: {"text": "..."} chunks, then {"done": true} on completion.
+            """
+            try:
+                path = agent_file_path(config, round_id, name)
+            except ValueError as exc:
+                self.send_json(400, {"error": str(exc)})
+                return
+
+            self.send_response(200)
+            self.send_header("Content-Type", "text/event-stream; charset=utf-8")
+            self.send_header("Cache-Control", "no-cache")
+            self.send_header("Connection", "keep-alive")
+            self.send_header("X-Accel-Buffering", "no")
+            self.end_headers()
+
+            offset = 0
+            idle_ticks = 0
+            max_idle = 400  # 400 × 250ms = 100s timeout
+
+            try:
+                while idle_ticks < max_idle:
+                    # Send any new bytes written to the file
+                    if path.is_file():
+                        data = path.read_bytes()
+                        if len(data) > offset:
+                            chunk = data[offset:].decode("utf-8", errors="replace")
+                            offset = len(data)
+                            idle_ticks = 0
+                            payload = json.dumps({"text": chunk}, ensure_ascii=False)
+                            self.wfile.write(f"data: {payload}\n\n".encode("utf-8"))
+                            self.wfile.flush()
+
+                    # Check if round is complete for this agent
+                    try:
+                        state = build_round_state(config, round_id)
+                        agent_st = state.get("agents", {}).get(name, {})
+                        if state.get("completed") and agent_st.get("status") == "done":
+                            self.wfile.write(b'data: {"done": true}\n\n')
+                            self.wfile.flush()
+                            break
+                    except (FileNotFoundError, ValueError):
+                        break
+
+                    time.sleep(0.25)
+                    idle_ticks += 1
+
+            except (BrokenPipeError, ConnectionResetError, OSError):
+                pass
+
         def handle_ask(self) -> None:
             try:
                 payload = parse_json_body(self)
@@ -466,6 +544,16 @@ def make_handler(config: AppConfig) -> type[BaseHTTPRequestHandler]:
             except ValueError as exc:
                 self.send_json(400, {"error": str(exc)})
                 return
+
+            # Router decides targets when caller didn't pass an explicit 'only'.
+            # Explicit 'only' from the API still wins (escape hatch for tooling).
+            caller_set_only = isinstance(payload, dict) and payload.get("only") is not None
+            if not caller_set_only:
+                agent_dicts = [
+                    {"name": a.name, "team": a.team} for a in config.agents
+                ]
+                selected_names = router.detect_targets(question, agent_dicts)
+                argv_extra = ["--only", ",".join(selected_names)] + argv_extra
 
             before = {
                 path.name
@@ -485,6 +573,8 @@ def make_handler(config: AppConfig) -> type[BaseHTTPRequestHandler]:
                 *argv_extra,
             ]
             env = os.environ.copy()
+            # Pass sessions file so fanout can do warm resume
+            argv.extend(["--sessions-file", str(SESSIONS_FILE)])
             try:
                 process = subprocess.Popen(
                     argv,
@@ -532,6 +622,7 @@ def make_handler(config: AppConfig) -> type[BaseHTTPRequestHandler]:
                     "round_id": round_id,
                     "agents": selected_names,
                     "rounds_dir": str(config.rounds_dir),
+                    "routed_by": "explicit" if caller_set_only else "router",
                 },
             )
 

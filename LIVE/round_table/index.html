@@ -3,438 +3,649 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>fanout-ui</title>
+  <title>HOME — Round Table</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
     :root {
       color-scheme: dark;
-      --bg: #0f0f10;
-      --panel: #17181c;
-      --panel-border: #2b2e36;
-      --text: #ececf1;
-      --muted: #8f95a3;
-      --accent: #73e0a9;
-      --warn: #f5c96a;
-      --error: #ff7b7b;
-      --shadow: rgba(0, 0, 0, 0.35);
+      --bg:           #080a0f;
+      --surface:      #0d1117;
+      --panel:        #111520;
+      --panel-border: #1e2433;
+      --text:         #e2e8f0;
+      --muted:        #64748b;
+      --accent:       #6ee7b7;
+      --accent2:      #818cf8;
+      --warn:         #fbbf24;
+      --error:        #f87171;
+      --team1:        #34d399;
+      --team2:        #a78bfa;
+      --shadow:       rgba(0,0,0,.6);
+      --radius:       14px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      margin: 0;
-      background: radial-gradient(circle at top, #1a1c21 0%, var(--bg) 45%);
+      background: var(--bg);
       color: var(--text);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
       min-height: 100vh;
+      background-image:
+        radial-gradient(ellipse 80% 40% at 50% -10%, rgba(99,102,241,.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 30% at 80% 100%, rgba(52,211,153,.06) 0%, transparent 50%);
     }
 
-    main {
-      max-width: 1500px;
-      margin: 0 auto;
-      padding: 24px;
+    /* ── Layout ── */
+    main { max-width: 1600px; margin: 0 auto; padding: 20px 24px 40px; }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .header-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -.3px;
+      background: linear-gradient(135deg, #e2e8f0 30%, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+    .warm-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+    .warm-badge {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 99px;
+      background: rgba(110,231,183,.12);
+      border: 1px solid rgba(110,231,183,.25);
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
     }
 
-    .topbar {
+    /* ── Compose bar ── */
+    .compose {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 140px;
+      grid-template-columns: minmax(0,1fr) auto;
       gap: 12px;
-      align-items: start;
       margin-bottom: 10px;
+      align-items: end;
     }
-
+    .textarea-wrap { position: relative; }
     textarea {
       width: 100%;
-      min-height: 96px;
+      min-height: 88px;
       resize: vertical;
+      background: rgba(13,17,23,.9);
       border: 1px solid var(--panel-border);
-      border-radius: 10px;
-      padding: 14px;
-      background: rgba(9, 10, 12, 0.8);
+      border-radius: var(--radius);
+      padding: 14px 16px;
       color: var(--text);
-      font: inherit;
+      font: 14px/1.6 'Inter', sans-serif;
       outline: none;
-      box-shadow: 0 12px 30px var(--shadow);
+      transition: border-color .2s;
+      box-shadow: 0 4px 24px var(--shadow);
+    }
+    textarea:focus { border-color: var(--accent2); }
+    .hint {
+      position: absolute;
+      bottom: 10px; right: 14px;
+      font-size: 11px;
+      color: var(--muted);
+      pointer-events: none;
     }
 
-    textarea:focus {
-      border-color: var(--accent);
-    }
-
-    button {
-      min-height: 96px;
-      border: 1px solid #25503d;
-      border-radius: 10px;
-      background: linear-gradient(180deg, #163626 0%, #10271d 100%);
-      color: var(--text);
-      font: inherit;
+    .send-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      width: 100px;
+      min-height: 88px;
+      background: linear-gradient(145deg, #1e2a1e, #151f15);
+      border: 1px solid #2a4a2a;
+      border-radius: var(--radius);
+      color: var(--accent);
+      font: 600 14px 'Inter', sans-serif;
       cursor: pointer;
-      box-shadow: 0 12px 30px var(--shadow);
+      transition: all .2s;
+      box-shadow: 0 4px 24px var(--shadow);
     }
-
-    button:disabled {
-      cursor: default;
-      opacity: 0.6;
+    .send-btn:hover:not(:disabled) {
+      background: linear-gradient(145deg, #253525, #1a2a1a);
+      border-color: var(--accent);
+      box-shadow: 0 0 20px rgba(110,231,183,.15);
     }
+    .send-btn:disabled { opacity: .45; cursor: default; }
+    .send-icon { font-size: 20px; }
 
-    .statusline {
-      min-height: 24px;
-      margin-bottom: 18px;
+    /* ── Status bar ── */
+    .statusbar {
+      height: 28px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      font-size: 12.5px;
       color: var(--muted);
     }
+    .status-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--muted);
+      flex: 0 0 auto;
+      transition: background .3s;
+    }
+    .status-dot.active { background: var(--warn); animation: pulse-dot 1s infinite; }
+    .status-dot.done   { background: var(--accent); }
 
+    /* ── Grid ── */
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
     }
 
+    /* ── Pane ── */
     .pane {
       display: flex;
       flex-direction: column;
-      min-height: 280px;
-      background: linear-gradient(180deg, rgba(23, 24, 28, 0.98) 0%, rgba(15, 16, 18, 0.98) 100%);
+      min-height: 300px;
+      background: linear-gradient(180deg, var(--panel) 0%, rgba(8,10,15,.97) 100%);
       border: 1px solid var(--panel-border);
-      border-radius: 14px;
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 16px 40px var(--shadow);
+      box-shadow: 0 8px 32px var(--shadow);
+      transition: border-color .3s, box-shadow .3s;
     }
-
-    .pane.error {
-      border-color: rgba(255, 123, 123, 0.5);
-      background: linear-gradient(180deg, rgba(54, 24, 24, 0.95) 0%, rgba(31, 14, 14, 0.98) 100%);
+    .pane.streaming {
+      border-color: rgba(251,191,36,.3);
+      box-shadow: 0 8px 32px var(--shadow), 0 0 0 1px rgba(251,191,36,.1);
+    }
+    .pane.done-pane {
+      border-color: rgba(110,231,183,.2);
+    }
+    .pane.error-pane {
+      border-color: rgba(248,113,113,.35);
+      background: linear-gradient(180deg, rgba(30,10,10,.97) 0%, rgba(8,5,5,.97) 100%);
     }
 
     .pane-header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 12px;
-      padding: 14px 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      gap: 10px;
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.05);
     }
-
-    .agent-name {
-      font-size: 15px;
-      font-weight: 700;
+    .agent-emoji { font-size: 16px; flex: 0 0 auto; }
+    .agent-name  { font-size: 13px; font-weight: 700; letter-spacing: .5px; flex: 1; }
+    .team-tag {
+      font-size: 10px;
+      padding: 1px 7px;
+      border-radius: 99px;
+      font-weight: 600;
+      letter-spacing: .4px;
     }
-
+    .team-1 { background: rgba(52,211,153,.12); color: var(--team1); border: 1px solid rgba(52,211,153,.2); }
+    .team-2 { background: rgba(167,139,250,.12); color: var(--team2); border: 1px solid rgba(167,139,250,.2); }
+    .model-tag {
+      font-size: 10px;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
     .indicator {
-      width: 11px;
-      height: 11px;
-      border-radius: 999px;
-      background: #555c69;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: #2a3040;
       flex: 0 0 auto;
-      opacity: 0.6;
     }
-
-    .indicator.running {
-      background: var(--warn);
-      opacity: 1;
-      animation: pulse 1s infinite;
-    }
-
-    .indicator.done {
-      background: var(--accent);
-      opacity: 1;
-    }
-
-    .indicator.error {
-      background: var(--error);
-      opacity: 1;
-    }
+    .indicator.running { background: var(--warn); animation: pulse-dot 1s infinite; }
+    .indicator.done    { background: var(--accent); }
+    .indicator.error   { background: var(--error); }
 
     .pane-body {
-      flex: 1 1 auto;
-      padding: 16px;
+      flex: 1;
+      padding: 14px 16px;
       overflow: auto;
+      position: relative;
     }
-
     pre {
-      margin: 0;
+      font: 13px/1.6 'JetBrains Mono', monospace;
       white-space: pre-wrap;
       word-break: break-word;
       color: var(--text);
-      line-height: 1.45;
     }
+    .placeholder { color: var(--muted); font-style: italic; }
 
-    .placeholder {
+    .pane-footer {
+      padding: 8px 14px;
+      border-top: 1px solid rgba(255,255,255,.04);
+      font-size: 11px;
       color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .warm-indicator {
+      margin-left: auto;
+      font-size: 10px;
+      color: var(--accent);
+      opacity: .7;
     }
 
-    .meta {
-      padding: 12px 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--muted);
-      font-size: 13px;
+    /* ── Animations ── */
+    @keyframes pulse-dot {
+      0%   { box-shadow: 0 0 0 0 rgba(251,191,36,.6); }
+      70%  { box-shadow: 0 0 0 8px rgba(251,191,36,0); }
+      100% { box-shadow: 0 0 0 0 rgba(251,191,36,0); }
     }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+    .cursor { display: inline-block; width: 2px; height: 1em; background: var(--accent); vertical-align: text-bottom; animation: blink 1s step-end infinite; margin-left: 1px; }
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(245, 201, 106, 0.55); }
-      70% { box-shadow: 0 0 0 12px rgba(245, 201, 106, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(245, 201, 106, 0); }
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
-
-    @media (max-width: 799px) {
-      .topbar {
-        grid-template-columns: 1fr;
-      }
-
-      button {
-        min-height: 52px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 600px) {
+      .compose { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <div class="topbar">
-      <textarea id="question" placeholder="Ask all agents. Ctrl+Enter to submit."></textarea>
-      <button id="ask">Ask</button>
+<main>
+  <div class="header">
+    <div>
+      <div class="header-title">🔮 Round Table</div>
+      <div class="header-sub">HOME AI family · persistent sessions</div>
     </div>
-    <div id="status" class="statusline">Idle</div>
-    <div id="grid" class="grid"></div>
-  </main>
-  <script>
-    const state = {
-      agents: [],
-      panes: new Map(),
-      roundId: null,
-      roundStartMs: null,
-      pollTimer: null,
-      fetchedContent: new Set(),
-      inFlight: false,
-    };
+    <div class="warm-badges" id="warmBadges"></div>
+  </div>
 
-    const questionEl = document.getElementById("question");
-    const askEl = document.getElementById("ask");
-    const statusEl = document.getElementById("status");
-    const gridEl = document.getElementById("grid");
+  <div class="compose">
+    <div class="textarea-wrap">
+      <textarea id="question" placeholder="Ask the family… &quot;hey nevaeh…&quot;  |  &quot;team 2, what do you think?&quot;  |  &quot;everyone, status check&quot;"></textarea>
+      <span class="hint">Ctrl+Enter to send</span>
+    </div>
+    <button class="send-btn" id="ask">
+      <span class="send-icon">↗</span>
+      <span>Send</span>
+    </button>
+  </div>
 
-    function setStatus(text) {
-      statusEl.textContent = text;
-    }
+  <div class="statusbar">
+    <div class="status-dot" id="statusDot"></div>
+    <span id="status">Idle — type a question above</span>
+  </div>
 
-    function formatMeta(exitCode, duration) {
-      const exitText = exitCode === null || exitCode === undefined ? "?" : String(exitCode);
-      const durationText = duration === null || duration === undefined ? "?" : Number(duration).toFixed(1);
-      return `exit: ${exitText} · ${durationText}s`;
-    }
+  <div class="grid" id="grid"></div>
+</main>
 
-    function setPaneStatus(name, status) {
-      const pane = state.panes.get(name);
-      if (!pane) return;
-      pane.element.classList.toggle("error", status === "error");
-      pane.indicator.className = `indicator ${status}`;
-    }
+<script>
+  // ── State ──────────────────────────────────────────────────────────────────
+  const state = {
+    agents: [],
+    panes: new Map(),
+    roundId: null,
+    roundStartMs: null,
+    pollTimer: null,
+    eventSources: new Map(),   // name → EventSource (SSE)
+    warmSessions: {},
+    inFlight: false,
+  };
 
-    function setPaneContent(name, content) {
-      const pane = state.panes.get(name);
-      if (!pane) return;
-      pane.body.textContent = content;
-      pane.body.classList.remove("placeholder");
-    }
+  const questionEl = document.getElementById('question');
+  const askEl      = document.getElementById('ask');
+  const statusEl   = document.getElementById('status');
+  const statusDot  = document.getElementById('statusDot');
+  const gridEl     = document.getElementById('grid');
+  const warmBadges = document.getElementById('warmBadges');
 
-    function setPaneMeta(name, exitCode, duration) {
-      const pane = state.panes.get(name);
-      if (!pane) return;
-      pane.meta.textContent = formatMeta(exitCode, duration);
-    }
+  // ── Status helpers ─────────────────────────────────────────────────────────
+  function setStatus(text, mode = 'idle') {
+    statusEl.textContent = text;
+    statusDot.className = 'status-dot' + (mode === 'active' ? ' active' : mode === 'done' ? ' done' : '');
+  }
 
-    function clearPanes() {
-      for (const agent of state.agents) {
-        setPaneStatus(agent.name, "pending");
-        setPaneContent(agent.name, "Waiting for output...");
-        state.panes.get(agent.name).body.classList.add("placeholder");
-        setPaneMeta(agent.name, null, null);
+  // ── Warm session badges ────────────────────────────────────────────────────
+  async function refreshWarmBadges() {
+    try {
+      const d = await fetchJson('/api/sessions');
+      state.warmSessions = d.warm || {};
+      warmBadges.innerHTML = '';
+      for (const [name] of Object.entries(state.warmSessions)) {
+        const b = document.createElement('span');
+        b.className = 'warm-badge';
+        const agent = state.agents.find(a => a.name === name);
+        b.textContent = `${agent?.emoji || ''} ${name} ♻︎`.trim();
+        b.title = `${name} session warm`;
+        warmBadges.appendChild(b);
       }
-      state.fetchedContent.clear();
-    }
-
-    function renderAgents(agents) {
-      state.agents = agents;
-      state.panes.clear();
-      gridEl.innerHTML = "";
-
-      for (const agent of agents) {
-        const pane = document.createElement("section");
-        pane.className = "pane";
-
-        const header = document.createElement("div");
-        header.className = "pane-header";
-
-        const title = document.createElement("div");
-        title.className = "agent-name";
-        title.textContent = `${agent.emoji ? agent.emoji + " " : ""}${agent.name}`;
-
-        const indicator = document.createElement("div");
-        indicator.className = "indicator pending";
-
-        const bodyWrap = document.createElement("div");
-        bodyWrap.className = "pane-body";
-
-        const pre = document.createElement("pre");
-        pre.className = "placeholder";
-        pre.textContent = "Waiting for output...";
-        bodyWrap.appendChild(pre);
-
-        const meta = document.createElement("div");
-        meta.className = "meta";
-        meta.textContent = formatMeta(null, null);
-
-        header.appendChild(title);
-        header.appendChild(indicator);
-        pane.appendChild(header);
-        pane.appendChild(bodyWrap);
-        pane.appendChild(meta);
-        gridEl.appendChild(pane);
-
-        state.panes.set(agent.name, { element: pane, indicator, body: pre, meta });
+      // Update footer warm indicators
+      for (const [name, pane] of state.panes) {
+        if (pane.warmEl) {
+          pane.warmEl.textContent = state.warmSessions[name] ? '♻︎ warm' : '';
+        }
       }
-    }
+    } catch (_) {}
+  }
 
-    async function fetchJson(url, options) {
-      const response = await fetch(url, options);
-      const text = await response.text();
-      let payload = null;
+  // ── Pane helpers ───────────────────────────────────────────────────────────
+  function setPaneStatus(name, status) {
+    const pane = state.panes.get(name);
+    if (!pane) return;
+    pane.element.classList.remove('streaming', 'done-pane', 'error-pane');
+    pane.indicator.className = `indicator ${status}`;
+    if (status === 'running') pane.element.classList.add('streaming');
+    if (status === 'done')    pane.element.classList.add('done-pane');
+    if (status === 'error')   pane.element.classList.add('error-pane');
+  }
+
+  function setPaneContent(name, text, streaming = false) {
+    const pane = state.panes.get(name);
+    if (!pane) return;
+    pane.pre.classList.remove('placeholder');
+    // Remove streaming cursor from prior state
+    pane.pre.innerHTML = '';
+    pane.pre.appendChild(document.createTextNode(text));
+    if (streaming) {
+      const cur = document.createElement('span');
+      cur.className = 'cursor';
+      pane.pre.appendChild(cur);
+    }
+    // Auto-scroll to bottom
+    pane.body.scrollTop = pane.body.scrollHeight;
+  }
+
+  function setPaneMeta(name, exitCode, duration) {
+    const pane = state.panes.get(name);
+    if (!pane) return;
+    const e = exitCode === null || exitCode === undefined ? '—' : String(exitCode);
+    const d = duration  === null || duration  === undefined ? '—' : Number(duration).toFixed(1) + 's';
+    pane.footer.firstChild.textContent = `exit: ${e} · ${d}`;
+  }
+
+  function resetPanes() {
+    for (const [name, pane] of state.panes) {
+      pane.element.style.display = '';
+      pane.element.classList.remove('streaming', 'done-pane', 'error-pane');
+      pane.indicator.className = 'indicator';
+      pane.pre.className = 'placeholder';
+      pane.pre.innerHTML = 'Waiting for output…';
+      pane.footer.firstChild.textContent = 'exit: — · —';
+      pane.accumText = '';
+    }
+  }
+
+  function showOnly(names) {
+    const set = new Set(names || []);
+    for (const [name, pane] of state.panes) {
+      pane.element.style.display = set.size === 0 || set.has(name) ? '' : 'none';
+    }
+  }
+
+  // ── Render agents ──────────────────────────────────────────────────────────
+  function renderAgents(agents) {
+    state.agents = agents;
+    state.panes.clear();
+    gridEl.innerHTML = '';
+
+    for (const agent of agents) {
+      const teamNum = agent.team || '';
+      const isOpus  = (agent.model || '').includes('opus');
+
+      // Card
+      const pane = document.createElement('section');
+      pane.className = 'pane';
+      pane.id = `pane-${agent.name}`;
+
+      // Header
+      const header = document.createElement('div');
+      header.className = 'pane-header';
+
+      const emojiEl = document.createElement('span');
+      emojiEl.className = 'agent-emoji';
+      emojiEl.textContent = agent.emoji || '';
+
+      const nameEl = document.createElement('span');
+      nameEl.className = 'agent-name';
+      nameEl.textContent = agent.name;
+
+      if (teamNum) {
+        const teamTag = document.createElement('span');
+        teamTag.className = `team-tag team-${teamNum}`;
+        teamTag.textContent = `T${teamNum}`;
+        header.appendChild(emojiEl);
+        header.appendChild(nameEl);
+        header.appendChild(teamTag);
+      } else {
+        header.appendChild(emojiEl);
+        header.appendChild(nameEl);
+      }
+
+      if (isOpus) {
+        const modelTag = document.createElement('span');
+        modelTag.className = 'model-tag';
+        modelTag.textContent = 'opus';
+        header.appendChild(modelTag);
+      }
+
+      const indicator = document.createElement('div');
+      indicator.className = 'indicator';
+      header.appendChild(indicator);
+
+      // Body
+      const body = document.createElement('div');
+      body.className = 'pane-body';
+      const pre = document.createElement('pre');
+      pre.className = 'placeholder';
+      pre.textContent = 'Waiting for output…';
+      body.appendChild(pre);
+
+      // Footer
+      const footer = document.createElement('div');
+      footer.className = 'pane-footer';
+      const metaSpan = document.createElement('span');
+      metaSpan.textContent = 'exit: — · —';
+      const warmEl = document.createElement('span');
+      warmEl.className = 'warm-indicator';
+      warmEl.textContent = state.warmSessions[agent.name] ? '♻︎ warm' : '';
+      footer.appendChild(metaSpan);
+      footer.appendChild(warmEl);
+
+      pane.appendChild(header);
+      pane.appendChild(body);
+      pane.appendChild(footer);
+      gridEl.appendChild(pane);
+
+      state.panes.set(agent.name, {
+        element: pane, indicator, body, pre, footer, warmEl,
+        accumText: '',
+      });
+    }
+  }
+
+  // ── Fetch helpers ──────────────────────────────────────────────────────────
+  async function fetchJson(url, options) {
+    const res  = await fetch(url, options);
+    const text = await res.text();
+    let payload = null;
+    try { payload = text ? JSON.parse(text) : null; } catch (_) {}
+    if (!res.ok) {
+      throw new Error((payload && payload.error) ? payload.error : text || `${res.status}`);
+    }
+    return payload;
+  }
+
+  // ── SSE streaming ──────────────────────────────────────────────────────────
+  function closeAllStreams() {
+    for (const [, es] of state.eventSources) { try { es.close(); } catch (_) {} }
+    state.eventSources.clear();
+  }
+
+  function openStream(roundId, name) {
+    if (state.eventSources.has(name)) return;
+    const es = new EventSource(`/api/rounds/${encodeURIComponent(roundId)}/agent/${encodeURIComponent(name)}/stream`);
+    state.eventSources.set(name, es);
+    const pane = state.panes.get(name);
+
+    es.onmessage = (ev) => {
       try {
-        payload = text ? JSON.parse(text) : null;
-      } catch (error) {
-        payload = null;
-      }
-      if (!response.ok) {
-        const message = payload && payload.error ? payload.error : text || `${response.status} ${response.statusText}`;
-        throw new Error(message);
-      }
-      return payload;
-    }
-
-    async function fetchText(url) {
-      const response = await fetch(url);
-      const text = await response.text();
-      if (!response.ok) {
-        throw new Error(text || `${response.status} ${response.statusText}`);
-      }
-      return text;
-    }
-
-    async function loadAgents() {
-      const payload = await fetchJson("/api/agents");
-      renderAgents(payload.agents || []);
-      setStatus("Idle");
-    }
-
-    async function fetchAgentOutput(roundId, name) {
-      if (state.fetchedContent.has(name)) return;
-      state.fetchedContent.add(name);
-      try {
-        const content = await fetchText(`/api/rounds/${encodeURIComponent(roundId)}/agent/${encodeURIComponent(name)}`);
-        setPaneContent(name, content);
-      } catch (error) {
-        state.fetchedContent.delete(name);
-        setPaneStatus(name, "error");
-        setStatus(`Round ${roundId} error: ${error.message}`);
-      }
-    }
-
-    function stopPolling() {
-      if (state.pollTimer) {
-        clearTimeout(state.pollTimer);
-        state.pollTimer = null;
-      }
-    }
-
-    async function pollRound() {
-      if (!state.roundId) return;
-      try {
-        const payload = await fetchJson(`/api/rounds/${encodeURIComponent(state.roundId)}/state`);
-        for (const agent of state.agents) {
-          const agentState = payload.agents[agent.name];
-          if (!agentState) continue;
-          if (agentState.status === "done") {
-            setPaneStatus(agent.name, "done");
-            setPaneMeta(agent.name, agentState.exit_code, agentState.duration);
-            void fetchAgentOutput(state.roundId, agent.name);
-          } else {
-            setPaneStatus(agent.name, "running");
-            setPaneMeta(agent.name, agentState.exit_code, agentState.duration);
+        const data = JSON.parse(ev.data);
+        if (data.done) {
+          es.close();
+          state.eventSources.delete(name);
+          setPaneStatus(name, 'done');
+          // Final content already in file — show without cursor
+          if (pane) setPaneContent(name, pane.accumText, false);
+          return;
+        }
+        if (data.text) {
+          if (pane) {
+            pane.accumText += data.text;
+            setPaneContent(name, pane.accumText, true);
+            setPaneStatus(name, 'running');
           }
         }
+      } catch (_) {}
+    };
 
-        if (payload.completed) {
-          const seconds = state.roundStartMs ? ((Date.now() - state.roundStartMs) / 1000).toFixed(1) : "?";
-          setStatus(`Round ${state.roundId} complete in ${seconds}s`);
-          state.inFlight = false;
-          askEl.disabled = false;
-          stopPolling();
-          return;
-        }
+    es.onerror = () => {
+      es.close();
+      state.eventSources.delete(name);
+    };
+  }
 
-        setStatus(`Round ${state.roundId} in flight`);
-      } catch (error) {
-        setStatus(`Round ${state.roundId} error: ${error.message}`);
-        if (String(error.message).includes("round not found")) {
-          state.inFlight = false;
-          askEl.disabled = false;
-          stopPolling();
-          return;
+  // ── Polling (fallback state sync) ──────────────────────────────────────────
+  function stopPolling() {
+    if (state.pollTimer) { clearTimeout(state.pollTimer); state.pollTimer = null; }
+  }
+
+  async function pollRound() {
+    if (!state.roundId) return;
+    try {
+      const payload = await fetchJson(`/api/rounds/${encodeURIComponent(state.roundId)}/state`);
+      let allDone = true;
+
+      for (const agent of state.agents) {
+        const ag = payload.agents[agent.name];
+        if (!ag) continue;
+        const pane = state.panes.get(agent.name);
+
+        if (ag.status === 'done') {
+          setPaneMeta(agent.name, ag.exit_code, ag.duration);
+          // If SSE already handled it, skip; otherwise fetch final content
+          if (!state.eventSources.has(agent.name) && pane && !pane.finalFetched) {
+            pane.finalFetched = true;
+            fetch(`/api/rounds/${encodeURIComponent(state.roundId)}/agent/${encodeURIComponent(agent.name)}`)
+              .then(r => r.text())
+              .then(t => { setPaneContent(agent.name, t, false); setPaneStatus(agent.name, 'done'); })
+              .catch(() => {});
+          }
+        } else {
+          allDone = false;
         }
       }
 
-      state.pollTimer = window.setTimeout(pollRound, 750);
-    }
-
-    async function askQuestion() {
-      if (state.inFlight) return;
-      const question = questionEl.value.trim();
-      if (!question) {
-        setStatus("Question is required.");
+      if (payload.completed) {
+        const secs = state.roundStartMs ? ((Date.now() - state.roundStartMs) / 1000).toFixed(1) : '?';
+        setStatus(`✓ Round ${state.roundId} complete in ${secs}s`, 'done');
+        state.inFlight = false;
+        askEl.disabled = false;
+        stopPolling();
+        closeAllStreams();
+        setTimeout(refreshWarmBadges, 1000);
         return;
       }
 
-      stopPolling();
-      clearPanes();
-      state.roundId = null;
-      state.roundStartMs = Date.now();
-      state.inFlight = true;
-      askEl.disabled = true;
-      setStatus("Dispatching...");
-
-      try {
-        const payload = await fetchJson("/api/ask", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ question }),
-        });
-        state.roundId = payload.round_id;
-        setStatus(`Round ${state.roundId} in flight`);
-        state.pollTimer = window.setTimeout(pollRound, 750);
-      } catch (error) {
+      setStatus(`⏳ Round ${state.roundId} in flight`, 'active');
+    } catch (err) {
+      setStatus(`Error: ${err.message}`);
+      if (String(err.message).includes('round not found')) {
         state.inFlight = false;
         askEl.disabled = false;
-        setStatus(`Error: ${error.message}`);
+        stopPolling();
       }
     }
+    state.pollTimer = window.setTimeout(pollRound, 750);
+  }
 
-    askEl.addEventListener("click", () => {
-      void askQuestion();
-    });
+  // ── Send question ──────────────────────────────────────────────────────────
+  async function askQuestion() {
+    if (state.inFlight) return;
+    const question = questionEl.value.trim();
+    if (!question) { setStatus('Type a question first.'); return; }
 
-    questionEl.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" && event.ctrlKey) {
-        event.preventDefault();
-        void askQuestion();
+    closeAllStreams();
+    stopPolling();
+    resetPanes();
+    state.roundId      = null;
+    state.roundStartMs = Date.now();
+    state.inFlight     = true;
+    askEl.disabled     = true;
+    setStatus('Dispatching…', 'active');
+
+    try {
+      const payload = await fetchJson('/api/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question }),
+      });
+
+      state.roundId = payload.round_id;
+      showOnly(payload.agents);
+
+      // Open SSE stream for each dispatched agent
+      for (const name of (payload.agents || [])) {
+        setPaneStatus(name, 'running');
+        openStream(state.roundId, name);
       }
-    });
 
-    void loadAgents().catch((error) => {
-      setStatus(`Error: ${error.message}`);
-    });
-  </script>
+      const warm = (payload.agents || []).filter(n => state.warmSessions[n]);
+      const warmNote = warm.length ? ` · ${warm.length} warm` : '';
+      const routeNote = payload.routed_by === 'router' ? ' · auto-routed' : '';
+      setStatus(`→ ${(payload.agents || []).join(', ')}${warmNote}${routeNote}`, 'active');
+
+      state.pollTimer = window.setTimeout(pollRound, 1000);
+    } catch (err) {
+      state.inFlight = false;
+      askEl.disabled = false;
+      setStatus(`Error: ${err.message}`);
+    }
+  }
+
+  // ── Init ───────────────────────────────────────────────────────────────────
+  async function init() {
+    try {
+      const d = await fetchJson('/api/agents');
+      renderAgents(d.agents || []);
+      await refreshWarmBadges();
+      setStatus('Ready — sessions warm up on first message');
+    } catch (err) {
+      setStatus(`Error: ${err.message}`);
+    }
+  }
+
+  askEl.addEventListener('click', () => void askQuestion());
+  questionEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.ctrlKey) { e.preventDefault(); void askQuestion(); }
+  });
+
+  void init();
+</script>
 </body>
 </html>
