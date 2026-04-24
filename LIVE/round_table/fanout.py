@@ -351,6 +351,7 @@ async def _run_once(
         "-p", question,
         "--output-format", "stream-json",
         "--include-partial-messages",
+        "--verbose",
         "--permission-mode", "bypassPermissions",
     ]
     if session_id:
