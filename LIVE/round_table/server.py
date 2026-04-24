@@ -488,7 +488,10 @@ def make_handler(config: AppConfig) -> type[BaseHTTPRequestHandler]:
         def stream_agent(self, round_id: str, name: str) -> None:
             """SSE endpoint — streams agent file content as it is written.
             Client: EventSource('/api/rounds/ROUND_ID/agent/NAME/stream')
-            Events: {"text": "..."} chunks, then {"done": true} on completion.
+            Events: {"replace": "...full content..."} on each update,
+                    {"done": true} on completion.
+            Using 'replace' (not delta) because fanout rewrites the file on
+            every partial token event — diffs would cause duplication in the UI.
             """
             try:
                 path = agent_file_path(config, round_id, name)
@@ -503,24 +506,23 @@ def make_handler(config: AppConfig) -> type[BaseHTTPRequestHandler]:
             self.send_header("X-Accel-Buffering", "no")
             self.end_headers()
 
-            offset = 0
+            last_content: bytes = b""
             idle_ticks = 0
             max_idle = 400  # 400 × 250ms = 100s timeout
 
             try:
                 while idle_ticks < max_idle:
-                    # Send any new bytes written to the file
                     if path.is_file():
                         data = path.read_bytes()
-                        if len(data) > offset:
-                            chunk = data[offset:].decode("utf-8", errors="replace")
-                            offset = len(data)
+                        if data != last_content:
+                            last_content = data
                             idle_ticks = 0
-                            payload = json.dumps({"text": chunk}, ensure_ascii=False)
+                            content_str = data.decode("utf-8", errors="replace")
+                            payload = json.dumps({"replace": content_str}, ensure_ascii=False)
                             self.wfile.write(f"data: {payload}\n\n".encode("utf-8"))
                             self.wfile.flush()
 
-                    # Check if round is complete for this agent
+                    # Check if round complete for this agent
                     try:
                         state = build_round_state(config, round_id)
                         agent_st = state.get("agents", {}).get(name, {})

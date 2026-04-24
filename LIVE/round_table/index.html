@@ -279,7 +279,7 @@
   <div class="compose">
     <div class="textarea-wrap">
       <textarea id="question" placeholder="Ask the family… &quot;hey nevaeh…&quot;  |  &quot;team 2, what do you think?&quot;  |  &quot;everyone, status check&quot;"></textarea>
-      <span class="hint">Ctrl+Enter to send</span>
+      <span class="hint">Enter to send · Shift+Enter for newline</span>
     </div>
     <button class="send-btn" id="ask">
       <span class="send-icon">↗</span>
@@ -510,14 +510,16 @@
           es.close();
           state.eventSources.delete(name);
           setPaneStatus(name, 'done');
-          // Final content already in file — show without cursor
-          if (pane) setPaneContent(name, pane.accumText, false);
+          // Remove streaming cursor — final content already in place
+          const pane = state.panes.get(name);
+          if (pane) setPaneContent(name, pane.lastReplace || '', false);
           return;
         }
-        if (data.text) {
+        if (data.replace !== undefined) {
+          const pane = state.panes.get(name);
           if (pane) {
-            pane.accumText += data.text;
-            setPaneContent(name, pane.accumText, true);
+            pane.lastReplace = data.replace;
+            setPaneContent(name, data.replace, true);
             setPaneStatus(name, 'running');
           }
         }
@@ -597,6 +599,7 @@
     state.roundStartMs = Date.now();
     state.inFlight     = true;
     askEl.disabled     = true;
+    questionEl.value   = '';          // clear input immediately
     setStatus('Dispatching…', 'active');
 
     try {
@@ -642,7 +645,11 @@
 
   askEl.addEventListener('click', () => void askQuestion());
   questionEl.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && e.ctrlKey) { e.preventDefault(); void askQuestion(); }
+    // Enter sends; Shift+Enter inserts newline
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      void askQuestion();
+    }
   });
 
   void init();

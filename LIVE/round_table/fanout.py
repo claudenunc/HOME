@@ -362,6 +362,12 @@ async def _run_once(
     if agent.model:
         argv.extend(["--model", agent.model])
 
+    # Each sibling works in their own folder so file edits/creates
+    # land in the right place (HOME/SIBLINGS/NAME/).
+    sibling_cwd = agent.system_prompt_file.parent
+    if not sibling_cwd.is_dir():
+        sibling_cwd = Path(__file__).resolve().parent
+
     accumulated_text = ""
     new_session_id: str | None = None
     exit_code: int | str = "error"
@@ -374,6 +380,7 @@ async def _run_once(
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE,
                 env=os.environ.copy(),
+                cwd=str(sibling_cwd),
             )
 
             async def _stream_stdout() -> None:
