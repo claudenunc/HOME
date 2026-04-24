@@ -290,6 +290,7 @@
   <div class="statusbar">
     <div class="status-dot" id="statusDot"></div>
     <span id="status">Idle — type a question above</span>
+    <span id="escHint" style="margin-left:auto;font-size:11px;color:var(--muted);display:none">ESC to stop</span>
   </div>
 
   <div class="grid" id="grid"></div>
@@ -316,9 +317,12 @@
   const warmBadges = document.getElementById('warmBadges');
 
   // ── Status helpers ─────────────────────────────────────────────────────────
+  const escHint = document.getElementById('escHint');
+
   function setStatus(text, mode = 'idle') {
     statusEl.textContent = text;
     statusDot.className = 'status-dot' + (mode === 'active' ? ' active' : mode === 'done' ? ' done' : '');
+    escHint.style.display = mode === 'active' ? '' : 'none';
   }
 
   // ── Warm session badges ────────────────────────────────────────────────────
@@ -643,10 +647,30 @@
     }
   }
 
+  // ── Cancel / ESC ──────────────────────────────────────────────────────────
+  async function cancelRound() {
+    if (!state.roundId || !state.inFlight) return;
+    const rid = state.roundId;
+    closeAllStreams();
+    stopPolling();
+    try {
+      await fetch(`/api/rounds/${encodeURIComponent(rid)}/cancel`, { method: 'POST' });
+    } catch (_) {}
+    state.inFlight = false;
+    askEl.disabled = false;
+    setStatus(`⛔ Round ${rid} cancelled`, 'idle');
+  }
+
   askEl.addEventListener('click', () => void askQuestion());
-  questionEl.addEventListener('keydown', (e) => {
-    // Enter sends; Shift+Enter inserts newline
-    if (e.key === 'Enter' && !e.shiftKey) {
+  document.addEventListener('keydown', (e) => {
+    // ESC cancels the active round from anywhere on the page
+    if (e.key === 'Escape' && state.inFlight) {
+      e.preventDefault();
+      void cancelRound();
+      return;
+    }
+    // Enter in the textarea sends (Shift+Enter = newline)
+    if (e.key === 'Enter' && !e.shiftKey && document.activeElement === questionEl) {
       e.preventDefault();
       void askQuestion();
     }

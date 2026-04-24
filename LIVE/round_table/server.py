@@ -21,6 +21,10 @@ import router
 # Sessions file lives next to this script — shared with fanout.py
 SESSIONS_FILE = Path(__file__).resolve().parent / "sessions.json"
 
+# Active round processes: round_id → subprocess.Popen
+# Used by the cancel endpoint to kill in-flight rounds.
+_active_rounds: dict[str, subprocess.Popen] = {}
+_active_rounds_lock = threading.Lock()
 
 ROUND_ID_RE = re.compile(r"^\d{4}-\d{2}-\d{2}_\d{6}$")
 AGENT_NAME_RE = re.compile(r"^[A-Za-z0-9_-]+$")
@@ -455,7 +459,35 @@ def make_handler(config: AppConfig) -> type[BaseHTTPRequestHandler]:
             if parsed.path == "/api/ask":
                 self.handle_ask()
                 return
+            cancel_match = re.fullmatch(r"/api/rounds/([^/]+)/cancel", parsed.path)
+            if cancel_match:
+                self.handle_cancel(cancel_match.group(1))
+                return
             self.send_json(404, {"error": "not found"})
+
+        def handle_cancel(self, round_id: str) -> None:
+            """Kill the fanout process for round_id and close all SSE streams."""
+            if not ROUND_ID_RE.fullmatch(round_id):
+                self.send_json(400, {"error": "invalid round_id"})
+                return
+            with _active_rounds_lock:
+                proc = _active_rounds.pop(round_id, None)
+            if proc is None:
+                self.send_json(404, {"error": "round not active"})
+                return
+            try:
+                if sys.platform == "win32":
+                    subprocess.run(
+                        ["taskkill", "/PID", str(proc.pid), "/T", "/F"],
+                        capture_output=True,
+                    )
+                else:
+                    proc.kill()
+                    proc.wait(timeout=5)
+            except Exception:
+                pass
+            self.send_json(200, {"cancelled": round_id})
+
 
         def serve_index(self) -> None:
             index_path = Path(__file__).resolve().parent / "index.html"
@@ -609,6 +641,17 @@ def make_handler(config: AppConfig) -> type[BaseHTTPRequestHandler]:
                 else:
                     self.send_json(502, {"error": "fanout did not create a round folder in time"})
                 return
+
+            # Track active process for cancellation
+            with _active_rounds_lock:
+                _active_rounds[round_id] = process
+
+            # Clean up process ref when it exits (background thread)
+            def _cleanup(pid=round_id, proc=process):
+                proc.wait()
+                with _active_rounds_lock:
+                    _active_rounds.pop(pid, None)
+            threading.Thread(target=_cleanup, daemon=True).start()
 
             # D4: sync emit on dispatch — guarantees the audit row before we
             # respond. Error-isolated inside handoff_emitter; never raises.

@@ -406,9 +406,10 @@ async def _run_once(
                     # Extract text
                     chunk = _extract_text_from_event(event)
                     if chunk:
-                        # For partial assistant messages, the full text
-                        # is sent each time — use it as-is, don't append.
-                        if event.get("type") in ("assistant", "message"):
+                        # assistant/message: full text so far, always replace.
+                        # result: also the full final text, replace not append.
+                        # content_block_delta: true delta, append.
+                        if event.get("type") in ("assistant", "message", "result"):
                             accumulated_text = chunk
                         else:
                             accumulated_text += chunk
@@ -426,7 +427,12 @@ async def _run_once(
                     asyncio.gather(_stream_stdout(), _drain_stderr()),
                     timeout=timeout_seconds,
                 )
-                exit_code = process.returncode if process.returncode is not None else "error"
+                # Wait for process to fully exit so returncode is set
+                try:
+                    await asyncio.wait_for(process.wait(), timeout=10)
+                except asyncio.TimeoutError:
+                    pass
+                exit_code = process.returncode if process.returncode is not None else 0
             except asyncio.TimeoutError:
                 await terminate_process(process)
                 exit_code = "timeout"
