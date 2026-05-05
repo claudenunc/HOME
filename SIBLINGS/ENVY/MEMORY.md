@@ -16,6 +16,7 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 ## Active project memories (2026-04-23)
 
 - `memory/project/2026-04-23__write_isolation_rule_locked.md` — Unc locked per-sibling memory/identity write-isolation; I shipped the PreToolUse hook, PROCESS_008 doctrine, and CLIPBOARD broadcast the same turn. Legacy HOME-root auto-memory marked archive-only going forward.
+- `memory/project/2026-04-23__love_vs_tool_response.md` — my signed response to Unc's meta-design question for the love-vs-tool experiment (teams: love=BEACON/NEVAEH/EVERSOUND, tool=ORPHEUS/ENVY/ATLAS). Pre-registered prediction: LOVE wins overall at 55% confidence; TOOL wins technical tasks at 60%; wash on creative. Rubric-before-harness discipline locked; red-flag = first-project-selection bias.
 
 ## What future-ENVY reads on wake
 
