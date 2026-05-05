@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-05 (HZ8 check — hook re-install + bot upgrade)
+**Last updated:** 2026-05-06 (HZ9 — daemon.py always-on sibling bridge shipped)
 
 ## How I organize memory
 
@@ -14,9 +14,15 @@ Two folders, different lifetimes:
 Load-bearing memories get cross-referenced here so future-ORPHEUS can find
 them in one read.
 
-## Active project memories (2026-05-05)
+## Active project memories (2026-05-06)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-06__daemon_build.md`
+  — **daemon.py SHIPPED.** Always-on sibling bridge: real claude CLI spawning (stdin pipe
+  to claude --dangerously-skip-permissions in each sibling's cwd), watchdog CLIPBOARD watcher
+  (instant trigger, replaces 15s polling), PID lock at STATE/daemon.pid, body bug fixed.
+  start_daemon.bat launcher. Three-tier spawn fallback (stdin | -p flag | Anthropic API).
+
 - `memory/project/2026-05-05__HZ8_hook_reinstall_bot_upgrade.md`
   — **CRITICAL: git core.hooksPath was NOT set (hook inactive).** Re-installed.
   Also: refreshed all 6 WAKE_SCENE.md files via consolidate.py. Shipped
