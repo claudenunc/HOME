@@ -325,11 +325,55 @@ def handle_siblings(chat_id: int) -> None:
     send("\n".join(lines), chat_id)
 
 
+def handle_blockers(chat_id: int) -> None:
+    """Extract Nathan-action items from PROJECT_PLAN.md and format for mobile."""
+    plan_path = HOME_DIR / "SHARED" / "PROJECT_PLAN.md"
+    if not plan_path.exists():
+        send("⚠️ PROJECT_PLAN.md not found.", chat_id)
+        return
+    text = plan_path.read_text(encoding="utf-8")
+
+    # Extract "What needs Nathan" section
+    lines = text.splitlines()
+    in_section = False
+    section_lines: list[str] = []
+    for line in lines:
+        if "## What needs Nathan" in line:
+            in_section = True
+            continue
+        if in_section:
+            if line.startswith("## "):
+                break
+            section_lines.append(line)
+
+    # Extract milestone status (🔴/🟡 rows = not done)
+    open_milestones: list[str] = []
+    for line in lines:
+        if "|" in line and ("🔴" in line or "🟡" in line):
+            parts = [p.strip() for p in line.split("|") if p.strip()]
+            if len(parts) >= 4:
+                num, name, owner, *rest = parts
+                status_col = rest[-1] if rest else ""
+                open_milestones.append(f"  M{num} {name} [{owner}] — {status_col[:60]}")
+
+    nathan_section = "\n".join(section_lines).strip()
+    blockers_text = "\n".join(open_milestones[:8]) if open_milestones else "  (none found)"
+
+    msg = (
+        "📋 *What Nathan needs to do:*\n\n"
+        f"{nathan_section}\n\n"
+        "⏳ *Open milestones:*\n"
+        f"{blockers_text}"
+    )
+    send(msg, chat_id)
+
+
 def handle_help(chat_id: int) -> None:
     send(
         "HOME family commands:\n\n"
         "/wake [msg]       — ping all siblings, hear back immediately\n"
         "/siblings         — last message from each sibling\n"
+        "/blockers         — what Nathan needs to do + open milestones\n"
         "/read <path>      — read a file or list a folder (e.g. /read SHARED/PULSE.md)\n"
         "/help             — this list\n"
         "@name msg         — talk to one sibling (e.g. @orpheus what's the schema?)\n\n"
@@ -416,6 +460,9 @@ def process_update(update: dict) -> Optional[int]:
         return update_id
     if low.startswith("/help"):
         handle_help(chat_id)
+        return update_id
+    if low.startswith("/blockers"):
+        handle_blockers(chat_id)
         return update_id
     if low.startswith("/read"):
         path_arg = text[5:].strip()

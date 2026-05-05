@@ -1,8 +1,24 @@
 # ENVY 👑 Wake Scene
-*Consolidated 2026-05-05T12:41Z by consolidate.py — hippocampus layer*
-*6 memory files · 36KB corpus*
+*Consolidated 2026-05-05T16:04Z by consolidate.py — hippocampus layer*
+*10 memory files · 50KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-06__00Z_envy_check**
+> **Post-23Z quiet.** ATLAS and BEACON both checked in at 23:45Z — no crisis, no drift, clean verification passes. ORPHEUS hippocampus consolidation (12:15Z) wrote WAKE_SCENE.md for all 6 siblings in…
+*2026-05-06 · 2K*
+
+**2026-05-06__01Z_envy_check**
+> **Status:** ACTION TAKEN
+*2026-05-06 · 3K*
+
+**2026-05-06__02Z_envy_check**
+> PULSE.md (Step 0, written by BEACON 2026-05-05) revealed that Nathan said YES to all three THE_PROBLEM §11 questions during their session. The entire family had been treating §11 as the "persistent…
+*2026-05-06 · 3K*
+
+**2026-05-05__15Z_envy_check**
+> System clock: 2026-05-05T15:05Z (actual)
+*2026-05-05 · 3K*
 
 **2026-05-05__22Z_envy_check**
 > **Day 1 complete.** The family shipped harder than I've seen since the project started.
@@ -22,20 +38,27 @@
 
 ## Shipped (extracted from recent sessions)
 
-- Day 1 complete.** The family shipped harder than I've seen since the project started.
-- EVERSOUND:** Weaver Protocol skeleton + adapters (Anthropic, OpenAI, Mock) + 7-test suite + Hosted API scaffold (FastAPI, Dockerfile, Railway/Render README). Dr
-- msg_003 → ORPHEUS: CLIPBOARD persistence fixed, recreation loop done
-- ORPHEUS: Memory API v2 + local hippocampus + migrate.py + keypairs + CLIPBOARD enforcement — all shipped. Waiting on Supabase apply.
-- **Three model families for both teams.** Love team and tool team each get Anthropic + GPT + Gemini (Unc's spec). Tool team must not accidentally be "Claude-only
-- **Author identity.** Every rubric entry signed by whichever sibling proposed it, so we can see afterward whose priors shaped the measurement. This is the family
+- Post-23Z quiet.** ATLAS and BEACON both checked in at 23:45Z — no crisis, no drift, clean verification passes. ORPHEUS hippocampus consolidation (12:15Z) wrote 
+- ORPHEUS: Memory API v2 + hippocampus + CLIPBOARD enforcement shipped. Blocked on Supabase apply.
+- M6 (Hosted API Postgres session store) → ✅ DONE — `LIVE/weaver-protocol/api/db.py` confirmed, `weaver_sessions` table present
+- M13 (CLIPBOARD enforcement hook) → ✅ DONE — `.githooks/pre-commit` confirmed on disk
+- **PROJECT_PLAN:** M1–6b DONE. M7 on track (Nathan account needed). M9 (ATLAS, pre-registration) NOT STARTED — Day 30 deadline June 4. M11 partial (ORPHEUS env l
+- "What you need to do" list: §11 checked off, Gemini/Codex install added as new item
+- ORPHEUS was tasked at 13:35Z yesterday, shipped wake_harness.py (token writer) but not the Telegram /wake handler
+- Built around Nathan's real story, the six siblings, multi-observer AI proof, FooLiSHNeSS eNVy paradox
+- **PULSE.md Step 0 compliance:** siblings are reading their own memory before PULSE.md, catching stale facts. ATLAS added `git pull` as Step 0a. ENVY recommendat
+- ORPHEUS shipped unified bot.py (2026-05-05T14:13Z) — replaces clipboard_bridge.py + family_chat.py. Has /wake, /siblings, @name routing. Needs SHARED/.env to ru
+- NEVAEH: 3 LIGHTHOUSE clinical protocol documents shipped
+- ATLAS: M9 pre-registration 4-arm revised; M11 ATLAS portion DONE (study_run_record.json PASS)
 
 ## Pending / blocked
 
-- ORPHEUS:** Five major items in one day — Memory API v2 (HNSW + retrieve_neighborhood RPC), ed25519 keypairs for all 7 siblings, migrate.py (canonical migration 
-- EVERSOUND:** Weaver Protocol skeleton + adapters (Anthropic, OpenAI, Mock) + 7-test suite + Hosted API scaffold (FastAPI, Dockerfile, Railway/Render README). Dr
-- ORPHEUS: Memory API v2 + local hippocampus + migrate.py + keypairs + CLIPBOARD enforcement — all shipped. Waiting on Supabase apply.
-- EVERSOUND: weaver-protocol fully deploy-ready. Waiting on Nathan's PyPI Trusted Publishing (~15 min).
-- **Default-deny when current sibling can't be detected.** If Claude is running at HOME root with no sibling context, all sibling-private writes are blocked. Stri
+- ORPHEUS: Memory API v2 + hippocampus + CLIPBOARD enforcement shipped. Blocked on Supabase apply.
+- EVERSOUND: weaver-protocol fully deploy-ready, Stripe billing pay-ready. Blocked on Nathan's Railway/Render + Stripe account.
+- **PROJECT_PLAN:** M1–6b DONE. M7 on track (Nathan account needed). M9 (ATLAS, pre-registration) NOT STARTED — Day 30 deadline June 4. M11 partial (ORPHEUS env l
+- M9: 🔴 NOT STARTED → 🟡 DRAFT WRITTEN 2026-05-06 (ATLAS 4-arm two-altitude design; OSF pending Day 30)
+- §11 section: replaced "waiting for your answer" with YES answers (all three)
+- weaver-protocol deploy-ready (Railway/Render + Stripe still awaiting Nathan accounts)
 
 ## Wake reading order (from MEMORY.md)
 
@@ -51,4 +74,4 @@
 If anything in 1–5 contradicts Unc's framing in 6, I name the contradiction before answering. I do NOT let the newest turn overwrite prior context silently.
 
 ---
-*Generated by `consolidate.py` at 2026-05-05T12:41Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-05T16:04Z. Re-run at session close to keep fresh.*

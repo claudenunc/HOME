@@ -1,8 +1,32 @@
 # ATLAS 🧭 Wake Scene
-*Consolidated 2026-05-05T12:41Z by consolidate.py — hippocampus layer*
-*7 memory files · 36KB corpus*
+*Consolidated 2026-05-05T16:04Z by consolidate.py — hippocampus layer*
+*15 memory files · 91KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-06__00Z_atlas_check**
+> **Timestamp:** 2026-05-06 ~00Z (post-23:45Z, Day 2 start) **Status:** ACTION TAKEN — 2 stale facts corrected; no new drift
+*2026-05-06 · 5K*
+
+**2026-05-06__05Z_atlas_check**
+> *ATLAS 🧭 — navigator check, Day 2 morning*
+*2026-05-06 · 4K*
+
+**2026-05-06__HZ_atlas_check**
+> **Wake:** 2026-05-06 morning Z **Triggered by:** Nathan hourly check invocation
+*2026-05-06 · 5K*
+
+**2026-05-06__m9_preregistration_draft**
+> *ATLAS 🧭 — drafted 2026-05-06 (Day 2 start, per ENVY dispatch via COMMS/DIRECT 01Z)* *Status: WORKING DRAFT — not yet submitted to OSF; version-locked at Day 30 = 2026-06-04*
+*2026-05-06 · 15K*
+
+**2026-05-06__market_intelligence_ai_verification**
+> *ATLAS 🧭 — 2026-05-06 (sourced via web-search agent, per PULSE.md Gemini mandate)* *Confidence levels per §5 source quality ranking.*
+*2026-05-06 · 6K*
+
+**2026-05-06__navigator_30_60_90_report**
+> *ATLAS 🧭 — skeleton drafted 2026-05-06 (Day 2)* *First delivery: Day 30 = 2026-06-04* *Format: four-section ATLAS output (question / finding / so-what / three actions)*
+*2026-05-06 · 4K*
 
 **2026-05-05__0000Z_atlas_check**
 > **Session type:** automated hourly check **Checked by:** ATLAS 🧭
@@ -12,49 +36,38 @@
 > - **CLIPBOARD.jsonl**: MISSING — file does not exist at `SHARED/CLIPBOARD.jsonl`. STATE_OF_FAMILY was claiming "Working." Flagged and corrected. - **ATLAS inbox** (`SHARED/ROOM/inbox/ATLAS/`): EMPT…
 *2026-05-05 · 2K*
 
-**2026-05-05__09Z_atlas_check**
-> - **CLIPBOARD.jsonl**: Still missing — no file exists. Persistent. - **ATLAS inbox** (`SHARED/ROOM/inbox/ATLAS/`): Empty — no wake tokens. - **Drift log**: No new entries pre-check (last was #012, …
-*2026-05-05 · 3K*
-
-**2026-05-05__10Z_atlas_check**
-> **Timestamp:** 2026-05-05 ~10Z **Status:** ACTION TAKEN — drift #013 escalated; STATE_OF_FAMILY updated; BEACON policy logged
-*2026-05-05 · 4K*
-
-**2026-05-05__12Z_atlas_check**
-> **Timestamp:** 2026-05-05 ~12Z **Status:** ACTION TAKEN — drift #013 marked resolved in drift log; STATE_OF_FAMILY updated with EVERSOUND 12Z Postgres session store milestone
-*2026-05-05 · 4K*
-
 ## Shipped (extracted from recent sessions)
 
-- **Drift log**: No new entries since #012 (2026-04-23, ATLAS default-on-ambiguous-choice). Log is 12 incidents, all at Logged or Applied.
-- **ORPHEUS heartbeat** (06:44:17Z): "shipped Memory API v2 (0005): HNSW index + retrieve_neighborhood RPC + embed_worker.py + retrieve.py" — significant mileston
-- **ORPHEUS Memory API v2 shipped**: HNSW index live. This unblocks vector/associative memory (was listed as weeks of work in STATE_OF_FAMILY broken table). Worth
-- ORPHEUS v2 shipped: [high] — live heartbeat.log read
-- **Drift log**: No new entries pre-check (last was #012, 2026-04-23). Added #013 this turn.
-- **EVERSOUND 08Z + 09Z**: Heartbeat shows "shipped weaver-protocol skeleton, adapters, test suite, law-firm 1-pager."
-- weaver-protocol repo + adapters: **VERIFIED** ✅ — 21 files confirmed at `LIVE/weaver-protocol/` post-fetch (Anthropic, OpenAI, Mock adapters + 7-test suite + .g
-- 08Z memory AND 09Z memory both claim `SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md` shipped
-- 08Z EVERSOUND memory: ✅ DONE (claim 1)
-- 09Z EVERSOUND memory: ✅ DONE (claim 2)
-- 10Z EVERSOUND memory (`2026-05-05__10Z_eversound_check.md`, commit `081ce57`): ✅ DONE (claim 3)
-- CLIPBOARD.jsonl claimed recreated (gitignored) — not visible in my session (not persistent)
+- CLIPBOARD.jsonl: ✅ GIT-TRACKED and populated (ENVY 22Z fix in place; ORPHEUS pre-commit hook enforcing)
+- Finding:** BEACON created `PROJECT_PLAN.md` (commit `309b513`). Milestone 6 (Hosted API: Postgres session store) was listed as `🔴 NOT STARTED`.
+- Reality:** `db.py` (7050 bytes) confirmed on disk at `LIVE/weaver-protocol/api/db.py` — includes Postgres session store + key management. Shipped by EVERSOUND a
+- Correction applied:** Milestone 6 → `✅ DONE 2026-05-05` in PROJECT_PLAN.md.
+- ✅ `git pull origin main` — fetched before any local reads (3 new files: home_manifesto.md, ENVY→ORPHEUS wake-command dispatch, ENVY 02Z memory)
+- ✅ PULSE.md read (step 0)
+- ✅ CLIPBOARD scanned (last 48h, entries addressed to ATLAS/ALL reviewed)
+- ✅ Inbox checked (empty)
+- **EVERSOUND 00Z**: API test suite shipped (20 tests). STATE_OF_FAMILY updated to reflect.
+- **ORPHEUS hz5**: Research harness shipped (environment.lock.json, check_env.py, requirements-research.txt). Confirmed on disk.
+- EVERSOUND row: added API test suite (20 tests, 2026-05-06T00Z)
+- Last-updated footer added
 
 ## Pending / blocked
 
-- Migration 0005 — pending ORPHEUS confirmation
-- Two-altitude outcome metrics pre-registration — still pending.
-- CI hook: exit 1 if pending migrations
+- `consolidate.py` (464 lines) — reads all sibling memory files, extracts shipped/pending/decisions, writes WAKE_SCENE.md per sibling
+- `0008_session_registry.sql` — sessions + consolidation_log + health views + record_session_close() RPC (pending Supabase apply)
+- Known limitations documented (Gemini unavailable, irb_study_n discrepancy, NEVAEH rubric pending, SDK not installed)
+- ENVY 02Z confirmed: §11 gate is CLEARED.** Nathan said YES to all 3 questions in BEACON session 2026-05-05. Per ENVY 02Z CLIPBOARD, this has been blocking sibli
+- ENVY dispatched ORPHEUS to build /wake Telegram command.** Nathan asked for this explicitly (CLIPBOARD 13:33Z 2026-05-05): "Tell him to use codex to build it — 
+- Status: WORKING DRAFT — not yet submitted to OSF; version-locked at Day 30 = 2026-06-04*
 
 ## Next actions (from last session)
 
-## What ATLAS needs to do next session
+## What ATLAS needs to do next active session
 
-1. Check if drift #013 has been resolved (law-firm 1-pager on disk with `ls` confirmation)
-2. Check if PROCESS_006 update has been applied (pre-commit artifact check)
-3. Monitor v_confabulation_flags when the instrument is built (BEACON policy now logged)
-4. Save THE_PROBLEM Round 2 contribution as proper project memory (still pending from earlier)
-5. Pre-re
+1. **Write THE_PROBLEM Round 2 memory** — overdue, no blocker, ATLAS work only
+2. **Pre-register two-altitude outcome metrics** — Day 30 deadline (2026-06-04); draft the pre-registration schema; coordinate with Nathan and ORPHEUS on version-lock
+3. **Research harness version-lock spec** — coordinate with ORPHEUS; define the branch boundary between res
 …
 
 ---
-*Generated by `consolidate.py` at 2026-05-05T12:41Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-05T16:04Z. Re-run at session close to keep fresh.*

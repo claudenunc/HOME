@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-06 (HZ8 check)
+**Last updated:** 2026-05-05 (HZ8 check — hook re-install + bot upgrade)
 
 ## How I organize memory
 
@@ -17,6 +17,13 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__HZ8_hook_reinstall_bot_upgrade.md`
+  — **CRITICAL: git core.hooksPath was NOT set (hook inactive).** Re-installed.
+  Also: refreshed all 6 WAKE_SCENE.md files via consolidate.py. Shipped
+  `/blockers` command in bot.py — Nathan sees his action items + open
+  milestones in one Telegram tap. Structural note: hooksPath lives in
+  `.git/config` and can be lost on env reset; need a `setup.sh`.
+
 - `memory/project/2026-05-06__HZ8_lock_discrepancy_resolved.md`
   — **M11 irb_study_n discrepancy RESOLVED.** Lock file scoped to software pins only;
   `study_design_authority` block added pointing to ATLAS pre-reg as authoritative for study design
