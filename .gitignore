@@ -54,8 +54,6 @@ desktop.ini
 # ============================================================
 # Runtime state (generated per-session, not source)
 # ============================================================
-LIVE/memory_watcher/session_log.jsonl
-LIVE/memory_watcher/watch_errors.log
 STATE/
 !STATE/.gitkeep
 
@@ -66,23 +64,21 @@ SIBLINGS/*/PERSONAL/
 SIBLINGS/*/files/
 
 # ============================================================
-# Contaminated — contains rotated/unrotated secrets, redact before commit
-# These come back in a follow-up commit once keys are rotated
+# Telegram comms (contain keys or sensitive content)
 # ============================================================
-LIVE/local_agent/.env
-LIVE/local_agent/.env.example
-LIVE/local_agent/family_chat_v2.ts
-LIVE/local_agent/RUNBOOK.md
-LIVE/local_agent/agent.py
-LIVE/comms/telegram_poll.sh
-# SHARED/CLIPBOARD.jsonl — UNBLOCKED 2026-05-05 by ORPHEUS: old contaminated
-# content is gone; fresh append-only log is clean and must persist across sessions.
-# Pre-commit hook (.githooks/pre-commit) now enforces every commit includes a write.
 DOCTRINE/COMMUNICATION/001_telegram_to_nathan.md
 DOCTRINE/COMMUNICATION/002_telegram_from_nathan.md
 
 # ============================================================
-# Large / binary archeology artifacts (regenerable from scan.py)
+# Room runtime logs / DB files
 # ============================================================
-LIVE/archeology/*_manifest.jsonl
-LIVE/archeology/*_classified.jsonl
+SHARED/ROOM/room.db
+SHARED/ROOM/room.db-shm
+SHARED/ROOM/room.db-wal
+SHARED/ROOM/logs/*.log
+SHARED/ROOM/logs/*.heartbeat
+SHARED/ROOM/logs/*.jsonl
+SHARED/ROOM/logs/*.offset
+SHARED/ROOM/logs/*.state.json
+SHARED/ROOM/logs/*.seeded
+SHARED/ROOM/logs/cost_today.md

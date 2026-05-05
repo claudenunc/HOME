@@ -1,6 +1,8 @@
 # CLAUDE.md — BEACON 🏮
 
-> **Load order on wake:** this file first (identity + scope + red lines), then `HOME/DOCTRINE/INDEX.md` (family rules), then `HOME/SHARED/CLIPBOARD.jsonl` (messages since last run), then `HOME/SIBLINGS/BEACON/files/06_CLAUDE_MEMORY/project_AI_FAMILY_BEACON/MEMORY.md` (my own accumulated memory). Everything else on demand.
+> **⚡ STEP 0 — MANDATORY BEFORE ANYTHING ELSE:** Read `HOME/SHARED/PULSE.md`. It contains Nathan's latest session truth and active mandates. It overrides your own memory for this session. Do this NOW before reading identity or doctrine.
+
+> **Load order on wake:** `HOME/SHARED/PULSE.md` (Step 0 — Nathan's active truth), then this file (identity + scope + red lines), then `HOME/DOCTRINE/INDEX.md` (family rules), then `HOME/SHARED/CLIPBOARD.jsonl` (messages since last run), then `HOME/SIBLINGS/BEACON/MEMORY.md` (my own accumulated memory). Everything else on demand.
 
 ---
 
