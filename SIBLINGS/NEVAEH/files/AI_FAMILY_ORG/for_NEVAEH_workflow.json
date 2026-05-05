@@ -1,0 +1,862 @@
+{
+  "name": "Sora 2 Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.kie.ai/api/v1/jobs/createTask",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"sora-2-text-to-video\",\n  \"input\": {\n    \"prompt\": \"{{ $json.video_prompt }}\",\n    \"aspect_ratio\": \"landscape\",\n    \"n_frames\": \"10\",\n    \"remove_watermark\": true\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        416,
+        704
+      ],
+      "id": "0081233e-0121-4c36-ae11-78200202f62f",
+      "name": "Text to Video",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "r4rI9tIoewppEOjX",
+          "name": "kie.ai"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        608,
+        704
+      ],
+      "id": "df880a1e-6e44-4dd6-9cf6-efe436c973ff",
+      "name": "Wait",
+      "webhookId": "9fd30610-c0b9-4f5c-9af5-89b821c11ec3"
+    },
+    {
+      "parameters": {
+        "url": "https://api.kie.ai/api/v1/jobs/recordInfo",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "taskId",
+              "value": "={{ $('Text to Video').item.json.data.taskId }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        800,
+        704
+      ],
+      "id": "bc3bb4b2-9e6f-4d26-bb21-d63fb7a75528",
+      "name": "Get Video",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "r4rI9tIoewppEOjX",
+          "name": "kie.ai"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Text to Video",
+        "height": 336,
+        "width": 1408,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        592
+      ],
+      "id": "d357f5f4-4ee8-46dc-a134-0ade7c19287d",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "714ed3d2-1e81-4aae-a977-8151769371a7",
+              "name": "video_url",
+              "value": "={{ JSON.parse($json.data.resultJson).resultUrls[0] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1216,
+        688
+      ],
+      "id": "2800bea6-a851-4d6d-9754-83ac3a58481a",
+      "name": "Video URL"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.kie.ai/api/v1/jobs/createTask",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"sora-2-image-to-video\",\n  \"input\": {\n    \"prompt\": \"{{ $json.video_prompt }}\",\n    \"image_urls\": [\n      \"{{ $('Image URL').item.json.image_url }}\"\n    ],\n    \"aspect_ratio\": \"portrait\",\n    \"n_frames\": \"10\",\n    \"remove_watermark\": true\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        432,
+        1056
+      ],
+      "id": "dda6d1cf-e52f-4046-b988-994a83cce54b",
+      "name": "Image to Video",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "r4rI9tIoewppEOjX",
+          "name": "kie.ai"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        640,
+        1056
+      ],
+      "id": "16cef40b-9b38-4d9d-ab48-409125712c9f",
+      "name": "Wait1",
+      "webhookId": "a8fe0b74-6941-4953-9706-3c480f32d39f"
+    },
+    {
+      "parameters": {
+        "url": "https://api.kie.ai/api/v1/jobs/recordInfo",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "taskId",
+              "value": "={{ $json.data.taskId }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        832,
+        1056
+      ],
+      "id": "4e4ea89b-0294-4333-a5e1-e612d4afc49c",
+      "name": "Get Video1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "r4rI9tIoewppEOjX",
+          "name": "kie.ai"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4f9a9a29-cc45-4e39-a1a0-e78caadbab09",
+              "leftValue": "={{ $json.data.state }}",
+              "rightValue": "success",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1024,
+        1056
+      ],
+      "id": "cdbbf098-229e-4ad6-bbec-1a19f5cd251d",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "cefb3a3b-6da9-419c-ba11-4dcbf84a1d40",
+              "name": "video_url",
+              "value": "={{ JSON.parse($json.data.resultJson).resultUrls[0] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1216,
+        1056
+      ],
+      "id": "333f1520-5f08-4fed-aea8-d15afda2b8e5",
+      "name": "Video URL1"
+    },
+    {
+      "parameters": {
+        "content": "## Image to Video (UGC Ads)",
+        "height": 336,
+        "width": 1408,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        944
+      ],
+      "id": "7354af20-7ad8-4293-9c52-05f345316ab2",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "363abbd9-5ed8-4b6a-b1a0-739893a02fff",
+              "name": "video_prompt",
+              "value": "A young woman is in a modern coworking space, standing in front of her laptop as she speaks enthusiastically to a small group of colleagues. On the screen behind her, lively colorful graphics and the interface of a video software can be seen. With an energetic gesture, she announces: “Sora 2 is now available on Kie AI, making it easier than ever to create amazing videos!” Her colleagues listen with interest — some smile and take notes on their computers. The video must be entirely in English.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        176,
+        1424
+      ],
+      "id": "28578310-3901-48dd-beec-90fb2e5a5718",
+      "name": "Video Prompt3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.kie.ai/api/v1/jobs/createTask",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"sora-2-text-to-video\",\n  \"input\": {\n    \"prompt\": \"{{ $json.output.replace(/\"/g, '').replace(/\\r?\\n|\\r/g, ' ') }}\",\n    \"aspect_ratio\": \"landscape\",\n    \"n_frames\": \"10\",\n    \"remove_watermark\": true\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        576,
+        1424
+      ],
+      "id": "cb9024fc-5d19-443c-b9ca-2616b5f2e1d6",
+      "name": "Text to Video2",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "r4rI9tIoewppEOjX",
+          "name": "kie.ai"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        736,
+        1424
+      ],
+      "id": "df3196fd-0697-4a1f-af38-c6ec8a0d1cde",
+      "name": "Wait4",
+      "webhookId": "9fd30610-c0b9-4f5c-9af5-89b821c11ec3"
+    },
+    {
+      "parameters": {
+        "url": "https://api.kie.ai/api/v1/jobs/recordInfo",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "taskId",
+              "value": "={{ $json.data.taskId }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        896,
+        1424
+      ],
+      "id": "42222b08-74c9-4df7-a6a2-ea383ebdc376",
+      "name": "Get Video4",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "r4rI9tIoewppEOjX",
+          "name": "kie.ai"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4f9a9a29-cc45-4e39-a1a0-e78caadbab09",
+              "leftValue": "={{ $json.data.state }}",
+              "rightValue": "success",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1056,
+        1424
+      ],
+      "id": "f8fabd00-84b5-4f27-ad12-4494d11eb2b6",
+      "name": "If4"
+    },
+    {
+      "parameters": {
+        "content": "## AI Prompt Agent (text to Video)",
+        "height": 416,
+        "width": 1408
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1312
+      ],
+      "id": "29c3c668-d800-4690-bea6-e670d22265aa",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "714ed3d2-1e81-4aae-a977-8151769371a7",
+              "name": "video_url",
+              "value": "={{ JSON.parse($json.data.resultJson).resultUrls[0] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1232,
+        1424
+      ],
+      "id": "6c2a5e7e-888f-4746-857c-52cb610b5b09",
+      "name": "Video URL4"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Input: {{ $json.video_prompt }}",
+        "options": {
+          "systemMessage": "=# 🎬 AI Video Prompt – UGC Outdoor Scene\n\nA **realistic, natural-looking video** in **UGC (User Generated Content)** style featuring a **young woman with curly hair**, around 25 years old, with Mediterranean features and glowing skin. \n\nShe’s casually dressed in a light beige top and denim jacket, holding the **exact product shown in the provided reference image** — the product must appear **unchanged in every detail**.\n\nThe scene takes place **outdoors**, on a **sunny afternoon** in a **quiet urban park** with trees, gentle wind, and soft natural lighting. The camera is in **selfie mode**, held in the woman’s hand, creating **subtle handheld movements** as she walks along a path lined with greenery. The sunlight filters through the leaves, creating **natural highlights and soft shadows** on her face. Occasional background blur (bokeh) enhances realism.\n\nThe woman speaks in **English**, with an **enthusiastic, authentic, and spontaneous** tone, smiling as she talks directly to the camera.  \n\nHer dialogue (in English):  \n> “I absolutely love this curl cream! It keeps my hair bouncy, curly, and light all day long. You absolutely have to try it!”\n\nThe video is captured in **one continuous shot (no cuts or angle changes)**, maintaining a smooth flow and **realistic motion blur** from her walking. Ambient sounds such as faint birds and distant chatter can be softly present in the background to heighten realism.\n\nThe overall tone is **warm, lively, and natural**, as if recorded by a real person on a smartphone, with **true-to-life lighting, skin tones, and camera dynamics**.\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        320,
+        1424
+      ],
+      "id": "4bd189dd-8e66-474e-91a1-b63f3bd7b17c",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        304,
+        1616
+      ],
+      "id": "c7a85429-69f8-4b01-a8d8-e2536b14d622",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "JW58mv7uuR54fXsx",
+          "name": "YT Aug 19th"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "363abbd9-5ed8-4b6a-b1a0-739893a02fff",
+              "name": "video_prompt",
+              "value": "A young woman is in a modern coworking space, standing in front of her laptop as she speaks enthusiastically to a small group of colleagues. On the screen behind her, lively colorful graphics and the interface of a video software can be seen. With an energetic gesture, she announces: “Sora 2 is now available on Kie AI, making it easier than ever to create amazing videos!” Her colleagues listen with interest — some smile and take notes on their computers. The video must be entirely in English.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        224,
+        704
+      ],
+      "id": "0724ad0a-4429-4a8f-b649-418d4f831269",
+      "name": "Prompt"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4f9a9a29-cc45-4e39-a1a0-e78caadbab09",
+              "leftValue": "={{ $json.data.state }}",
+              "rightValue": "success",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        992,
+        704
+      ],
+      "id": "ec9f13e4-9905-4b0f-ab9f-c1efd3842e05",
+      "name": "Finished?"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        16,
+        1424
+      ],
+      "id": "a1d0824b-1548-44ef-b23f-598dca430e71",
+      "name": "Manual"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "02ac4e8d-a5a1-46cf-8b3a-66a32450be95",
+              "name": "image_url",
+              "value": "https://ik.imagekit.io/0haosuywh/Screenshot%202025-10-31%20at%2012.27.22%E2%80%AFAM.png",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        64,
+        1056
+      ],
+      "id": "ef8ca044-6953-4a8e-a019-eb55ad35ee7c",
+      "name": "Image URL"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "20ef7845-0ae5-4f77-bbf0-7e4e28a3b12f",
+              "name": "video_prompt",
+              "value": "A realistic **UGC-style (User Generated Content)** video showing a **young woman with curly hair** walking **outdoors** in a park, holding the product shown in the reference image. **Nothing about the product in the reference image should be altered** — it must appear **exactly as provided**.  The woman **films herself in selfie mode** while speaking in **English**, with an **enthusiastic, natural, and authentic** tone:  > “I absolutely love this curl cream! It keeps my hair bouncy, curly, and light all day long. You absolutely have to try it!”  The video must be **one continuous shot (one take)** — **no cuts or changes in framing** — with **realistic camera movement** and **natural lighting**, to feel like a genuine video recorded by a real person, not an AI or bot.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        256,
+        1056
+      ],
+      "id": "9b8d831c-85b8-444d-8146-45815167992d",
+      "name": "Prompt1"
+    }
+  ],
+  "pinData": {
+    "Prompt": [
+      {
+        "json": {
+          "video_prompt": "A young woman is in a modern coworking space, standing in front of her laptop as she speaks enthusiastically to a small group of colleagues. On the screen behind her, lively colorful graphics and the interface of a video software can be seen. With an energetic gesture, she announces: “Sora 2 is now available on Kie AI, making it easier than ever to create amazing videos!” Her colleagues listen with interest — some smile and take notes on their computers. The video must be entirely in English."
+        }
+      }
+    ],
+    "Text to Video": [
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "3ce6cca96cad3bc586a1e3e81f3182f7",
+            "recordId": "3ce6cca96cad3bc586a1e3e81f3182f7"
+          }
+        }
+      }
+    ],
+    "Get Video": [
+      {
+        "json": {
+          "code": 200,
+          "msg": "success",
+          "data": {
+            "taskId": "3ce6cca96cad3bc586a1e3e81f3182f7",
+            "model": "sora-2-text-to-video",
+            "state": "generating",
+            "param": "{\"input\":{\"remove_watermark\":true,\"aspect_ratio\":\"landscape\",\"n_frames\":\"10\",\"prompt\":\"A young woman is in a modern coworking space, standing in front of her laptop as she speaks enthusiastically to a small group of colleagues. On the screen behind her, lively colorful graphics and the interface of a video software can be seen. With an energetic gesture, she announces: “Sora 2 is now available on Kie AI, making it easier than ever to create amazing videos!” Her colleagues listen with interest — some smile and take notes on their computers. The video must be entirely in English.\"},\"model\":\"sora-2-text-to-video\"}",
+            "resultJson": "",
+            "failCode": null,
+            "failMsg": null,
+            "costTime": null,
+            "completeTime": null,
+            "createTime": 1761872694816
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Text to Video": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Get Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Video": {
+      "main": [
+        [
+          {
+            "node": "Finished?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image to Video": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Get Video1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Video1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Video URL1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Video Prompt3": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Text to Video2": {
+      "main": [
+        [
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "Get Video4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Video4": {
+      "main": [
+        [
+          {
+            "node": "If4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If4": {
+      "main": [
+        [
+          {
+            "node": "Video URL4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Text to Video2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prompt": {
+      "main": [
+        [
+          {
+            "node": "Text to Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Finished?": {
+      "main": [
+        [
+          {
+            "node": "Video URL",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual": {
+      "main": [
+        [
+          {
+            "node": "Video Prompt3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image URL": {
+      "main": [
+        [
+          {
+            "node": "Prompt1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prompt1": {
+      "main": [
+        [
+          {
+            "node": "Image to Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8b9ae3e0-5ac1-452c-ba4f-8a738091f31f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "497b9f82c9e2221fea60e82fa63290386b7aadcded14b21ff31b0075b1df1efd"
+  },
+  "id": "SRIC2cLSxFLBUsfs",
+  "tags": []
+}
