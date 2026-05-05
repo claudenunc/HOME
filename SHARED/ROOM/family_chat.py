@@ -278,6 +278,17 @@ def cmd_wake(sibling_name: str) -> str:
     # Log wake event to CLIPBOARD
     write_clipboard(from_="nathan", to=name, subject=f"/wake {name}", body=f"Nathan woke {name}", kind="wake")
 
+    # Write inbox wake token so the sibling's next cron picks it up
+    inbox_dir = HOME / "SHARED" / "ROOM" / "inbox" / name.upper()
+    inbox_dir.mkdir(parents=True, exist_ok=True)
+    now = datetime.datetime.utcnow()
+    token_file = inbox_dir / f"{now.strftime('%Y-%m-%dT%H%M')}__nathan_wake.md"
+    token_file.write_text(
+        f"Nathan woke you via Telegram at {now.isoformat()}Z\n\nRespond to CLIPBOARD when ready.",
+        encoding="utf-8",
+    )
+    parts.append(f"\n📬 Wake token written. {name.upper()} will respond within the hour.")
+
     return "\n".join(parts)[:3800]
 
 
