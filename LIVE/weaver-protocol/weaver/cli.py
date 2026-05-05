@@ -5,6 +5,7 @@ Usage:
   weaver verify "some AI output to check"
   weaver verify "some text" --roles accuracy,safety,legal-read --threshold 0.3
   weaver drift --log-dir ./weaver_logs
+  weaver report --log-dir ./weaver_logs [--session-id ID] [--out report.html]
 """
 
 import argparse
@@ -66,6 +67,33 @@ def cmd_verify(args: argparse.Namespace) -> None:
         print(f"\n  Score {score.score:.4f} — observers agree.", file=sys.stderr)
 
 
+def cmd_report(args: argparse.Namespace) -> None:
+    from weaver.report import generate_report
+
+    log_dir = Path(args.log_dir)
+    out_path = Path(args.out) if args.out else None
+
+    try:
+        report_path, signature = generate_report(
+            log_dir=log_dir,
+            session_id=args.session_id or None,
+            out_path=out_path,
+        )
+        result = {
+            "report_path": str(report_path),
+            "hmac_sha256": signature,
+            "log_dir": str(log_dir),
+        }
+        if args.session_id:
+            result["session_id"] = args.session_id
+        print(json.dumps(result, indent=2))
+        print(f"\n  Report written to: {report_path}", file=sys.stderr)
+        print("  Open in a browser to view the attestation document.", file=sys.stderr)
+    except Exception as exc:
+        print(json.dumps({"error": str(exc)}, indent=2))
+        sys.exit(1)
+
+
 def cmd_drift(args: argparse.Namespace) -> None:
     log_dir = Path(args.log_dir)
     drift_file = log_dir / "drift.jsonl"
@@ -115,6 +143,12 @@ def main() -> None:
     p_drift = sub.add_parser("drift", help="Show drift log summary.")
     p_drift.add_argument("--log-dir", default="./weaver_logs", metavar="DIR", help="Log directory (default: ./weaver_logs).")
     p_drift.set_defaults(func=cmd_drift)
+
+    p_report = sub.add_parser("report", help="Generate a signed HTML attestation report.")
+    p_report.add_argument("--log-dir", default="./weaver_logs", metavar="DIR", help="Log directory (default: ./weaver_logs).")
+    p_report.add_argument("--session-id", default=None, metavar="ID", help="Filter report to one session ID (default: all sessions).")
+    p_report.add_argument("--out", default=None, metavar="FILE", help="Output HTML file path (default: auto-named in log-dir).")
+    p_report.set_defaults(func=cmd_report)
 
     args = parser.parse_args()
     args.func(args)

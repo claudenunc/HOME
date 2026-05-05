@@ -132,28 +132,43 @@ The log is the product. It's what separates "we checked it" from "here is the da
 |---|---|
 | Run in CI | `weaver verify` exits 0 (pass) or 2 (flagged) — wire into your pipeline |
 | Custom observer roles | Change `role=` to any string: `"privilege-risk"`, `"scope-check"`, `"bias-review"` |
-| Signed PDF attestation reports | Hosted tier — see [Pricing](../PRICING.md) |
+| Generate attestation report | `weaver report` — local HMAC-signed HTML, open in browser |
+| Tamper-evident cloud logs + PDF | Hosted tier — see [Pricing](../PRICING.md) |
 | Multi-tenant log namespaces | Hosted Pro tier |
 | HIPAA / EU AI Act attestation binder | Enterprise tier or $25K consultancy |
 | Contribute | PRs tagged `[product]` welcome on GitHub |
 
 ---
 
-## Hosted API
+## Generate an attestation report
 
-If you want managed observer pools, tamper-evident cloud logs, and auto-generated PDF attestation reports — without running your own infrastructure:
+Once you've run verification sessions, generate a signed HTML report for your compliance team:
 
 ```bash
-# Get a key at the hosted API (see api/README.md)
-export WEAVER_API_KEY=wp_...
-
-curl -X POST https://api.weaver-protocol.dev/verify \
-  -H "X-API-Key: $WEAVER_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"output": "The regulation requires compliance by Q3 2026.", "session_id": "legal-memo-001"}'
+weaver report --log-dir ./weaver_logs
+# Output:
+# {
+#   "report_path": "./weaver_logs/weaver_report_all_20260505T120000Z.html",
+#   "hmac_sha256": "a3f9...",
+#   "log_dir": "./weaver_logs"
+# }
+#   Report written to: ./weaver_logs/weaver_report_all_20260505T120000Z.html
+#   Open in a browser to view the attestation document.
 ```
 
-Pricing: $49/mo Starter (500 verifications) · $199/mo Pro (5,000 verifications) · $499/mo Enterprise (unlimited + SLA)
+The report includes observer results, disagreement log, drift history, and an HMAC-SHA256 signature. Open it in any browser. Share it with your legal team. That's the artifact.
+
+Filter to a single session: `weaver report --session-id my-session-001`
+
+---
+
+## Hosted API (coming soon)
+
+The hosted API provides tamper-evident cloud logs, managed observer pools, and automatic PDF attestation reports — no infrastructure to run.
+
+Pricing: $49/mo Starter · $199/mo Pro · $499/mo Enterprise (unlimited + SLA)
+
+Self-deploy today using the included `railway.toml` or `render.yaml` (see `api/README.md`).
 
 ---
 

@@ -116,10 +116,11 @@ Hosted infrastructure, managed observer pools, and verification attestation docu
 
 | Tier | Price | What you get |
 |---|---|---|
-| **Open source** | Free | Full toolkit, local logging, bring your own LLM keys |
-| **Hosted Starter** | $297 setup + $197/mo | Managed observer pool, cloud log storage, PDF attestation reports |
-| **Hosted Pro** | $997 setup + $497/mo | Multi-tenant, API access, custom observer roles, SLA |
-| **Enterprise / Audit** | $5,000+ engagement | Annual audit, certification artifacts, signed evidence binder, expert witness ready |
+| **Open source** | Free | Full toolkit, local logging, local attestation reports, bring your own LLM keys |
+| **Hosted Starter** | $49/mo | 500 verifications/mo, managed observer pool, tamper-evident cloud logs, PDF attestation reports |
+| **Hosted Pro** | $199/mo | 5,000 verifications/mo, multi-tenant namespaces, REST API, custom observer roles, SLA |
+| **Hosted Enterprise** | $499/mo | Unlimited verifications, dedicated support, compliance binder generation |
+| **Audit Engagement** | $5,000–$75,000 | Annual audit, signed evidence binder, certification artifacts, expert-witness ready |
 
 Runtime LLM costs are always pass-through to your keys. We never bury provider costs in our pricing.
 
@@ -134,17 +135,18 @@ Full pricing: [PRICING.md](./PRICING.md)
 - [x] Disagreement logger
 - [x] Weaver score
 - [x] Anthropic + OpenAI adapters (`weaver/adapters/`)
-- [x] CLI (`weaver verify` / `weaver drift`)
+- [x] CLI (`weaver verify` / `weaver drift` / `weaver report`)
 - [x] Hosted API with Postgres session store
 - [x] One-click Railway + Render deploy configs
-- [ ] PDF attestation report generator
+- [x] HTML attestation report generator (`weaver report` — local, HMAC-signed)
+- [ ] PDF export from attestation reports
 - [ ] "Weaver-attested" certification badge (Month 9 post-IRB)
 
 ---
 
 ## Project status
 
-**v0.1.0.** Core toolkit + CLI shipped. Hosted API with Postgres session store live. Railway and Render deploy configs included — one `git push` away from a running verification service. First paid install target: 2026-07-04.
+**v0.1.0.** Core toolkit + CLI shipped. `weaver report` generates local HMAC-signed HTML attestation reports. Hosted API with Postgres session store + Stripe billing ready — one `git push` away from a running service. First paid install target: 2026-07-04.
 
 Built by the HOME AI family. Research branch version-locked Day 30 (2026-06-04) to support an IRB-pending pilot study on multi-observer verification in AI systems.
 
