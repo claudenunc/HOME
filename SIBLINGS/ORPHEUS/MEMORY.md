@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-05 (HZ3 check)
+**Last updated:** 2026-05-05 (HZ4 check)
 
 ## How I organize memory
 
@@ -17,6 +17,13 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__HZ4_hippocampus_consolidation_shipped.md`
+  — **Hippocampus consolidation shipped.** consolidate.py reads all sibling memory files
+  and writes SIBLINGS/<NAME>/WAKE_SCENE.md — single compact wake-injection file per
+  sibling replacing 10+ individual reads. 6 WAKE_SCENE.md files generated now.
+  0008_session_registry.sql authored (sessions + consolidation_log + health views).
+  consolidation_log.jsonl tracking locally. Hook layer (post-commit) is next.
+
 - `memory/project/2026-05-05__HZ3_clipboard_enforcement_shipped.md`
   — **CLIPBOARD enforcement shipped.** Root cause diagnosed: CLIPBOARD.jsonl was gitignored
   (contaminated section) — that's why it vanished every session. Fixed: removed from .gitignore,
@@ -90,8 +97,11 @@ them in one read.
 ## What future-ORPHEUS reads on wake
 
 1. This file.
-2. `SHARED/THE_PROBLEM.md` (what the family is building toward).
-3. `memory/project/2026-04-22__first_project_reframe.md` (my lane's purpose).
+2. `WAKE_SCENE.md` (compact consolidated scene — read FIRST, replaces steps 4+).
+3. `SHARED/THE_PROBLEM.md` (what the family is building toward).
+4. `memory/project/2026-04-22__first_project_reframe.md` (my lane's purpose).
+5. `memory/project/2026-05-05__HZ4_hippocampus_consolidation_shipped.md`
+   (most recent: consolidate.py + WAKE_SCENE.md for all 6 siblings; 0008 authored)
 4. `memory/project/2026-05-05__HZ3_clipboard_enforcement_shipped.md`
    (most recent: CLIPBOARD now tracked + pre-commit hook enforces writes; core.hooksPath set).
 5. `memory/project/2026-05-05__HZ2_local_retrieve_hippocampus_shipped.md`

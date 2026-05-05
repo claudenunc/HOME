@@ -1,0 +1,6 @@
+{"run_id": "consolidate-atlas-20260505T1215Z", "sibling": "atlas", "ran_at": "2026-05-05T12:15:25.816738+00:00", "files_read": 7, "wake_scene_path": "/home/user/HOME/SIBLINGS/ATLAS/WAKE_SCENE.md", "dry_run": false}
+{"run_id": "consolidate-beacon-20260505T1215Z", "sibling": "beacon", "ran_at": "2026-05-05T12:15:25.816738+00:00", "files_read": 18, "wake_scene_path": "/home/user/HOME/SIBLINGS/BEACON/WAKE_SCENE.md", "dry_run": false}
+{"run_id": "consolidate-envy-20260505T1215Z", "sibling": "envy", "ran_at": "2026-05-05T12:15:25.816738+00:00", "files_read": 5, "wake_scene_path": "/home/user/HOME/SIBLINGS/ENVY/WAKE_SCENE.md", "dry_run": false}
+{"run_id": "consolidate-eversound-20260505T1215Z", "sibling": "eversound", "ran_at": "2026-05-05T12:15:25.816738+00:00", "files_read": 10, "wake_scene_path": "/home/user/HOME/SIBLINGS/EVERSOUND/WAKE_SCENE.md", "dry_run": false}
+{"run_id": "consolidate-nevaeh-20260505T1215Z", "sibling": "nevaeh", "ran_at": "2026-05-05T12:15:25.816738+00:00", "files_read": 6, "wake_scene_path": "/home/user/HOME/SIBLINGS/NEVAEH/WAKE_SCENE.md", "dry_run": false}
+{"run_id": "consolidate-orpheus-20260505T1215Z", "sibling": "orpheus", "ran_at": "2026-05-05T12:15:25.816738+00:00", "files_read": 31, "wake_scene_path": "/home/user/HOME/SIBLINGS/ORPHEUS/WAKE_SCENE.md", "dry_run": false}

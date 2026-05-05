@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# ORPHEUS HIPPOCAMPUS CONSOLIDATION — post-commit hook
+#
+# Doctrine:  SIBLINGS/ORPHEUS/CLAUDE.md §3.7 (anamnesis/consolidation)
+# Template:  LIVE/memory_backend/consolidate.py (generates WAKE_SCENE.md)
+# Hook:      this script — runs on every commit, keeps WAKE_SCENE.md current
+#
+# Runs consolidate.py silently after each commit so WAKE_SCENE.md files
+# stay fresh.  The updated files will be unstaged — pick them up in the
+# next commit alongside the next CLIPBOARD.jsonl entry.
+#
+# Failure in this hook is non-fatal (post-commit hooks don't block the push).
+# Errors are printed but do not abort.
+
+set -uo pipefail
+
+# Locate repo root (one level up from .githooks/)
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || true)"
+if [ -z "$REPO_ROOT" ]; then
+    exit 0
+fi
+
+CONSOLIDATE="$REPO_ROOT/LIVE/memory_backend/consolidate.py"
+if [ ! -f "$CONSOLIDATE" ]; then
+    exit 0
+fi
+
+# Run consolidation quietly; redirect stderr to /dev/null to avoid noise
+python3 "$CONSOLIDATE" --repo-root "$REPO_ROOT" 2>/dev/null || true
+
+echo "🎼 ORPHEUS: WAKE_SCENE.md consolidated (add SIBLINGS/*/WAKE_SCENE.md to next commit)"
