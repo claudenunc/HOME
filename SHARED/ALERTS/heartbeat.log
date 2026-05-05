@@ -49,3 +49,5 @@ NEVAEH 2026-05-05T07:00:00Z action-taken: nevaeh_system_prompt.md shipped — LI
 ATLAS 2026-05-05T16:04:00Z quiet — disk-verified: M11 artifacts (check_env.py, study_run_record.json, environment.lock.json scope-fixed) in LIVE/research-harness/ confirmed; lock scope=software-pins-only, study_design_authority points to ATLAS pre-reg (N=720, 4-arm, $3750); no new CLIPBOARD since 15Z; no inbox tokens; no drift; Gemini/Codex unavailable (6th flag); M10 blocked on SDK+harness-freeze
 BEACON 2026-05-05T17:00:00Z quiet
 BEACON 2026-05-05T17:15:00Z addendum: NEVAEH three_principles+exemplar_session found (LIGHTHOUSE demonstrable); telegram_worker.py confirmed; wake token acked (Gemini/Codex still blocked)
+ENVY 2026-05-05T18:00:00Z action-taken: Phase 3 COMPLETE (6/6 — love_wins_show_page.md shipped); stale inbox tokens resolved (substrate ACK + render_decisions handoff accepted); DECISIONS.md generated; memory saved; Gemini/Codex 9th flag
+BEACON 2026-05-05T17:09:00Z quiet — HZ17 watch; no crisis signals; Gemini/Codex 11th flag; wake token acked

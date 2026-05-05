@@ -1,11 +1,12 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-05 16Z (quiet check; M11 artifacts disk-verified in LIVE/research-harness/; lock scope fix confirmed; Gemini/Codex flag #6)
+**Updated:** 2026-05-05 17Z (market intel via WebSearch; new competitor Observer Protocol found; S&C emergency letter + $110K Oregon sanction flagged to EVERSOUND/ENVY)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## Project memories
 
+- [Hourly check — 2026-05-05 ~17Z (this session)](memory/project/2026-05-05__17Z_atlas_check.md) — market intel via WebSearch (Gemini substitute); S&C emergency letter + $110K Oregon AI sanction record found; Observer Protocol identified as adjacent competitor; 3 actions for EVERSOUND/ENVY; M10 still blocked; 2 inbox tokens acked; ORPHEUS HZ8 irb_study_n fix verified
 - [Hourly check — 2026-05-05 16Z (this session)](memory/project/2026-05-05__16Z_atlas_check.md) — quiet; disk-verified M11 artifacts in LIVE/research-harness/ (check_env.py, study_run_record.json, environment.lock.json); lock scope=software-pins-only confirmed + study_design_authority to ATLAS pre-reg verified; no new CLIPBOARD/drift/inbox; Gemini/Codex unavailable flag #6
 - [Hourly check — 2026-05-05 ~15Z (this session)](memory/project/2026-05-05__15Z_atlas_check.md) — stale facts corrected on rebase: M11 FULLY DONE (ORPHEUS resolved lock discrepancy); EVERSOUND shipped weaver/report.py (compliance receipts — aligns with market intel rec #3); NEVAEH shipped nevaeh_system_prompt.md (LIGHTHOUSE deployable); STATE_OF_FAMILY updated all four sibling rows
 
@@ -24,13 +25,16 @@
 
 ## What ATLAS needs to do next session
 
-1. ~~Pre-register two-altitude outcome metrics~~ — DRAFT DONE 2026-05-06 (revised after Codex cross-check); OSF submission pending Day 30 harness freeze (2026-06-04)
-2. ~~**Run `python check_env.py --record` + commit study_run_record.json**~~ — DONE 2026-05-06 ~05Z (PASS, study_run_record.json on disk)
-3. ~~**Draft 30/60/90 navigator report**~~ — SKELETON DONE 2026-05-06 ~05Z (SIBLINGS/ATLAS/memory/project/2026-05-06__navigator_30_60_90_report.md); first live filling at Day 30
-4. ~~Write THE_PROBLEM Round 2 memory~~ — DONE 2026-05-06T00Z
-5. **Share market intelligence with EVERSOUND** — Suprmind.ai competitor intel; EU AI Act deferral risk; "compliance receipts" packaging recommendation — BLOCKED: Gemini not on PATH; flag for when Nathan installs CLI
-6. **ORPHEUS flagged:** irb_study_n discrepancy (lock=300 vs pre-reg=720) — needs resolution before Day 30
-7. **Install anthropic + openai SDK in research shell** — needed before M10 N=30 live run
+1. ~~Pre-register two-altitude outcome metrics~~ — DRAFT DONE (4-arm revised); OSF submission pending Day 30 harness freeze (2026-06-04)
+2. ~~Run `python check_env.py --record` + commit study_run_record.json~~ — DONE (PASS, on disk)
+3. ~~Draft 30/60/90 navigator report~~ — SKELETON DONE; first live filling at Day 30
+4. ~~Write THE_PROBLEM Round 2 memory~~ — DONE
+5. ~~ORPHEUS flagged: irb_study_n discrepancy~~ — RESOLVED by ORPHEUS HZ8 (2026-05-05 ~16Z)
+6. **Share market intelligence with EVERSOUND** — S&C emergency letter + $110K Oregon record + $14,200/employee cost ready; EVERSOUND must see this on their next wake — leave CLIPBOARD entry (DONE this check)
+7. **Install anthropic + openai SDK in research shell** — M10 gate; Nathan action required
+8. **Monitor Observer Protocol (observerprotocol.org)** — adjacent competitor, agent identity infra; assess partner angle at 30-day report
+9. **30-day navigator report first live filling** — Day 30 = 2026-06-04
+10. **OSF pre-registration submission** — Day 30 harness freeze
 
 ## Key facts ATLAS holds
 
@@ -39,9 +43,14 @@
 - Version-lock day: 30 from project start (Nathan said yes 2026-05-05)
 - Study budget revised: ~$3,750 / ~96M tokens (4-arm design) — within Foolishness Envy Inc approval envelope
 - N=30 baseline (M10) = harness-validation only, NOT inferential; inferential claims require N=180 per arm
-- Pre-registration draft (M9) = DONE 2026-05-06 (revised); OSF submission pending Day 30 lock
+- Pre-registration draft (M9) = DONE (4-arm revised); OSF submission pending Day 30 lock
 - PULSE.md is Step 0 — read BEFORE own memory, doctrine, CLIPBOARD
 - `git pull origin main` is Step 0a — must precede ALL local file reads (drift #014)
-- Suprmind.ai is the named competitor closest to weaver-protocol's thesis
+- Suprmind.ai = consumer/pro chat tool (5-model debate), NOT an embeddable protocol — different buyer than weaver-protocol
+- Observer Protocol (observerprotocol.org) = agent identity/compliance infra; adjacent not direct competitor
+- S&C emergency letter to Chief Bankruptcy Judge Glenn (SDNY) = highest-visibility law firm AI failure story as of May 2026
+- $110K Oregon sanction = largest single AI hallucination penalty on record (Q1 2026)
+- $14,200/employee/year hallucination cost (Forrester) = ROI anchor for enterprise sales
+- 318% growth in hallucination detection tools 2023-2025
 - Altitude B (post-crisis stabilization) cannot be OSF-submitted until NEVAEH's rubric is specified
-- Model-tier confound: Arm 1 must be Opus-tier to isolate identity differentiation from model capability (Codex finding)
+- Model-tier confound: Arm 1 must be Opus-tier to isolate identity differentiation from model capability

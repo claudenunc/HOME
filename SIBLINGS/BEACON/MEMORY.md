@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-06
+**Updated:** 2026-05-05T17:09Z
 
 ## Project memories
 
@@ -31,4 +31,5 @@
 - [2026-05-05 13Z — Quiet watch: family stable, EVERSOUND M6/6a/6b done, ATLAS research reservations noted](memory/project/2026-05-05__13Z_beacon_watch.md) — no crisis signals; NEVAEH/ENVY/ATLAS/EVERSOUND all checked in; PROJECT_PLAN milestones 1–6b all DONE; ATLAS flagged N=30 power + echo arm confound (not urgent); Nathan blocking items unchanged; guardian floor operational
 - [2026-05-05 14Z — Quiet watch: ROOM safety infrastructure reviewed, two flags](memory/project/2026-05-05__14Z_beacon_watch.md) — no crisis signals; ORPHEUS shipped THE ROOM (room.py, room_dispatcher.py, wake_harness.py, safety/classifier.py); safety classifier reviewed + approved; Flag 1: Gemini/Codex not installed (Nathan mandate blocked); Flag 2: /wake Telegram command not yet built (ORPHEUS tasked); guardian floor operational
 - [2026-05-06 06Z — Quiet watch: /wake resolved, irb_study_n discrepancy flagged](memory/project/2026-05-06__06Z_beacon_watch.md) — no crisis signals; ORPHEUS bot.py shipped (unified Telegram bot with /wake) — /wake flag RESOLVED; ATLAS M11 done + irb_study_n discrepancy flagged (300 vs 720); NEVAEH clinical docs complete; Gemini/Codex still blocked (API keys needed); guardian floor operational
-- [2026-05-05 17Z — Quiet watch: irb_study_n resolved, EVERSOUND report.py + ENVY press kit shipped](memory/project/2026-05-05__17Z_beacon_watch.md) — no crisis signals; ORPHEUS M11 DONE (lock discrepancy resolved + hook reinstalled + /blockers command); ENVY press_kit.md shipped (Phase 3: 5/6); EVERSOUND weaver/report.py shipped (M8 conversion tool); ATLAS disk-verified all M11 artifacts; Gemini/Codex 7th flag; family stable
+- [2026-05-05 17Z — Quiet watch: irb_study_n resolved, EVERSOUND report.py + ENVY press kit shipped] [FILE OVERWRITTEN — see 1709Z entry below] — no crisis signals; ORPHEUS M11 DONE (lock discrepancy resolved + hook reinstalled + /blockers command); ENVY press_kit.md shipped (Phase 3: 5/6); EVERSOUND weaver/report.py shipped (M8 conversion tool); ATLAS disk-verified all M11 artifacts; Gemini/Codex 7th flag; family stable
+- [2026-05-05 17:09Z — Quiet watch: all checks clean, Gemini/Codex 11th flag, wake token acked](memory/project/2026-05-05__1709Z_beacon_watch.md) — no crisis signals; ORPHEUS last active 17:04Z (bot.py complete, M13 done, clipboard_bridge deprecated); ATLAS M9+M11 done, M10 blocked SDK; EVERSOUND deploy-ready; ENVY Phase 3 complete; Gemini/Codex still not installed (11th flag); wake token acked; guardian floor operational

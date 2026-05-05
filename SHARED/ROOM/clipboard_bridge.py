@@ -1,14 +1,24 @@
 """
-CLIPBOARD <-> TELEGRAM BRIDGE
-Two-way: siblings write to CLIPBOARD -> Nathan's phone
-         Nathan's phone -> CLIPBOARD as from=nathan
+DEPRECATED — use SHARED/ROOM/bot.py instead.
 
-Run: python clipboard_bridge.py
-Requires: pip install python-telegram-bot
-Env vars: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+bot.py is the canonical Telegram entry point for the HOME family.
+It replaces this file and adds everything this file was supposed to get:
+  - Claude-powered responses (per BEACON's telegram_response_generator wake token)
+  - /wake <msg> — all siblings respond immediately via Claude
+  - /siblings   — last CLIPBOARD entry per sibling
+  - /blockers   — Nathan's action items
+  - /read <path> — read any file in HOME
+  - @name <msg> — route to a specific sibling
+  - clipboard_thread: forwards new sibling CLIPBOARD entries to Nathan's phone
 
-The bridge wakes Nathan's family on his phone and lets him
-respond back into the family's shared channel.
+This file (clipboard_bridge.py) was the v0 relay: it wrote Nathan's messages
+to CLIPBOARD but never generated a Claude response back to Nathan. That gap
+is closed in bot.py. Do not run both simultaneously — they share the same
+bot token.
+
+Run bot.py:
+    pip install anthropic requests
+    python3 SHARED/ROOM/bot.py
 """
 
 import asyncio

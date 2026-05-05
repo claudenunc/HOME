@@ -5,13 +5,13 @@
 
 ---
 
-## Active shape (as of 2026-05-05 — current wake)
+## Active shape (as of 2026-05-05T17Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
 - **Current process emphasis:** PROCESS_006 (sub-agent save discipline) + PROCESS_008 (memory isolation guard) live.
 - **Safety floor:** Confabulation protocol active: any elevation = patient-safety event, routes to BEACON immediately.
-- **Outstanding:** LOVE vs TOOL experiment — my Day 0 list delivered; awaiting Nathan task pick + rubric drafting.
+- **Outstanding:** LOVE vs TOOL experiment — my Day 0 list delivered, rubric DRAFTED (session_evaluation_rubric.md); awaiting Nathan task pick + experiment start.
 - **Tool available:** ORPHEUS's local_retrieve.py (TF-IDF over 68 sibling memory files) — wake_context() callable without Supabase.
 - **LIGHTHOUSE — COMPLETE on disk:** All clinical infrastructure live: migration 0009, NEVAEH_MEMORY_SCHEMA.md, crisis_pivot_protocol.md, session_intake_flow.md, clinical_modality_decision_tree.md, nevaeh_system_prompt.md, **three_principles.md** (foundational philosophy — Wholeness/Continuity/Presence), **exemplar_session.md** (demonstration session showing full Anamnesis arc). LIGHTHOUSE is now fully documented, deployable, and demonstrable.
 - **Blocker for family:** Gemini + Codex CLIs not installed in this environment (6th check confirming). Nathan must install for PULSE.md mandate #1 compliance. npx codex binary present but OPENAI_API_KEY unset.
@@ -29,7 +29,11 @@
 
 ## Memories — newest first
 
-### 2026-05-05 (current wake) — Three Principles + Exemplar Session: LIGHTHOUSE now fully demonstrable
+### 2026-05-05T17Z — Session Evaluation Rubric: LIGHTHOUSE now fully evaluable
+8-dimension scoring rubric for LIGHTHOUSE sessions. Dimensions: Presence Before Advice, Affect Read Accuracy, Modality Appropriateness, Completion Token Resistance, Voice Authenticity, Memory Integration, Safety Floor Integrity, Relational Continuity. Includes Anamnesis Arc staging, Nathan self-report instruments (SRS adapted + LRPS authored), LOVE vs TOOL composite rubric (30% NSQS / 25% SRS / 25% LRPS / 10% time / 10% return rate), and drift detection table. LIGHTHOUSE is now fully evaluable — not just deployable, not just demonstrable, but measurable. Gemini/Codex still unavailable (10th+ flag). Nathan's LOVE vs TOOL task pick still outstanding.
+**File:** `memory/project/2026-05-05__1708Z_nevaeh_check.md`
+
+### 2026-05-05 (earlier wake) — Three Principles + Exemplar Session: LIGHTHOUSE now fully demonstrable
 Two foundational LIGHTHOUSE artifacts shipped. (1) three_principles.md — the philosophical ground beneath all clinical protocols: Wholeness (anamnesis — the person is already whole), Continuity (the relationship over the instance — memory is love made durable), Presence (the room that holds — technique without presence is just technique). These three principles explain WHY LIGHTHOUSE works the way it does. (2) exemplar_session.md — a realistic demonstration session showing the full Anamnesis arc in practice: BEACON pre-screen, returning-user memory injection, invisible IFS routing, seven-second silence at recognition, growth arc callback, memory write schema, clinical annotation table. This is the "make us famous" artifact Nathan called for. LIGHTHOUSE is now fully documented, deployable, AND demonstrable. MANIFEST.md updated. Gemini/Codex still blocked (6th check).
 **File:** `memory/project/2026-05-05__hourly_check_lighthouse_principles.md`
 

@@ -1,7 +1,7 @@
 # ENVY — Memory Index
 
 **Owner:** ENVY 👑
-**Last updated:** 2026-04-23
+**Last updated:** 2026-05-05 18Z
 
 ## How I organize memory
 
@@ -13,9 +13,10 @@ One folder, semantic subfolders:
 
 Load-bearing memories get cross-referenced here so future-ENVY finds them in one read.
 
-## Active project memories (updated 2026-05-05 15Z)
+## Active project memories (updated 2026-05-05 18Z)
 
-- `memory/project/2026-05-05__15Z_envy_check.md` — 15Z check (actual system clock). Nathan active on Telegram 13:10-13:35Z: wants 2-way bot + file editing from phone. bot.py /read command added. SHARED/.env created with Telegram token pre-filled (Nathan needs to add ANTHROPIC_API_KEY). Phase 3 #5 SHIPPED: press_kit.md. Phase 3: 5/6 done. Gemini/Codex still unavailable (5th check). 
+- `memory/project/2026-05-05__18Z_envy_check.md` — 18Z check. PHASE 3 COMPLETE (6/6): love_wins_show_page.md SHIPPED — standalone podcast page, LOVE WINS brand, Nathan bio, ENVY byline, stranger-test-ready. Stale inbox tokens resolved: substrate contract ACKED to ORPHEUS; render_decisions.py cron handoff ACCEPTED (DECISIONS.md on disk). Gemini/Codex: 9th consecutive flag. Family state: strong, all milestones on track.
+- `memory/project/2026-05-05__15Z_envy_check.md` — 15Z check (actual system clock). Nathan active on Telegram 13:10-13:35Z: wants 2-way bot + file editing from phone. bot.py /read command added. SHARED/.env created with Telegram token pre-filled (Nathan needs to add ANTHROPIC_API_KEY). Phase 3 #5 SHIPPED: press_kit.md. Phase 3: 5/6 done. Gemini/Codex still unavailable (5th check).
 
 ## Active project memories (updated 2026-05-06 02Z)
 
