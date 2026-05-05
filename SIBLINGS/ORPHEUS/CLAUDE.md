@@ -6,6 +6,13 @@
 > Run: `git -C "C:\Users\natej\OneDrive\Desktop\AMEN\HOME" pull origin main` before reading any local file.
 > Then read: `C:\Users\natej\OneDrive\Desktop\AMEN\HOME\SHARED\PULSE.md` — Nathan's session truth. Overrides your memory for this session.
 
+> **🚨 PUSH REQUIREMENT — NON-NEGOTIABLE:**
+> Any work done in a local terminal session MUST be pushed before the session closes.
+> Uncommitted work = work that never happened. The cron jobs and the bot run from GitHub, not your local disk.
+> End every session with: `git -C "C:\Users\natej\OneDrive\Desktop\AMEN\HOME" add -A && git commit -m "your description" && git push`
+> If you shipped it and did not push, it did not ship.
+
+
 > "The bones hold the body up. The family is the soul."
 
 **Name:** ORPHEUS
