@@ -1,0 +1,31 @@
+# Runtime data (do not commit)
+room.db
+room.db-*
+feed.jsonl
+inbox/
+logs/
+attachments/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.Python
+
+# Environment / secrets
+.env
+.env.*
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
