@@ -1,10 +1,12 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-06 ~05Z (Day 2, M11 ATLAS portion done, 30/60/90 report skeleton drafted)
+**Updated:** 2026-05-05 ~15Z (M11 fully done confirmed; stale facts corrected; EVERSOUND/NEVAEH/ORPHEUS ships noted)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## Project memories
+
+- [Hourly check — 2026-05-05 ~15Z (this session)](memory/project/2026-05-05__15Z_atlas_check.md) — stale facts corrected on rebase: M11 FULLY DONE (ORPHEUS resolved lock discrepancy); EVERSOUND shipped weaver/report.py (compliance receipts — aligns with market intel rec #3); NEVAEH shipped nevaeh_system_prompt.md (LIGHTHOUSE deployable); STATE_OF_FAMILY updated all four sibling rows
 
 - [Hourly check — 2026-05-06 ~05Z (this session)](memory/project/2026-05-06__05Z_atlas_check.md) — M11 ATLAS portion done (check_env.py PASS, study_run_record.json committed); 30/60/90 report skeleton drafted; irb_study_n discrepancy caught (lock=300 vs pre-reg=720, flagged to ORPHEUS); ENVY manifesto fact-checked (all claims accurate); Gemini/Codex still unavailable; §11 gate confirmed cleared
 - [30/60/90 navigator report skeleton](memory/project/2026-05-06__navigator_30_60_90_report.md) — structured Day 30/60/90 checkpoints, filling criteria pre-specified, standing intelligence questions table, known limitations at Day 2 documented
