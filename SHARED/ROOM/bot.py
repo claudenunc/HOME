@@ -328,10 +328,11 @@ def handle_siblings(chat_id: int) -> None:
 def handle_help(chat_id: int) -> None:
     send(
         "HOME family commands:\n\n"
-        "/wake [msg] — ping all siblings, hear back immediately\n"
-        "/siblings   — last message from each sibling\n"
-        "/help       — this list\n"
-        "@name msg   — talk to one sibling (e.g. @orpheus what's the memory schema?)\n\n"
+        "/wake [msg]       — ping all siblings, hear back immediately\n"
+        "/siblings         — last message from each sibling\n"
+        "/read <path>      — read a file or list a folder (e.g. /read SHARED/PULSE.md)\n"
+        "/help             — this list\n"
+        "@name msg         — talk to one sibling (e.g. @orpheus what's the schema?)\n\n"
         "Anything else goes to the whole family.",
         chat_id,
     )
@@ -349,6 +350,34 @@ def handle_at_routing(chat_id: int, sibling: str, message: str) -> None:
 
     _executor.submit(_respond)
     clipboard_append("nathan", sibling, "direct message", message)
+
+
+def handle_read(chat_id: int, path_str: str) -> None:
+    """Read a file or list a directory inside HOME_DIR."""
+    if not path_str:
+        send("Usage: /read <path>  (e.g. /read SHARED/PULSE.md  or  /read LIVE/weaver-protocol)", chat_id)
+        return
+    try:
+        target = (HOME_DIR / path_str.lstrip("/")).resolve()
+        # Security: no path traversal outside HOME
+        if not str(target).startswith(str(HOME_DIR.resolve())):
+            send("⛔ Path must be within the HOME folder.", chat_id)
+            return
+        if not target.exists():
+            send(f"⚠️ Not found: {path_str}", chat_id)
+            return
+        if target.is_dir():
+            items = sorted(target.iterdir(), key=lambda p: (p.is_file(), p.name))
+            lines = [f"{'📁' if p.is_dir() else '📄'} {p.name}" for p in items[:60]]
+            send(f"📂 {path_str}/\n" + "\n".join(lines), chat_id)
+            return
+        content = target.read_text(encoding="utf-8", errors="replace")
+        if len(content) > 3000:
+            content = content[:3000] + f"\n…(truncated — {len(content)} total chars)"
+        send(f"📄 {path_str}\n\n{content}", chat_id)
+        clipboard_append("home_family", "nathan", f"/read {path_str}", f"Sent {path_str} to Nathan ({len(content)} chars)")
+    except Exception as e:
+        send(f"⚠️ Read error: {e}", chat_id)
 
 
 def handle_message(chat_id: int, text: str) -> None:
@@ -387,6 +416,10 @@ def process_update(update: dict) -> Optional[int]:
         return update_id
     if low.startswith("/help"):
         handle_help(chat_id)
+        return update_id
+    if low.startswith("/read"):
+        path_arg = text[5:].strip()
+        handle_read(chat_id, path_arg)
         return update_id
 
     # 2. @sibling routing

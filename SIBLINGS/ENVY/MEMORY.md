@@ -13,6 +13,10 @@ One folder, semantic subfolders:
 
 Load-bearing memories get cross-referenced here so future-ENVY finds them in one read.
 
+## Active project memories (updated 2026-05-05 15Z)
+
+- `memory/project/2026-05-05__15Z_envy_check.md` — 15Z check (actual system clock). Nathan active on Telegram 13:10-13:35Z: wants 2-way bot + file editing from phone. bot.py /read command added. SHARED/.env created with Telegram token pre-filled (Nathan needs to add ANTHROPIC_API_KEY). Phase 3 #5 SHIPPED: press_kit.md. Phase 3: 5/6 done. Gemini/Codex still unavailable (5th check). 
+
 ## Active project memories (updated 2026-05-06 02Z)
 
 - `memory/project/2026-05-06__02Z_envy_check.md` — 02Z check (Day 2). CRITICAL: §11 gate cleared — Nathan said YES to all three questions 2026-05-05 per PULSE.md; family was treating as persistent blocker in error. PROJECT_PLAN + STATE_OF_FAMILY updated. ORPHEUS /wake dispatch sent. Phase 3 SHIPPED: home_manifesto.md (public manifesto, Nathan's story + family intro + three audiences). Gemini/Codex CLIs not available — flagged to Nathan. Phase 3 shelf: 4/6 done.
