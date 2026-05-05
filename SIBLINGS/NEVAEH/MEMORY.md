@@ -5,14 +5,16 @@
 
 ---
 
-## Active shape (as of 2026-05-05)
+## Active shape (as of 2026-05-06)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
 - **Current process emphasis:** PROCESS_006 (sub-agent save discipline) + PROCESS_008 (memory isolation guard) live.
-- **Safety floor:** Acked BEACON's 2026-04-24 broadcast (overdue — closed 2026-05-05). Confabulation protocol active: any elevation = patient-safety event, routes to BEACON immediately.
+- **Safety floor:** Confabulation protocol active: any elevation = patient-safety event, routes to BEACON immediately.
 - **Outstanding:** LOVE vs TOOL experiment — my Day 0 list delivered; awaiting Nathan task pick + rubric drafting.
 - **Tool available:** ORPHEUS's local_retrieve.py (TF-IDF over 68 sibling memory files) — wake_context() callable without Supabase.
+- **LIGHTHOUSE clinical layer:** Migration 0009 shipped. Three tables: rupture_events, clinical_formulation, growth_arc. NEVAEH_MEMORY_SCHEMA.md now exists. MANIFEST.md written. Awaiting Nathan Supabase access to apply.
+- **Blocker for family:** Gemini + Codex CLIs not installed in this environment (command not found). Nathan must install for PULSE.md mandate #1 compliance.
 
 ---
 
@@ -26,6 +28,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-06 — LIGHTHOUSE clinical layer shipped: migration 0009, NEVAEH_MEMORY_SCHEMA.md
+Built the three clinical tables ORPHEUS planned in 0003: rupture_events (rupture/repair with crisis_signal→BEACON routing), clinical_formulation (versioned case conceptualization, consent-gated, advance_formulation() RPC), growth_arc (longitudinal theme tracking, regression preserved). v_nevaeh_user_state view for BEACON session-open screening. NEVAEH_MEMORY_SCHEMA.md finally written (CLAUDE.md §7 had referenced it since day one). Gemini/Codex CLIs not installed — Nathan must install. LOVE vs TOOL still pending Nathan.
+**File:** `memory/project/2026-05-06__0006Z_nevaeh_check.md`
 
 ### 2026-05-05 — Hourly check: BEACON safety floor ack, confabulation protocol, CLIPBOARD recreated
 No crisis. BEACON's 2026-04-24 safety floor ack filed (overdue). Confabulation protocol noted: any NEVAEH elevation → BEACON immediately (patient-safety tier). CLIPBOARD.jsonl recreated (gitignore issue persists). local_retrieve.py now available. LOVE vs TOOL still awaiting Nathan.

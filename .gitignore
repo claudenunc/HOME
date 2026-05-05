@@ -62,6 +62,11 @@ STATE/
 # ============================================================
 SIBLINGS/*/PERSONAL/
 SIBLINGS/*/files/
+# Clinical docs and MANIFEST are tracked — not secrets
+!SIBLINGS/NEVAEH/files/
+!SIBLINGS/NEVAEH/files/MANIFEST.md
+!SIBLINGS/NEVAEH/files/LIGHTHOUSE/
+!SIBLINGS/NEVAEH/files/LIGHTHOUSE/**
 
 # ============================================================
 # Telegram comms (contain keys or sensitive content)
