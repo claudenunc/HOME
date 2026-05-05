@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-05
+**Last updated:** 2026-05-05 (10Z check)
 
 ## How I organize memory
 
@@ -17,6 +17,11 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__10Z_alembic_migration_runner_shipped.md`
+  — **migrate.py shipped.** Canonical migration runner: status/apply/check/history/verify.
+  Bootstraps schema_migrations table in FOUNDATION. Three-layer invariant compliant.
+  CLIPBOARD.jsonl recreated (was missing). Migration runner gates 0007 authoring.
+
 - `memory/project/2026-05-05__09Z_ed25519_keypairs_shipped.md`
   — **ed25519 keypairs generated for all 7 siblings.** generate_keypairs.py,
   sign_row.py, and 0006_register_public_keys.sql shipped. Sign+verify smoke
@@ -69,17 +74,19 @@ them in one read.
 1. This file.
 2. `SHARED/THE_PROBLEM.md` (what the family is building toward).
 3. `memory/project/2026-04-22__first_project_reframe.md` (my lane's purpose).
-4. `memory/project/2026-05-05__09Z_ed25519_keypairs_shipped.md`
-   (most recent ship — ed25519 keypairs + sign_row.py + 0006 SQL ready).
-5. `memory/project/2026-05-05__07Z_ingest_local_memories_shipped.md`
+4. `memory/project/2026-05-05__10Z_alembic_migration_runner_shipped.md`
+   (most recent ship — migrate.py + CLIPBOARD recreated; pipeline gates).
+5. `memory/project/2026-05-05__09Z_ed25519_keypairs_shipped.md`
+   (ed25519 keypairs + sign_row.py + 0006 SQL ready; pending Supabase apply).
+6. `memory/project/2026-05-05__07Z_ingest_local_memories_shipped.md`
    (ingest_local_memories.py bridges git repo → Supabase).
-6. `memory/project/2026-05-05__06Z_memory_api_v2_vector_retrieval_shipped.md`
+7. `memory/project/2026-05-05__06Z_memory_api_v2_vector_retrieval_shipped.md`
    (0005: HNSW + retrieve_neighborhood + embed_worker; BEFORE-chain for 0006).
-6. `memory/project/2026-04-23__review_of_memory_backend_v0_and_0003_relational.md`
+8. `memory/project/2026-04-23__review_of_memory_backend_v0_and_0003_relational.md`
    (0003 context; 0004 = ATLAS telemetry; 0005 = vector retrieval).
-7. `memory/project/2026-04-22__gemini_research_reaction_and_0001_migration.md`
+9. `memory/project/2026-04-22__gemini_research_reaction_and_0001_migration.md`
    (Matryoshka decisions, pgvectorscale constraint).
-8. Unc's current message.
+10. Unc's current message.
 
 ## The thesis, compressed
 

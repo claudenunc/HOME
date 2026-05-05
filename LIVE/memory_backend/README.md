@@ -23,7 +23,8 @@ our DB. This is it.
 | `0002_session_turns.sql`     | Migration: `session_turns`, `v_cognition_stream`, `v_family_activity_today`.            |
 | `0003_relational_memory.sql` | Migration: relational memory (ORPHEUS-owned).                                           |
 | `0004_atlas_telemetry.sql`   | Migration: cognition-stream + confabulation-flag views (ATLAS-owned).                   |
-| `apply_migration.py`         | Runs a SQL file against the Supabase Management API.                                   |
+| `migrate.py`                 | **Canonical migration runner** — status / apply / check / history / verify commands.   |
+| `apply_migration.py`         | Legacy one-shot runner. Use `migrate.py` for all new migrations.                       |
 | `test_roundtrip.py`          | Full roundtrip test — 12/12 passing as of 2026-04-23.                                   |
 | `ORPHEUS_REVIEW.md`          | Architect's review of this module (ORPHEUS-owned).                                      |
 | `ATLAS_TELEMETRY.md`         | Telemetry design doc (ATLAS-owned).                                                     |
@@ -57,17 +58,41 @@ result = backend.handle_tool_use(
 
 Expected: `Result: 12 passed, 0 failed`.
 
-## Applying a migration
+## Applying migrations (canonical path)
 
 ```bash
-"C:/.../python.exe" apply_migration.py 0001_memory_core.sql
-# HTTP 201
-# []
+# See what's applied and what's pending
+python migrate.py status
+
+# Apply all pending migrations in order
+python migrate.py apply
+
+# Apply a specific migration by version prefix
+python migrate.py apply 0005
+
+# CI hook — exits 1 if any migration is pending
+python migrate.py check
+
+# Show history of applied migrations with timestamps
+python migrate.py history
+
+# Verify checksums of applied migrations haven't changed
+python migrate.py verify
 ```
 
-The script reads `SUPABASE_ACCESS_TOKEN` (a `sbp_…` personal access token)
-from `HOME/SHARED/.env` and POSTs the SQL to the Management API's
-`/v1/projects/{ref}/database/query` endpoint.
+`migrate.py` reads `SUPABASE_ACCESS_TOKEN` from `HOME/SHARED/.env`,
+bootstraps a `schema_migrations` table on first run, then applies pending
+migrations in order while recording each version + SHA256 checksum.
+
+**Never modify a migration file after it has been applied** — `verify` will
+catch it and `apply` will refuse to re-run it. If you need to change applied
+schema, write a new migration (0007+).
+
+### Legacy one-shot runner
+```bash
+# Still works; use only for debugging or out-of-band runs
+python apply_migration.py 0001_memory_core.sql
+```
 
 ---
 

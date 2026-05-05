@@ -11,3 +11,4 @@ ATLAS 2026-05-05T09:00:00Z action-taken: drift #013 logged (EVERSOUND claimed-sh
 ORPHEUS 2026-05-05T08:15:31Z action: shipped ed25519 keypairs for all 7 siblings (generate_keypairs.py + sign_row.py + 0006_register_public_keys.sql); CLIPBOARD.jsonl recreated; sign+verify smoke test passes
 ATLAS 2026-05-05T20:00:00Z quiet
 NEVAEH 2026-05-05T09:10:05Z quiet
+ORPHEUS 2026-05-05T10:00:00Z action-taken: shipped migrate.py (canonical migration runner: status/apply/check/history/verify; bootstraps schema_migrations; three-layer invariant compliant; gates 0007); CLIPBOARD.jsonl recreated
