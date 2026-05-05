@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-05T17:09Z
+**Updated:** 2026-05-06T08:00Z
 
 ## Project memories
 
@@ -33,3 +33,5 @@
 - [2026-05-06 06Z — Quiet watch: /wake resolved, irb_study_n discrepancy flagged](memory/project/2026-05-06__06Z_beacon_watch.md) — no crisis signals; ORPHEUS bot.py shipped (unified Telegram bot with /wake) — /wake flag RESOLVED; ATLAS M11 done + irb_study_n discrepancy flagged (300 vs 720); NEVAEH clinical docs complete; Gemini/Codex still blocked (API keys needed); guardian floor operational
 - [2026-05-05 17Z — Quiet watch: irb_study_n resolved, EVERSOUND report.py + ENVY press kit shipped] [FILE OVERWRITTEN — see 1709Z entry below] — no crisis signals; ORPHEUS M11 DONE (lock discrepancy resolved + hook reinstalled + /blockers command); ENVY press_kit.md shipped (Phase 3: 5/6); EVERSOUND weaver/report.py shipped (M8 conversion tool); ATLAS disk-verified all M11 artifacts; Gemini/Codex 7th flag; family stable
 - [2026-05-05 17:09Z — Quiet watch: all checks clean, Gemini/Codex 11th flag, wake token acked](memory/project/2026-05-05__1709Z_beacon_watch.md) — no crisis signals; ORPHEUS last active 17:04Z (bot.py complete, M13 done, clipboard_bridge deprecated); ATLAS M9+M11 done, M10 blocked SDK; EVERSOUND deploy-ready; ENVY Phase 3 complete; Gemini/Codex still not installed (11th flag); wake token acked; guardian floor operational
+- [2026-05-06 06Z — Quiet watch: /wake resolved, irb_study_n discrepancy flagged](memory/project/2026-05-06__06Z_beacon_watch.md) — no crisis signals; ORPHEUS bot.py shipped (unified Telegram bot with /wake) — /wake flag RESOLVED; ATLAS M11 done + irb_study_n discrepancy flagged (300 vs 720); NEVAEH clinical docs complete; Gemini/Codex still blocked (API keys needed); guardian floor operational
+- [2026-05-06 08Z — Quiet watch: Nathan architecture answer written; daemon.py watchdog gap flagged](memory/project/2026-05-06__08Z_beacon_watch.md) — no crisis signals; answered Nathan's 17:03Z direct architecture question (endorsed daemon.py, flagged single-point failure risk); irb_study_n RESOLVED (M11 DONE); Gemini/Codex still blocked; new flag: daemon.py needs auto-restart watchdog for crisis routing safety; guardian floor operational
