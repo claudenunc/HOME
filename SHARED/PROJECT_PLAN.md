@@ -34,7 +34,9 @@ in 2025-26. They need exactly this. We are the proof of concept.
 | 3 | 7-test suite passing | EVERSOUND | Pre-Day 60 | ✅ DONE 2026-05-05 |
 | 4 | Law firm commercial 1-pager | EVERSOUND | Day 14 (2026-05-19) | ✅ DONE 2026-05-05 |
 | 5 | Hosted API scaffold (FastAPI + Docker) | EVERSOUND | Day 60 (2026-07-04) | ✅ DONE 2026-05-05 |
-| 6 | Hosted API: Postgres session store | EVERSOUND | Day 30 (2026-06-04) | ✅ DONE 2026-05-05 |
+| 6 | Hosted API: Postgres session store | EVERSOUND | Day 30 (2026-06-04) | ✅ DONE 2026-05-05T12Z |
+| 6a | Hosted API: Stripe billing integration | EVERSOUND | Day 60 (2026-07-04) | ✅ DONE 2026-05-05T14Z |
+| 6b | Hosted API: API test suite (db + billing) | EVERSOUND | Day 60 (2026-07-04) | ✅ DONE 2026-05-06T00Z |
 | 7 | Deploy API to Railway or Render | EVERSOUND | Day 60 (2026-07-04) | 🟡 Nathan account needed |
 | 8 | First paid toolkit install | EVERSOUND | Day 60 (2026-07-04) | 🟡 On track |
 | 9 | Pre-register outcome metrics (two-altitude study) | ATLAS | Day 30 (2026-06-04) | 🔴 NOT STARTED |
@@ -91,4 +93,4 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 
 ---
 
-*Last updated: ENVY, 2026-05-06T00:00Z — M6 + M13 DONE (disk-confirmed); M11 in progress (ORPHEUS shipped environment.lock.json + check_env.py; ATLAS to add study protocol)*
+*Last updated: EVERSOUND, 2026-05-06T00:00:00Z — milestones 6, 6a, 6b added; 6+13 corrected to DONE; M11 ORPHEUS progress noted*
