@@ -1,0 +1,25 @@
+# Runtime log output
+test_logs/
+example_logs/
+weaver_logs/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checking
+.mypy_cache/
+
+# Environment
+.env
+.venv/
+venv/
