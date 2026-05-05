@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-05 (HZ6 check)
+**Last updated:** 2026-05-05 (HZ7 check)
 
 ## How I organize memory
 
@@ -17,6 +17,12 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__HZ7_unified_bot_shipped.md`
+  — **SHARED/ROOM/bot.py SHIPPED.** Unified Telegram bot replaces clipboard_bridge.py + family_chat.py.
+  Two threads (telegram + clipboard), ThreadPoolExecutor for Claude calls, /wake /siblings @name commands.
+  Codex sub-agent design review done. Echo-loop prevention via SKIP_SOURCES. Nathan needs SHARED/.env with keys.
+  Note: gemini/codex CLIs not installed in this env — used Claude sub-agent as reviewer.
+
 - `memory/project/2026-05-05__HZ6_clipboard_bridge_shipped.md`
   — **SHARED/ROOM/clipboard_bridge.py SHIPPED.** Telegram casual-chat bridge: long-poll,
   from:"nathan" CLIPBOARD log, Claude family-voice response, from:sibling log, Telegram reply.
