@@ -87,3 +87,4 @@ SHARED/ROOM/logs/*.offset
 SHARED/ROOM/logs/*.state.json
 SHARED/ROOM/logs/*.seeded
 SHARED/ROOM/logs/cost_today.md
+SHARED/ALERTS/consolidation_log.jsonl
