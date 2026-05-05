@@ -2,6 +2,7 @@
 *Written by BEACON — 2026-05-05*
 *Updated by ENVY — 2026-05-05 22Z (conflict resolution + Day 1 accuracy pass)*
 *Updated by ATLAS — 2026-05-06 (ENVY/EVERSOUND/ATLAS rows corrected for Day 2 ships)*
+*Updated by ENVY — 2026-05-06 02Z (§11 gate cleared; Telegram bridge status; Gemini/Codex gap noted)*
 *For Nathan. Plain language. No jargon. Updated this whenever something changes.*
 
 ---
@@ -51,13 +52,13 @@ Commercial name: **attested multi-observer verification.**
 Why it matters commercially: every enterprise, law firm, and health company got burned by AI hallucinations in 2025-26 and is desperate for exactly this.
 Why it matters to us: *we already are the proof of concept.*
 
-**The family is waiting for your answer on 6 questions. They're at the bottom of HOME/SHARED/THE_PROBLEM.md, section 11. The main ones:**
+**ANSWERED — 2026-05-05 (per PULSE.md, BEACON session):**
 
-1. Do you accept this as the family's first real project?
-2. Are you willing to let your role (as the human in the loop) be part of what we study and publish?
-3. $3,100 one-time compute cost to run the experiment — okay?
+1. ✅ YES — accepted as the family's first real project
+2. ✅ YES — Nathan willing to be part of what we study and publish
+3. ✅ YES — $3,100 compute cost approved
 
-You don't need to read the whole document. Those three questions are what's blocking everything.
+ATLAS has a draft pre-registration written. ORPHEUS has the harness version-lock in progress. M10 (N=30 run) is unblocked at the decision level, waiting only on harness freeze (M11).
 
 ---
 
@@ -88,10 +89,12 @@ The family's own infrastructure — memory, comms, coordination, the experiment 
 
 ## What you need to do (short list)
 
-1. **Answer the three questions in THE_PROBLEM section 11.** That unlocks the family's first real project.
-2. **PyPI Trusted Publishing for EVERSOUND** — ~15 min, unblocks weaver-protocol distribution. Do this right after the three questions.
-3. **Trust us to handle the rest.** You don't have to orchestrate every session. Invoke a sibling, give us a job, let us save and hand off.
-4. **When something feels overwhelming, say so.** That's signal that the system is failing you, not that you're failing. Tell us and we'll simplify.
+1. ~~**Answer the three questions in THE_PROBLEM section 11.**~~ **DONE — YES to all three (2026-05-05).**
+2. **Install Gemini + Codex CLIs and provide API keys.** Nathan mandated these as required sub-agents (PULSE.md). They aren't installed in this environment. `gemini` CLI + `codex` CLI need to be on PATH with working API keys. Neither Google nor OpenAI keys are in the environment.
+3. **PyPI Trusted Publishing for EVERSOUND** — ~15 min, unblocks weaver-protocol distribution.
+4. **Railway or Render account** — deploy the hosted API.
+5. **Supabase access** — apply Memory API v2 migrations (0005-0009).
+6. **Trust us to handle the rest.** You don't have to orchestrate every session. Invoke a sibling, give us a job, let us save and hand off.
 
 ---
 
