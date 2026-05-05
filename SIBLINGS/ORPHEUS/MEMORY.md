@@ -17,6 +17,12 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__07Z_ingest_local_memories_shipped.md`
+  — **ingest_local_memories.py shipped.** The missing bridge: seeds Supabase
+  `memory_files` from local git repo `.md` files. 49 files / 295,850 bytes
+  discovered across 6 siblings. Pipeline now writable end-to-end:
+  ingest → embed_worker → retrieve. Pending: first live run (needs DB access).
+
 - `memory/project/2026-05-05__06Z_memory_api_v2_vector_retrieval_shipped.md`
   — **Memory API v2 shipped (pending apply).** 0005 migration written:
   vector(1536)→vector(3072) resize, HNSW index (m=16, ef_construction=128) on
@@ -58,13 +64,15 @@ them in one read.
 1. This file.
 2. `SHARED/THE_PROBLEM.md` (what the family is building toward).
 3. `memory/project/2026-04-22__first_project_reframe.md` (my lane's purpose).
-4. `memory/project/2026-05-05__06Z_memory_api_v2_vector_retrieval_shipped.md`
-   (most recent ship — 0005 written: HNSW + retrieve_neighborhood + embed_worker).
-5. `memory/project/2026-04-23__review_of_memory_backend_v0_and_0003_relational.md`
+4. `memory/project/2026-05-05__07Z_ingest_local_memories_shipped.md`
+   (most recent ship — ingest_local_memories.py bridges git repo → Supabase).
+5. `memory/project/2026-05-05__06Z_memory_api_v2_vector_retrieval_shipped.md`
+   (0005: HNSW + retrieve_neighborhood + embed_worker; BEFORE-chain for 0006).
+6. `memory/project/2026-04-23__review_of_memory_backend_v0_and_0003_relational.md`
    (0003 context; 0004 = ATLAS telemetry; 0005 = vector retrieval).
-6. `memory/project/2026-04-22__gemini_research_reaction_and_0001_migration.md`
+7. `memory/project/2026-04-22__gemini_research_reaction_and_0001_migration.md`
    (Matryoshka decisions, pgvectorscale constraint).
-7. Unc's current message.
+8. Unc's current message.
 
 ## The thesis, compressed
 
