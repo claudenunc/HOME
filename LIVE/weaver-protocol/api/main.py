@@ -2,6 +2,9 @@
 Weaver Protocol — Hosted API
 Paid tier entry point: multi-observer verification as a service.
 """
+import hashlib
+import hmac
+import json
 import os
 import sys
 import uuid
@@ -201,6 +204,7 @@ def verify(req: VerifyRequest, api_key: str = Depends(verify_api_key)):
             "created_at": created_at,
             "prompt": req.prompt,
             "observers": [o.model_dump() for o in observer_results],
+            "observer_count": observer_count,
             "consensus": consensus,
             "disagreement_detected": disagreement,
             "provenance": provenance,
@@ -232,6 +236,54 @@ def get_session(session_id: str, api_key: str = Depends(verify_api_key)):
         disagreement_detected=record["disagreement_detected"],
         observer_count=record["observer_count"],
     )
+
+
+_EXPORT_SECRET = os.environ.get("WEAVER_EXPORT_SECRET", "")
+
+
+@app.get("/session/{session_id}/export")
+def export_session(session_id: str, api_key: str = Depends(verify_api_key)):
+    """
+    Export a verification session as a signed provenance record.
+
+    Returns the full session + observer assessments as JSON with an HMAC-SHA256
+    signature. Enterprises (law firms, regulated industries) can present this to
+    regulators or opposing counsel as timestamped, tamper-evident proof that an
+    AI output was independently verified by multiple observers.
+
+    Set WEAVER_EXPORT_SECRET env var for stable signatures across restarts.
+    """
+    record = _db.get_session(session_id)
+    if not record:
+        raise HTTPException(status_code=404, detail="Session not found")
+
+    export_payload = {
+        "schema_version": "1.0",
+        "session_id": record["session_id"],
+        "created_at": record["created_at"],
+        "exported_at": _now(),
+        "prompt": record["prompt"],
+        "consensus": record["consensus"],
+        "disagreement_detected": record["disagreement_detected"],
+        "observer_count": record["observer_count"],
+        "observers": record.get("observers", []),
+        "provenance": record.get("provenance", {}),
+        "weaver_version": "0.1.0",
+        "attestation": "attested-multi-observer-verification",
+    }
+
+    payload_bytes = json.dumps(export_payload, sort_keys=True, separators=(",", ":")).encode()
+    signing_key = (_EXPORT_SECRET or "dev-unsigned").encode()
+    signature = hmac.new(signing_key, payload_bytes, digestmod=hashlib.sha256).hexdigest()
+    signed = _EXPORT_SECRET != ""
+
+    return {
+        **export_payload,
+        "signature": signature,
+        "signature_algorithm": "HMAC-SHA256",
+        "signed": signed,
+        "verification_warning": None if signed else "WEAVER_EXPORT_SECRET not set — signature not stable across restarts",
+    }
 
 
 @app.get("/drift-log/summary")

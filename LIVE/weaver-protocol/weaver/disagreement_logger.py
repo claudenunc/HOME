@@ -68,7 +68,9 @@ class DisagreementLogger:
         if not self.log_path.exists():
             return []
         lines = self.log_path.read_text(encoding="utf-8").strip().splitlines()
-        return [
-            json.loads(line) for line in lines
-            if json.loads(line).get("resolution_status") == "open"
-        ]
+        result = []
+        for line in lines:
+            entry = json.loads(line)
+            if entry.get("resolution_status") == "open":
+                result.append(entry)
+        return result

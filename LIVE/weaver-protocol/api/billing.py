@@ -92,13 +92,9 @@ def handle_webhook(payload: bytes, sig_header: str) -> dict:
         session = event["data"]["object"]
         customer_id: str = session["customer"]
         tier: str = session.get("metadata", {}).get("weaver_tier", "starter")
-        api_key = _issue_api_key(customer_id, tier)
-        return {
-            "action": "key_issued",
-            "customer_id": customer_id,
-            "tier": tier,
-            "api_key": api_key,
-        }
+        _issue_api_key(customer_id, tier)
+        # Key stored in DB only — Stripe logs webhook responses, never return credentials here
+        return {"action": "key_issued", "customer_id": customer_id, "tier": tier}
 
     if event_type in ("customer.subscription.deleted", "customer.subscription.paused"):
         sub = event["data"]["object"]
@@ -110,6 +106,11 @@ def handle_webhook(payload: bytes, sig_header: str) -> dict:
 
 
 def _issue_api_key(customer_id: str, tier: str) -> str:
+    # Idempotency: return existing key if one already exists for this customer+tier.
+    # Prevents duplicate keys when Stripe retries the webhook on transient errors.
+    existing = _db.get_active_key_for_customer(customer_id, tier)
+    if existing:
+        return existing
     api_key = f"wp_{secrets.token_urlsafe(32)}"
     _db.save_api_key(customer_id, api_key, tier)
     return api_key

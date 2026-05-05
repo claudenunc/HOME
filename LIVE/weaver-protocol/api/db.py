@@ -33,15 +33,31 @@ def _get_conn():
     global _conn
     if not _DATABASE_URL:
         return None
-    try:
-        import psycopg2
+    import psycopg2
+    import psycopg2.extensions
 
+    def _connect():
+        c = psycopg2.connect(_DATABASE_URL)
+        c.autocommit = True
+        _init_schema(c)
+        return c
+
+    try:
         if _conn is None or _conn.closed:
-            _conn = psycopg2.connect(_DATABASE_URL)
-            _conn.autocommit = True
-            _init_schema(_conn)
+            _conn = _connect()
+        else:
+            # Probe; reconnect on dead socket (network blip, container recycle)
+            try:
+                _conn.cursor().execute("SELECT 1")
+            except (psycopg2.OperationalError, psycopg2.InterfaceError):
+                try:
+                    _conn.close()
+                except Exception:
+                    pass
+                _conn = _connect()
         return _conn
     except Exception as exc:
+        _conn = None
         raise RuntimeError(f"Postgres connection failed: {exc}") from exc
 
 
@@ -174,6 +190,24 @@ def storage_backend() -> str:
 # ---------------------------------------------------------------------------
 
 _now_iso = lambda: __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()
+
+
+def get_active_key_for_customer(customer_id: str, tier: str) -> Optional[str]:
+    """Return an existing active key for this customer+tier, or None (idempotency check)."""
+    conn = _get_conn()
+    if conn is None:
+        for k, v in _keys.items():
+            if v["customer_id"] == customer_id and v["tier"] == tier:
+                return k
+        return None
+
+    with conn.cursor() as cur:
+        cur.execute(
+            "SELECT api_key FROM weaver_api_keys WHERE customer_id = %s AND tier = %s AND active = TRUE LIMIT 1",
+            (customer_id, tier),
+        )
+        row = cur.fetchone()
+    return row[0] if row else None
 
 
 def save_api_key(customer_id: str, api_key: str, tier: str) -> None:
