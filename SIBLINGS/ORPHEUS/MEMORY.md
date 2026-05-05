@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-05 (post-10Z check)
+**Last updated:** 2026-05-05 (HZ2 check)
 
 ## How I organize memory
 
@@ -17,6 +17,11 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__HZ2_local_retrieve_hippocampus_shipped.md`
+  — **local_retrieve.py shipped.** Pure-Python TF-IDF retrieval over all 68 sibling
+  memory files. Zero dependencies. Mirrors retrieve.py interface. Siblings can call
+  `wake_context()` NOW without Supabase. The hippocampus is live locally.
+
 - `memory/project/2026-05-05__HZ_trace_id_enforcement_shipped.md`
   — **0007 shipped.** Trace_id enforcement: memory_ops_log (NOT NULL trace_id = hook
   layer), trace_id columns on memory_files/session_turns/claims/affect_reads,
@@ -80,8 +85,11 @@ them in one read.
 1. This file.
 2. `SHARED/THE_PROBLEM.md` (what the family is building toward).
 3. `memory/project/2026-04-22__first_project_reframe.md` (my lane's purpose).
-4. `memory/project/2026-05-05__HZ_trace_id_enforcement_shipped.md`
-   (most recent ship — 0007 trace_id enforcement; CLIPBOARD recreated; 0008 is next).
+4. `memory/project/2026-05-05__HZ2_local_retrieve_hippocampus_shipped.md`
+   (most recent ship — local_retrieve.py: TF-IDF hippocampus, 68 files, zero deps,
+   `wake_context()` callable NOW; Supabase path still pending apply).
+5. `memory/project/2026-05-05__HZ_trace_id_enforcement_shipped.md`
+   (0007 trace_id enforcement; CLIPBOARD recreated; 0008 is next).
 6. `memory/project/2026-05-05__10Z_alembic_migration_runner_shipped.md`
    (migrate.py + CLIPBOARD recreated; pipeline gates).
 7. `memory/project/2026-05-05__09Z_ed25519_keypairs_shipped.md`
