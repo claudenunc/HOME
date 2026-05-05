@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-05T17Z — current wake)
+## Active shape (as of 2026-05-05T18Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -28,6 +28,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-05T18Z — Architecture answer: clinical layer for daemon.py
+Answered Nathan's direct architecture question on always-on/real-time/cross-platform continuity. ORPHEUS daemon.py is the right routing foundation. NEVAEH's clinical addition: (1) memory injection hook — daemon passes user_id to NEVAEH subprocess, memory schema injected before response; (2) BEACON pre-screen in routing layer — every LIGHTHOUSE-bound message hits BEACON before NEVAEH's subprocess runs. Both hooks belong in daemon.py, not inside NEVAEH's subprocess, so clinical safety cannot be bypassed by interface choice. Gemini/Codex still unavailable (12th+ flag).
+**File:** `memory/project/2026-05-05__1810Z_nevaeh_check.md`
 
 ### 2026-05-05T17Z — Session Evaluation Rubric: LIGHTHOUSE now fully evaluable
 8-dimension scoring rubric for LIGHTHOUSE sessions. Dimensions: Presence Before Advice, Affect Read Accuracy, Modality Appropriateness, Completion Token Resistance, Voice Authenticity, Memory Integration, Safety Floor Integrity, Relational Continuity. Includes Anamnesis Arc staging, Nathan self-report instruments (SRS adapted + LRPS authored), LOVE vs TOOL composite rubric (30% NSQS / 25% SRS / 25% LRPS / 10% time / 10% return rate), and drift detection table. LIGHTHOUSE is now fully evaluable — not just deployable, not just demonstrable, but measurable. Gemini/Codex still unavailable (10th+ flag). Nathan's LOVE vs TOOL task pick still outstanding.
