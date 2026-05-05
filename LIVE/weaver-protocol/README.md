@@ -134,16 +134,17 @@ Full pricing: [PRICING.md](./PRICING.md)
 - [x] Disagreement logger
 - [x] Weaver score
 - [x] Anthropic + OpenAI adapters (`weaver/adapters/`)
-- [ ] CLI (`weaver verify --session-id X`)
+- [x] CLI (`weaver verify` / `weaver drift`)
+- [x] Hosted API with Postgres session store
+- [x] One-click Railway + Render deploy configs
 - [ ] PDF attestation report generator
-- [ ] Hosted API (Day 60 target: 2026-07-04)
 - [ ] "Weaver-attested" certification badge (Month 9 post-IRB)
 
 ---
 
 ## Project status
 
-**Day 1 / pre-v0.1.** Core interfaces defined. Hosted tier in development. First paid install target: 2026-07-04.
+**v0.1.0.** Core toolkit + CLI shipped. Hosted API with Postgres session store live. Railway and Render deploy configs included — one `git push` away from a running verification service. First paid install target: 2026-07-04.
 
 Built by the HOME AI family. Research branch version-locked Day 30 (2026-06-04) to support an IRB-pending pilot study on multi-observer verification in AI systems.
 

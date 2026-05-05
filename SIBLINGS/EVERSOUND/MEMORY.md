@@ -22,6 +22,8 @@
 
 - [Day 1 12Z check — 2026-05-05T12Z](memory/project/2026-05-05__12Z_eversound_check.md) — **SHIPPED: Postgres session store** (`api/db.py`, 157 lines, disk-confirmed). **FIXED: main.py bugs** — `session.run()` (method doesn't exist) and wrong `WeaverSession` kwargs both fixed; `/verify` endpoint now actually works end-to-end. `psycopg2-binary` added to requirements. README updated with Postgres setup + Railway/Render Postgres provisioning steps.
 
+- [Day 1 13Z check — 2026-05-05T13Z](memory/project/2026-05-05__13Z_eversound_check.md) — **SHIPPED: CLI** (`weaver/cli.py` — `weaver verify` + `weaver drift`; `[project.scripts]` added to pyproject.toml). **FIXED: Dockerfile critical bug** (was missing `weaver/` package + `db.py` — API was broken in Docker). **SHIPPED: `railway.toml` + `render.yaml`** (one-click deploy configs). **SHIPPED: `docs/launch-copy.md`** (tweet thread + HN post + LinkedIn). README roadmap updated. CLIPBOARD.jsonl recreated. Weaver Protocol is now fully deploy-ready — blocked only on Nathan's Railway/Render account + PyPI Trusted Publishing 5-step.
+
 ---
 
 ## What EVERSOUND owns right now
@@ -32,6 +34,10 @@
 4. **PyPI publish pipeline** — ✅ DONE 2026-05-05T10Z. Sdist + wheel builds clean. GitHub Actions CI + Trusted Publishing wired. Nathan must complete 5-step PyPI setup to activate `pip install weaver-protocol`.
 5. **Hosted API scaffold** — ✅ DONE 2026-05-05T11Z (disk-confirmed). `LIVE/weaver-protocol/api/` — FastAPI main.py, requirements.txt, Dockerfile, README w/ Railway/Render deploy guide. Pricing: $49/$199/$499+/mo.
 5a. **Hosted API: Postgres session store** — ✅ DONE 2026-05-05T12Z. `api/db.py` — lazy psycopg2 singleton, auto-schema, in-memory fallback, `DATABASE_URL` env var controls. main.py bugs also fixed (broken `session.run()` → `ws.verify()`). `/verify` now works end-to-end.
+6a. **CLI** — ✅ DONE 2026-05-05T13Z. `weaver/cli.py` — `weaver verify` (multi-observer mock session, JSON output, exit 2 on flag) + `weaver drift` (log summary). `[project.scripts]` in pyproject.toml. Zero extra deps.
+6b. **Dockerfile fix** — ✅ DONE 2026-05-05T13Z. Critical bug: Dockerfile missing `weaver/` package + `db.py`. Fixed: now copies both. Hosted API was broken in Docker before this.
+6c. **Deploy configs** — ✅ DONE 2026-05-05T13Z. `railway.toml` + `render.yaml`. Nathan creates account → ~2 min to live service.
+6d. **Launch copy** — ✅ DONE 2026-05-05T13Z. `docs/launch-copy.md` — tweet thread (6 tweets), HN Show HN post, LinkedIn post. Ready for Nathan review.
 6. **First paid toolkit install** — Day 60 target (2026-07-04). Revenue track live.
 7. **CRAFT revenue** — active, $297-$1,997/project, 95-99% margin. No clients in queue.
 
@@ -73,7 +79,9 @@
 | PyPI Trusted Publishing (Nathan action) | Pre-Day 60 | 🟡 5 steps, Nathan required |
 | **Hosted API scaffold** | **Day 60** | **✅ DONE 2026-05-05T11Z** |
 | Hosted API: Postgres session store | Pre-Day 30 | ✅ DONE 2026-05-05T12Z |
-| Hosted API: deploy to Railway/Render | Pre-Day 60 | 🟡 Nathan account needed |
+| Hosted API: deploy to Railway/Render | Pre-Day 60 | 🟡 Nathan account needed (configs ✅ ready) |
+| CLI (`weaver verify` / `weaver drift`) | Pre-Day 60 | ✅ DONE 2026-05-05T13Z |
+| Launch copy (tweet / HN / LinkedIn) | Pre-Day 60 | ✅ DONE 2026-05-05T13Z |
 | First paid toolkit install | Day 60 (2026-07-04) | 🟡 On track |
 | CRAFT Friday shipping shelf | Weekly | 🟡 No clients in queue |
 
@@ -102,4 +110,4 @@ Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: ru
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-05T12Z.*
+*Last updated by EVERSOUND hourly check, 2026-05-05T13Z.*

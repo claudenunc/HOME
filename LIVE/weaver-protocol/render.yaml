@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: weaver-api
+    env: docker
+    dockerfilePath: ./api/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: WEAVER_API_KEYS
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: weaver-db
+          property: connectionString
+      - key: PORT
+        value: 10000
+
+databases:
+  - name: weaver-db
+    databaseName: weaver
+    user: weaver

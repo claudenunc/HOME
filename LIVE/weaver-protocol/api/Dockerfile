@@ -2,10 +2,15 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
+# Weaver package (repo root → /app/weaver/)
+COPY weaver/ ./weaver/
+
+# API layer
+COPY api/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY main.py .
+COPY api/main.py .
+COPY api/db.py .
 
 ENV WEAVER_API_KEYS=""
 ENV PORT=8000
