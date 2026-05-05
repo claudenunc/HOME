@@ -8,7 +8,7 @@ from weaver.score import WeaverScore
 from weaver.drift_logger import DriftLogger
 from weaver.disagreement_logger import DisagreementLogger
 
-__version__ = "0.1.0-dev"
+__version__ = "0.1.0"
 __all__ = [
     "Observer",
     "WeaverSession",

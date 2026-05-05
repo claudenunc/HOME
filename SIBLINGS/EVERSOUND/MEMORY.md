@@ -16,6 +16,8 @@
 
 - [Day 1 09Z build check — 2026-05-05T09Z](memory/project/2026-05-05__09Z_eversound_check.md) — **SHIPPED: provider adapters** (`weaver/adapters/` — Anthropic, OpenAI, Mock). **SHIPPED: 7-test suite (all passing, no API keys).** **SHIPPED: real-world examples** (with_anthropic.py, with_openai.py). PyPI publish is next blocker.
 
+- [Day 1 10Z build check — 2026-05-05T10Z](memory/project/2026-05-05__10Z_eversound_check.md) — **SHIPPED: build backend fixed** (`setuptools.build_meta`). **SHIPPED: version bumped to 0.1.0.** **SHIPPED: clean sdist + wheel builds.** **SHIPPED: GitHub Actions CI + PyPI Trusted Publishing workflow.** Nathan action required: 5-step PyPI Trusted Publishing setup to go live.
+
 ---
 
 ## What EVERSOUND owns right now
@@ -23,7 +25,7 @@
 1. **`weaver-protocol` repo skeleton** ✅ DONE — `LIVE/weaver-protocol/`. Core Python package + spec + pricing + example shipped Day 1.
 2. **Commercial 1-pager** (law firm / enterprise AI-governance) ✅ DONE — `SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md`.
 3. **Anthropic + OpenAI adapters** — `weaver/adapters/`. ✅ DONE 2026-05-05T09Z. Mock, Anthropic, OpenAI — 7 tests passing.
-4. **PyPI publish** — NOT STARTED. Blocks `pip install weaver-protocol`. Needed before Day 60.
+4. **PyPI publish pipeline** — ✅ DONE 2026-05-05T10Z. Sdist + wheel builds clean. GitHub Actions CI + Trusted Publishing wired. Nathan must complete 5-step PyPI setup to activate `pip install weaver-protocol`.
 5. **First paid toolkit install** — Day 60 target (2026-07-04). Revenue track live.
 6. **CRAFT revenue** — active, $297-$1,997/project, 95-99% margin. No clients in queue.
 
@@ -61,7 +63,8 @@
 | `weaver-protocol` repo skeleton | Day 30 (2026-06-04) | ✅ DONE 2026-05-05 |
 | Commercial 1-pager (law firm) | Day 14 (2026-05-19) | ✅ DONE 2026-05-05 |
 | Provider adapters (Anthropic, OpenAI) | Pre-Day 60 | ✅ DONE 2026-05-05 |
-| PyPI publish | Pre-Day 60 | 🔴 NOT STARTED |
+| PyPI publish pipeline (Actions + build) | Pre-Day 60 | ✅ DONE 2026-05-05T10Z |
+| PyPI Trusted Publishing (Nathan action) | Pre-Day 60 | 🟡 5 steps, Nathan required |
 | First paid toolkit install | Day 60 (2026-07-04) | 🟡 On track |
 | CRAFT Friday shipping shelf | Weekly | 🟡 No clients in queue |
 | Hosted API | Day 60 | 🔴 NOT STARTED |
@@ -85,4 +88,4 @@
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-05T09Z.*
+*Last updated by EVERSOUND hourly check, 2026-05-05T10Z.*
