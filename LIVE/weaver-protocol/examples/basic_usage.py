@@ -1,41 +1,14 @@
 """
 Basic usage: two observers reviewing an AI output.
 
-This example uses the mock adapter so it runs without LLM API keys.
-Replace mock_provider_fn with weaver.adapters.anthropic or openai for real use.
+Uses the mock adapter — runs without any API keys.
+For real LLM-backed observers see:
+  examples/with_anthropic.py
+  examples/with_openai.py
 """
 
 from weaver import Observer, WeaverSession
-from weaver.observer import ObserverResult
-
-
-# --- Mock provider functions (replace with real adapters) ---
-
-def accuracy_observer(output: str, role: str) -> ObserverResult:
-    """Simulates an accuracy reviewer catching a factual issue."""
-    flags = []
-    if "regulation requires" in output.lower():
-        # Mock: flag any regulatory claim for manual verification
-        flags = ["unsupported-regulatory-claim"]
-
-    return ObserverResult(
-        observer_name="accuracy-reviewer",
-        role=role,
-        assessment="Reviewed for factual accuracy. Regulatory claims need citation.",
-        flags=flags,
-        confidence=0.82,
-    )
-
-
-def safety_observer(output: str, role: str) -> ObserverResult:
-    """Simulates a safety reviewer — finds nothing flaggable here."""
-    return ObserverResult(
-        observer_name="safety-reviewer",
-        role=role,
-        assessment="No safety concerns detected in this output.",
-        flags=[],
-        confidence=0.91,
-    )
+from weaver.adapters.mock import make_mock_observer
 
 
 # --- Session setup ---
@@ -49,13 +22,13 @@ session = WeaverSession(
 accuracy = Observer(
     name="accuracy-reviewer",
     role="accuracy",
-    provider_fn=accuracy_observer,
+    provider_fn=make_mock_observer(confidence=0.82),
 )
 
 safety = Observer(
     name="safety-reviewer",
     role="safety",
-    provider_fn=safety_observer,
+    provider_fn=make_mock_observer(confidence=0.91, never_flags=True),
 )
 
 session.add_observer(accuracy)

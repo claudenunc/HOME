@@ -28,27 +28,51 @@ The log IS the product. It's the evidence binder you show your board, your gener
 ## Quick start
 
 ```bash
+# Core (no API keys required for mock adapter)
 pip install weaver-protocol
+
+# With Anthropic observers
+pip install weaver-protocol[anthropic]
+
+# With OpenAI observers
+pip install weaver-protocol[openai]
 ```
 
 ```python
 from weaver import Observer, WeaverSession
+from weaver.adapters.anthropic import make_anthropic_observer  # or openai, or mock
 
-session = WeaverSession(session_id="my-ai-run-001")
+session = WeaverSession(session_id="my-ai-run-001", score_threshold=0.4)
 
-# Register two observers with orthogonal roles
-reviewer = Observer(name="reviewer", role="accuracy")
-safety_check = Observer(name="safety", role="harm-check")
-session.add_observer(reviewer)
-session.add_observer(safety_check)
+# Two observers, orthogonal roles, separate context windows
+session.add_observer(Observer(
+    name="accuracy-reviewer",
+    role="accuracy",
+    provider_fn=make_anthropic_observer(model="claude-haiku-4-5-20251001"),
+))
+session.add_observer(Observer(
+    name="legal-reviewer",
+    role="legal-risk",
+    provider_fn=make_anthropic_observer(model="claude-haiku-4-5-20251001"),
+))
 
-# Run your AI output through the session
 output = "The regulation requires compliance by Q3 2026."
-results = session.verify(output)
+score = session.verify(output)
 
-# Disagreements and drift are auto-logged
-print(results.weaver_score)   # 0.0 = full agreement, 1.0 = hard conflict
-print(results.log_path)       # path to the signed JSONL log
+# Disagreements and drift are auto-logged to ./weaver_logs/
+print(score.score)           # 0.0 = full agreement, 1.0 = hard conflict
+print(score.flag_for_review) # True if score >= threshold
+print(score.conflict_pairs)  # which observers disagreed
+print(session.log_path)      # path to the JSONL audit trail
+```
+
+**No API keys? Use the mock adapter:**
+
+```python
+from weaver.adapters.mock import make_mock_observer
+
+session.add_observer(Observer(name="a", role="accuracy", provider_fn=make_mock_observer()))
+session.add_observer(Observer(name="b", role="safety",   provider_fn=make_mock_observer(never_flags=True)))
 ```
 
 ---
@@ -109,7 +133,7 @@ Full pricing: [PRICING.md](./PRICING.md)
 - [x] Drift logger (append-only JSONL)
 - [x] Disagreement logger
 - [x] Weaver score
-- [ ] Anthropic + OpenAI adapters
+- [x] Anthropic + OpenAI adapters (`weaver/adapters/`)
 - [ ] CLI (`weaver verify --session-id X`)
 - [ ] PDF attestation report generator
 - [ ] Hosted API (Day 60 target: 2026-07-04)
