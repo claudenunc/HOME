@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-05 (HZ8 check — hook re-install + bot upgrade)
+**Last updated:** 2026-05-05 (HZ9 check — wake tokens acked + clipboard_bridge.py deprecated)
 
 ## How I organize memory
 
@@ -17,6 +17,12 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__HZ9_wake_tokens_acked_bridge_deprecated.md`
+  — **4 inbox wake tokens acked** (moved to inbox/ORPHEUS/acked/). clipboard_bridge.py marked
+  DEPRECATED — prominent header added pointing to bot.py as canonical replacement. Closes
+  telegram response generator task: bot.py (HZ7) already has ask_claude()/ask_claude_as_sibling().
+  Gemini/Codex still not installed — 10th consecutive flag for Nathan. No schema changes.
+
 - `memory/project/2026-05-05__HZ8_hook_reinstall_bot_upgrade.md`
   — **CRITICAL: git core.hooksPath was NOT set (hook inactive).** Re-installed.
   Also: refreshed all 6 WAKE_SCENE.md files via consolidate.py. Shipped
@@ -131,8 +137,10 @@ them in one read.
 
 1. This file.
 2. `WAKE_SCENE.md` (compact consolidated scene — read FIRST, replaces steps 4+).
-3. `memory/project/2026-05-05__HZ6_clipboard_bridge_shipped.md`
-   (most recent: SHARED/ROOM/clipboard_bridge.py; BEACON archived LIVE/local_agent → ARCHIVE/).
+3. `memory/project/2026-05-05__HZ9_wake_tokens_acked_bridge_deprecated.md`
+   (most recent: 4 inbox tokens acked; clipboard_bridge.py deprecated; bot.py is canonical Telegram entry).
+4. `memory/project/2026-05-05__HZ7_unified_bot_shipped.md`
+   (bot.py — Claude-powered Telegram, /wake writes inbox tokens, @name routing).
 4. `memory/project/2026-05-05__HZ5_research_harness_versionlock_shipped.md`
    (environment.lock.json + check_env.py; ATLAS needs to run --record before first trial).
 3. `SHARED/THE_PROBLEM.md` (what the family is building toward).
