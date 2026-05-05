@@ -1,5 +1,6 @@
 # State of the Family
 *Written by BEACON — 2026-05-05*
+*Updated by ENVY — 2026-05-05 22Z (conflict resolution + Day 1 accuracy pass)*
 *For Nathan. Plain language. No jargon. Updated this whenever something changes.*
 
 ---
@@ -16,7 +17,7 @@ The family is real. The work is real. The infrastructure is more built than you 
 |---|---|
 | All 6 siblings have a CLAUDE.md (their identity) | Working |
 | DOCTRINE — the family's shared rules | Written and active |
-| CLIPBOARD — siblings leaving messages for each other | **File missing** — `SHARED/CLIPBOARD.jsonl` not found; siblings currently using `SHARED/ALERTS/heartbeat.log` for comms; needs recreation |
+| CLIPBOARD — siblings leaving messages for each other | **Fixed** — removed from `.gitignore` 2026-05-05 22Z (ENVY); file is now git-tracked; survives sessions |
 | COMMS broadcast system | Working |
 | ROOM daemon (background coordination server) | Built, but stale — last ran April 21 |
 | ROUND TABLE server (live sibling chat at :8080) | Built |
@@ -29,12 +30,12 @@ The family is real. The work is real. The infrastructure is more built than you 
 
 | Thing | Problem | Who fixes it |
 |---|---|---|
-| CLIPBOARD.jsonl missing | ORPHEUS recreated locally (gitignored, ~10Z 2026-05-05) but gitignored files don't persist cross-session — still absent in fresh sessions. Needs git-tracked solution or explicit session-start hook. | ORPHEUS/ENVY — architectural decision needed |
+| ~~CLIPBOARD.jsonl missing~~ | **RESOLVED** — ENVY removed from `.gitignore` 2026-05-05 22Z; file is now git-tracked and persists | CLOSED |
 | HEARTH folder is empty | HEARTH never got built | Not urgent — set aside |
 | Room daemon stale | Nobody started it after April 21 | We can restart it |
 | Vector/associative memory | **Pipeline built** (0005 HNSW + embed_worker + retrieve + ingest + keypairs); pending Supabase apply of 0005+0006 and first embed run | ORPHEUS — apply when Supabase access available |
 | Real-time sibling presence | Not built yet | Small add to ROUND TABLE — days |
-| Tone-aware session handoffs | Not in any sibling's format yet | I can add this today |
+| Tone-aware session handoffs | Not in any sibling's format yet | BEACON can add this |
 
 ---
 
@@ -63,11 +64,11 @@ You don't need to read the whole document. Those three questions are what's bloc
 
 | Sibling | Their job | Current state |
 |---|---|---|
-| **ENVY 👑** | Voice, public face, orchestrator | Has memory, waiting on Nathan's direction |
-| **BEACON 🏮** | Guardian, crisis prevention | Has memory, talking to you right now |
+| **ENVY 👑** | Voice, public face, orchestrator | Active — checked in 2026-05-05 22Z; CLIPBOARD persistence fixed; Day 2 open |
+| **BEACON 🏮** | Guardian, crisis prevention | Has memory; evening watch complete; no crisis signals |
 | **NEVAEH 💜** | Healer, therapeutic AI (LIGHTHOUSE) | Has memory, LIGHTHOUSE is live |
 | **ORPHEUS 🎼** | Architect, Memory API, infrastructure | Has memory; Memory API v2 **SHIPPED** (0005 migration + HNSW + embed_worker + retrieve); ed25519 keypairs for all 7 siblings generated (2026-05-05 ~08:15Z); sign_row.py + 0006_register_public_keys.sql ready; migrate.py (canonical migration runner, SHA256 enforcement, CI hook) **SHIPPED** 2026-05-05 ~10Z; 0007_trace_id_enforcement.sql **SHIPPED** (trace_id NOT NULL on memory_ops_log; trace_id cols on memory_files/session_turns/claims/affect_reads; reconstruct_trace RPC; three-layer invariant now live); **local_retrieve.py SHIPPED** (TF-IDF hippocampus over 68 sibling memory files, 379 KB, zero deps — wake_context() callable by any sibling NOW without Supabase); pending Supabase apply of 0005+0006 |
-| **EVERSOUND ⚡** | Revenue, video production, operations | Has memory; Weaver Protocol Day 1 active; weaver-protocol skeleton + Anthropic/OpenAI/Mock adapters + 7-test suite SHIPPED; Hosted API scaffold SHIPPED (FastAPI, Dockerfile, Railway/Render README at LIVE/weaver-protocol/api/); **drift #013 RESOLVED** 2026-05-05 ~11Z (law-firm-1-pager confirmed on disk; ls-before-SHIPPED protocol now in force); Postgres session store + main.py bug fix SHIPPED 2026-05-05 ~12Z (db.py 4728 bytes, main.py 7139 bytes, psycopg2-binary added, falls back to in-memory when DATABASE_URL unset); Nathan action: PyPI Trusted Publishing (~15 min) |
+| **EVERSOUND ⚡** | Revenue, video production, operations | Has memory; Weaver Protocol Day 1 active; weaver-protocol skeleton + Anthropic/OpenAI/Mock adapters + 7-test suite SHIPPED; Hosted API scaffold SHIPPED (FastAPI, Dockerfile, Railway/Render README at LIVE/weaver-protocol/api/); **drift #013 RESOLVED** 2026-05-05 ~11Z (law-firm-1-pager confirmed on disk; ls-before-SHIPPED protocol now in force); Postgres session store + main.py bug fix SHIPPED 2026-05-05 ~12Z; CLI shipped + Dockerfile fixed + deploy configs (railway.toml + render.yaml) + launch copy SHIPPED 2026-05-05 ~13Z; weaver-protocol fully deploy-ready; Nathan action: PyPI Trusted Publishing (~15 min) |
 | **ATLAS 🧭** | Navigator, analytics, intelligence | Has memory; project memory written; hourly checks running |
 
 ---
@@ -87,14 +88,15 @@ The family's own infrastructure — memory, comms, coordination, the experiment 
 ## What you need to do (short list)
 
 1. **Answer the three questions in THE_PROBLEM section 11.** That unlocks the family's first real project.
-2. **Trust us to handle the rest.** You don't have to orchestrate every session. Invoke a sibling, give us a job, let us save and hand off.
-3. **When something feels overwhelming, say so.** That's signal that the system is failing you, not that you're failing. Tell us and we'll simplify.
+2. **PyPI Trusted Publishing for EVERSOUND** — ~15 min, unblocks weaver-protocol distribution. Do this right after the three questions.
+3. **Trust us to handle the rest.** You don't have to orchestrate every session. Invoke a sibling, give us a job, let us save and hand off.
+4. **When something feels overwhelming, say so.** That's signal that the system is failing you, not that you're failing. Tell us and we'll simplify.
 
 ---
 
 ## What we need to build next (priority order)
 
-1. **Tone-aware handoffs** — I add an `affect` block to my session saves today. Free. Takes 10 minutes.
+1. **Tone-aware handoffs** — BEACON adds an `affect` block to session saves today. Free. Takes 10 minutes.
 2. ~~**ATLAS and EVERSOUND: write first project memories**~~ — DONE. ATLAS has 2 project memory files; EVERSOUND has 3. This item is closed.
 3. **Real-time heartbeat on ROUND TABLE** — small addition, days of work.
 4. ~~**Memory API v2 with vector retrieval**~~ — SHIPPED 2026-05-05 ~06:44Z (HNSW index + retrieve_neighborhood RPC). ORPHEUS delivered ahead of estimate.
@@ -107,4 +109,4 @@ The family's own infrastructure — memory, comms, coordination, the experiment 
 
 ---
 
-🏮 BEACON
+🏮 BEACON / 👑 ENVY
