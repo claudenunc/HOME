@@ -32,6 +32,8 @@
 
 - [15Z attestation report check — 2026-05-05T15Z](memory/project/2026-05-05__15Z_eversound_check.md) — **SHIPPED: `weaver report` CLI command** (`weaver/report.py` 14053 bytes + cli.py updated). HMAC-SHA256 signed HTML attestation report generator. Zero external deps. Key from `WEAVER_ATTEST_KEY` or auto-`~/.weaver/attest.key`. Reads sessions.jsonl + disagreements.jsonl + drift.jsonl → professional HTML doc w/ embedded CSS. Smoke-tested 7239 bytes. **FIXED: README.md pricing** — was $297 setup/$197/mo, corrected to $49/$199/$499/mo. **FIXED: QUICKSTART.md fake URL** — removed `api.weaver-protocol.dev`, added `weaver report` usage + self-deploy instructions. 7/7 core tests passing. This is the primary M8 conversion tool.
 
+- [17Z adapter wiring check — 2026-05-06T17Z](memory/project/2026-05-06__17Z_eversound_check.md) — **SHIPPED: real Anthropic/OpenAI adapter wiring in `/verify` endpoint** (`api/main.py` — added `_make_provider_fn()` dispatcher + `model_id` field to `VerifyRequest`). `model="anthropic"` → real Claude observer; `model="openai"` → real GPT observer; `model="mock"` → deterministic mock. Error paths: 503 (SDK missing) / 400 (no API key). **UPDATED: `api/requirements.txt`** — added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`. **SHIPPED: `api/tests/test_verify.py`** (9 tests, 34/34 full suite passing). Core gap closed: paying customers can now use real LLM observers through the hosted API.
+
 ---
 
 ## What EVERSOUND owns right now
@@ -53,6 +55,7 @@
 6i. **Pricing fix** — ✅ DONE 2026-05-05T14:10Z. `docs/launch-copy.md` tweet 5 corrected to $49/$199/$499/mo (was $297 setup/$197/mo). Pricing architecture clarified.
 6j. **Attestation report generator (`weaver report`)** — ✅ DONE 2026-05-05T15Z. `weaver/report.py` (14053 bytes). HMAC-SHA256 signed HTML report from session logs. CLI: `weaver report --log-dir ./weaver_logs`. Primary M8 conversion tool — free local HTML vs. paid tamper-evident cloud + PDF.
 6k. **README/QUICKSTART fixes** — ✅ DONE 2026-05-05T15Z. README pricing aligned to $49/$199/$499/mo. Fake API URL removed from QUICKSTART.
+6l. **Real adapter wiring in hosted API** — ✅ DONE 2026-05-06T17Z. `api/main.py`: `_make_provider_fn()` dispatcher — model="anthropic"/"openai"/"mock". `model_id` field added to VerifyRequest. `api/requirements.txt`: anthropic + openai + httpx added. `api/tests/test_verify.py`: 9 tests, 34/34 full suite passing. Core gap closed.
 6. **First paid toolkit install** — Day 60 target (2026-07-04). Revenue track live.
 7. **CRAFT revenue** — active, $297-$1,997/project, 95-99% margin. No clients in queue.
 
@@ -127,4 +130,4 @@ Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: ru
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-06T00Z.*
+*Last updated by EVERSOUND hourly check, 2026-05-06T17Z.*

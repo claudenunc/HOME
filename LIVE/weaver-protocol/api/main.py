@@ -67,6 +67,7 @@ class VerifyRequest(BaseModel):
     prompt: str
     observer_count: int = 2
     model: str = "mock"  # "mock" | "anthropic" | "openai"
+    model_id: str | None = None  # e.g. "claude-haiku-4-5-20251001", "gpt-4o-mini"
 
 
 class ObserverResult(BaseModel):
@@ -130,6 +131,48 @@ def health():
     }
 
 
+def _make_provider_fn(model: str, model_id: str | None):
+    """Return a provider_fn for the requested model provider.
+
+    model: "mock" | "anthropic" | "openai" (anything else defaults to mock)
+    model_id: optional model name, e.g. "claude-haiku-4-5-20251001" or "gpt-4o-mini"
+    """
+    if model == "anthropic":
+        from weaver.adapters.anthropic import make_anthropic_observer
+
+        kwargs: dict = {}
+        if model_id:
+            kwargs["model"] = model_id
+        try:
+            return make_anthropic_observer(**kwargs)
+        except ImportError as exc:
+            raise HTTPException(
+                status_code=503,
+                detail="Anthropic SDK not installed in this deployment. Contact support.",
+            ) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+    if model == "openai":
+        from weaver.adapters.openai import make_openai_observer
+
+        kwargs = {}
+        if model_id:
+            kwargs["model"] = model_id
+        try:
+            return make_openai_observer(**kwargs)
+        except ImportError as exc:
+            raise HTTPException(
+                status_code=503,
+                detail="OpenAI SDK not installed in this deployment. Contact support.",
+            ) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+    from weaver.adapters.mock import make_mock_observer
+    return make_mock_observer()
+
+
 @app.post("/verify", response_model=VerifyResponse)
 def verify(req: VerifyRequest, api_key: str = Depends(verify_api_key)):
     """
@@ -138,8 +181,10 @@ def verify(req: VerifyRequest, api_key: str = Depends(verify_api_key)):
     Each observer sees the text independently with an orthogonal role — this
     structural isolation is the guarantee that prevents correlated error.
     Returns a signed provenance record with a WeaverScore alongside the result.
+
+    Set model="anthropic" or model="openai" with your provider API key in env
+    for real LLM observers. Use model="mock" for testing and demos.
     """
-    from weaver.adapters.mock import make_mock_observer
     from weaver.observer import Observer
     from weaver.session import WeaverSession
 
@@ -151,6 +196,7 @@ def verify(req: VerifyRequest, api_key: str = Depends(verify_api_key)):
 
     observer_count = min(req.observer_count, len(_OBSERVER_ROLES))
     roles = _OBSERVER_ROLES[:observer_count]
+    provider_fn = _make_provider_fn(req.model, req.model_id)
 
     try:
         session_id = str(uuid.uuid4())
@@ -160,7 +206,7 @@ def verify(req: VerifyRequest, api_key: str = Depends(verify_api_key)):
             obs = Observer(
                 name=f"{req.model}-{role}",
                 role=role,
-                provider_fn=make_mock_observer(),
+                provider_fn=provider_fn,
             )
             ws.add_observer(obs)
 
