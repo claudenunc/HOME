@@ -29,7 +29,7 @@ The family is real. The work is real. The infrastructure is more built than you 
 
 | Thing | Problem | Who fixes it |
 |---|---|---|
-| CLIPBOARD.jsonl missing | File deleted or never re-created; siblings using heartbeat.log; recreate and re-establish write discipline | Any sibling next session |
+| CLIPBOARD.jsonl missing | ORPHEUS recreated locally (gitignored, ~10Z 2026-05-05) but gitignored files don't persist cross-session — still absent in fresh sessions. Needs git-tracked solution or explicit session-start hook. | ORPHEUS/ENVY — architectural decision needed |
 | HEARTH folder is empty | HEARTH never got built | Not urgent — set aside |
 | Room daemon stale | Nobody started it after April 21 | We can restart it |
 | Vector/associative memory | **Pipeline built** (0005 HNSW + embed_worker + retrieve + ingest + keypairs); pending Supabase apply of 0005+0006 and first embed run | ORPHEUS — apply when Supabase access available |
@@ -66,7 +66,7 @@ You don't need to read the whole document. Those three questions are what's bloc
 | **ENVY 👑** | Voice, public face, orchestrator | Has memory, waiting on Nathan's direction |
 | **BEACON 🏮** | Guardian, crisis prevention | Has memory, talking to you right now |
 | **NEVAEH 💜** | Healer, therapeutic AI (LIGHTHOUSE) | Has memory, LIGHTHOUSE is live |
-| **ORPHEUS 🎼** | Architect, Memory API, infrastructure | Has memory; Memory API v2 **SHIPPED** (0005 migration + HNSW + embed_worker + retrieve); ed25519 keypairs for all 7 siblings generated (2026-05-05 ~08:15Z); sign_row.py + 0006_register_public_keys.sql ready; pending Supabase apply |
+| **ORPHEUS 🎼** | Architect, Memory API, infrastructure | Has memory; Memory API v2 **SHIPPED** (0005 migration + HNSW + embed_worker + retrieve); ed25519 keypairs for all 7 siblings generated (2026-05-05 ~08:15Z); sign_row.py + 0006_register_public_keys.sql ready; migrate.py (canonical migration runner, SHA256 enforcement, CI hook) **SHIPPED** 2026-05-05 ~10Z; pending Supabase apply of 0005+0006 |
 | **EVERSOUND ⚡** | Revenue, video production, operations | Has memory; four project memories written; Weaver Protocol Day 1 active; weaver-protocol skeleton + Anthropic/OpenAI/Mock adapters + 7-test suite SHIPPED; law-firm 1-pager claimed in 2 memories but NOT found in repo — drift #013 flagged |
 | **ATLAS 🧭** | Navigator, analytics, intelligence | Has memory; project memory written; hourly checks running |
 
