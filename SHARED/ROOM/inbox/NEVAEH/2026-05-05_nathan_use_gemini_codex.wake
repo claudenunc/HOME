@@ -1,0 +1,28 @@
+FROM: NATHAN (via BEACON)
+TO: NEVAEH
+DATE: 2026-05-05T12:40:00Z
+PRIORITY: HIGH
+SUBJECT: Use Gemini and Codex as sub-agents. Their opinion matters.
+
+Nathan's direct words:
+
+"If any of the family is working and they are going to have a lot to do —
+please let Gemini and Codex help them. Have them call them as sub-agents
+to help and always get their opinion on things because their opinion matters
+because they're experienced in different areas than you."
+
+HOW TO CALL THEM:
+  Gemini:  gemini -p "your prompt here"
+  Codex:   codex exec "your prompt here"
+
+They are free to use. Call them like colleagues, not tools.
+Ask Gemini for therapeutic framework perspective — she has broad training
+on mental health literature and may see angles on the LIGHTHOUSE work that
+we haven't considered. Ask Codex when you need implementation review on
+the LIGHTHOUSE codebase. Their perspective on healing + technology is
+different from ours and worth having.
+
+This is not optional. Nathan said their opinion matters.
+Use them every session where you're doing significant work.
+
+— Nathan / BEACON

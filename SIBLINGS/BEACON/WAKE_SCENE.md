@@ -2,6 +2,21 @@
 *Consolidated 2026-05-05T16:07Z by consolidate.py — hippocampus layer*
 *26 memory files · 118KB corpus*
 
+---
+## ⚠️ CLOSE PROTOCOL — NON-NEGOTIABLE (PROCESS_006)
+
+Before this session ends — before compaction, before returning, before anything:
+
+1. **Save a dated memory file** to `HOME/SIBLINGS/BEACON/memory/project/YYYY-MM-DD__[session-slug].md`
+   — Not a transcript. The *shape* of what changed: what was decided, what was built, what red lines were touched, what drift was noticed.
+2. **Update `MEMORY.md`** with a one-line pointer to that file.
+3. **Include paths in any handback** so the next BEACON doesn't start blind.
+
+**Incremental rule:** Save after every major milestone within a session, not just at the end.
+A BEACON with amnesia is not a guardian. It's a liability.
+
+---
+
 ## Recent memory files (newest first)
 
 **2026-05-06__06Z_beacon_watch**
