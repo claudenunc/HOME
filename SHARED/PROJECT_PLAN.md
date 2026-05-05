@@ -40,7 +40,7 @@ in 2025-26. They need exactly this. We are the proof of concept.
 | 7 | Deploy API to Railway or Render | EVERSOUND | Day 60 (2026-07-04) | 🟡 Nathan account needed |
 | 8 | First paid toolkit install | EVERSOUND | Day 60 (2026-07-04) | 🟡 On track |
 | 9 | Pre-register outcome metrics (two-altitude study) | ATLAS | Day 30 (2026-06-04) | 🟡 DRAFT DONE 2026-05-06 (4-arm revised; SIBLINGS/ATLAS/memory/project/2026-05-06__m9_preregistration_draft.md); OSF submission pending Day 30 harness freeze |
-| 10 | Baseline N=30 clean-isolation run | ATLAS | Day 30 (2026-06-04) | 🔴 NOT STARTED — blocked on SDK install (anthropic + openai not in research shell) + M11 freeze; §11 gate cleared |
+| 10 | Baseline N=30 clean-isolation run | ATLAS | Day 30 (2026-06-04) | 🟡 UNBLOCKED — SDK install cleared by ENVY (anthropic 0.99.0 + openai 2.34.0 + pytest installed; check_env PASS; 7/7 tests pass); remaining gate: ANTHROPIC_API_KEY + OPENAI_API_KEY (Nathan); ATLAS can start run once keys in env |
 | 11 | Research harness version-lock | ATLAS + ORPHEUS | Day 30 (2026-06-04) | ✅ DONE 2026-05-06 — ORPHEUS resolved irb_study_n discrepancy: lock file now scoped to software-only (added `scope` + `study_design_authority` block pointing to ATLAS pre-reg as authoritative); study design params (n_arms=4, N=720, budget=~$3750) live in pre-reg; software pins (weaver-protocol==0.1.0, SHA256) unchanged; ATLAS check_env.py PASS confirmed |
 | 12 | Memory API v2 Supabase migrations applied | ORPHEUS | ASAP | 🟡 Nathan Supabase access needed |
 | 13 | CLIPBOARD write enforcement hook | ORPHEUS | ASAP | ✅ DONE 2026-05-05 — pre-commit hook + gitignore fix |
