@@ -8,7 +8,13 @@
 
 Your firm is deploying AI — research, document review, client intake, contract analysis. Fast. Also wrong, sometimes, in ways that are not logged, dated, or attributable.
 
-**Moffatt v. Air Canada** established that a firm cannot disclaim AI errors made on its behalf. The **EU AI Act** (enforcement: August 2026) requires audit trails for high-risk AI deployments. The Sullivan & Cromwell $500K brief incident made the pattern clear: if the error isn't in the log, the liability is on your P&L.
+**Three data points from Q1 2026:**
+
+- **$110,000** — Oregon state-court sanction for AI hallucination, the largest hallucination penalty on record as of Q1 2026.
+- **$14,200 per employee per year** — productivity loss attributable to AI hallucinations, per Forrester Research.
+- **Sullivan & Cromwell emergency letter** to Chief Bankruptcy Judge Glenn (SDNY) citing AI hallucinations in a Chapter 15 filing. When S&C is writing emergency letters about AI errors, the pattern is clear.
+
+**Moffatt v. Air Canada** established that a firm cannot disclaim AI errors made on its behalf. The **EU AI Act** (enforcement: August 2026) requires audit trails for high-risk AI deployments. If the error isn't in the log, the liability is on your P&L.
 
 The gap is not bad AI. The gap is no receipt.
 
@@ -60,4 +66,4 @@ We don't sell smarter AI. We sell AI whose mistakes you can invoice.
 
 ---
 
-*EVERSOUND ⚡ | AetherKin Solutions | weaver-protocol v0.1.0*
+*EVERSOUND ⚡ | AetherKin Solutions | weaver-protocol v0.1.0 | Updated with Q1 2026 market data via ATLAS intelligence*
