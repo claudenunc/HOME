@@ -1,0 +1,877 @@
+2026-04-24T08:01:07.299551+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.089
+2026-04-24T08:01:07.477122+00:00 [cron_tick] escalation ok rc=0 sec=0.176
+2026-04-24T08:01:07.490034+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T08:01:07.502013+00:00 [cron_tick] render_decisions ok rc=0 sec=0.011
+2026-04-24T08:01:07.528472+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.026
+2026-04-24T08:01:07.530029+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T08:03:03.411654+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.075
+2026-04-24T08:03:03.544797+00:00 [cron_tick] escalation ok rc=0 sec=0.132
+2026-04-24T08:03:03.554745+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.009
+2026-04-24T08:03:03.557542+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:05:02.831961+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.079
+2026-04-24T08:05:02.950043+00:00 [cron_tick] escalation ok rc=0 sec=0.117
+2026-04-24T08:05:02.959124+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.008
+2026-04-24T08:05:02.974242+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T08:05:02.976510+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T08:07:04.163287+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.085
+2026-04-24T08:07:04.292283+00:00 [cron_tick] escalation ok rc=0 sec=0.127
+2026-04-24T08:07:04.305534+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T08:07:04.308709+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:09:04.122385+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.115
+2026-04-24T08:09:04.242352+00:00 [cron_tick] escalation ok rc=0 sec=0.118
+2026-04-24T08:09:04.252217+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.009
+2026-04-24T08:09:04.253432+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:11:04.224018+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.151
+2026-04-24T08:11:04.461367+00:00 [cron_tick] escalation ok rc=0 sec=0.214
+2026-04-24T08:11:04.477896+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.016
+2026-04-24T08:11:04.495459+00:00 [cron_tick] render_decisions ok rc=0 sec=0.017
+2026-04-24T08:11:04.497887+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T08:13:03.382352+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.2
+2026-04-24T08:13:03.545635+00:00 [cron_tick] escalation ok rc=0 sec=0.162
+2026-04-24T08:13:03.555021+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.008
+2026-04-24T08:13:03.556856+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:15:06.029466+00:00 [cron_tick] silence_watcher ok rc=0 sec=2.38
+2026-04-24T08:15:06.369145+00:00 [cron_tick] escalation ok rc=0 sec=0.312
+2026-04-24T08:15:06.426656+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.056
+2026-04-24T08:15:06.466266+00:00 [cron_tick] render_decisions ok rc=0 sec=0.035
+2026-04-24T08:15:06.480921+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.013
+2026-04-24T08:15:06.486190+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T08:17:04.491067+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.165
+2026-04-24T08:17:04.694930+00:00 [cron_tick] escalation ok rc=0 sec=0.203
+2026-04-24T08:17:04.705562+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T08:17:04.708046+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:19:04.063789+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.089
+2026-04-24T08:19:04.194416+00:00 [cron_tick] escalation ok rc=0 sec=0.13
+2026-04-24T08:19:04.207289+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T08:19:04.209055+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:21:03.250584+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.13
+2026-04-24T08:21:03.378756+00:00 [cron_tick] escalation ok rc=0 sec=0.125
+2026-04-24T08:21:03.391230+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T08:21:03.406050+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T08:21:03.408603+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T08:23:02.919936+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.18
+2026-04-24T08:23:03.059691+00:00 [cron_tick] escalation ok rc=0 sec=0.137
+2026-04-24T08:23:03.075440+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T08:23:03.076983+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:25:04.230595+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.1
+2026-04-24T08:25:04.345374+00:00 [cron_tick] escalation ok rc=0 sec=0.112
+2026-04-24T08:25:04.356154+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T08:25:04.372286+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T08:25:04.373970+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T08:27:04.359319+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.126
+2026-04-24T08:27:04.594362+00:00 [cron_tick] escalation ok rc=0 sec=0.233
+2026-04-24T08:27:04.606276+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T08:27:04.607858+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:29:04.262976+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.163
+2026-04-24T08:29:04.395883+00:00 [cron_tick] escalation ok rc=0 sec=0.131
+2026-04-24T08:29:04.405542+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.009
+2026-04-24T08:29:04.407374+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:31:03.510454+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.1
+2026-04-24T08:31:03.612467+00:00 [cron_tick] escalation ok rc=0 sec=0.1
+2026-04-24T08:31:03.624648+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T08:31:03.638512+00:00 [cron_tick] render_decisions ok rc=0 sec=0.013
+2026-04-24T08:31:03.662604+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.023
+2026-04-24T08:31:03.668111+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T08:33:04.233607+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.149
+2026-04-24T08:33:04.390252+00:00 [cron_tick] escalation ok rc=0 sec=0.155
+2026-04-24T08:33:04.402213+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T08:33:04.404024+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:35:04.351462+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.107
+2026-04-24T08:35:04.509955+00:00 [cron_tick] escalation ok rc=0 sec=0.157
+2026-04-24T08:35:04.521050+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T08:35:04.539702+00:00 [cron_tick] render_decisions ok rc=0 sec=0.018
+2026-04-24T08:35:04.542044+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T08:37:04.311611+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.097
+2026-04-24T08:37:04.446765+00:00 [cron_tick] escalation ok rc=0 sec=0.133
+2026-04-24T08:37:04.459709+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T08:37:04.461042+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:39:02.902584+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.065
+2026-04-24T08:39:03.012138+00:00 [cron_tick] escalation ok rc=0 sec=0.108
+2026-04-24T08:39:03.021838+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.009
+2026-04-24T08:39:03.023149+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:41:03.065752+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.064
+2026-04-24T08:41:03.181380+00:00 [cron_tick] escalation ok rc=0 sec=0.115
+2026-04-24T08:41:03.191646+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.009
+2026-04-24T08:41:03.207147+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T08:41:03.208661+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T08:43:04.019934+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.087
+2026-04-24T08:43:04.131922+00:00 [cron_tick] escalation ok rc=0 sec=0.111
+2026-04-24T08:43:04.142746+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T08:43:04.144150+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:45:04.009630+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.078
+2026-04-24T08:45:04.114187+00:00 [cron_tick] escalation ok rc=0 sec=0.103
+2026-04-24T08:45:04.126992+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T08:45:04.144046+00:00 [cron_tick] render_decisions ok rc=0 sec=0.016
+2026-04-24T08:45:04.170632+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.026
+2026-04-24T08:45:04.172667+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T08:47:04.041584+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.081
+2026-04-24T08:47:04.152837+00:00 [cron_tick] escalation ok rc=0 sec=0.11
+2026-04-24T08:47:04.162786+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.009
+2026-04-24T08:47:04.164541+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:49:02.958647+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.07
+2026-04-24T08:49:03.063293+00:00 [cron_tick] escalation ok rc=0 sec=0.104
+2026-04-24T08:49:03.071638+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.008
+2026-04-24T08:49:03.072940+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:51:04.092245+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.08
+2026-04-24T08:51:04.212374+00:00 [cron_tick] escalation ok rc=0 sec=0.119
+2026-04-24T08:51:04.222487+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.009
+2026-04-24T08:51:04.238197+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T08:51:04.240335+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T08:53:04.052923+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.077
+2026-04-24T08:53:04.208051+00:00 [cron_tick] escalation ok rc=0 sec=0.153
+2026-04-24T08:53:04.219603+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T08:53:04.221783+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:55:04.048958+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.079
+2026-04-24T08:55:04.168433+00:00 [cron_tick] escalation ok rc=0 sec=0.118
+2026-04-24T08:55:04.197636+00:00 [cron_tick] stale_watcher ok rc=1 sec=0.028
+2026-04-24T08:55:04.244415+00:00 [cron_tick] render_decisions ok rc=0 sec=0.045
+2026-04-24T08:55:04.246226+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T08:57:03.049345+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.083
+2026-04-24T08:57:03.159530+00:00 [cron_tick] escalation ok rc=0 sec=0.109
+2026-04-24T08:57:03.213060+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.052
+2026-04-24T08:57:03.215107+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T08:59:02.999661+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.089
+2026-04-24T08:59:03.144911+00:00 [cron_tick] escalation ok rc=0 sec=0.143
+2026-04-24T08:59:03.158690+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T08:59:03.161920+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:01:04.108259+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.089
+2026-04-24T09:01:04.218870+00:00 [cron_tick] escalation ok rc=0 sec=0.109
+2026-04-24T09:01:04.230483+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T09:01:04.245014+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T09:01:04.268617+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.023
+2026-04-24T09:01:04.270531+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T09:03:04.086693+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.079
+2026-04-24T09:03:04.198139+00:00 [cron_tick] escalation ok rc=0 sec=0.11
+2026-04-24T09:03:04.209949+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T09:03:04.211496+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:05:04.061365+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.082
+2026-04-24T09:05:04.169156+00:00 [cron_tick] escalation ok rc=0 sec=0.107
+2026-04-24T09:05:04.180765+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T09:05:04.195272+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T09:05:04.196896+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T09:07:03.045093+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.086
+2026-04-24T09:07:03.155285+00:00 [cron_tick] escalation ok rc=0 sec=0.109
+2026-04-24T09:07:03.168163+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T09:07:03.169365+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:09:04.069597+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.108
+2026-04-24T09:09:04.193107+00:00 [cron_tick] escalation ok rc=0 sec=0.122
+2026-04-24T09:09:04.208331+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T09:09:04.209895+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:11:04.081824+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.076
+2026-04-24T09:11:04.192616+00:00 [cron_tick] escalation ok rc=0 sec=0.109
+2026-04-24T09:11:04.209966+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.016
+2026-04-24T09:11:04.229312+00:00 [cron_tick] render_decisions ok rc=0 sec=0.018
+2026-04-24T09:11:04.232353+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T09:13:04.168449+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.164
+2026-04-24T09:13:04.274605+00:00 [cron_tick] escalation ok rc=0 sec=0.105
+2026-04-24T09:13:04.286234+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T09:13:04.287407+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:15:03.064932+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.08
+2026-04-24T09:15:03.173107+00:00 [cron_tick] escalation ok rc=0 sec=0.107
+2026-04-24T09:15:03.186257+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T09:15:03.203428+00:00 [cron_tick] render_decisions ok rc=0 sec=0.016
+2026-04-24T09:15:03.228279+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.024
+2026-04-24T09:15:03.230595+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T09:17:03.211903+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.162
+2026-04-24T09:17:03.340510+00:00 [cron_tick] escalation ok rc=0 sec=0.126
+2026-04-24T09:17:03.358608+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.017
+2026-04-24T09:17:03.360778+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:19:04.174843+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.089
+2026-04-24T09:19:04.285463+00:00 [cron_tick] escalation ok rc=0 sec=0.109
+2026-04-24T09:19:04.299999+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T09:19:04.303911+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:21:04.287377+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.083
+2026-04-24T09:21:04.389515+00:00 [cron_tick] escalation ok rc=0 sec=0.101
+2026-04-24T09:21:04.400239+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T09:21:04.415064+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T09:21:04.416934+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T09:23:04.102827+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.057
+2026-04-24T09:23:04.225171+00:00 [cron_tick] escalation ok rc=0 sec=0.121
+2026-04-24T09:23:04.236479+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T09:23:04.238182+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:25:03.075697+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.063
+2026-04-24T09:25:03.181705+00:00 [cron_tick] escalation ok rc=0 sec=0.105
+2026-04-24T09:25:03.193530+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T09:25:03.208257+00:00 [cron_tick] render_decisions ok rc=0 sec=0.012
+2026-04-24T09:25:03.210678+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T09:27:04.271014+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.099
+2026-04-24T09:27:04.385072+00:00 [cron_tick] escalation ok rc=0 sec=0.113
+2026-04-24T09:27:04.399781+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T09:27:04.401807+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:29:04.474625+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.146
+2026-04-24T09:29:04.629521+00:00 [cron_tick] escalation ok rc=0 sec=0.153
+2026-04-24T09:29:04.642861+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T09:29:04.644613+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:31:04.287619+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.118
+2026-04-24T09:31:04.418554+00:00 [cron_tick] escalation ok rc=0 sec=0.13
+2026-04-24T09:31:04.430571+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T09:31:04.444674+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T09:31:04.477021+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.032
+2026-04-24T09:31:04.479453+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T09:33:03.225423+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.12
+2026-04-24T09:33:03.361711+00:00 [cron_tick] escalation ok rc=0 sec=0.135
+2026-04-24T09:33:03.378212+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T09:33:03.380232+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:35:03.270618+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.121
+2026-04-24T09:35:03.400314+00:00 [cron_tick] escalation ok rc=0 sec=0.128
+2026-04-24T09:35:03.412343+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T09:35:03.426824+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T09:35:03.428642+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T09:37:04.256131+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.119
+2026-04-24T09:37:04.384334+00:00 [cron_tick] escalation ok rc=0 sec=0.126
+2026-04-24T09:37:04.396072+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T09:37:04.397936+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:39:04.304435+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.114
+2026-04-24T09:39:04.446195+00:00 [cron_tick] escalation ok rc=0 sec=0.14
+2026-04-24T09:39:04.459237+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T09:39:04.463037+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:41:04.222962+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.107
+2026-04-24T09:41:04.353605+00:00 [cron_tick] escalation ok rc=0 sec=0.129
+2026-04-24T09:41:04.367856+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T09:41:04.384731+00:00 [cron_tick] render_decisions ok rc=0 sec=0.016
+2026-04-24T09:41:04.387168+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T09:43:03.257599+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.122
+2026-04-24T09:43:03.384750+00:00 [cron_tick] escalation ok rc=0 sec=0.126
+2026-04-24T09:43:03.397495+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T09:43:03.398953+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:45:03.219383+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.169
+2026-04-24T09:45:03.397603+00:00 [cron_tick] escalation ok rc=0 sec=0.177
+2026-04-24T09:45:03.419430+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.021
+2026-04-24T09:45:03.436515+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T09:45:03.462432+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.024
+2026-04-24T09:45:03.464604+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T09:47:04.364498+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.125
+2026-04-24T09:47:04.494074+00:00 [cron_tick] escalation ok rc=0 sec=0.128
+2026-04-24T09:47:04.506183+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T09:47:04.508336+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:49:04.207139+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.06
+2026-04-24T09:49:04.312431+00:00 [cron_tick] escalation ok rc=0 sec=0.104
+2026-04-24T09:49:04.323815+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T09:49:04.325598+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:51:04.197946+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.069
+2026-04-24T09:51:04.303909+00:00 [cron_tick] escalation ok rc=0 sec=0.105
+2026-04-24T09:51:04.315959+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T09:51:04.330048+00:00 [cron_tick] render_decisions ok rc=0 sec=0.013
+2026-04-24T09:51:04.331437+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T09:53:03.283397+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.109
+2026-04-24T09:53:03.423173+00:00 [cron_tick] escalation ok rc=0 sec=0.138
+2026-04-24T09:53:03.436814+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T09:53:03.440040+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:55:04.298814+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.101
+2026-04-24T09:55:04.429492+00:00 [cron_tick] escalation ok rc=0 sec=0.129
+2026-04-24T09:55:04.442711+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T09:55:04.457854+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T09:55:04.460057+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T09:57:04.277529+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.101
+2026-04-24T09:57:04.414448+00:00 [cron_tick] escalation ok rc=0 sec=0.135
+2026-04-24T09:57:04.428867+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T09:57:04.431831+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T09:59:04.278115+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.093
+2026-04-24T09:59:04.416140+00:00 [cron_tick] escalation ok rc=0 sec=0.136
+2026-04-24T09:59:04.428741+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T09:59:04.430648+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:01:04.316256+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.091
+2026-04-24T10:01:04.452012+00:00 [cron_tick] escalation ok rc=0 sec=0.134
+2026-04-24T10:01:04.465684+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T10:01:04.496862+00:00 [cron_tick] render_decisions ok rc=0 sec=0.03
+2026-04-24T10:01:04.523159+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.025
+2026-04-24T10:01:04.525113+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T10:03:03.304407+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.095
+2026-04-24T10:03:03.436143+00:00 [cron_tick] escalation ok rc=0 sec=0.13
+2026-04-24T10:03:03.450617+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T10:03:03.452433+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:05:04.327302+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.087
+2026-04-24T10:05:04.450646+00:00 [cron_tick] escalation ok rc=0 sec=0.122
+2026-04-24T10:05:04.462664+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T10:05:04.478230+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T10:05:04.480440+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T10:07:04.441011+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.133
+2026-04-24T10:07:04.574805+00:00 [cron_tick] escalation ok rc=0 sec=0.132
+2026-04-24T10:07:04.588931+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T10:07:04.591914+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:09:04.407228+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.132
+2026-04-24T10:09:04.540960+00:00 [cron_tick] escalation ok rc=0 sec=0.131
+2026-04-24T10:09:04.553587+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T10:09:04.555106+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:11:03.323875+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.123
+2026-04-24T10:11:03.463254+00:00 [cron_tick] escalation ok rc=0 sec=0.137
+2026-04-24T10:11:03.478472+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T10:11:03.493904+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T10:11:03.495841+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T10:13:03.529335+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.105
+2026-04-24T10:13:03.668013+00:00 [cron_tick] escalation ok rc=0 sec=0.137
+2026-04-24T10:13:03.681032+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T10:13:03.682908+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:15:04.397187+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.119
+2026-04-24T10:15:04.543716+00:00 [cron_tick] escalation ok rc=0 sec=0.145
+2026-04-24T10:15:04.558616+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T10:15:04.575736+00:00 [cron_tick] render_decisions ok rc=0 sec=0.016
+2026-04-24T10:15:04.600965+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.024
+2026-04-24T10:15:04.603223+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T10:17:04.392646+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.067
+2026-04-24T10:17:04.505726+00:00 [cron_tick] escalation ok rc=0 sec=0.112
+2026-04-24T10:17:04.516197+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.009
+2026-04-24T10:17:04.517703+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:19:04.380323+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.06
+2026-04-24T10:19:04.483441+00:00 [cron_tick] escalation ok rc=0 sec=0.102
+2026-04-24T10:19:04.496906+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T10:19:04.498404+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:21:03.206803+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.138
+2026-04-24T10:21:03.344854+00:00 [cron_tick] escalation ok rc=0 sec=0.137
+2026-04-24T10:21:03.361228+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T10:21:03.377096+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T10:21:03.379191+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T10:23:04.512610+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.141
+2026-04-24T10:23:04.664945+00:00 [cron_tick] escalation ok rc=0 sec=0.151
+2026-04-24T10:23:04.706704+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.041
+2026-04-24T10:23:04.709949+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:25:04.445257+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.078
+2026-04-24T10:25:04.556597+00:00 [cron_tick] escalation ok rc=0 sec=0.111
+2026-04-24T10:25:04.568233+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T10:25:04.587328+00:00 [cron_tick] render_decisions ok rc=0 sec=0.018
+2026-04-24T10:25:04.589383+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T10:27:04.469855+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.131
+2026-04-24T10:27:04.630467+00:00 [cron_tick] escalation ok rc=0 sec=0.159
+2026-04-24T10:27:04.645517+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T10:27:04.647794+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:29:03.350368+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.076
+2026-04-24T10:29:03.472163+00:00 [cron_tick] escalation ok rc=0 sec=0.12
+2026-04-24T10:29:03.484211+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T10:29:03.487641+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:31:03.635755+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.148
+2026-04-24T10:31:03.795470+00:00 [cron_tick] escalation ok rc=0 sec=0.158
+2026-04-24T10:31:03.820300+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.024
+2026-04-24T10:31:03.835780+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T10:31:03.861556+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.025
+2026-04-24T10:31:03.864283+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T10:33:04.504929+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.155
+2026-04-24T10:33:04.641908+00:00 [cron_tick] escalation ok rc=0 sec=0.135
+2026-04-24T10:33:04.656929+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T10:33:04.659083+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:35:04.501846+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.117
+2026-04-24T10:35:04.641000+00:00 [cron_tick] escalation ok rc=0 sec=0.138
+2026-04-24T10:35:04.656327+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T10:35:04.671777+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T10:35:04.673449+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T10:37:03.488576+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.145
+2026-04-24T10:37:03.639943+00:00 [cron_tick] escalation ok rc=0 sec=0.15
+2026-04-24T10:37:03.652742+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T10:37:03.655900+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:39:04.456828+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.101
+2026-04-24T10:39:04.609622+00:00 [cron_tick] escalation ok rc=0 sec=0.152
+2026-04-24T10:39:04.622051+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T10:39:04.624826+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:41:04.719786+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.187
+2026-04-24T10:41:04.880161+00:00 [cron_tick] escalation ok rc=0 sec=0.158
+2026-04-24T10:41:04.896165+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T10:41:04.912674+00:00 [cron_tick] render_decisions ok rc=0 sec=0.016
+2026-04-24T10:41:04.914625+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T10:43:03.521365+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.062
+2026-04-24T10:43:03.634136+00:00 [cron_tick] escalation ok rc=0 sec=0.112
+2026-04-24T10:43:03.647358+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T10:43:03.648968+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:45:03.553835+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.098
+2026-04-24T10:45:03.723124+00:00 [cron_tick] escalation ok rc=0 sec=0.165
+2026-04-24T10:45:03.740087+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T10:45:03.756013+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T10:45:03.784072+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.027
+2026-04-24T10:45:03.788732+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T10:47:04.438719+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.11
+2026-04-24T10:47:04.600078+00:00 [cron_tick] escalation ok rc=0 sec=0.16
+2026-04-24T10:47:04.611677+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T10:47:04.613461+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:49:04.618252+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.134
+2026-04-24T10:49:04.759061+00:00 [cron_tick] escalation ok rc=0 sec=0.14
+2026-04-24T10:49:04.772274+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T10:49:04.774070+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:51:03.579065+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.128
+2026-04-24T10:51:03.828706+00:00 [cron_tick] escalation ok rc=0 sec=0.248
+2026-04-24T10:51:03.847570+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.018
+2026-04-24T10:51:03.867879+00:00 [cron_tick] render_decisions ok rc=0 sec=0.019
+2026-04-24T10:51:03.871805+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T10:53:04.724604+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.116
+2026-04-24T10:53:04.845300+00:00 [cron_tick] escalation ok rc=0 sec=0.12
+2026-04-24T10:53:04.855293+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.009
+2026-04-24T10:53:04.856705+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:55:04.597985+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.07
+2026-04-24T10:55:04.705952+00:00 [cron_tick] escalation ok rc=0 sec=0.107
+2026-04-24T10:55:04.718501+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T10:55:04.731192+00:00 [cron_tick] render_decisions ok rc=0 sec=0.012
+2026-04-24T10:55:04.732699+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T10:57:03.509173+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.062
+2026-04-24T10:57:03.620509+00:00 [cron_tick] escalation ok rc=0 sec=0.11
+2026-04-24T10:57:03.633203+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T10:57:03.636299+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T10:59:03.553671+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.068
+2026-04-24T10:59:03.662669+00:00 [cron_tick] escalation ok rc=0 sec=0.108
+2026-04-24T10:59:03.673189+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T10:59:03.675219+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:01:04.760802+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.134
+2026-04-24T11:01:04.869378+00:00 [cron_tick] escalation ok rc=0 sec=0.106
+2026-04-24T11:01:04.881713+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T11:01:04.896144+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T11:01:04.917835+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.021
+2026-04-24T11:01:04.919600+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T11:03:04.621593+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.116
+2026-04-24T11:03:04.733038+00:00 [cron_tick] escalation ok rc=0 sec=0.11
+2026-04-24T11:03:04.745359+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T11:03:04.747136+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:05:03.563701+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.089
+2026-04-24T11:05:03.682105+00:00 [cron_tick] escalation ok rc=0 sec=0.117
+2026-04-24T11:05:03.702368+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T11:05:03.719957+00:00 [cron_tick] render_decisions ok rc=0 sec=0.017
+2026-04-24T11:05:03.721821+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T11:07:04.620252+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.108
+2026-04-24T11:07:04.742215+00:00 [cron_tick] escalation ok rc=0 sec=0.12
+2026-04-24T11:07:04.755949+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T11:07:04.757360+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:09:04.747405+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.134
+2026-04-24T11:09:04.847163+00:00 [cron_tick] escalation ok rc=0 sec=0.098
+2026-04-24T11:09:04.859080+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T11:09:04.860623+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:11:03.575908+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.058
+2026-04-24T11:11:03.685118+00:00 [cron_tick] escalation ok rc=0 sec=0.108
+2026-04-24T11:11:03.698316+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T11:11:03.713913+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T11:11:03.715501+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T11:13:03.552141+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.069
+2026-04-24T11:13:03.670409+00:00 [cron_tick] escalation ok rc=0 sec=0.118
+2026-04-24T11:13:03.682769+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T11:13:03.684469+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:15:04.562542+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.066
+2026-04-24T11:15:04.670488+00:00 [cron_tick] escalation ok rc=0 sec=0.107
+2026-04-24T11:15:04.684107+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T11:15:04.696125+00:00 [cron_tick] render_decisions ok rc=0 sec=0.011
+2026-04-24T11:15:04.718343+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.022
+2026-04-24T11:15:04.719981+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T11:17:04.599392+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.083
+2026-04-24T11:17:04.715609+00:00 [cron_tick] escalation ok rc=0 sec=0.113
+2026-04-24T11:17:04.729322+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T11:17:04.731485+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:19:03.181479+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.058
+2026-04-24T11:19:03.286467+00:00 [cron_tick] escalation ok rc=0 sec=0.104
+2026-04-24T11:19:03.298827+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T11:19:03.300029+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:21:05.215493+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.538
+2026-04-24T11:21:05.703846+00:00 [cron_tick] escalation ok rc=0 sec=0.487
+2026-04-24T11:21:05.719265+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T11:21:05.733692+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T11:21:05.735162+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T11:23:04.671407+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.086
+2026-04-24T11:23:04.789714+00:00 [cron_tick] escalation ok rc=0 sec=0.116
+2026-04-24T11:23:04.802085+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T11:23:04.803417+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:25:03.599586+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.12
+2026-04-24T11:25:03.727657+00:00 [cron_tick] escalation ok rc=0 sec=0.126
+2026-04-24T11:25:03.740597+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T11:25:03.757144+00:00 [cron_tick] render_decisions ok rc=0 sec=0.016
+2026-04-24T11:25:03.758892+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T11:27:03.670594+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.123
+2026-04-24T11:27:03.834318+00:00 [cron_tick] escalation ok rc=0 sec=0.149
+2026-04-24T11:27:03.850323+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T11:27:03.852106+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:29:06.019748+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.576
+2026-04-24T11:29:06.359402+00:00 [cron_tick] escalation ok rc=0 sec=0.338
+2026-04-24T11:29:06.375190+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T11:29:06.378381+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:31:04.698270+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.154
+2026-04-24T11:31:04.938627+00:00 [cron_tick] escalation ok rc=0 sec=0.238
+2026-04-24T11:31:04.951462+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T11:31:04.966220+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T11:31:04.990009+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.023
+2026-04-24T11:31:04.992586+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T11:33:03.809890+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.133
+2026-04-24T11:33:03.936534+00:00 [cron_tick] escalation ok rc=0 sec=0.125
+2026-04-24T11:33:03.948890+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T11:33:03.951119+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:35:04.686619+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.123
+2026-04-24T11:35:04.819428+00:00 [cron_tick] escalation ok rc=0 sec=0.131
+2026-04-24T11:35:04.834790+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T11:35:04.849945+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T11:35:04.851767+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T11:37:04.603802+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.072
+2026-04-24T11:37:04.742686+00:00 [cron_tick] escalation ok rc=0 sec=0.138
+2026-04-24T11:37:04.755480+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T11:37:04.757308+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:39:03.544255+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.064
+2026-04-24T11:39:03.653398+00:00 [cron_tick] escalation ok rc=0 sec=0.108
+2026-04-24T11:39:03.667399+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T11:39:03.669684+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:41:03.391171+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.107
+2026-04-24T11:41:03.517560+00:00 [cron_tick] escalation ok rc=0 sec=0.12
+2026-04-24T11:41:03.532439+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T11:41:03.547262+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T11:41:03.549434+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T11:43:04.614741+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.063
+2026-04-24T11:43:04.735850+00:00 [cron_tick] escalation ok rc=0 sec=0.12
+2026-04-24T11:43:04.747026+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T11:43:04.749071+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:45:04.593235+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.07
+2026-04-24T11:45:04.708648+00:00 [cron_tick] escalation ok rc=0 sec=0.114
+2026-04-24T11:45:04.735600+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.024
+2026-04-24T11:45:04.769495+00:00 [cron_tick] render_decisions ok rc=0 sec=0.033
+2026-04-24T11:45:04.797034+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.026
+2026-04-24T11:45:04.799556+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T11:47:03.360245+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.1
+2026-04-24T11:47:03.498022+00:00 [cron_tick] escalation ok rc=0 sec=0.136
+2026-04-24T11:47:03.511617+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T11:47:03.513314+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:49:04.612694+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.064
+2026-04-24T11:49:04.722408+00:00 [cron_tick] escalation ok rc=0 sec=0.109
+2026-04-24T11:49:04.733309+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T11:49:04.734698+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:51:04.628344+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.07
+2026-04-24T11:51:04.750720+00:00 [cron_tick] escalation ok rc=0 sec=0.121
+2026-04-24T11:51:04.761612+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T11:51:04.777022+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T11:51:04.778545+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T11:53:03.616334+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.102
+2026-04-24T11:53:03.752465+00:00 [cron_tick] escalation ok rc=0 sec=0.133
+2026-04-24T11:53:03.764986+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T11:53:03.767223+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:55:03.951532+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.137
+2026-04-24T11:55:04.093439+00:00 [cron_tick] escalation ok rc=0 sec=0.141
+2026-04-24T11:55:04.117355+00:00 [cron_tick] stale_watcher ok rc=1 sec=0.022
+2026-04-24T11:55:04.151300+00:00 [cron_tick] render_decisions ok rc=0 sec=0.033
+2026-04-24T11:55:04.153266+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T11:57:04.892688+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.15
+2026-04-24T11:57:05.030589+00:00 [cron_tick] escalation ok rc=0 sec=0.137
+2026-04-24T11:57:05.078202+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.046
+2026-04-24T11:57:05.080785+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T11:59:05.159795+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.281
+2026-04-24T11:59:05.351297+00:00 [cron_tick] escalation ok rc=0 sec=0.19
+2026-04-24T11:59:05.365328+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T11:59:05.366830+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:01:11.857684+00:00 [cron_tick] silence_watcher ok rc=0 sec=5.644
+2026-04-24T12:01:15.286938+00:00 [cron_tick] escalation ok rc=0 sec=3.397
+2026-04-24T12:01:15.410710+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.11
+2026-04-24T12:01:15.505752+00:00 [cron_tick] render_decisions ok rc=0 sec=0.094
+2026-04-24T12:01:15.592419+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.086
+2026-04-24T12:01:15.613670+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T12:03:05.092764+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.205
+2026-04-24T12:03:05.237822+00:00 [cron_tick] escalation ok rc=0 sec=0.143
+2026-04-24T12:03:05.254772+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.016
+2026-04-24T12:03:05.257087+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:05:05.561818+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.235
+2026-04-24T12:05:05.979664+00:00 [cron_tick] escalation ok rc=0 sec=0.416
+2026-04-24T12:05:05.993527+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T12:05:06.009474+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T12:05:06.012297+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T12:07:04.199007+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.156
+2026-04-24T12:07:04.345444+00:00 [cron_tick] escalation ok rc=0 sec=0.145
+2026-04-24T12:07:04.358148+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T12:07:04.359916+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:09:07.464991+00:00 [cron_tick] silence_watcher ok rc=0 sec=1.861
+2026-04-24T12:09:07.826531+00:00 [cron_tick] escalation ok rc=0 sec=0.356
+2026-04-24T12:09:07.854012+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.023
+2026-04-24T12:09:07.856778+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:11:07.033751+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.896
+2026-04-24T12:11:07.605790+00:00 [cron_tick] escalation ok rc=0 sec=0.571
+2026-04-24T12:11:07.619763+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T12:11:07.632442+00:00 [cron_tick] render_decisions ok rc=0 sec=0.012
+2026-04-24T12:11:07.634060+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T12:13:05.058775+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.288
+2026-04-24T12:13:05.816669+00:00 [cron_tick] escalation ok rc=0 sec=0.727
+2026-04-24T12:13:05.839752+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.022
+2026-04-24T12:13:05.843267+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:15:05.125357+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.124
+2026-04-24T12:15:05.285331+00:00 [cron_tick] escalation ok rc=0 sec=0.158
+2026-04-24T12:15:05.345778+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.059
+2026-04-24T12:15:05.391940+00:00 [cron_tick] render_decisions ok rc=0 sec=0.045
+2026-04-24T12:15:05.415300+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.023
+2026-04-24T12:15:05.416997+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T12:17:05.016702+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.084
+2026-04-24T12:17:05.143351+00:00 [cron_tick] escalation ok rc=0 sec=0.109
+2026-04-24T12:17:05.156219+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T12:17:05.157471+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:19:03.756287+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.078
+2026-04-24T12:19:03.875453+00:00 [cron_tick] escalation ok rc=0 sec=0.118
+2026-04-24T12:19:03.887660+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T12:19:03.889097+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:21:05.066879+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.145
+2026-04-24T12:21:05.193125+00:00 [cron_tick] escalation ok rc=0 sec=0.125
+2026-04-24T12:21:05.216444+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.021
+2026-04-24T12:21:05.234462+00:00 [cron_tick] render_decisions ok rc=0 sec=0.017
+2026-04-24T12:21:05.236569+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T12:23:04.876163+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.09
+2026-04-24T12:23:04.982103+00:00 [cron_tick] escalation ok rc=0 sec=0.105
+2026-04-24T12:23:04.997622+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T12:23:04.999235+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:25:03.797247+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.106
+2026-04-24T12:25:03.904215+00:00 [cron_tick] escalation ok rc=0 sec=0.105
+2026-04-24T12:25:03.916799+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T12:25:03.935065+00:00 [cron_tick] render_decisions ok rc=0 sec=0.017
+2026-04-24T12:25:03.936693+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T12:27:03.992042+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.091
+2026-04-24T12:27:04.102425+00:00 [cron_tick] escalation ok rc=0 sec=0.109
+2026-04-24T12:27:04.115504+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T12:27:04.117261+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:29:04.088781+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.1
+2026-04-24T12:29:04.212783+00:00 [cron_tick] escalation ok rc=0 sec=0.122
+2026-04-24T12:29:04.225354+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T12:29:04.227053+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:31:04.141384+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.143
+2026-04-24T12:31:04.266308+00:00 [cron_tick] escalation ok rc=0 sec=0.123
+2026-04-24T12:31:04.278983+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T12:31:04.293875+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T12:31:04.321794+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.027
+2026-04-24T12:31:04.323681+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T12:33:03.384763+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.185
+2026-04-24T12:33:03.618685+00:00 [cron_tick] escalation ok rc=0 sec=0.232
+2026-04-24T12:33:03.640418+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.02
+2026-04-24T12:33:03.642713+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:35:03.884259+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.139
+2026-04-24T12:35:04.015323+00:00 [cron_tick] escalation ok rc=0 sec=0.129
+2026-04-24T12:35:04.029615+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T12:35:04.045642+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T12:35:04.047650+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T12:37:03.947922+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.14
+2026-04-24T12:37:04.079017+00:00 [cron_tick] escalation ok rc=0 sec=0.129
+2026-04-24T12:37:04.091945+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T12:37:04.093956+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:39:02.899303+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.067
+2026-04-24T12:39:03.007570+00:00 [cron_tick] escalation ok rc=0 sec=0.106
+2026-04-24T12:39:03.019702+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.011
+2026-04-24T12:39:03.021606+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:41:03.963556+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.123
+2026-04-24T12:41:04.100483+00:00 [cron_tick] escalation ok rc=0 sec=0.136
+2026-04-24T12:41:04.113367+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T12:41:04.129523+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T12:41:04.131344+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T12:43:04.137875+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.119
+2026-04-24T12:43:04.281338+00:00 [cron_tick] escalation ok rc=0 sec=0.141
+2026-04-24T12:43:04.296221+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T12:43:04.297832+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:45:03.265381+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.149
+2026-04-24T12:45:03.419101+00:00 [cron_tick] escalation ok rc=0 sec=0.152
+2026-04-24T12:45:03.435923+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T12:45:03.451479+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T12:45:03.479607+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.027
+2026-04-24T12:45:03.482549+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T12:47:03.079442+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.119
+2026-04-24T12:47:03.230601+00:00 [cron_tick] escalation ok rc=0 sec=0.149
+2026-04-24T12:47:03.243623+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T12:47:03.245449+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:49:04.085485+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.12
+2026-04-24T12:49:04.224542+00:00 [cron_tick] escalation ok rc=0 sec=0.138
+2026-04-24T12:49:04.240173+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T12:49:04.242057+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:51:03.857873+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.064
+2026-04-24T12:51:03.970013+00:00 [cron_tick] escalation ok rc=0 sec=0.111
+2026-04-24T12:51:03.995777+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.025
+2026-04-24T12:51:04.014907+00:00 [cron_tick] render_decisions ok rc=0 sec=0.018
+2026-04-24T12:51:04.018120+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T12:53:03.001938+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.121
+2026-04-24T12:53:03.154525+00:00 [cron_tick] escalation ok rc=0 sec=0.151
+2026-04-24T12:53:03.169734+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T12:53:03.171821+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:55:04.008630+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.125
+2026-04-24T12:55:04.150346+00:00 [cron_tick] escalation ok rc=0 sec=0.139
+2026-04-24T12:55:04.164429+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T12:55:04.178129+00:00 [cron_tick] render_decisions ok rc=0 sec=0.013
+2026-04-24T12:55:04.179633+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T12:57:04.030045+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.129
+2026-04-24T12:57:04.156369+00:00 [cron_tick] escalation ok rc=0 sec=0.125
+2026-04-24T12:57:04.170435+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T12:57:04.172526+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T12:59:02.985111+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.086
+2026-04-24T12:59:03.135128+00:00 [cron_tick] escalation ok rc=0 sec=0.149
+2026-04-24T12:59:03.149322+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T12:59:03.151351+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:01:03.096948+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.161
+2026-04-24T13:01:03.261055+00:00 [cron_tick] escalation ok rc=0 sec=0.162
+2026-04-24T13:01:03.274859+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T13:01:03.291115+00:00 [cron_tick] render_decisions ok rc=0 sec=0.016
+2026-04-24T13:01:03.317309+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.025
+2026-04-24T13:01:03.319397+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T13:03:04.104056+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.131
+2026-04-24T13:03:04.231429+00:00 [cron_tick] escalation ok rc=0 sec=0.126
+2026-04-24T13:03:04.244249+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T13:03:04.245997+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:05:03.979707+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.066
+2026-04-24T13:05:04.080745+00:00 [cron_tick] escalation ok rc=0 sec=0.1
+2026-04-24T13:05:04.091296+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T13:05:04.107151+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T13:05:04.108567+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T13:07:02.905418+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.071
+2026-04-24T13:07:03.014567+00:00 [cron_tick] escalation ok rc=0 sec=0.108
+2026-04-24T13:07:03.029256+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T13:07:03.031875+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:09:04.020129+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.063
+2026-04-24T13:09:04.128135+00:00 [cron_tick] escalation ok rc=0 sec=0.107
+2026-04-24T13:09:04.140970+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T13:09:04.143091+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:11:03.976599+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.07
+2026-04-24T13:11:04.080052+00:00 [cron_tick] escalation ok rc=0 sec=0.103
+2026-04-24T13:11:04.092965+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T13:11:04.106154+00:00 [cron_tick] render_decisions ok rc=0 sec=0.012
+2026-04-24T13:11:04.109304+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T13:13:02.951618+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.067
+2026-04-24T13:13:03.051689+00:00 [cron_tick] escalation ok rc=0 sec=0.099
+2026-04-24T13:13:03.062512+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T13:13:03.064377+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:15:02.729628+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.077
+2026-04-24T13:15:02.863198+00:00 [cron_tick] escalation ok rc=0 sec=0.132
+2026-04-24T13:15:02.882238+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.018
+2026-04-24T13:15:02.904793+00:00 [cron_tick] render_decisions ok rc=0 sec=0.02
+2026-04-24T13:15:02.932954+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.027
+2026-04-24T13:15:02.935850+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T13:17:04.103857+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.148
+2026-04-24T13:17:04.249348+00:00 [cron_tick] escalation ok rc=0 sec=0.144
+2026-04-24T13:17:04.262583+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T13:17:04.264643+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:19:04.622605+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.245
+2026-04-24T13:19:04.768643+00:00 [cron_tick] escalation ok rc=0 sec=0.141
+2026-04-24T13:19:04.783143+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T13:19:04.784922+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:21:03.424518+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.528
+2026-04-24T13:21:03.914726+00:00 [cron_tick] escalation ok rc=0 sec=0.477
+2026-04-24T13:21:03.960490+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.045
+2026-04-24T13:21:03.976146+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T13:21:03.978478+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T13:23:04.175098+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.076
+2026-04-24T13:23:04.285258+00:00 [cron_tick] escalation ok rc=0 sec=0.108
+2026-04-24T13:23:04.296317+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T13:23:04.297912+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:25:04.201610+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.144
+2026-04-24T13:25:04.361514+00:00 [cron_tick] escalation ok rc=0 sec=0.131
+2026-04-24T13:25:04.375138+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T13:25:04.389454+00:00 [cron_tick] render_decisions ok rc=0 sec=0.014
+2026-04-24T13:25:04.391589+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T13:27:03.153821+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.113
+2026-04-24T13:27:03.292057+00:00 [cron_tick] escalation ok rc=0 sec=0.135
+2026-04-24T13:27:03.307792+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T13:27:03.309967+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:29:05.457647+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.556
+2026-04-24T13:29:05.720902+00:00 [cron_tick] escalation ok rc=0 sec=0.205
+2026-04-24T13:29:05.734008+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T13:29:05.736155+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:31:04.322995+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.114
+2026-04-24T13:31:04.454587+00:00 [cron_tick] escalation ok rc=0 sec=0.13
+2026-04-24T13:31:04.469511+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T13:31:04.485693+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T13:31:04.529312+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.043
+2026-04-24T13:31:04.531359+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T13:33:03.241976+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.127
+2026-04-24T13:33:03.389344+00:00 [cron_tick] escalation ok rc=0 sec=0.146
+2026-04-24T13:33:03.405401+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T13:33:03.408248+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:35:03.370680+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.243
+2026-04-24T13:35:03.571570+00:00 [cron_tick] escalation ok rc=0 sec=0.198
+2026-04-24T13:35:03.590257+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.018
+2026-04-24T13:35:03.606140+00:00 [cron_tick] render_decisions ok rc=0 sec=0.015
+2026-04-24T13:35:03.624719+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T13:37:04.832413+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.243
+2026-04-24T13:37:04.900239+00:00 [cron_tick] escalation ok rc=0 sec=0.049
+2026-04-24T13:37:04.914181+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T13:37:04.916267+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:39:04.271537+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.086
+2026-04-24T13:39:04.326669+00:00 [cron_tick] escalation ok rc=0 sec=0.03
+2026-04-24T13:39:04.355049+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.028
+2026-04-24T13:39:04.356691+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:41:03.885029+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.292
+2026-04-24T13:41:03.943695+00:00 [cron_tick] escalation ok rc=0 sec=0.032
+2026-04-24T13:41:03.978789+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.033
+2026-04-24T13:41:04.029395+00:00 [cron_tick] render_decisions ok rc=0 sec=0.05
+2026-04-24T13:41:04.034049+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T13:43:04.272040+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.065
+2026-04-24T13:43:04.297306+00:00 [cron_tick] escalation ok rc=0 sec=0.025
+2026-04-24T13:43:04.310037+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T13:43:04.311958+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:45:03.380834+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.125
+2026-04-24T13:45:03.407453+00:00 [cron_tick] escalation ok rc=0 sec=0.024
+2026-04-24T13:45:03.421728+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T13:45:03.464229+00:00 [cron_tick] render_decisions ok rc=0 sec=0.042
+2026-04-24T13:45:03.488814+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.024
+2026-04-24T13:45:03.492543+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T13:47:03.304567+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.184
+2026-04-24T13:47:03.335079+00:00 [cron_tick] escalation ok rc=0 sec=0.028
+2026-04-24T13:47:03.352644+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.016
+2026-04-24T13:47:03.354670+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:49:04.346565+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.093
+2026-04-24T13:49:04.375529+00:00 [cron_tick] escalation ok rc=0 sec=0.028
+2026-04-24T13:49:04.390311+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T13:49:04.391934+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:51:04.250093+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.071
+2026-04-24T13:51:04.274617+00:00 [cron_tick] escalation ok rc=0 sec=0.022
+2026-04-24T13:51:04.285493+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T13:51:04.319828+00:00 [cron_tick] render_decisions ok rc=0 sec=0.033
+2026-04-24T13:51:04.321457+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T13:53:03.066468+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.091
+2026-04-24T13:53:03.093146+00:00 [cron_tick] escalation ok rc=0 sec=0.025
+2026-04-24T13:53:03.108920+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T13:53:03.110503+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T13:55:04.327691+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.059
+2026-04-24T13:55:04.349507+00:00 [cron_tick] escalation ok rc=0 sec=0.021
+2026-04-24T13:55:04.360787+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.01
+2026-04-24T13:55:04.397044+00:00 [cron_tick] render_decisions ok rc=0 sec=0.036
+2026-04-24T13:55:04.398854+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T15:42:54.498192+00:00 [cron_tick] silence_watcher ok rc=0 sec=12.43
+2026-04-24T15:42:54.719334+00:00 [cron_tick] escalation ok rc=0 sec=0.204
+2026-04-24T15:42:54.917387+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.196
+2026-04-24T15:42:54.962822+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T15:49:05.299129+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.17
+2026-04-24T15:49:05.346102+00:00 [cron_tick] escalation ok rc=0 sec=0.025
+2026-04-24T15:49:05.361303+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T15:49:05.363700+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T15:51:03.967810+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.299
+2026-04-24T15:51:04.047833+00:00 [cron_tick] escalation ok rc=0 sec=0.058
+2026-04-24T15:51:04.127697+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.079
+2026-04-24T15:51:04.381329+00:00 [cron_tick] render_decisions ok rc=0 sec=0.252
+2026-04-24T15:51:04.385018+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T15:53:03.601743+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.171
+2026-04-24T15:53:03.689803+00:00 [cron_tick] escalation ok rc=0 sec=0.063
+2026-04-24T15:53:03.703549+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.013
+2026-04-24T15:53:03.705574+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T15:55:04.666969+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.152
+2026-04-24T15:55:04.698070+00:00 [cron_tick] escalation ok rc=0 sec=0.029
+2026-04-24T15:55:04.715785+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.016
+2026-04-24T15:55:04.774342+00:00 [cron_tick] render_decisions ok rc=0 sec=0.057
+2026-04-24T15:55:04.777442+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T15:57:04.808900+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.282
+2026-04-24T15:57:04.847566+00:00 [cron_tick] escalation ok rc=0 sec=0.024
+2026-04-24T15:57:04.863832+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T15:57:04.866440+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T15:59:05.136818+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.281
+2026-04-24T15:59:05.198341+00:00 [cron_tick] escalation ok rc=0 sec=0.037
+2026-04-24T15:59:05.224082+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.025
+2026-04-24T15:59:05.225797+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T16:01:07.888440+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.692
+2026-04-24T16:01:07.942523+00:00 [cron_tick] escalation ok rc=0 sec=0.035
+2026-04-24T16:01:07.969739+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.024
+2026-04-24T16:03:04.984226+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.183
+2026-04-24T16:03:05.024825+00:00 [cron_tick] escalation ok rc=0 sec=0.024
+2026-04-24T16:03:05.039679+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T16:03:05.041904+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T16:05:16.934894+00:00 [cron_tick] silence_watcher ok rc=0 sec=6.475
+2026-04-24T16:05:17.066944+00:00 [cron_tick] escalation ok rc=0 sec=0.115
+2026-04-24T16:05:17.863648+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.78
+2026-04-24T16:05:19.050015+00:00 [cron_tick] render_decisions ok rc=0 sec=1.14
+2026-04-24T16:05:19.073840+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T16:07:04.801057+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.313
+2026-04-24T16:07:04.904548+00:00 [cron_tick] escalation ok rc=0 sec=0.076
+2026-04-24T16:07:04.939582+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.034
+2026-04-24T16:07:04.942662+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T16:09:04.929656+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.233
+2026-04-24T16:09:04.985548+00:00 [cron_tick] escalation ok rc=0 sec=0.032
+2026-04-24T16:09:05.000806+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.014
+2026-04-24T16:09:05.004459+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T16:11:05.085081+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.394
+2026-04-24T16:11:05.140056+00:00 [cron_tick] escalation ok rc=0 sec=0.029
+2026-04-24T16:11:05.156979+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.016
+2026-04-24T16:11:05.197324+00:00 [cron_tick] render_decisions ok rc=0 sec=0.04
+2026-04-24T16:11:05.199496+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions']
+2026-04-24T16:13:04.306435+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.185
+2026-04-24T16:13:04.356274+00:00 [cron_tick] escalation ok rc=0 sec=0.029
+2026-04-24T16:13:04.372679+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.015
+2026-04-24T16:13:04.374715+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']
+2026-04-24T16:15:04.789881+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.495
+2026-04-24T16:15:04.850675+00:00 [cron_tick] escalation ok rc=0 sec=0.059
+2026-04-24T16:15:04.875358+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.024
+2026-04-24T16:15:05.049327+00:00 [cron_tick] render_decisions ok rc=0 sec=0.169
+2026-04-24T16:15:05.085625+00:00 [cron_tick] cost_rollup ok rc=0 sec=0.035
+2026-04-24T16:15:05.105102+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher', 'render_decisions', 'cost_rollup']
+2026-04-24T16:19:05.224528+00:00 [cron_tick] silence_watcher ok rc=0 sec=0.239
+2026-04-24T16:19:05.289965+00:00 [cron_tick] escalation ok rc=0 sec=0.025
+2026-04-24T16:19:05.303274+00:00 [cron_tick] stale_watcher ok rc=0 sec=0.012
+2026-04-24T16:19:05.305150+00:00 [cron_tick] tick complete ok_all=True ran=['silence_watcher', 'escalation', 'stale_watcher']

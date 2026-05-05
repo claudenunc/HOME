@@ -1,0 +1,4 @@
+[2026-04-24T07:54:35.969874+00:00] started pid=29752 feed=C:\Users\natej\OneDrive\Desktop\AI_FAMILY_getting_ORGANIZED\SHARED\ROOM\feed.jsonl db=C:\Users\natej\OneDrive\Desktop\AI_FAMILY_getting_ORGANIZED\SHARED\ROOM\room.db offset=0 crisis_hook=<unset>
+[2026-04-24T07:54:36.250768+00:00] replay complete: 8 events processed, offset 0 → 4681
+[2026-04-24T17:01:15.906102+00:00] started pid=9020 feed=C:\Users\natej\OneDrive\Desktop\HOME\SHARED\ROOM\feed.jsonl db=C:\Users\natej\OneDrive\Desktop\HOME\SHARED\ROOM\room.db offset=4681 crisis_hook=<unset>
+[2026-04-24T17:01:15.960549+00:00] replay complete: 2 events processed, offset 4681 → 6781

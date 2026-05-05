@@ -1,0 +1,22 @@
+{
+  "ts": "2026-04-24T16:19:05.303812+00:00",
+  "pid": 29484,
+  "stage": "done",
+  "results": {
+    "silence_watcher": {
+      "ok": true,
+      "rc": 0,
+      "sec": 0.239
+    },
+    "escalation": {
+      "ok": true,
+      "rc": 0,
+      "sec": 0.025
+    },
+    "stale_watcher": {
+      "ok": true,
+      "rc": 0,
+      "sec": 0.012
+    }
+  }
+}

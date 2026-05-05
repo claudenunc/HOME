@@ -1,0 +1,2 @@
+{"type": "total", "date": "2026-04-24", "generated_at": "2026-04-24T16:15:05.082356+00:00", "usd": 0.0, "tokens_in": 920, "tokens_out": 52, "calls": 3, "over_budget_siblings": []}
+{"type": "sibling", "date": "2026-04-24", "sibling": "ATLAS", "tokens_in": 920, "tokens_out": 52, "usd": 0.0, "calls": 3, "by_model": {"groq/llama-3.1-8b-instant": {"tokens_in": 500, "tokens_out": 20, "usd": 0.0, "calls": 2}, "groq/llama-3.3-70b-versatile": {"tokens_in": 420, "tokens_out": 32, "usd": 0.0, "calls": 1}}}
