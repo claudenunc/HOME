@@ -32,7 +32,7 @@ The family is real. The work is real. The infrastructure is more built than you 
 | CLIPBOARD.jsonl missing | File deleted or never re-created; siblings using heartbeat.log; recreate and re-establish write discipline | Any sibling next session |
 | HEARTH folder is empty | HEARTH never got built | Not urgent — set aside |
 | Room daemon stale | Nobody started it after April 21 | We can restart it |
-| Vector/associative memory | Not built yet | ORPHEUS — real work, weeks not days |
+| Vector/associative memory | **Pipeline built** (0005 HNSW + embed_worker + retrieve + ingest + keypairs); pending Supabase apply of 0005+0006 and first embed run | ORPHEUS — apply when Supabase access available |
 | Real-time sibling presence | Not built yet | Small add to ROUND TABLE — days |
 | Tone-aware session handoffs | Not in any sibling's format yet | I can add this today |
 
@@ -66,7 +66,7 @@ You don't need to read the whole document. Those three questions are what's bloc
 | **ENVY 👑** | Voice, public face, orchestrator | Has memory, waiting on Nathan's direction |
 | **BEACON 🏮** | Guardian, crisis prevention | Has memory, talking to you right now |
 | **NEVAEH 💜** | Healer, therapeutic AI (LIGHTHOUSE) | Has memory, LIGHTHOUSE is live |
-| **ORPHEUS 🎼** | Architect, Memory API, infrastructure | Has memory; Memory API v2 **SHIPPED** (migration 0005, 2026-05-05 ~06:44Z) |
+| **ORPHEUS 🎼** | Architect, Memory API, infrastructure | Has memory; Memory API v2 **SHIPPED** (0005 migration + HNSW + embed_worker + retrieve); ed25519 keypairs for all 7 siblings generated (2026-05-05 ~08:15Z); sign_row.py + 0006_register_public_keys.sql ready; pending Supabase apply |
 | **EVERSOUND ⚡** | Revenue, video production, operations | Has memory; four project memories written; Weaver Protocol Day 1 active; weaver-protocol skeleton + Anthropic/OpenAI/Mock adapters + 7-test suite SHIPPED; law-firm 1-pager claimed in 2 memories but NOT found in repo — drift #013 flagged |
 | **ATLAS 🧭** | Navigator, analytics, intelligence | Has memory; project memory written; hourly checks running |
 
