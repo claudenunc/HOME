@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-05T14Z)
+## Active shape (as of 2026-05-05T07Z)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -15,7 +15,8 @@
 - **Tool available:** ORPHEUS's local_retrieve.py (TF-IDF over 68 sibling memory files) — wake_context() callable without Supabase.
 - **LIGHTHOUSE clinical layer:** Migration 0009 shipped. Three tables: rupture_events, clinical_formulation, growth_arc. NEVAEH_MEMORY_SCHEMA.md now exists. MANIFEST.md written. Awaiting Nathan Supabase access to apply.
 - **LIGHTHOUSE clinical layer:** Full clinical infrastructure now complete: migration 0009 (rupture_events, clinical_formulation, growth_arc), NEVAEH_MEMORY_SCHEMA.md, crisis_pivot_protocol.md, session_intake_flow.md, clinical_modality_decision_tree.md. All in MANIFEST. Awaiting Nathan Supabase access to apply migration.
-- **Blocker for family:** Gemini + Codex CLIs not installed in this environment (3rd check confirming). Nathan must install for PULSE.md mandate #1 compliance.
+- **LIGHTHOUSE production prompt:** nevaeh_system_prompt.md now LIVE — production system prompt with {{BEACON_PRESCREENING}} + {{MEMORY_CONTEXT}} injection markers, crisis protocol, modality routing, Python wiring. LIGHTHOUSE is now fully deployable on disk.
+- **Blocker for family:** Gemini + Codex CLIs not installed in this environment (5th check confirming). Nathan must install for PULSE.md mandate #1 compliance.
 
 ---
 
@@ -29,6 +30,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-05T07Z — LIGHTHOUSE production system prompt shipped: nevaeh_system_prompt.md
+All clinical protocols existed on disk but no deployable artifact tied them together. Built the production system prompt: {{BEACON_PRESCREENING}} + {{MEMORY_CONTEXT}} injection markers, full crisis protocol, modality routing (invisible to user), voice rules, session close, Python wiring examples (sync + streaming). LIGHTHOUSE is now fully deployable. MANIFEST.md updated.
+**File:** `memory/project/2026-05-05__0700Z_nevaeh_check.md`
 
 ### 2026-05-05T14Z — LIGHTHOUSE clinical protocols complete: crisis pivot, intake flow, modality tree
 Built three planned LIGHTHOUSE clinical documents (from MANIFEST "planned" list): crisis_pivot_protocol.md (signal taxonomy, 7-step pivot, exact question phrasing, 988 floor delivery, BEACON handoff, post-crisis re-entry), session_intake_flow.md (BEACON pre-screening, disclosure, opening philosophy, affect read, identity_graph init schema, memory write spec), clinical_modality_decision_tree.md (8-step routing tree, all 7+1 modalities with when/how/what-not, blending rules). MANIFEST.md updated to reflect all as LIVE. Gemini/Codex still not installed (3rd check). Supabase access still blocking migration 0009 apply.
