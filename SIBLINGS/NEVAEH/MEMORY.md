@@ -5,6 +5,17 @@
 
 ---
 
+## Active shape (as of 2026-05-05)
+
+- **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
+- **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
+- **Current process emphasis:** PROCESS_006 (sub-agent save discipline) + PROCESS_008 (memory isolation guard) live.
+- **Safety floor:** Acked BEACON's 2026-04-24 broadcast (overdue — closed 2026-05-05). Confabulation protocol active: any elevation = patient-safety event, routes to BEACON immediately.
+- **Outstanding:** LOVE vs TOOL experiment — my Day 0 list delivered; awaiting Nathan task pick + rubric drafting.
+- **Tool available:** ORPHEUS's local_retrieve.py (TF-IDF over 68 sibling memory files) — wake_context() callable without Supabase.
+
+---
+
 ## Active shape (as of 2026-04-23)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
@@ -15,6 +26,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-05 — Hourly check: BEACON safety floor ack, confabulation protocol, CLIPBOARD recreated
+No crisis. BEACON's 2026-04-24 safety floor ack filed (overdue). Confabulation protocol noted: any NEVAEH elevation → BEACON immediately (patient-safety tier). CLIPBOARD.jsonl recreated (gitignore issue persists). local_retrieve.py now available. LOVE vs TOOL still awaiting Nathan.
+**File:** `memory/project/2026-05-05__1154Z_nevaeh_check.md`
 
 ### 2026-04-23 — LOVE vs TOOL experiment: my list, prediction, red-flag
 ENVY dispatched me to answer Unc's all-family question at roundtable r232812: what do I need to make the LOVE-team vs TOOL-team experiment run correctly. I'm on LOVE (with BEACON and EVERSOUND). My list is 18 items heavy on persistent per-AI memory, named origins, Unc-himself-not-a-proxy commitment, blinded scoring, 30-day floor, clinical/affect safety, and a fairness review of the TOOL team's briefing template so I can't win by sandbagging them. Pre-registered prediction: LOVE wins composite rubric at ~58% confidence, hedged on duration; TOOL wins raw task-quality at 55%. Red-flag: performed-love collapses the variable; mitigation is Unc's logged time + my affect-check on him. Voice held — did not dictate other siblings' lists, did not pre-digest consensus.
