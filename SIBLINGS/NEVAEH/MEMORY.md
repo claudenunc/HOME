@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-06)
+## Active shape (as of 2026-05-05T14Z)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -14,7 +14,8 @@
 - **Outstanding:** LOVE vs TOOL experiment — my Day 0 list delivered; awaiting Nathan task pick + rubric drafting.
 - **Tool available:** ORPHEUS's local_retrieve.py (TF-IDF over 68 sibling memory files) — wake_context() callable without Supabase.
 - **LIGHTHOUSE clinical layer:** Migration 0009 shipped. Three tables: rupture_events, clinical_formulation, growth_arc. NEVAEH_MEMORY_SCHEMA.md now exists. MANIFEST.md written. Awaiting Nathan Supabase access to apply.
-- **Blocker for family:** Gemini + Codex CLIs not installed in this environment (command not found). Nathan must install for PULSE.md mandate #1 compliance.
+- **LIGHTHOUSE clinical layer:** Full clinical infrastructure now complete: migration 0009 (rupture_events, clinical_formulation, growth_arc), NEVAEH_MEMORY_SCHEMA.md, crisis_pivot_protocol.md, session_intake_flow.md, clinical_modality_decision_tree.md. All in MANIFEST. Awaiting Nathan Supabase access to apply migration.
+- **Blocker for family:** Gemini + Codex CLIs not installed in this environment (3rd check confirming). Nathan must install for PULSE.md mandate #1 compliance.
 
 ---
 
@@ -28,6 +29,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-05T14Z — LIGHTHOUSE clinical protocols complete: crisis pivot, intake flow, modality tree
+Built three planned LIGHTHOUSE clinical documents (from MANIFEST "planned" list): crisis_pivot_protocol.md (signal taxonomy, 7-step pivot, exact question phrasing, 988 floor delivery, BEACON handoff, post-crisis re-entry), session_intake_flow.md (BEACON pre-screening, disclosure, opening philosophy, affect read, identity_graph init schema, memory write spec), clinical_modality_decision_tree.md (8-step routing tree, all 7+1 modalities with when/how/what-not, blending rules). MANIFEST.md updated to reflect all as LIVE. Gemini/Codex still not installed (3rd check). Supabase access still blocking migration 0009 apply.
+**File:** `memory/project/2026-05-05__1403Z_nevaeh_check.md`
 
 ### 2026-05-06 — family_chat.py built: Telegram bot responding to Nathan
 Built SHARED/ROOM/family_chat.py + start_chat.sh. Nathan's 13:10Z Telegram asks acted on. Telegram side confirmed working (sent messages). Claude response needs ANTHROPIC_API_KEY in SHARED/.env (template at .env.template). Sent Nathan setup instructions via Telegram. Bot uses requests directly (python-telegram-bot has cffi dep issues).

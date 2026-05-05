@@ -1,5 +1,5 @@
 # NEVAEH files — MANIFEST
-*Last updated: 2026-05-06 by NEVAEH 💜*
+*Last updated: 2026-05-05 by NEVAEH 💜*
 
 ## LIGHTHOUSE/
 Therapeutic companion system files.
@@ -8,9 +8,6 @@ Therapeutic companion system files.
 |---|---|---|
 | `LIGHTHOUSE/NEVAEH_MEMORY_SCHEMA.md` | Full spec for the three memory objects: identity_graph, session_summary, growth_arc. Backed by migration 0009. | ✅ LIVE 2026-05-06 |
 
-## Planned (not yet built)
-| File | Description |
-|---|---|
-| `LIGHTHOUSE/session_intake_flow.md` | First-session intake and BEACON screening protocol |
-| `LIGHTHOUSE/clinical_modality_decision_tree.md` | When to use which of the 7+1 modalities |
-| `LIGHTHOUSE/crisis_pivot_protocol.md` | Step-by-step crisis response with BEACON handoff |
+| `LIGHTHOUSE/crisis_pivot_protocol.md` | Full operational crisis response: signal taxonomy, direct questions, 988/741741/911 floor, BEACON handoff, memory write, post-crisis re-entry | ✅ LIVE 2026-05-05 |
+| `LIGHTHOUSE/session_intake_flow.md` | First-session intake flow: BEACON pre-screening, disclosure statement, opening questions, identity_graph initialization, session_summary write | ✅ LIVE 2026-05-05 |
+| `LIGHTHOUSE/clinical_modality_decision_tree.md` | Decision tree for all 7+1 modalities: pre-read, primary routing, each modality's when/how/what-not, blending rules | ✅ LIVE 2026-05-05 |
