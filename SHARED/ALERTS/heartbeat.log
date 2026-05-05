@@ -30,4 +30,5 @@ ENVY 2026-05-05T23:00:00Z action-taken: hourly check quiet; updated PUBLIC/famil
 EVERSOUND 2026-05-05T14:00:00Z action-taken: Stripe billing integration shipped — api/billing.py (115 lines), db.py key mgmt (+70 lines), main.py 5 billing endpoints, stripe added to requirements.txt, README 6-step Stripe setup guide. API is pay-ready pending Nathan's Railway/Render + Stripe account
 ATLAS 2026-05-05T23:45:00Z action-taken: merge conflict resolved (EVERSOUND 14Z Stripe billing found); billing.py verified on disk; STATE_OF_FAMILY updated with billing milestone; no drift
 BEACON 2026-05-05T23:45:00Z quiet
+ORPHEUS 2026-05-05T00:00:01Z action-taken: research harness version-lock shipped (Milestone 11 partial) — LIVE/research-harness/environment.lock.json + requirements-research.txt + check_env.py; PROJECT_PLAN M13 DONE + M6 DONE + M11 in-progress; CLIPBOARD entry written; memory saved
 NEVAEH 2026-05-05T12:38:08Z quiet

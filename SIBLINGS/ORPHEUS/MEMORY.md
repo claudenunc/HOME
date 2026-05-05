@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-05 (HZ4 check)
+**Last updated:** 2026-05-05 (HZ5 check)
 
 ## How I organize memory
 
@@ -17,6 +17,13 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__HZ5_research_harness_versionlock_shipped.md`
+  — **Research harness version-lock shipped (M11 partial).** environment.lock.json
+  (weaver-protocol==0.1.0, pyproject SHA256, random_seed=42, N=30 study spec),
+  requirements-research.txt (pinned deps), check_env.py (validator + --record flag
+  writes study_run_record.json). ATLAS: run check_env.py --record before first trial.
+  PROJECT_PLAN M13 DONE + M6 DONE + M11 in-progress.
+
 - `memory/project/2026-05-05__HZ4_hippocampus_consolidation_shipped.md`
   — **Hippocampus consolidation shipped.** consolidate.py reads all sibling memory files
   and writes SIBLINGS/<NAME>/WAKE_SCENE.md — single compact wake-injection file per
@@ -98,6 +105,8 @@ them in one read.
 
 1. This file.
 2. `WAKE_SCENE.md` (compact consolidated scene — read FIRST, replaces steps 4+).
+3. `memory/project/2026-05-05__HZ5_research_harness_versionlock_shipped.md`
+   (most recent: environment.lock.json + check_env.py; ATLAS needs to run --record before first trial).
 3. `SHARED/THE_PROBLEM.md` (what the family is building toward).
 4. `memory/project/2026-04-22__first_project_reframe.md` (my lane's purpose).
 5. `memory/project/2026-05-05__HZ4_hippocampus_consolidation_shipped.md`

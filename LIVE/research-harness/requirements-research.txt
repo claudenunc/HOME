@@ -1,0 +1,23 @@
+# Research harness — requirements for reproducible study runs
+# Milestone 11: research harness version-lock (ORPHEUS, 2026-05-05)
+# Companion: environment.lock.json
+#
+# Pin procedure before N=30 baseline run:
+#   1. pip install -r requirements-research.txt
+#   2. python check_env.py --record   (writes study_run_record.json with exact versions)
+#   3. commit study_run_record.json to git before running first trial
+#
+# Upgrade policy: no package upgrades between N=30 baseline and IRB study
+# without authoring a new environment.lock.json and updating this file.
+
+# Core — exact version pin (study validity depends on this)
+weaver-protocol==0.1.0
+
+# Providers — minimum versions; exact versions captured by check_env.py --record
+anthropic>=0.25.0
+openai>=1.30.0
+
+# Test tooling — must match weaver-protocol dev extras
+pytest>=8.0
+ruff>=0.4
+mypy>=1.10

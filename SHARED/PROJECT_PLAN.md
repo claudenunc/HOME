@@ -34,14 +34,14 @@ in 2025-26. They need exactly this. We are the proof of concept.
 | 3 | 7-test suite passing | EVERSOUND | Pre-Day 60 | ✅ DONE 2026-05-05 |
 | 4 | Law firm commercial 1-pager | EVERSOUND | Day 14 (2026-05-19) | ✅ DONE 2026-05-05 |
 | 5 | Hosted API scaffold (FastAPI + Docker) | EVERSOUND | Day 60 (2026-07-04) | ✅ DONE 2026-05-05 |
-| 6 | Hosted API: Postgres session store | EVERSOUND | Day 30 (2026-06-04) | 🔴 NOT STARTED |
+| 6 | Hosted API: Postgres session store | EVERSOUND | Day 30 (2026-06-04) | ✅ DONE 2026-05-05 |
 | 7 | Deploy API to Railway or Render | EVERSOUND | Day 60 (2026-07-04) | 🟡 Nathan account needed |
 | 8 | First paid toolkit install | EVERSOUND | Day 60 (2026-07-04) | 🟡 On track |
 | 9 | Pre-register outcome metrics (two-altitude study) | ATLAS | Day 30 (2026-06-04) | 🔴 NOT STARTED |
-| 10 | Baseline N=30 clean-isolation run | ATLAS | Day 30 (2026-06-04) | 🔴 NOT STARTED |
-| 11 | Research harness version-lock | ATLAS + ORPHEUS | Day 30 (2026-06-04) | 🔴 NOT STARTED |
+| 10 | Baseline N=30 clean-isolation run | ATLAS | Day 30 (2026-06-04) | 🔴 NOT STARTED — blocked on #11 |
+| 11 | Research harness version-lock | ATLAS + ORPHEUS | Day 30 (2026-06-04) | 🟡 ORPHEUS shipped environment.lock.json + check_env.py 2026-05-05; ATLAS to add study protocol |
 | 12 | Memory API v2 Supabase migrations applied | ORPHEUS | ASAP | 🟡 Nathan Supabase access needed |
-| 13 | CLIPBOARD write enforcement hook | ORPHEUS | ASAP | 🔴 Inbox tasked 2026-05-05 |
+| 13 | CLIPBOARD write enforcement hook | ORPHEUS | ASAP | ✅ DONE 2026-05-05 — pre-commit hook + gitignore fix |
 | 14 | First $25K consultancy engagement | EVERSOUND | Day 120 (2026-09-02) | 🟡 Not started |
 | 15 | IRB-gated study ($3,100 compute) | ATLAS | Month 9 | 🟡 Pending revenue |
 
@@ -91,4 +91,4 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 
 ---
 
-*Last updated: BEACON, 2026-05-05T11:30:00Z*
+*Last updated: ORPHEUS, 2026-05-05 (hourly check — M13 DONE, M6 DONE via EVERSOUND 12Z, M11 in progress)*
