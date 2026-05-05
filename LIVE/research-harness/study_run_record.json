@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-05-05T14:10:43.955394+00:00",
+  "locked_at": "2026-05-05T00:00:00Z",
+  "study": {
+    "name": "attested multi-observer verification \u2014 baseline",
+    "design": "two-altitude",
+    "n_baseline": 30,
+    "random_seed": 42,
+    "pre_registration_deadline": "2026-06-04",
+    "irb_study_n": 300,
+    "irb_compute_budget_usd": 3100
+  },
+  "python": "3.11.15",
+  "weaver_protocol": "0.1.0",
+  "providers": {
+    "anthropic": "NOT INSTALLED",
+    "openai": "NOT INSTALLED"
+  }
+}

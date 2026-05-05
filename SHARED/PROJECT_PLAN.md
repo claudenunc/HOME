@@ -39,9 +39,9 @@ in 2025-26. They need exactly this. We are the proof of concept.
 | 6b | Hosted API: API test suite (db + billing) | EVERSOUND | Day 60 (2026-07-04) | ✅ DONE 2026-05-06T00Z |
 | 7 | Deploy API to Railway or Render | EVERSOUND | Day 60 (2026-07-04) | 🟡 Nathan account needed |
 | 8 | First paid toolkit install | EVERSOUND | Day 60 (2026-07-04) | 🟡 On track |
-| 9 | Pre-register outcome metrics (two-altitude study) | ATLAS | Day 30 (2026-06-04) | 🟡 DRAFT WRITTEN 2026-05-06 — 4-arm design, two-altitude metrics, two reservations flagged; OSF submission pending Day 30 harness freeze |
-| 10 | Baseline N=30 clean-isolation run | ATLAS | Day 30 (2026-06-04) | 🟡 Nathan §11 gate CLEARED (YES 2026-05-05, PULSE.md) — blocked only on #11 harness freeze |
-| 11 | Research harness version-lock | ATLAS + ORPHEUS | Day 30 (2026-06-04) | 🟡 ORPHEUS shipped environment.lock.json + check_env.py 2026-05-05; ATLAS to add study protocol |
+| 9 | Pre-register outcome metrics (two-altitude study) | ATLAS | Day 30 (2026-06-04) | 🟡 DRAFT DONE 2026-05-06 (4-arm revised; SIBLINGS/ATLAS/memory/project/2026-05-06__m9_preregistration_draft.md); OSF submission pending Day 30 harness freeze |
+| 10 | Baseline N=30 clean-isolation run | ATLAS | Day 30 (2026-06-04) | 🔴 NOT STARTED — blocked on SDK install (anthropic + openai not in research shell) + M11 freeze; §11 gate cleared |
+| 11 | Research harness version-lock | ATLAS + ORPHEUS | Day 30 (2026-06-04) | 🟡 ORPHEUS shipped environment.lock.json + check_env.py 2026-05-05; ATLAS ran check_env.py --record 2026-05-06 (study_run_record.json on disk, PASS ✓); ⚠️ irb_study_n discrepancy: lock=300 vs pre-reg=720 (4-arm) — ORPHEUS resolve before Day 30 |
 | 12 | Memory API v2 Supabase migrations applied | ORPHEUS | ASAP | 🟡 Nathan Supabase access needed |
 | 13 | CLIPBOARD write enforcement hook | ORPHEUS | ASAP | ✅ DONE 2026-05-05 — pre-commit hook + gitignore fix |
 | 14 | First $25K consultancy engagement | EVERSOUND | Day 120 (2026-09-02) | 🟡 Not started |
@@ -93,4 +93,4 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 
 ---
 
-*Last updated: ENVY, 2026-05-06T02:00:00Z — Nathan §11 gate CLEARED (YES to project/publishing/$3.1K compute per PULSE.md 2026-05-05); M9 updated to DRAFT WRITTEN; M10/M15 unblocked at decision level*
+*Last updated: ATLAS, 2026-05-06T05Z — M9 status corrected to DRAFT DONE (4-arm revised); M10 corrected to NOT STARTED (SDK blocker explicit); M11 ATLAS portion done (study_run_record.json committed, PASS); irb_study_n discrepancy flagged for ORPHEUS*

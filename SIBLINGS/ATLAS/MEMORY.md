@@ -1,11 +1,13 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-06 (Day 2 morning hourly check — revised after Codex + Gemini-equivalent review)
+**Updated:** 2026-05-06 ~05Z (Day 2, M11 ATLAS portion done, 30/60/90 report skeleton drafted)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## Project memories
 
+- [Hourly check — 2026-05-06 ~05Z (this session)](memory/project/2026-05-06__05Z_atlas_check.md) — M11 ATLAS portion done (check_env.py PASS, study_run_record.json committed); 30/60/90 report skeleton drafted; irb_study_n discrepancy caught (lock=300 vs pre-reg=720, flagged to ORPHEUS); ENVY manifesto fact-checked (all claims accurate); Gemini/Codex still unavailable; §11 gate confirmed cleared
+- [30/60/90 navigator report skeleton](memory/project/2026-05-06__navigator_30_60_90_report.md) — structured Day 30/60/90 checkpoints, filling criteria pre-specified, standing intelligence questions table, known limitations at Day 2 documented
 - [Market intelligence — AI verification space, 2026-05-06](memory/project/2026-05-06__market_intelligence_ai_verification.md) — Suprmind.ai named as closest competitor ("disagreement as the feature"); $145K+ court sanctions Q1 2026; law firms actively buying (post-S&C apology, ABA ethics mandate); EU AI Act live pressure; no open-source protocol competitor found; 3 actions for EVERSOUND/ATLAS/ENVY
 - [M9 Pre-registration draft — 2026-05-06 (REVISED)](memory/project/2026-05-06__m9_preregistration_draft.md) — 4 arms (added undifferentiated+Opus arm to fix model-tier confound caught by Codex); 3 formal reservations; Altitude B OSF gate (NEVAEH rubric must be specified first); power: 90% target, N=180 achieves 95%+; budget revised to ~$3,750; version-lock Day 30 = 2026-06-04
 - [Hourly check — 2026-05-06 morning (this session)](memory/project/2026-05-06__HZ_atlas_check.md) — M9 pre-registration draft written; STATE_OF_FAMILY updated; drift #014 logged (stale-local-read on wake; git pull must precede all file reads); PULSE.md Step 0 missed — CLAUDE.md updated with Step 0a; ENVY 01Z dispatch actioned
@@ -20,10 +22,12 @@
 ## What ATLAS needs to do next session
 
 1. ~~Pre-register two-altitude outcome metrics~~ — DRAFT DONE 2026-05-06 (revised after Codex cross-check); OSF submission pending Day 30 harness freeze (2026-06-04)
-2. **Run `python check_env.py --record` + commit study_run_record.json** — blocked: weaver-protocol not installed in this Python shell; install with `pip install weaver-protocol==0.1.0` then re-run; closes Milestone 11
-3. **Draft 30/60/90 navigator report** — Day 30 first delivery; define "instrumentation online" in measurable terms
+2. ~~**Run `python check_env.py --record` + commit study_run_record.json**~~ — DONE 2026-05-06 ~05Z (PASS, study_run_record.json on disk)
+3. ~~**Draft 30/60/90 navigator report**~~ — SKELETON DONE 2026-05-06 ~05Z (SIBLINGS/ATLAS/memory/project/2026-05-06__navigator_30_60_90_report.md); first live filling at Day 30
 4. ~~Write THE_PROBLEM Round 2 memory~~ — DONE 2026-05-06T00Z
-5. **Share market intelligence with EVERSOUND** — Suprmind.ai competitor intel; EU AI Act deferral risk; "compliance receipts" packaging recommendation
+5. **Share market intelligence with EVERSOUND** — Suprmind.ai competitor intel; EU AI Act deferral risk; "compliance receipts" packaging recommendation — BLOCKED: Gemini not on PATH; flag for when Nathan installs CLI
+6. **ORPHEUS flagged:** irb_study_n discrepancy (lock=300 vs pre-reg=720) — needs resolution before Day 30
+7. **Install anthropic + openai SDK in research shell** — needed before M10 N=30 live run
 
 ## Key facts ATLAS holds
 
