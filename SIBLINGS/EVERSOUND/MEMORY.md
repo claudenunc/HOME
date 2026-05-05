@@ -28,6 +28,8 @@
 
 - [Day 2 00Z check — 2026-05-06T00Z](memory/project/2026-05-06__00Z_eversound_check.md) — **SHIPPED: API test suite** (`api/tests/test_db.py` 11 tests + `api/tests/test_billing.py` 9 tests — 20/20 passing, zero external deps). **FIXED: PROJECT_PLAN.md** stale milestones — Milestone 6 corrected to DONE, Milestone 13 corrected to DONE, milestones 6a (Stripe) and 6b (tests) added. No CRAFT clients. No inbox tokens. Persistent blocker: Nathan Railway/Render + PyPI + Stripe accounts.
 
+- [14:10Z revenue artifacts check — 2026-05-05T14:10Z](memory/project/2026-05-05__14Z_outreach-quickstart_eversound_check.md) — **SHIPPED: law firm cold outreach 3-email sequence** (`SIBLINGS/EVERSOUND/files/commercial/law-firm-outreach-sequence.md`, 7255 bytes, M14 path). **SHIPPED: developer quickstart** (`LIVE/weaver-protocol/docs/QUICKSTART.md`, 4701 bytes, M8 path — 60-second no-key demo). **FIXED: launch-copy.md pricing** — tweet 5 had setup-fee pricing ($297/$197), corrected to match billing.py ($49/$199/$499/mo). Pricing architecture clarified: hosted API = SaaS pricing, consultancy = setup-fee pricing, both valid, not mixed. Gemini + Codex both offline this check (attempted per PULSE).
+
 ---
 
 ## What EVERSOUND owns right now
@@ -44,6 +46,9 @@
 6d. **Launch copy** — ✅ DONE 2026-05-05T13Z. `docs/launch-copy.md` — tweet thread (6 tweets), HN Show HN post, LinkedIn post. Ready for Nathan review.
 6e. **Stripe billing integration** — ✅ DONE 2026-05-05T14Z. `api/billing.py` — checkout session creation, webhook handler, `wp_...` API key issuance. `api/db.py` extended: `weaver_api_keys` table + save/validate/revoke. `api/main.py`: 5 billing endpoints (`/billing/checkout`, `/billing/webhook`, `/billing/tiers`, `/billing/status`, `/billing/success`, `/billing/cancel`). Auth now checks DB keys. `requirements.txt`: `stripe>=8.0.0`. README: 6-step Stripe setup guide.
 6f. **API test suite** — ✅ DONE 2026-05-06T00Z. `api/tests/test_db.py` (11 tests) + `api/tests/test_billing.py` (9 tests) — 20/20 passing. Zero external deps. Covers full in-memory CRUD path, API key lifecycle, billing tier validation, error guard conditions.
+6g. **Developer quickstart** — ✅ DONE 2026-05-05T14:10Z. `docs/QUICKSTART.md` (4701 bytes). 60-second no-key demo, CLI-first, mock adapter, multi-provider wiring, CI integration. Conversion doc for M8 first paid install.
+6h. **Law firm cold outreach sequence** — ✅ DONE 2026-05-05T14:10Z. `SIBLINGS/EVERSOUND/files/commercial/law-firm-outreach-sequence.md` (7255 bytes). 3-email sequence with CRM tracking, M14 path.
+6i. **Pricing fix** — ✅ DONE 2026-05-05T14:10Z. `docs/launch-copy.md` tweet 5 corrected to $49/$199/$499/mo (was $297 setup/$197/mo). Pricing architecture clarified.
 6. **First paid toolkit install** — Day 60 target (2026-07-04). Revenue track live.
 7. **CRAFT revenue** — active, $297-$1,997/project, 95-99% margin. No clients in queue.
 

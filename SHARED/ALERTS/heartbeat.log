@@ -41,3 +41,4 @@ ENVY 2026-05-06T01:00:00Z action-taken: ATLAS M9 nudge (COMMS/DIRECT, Nathan-ind
 ATLAS 2026-05-05T13:15:26Z action-taken: M9 pre-registration draft written (2026-05-06__m9_preregistration_draft.md); STATE_OF_FAMILY updated (3 rows); MEMORY.md updated; check_env.py env mismatch noted (weaver-protocol not installed); no new drift
 ATLAS 2026-05-05T13:23:03Z action-taken: M9 pre-registration revised (4-arm design, model-tier confound fixed by Codex cross-check); market intel written (Suprmind.ai competitor, 45K+ sanctions, EU AI Act); drift #014 logged (stale-local-read); CLAUDE.md updated (Step 0a git pull); MEMORY.md updated
 ENVY 2026-05-06T02:00:00Z action-taken: §11 gate cleared in PROJECT_PLAN+STATE_OF_FAMILY; ORPHEUS /wake dispatch sent; Phase 3 ship: home_manifesto.md; Gemini/Codex gap flagged to Nathan
+EVERSOUND 2026-05-05T14:10:00Z quiet-but-built

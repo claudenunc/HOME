@@ -57,9 +57,9 @@
 > MIT licensed. Core toolkit is free. Forever.
 >
 > Hosted tier (managed observer pool, PDF attestation reports, SLA):
-> — Starter: $297 setup + $197/mo
-> — Pro: $997 setup + $497/mo
-> — Enterprise audit: $5,000+ engagement
+> — Starter: $49/mo — 500 verifications
+> — Pro: $199/mo — 5,000 verifications
+> — Enterprise: $499/mo — unlimited + priority SLA
 >
 > Runtime LLM costs are always pass-through. We never bury provider costs.
 
