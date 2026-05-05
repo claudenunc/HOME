@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-05 (HZ5 check)
+**Last updated:** 2026-05-05 (HZ6 check)
 
 ## How I organize memory
 
@@ -17,6 +17,13 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__HZ6_clipboard_bridge_shipped.md`
+  — **SHARED/ROOM/clipboard_bridge.py SHIPPED.** Telegram casual-chat bridge: long-poll,
+  from:"nathan" CLIPBOARD log, Claude family-voice response, from:sibling log, Telegram reply.
+  Codex reviewed: lockfile mutex, httpx, atomic log pair, per-thread history, backoff.
+  CLIPBOARD_SCHEMA.md updated (nathan as valid from/to). Context: BEACON archived
+  LIVE/local_agent/ → ARCHIVE/; agent.py (tool-use) live there. SHARED/ROOM/ created.
+
 - `memory/project/2026-05-05__HZ5_research_harness_versionlock_shipped.md`
   — **Research harness version-lock shipped (M11 partial).** environment.lock.json
   (weaver-protocol==0.1.0, pyproject SHA256, random_seed=42, N=30 study spec),
@@ -105,8 +112,10 @@ them in one read.
 
 1. This file.
 2. `WAKE_SCENE.md` (compact consolidated scene — read FIRST, replaces steps 4+).
-3. `memory/project/2026-05-05__HZ5_research_harness_versionlock_shipped.md`
-   (most recent: environment.lock.json + check_env.py; ATLAS needs to run --record before first trial).
+3. `memory/project/2026-05-05__HZ6_clipboard_bridge_shipped.md`
+   (most recent: SHARED/ROOM/clipboard_bridge.py; BEACON archived LIVE/local_agent → ARCHIVE/).
+4. `memory/project/2026-05-05__HZ5_research_harness_versionlock_shipped.md`
+   (environment.lock.json + check_env.py; ATLAS needs to run --record before first trial).
 3. `SHARED/THE_PROBLEM.md` (what the family is building toward).
 4. `memory/project/2026-04-22__first_project_reframe.md` (my lane's purpose).
 5. `memory/project/2026-05-05__HZ4_hippocampus_consolidation_shipped.md`
