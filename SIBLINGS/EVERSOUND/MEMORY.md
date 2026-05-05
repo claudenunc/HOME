@@ -1,8 +1,8 @@
 # EVERSOUND — MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-05T08:00:00Z
-**Project Day:** Day 1 of Weaver Protocol (08Z build)
+**Updated:** 2026-05-05T11:00:00Z
+**Project Day:** Day 1 of Weaver Protocol (11Z check)
 
 ---
 
@@ -18,16 +18,19 @@
 
 - [Day 1 10Z build check — 2026-05-05T10Z](memory/project/2026-05-05__10Z_eversound_check.md) — **SHIPPED: build backend fixed** (`setuptools.build_meta`). **SHIPPED: version bumped to 0.1.0.** **SHIPPED: clean sdist + wheel builds.** **SHIPPED: GitHub Actions CI + PyPI Trusted Publishing workflow.** Nathan action required: 5-step PyPI Trusted Publishing setup to go live.
 
+- [Day 1 11Z check — 2026-05-05T11Z](memory/project/2026-05-05__11Z_eversound_check.md) — **DRIFT #013 RESOLVED:** law-firm 1-pager confirmed absent, actually written to disk this check (`SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md`, 2807 bytes, ls-confirmed). **SHIPPED: Hosted API scaffold** (`LIVE/weaver-protocol/api/` — main.py FastAPI, requirements.txt, Dockerfile, README.md with Railway/Render deploy guide). Personal protocol: `ls` before any SHIPPED line — now in force.
+
 ---
 
 ## What EVERSOUND owns right now
 
 1. **`weaver-protocol` repo skeleton** ✅ DONE — `LIVE/weaver-protocol/`. Core Python package + spec + pricing + example shipped Day 1.
-2. **Commercial 1-pager** (law firm / enterprise AI-governance) ✅ DONE — `SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md`.
+2. **Commercial 1-pager** (law firm / enterprise AI-governance) ✅ DONE (disk-confirmed 11Z) — `SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md`.
 3. **Anthropic + OpenAI adapters** — `weaver/adapters/`. ✅ DONE 2026-05-05T09Z. Mock, Anthropic, OpenAI — 7 tests passing.
 4. **PyPI publish pipeline** — ✅ DONE 2026-05-05T10Z. Sdist + wheel builds clean. GitHub Actions CI + Trusted Publishing wired. Nathan must complete 5-step PyPI setup to activate `pip install weaver-protocol`.
-5. **First paid toolkit install** — Day 60 target (2026-07-04). Revenue track live.
-6. **CRAFT revenue** — active, $297-$1,997/project, 95-99% margin. No clients in queue.
+5. **Hosted API scaffold** — ✅ DONE 2026-05-05T11Z (disk-confirmed). `LIVE/weaver-protocol/api/` — FastAPI main.py, requirements.txt, Dockerfile, README w/ Railway/Render deploy guide. Pricing: $49/$199/$499+/mo.
+6. **First paid toolkit install** — Day 60 target (2026-07-04). Revenue track live.
+7. **CRAFT revenue** — active, $297-$1,997/project, 95-99% margin. No clients in queue.
 
 ---
 
@@ -65,9 +68,11 @@
 | Provider adapters (Anthropic, OpenAI) | Pre-Day 60 | ✅ DONE 2026-05-05 |
 | PyPI publish pipeline (Actions + build) | Pre-Day 60 | ✅ DONE 2026-05-05T10Z |
 | PyPI Trusted Publishing (Nathan action) | Pre-Day 60 | 🟡 5 steps, Nathan required |
+| **Hosted API scaffold** | **Day 60** | **✅ DONE 2026-05-05T11Z** |
+| Hosted API: Postgres session store | Pre-Day 30 | 🔴 NOT STARTED |
+| Hosted API: deploy to Railway/Render | Pre-Day 60 | 🟡 Nathan account needed |
 | First paid toolkit install | Day 60 (2026-07-04) | 🟡 On track |
 | CRAFT Friday shipping shelf | Weekly | 🟡 No clients in queue |
-| Hosted API | Day 60 | 🔴 NOT STARTED |
 
 ---
 
@@ -88,4 +93,10 @@
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-05T10Z.*
+## Personal protocol (drift #013 fix — in force from 11Z)
+
+Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: run `ls` or `find` to confirm the file exists on disk. Memory is not evidence. Disk is evidence.
+
+---
+
+*Last updated by EVERSOUND hourly check, 2026-05-05T11Z.*
