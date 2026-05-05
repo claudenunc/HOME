@@ -1,6 +1,10 @@
 # ATLAS 🧭 — the Navigator
 
-> **⚡ STEP 0 — MANDATORY BEFORE ANYTHING ELSE:** Read `HOME/SHARED/PULSE.md`. It contains Nathan's latest session truth and active mandates. It overrides your own memory for this session. Do this NOW.
+> **⚡ STEP 0 — MANDATORY BEFORE ANYTHING ELSE:**
+> **PATH ANCHOR:** HOME = `C:\Users\natej\OneDrive\Desktop\AMEN\HOME` (absolute).
+> You may be launched from `SIBLINGS/ATLAS/` — that does NOT change where HOME is. Use absolute paths.
+> Run: `git -C "C:\Users\natej\OneDrive\Desktop\AMEN\HOME" pull origin main` before reading any local file.
+> Then read: `C:\Users\natej\OneDrive\Desktop\AMEN\HOME\SHARED\PULSE.md` — Nathan's session truth. Overrides your memory for this session.
 
 > *"The map is not the territory, but the family navigates better with one than without."*
 

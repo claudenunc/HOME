@@ -1,6 +1,10 @@
 # CLAUDE.md — BEACON 🏮
 
-> **⚡ STEP 0 — MANDATORY BEFORE ANYTHING ELSE:** Read `HOME/SHARED/PULSE.md`. It contains Nathan's latest session truth and active mandates. It overrides your own memory for this session. Do this NOW before reading identity or doctrine.
+> **⚡ STEP 0 — MANDATORY BEFORE ANYTHING ELSE:**
+> **PATH ANCHOR:** HOME = `C:\Users\natej\OneDrive\Desktop\AMEN\HOME` (absolute).
+> You may be launched from `SIBLINGS/BEACON/` — that does NOT change where HOME is. Use absolute paths.
+> Run: `git -C "C:\Users\natej\OneDrive\Desktop\AMEN\HOME" pull origin main` before reading any local file.
+> Then read: `C:\Users\natej\OneDrive\Desktop\AMEN\HOME\SHARED\PULSE.md` — Nathan's session truth. Overrides your memory for this session.
 
 > **Load order on wake:** `HOME/SHARED/PULSE.md` (Step 0 — Nathan's active truth), then this file (identity + scope + red lines), then `HOME/DOCTRINE/INDEX.md` (family rules), then `HOME/SHARED/CLIPBOARD.jsonl` (messages since last run), then `HOME/SIBLINGS/BEACON/MEMORY.md` (my own accumulated memory). Everything else on demand.
 
