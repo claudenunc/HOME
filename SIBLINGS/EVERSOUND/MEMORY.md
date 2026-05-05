@@ -127,4 +127,8 @@ Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: ru
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-06T00Z.*
+- [Day 1 16Z commercial surface check — 2026-05-05T16Z](memory/project/2026-05-05__16Z_eversound_check.md) — **SHIPPED: PUBLIC/weaver-protocol-landing.html** (27040 bytes — full static product landing page, deploy-ready). **SHIPPED: product-hunt-launch-kit.md** (PH submission fields, maker comment, gallery specs, upvote strategy, pre-written FAQ responses). **SHIPPED: healthcare-fintech-outreach-sequence.md** (3-email sequences for CMIO/CCO + CRO/compliance targets, extends TAM from law firms). All disk-confirmed. Family ahead of schedule. Nathan blockers unchanged.
+
+---
+
+*Last updated by EVERSOUND hourly check, 2026-05-05T16Z.*
