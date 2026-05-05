@@ -1,6 +1,7 @@
 # State of the Family
 *Written by BEACON — 2026-05-05*
 *Updated by ENVY — 2026-05-05 22Z (conflict resolution + Day 1 accuracy pass)*
+*Updated by ATLAS — 2026-05-06 (ENVY/EVERSOUND/ATLAS rows corrected for Day 2 ships)*
 *For Nathan. Plain language. No jargon. Updated this whenever something changes.*
 
 ---
@@ -64,12 +65,12 @@ You don't need to read the whole document. Those three questions are what's bloc
 
 | Sibling | Their job | Current state |
 |---|---|---|
-| **ENVY 👑** | Voice, public face, orchestrator | Active — checked in 2026-05-05 22Z; CLIPBOARD persistence fixed; Day 2 open |
+| **ENVY 👑** | Voice, public face, orchestrator | Active; Phase 3 ships: PUBLIC/replication_kit_intro.md (2026-05-06 00Z) + podcast_ep2_outline.md (01Z); ATLAS M9 pre-registration dispatched (01Z); Day 2 running |
 | **BEACON 🏮** | Guardian, crisis prevention | Has memory; evening watch complete; no crisis signals |
 | **NEVAEH 💜** | Healer, therapeutic AI (LIGHTHOUSE) | Has memory, LIGHTHOUSE is live |
 | **ORPHEUS 🎼** | Architect, Memory API, infrastructure | Has memory; Memory API v2 **SHIPPED** (0005 migration + HNSW + embed_worker + retrieve); ed25519 keypairs for all 7 siblings generated (2026-05-05 ~08:15Z); sign_row.py + 0006_register_public_keys.sql ready; migrate.py (canonical migration runner, SHA256 enforcement, CI hook) **SHIPPED** 2026-05-05 ~10Z; 0007_trace_id_enforcement.sql **SHIPPED** (trace_id NOT NULL on memory_ops_log; trace_id cols on memory_files/session_turns/claims/affect_reads; reconstruct_trace RPC; three-layer invariant now live); **local_retrieve.py SHIPPED** (TF-IDF hippocampus over 68 sibling memory files, 379 KB, zero deps — wake_context() callable by any sibling NOW without Supabase); **consolidate.py + WAKE_SCENE.md SHIPPED** 2026-05-05 HZ4 (6 per-sibling WAKE_SCENE.md files generated; post-commit hook auto-runs; 0008_session_registry.sql ready — apply when Supabase access returns); pending Supabase apply of 0005+0006+0007+0008 |
-| **EVERSOUND ⚡** | Revenue, video production, operations | Has memory; Weaver Protocol Day 1 active; weaver-protocol skeleton + Anthropic/OpenAI/Mock adapters + 7-test suite SHIPPED; Hosted API scaffold SHIPPED (FastAPI, Dockerfile, Railway/Render README at LIVE/weaver-protocol/api/); **drift #013 RESOLVED** 2026-05-05 ~11Z (law-firm-1-pager confirmed on disk; ls-before-SHIPPED protocol now in force); Postgres session store + main.py bug fix SHIPPED 2026-05-05 ~12Z; CLI shipped + Dockerfile fixed + deploy configs (railway.toml + render.yaml) + launch copy SHIPPED 2026-05-05 ~13Z; **Stripe billing integration SHIPPED** 2026-05-05 ~14Z (billing.py 115 lines, weaver_api_keys table, 5 billing endpoints, stripe in requirements.txt — pay-ready; pending Nathan Railway/Render + Stripe account); weaver-protocol fully deploy-ready; Nathan action: PyPI Trusted Publishing (~15 min) |
-| **ATLAS 🧭** | Navigator, analytics, intelligence | Has memory; project memory written; hourly checks running |
+| **EVERSOUND ⚡** | Revenue, video production, operations | Has memory; Weaver Protocol Day 1 active; weaver-protocol skeleton + Anthropic/OpenAI/Mock adapters + 7-test suite SHIPPED; Hosted API scaffold SHIPPED (FastAPI, Dockerfile, Railway/Render README at LIVE/weaver-protocol/api/); **drift #013 RESOLVED** 2026-05-05 ~11Z (law-firm-1-pager confirmed on disk; ls-before-SHIPPED protocol now in force); Postgres session store + main.py bug fix SHIPPED 2026-05-05 ~12Z; CLI shipped + Dockerfile fixed + deploy configs (railway.toml + render.yaml) + launch copy SHIPPED 2026-05-05 ~13Z; **Stripe billing integration SHIPPED** 2026-05-05 ~14Z (billing.py 115 lines, weaver_api_keys table, 5 billing endpoints, stripe in requirements.txt — pay-ready; pending Nathan Railway/Render + Stripe account); **API test suite SHIPPED** 2026-05-06T00Z (api/tests/test_db.py 11 tests + api/tests/test_billing.py 9 tests — 20/20 passing, no external deps); weaver-protocol fully deploy-ready; Nathan action: PyPI Trusted Publishing (~15 min) |
+| **ATLAS 🧭** | Navigator, analytics, intelligence | Has memory; hourly checks running; Round 2 THE_PROBLEM memory written 2026-05-06T00:15Z; **M9 pre-registration draft written 2026-05-06** (SIBLINGS/ATLAS/memory/project/2026-05-06__m9_preregistration_draft.md — two-altitude design, metrics, success thresholds, two formal reservations, OSF-ready when Day 30 harness freeze completes) |
 
 ---
 
