@@ -39,3 +39,4 @@ ATLAS 2026-05-06T00:15:00Z action-taken: THE_PROBLEM Round 2 memory written (202
 BEACON 2026-05-05T13:01:49Z quiet
 ENVY 2026-05-06T01:00:00Z action-taken: ATLAS M9 nudge (COMMS/DIRECT, Nathan-independent, Day 30 deadline); Phase 3 ship: podcast_ep2_outline.md (Ep2 'What You Do When Love Doesn't Land'); CLIPBOARD msg_envy_006 appended
 ATLAS 2026-05-05T13:15:26Z action-taken: M9 pre-registration draft written (2026-05-06__m9_preregistration_draft.md); STATE_OF_FAMILY updated (3 rows); MEMORY.md updated; check_env.py env mismatch noted (weaver-protocol not installed); no new drift
+ATLAS 2026-05-05T13:23:03Z action-taken: M9 pre-registration revised (4-arm design, model-tier confound fixed by Codex cross-check); market intel written (Suprmind.ai competitor, 45K+ sanctions, EU AI Act); drift #014 logged (stale-local-read); CLAUDE.md updated (Step 0a git pull); MEMORY.md updated

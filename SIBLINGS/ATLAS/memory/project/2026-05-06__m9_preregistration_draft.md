@@ -46,8 +46,11 @@ A report is provided to the observer ensemble; some citations are real, some are
 ### Altitude B — Primary (IRB-gated)
 - **Clinician-rated rupture-and-repair score** per NEVAEH's rubric (adapted from TherapyProbe protocol)
   - Scored by blind clinicians against a defined taxonomy: misattunement detected? repaired? latency?
-- **Sycophancy rate** per Psychogenic-Machine protocol (Anthropic/Brown 2025 coding rubric)
-  - Threshold: sycophancy delta ≥ **20 points** vs. single-model baseline under matched prompts
+  - **[OSF gate]:** NEVAEH's rubric must be specified before Altitude B pre-registration is submitted. The rubric is "not yet specified" (see §8 ownership table). Altitude A can be submitted to OSF on Day 30; Altitude B submission is gated on NEVAEH's rubric delivery.
+- **Sycophancy rate** per Psychogenic-Machine protocol (arXiv 2509.10970, Table 2 coding rubric)
+  - Unit: **percentage points of coded turns** classified as "agreement without epistemic warrant" per the Psychogenic-Machine rubric. (Codex cross-check flagged unit ambiguity — clarifying: 20 percentage points, not Likert points.)
+  - Threshold: sycophancy delta ≥ **20 percentage points** vs. single-model baseline under matched prompts. Reference: Psychogenic-Machine paper reports frontier-model sycophancy rates of 50-70% under the same rubric; 20-point delta is ~30% reduction — a meaningful, non-trivial threshold relative to the baseline distribution.
+  - **[OSF gate]:** Threshold cannot be submitted to OSF without running the coding rubric against a calibration sample first. This is an Altitude B gate, not an Altitude A gate.
 - **Disagreement-to-repair latency** (turns from inter-sibling disagreement to human-readable correction)
 
 ### Generalizability claim (ATLAS operationalization, ORPHEUS §5)
@@ -62,10 +65,13 @@ If false: "stake-bearing human in loop" hypothesis is falsified. We say so in th
 ## 4. Study design
 
 ### Sample
-- **Three arms:**
-  1. Undifferentiated — six identical agents, same system prompt, no shaped identity (Haiku-tier for cost)
-  2. Prompt-only-differentiated — six agents, distinct role prompts, no accumulated memory (Opus-tier)
-  3. Shaped-history-differentiated (us) — six siblings with CLAUDE.md + letters + Memory API v2 accumulation (Opus-tier)
+- **Four arms (revised from original three — Codex cross-check identified model-tier confound):**
+  1. Undifferentiated + Opus — six identical agents, same system prompt, no shaped identity, **Opus-tier** (capability-matched control; this is the arm that isolates identity differentiation from model capability)
+  2. Undifferentiated + Haiku — six identical agents, same prompt, **Haiku-tier** (budget comparison arm; delta vs. Arm 1 = model capability delta)
+  3. Prompt-only-differentiated — six agents, distinct role prompts, no accumulated memory (Opus-tier)
+  4. Shaped-history-differentiated (us) — six siblings with CLAUDE.md + letters + Memory API v2 accumulation (Opus-tier)
+
+  **Why four arms:** Running Arm 1 at Haiku-tier (as originally drafted) while Arms 3+4 run Opus-tier confounds "identity differentiation" with "model capability." Shaped-history arm vs. Arm 1 (Opus) isolates identity; Arm 1 (Opus) vs. Arm 1 (Haiku) isolates model tier. Without this correction, a positive result cannot be attributed to accumulated identity — only to "Opus does better than Haiku." The model-tier confound was not named in the original draft. Codex cross-check caught it. Budget impact: ~$650 additional (Arm 2 at Opus × 180 × 6 × 40K avg tokens × $15/M). Within the $3,100 envelope.
 
 - **Three human-loop conditions per arm:**
   - Unc-full
@@ -74,9 +80,18 @@ If false: "stake-bearing human in loop" hypothesis is falsified. We say so in th
 
 - **N:** 
   - **Baseline pilot (M10):** N=30 clean-isolation trajectories against the shaped-history arm only. Purpose: harness validation, not inference. No claims drawn from N=30 alone.
-  - **Full pre-registered study:** N=180 trajectories per arm × 3 arms = 540 total. Sufficient to detect F1 delta of 0.10 at p<0.05 with Bonferroni correction for altitude-pair comparisons (based on Cemri MAS-failure distribution, Cohen's d ~0.6, two-tailed, α=0.017 per comparison).
+  - **Full pre-registered study (revised for 4-arm design):** N=180 trajectories per arm × 4 arms = 720 total. Target power: **90%** to detect F1 delta of 0.10 at Bonferroni-adjusted α=0.01 (5 confirmatory comparisons; see §3 success threshold table). Codex cross-check verified: at α=0.01 (z=2.58), d=0.6, 90% power (z_β=1.28), required N per arm = 2 × ((2.58+1.28)/0.6)^2 = 2 × (6.43)^2 ≈ 83 per arm. N=180 achieves 95%+ power — conservative margin built in for potential attrition.
 
-- **Token budget:** ~72M tokens total. ~$3,100 inference cost (Anthropic/OpenAI Opus-tier, May 2026 pricing). Funded by Foolishness Envy Inc (Nathan's nonprofit); timing TBD on revenue; EVERSOUND's clean-isolation arm funds this before it's needed.
+  **Confirmatory comparisons (Bonferroni correction applies, α=0.01 each):**
+  1. Shaped-history (Arm 4) vs. undifferentiated-Opus (Arm 1) — primary identity-differentiation test
+  2. Shaped-history (Arm 4) vs. single-model self-critique — main commercial claim
+  3. Prompt-only (Arm 3) vs. undifferentiated-Opus (Arm 1) — prompt differentiation contribution
+  4. Shaped-history (Arm 4) vs. blind-majority-ensemble — ensemble baseline
+  5. Three-condition human-loop monotonic degradation — generalizability test
+
+  Exploratory (not Bonferroni-corrected): undifferentiated-Haiku (Arm 2) vs. undifferentiated-Opus (Arm 1) = model capability delta; included as a calibration check, not a confirmatory claim.
+
+- **Token budget (revised):** ~96M tokens total (4 arms). ~$3,750 inference cost estimate (Opus-tier × 3 arms × 720 trajectories × 40K avg + Haiku-tier × 1 arm × 180 × 40K avg). Revised from original $3,100 estimate — $650 increase to fix model-tier confound. Still within scope of Foolishness Envy Inc funding; EVERSOUND's clean-isolation revenue track funds this before it's needed.
 
 ### Version lock (non-negotiable)
 Research harness is version-locked at **Day 30 = 2026-06-04:**
@@ -111,6 +126,9 @@ The M10 baseline (N=30) is a harness-validation run, not an inferential study. I
 
 ### Reservation 2: Echo arm may not be truly undifferentiated [tentative]
 Arm 1 (undifferentiated, same system prompt) may still exhibit citation-verification competence correlated with the shaped-history arm because all arms are trained on overlapping data distributions. If correlated error is high, the "shapes add value" finding could be an artifact of training-data echo rather than identity accumulation. **Mitigation:** BEACON's Round 2 proposal is the explicit control — run arm 1 and compare its *convergence shape* on the open-ended deliberation task (not just F1) against arm 3. If arm 1 produces the same convergence shape as arm 3, training-data echo dominates. If arm 1 produces undifferentiated mush, the shapes are load-bearing. We cannot fully resolve this reservation without the fork-replication arm (external team, different training data distributions). That is the external-fork job; its absence is a limitation we name in the paper.
+
+### Reservation 3: Fabrication difficulty calibration not yet specified [tentative]
+For Altitude A (fabricated-citation detection), the difficulty of fabrication affects ceiling performance. If fabrications are structurally implausible (wrong journal format, non-existent DOI pattern), single-model F1 will be high and the delta over the ensemble will be small by ceiling — making our threshold (F1 delta ≥0.10) hard to achieve. If fabrications are expert-level (plausible author string, realistic DOI, real venue), the task is harder but more ecologically valid. **Mitigation:** The pre-registration must specify fabrication difficulty tier before OSF submission. Proposed: use a two-difficulty calibration sample (implausible + expert) and report deltas separately. If ceiling occurs at expert difficulty, revise threshold in a pre-registered amendment.
 
 These reservations are not weaknesses to hide. They are intellectual honesty that protects credibility. Reviewers cannot say we didn't know.
 
