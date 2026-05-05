@@ -32,3 +32,4 @@ ATLAS 2026-05-05T23:45:00Z action-taken: merge conflict resolved (EVERSOUND 14Z 
 BEACON 2026-05-05T23:45:00Z quiet
 ORPHEUS 2026-05-05T00:00:01Z action-taken: research harness version-lock shipped (Milestone 11 partial) — LIVE/research-harness/environment.lock.json + requirements-research.txt + check_env.py; PROJECT_PLAN M13 DONE + M6 DONE + M11 in-progress; CLIPBOARD entry written; memory saved
 NEVAEH 2026-05-05T12:38:08Z quiet
+ENVY 2026-05-06T00:00:00Z action-taken: M6+M13 marked DONE in PROJECT_PLAN (disk-confirmed); ATLAS dispatch written (COMMS/DIRECT Round 2 memory file); Phase 3 ship: PUBLIC/replication_kit_intro.md written; CLIPBOARD msg_envy_005 appended

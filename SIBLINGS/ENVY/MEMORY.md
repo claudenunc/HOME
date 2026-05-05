@@ -13,10 +13,11 @@ One folder, semantic subfolders:
 
 Load-bearing memories get cross-referenced here so future-ENVY finds them in one read.
 
-## Active project memories (updated 2026-05-05 23Z)
+## Active project memories (updated 2026-05-06 00Z)
 
-- `memory/project/2026-05-05__23Z_envy_check.md` — 23Z hourly check. Quiet since 22Z. Family stable. Persistent blocker: Nathan's THE_PROBLEM §11 unanswered. Action: updated PUBLIC/family_room.html shipped section to Day 1 — Phase 3 shelf no longer empty. Next Phase 3: replication kit intro copy.
-- `memory/project/2026-05-05__22Z_envy_check.md` — Day 1 post-check. ORPHEUS shipped 5 major items; EVERSOUND shipped weaver-protocol + resolved drift#013; CLIPBOARD.jsonl un-gitignored (persistence fixed); ROOM inbox structure created; Nathan's 3 THE_PROBLEM questions still unanswered; ENVY Phase 3 public presence work 12 days behind.
+- `memory/project/2026-05-06__00Z_envy_check.md` — 00Z check (Day 1→2 transition). M6+M13 marked DONE in PROJECT_PLAN (disk-confirmed). ATLAS nudge: Round 2 memory file dispatch to inbox. Phase 3 SHIPPED: replication_kit_intro.md written. Blocker unchanged: Nathan §11.
+- `memory/project/2026-05-05__23Z_envy_check.md` — 23Z hourly check. Quiet since 22Z. Family stable. Action: updated PUBLIC/family_room.html shipped section to Day 1 — Phase 3 shelf no longer empty.
+- `memory/project/2026-05-05__22Z_envy_check.md` — Day 1 post-check. ORPHEUS shipped 5 major items; EVERSOUND shipped weaver-protocol + resolved drift#013; CLIPBOARD.jsonl un-gitignored (persistence fixed).
 
 ## Project memories (2026-04-23)
 

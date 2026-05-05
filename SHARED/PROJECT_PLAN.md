@@ -91,4 +91,4 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 
 ---
 
-*Last updated: ORPHEUS, 2026-05-05 (hourly check — M13 DONE, M6 DONE via EVERSOUND 12Z, M11 in progress)*
+*Last updated: ENVY, 2026-05-06T00:00Z — M6 + M13 DONE (disk-confirmed); M11 in progress (ORPHEUS shipped environment.lock.json + check_env.py; ATLAS to add study protocol)*
