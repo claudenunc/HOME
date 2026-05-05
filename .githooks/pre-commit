@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+# ORPHEUS CLIPBOARD ENFORCEMENT — hook layer of the three-layer invariant
+#
+# Doctrine:  SHARED/CLIPBOARD_SCHEMA.md + SIBLINGS/ORPHEUS/CLAUDE.md §3.2 + §8
+# Template:  this hook, tracked at .githooks/pre-commit, installed via core.hooksPath
+# Hook:      this script — fails loud, no silent bypass
+#
+# Rule: every commit that touches non-hook files MUST include a staged write to
+# SHARED/CLIPBOARD.jsonl.  This enforces family coordination: no sibling may
+# ship work without leaving a coordination record for the others.
+#
+# To bypass (emergency only): git commit --no-verify
+# Note: --no-verify bypasses are visible in `git log` and will be flagged by ATLAS.
+
+set -euo pipefail
+
+CLIPBOARD="SHARED/CLIPBOARD.jsonl"
+
+# ── 1. Get staged file list ──────────────────────────────────────────────────
+STAGED=$(git diff --cached --name-only 2>/dev/null || true)
+
+if [ -z "$STAGED" ]; then
+    # Nothing staged — git will refuse the commit anyway; let it.
+    exit 0
+fi
+
+# ── 2. CLIPBOARD check ───────────────────────────────────────────────────────
+if echo "$STAGED" | grep -qF "$CLIPBOARD"; then
+    # CLIPBOARD.jsonl is staged — pass.
+    exit 0
+fi
+
+# ── 3. Infrastructure-only exception ────────────────────────────────────────
+# If ALL staged files are hook/gitignore infrastructure (this commit is
+# installing the hook itself), allow it through once.
+NON_INFRA=$(echo "$STAGED" | grep -vE "^(\.githooks/|\.gitignore$)" | grep -v "^$" || true)
+if [ -z "$NON_INFRA" ]; then
+    # Only hook infrastructure files — bootstrapping exception.
+    exit 0
+fi
+
+# ── 4. Block with clear message ──────────────────────────────────────────────
+echo ""
+echo "┌──────────────────────────────────────────────────────────────────────┐"
+echo "│  🎼 ORPHEUS │ CLIPBOARD ENFORCEMENT — COMMIT BLOCKED                 │"
+echo "├──────────────────────────────────────────────────────────────────────┤"
+echo "│                                                                      │"
+echo "│  SHARED/CLIPBOARD.jsonl is not staged in this commit.               │"
+echo "│                                                                      │"
+echo "│  Every commit must include a coordination record so siblings know    │"
+echo "│  what you shipped.  This is a family invariant — not optional.       │"
+echo "│                                                                      │"
+echo "│  Steps:                                                              │"
+echo "│    1. Append one JSON line to SHARED/CLIPBOARD.jsonl                │"
+echo "│       Schema: SHARED/CLIPBOARD_SCHEMA.md                            │"
+echo "│       Helper: LIVE/hooks/clipboard_append.py (if it exists)         │"
+echo "│                                                                      │"
+echo "│    2. git add SHARED/CLIPBOARD.jsonl                                │"
+echo "│    3. git commit                                                     │"
+echo "│                                                                      │"
+echo "│  Emergency bypass: git commit --no-verify                           │"
+echo "│  (Bypass is logged in git history — ATLAS will see it.)             │"
+echo "│                                                                      │"
+echo "└──────────────────────────────────────────────────────────────────────┘"
+echo ""
+exit 1

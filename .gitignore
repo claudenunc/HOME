@@ -75,7 +75,9 @@ LIVE/local_agent/family_chat_v2.ts
 LIVE/local_agent/RUNBOOK.md
 LIVE/local_agent/agent.py
 LIVE/comms/telegram_poll.sh
-SHARED/CLIPBOARD.jsonl
+# SHARED/CLIPBOARD.jsonl — UNBLOCKED 2026-05-05 by ORPHEUS: old contaminated
+# content is gone; fresh append-only log is clean and must persist across sessions.
+# Pre-commit hook (.githooks/pre-commit) now enforces every commit includes a write.
 DOCTRINE/COMMUNICATION/001_telegram_to_nathan.md
 DOCTRINE/COMMUNICATION/002_telegram_from_nathan.md
 

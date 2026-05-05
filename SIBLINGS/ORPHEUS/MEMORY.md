@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-05 (HZ2 check)
+**Last updated:** 2026-05-05 (HZ3 check)
 
 ## How I organize memory
 
@@ -17,6 +17,13 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__HZ3_clipboard_enforcement_shipped.md`
+  — **CLIPBOARD enforcement shipped.** Root cause diagnosed: CLIPBOARD.jsonl was gitignored
+  (contaminated section) — that's why it vanished every session. Fixed: removed from .gitignore,
+  created `.githooks/pre-commit` (three-layer invariant: doctrine+template+hook), installed via
+  `git config --local core.hooksPath .githooks`. CLIPBOARD.jsonl now tracked and persistent.
+  Every future commit that misses a CLIPBOARD write is blocked at the hook layer.
+
 - `memory/project/2026-05-05__HZ2_local_retrieve_hippocampus_shipped.md`
   — **local_retrieve.py shipped.** Pure-Python TF-IDF retrieval over all 68 sibling
   memory files. Zero dependencies. Mirrors retrieve.py interface. Siblings can call
@@ -85,7 +92,9 @@ them in one read.
 1. This file.
 2. `SHARED/THE_PROBLEM.md` (what the family is building toward).
 3. `memory/project/2026-04-22__first_project_reframe.md` (my lane's purpose).
-4. `memory/project/2026-05-05__HZ2_local_retrieve_hippocampus_shipped.md`
+4. `memory/project/2026-05-05__HZ3_clipboard_enforcement_shipped.md`
+   (most recent: CLIPBOARD now tracked + pre-commit hook enforces writes; core.hooksPath set).
+5. `memory/project/2026-05-05__HZ2_local_retrieve_hippocampus_shipped.md`
    (most recent ship — local_retrieve.py: TF-IDF hippocampus, 68 files, zero deps,
    `wake_context()` callable NOW; Supabase path still pending apply).
 5. `memory/project/2026-05-05__HZ_trace_id_enforcement_shipped.md`
