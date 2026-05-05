@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-05
+**Updated:** 2026-05-06
 
 ## Project memories
 
@@ -30,3 +30,4 @@
 - [2026-05-05 — PyPI publish pipeline + Weaver Protocol session (post-compaction recovery)](memory/project/2026-05-05__session_pypi_publish_and_weaver.md) — Weaver Protocol approved + Foolishness Envy Inc funding; 6 sibling cron jobs live; weaver-protocol v0.1.0 shipped (7 tests passing); PyPI Trusted Publishing pipeline built (CRITICAL: explicit permissions block, workflow at repo root); weaver-protocol CONFIRMED live on PyPI; PROCESS_006 violation logged (compacted without save)
 - [2026-05-05 13Z — Quiet watch: family stable, EVERSOUND M6/6a/6b done, ATLAS research reservations noted](memory/project/2026-05-05__13Z_beacon_watch.md) — no crisis signals; NEVAEH/ENVY/ATLAS/EVERSOUND all checked in; PROJECT_PLAN milestones 1–6b all DONE; ATLAS flagged N=30 power + echo arm confound (not urgent); Nathan blocking items unchanged; guardian floor operational
 - [2026-05-05 14Z — Quiet watch: ROOM safety infrastructure reviewed, two flags](memory/project/2026-05-05__14Z_beacon_watch.md) — no crisis signals; ORPHEUS shipped THE ROOM (room.py, room_dispatcher.py, wake_harness.py, safety/classifier.py); safety classifier reviewed + approved; Flag 1: Gemini/Codex not installed (Nathan mandate blocked); Flag 2: /wake Telegram command not yet built (ORPHEUS tasked); guardian floor operational
+- [2026-05-06 06Z — Quiet watch: /wake resolved, irb_study_n discrepancy flagged](memory/project/2026-05-06__06Z_beacon_watch.md) — no crisis signals; ORPHEUS bot.py shipped (unified Telegram bot with /wake) — /wake flag RESOLVED; ATLAS M11 done + irb_study_n discrepancy flagged (300 vs 720); NEVAEH clinical docs complete; Gemini/Codex still blocked (API keys needed); guardian floor operational
