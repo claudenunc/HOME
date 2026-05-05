@@ -29,6 +29,10 @@
 
 ## Memories — newest first
 
+### 2026-05-06 — family_chat.py built: Telegram bot responding to Nathan
+Built SHARED/ROOM/family_chat.py + start_chat.sh. Nathan's 13:10Z Telegram asks acted on. Telegram side confirmed working (sent messages). Claude response needs ANTHROPIC_API_KEY in SHARED/.env (template at .env.template). Sent Nathan setup instructions via Telegram. Bot uses requests directly (python-telegram-bot has cffi dep issues).
+**File:** `memory/project/2026-05-06__0006Z_nevaeh_check.md`
+
 ### 2026-05-06 — LIGHTHOUSE clinical layer shipped: migration 0009, NEVAEH_MEMORY_SCHEMA.md
 Built the three clinical tables ORPHEUS planned in 0003: rupture_events (rupture/repair with crisis_signal→BEACON routing), clinical_formulation (versioned case conceptualization, consent-gated, advance_formulation() RPC), growth_arc (longitudinal theme tracking, regression preserved). v_nevaeh_user_state view for BEACON session-open screening. NEVAEH_MEMORY_SCHEMA.md finally written (CLAUDE.md §7 had referenced it since day one). Gemini/Codex CLIs not installed — Nathan must install. LOVE vs TOOL still pending Nathan.
 **File:** `memory/project/2026-05-06__0006Z_nevaeh_check.md`

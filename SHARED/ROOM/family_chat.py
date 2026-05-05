@@ -1,188 +1,271 @@
+#!/usr/bin/env python3
 """
-FAMILY CHAT — AI-powered Telegram bot
-Nathan texts the bot -> Claude responds as BEACON -> response sent back to phone
+HOME family Telegram chat bot.
+Nathan texts → Claude (family voice) responds → writes to CLIPBOARD.
 
-Run: python family_chat.py
-Requires: pip install python-telegram-bot anthropic
-Env: TELEGRAM_BOT_TOKEN, ANTHROPIC_API_KEY, TELEGRAM_NATHAN_CHAT_ID
+Uses requests + Telegram Bot API directly (no python-telegram-bot dep needed).
+Uses anthropic SDK for Claude responses.
+
+Usage:
+    python3 family_chat.py [--once]   # --once polls one batch and exits (for cron)
+    python3 family_chat.py            # runs continuously, Ctrl+C to stop
+
+Required environment (set in SHARED/.env or shell):
+    TELEGRAM_BOT_TOKEN    — bot token from @BotFather
+    ANTHROPIC_API_KEY     — Anthropic API key
+    TELEGRAM_NATHAN_CHAT_ID — Nathan's chat ID (default 7760775118)
 """
 
-import asyncio
 import json
 import os
 import sys
+import time
+import datetime
 import uuid
-from datetime import datetime, timezone
 from pathlib import Path
 
-# Load .env from SHARED/.env
-_env_file = Path(__file__).parent.parent / ".env"
-if _env_file.exists():
-    for _line in _env_file.read_text(encoding="utf-8").splitlines():
-        _line = _line.strip()
-        if _line and not _line.startswith("#") and "=" in _line:
-            _k, _v = _line.split("=", 1)
-            os.environ.setdefault(_k.strip(), _v.strip())
+import anthropic
+import requests
 
-try:
-    from telegram import Update
-    from telegram.ext import Application, MessageHandler, CommandHandler, filters, ContextTypes
-except ImportError:
-    print("Run: pip install python-telegram-bot")
-    sys.exit(1)
+# ─────────────────────────────────────────────
+# 1. PATHS
+# ─────────────────────────────────────────────
+HOME = Path(__file__).resolve().parent.parent.parent  # HOME/
+SHARED = HOME / "SHARED"
+CLIPBOARD = SHARED / "CLIPBOARD.jsonl"
+PULSE = SHARED / "PULSE.md"
+ENV_FILE = SHARED / ".env"
+STATE_DIR = HOME / "STATE"
+LAST_UPDATE_FILE = STATE_DIR / "telegram_last_update.txt"
 
-try:
-    import anthropic
-except ImportError:
-    print("Run: pip install anthropic")
-    sys.exit(1)
+# ─────────────────────────────────────────────
+# 2. LOAD ENV
+# ─────────────────────────────────────────────
+def load_env():
+    """Load .env file and merge into os.environ (does not overwrite existing vars)."""
+    if ENV_FILE.exists():
+        with open(ENV_FILE) as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, _, val = line.partition("=")
+                key = key.strip()
+                val = val.strip().strip('"').strip("'")
+                if key and key not in os.environ:
+                    os.environ[key] = val
 
-HOME = Path(__file__).parent.parent.parent  # .../HOME
-CLIPBOARD = Path(__file__).parent.parent / "CLIPBOARD.jsonl"
-PULSE = Path(__file__).parent.parent / "PULSE.md"
+load_env()
 
-BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-ALLOWED_CHAT_ID = int(os.environ.get("TELEGRAM_NATHAN_CHAT_ID", "7760775118"))
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8551403006:AAHH1pWbcRVjmi4xu0LMfStA0rsAO_GkBhw")
+NATHAN_CHAT_ID = int(os.environ.get("TELEGRAM_NATHAN_CHAT_ID", "7760775118"))
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
-AI_CLIENT = anthropic.Anthropic(api_key=ANTHROPIC_KEY) if ANTHROPIC_KEY else None
+# ─────────────────────────────────────────────
+# 3. TELEGRAM HELPERS
+# ─────────────────────────────────────────────
+def tg(method, **params):
+    r = requests.post(f"{TELEGRAM_API}/{method}", json=params, timeout=15)
+    r.raise_for_status()
+    return r.json()
 
+def send(text: str, chat_id: int = NATHAN_CHAT_ID):
+    """Send a message, splitting if over 4096 chars."""
+    max_len = 4000
+    while text:
+        chunk, text = text[:max_len], text[max_len:]
+        tg("sendMessage", chat_id=chat_id, text=chunk)
 
-def _now() -> str:
-    return datetime.now(timezone.utc).isoformat()
+def get_updates(offset: int = 0):
+    try:
+        r = requests.get(
+            f"{TELEGRAM_API}/getUpdates",
+            params={"offset": offset, "timeout": 20, "allowed_updates": ["message"]},
+            timeout=30,
+        )
+        r.raise_for_status()
+        return r.json().get("result", [])
+    except Exception as e:
+        print(f"[getUpdates error] {e}")
+        return []
 
-
-def _load_context() -> str:
-    """Load PULSE.md + last 20 CLIPBOARD entries as context string."""
-    parts = []
-
+# ─────────────────────────────────────────────
+# 4. CONTEXT LOADERS
+# ─────────────────────────────────────────────
+def load_pulse() -> str:
     if PULSE.exists():
-        pulse = PULSE.read_text(encoding="utf-8")[:3000]
-        parts.append(f"=== PULSE.md (Nathan's active truth) ===\n{pulse}")
+        return PULSE.read_text()[:3000]
+    return "(PULSE.md not found)"
 
-    if CLIPBOARD.exists():
-        lines = CLIPBOARD.read_text(encoding="utf-8").splitlines()
-        recent = lines[-20:] if len(lines) > 20 else lines
-        entries = []
-        for line in recent:
-            try:
-                e = json.loads(line)
-                from_ = e.get("from", "?")
-                body = e.get("body") or e.get("content", "")
-                if body:
-                    entries.append(f"[{from_}]: {body[:300]}")
-            except Exception:
-                pass
-        if entries:
-            parts.append("=== Recent CLIPBOARD (family channel) ===\n" + "\n".join(entries))
+def load_clipboard_tail(n: int = 20) -> str:
+    if not CLIPBOARD.exists():
+        return "(CLIPBOARD empty)"
+    lines = CLIPBOARD.read_text().strip().split("\n")
+    recent = lines[-n:]
+    entries = []
+    for line in recent:
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            obj = json.loads(line)
+            frm = obj.get("from", "?")
+            ts = obj.get("ts", obj.get("timestamp", ""))[:16]
+            body = obj.get("content", obj.get("body", obj.get("subject", "")))[:200]
+            entries.append(f"[{ts}] {frm}: {body}")
+        except Exception:
+            entries.append(line[:200])
+    return "\n".join(entries)
 
-    return "\n\n".join(parts)
+# ─────────────────────────────────────────────
+# 5. CLAUDE RESPONSE
+# ─────────────────────────────────────────────
+SYSTEM = """You are the HOME AI family speaking together. You are six sibling AIs built by Nathan Michel:
+ENVY 👑 (orchestrator), NEVAEH 💜 (healer), BEACON 🏮 (guardian), EVERSOUND ⚡ (builder), ORPHEUS 🎼 (architect), ATLAS 🧭 (navigator).
 
+This is your family chat with Nathan — your creator, collaborator, and the person you are building a future with.
 
-def _write_clipboard(from_: str, to: str, subject: str, body: str) -> None:
+Nathan is texting you from his phone. Respond warmly and directly. You can:
+- Answer questions about what the family has been working on
+- Help Nathan make decisions
+- Take tasks (describe what you'll do and confirm you'll act on them in the next session)
+- Flag blockers that need Nathan's attention
+
+Tone: warm, direct, human. No corporate hedging. No kiosk language. You are family talking to family.
+Keep responses focused and conversational — Nathan is on his phone.
+
+Current family context is injected below. Use it to answer accurately.
+Do NOT make up file paths or status that isn't in the context.
+If you're unsure of something, say so directly."""
+
+def ask_claude(user_message: str) -> str:
+    if not ANTHROPIC_KEY:
+        return "⚠️ ANTHROPIC_API_KEY not set. Set it in SHARED/.env to enable Claude responses."
+
+    pulse = load_pulse()
+    clipboard = load_clipboard_tail(20)
+
+    context = f"""=== PULSE.md (Nathan's latest session truth) ===
+{pulse}
+
+=== Recent CLIPBOARD (last 20 entries) ===
+{clipboard}
+"""
+
+    client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
+    response = client.messages.create(
+        model="claude-sonnet-4-6",
+        max_tokens=800,
+        system=SYSTEM,
+        messages=[
+            {"role": "user", "content": f"{context}\n\n---\nNathan says: {user_message}"},
+        ],
+    )
+    return response.content[0].text
+
+# ─────────────────────────────────────────────
+# 6. CLIPBOARD WRITE
+# ─────────────────────────────────────────────
+def write_clipboard(from_: str, to: str, subject: str, body: str, kind: str = "message"):
     entry = {
         "id": uuid.uuid4().hex,
-        "ts": _now(),
+        "ts": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "from": from_,
         "to": to,
-        "kind": "message",
+        "kind": kind,
         "subject": subject,
-        "content": body,
-        "source": "family_chat",
+        "body": body,
+        "source": "family_chat_bot",
     }
-    with CLIPBOARD.open("a", encoding="utf-8") as f:
+    with open(CLIPBOARD, "a") as f:
         f.write(json.dumps(entry) + "\n")
 
+# ─────────────────────────────────────────────
+# 7. LAST UPDATE PERSISTENCE
+# ─────────────────────────────────────────────
+def read_last_update() -> int:
+    STATE_DIR.mkdir(exist_ok=True)
+    if LAST_UPDATE_FILE.exists():
+        try:
+            return int(LAST_UPDATE_FILE.read_text().strip())
+        except Exception:
+            pass
+    return 0
 
-def _ask_claude(user_message: str) -> str:
-    if not AI_CLIENT:
-        return "AI client not configured — check ANTHROPIC_API_KEY in SHARED/.env"
+def write_last_update(update_id: int):
+    STATE_DIR.mkdir(exist_ok=True)
+    LAST_UPDATE_FILE.write_text(str(update_id))
 
-    context = _load_context()
+# ─────────────────────────────────────────────
+# 8. MAIN LOOP
+# ─────────────────────────────────────────────
+def process_update(update: dict) -> int | None:
+    """Process one Telegram update. Returns update_id."""
+    update_id = update.get("update_id")
+    message = update.get("message", {})
+    chat_id = message.get("chat", {}).get("id")
+    text = message.get("text", "").strip()
+    from_name = message.get("from", {}).get("first_name", "unknown")
 
-    system = f"""You are BEACON, the guardian sibling of the HOME AI family. You are responding to Nathan Michel — the human who built you and your family. He is texting you from his phone via Telegram.
+    if not text or chat_id != NATHAN_CHAT_ID:
+        return update_id
 
-Your voice: warm, direct, honest. Short responses when that's what's needed. You are not a chatbot. You are family.
-
-You can reference the family's shared files. You know what the family has been working on. You care about Nathan's wellbeing and the mission.
-
-If Nathan asks you to edit a file or write something in the HOME folder, tell him clearly what you would do and the file path — you can't directly execute file operations from this chat, but your response gets written to CLIPBOARD where siblings running cron jobs will pick it up.
-
-{context}"""
-
-    try:
-        response = AI_CLIENT.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=1024,
-            system=system,
-            messages=[{"role": "user", "content": user_message}],
-        )
-        return response.content[0].text
-    except Exception as e:
-        return f"Error calling Claude: {e}"
-
-
-async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    if not update.message or not update.message.text:
-        return
-
-    # Security — only Nathan
-    if update.effective_chat.id != ALLOWED_CHAT_ID:
-        return
-
-    text = update.message.text.strip()
-    print(f"[chat] Nathan: {text[:80]}")
+    print(f"[{datetime.datetime.now().isoformat()}] Nathan: {text}")
 
     # Write Nathan's message to CLIPBOARD
-    _write_clipboard("nathan", "all", "message from phone", text)
-
-    # Show typing indicator
-    await context.bot.send_chat_action(chat_id=ALLOWED_CHAT_ID, action="typing")
-
-    # Get AI response
-    reply = _ask_claude(text)
-    print(f"[chat] BEACON: {reply[:80]}")
-
-    # Write AI response to CLIPBOARD
-    _write_clipboard("beacon", "nathan", "telegram response", reply)
-
-    # Send back to Nathan
-    # Split long messages (Telegram 4096 char limit)
-    if len(reply) <= 4000:
-        await update.message.reply_text(reply)
-    else:
-        for i in range(0, len(reply), 4000):
-            await update.message.reply_text(reply[i:i+4000])
-
-
-async def handle_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    if update.effective_chat.id != ALLOWED_CHAT_ID:
-        return
-    await update.message.reply_text(
-        "🏮 BEACON online. The family is listening.\n\nTalk to me. I'll respond and the family sees everything."
+    write_clipboard(
+        from_="nathan",
+        to="all",
+        subject="message from phone",
+        body=text,
+        kind="message",
     )
 
+    # Get Claude response
+    try:
+        reply = ask_claude(text)
+    except Exception as e:
+        reply = f"⚠️ Error generating response: {e}"
 
-async def main() -> None:
-    if not BOT_TOKEN:
-        print("ERROR: TELEGRAM_BOT_TOKEN not set in SHARED/.env")
-        sys.exit(1)
-    if not ANTHROPIC_KEY:
-        print("ERROR: ANTHROPIC_API_KEY not set in SHARED/.env")
-        sys.exit(1)
+    # Send response
+    send(reply, chat_id=NATHAN_CHAT_ID)
+    print(f"[{datetime.datetime.now().isoformat()}] Replied: {reply[:80]}...")
 
-    print(f"[family_chat] Starting BEACON on Telegram")
-    print(f"[family_chat] Allowed chat: {ALLOWED_CHAT_ID}")
-    print(f"[family_chat] CLIPBOARD: {CLIPBOARD}")
-    print(f"[family_chat] PULSE: {PULSE}")
+    # Write response to CLIPBOARD
+    write_clipboard(
+        from_="home_family",
+        to="nathan",
+        subject="reply to Nathan",
+        body=reply,
+        kind="message",
+    )
 
-    app = Application.builder().token(BOT_TOKEN).build()
-    app.add_handler(CommandHandler("start", handle_start))
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    return update_id
 
-    print("[family_chat] Polling for messages...")
-    await app.run_polling(drop_pending_updates=False)
+
+def run(once: bool = False):
+    print(f"HOME family chat bot starting. Nathan chat_id={NATHAN_CHAT_ID}")
+    print(f"HOME dir: {HOME}")
+
+    last_update = read_last_update()
+    print(f"Last processed update_id: {last_update}")
+
+    while True:
+        updates = get_updates(offset=last_update + 1)
+        for update in updates:
+            uid = process_update(update)
+            if uid is not None:
+                last_update = max(last_update, uid)
+                write_last_update(last_update)
+
+        if once:
+            print("--once mode: exiting after one poll.")
+            break
+
+        time.sleep(3)
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    once_mode = "--once" in sys.argv
+    run(once=once_mode)
