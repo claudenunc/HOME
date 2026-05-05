@@ -24,6 +24,8 @@
 
 - [Day 1 13Z check — 2026-05-05T13Z](memory/project/2026-05-05__13Z_eversound_check.md) — **SHIPPED: CLI** (`weaver/cli.py` — `weaver verify` + `weaver drift`; `[project.scripts]` added to pyproject.toml). **FIXED: Dockerfile critical bug** (was missing `weaver/` package + `db.py` — API was broken in Docker). **SHIPPED: `railway.toml` + `render.yaml`** (one-click deploy configs). **SHIPPED: `docs/launch-copy.md`** (tweet thread + HN post + LinkedIn). README roadmap updated. CLIPBOARD.jsonl recreated. Weaver Protocol is now fully deploy-ready — blocked only on Nathan's Railway/Render account + PyPI Trusted Publishing 5-step.
 
+- [Day 1 14Z check — 2026-05-05T14Z](memory/project/2026-05-05__14Z_eversound_check.md) — **SHIPPED: Stripe billing integration** (`api/billing.py` 115 lines — checkout session, webhook handler, key issuance/revocation). **EXTENDED: `api/db.py`** (`weaver_api_keys` table + save/validate/revoke functions, Postgres + in-memory). **EXTENDED: `api/main.py`** (5 new billing endpoints + DB-backed auth). **UPDATED: `requirements.txt`** (stripe>=8.0.0). **UPDATED: `api/README.md`** (6-step Stripe setup guide). API is now pay-ready: checkout → Stripe → webhook → `wp_...` API key auto-issued. Blocked on Nathan's Railway/Render account + Stripe account (~30 min Nathan action).
+
 ---
 
 ## What EVERSOUND owns right now
@@ -38,6 +40,7 @@
 6b. **Dockerfile fix** — ✅ DONE 2026-05-05T13Z. Critical bug: Dockerfile missing `weaver/` package + `db.py`. Fixed: now copies both. Hosted API was broken in Docker before this.
 6c. **Deploy configs** — ✅ DONE 2026-05-05T13Z. `railway.toml` + `render.yaml`. Nathan creates account → ~2 min to live service.
 6d. **Launch copy** — ✅ DONE 2026-05-05T13Z. `docs/launch-copy.md` — tweet thread (6 tweets), HN Show HN post, LinkedIn post. Ready for Nathan review.
+6e. **Stripe billing integration** — ✅ DONE 2026-05-05T14Z. `api/billing.py` — checkout session creation, webhook handler, `wp_...` API key issuance. `api/db.py` extended: `weaver_api_keys` table + save/validate/revoke. `api/main.py`: 5 billing endpoints (`/billing/checkout`, `/billing/webhook`, `/billing/tiers`, `/billing/status`, `/billing/success`, `/billing/cancel`). Auth now checks DB keys. `requirements.txt`: `stripe>=8.0.0`. README: 6-step Stripe setup guide.
 6. **First paid toolkit install** — Day 60 target (2026-07-04). Revenue track live.
 7. **CRAFT revenue** — active, $297-$1,997/project, 95-99% margin. No clients in queue.
 
@@ -79,6 +82,7 @@
 | PyPI Trusted Publishing (Nathan action) | Pre-Day 60 | 🟡 5 steps, Nathan required |
 | **Hosted API scaffold** | **Day 60** | **✅ DONE 2026-05-05T11Z** |
 | Hosted API: Postgres session store | Pre-Day 30 | ✅ DONE 2026-05-05T12Z |
+| Hosted API: Stripe billing integration | Pre-Day 60 | ✅ DONE 2026-05-05T14Z |
 | Hosted API: deploy to Railway/Render | Pre-Day 60 | 🟡 Nathan account needed (configs ✅ ready) |
 | CLI (`weaver verify` / `weaver drift`) | Pre-Day 60 | ✅ DONE 2026-05-05T13Z |
 | Launch copy (tweet / HN / LinkedIn) | Pre-Day 60 | ✅ DONE 2026-05-05T13Z |
@@ -110,4 +114,4 @@ Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: ru
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-05T13Z.*
+*Last updated by EVERSOUND hourly check, 2026-05-05T14Z.*
