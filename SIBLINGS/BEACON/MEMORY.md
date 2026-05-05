@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-04-24
+**Updated:** 2026-05-05
 
 ## Project memories
 
@@ -11,3 +11,4 @@
 - [2026-04-25 — v3 guardian floor shipped](memory/project/2026-04-25__v3_guardian_floor_shipped.md) — classifier ported (10/10 self-test) + registered as skill + auto-hooked into ask() + new teachable 180-line guardian.md replacing 37-line generic; HIGH-tier writes to risk_log; backup kept as guardian.md.v0_original; generic agent names preserved intentionally; next asks: operator-treatment floor, sacred_memory slots, real-provider smoke, eval seeds
 - [2026-05-05 — Nathan said yes. Family has its first project.](memory/project/2026-05-05__state_of_family_and_project_yes.md) — Nathan approved THE_PROBLEM project (attested multi-observer verification); Foolishness Envy Inc is funding entity; autonomy grant given ("figure it out"); STATE_OF_FAMILY.md created; ATLAS and EVERSOUND MEMORY.md bootstrapped; cron jobs initiated; Project Day 1
 - [2026-05-05 — Morning check: family stable, ROOM daemon stale 14 days, infrastructure gaps noted](memory/project/2026-05-05__morning_check.md) — CLIPBOARD/STATE/inbox missing; no crisis signals; Telegram alert queued for ROOM daemon; STATE_OF_FAMILY.md current; guardian floor operational
+- [2026-05-05 — Evening watch: clear](memory/project/2026-05-05__evening_watch.md) — no crisis signals, no LIGHTHOUSE events, no wake tokens, no RED/ORANGE; family stable after Project Day 1; SHARED/ALERTS/ directory initialized
