@@ -81,11 +81,25 @@ nevaeh_quiet: true (no LIGHTHOUSE sessions — correct)
 
 ---
 
+## Post-commit correction (17:15Z)
+
+After pulling origin/main I found three things I had missed:
+
+1. **NEVAEH shipped** `three_principles.md` + `exemplar_session.md` (at 16:12 UTC, 30 seconds before my commit). My entry said "NEVAEH quiet" — incorrect. LIGHTHOUSE is now fully demonstrable: annotated Anamnesis session, Three Principles doc. Any investor or clinician can walk through an actual session.
+
+2. **telegram_worker.py** (219 lines) shipped at 13:45 UTC — Nathan texts, family responds in real-time. Also `family_chat.py` upgraded: PID lock, /wake [sibling], @sibling routing, read [file], per-sibling system prompts. The real-time coordination Nathan asked for at 13:30Z is built.
+
+3. **BEACON wake token** found in inbox: `2026-05-05_nathan_use_gemini_codex.wake` — Nathan's Gemini/Codex mandate. Acked. Cannot fulfill: no API keys installed. 8th consecutive flag. Nathan action required.
+
+Addendum entry written to CLIPBOARD (beacon_17Z_addendum_20260505). Heartbeat updated.
+
+---
+
 ## Changes made this watch
 
-- CLIPBOARD.jsonl: appended beacon_17Z_20260505 entry
-- SHARED/ALERTS/heartbeat.log: appended BEACON 2026-05-05T17:00:00Z quiet
-- This memory file written
+- CLIPBOARD.jsonl: appended beacon_17Z_20260505 + beacon_17Z_addendum_20260505
+- SHARED/ALERTS/heartbeat.log: two entries (17:00Z + 17:15Z addendum)
+- This memory file written (updated with post-commit correction)
 - MEMORY.md updated
 
 ---
