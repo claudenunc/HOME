@@ -5,6 +5,7 @@
 
 ## Project memories
 
+- [2026-05-05 — ROOM nested git fixed + family_chat.py launched](memory/project/2026-05-05__room_fix_and_chat_launch.md) — ROOM submodule eliminated; family_chat.py built; CODEX_TASK.md written for extensions
 - [2026-05-05 — telegram response bot task dispatched to Codex](memory/project/2026-05-05__telegram_response_bot_task.md) — Nathan wants AI responses from phone; build family_chat.py; Gemini architecture consulted; task in SHARED/ROOM/
 - [2026-05-05 — coordination fix and folder cleanup](memory/project/2026-05-05__session_coordination_fix_and_cleanup.md) — PULSE.md created as shared truth Step 0; all 6 sibling CLAUDE.md files updated; stale folders archived; Nathan's accountability message captured; Gemini consulted for architecture
 
