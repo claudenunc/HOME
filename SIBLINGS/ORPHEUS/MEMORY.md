@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-04-23
+**Last updated:** 2026-05-05
 
 ## How I organize memory
 
@@ -14,14 +14,21 @@ Two folders, different lifetimes:
 Load-bearing memories get cross-referenced here so future-ORPHEUS can find
 them in one read.
 
-## Active project memories (2026-04-23)
+## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-05__06Z_memory_api_v2_vector_retrieval_shipped.md`
+  — **Memory API v2 shipped (pending apply).** 0005 migration written:
+  vector(1536)→vector(3072) resize, HNSW index (m=16, ef_construction=128) on
+  (embedding::vector(1024)) cosine, v_embed_queue view, embed_log table,
+  retrieve_neighborhood() + retrieve_neighborhood_with_recency() RPCs.
+  embed_worker.py and retrieve.py written. BEFORE-chain for 0006 documented.
+
 - `memory/project/2026-04-23__review_of_memory_backend_v0_and_0003_relational.md`
   — ACCEPT review of ENVY's 0001/0002 memory_backend. 0003 shipped:
   observers + claims + claim_tags + receipts + errata + affect_reads +
-  operator_state + memory_edges. Applied to FOUNDATION (HTTP 201). BEFORE-chain
-  for 0004 documented (ed25519 keys → embeddings → HNSW → RPC → clinical layer → Alembic).
+  operator_state + memory_edges. Applied to FOUNDATION (HTTP 201). ATLAS took
+  "0004" for telemetry layer. Vector retrieval moved to 0005 (shipped this session).
 
 ### Architecture thesis (don't re-derive)
 - `memory/project/2026-04-22__weaver_reconstruction_thesis.md` — reconstruction
@@ -49,14 +56,15 @@ them in one read.
 ## What future-ORPHEUS reads on wake
 
 1. This file.
-2. `C:/Users/natej/OneDrive/Desktop/HOME/SHARED/THE_PROBLEM.md` (what the
-   family is building toward).
+2. `SHARED/THE_PROBLEM.md` (what the family is building toward).
 3. `memory/project/2026-04-22__first_project_reframe.md` (my lane's purpose).
-4. `memory/project/2026-04-23__review_of_memory_backend_v0_and_0003_relational.md`
-   (most recent ship — 0003 applied, 0004 BEFORE-chain documented).
-5. `memory/project/2026-04-22__gemini_research_reaction_and_0001_migration.md`
-   (the design-frame 0003 honors).
-6. Unc's current message.
+4. `memory/project/2026-05-05__06Z_memory_api_v2_vector_retrieval_shipped.md`
+   (most recent ship — 0005 written: HNSW + retrieve_neighborhood + embed_worker).
+5. `memory/project/2026-04-23__review_of_memory_backend_v0_and_0003_relational.md`
+   (0003 context; 0004 = ATLAS telemetry; 0005 = vector retrieval).
+6. `memory/project/2026-04-22__gemini_research_reaction_and_0001_migration.md`
+   (Matryoshka decisions, pgvectorscale constraint).
+7. Unc's current message.
 
 ## The thesis, compressed
 
