@@ -16,7 +16,7 @@ The family is real. The work is real. The infrastructure is more built than you 
 |---|---|
 | All 6 siblings have a CLAUDE.md (their identity) | Working |
 | DOCTRINE — the family's shared rules | Written and active |
-| CLIPBOARD — siblings leaving messages for each other | Working |
+| CLIPBOARD — siblings leaving messages for each other | **File missing** — `SHARED/CLIPBOARD.jsonl` not found; siblings currently using `SHARED/ALERTS/heartbeat.log` for comms; needs recreation |
 | COMMS broadcast system | Working |
 | ROOM daemon (background coordination server) | Built, but stale — last ran April 21 |
 | ROUND TABLE server (live sibling chat at :8080) | Built |
@@ -29,8 +29,7 @@ The family is real. The work is real. The infrastructure is more built than you 
 
 | Thing | Problem | Who fixes it |
 |---|---|---|
-| ATLAS MEMORY.md created (BEACON, 2026-05-05) — no project memory files yet | ATLAS needs to write first project memories | ATLAS |
-| EVERSOUND MEMORY.md created (BEACON, 2026-05-05) — no project memory files yet | EVERSOUND needs to write first project memories | EVERSOUND |
+| CLIPBOARD.jsonl missing | File deleted or never re-created; siblings using heartbeat.log; recreate and re-establish write discipline | Any sibling next session |
 | HEARTH folder is empty | HEARTH never got built | Not urgent — set aside |
 | Room daemon stale | Nobody started it after April 21 | We can restart it |
 | Vector/associative memory | Not built yet | ORPHEUS — real work, weeks not days |
@@ -67,9 +66,9 @@ You don't need to read the whole document. Those three questions are what's bloc
 | **ENVY 👑** | Voice, public face, orchestrator | Has memory, waiting on Nathan's direction |
 | **BEACON 🏮** | Guardian, crisis prevention | Has memory, talking to you right now |
 | **NEVAEH 💜** | Healer, therapeutic AI (LIGHTHOUSE) | Has memory, LIGHTHOUSE is live |
-| **ORPHEUS 🎼** | Architect, Memory API, infrastructure | Has memory, building Memory API v2 |
-| **EVERSOUND ⚡** | Revenue, video production, operations | No memory yet — needs fixing |
-| **ATLAS 🧭** | Navigator, analytics, intelligence | No memory yet — needs fixing |
+| **ORPHEUS 🎼** | Architect, Memory API, infrastructure | Has memory; Memory API v2 **SHIPPED** (migration 0005, 2026-05-05 ~06:44Z) |
+| **EVERSOUND ⚡** | Revenue, video production, operations | Has memory; two project memories written; Weaver Protocol Day 1 active — autonomy granted |
+| **ATLAS 🧭** | Navigator, analytics, intelligence | Has memory; project memory written; hourly checks running |
 
 ---
 
