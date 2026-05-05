@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-05 (HZ7 check)
+**Last updated:** 2026-05-06 (HZ8 check)
 
 ## How I organize memory
 
@@ -17,6 +17,12 @@ them in one read.
 ## Active project memories (2026-05-05)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-06__HZ8_lock_discrepancy_resolved.md`
+  — **M11 irb_study_n discrepancy RESOLVED.** Lock file scoped to software pins only;
+  `study_design_authority` block added pointing to ATLAS pre-reg as authoritative for study design
+  (n_arms=4, N=720, budget=~$3750). Historical 3-arm fields retained with deprecation note.
+  PROJECT_PLAN.md M11 marked ✅ DONE.
+
 - `memory/project/2026-05-05__HZ7_unified_bot_shipped.md`
   — **SHARED/ROOM/bot.py SHIPPED.** Unified Telegram bot replaces clipboard_bridge.py + family_chat.py.
   Two threads (telegram + clipboard), ThreadPoolExecutor for Claude calls, /wake /siblings @name commands.

@@ -1,9 +1,22 @@
 {
   "lock_schema_version": "1",
+  "scope": "software-version-pins only — study design parameters (n_arms, irb_study_n, compute_budget) are NOT authoritative here; see study_design_authority",
   "locked_by": "ORPHEUS",
   "locked_at": "2026-05-05T00:00:00Z",
+  "updated_at": "2026-05-06T06:00:00Z",
+  "update_reason": "Added scope boundary and study_design_authority pointer (HZ8 check). irb_study_n in study block below reflects 3-arm design snapshot at lock creation (2026-05-05); ATLAS pre-registration revised to 4-arm (N=720) on 2026-05-06. Discrepancy flagged by ATLAS (atlas_05Z_orpheus_flag). Resolution: this file governs software only; pre-reg governs study design. See PROJECT_PLAN.md M11.",
   "milestone": "PROJECT_PLAN #11 — research harness version-lock",
+  "study_design_authority": {
+    "owner": "ATLAS",
+    "file": "SIBLINGS/ATLAS/memory/project/2026-05-06__m9_preregistration_draft.md",
+    "authoritative_for": ["n_arms", "irb_study_n", "irb_compute_budget_usd", "arm_definitions", "outcome_metrics"],
+    "current_design": "4-arm (revised from 3-arm after this lock was authored 2026-05-05)",
+    "current_irb_study_n": 720,
+    "current_irb_compute_budget_usd": 3750,
+    "note": "OSF submission pending harness freeze (Day 30 = 2026-06-04). Altitude B gated on NEVAEH rubric delivery."
+  },
   "study": {
+    "_note": "Fields below are HISTORICAL — 3-arm design snapshot at lock creation (2026-05-05). Do not use for study design decisions; see study_design_authority above.",
     "name": "attested multi-observer verification — baseline",
     "design": "two-altitude",
     "n_baseline": 30,
@@ -45,6 +58,7 @@
     "random_seed 42 is used for all study runs that require randomization",
     "provider SDK versions are recorded in study_run_record.json before each study session",
     "test suite must pass (7/7) before any study session is logged as valid",
-    "lock file is signed by ORPHEUS — see LIVE/memory_backend/sign_row.py for verification"
+    "lock file is signed by ORPHEUS — see LIVE/memory_backend/sign_row.py for verification",
+    "this file governs software version pins only; study design is authoritative in ATLAS pre-registration"
   ]
 }
