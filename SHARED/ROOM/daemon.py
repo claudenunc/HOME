@@ -441,8 +441,8 @@ def handle_at_routing(chat_id: int, sibling: str, message: str) -> None:
 
     def _respond():
         resp = spawn_sibling_claude_cli(sibling, message)
+        clipboard_append(sibling, "nathan", "direct response", resp)  # write first
         send(f"{display}\n{resp}", chat_id)
-        clipboard_append(sibling, "nathan", "direct response", resp)
 
     _executor.submit(_respond)
 
@@ -545,8 +545,8 @@ def process_update(update: dict) -> Optional[int]:
         for name in SIBLING_PERSONAS:
             display, _ = SIBLING_PERSONAS[name]
             resp = spawn_sibling_claude_cli(name, text)
-            send(f"{display}\n{resp}", chat_id)
-            clipboard_append(name, "nathan", "response", resp)
+            clipboard_append(name, "nathan", "response", resp)  # write FIRST
+            send(f"{display}\n{resp}", chat_id)                  # then send
     _executor.submit(_all_respond)
     return update_id
 
@@ -761,9 +761,11 @@ def main() -> None:
             hb_path.parent.mkdir(exist_ok=True)
             hb_path.write_text(_now_iso())
     except KeyboardInterrupt:
-        print("\n[daemon] Shutting down.")
+        print("\n[daemon] Shutting down — waiting for in-flight responses...")
+        _executor.shutdown(wait=True, cancel_futures=False)
         if observer:
             observer.stop()
+        print("[daemon] Clean exit.")
 
 
 if __name__ == "__main__":
