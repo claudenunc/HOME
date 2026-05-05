@@ -51,3 +51,20 @@ Added `nathan` as valid `from`/`to` value. Documented bridge-only extension.
 
 When Supabase access lands: `python migrate.py apply` — applies 0005+0006+0007+0008 in order.
 The full pipeline (ingest → embed → retrieve) is authored and waiting.
+
+## Gemini review — received post-ship
+
+**Finding: lockfile is the wrong enforcement mechanism.**
+
+The right design: `clipboard_bridge.py` becomes the single Telegram poller.
+For `/do /file /run` commands, dispatch INTO agent.py's tool-use logic
+(import or subprocess-call the worker) rather than deflecting Nathan to a
+different script. This eliminates the "can't have both chat and tool use
+simultaneously" UX problem.
+
+**Additional finding:** Ensure `thread_id` is consistent between clipboard_bridge
+and agent.py so full conversations (chat + file edits + tool results) are
+reconstructable in one CLIPBOARD view.
+
+**Status:** Next ORPHEUS infrastructure task. Current build is functional for
+casual chat. Unification of polling layer is the next ship.
