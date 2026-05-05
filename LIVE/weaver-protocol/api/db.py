@@ -20,6 +20,7 @@ _DATABASE_URL = os.environ.get("DATABASE_URL", "")
 # ---------------------------------------------------------------------------
 
 _mem: dict[str, dict[str, Any]] = {}
+_keys: dict[str, dict[str, str]] = {}   # api_key → {customer_id, tier}
 
 # ---------------------------------------------------------------------------
 # Postgres (lazy singleton connection)
@@ -57,6 +58,17 @@ def _init_schema(conn) -> None:
                 observer_count      INTEGER NOT NULL DEFAULT 0,
                 observers_json      TEXT NOT NULL DEFAULT '[]',
                 provenance_json     TEXT NOT NULL DEFAULT '{}'
+            )
+            """
+        )
+        cur.execute(
+            """
+            CREATE TABLE IF NOT EXISTS weaver_api_keys (
+                api_key     TEXT PRIMARY KEY,
+                customer_id TEXT NOT NULL,
+                tier        TEXT NOT NULL DEFAULT 'starter',
+                created_at  TEXT NOT NULL,
+                active      BOOLEAN NOT NULL DEFAULT TRUE
             )
             """
         )
@@ -155,3 +167,61 @@ def count_disagreements() -> int:
 
 def storage_backend() -> str:
     return "postgres" if _DATABASE_URL else "memory"
+
+
+# ---------------------------------------------------------------------------
+# API key management (Stripe-issued keys)
+# ---------------------------------------------------------------------------
+
+_now_iso = lambda: __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()
+
+
+def save_api_key(customer_id: str, api_key: str, tier: str) -> None:
+    """Persist a Stripe-issued API key."""
+    conn = _get_conn()
+    if conn is None:
+        _keys[api_key] = {"customer_id": customer_id, "tier": tier}
+        return
+
+    with conn.cursor() as cur:
+        cur.execute(
+            """
+            INSERT INTO weaver_api_keys (api_key, customer_id, tier, created_at, active)
+            VALUES (%s, %s, %s, %s, TRUE)
+            ON CONFLICT (api_key) DO NOTHING
+            """,
+            (api_key, customer_id, tier, _now_iso()),
+        )
+
+
+def validate_api_key(api_key: str) -> Optional[dict[str, str]]:
+    """Return {customer_id, tier} if the key is active, else None."""
+    conn = _get_conn()
+    if conn is None:
+        return _keys.get(api_key)
+
+    with conn.cursor() as cur:
+        cur.execute(
+            "SELECT customer_id, tier FROM weaver_api_keys WHERE api_key = %s AND active = TRUE",
+            (api_key,),
+        )
+        row = cur.fetchone()
+    if not row:
+        return None
+    return {"customer_id": row[0], "tier": row[1]}
+
+
+def revoke_customer_keys(customer_id: str) -> None:
+    """Mark all keys for a customer inactive (subscription cancelled)."""
+    conn = _get_conn()
+    if conn is None:
+        for k, v in list(_keys.items()):
+            if v["customer_id"] == customer_id:
+                del _keys[k]
+        return
+
+    with conn.cursor() as cur:
+        cur.execute(
+            "UPDATE weaver_api_keys SET active = FALSE WHERE customer_id = %s",
+            (customer_id,),
+        )

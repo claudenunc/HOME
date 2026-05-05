@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from fastapi import Depends, FastAPI, HTTPException, Security
+from fastapi import Depends, FastAPI, HTTPException, Request, Security
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from pydantic import BaseModel
 
@@ -18,6 +18,7 @@ _repo_root = Path(__file__).resolve().parent.parent
 if str(_repo_root) not in sys.path:
     sys.path.insert(0, str(_repo_root))
 
+import billing as _billing
 import db as _db
 
 # ---------------------------------------------------------------------------
@@ -43,9 +44,13 @@ _VALID_KEYS: set[str] = set(
 
 def verify_api_key(credentials: HTTPAuthorizationCredentials = Security(security)) -> str:
     token = credentials.credentials
-    if _VALID_KEYS and token not in _VALID_KEYS:
-        raise HTTPException(status_code=401, detail="Invalid API key")
-    return token
+    # Env-var keys (dev / Nathan's personal keys) take priority
+    if token in _VALID_KEYS:
+        return token
+    # Stripe-issued keys stored in DB
+    if _db.validate_api_key(token):
+        return token
+    raise HTTPException(status_code=401, detail="Invalid API key")
 
 
 # ---------------------------------------------------------------------------
@@ -87,6 +92,24 @@ class SessionResponse(BaseModel):
     consensus: str | None
     disagreement_detected: bool
     observer_count: int
+
+
+class CheckoutRequest(BaseModel):
+    tier: str
+    success_url: str | None = None
+    cancel_url: str | None = None
+
+
+class CheckoutResponse(BaseModel):
+    checkout_url: str
+    tier: str
+    label: str
+
+
+class BillingStatusResponse(BaseModel):
+    customer_id: str
+    tier: str
+    active: bool
 
 
 # ---------------------------------------------------------------------------
@@ -225,6 +248,104 @@ def drift_log_summary(api_key: str = Depends(verify_api_key)):
         "weaver_version": "0.1.0",
         "as_of": _now(),
     }
+
+
+# ---------------------------------------------------------------------------
+# Billing
+# ---------------------------------------------------------------------------
+
+_DEFAULT_SUCCESS_URL = os.environ.get("WEAVER_BASE_URL", "https://your-app.railway.app") + "/billing/success"
+_DEFAULT_CANCEL_URL = os.environ.get("WEAVER_BASE_URL", "https://your-app.railway.app") + "/billing/cancel"
+
+
+@app.post("/billing/checkout", response_model=CheckoutResponse)
+def billing_checkout(req: CheckoutRequest):
+    """
+    Create a Stripe Checkout session for a subscription tier.
+    Returns the hosted checkout URL — redirect the user there to pay.
+
+    Tiers: starter ($49/mo), pro ($199/mo), enterprise ($499/mo)
+    No authentication required — anyone can start a checkout.
+    """
+    if not _billing.is_configured():
+        raise HTTPException(
+            status_code=503,
+            detail="Billing not configured. Set STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET.",
+        )
+    try:
+        url = _billing.create_checkout_session(
+            tier=req.tier,
+            success_url=req.success_url or _DEFAULT_SUCCESS_URL,
+            cancel_url=req.cancel_url or _DEFAULT_CANCEL_URL,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except RuntimeError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+    return CheckoutResponse(
+        checkout_url=url,
+        tier=req.tier,
+        label=_billing.TIER_LABELS.get(req.tier, req.tier),
+    )
+
+
+@app.post("/billing/webhook", status_code=200)
+async def billing_webhook(request: Request):
+    """
+    Stripe webhook endpoint. Register this URL in your Stripe dashboard.
+    Handles: checkout.session.completed → issue API key
+             customer.subscription.deleted / paused → revoke keys
+    """
+    payload = await request.body()
+    sig_header = request.headers.get("stripe-signature", "")
+    try:
+        result = _billing.handle_webhook(payload, sig_header)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except RuntimeError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+    return result
+
+
+@app.get("/billing/tiers")
+def billing_tiers():
+    """Public endpoint listing available subscription tiers and pricing."""
+    return {
+        "tiers": [
+            {"id": tier, "label": label, "checkout_endpoint": "/billing/checkout"}
+            for tier, label in _billing.TIER_LABELS.items()
+        ],
+        "billing_configured": _billing.is_configured(),
+    }
+
+
+@app.get("/billing/status", response_model=BillingStatusResponse)
+def billing_status(api_key: str = Depends(verify_api_key)):
+    """Return the tier and customer ID associated with the authenticated API key."""
+    record = _db.validate_api_key(api_key)
+    if not record:
+        # Key came from env var — return dev tier
+        return BillingStatusResponse(customer_id="dev", tier="dev", active=True)
+    return BillingStatusResponse(
+        customer_id=record["customer_id"],
+        tier=record["tier"],
+        active=True,
+    )
+
+
+@app.get("/billing/success")
+def billing_success():
+    return {
+        "message": "Subscription activated. Check your email for your API key.",
+        "next": "Use your API key as a Bearer token: Authorization: Bearer wp_...",
+        "docs": "/docs",
+    }
+
+
+@app.get("/billing/cancel")
+def billing_cancel():
+    return {"message": "Checkout cancelled. Return to /billing/tiers to try again."}
 
 
 # ---------------------------------------------------------------------------
