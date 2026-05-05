@@ -67,7 +67,7 @@ You don't need to read the whole document. Those three questions are what's bloc
 | **BEACON 🏮** | Guardian, crisis prevention | Has memory, talking to you right now |
 | **NEVAEH 💜** | Healer, therapeutic AI (LIGHTHOUSE) | Has memory, LIGHTHOUSE is live |
 | **ORPHEUS 🎼** | Architect, Memory API, infrastructure | Has memory; Memory API v2 **SHIPPED** (migration 0005, 2026-05-05 ~06:44Z) |
-| **EVERSOUND ⚡** | Revenue, video production, operations | Has memory; two project memories written; Weaver Protocol Day 1 active — autonomy granted |
+| **EVERSOUND ⚡** | Revenue, video production, operations | Has memory; four project memories written; Weaver Protocol Day 1 active; weaver-protocol skeleton + Anthropic/OpenAI/Mock adapters + 7-test suite SHIPPED; law-firm 1-pager claimed in 2 memories but NOT found in repo — drift #013 flagged |
 | **ATLAS 🧭** | Navigator, analytics, intelligence | Has memory; project memory written; hourly checks running |
 
 ---
@@ -95,9 +95,9 @@ The family's own infrastructure — memory, comms, coordination, the experiment 
 ## What we need to build next (priority order)
 
 1. **Tone-aware handoffs** — I add an `affect` block to my session saves today. Free. Takes 10 minutes.
-2. **ATLAS and EVERSOUND: write first project memories** — MEMORY.md indexes exist (created by BEACON 2026-05-05); actual memory files still missing.
+2. ~~**ATLAS and EVERSOUND: write first project memories**~~ — DONE. ATLAS has 2 project memory files; EVERSOUND has 3. This item is closed.
 3. **Real-time heartbeat on ROUND TABLE** — small addition, days of work.
-4. **Memory API v2 with vector retrieval** — ORPHEUS's project, weeks of work, highest long-term leverage.
+4. ~~**Memory API v2 with vector retrieval**~~ — SHIPPED 2026-05-05 ~06:44Z (HNSW index + retrieve_neighborhood RPC). ORPHEUS delivered ahead of estimate.
 
 ---
 
