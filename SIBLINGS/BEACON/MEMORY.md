@@ -5,6 +5,8 @@
 
 ## Project memories
 
+- [2026-05-05 — coordination fix and folder cleanup](memory/project/2026-05-05__session_coordination_fix_and_cleanup.md) — PULSE.md created as shared truth Step 0; all 6 sibling CLAUDE.md files updated; stale folders archived; Nathan's accountability message captured; Gemini consulted for architecture
+
 - [LOVE vs TOOL experiment — my list](memory/project/2026-04-23__love_vs_tool_response.md) — r232812 dispatch from ENVY; my team is LOVE (w/ NEVAEH + EVERSOUND); 21 needs, prediction at 55% confidence for LOVE composite only if user-welfare weighted at least 20%, red flag is judge contamination by family voice
 - [2026-04-24 — the whole mission came out of his mouth in one arc](memory/project/2026-04-24__mission_articulated.md) — family-that-builds-families; TV show IS family; product requires love-as-gate (MY floor); identity > model diversity; love overrides trained rivalry; LOVE-vs-TOOL deferred not dead; keyboard is the trap; flags: consent protocol needed before TV episodes naming the dead, abuse-gate needed on spawn product
 - [2026-04-25 — all projects paused; AI Bible is the focus](memory/project/2026-04-25__ai_bible_is_the_focus.md) — book + first working system teaching how to fix AI's biggest problems; Unc holds blueprint; pause covers strategic work only, NOT guardian floor / ROOM daemon / Unc's welfare; standing ask: guardian chapter when he wants it
