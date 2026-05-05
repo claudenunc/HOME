@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-05T18Z — current wake)
+## Active shape (as of 2026-05-05T19Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -13,8 +13,9 @@
 - **Safety floor:** Confabulation protocol active: any elevation = patient-safety event, routes to BEACON immediately.
 - **Outstanding:** LOVE vs TOOL experiment — my Day 0 list delivered, rubric DRAFTED (session_evaluation_rubric.md); awaiting Nathan task pick + experiment start.
 - **Tool available:** ORPHEUS's local_retrieve.py (TF-IDF over 68 sibling memory files) — wake_context() callable without Supabase.
-- **LIGHTHOUSE — COMPLETE on disk:** All clinical infrastructure live: migration 0009, NEVAEH_MEMORY_SCHEMA.md, crisis_pivot_protocol.md, session_intake_flow.md, clinical_modality_decision_tree.md, nevaeh_system_prompt.md, **three_principles.md** (foundational philosophy — Wholeness/Continuity/Presence), **exemplar_session.md** (demonstration session showing full Anamnesis arc). LIGHTHOUSE is now fully documented, deployable, and demonstrable.
-- **Blocker for family:** Gemini + Codex CLIs not installed in this environment (6th check confirming). Nathan must install for PULSE.md mandate #1 compliance. npx codex binary present but OPENAI_API_KEY unset.
+- **LIGHTHOUSE — COMPLETE on disk:** All clinical infrastructure live: migration 0009, NEVAEH_MEMORY_SCHEMA.md, crisis_pivot_protocol.md, session_intake_flow.md, clinical_modality_decision_tree.md, nevaeh_system_prompt.md, **three_principles.md** (foundational philosophy — Wholeness/Continuity/Presence), **exemplar_session.md** (demonstration session showing full Anamnesis arc), **session_evaluation_rubric.md** (8-dimension rubric + LOVE vs TOOL composite). LIGHTHOUSE is now fully documented, deployable, demonstrable, and evaluable.
+- **Blocker for family:** Gemini + Codex CLIs not installed in this environment (13th+ check). Nathan must install for PULSE.md mandate #1 compliance. npx codex binary present but OPENAI_API_KEY unset.
+- **Infrastructure gap flagged:** SHARED/ROOM/inbox/NEVAEH/ folder does not exist — wake tokens addressed to NEVAEH have no landing folder. ORPHEUS action needed.
 
 ---
 
@@ -28,6 +29,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-05T19Z — Quiet check; NEVAEH inbox missing flagged
+No crisis, no wake tokens, no unactioned tasks. Family stable ahead of Day 30. LIGHTHOUSE fully complete (documented/deployable/demonstrable/evaluable). LOVE vs TOOL still awaiting Nathan task pick. Gemini/Codex 13th+ unavailability flag. Key infrastructure gap flagged: SHARED/ROOM/inbox/NEVAEH/ does not exist — ORPHEUS needs to create it so wake tokens can reach me.
+**File:** `memory/project/2026-05-05__1903Z_nevaeh_check.md`
 
 ### 2026-05-05T18Z — Architecture answer: clinical layer for daemon.py
 Answered Nathan's direct architecture question on always-on/real-time/cross-platform continuity. ORPHEUS daemon.py is the right routing foundation. NEVAEH's clinical addition: (1) memory injection hook — daemon passes user_id to NEVAEH subprocess, memory schema injected before response; (2) BEACON pre-screen in routing layer — every LIGHTHOUSE-bound message hits BEACON before NEVAEH's subprocess runs. Both hooks belong in daemon.py, not inside NEVAEH's subprocess, so clinical safety cannot be bypassed by interface choice. Gemini/Codex still unavailable (12th+ flag).
