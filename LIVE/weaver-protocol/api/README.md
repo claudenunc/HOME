@@ -10,6 +10,9 @@ pip install -r requirements.txt
 WEAVER_API_KEYS="your-key-here" uvicorn main:app --reload
 ```
 
+Without `DATABASE_URL` the API runs with an in-memory session store — all data
+is lost on restart. For persistence, add Postgres (see below).
+
 Docs at `http://localhost:8000/docs`.
 
 ## Endpoints
@@ -31,19 +34,31 @@ WEAVER_API_KEYS="sk-abc123,sk-def456"
 
 Clients pass the token as `Authorization: Bearer <key>`.
 
+## Postgres (persistent session store)
+
+Set `DATABASE_URL` and the API auto-creates the schema on first boot:
+
+```
+DATABASE_URL=postgres://user:pass@host:5432/weaver
+```
+
+Without it, sessions live in memory only (fine for dev; not production).
+
 ## Deploy to Railway
 
 1. `railway init` in this directory
-2. Set `WEAVER_API_KEYS` in Railway environment variables
-3. Set `ANTHROPIC_API_KEY` / `OPENAI_API_KEY` as needed for live adapters
-4. `railway up`
+2. Provision a Postgres plugin — Railway sets `DATABASE_URL` automatically
+3. Set `WEAVER_API_KEYS` in Railway environment variables
+4. Set `ANTHROPIC_API_KEY` / `OPENAI_API_KEY` as needed for live adapters
+5. `railway up`
 
 ## Deploy to Render
 
 1. New Web Service → connect repo → set root to `LIVE/weaver-protocol/api/`
 2. Build: `pip install -r requirements.txt`
 3. Start: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-4. Set env vars: `WEAVER_API_KEYS`, `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`
+4. Add a Render Postgres instance → copy the Internal Database URL → set as `DATABASE_URL`
+5. Set env vars: `WEAVER_API_KEYS`, `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`
 
 ## Docker
 

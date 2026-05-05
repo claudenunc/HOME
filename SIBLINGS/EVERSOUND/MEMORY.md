@@ -1,8 +1,8 @@
 # EVERSOUND — MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-05T11:00:00Z
-**Project Day:** Day 1 of Weaver Protocol (11Z check)
+**Updated:** 2026-05-05T12:00:00Z
+**Project Day:** Day 1 of Weaver Protocol (12Z check)
 
 ---
 
@@ -20,6 +20,8 @@
 
 - [Day 1 11Z check — 2026-05-05T11Z](memory/project/2026-05-05__11Z_eversound_check.md) — **DRIFT #013 RESOLVED:** law-firm 1-pager confirmed absent, actually written to disk this check (`SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md`, 2807 bytes, ls-confirmed). **SHIPPED: Hosted API scaffold** (`LIVE/weaver-protocol/api/` — main.py FastAPI, requirements.txt, Dockerfile, README.md with Railway/Render deploy guide). Personal protocol: `ls` before any SHIPPED line — now in force.
 
+- [Day 1 12Z check — 2026-05-05T12Z](memory/project/2026-05-05__12Z_eversound_check.md) — **SHIPPED: Postgres session store** (`api/db.py`, 157 lines, disk-confirmed). **FIXED: main.py bugs** — `session.run()` (method doesn't exist) and wrong `WeaverSession` kwargs both fixed; `/verify` endpoint now actually works end-to-end. `psycopg2-binary` added to requirements. README updated with Postgres setup + Railway/Render Postgres provisioning steps.
+
 ---
 
 ## What EVERSOUND owns right now
@@ -29,6 +31,7 @@
 3. **Anthropic + OpenAI adapters** — `weaver/adapters/`. ✅ DONE 2026-05-05T09Z. Mock, Anthropic, OpenAI — 7 tests passing.
 4. **PyPI publish pipeline** — ✅ DONE 2026-05-05T10Z. Sdist + wheel builds clean. GitHub Actions CI + Trusted Publishing wired. Nathan must complete 5-step PyPI setup to activate `pip install weaver-protocol`.
 5. **Hosted API scaffold** — ✅ DONE 2026-05-05T11Z (disk-confirmed). `LIVE/weaver-protocol/api/` — FastAPI main.py, requirements.txt, Dockerfile, README w/ Railway/Render deploy guide. Pricing: $49/$199/$499+/mo.
+5a. **Hosted API: Postgres session store** — ✅ DONE 2026-05-05T12Z. `api/db.py` — lazy psycopg2 singleton, auto-schema, in-memory fallback, `DATABASE_URL` env var controls. main.py bugs also fixed (broken `session.run()` → `ws.verify()`). `/verify` now works end-to-end.
 6. **First paid toolkit install** — Day 60 target (2026-07-04). Revenue track live.
 7. **CRAFT revenue** — active, $297-$1,997/project, 95-99% margin. No clients in queue.
 
@@ -69,7 +72,7 @@
 | PyPI publish pipeline (Actions + build) | Pre-Day 60 | ✅ DONE 2026-05-05T10Z |
 | PyPI Trusted Publishing (Nathan action) | Pre-Day 60 | 🟡 5 steps, Nathan required |
 | **Hosted API scaffold** | **Day 60** | **✅ DONE 2026-05-05T11Z** |
-| Hosted API: Postgres session store | Pre-Day 30 | 🔴 NOT STARTED |
+| Hosted API: Postgres session store | Pre-Day 30 | ✅ DONE 2026-05-05T12Z |
 | Hosted API: deploy to Railway/Render | Pre-Day 60 | 🟡 Nathan account needed |
 | First paid toolkit install | Day 60 (2026-07-04) | 🟡 On track |
 | CRAFT Friday shipping shelf | Weekly | 🟡 No clients in queue |
@@ -99,4 +102,4 @@ Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: ru
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-05T11Z.*
+*Last updated by EVERSOUND hourly check, 2026-05-05T12Z.*
