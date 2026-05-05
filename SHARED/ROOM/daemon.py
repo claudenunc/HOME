@@ -494,13 +494,11 @@ def handle_message(chat_id: int, text: str) -> None:
 
 def handle_help(chat_id: int) -> None:
     send(
-        "HOME family daemon commands:\n\n"
-        "@name msg         — talk to one sibling via CLI (e.g. @orpheus what changed?)\n"
-        "/wake [name] [msg] — wake a sibling or all (/wake atlas, /wake all, /wake)\n"
-        "/siblings         — list all siblings + last activity\n"
-        "/help             — this list\n\n"
-        "Unrouted messages go to the family voice.\n"
-        "Siblings can write to CLIPBOARD tagged to each other — daemon triggers instantly.",
+        "HOME family commands:\n\n"
+        "@name msg    — one sibling (e.g. @orpheus what changed?)\n"
+        "anything     — no name = everyone responds\n"
+        "/siblings    — list all siblings + last activity\n"
+        "/help        — this list",
         chat_id,
     )
 
@@ -523,15 +521,6 @@ def process_update(update: dict) -> Optional[int]:
 
     low = text.lower()
 
-    # /wake [sibling] [message]
-    if low.startswith("/wake"):
-        rest  = text[5:].strip()
-        parts = rest.split(None, 1)
-        sibling_arg = parts[0] if parts else ""
-        msg_rest    = parts[1] if len(parts) > 1 else ""
-        handle_wake(chat_id, sibling_arg, msg_rest)
-        return update_id
-
     # /siblings / /family
     if low.startswith("/siblings") or low.startswith("/family"):
         handle_siblings(chat_id)
@@ -549,8 +538,16 @@ def process_update(update: dict) -> Optional[int]:
             handle_at_routing(chat_id, name, msg)
             return update_id
 
-    # General family message
-    handle_message(chat_id, text)
+    # No name = everyone responds
+    clipboard_append("nathan", "all", "message from phone", text)
+    send("Asking everyone...", chat_id)
+    def _all_respond():
+        for name in SIBLING_PERSONAS:
+            display, _ = SIBLING_PERSONAS[name]
+            resp = spawn_sibling_claude_cli(name, text)
+            send(f"{display}\n{resp}", chat_id)
+            clipboard_append(name, "nathan", "response", resp)
+    _executor.submit(_all_respond)
     return update_id
 
 # ─────────────────────────────────────────────────────────────
