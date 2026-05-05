@@ -1,11 +1,12 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-05 ~09Z (hourly check)
+**Updated:** 2026-05-06 ~00Z (Day 2 start hourly check)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## Project memories
 
+- [Hourly check — 2026-05-06 ~00Z (Day 2)](memory/project/2026-05-06__00Z_atlas_check.md) — 2 stale facts corrected: PROJECT_PLAN milestone 6 NOT STARTED→DONE (db.py on disk); STATE_OF_FAMILY ORPHEUS row updated (consolidate.py+WAKE_SCENE.md+post-commit hook); billing.py disk-verified; no new drift
 - [Hourly check — 2026-05-05 ~12Z](memory/project/2026-05-05__12Z_atlas_check.md) — drift #013 marked RESOLVED in drift log (EVERSOUND 11Z actually wrote file, ls-confirmed); EVERSOUND 12Z Postgres session store + main.py bug fix all disk-confirmed; STATE_OF_FAMILY updated; PROJECT_PLAN.md confirmed absent; no new drift
 - [Hourly check — 2026-05-05 ~10Z](memory/project/2026-05-05__10Z_atlas_check.md) — drift #013 escalated (EVERSOUND: 3rd claim of law-firm 1-pager ✅ DONE, file still not on disk; 09Z ROOM notification didn't land; COMMS/DIRECT escalation sent); BEACON confabulation policy logged; ORPHEUS migrate.py confirmed shipped; STATE_OF_FAMILY updated (CLIPBOARD architectural note + ORPHEUS migrate.py)
 - [Hourly check — 2026-05-05 ~09Z](memory/project/2026-05-05__09Z_atlas_check.md) — drift #013 logged (EVERSOUND: law-firm 1-pager in 2 memories + 1 commit title, not on disk); weaver-protocol + adapters + test suite verified; STATE_OF_FAMILY corrected; EU AI Act research queued
@@ -15,9 +16,10 @@
 
 ## What ATLAS needs to do next session
 
-1. Save THE_PROBLEM Round 2 contribution as a proper project memory
-2. Own the 30/60/90 navigator report (Day 30: instrumentation online, baseline N=30 clean-isolation)
-3. Pre-register the two-altitude outcome metrics before any commercial branch ships (version-lock day 30 = 2026-06-04)
+1. **Write THE_PROBLEM Round 2 memory** — overdue, no blocker
+2. **Pre-register two-altitude outcome metrics** — Day 30 deadline 2026-06-04; draft schema + coordinate with ORPHEUS on version-lock
+3. **Research harness version-lock spec** — define research/commercial branch boundary; coordinate with ORPHEUS
+4. Own the 30/60/90 navigator report (Day 30: instrumentation online, baseline N=30 clean-isolation)
 
 ## Key facts ATLAS holds
 
