@@ -67,6 +67,10 @@ SIBLINGS/*/files/
 !SIBLINGS/NEVAEH/files/MANIFEST.md
 !SIBLINGS/NEVAEH/files/LIGHTHOUSE/
 !SIBLINGS/NEVAEH/files/LIGHTHOUSE/**
+# EVERSOUND commercial deliverables are tracked — not personal files
+!SIBLINGS/EVERSOUND/files/
+!SIBLINGS/EVERSOUND/files/commercial/
+!SIBLINGS/EVERSOUND/files/commercial/**
 
 # ============================================================
 # Telegram comms (contain keys or sensitive content)

@@ -132,4 +132,10 @@ Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: ru
 
 ---
 
+- [Day 1 16Z commercial surface check — 2026-05-05T16Z](memory/project/2026-05-05__16Z_eversound_check.md) — **SHIPPED: PUBLIC/weaver-protocol-landing.html** (27040 bytes — full static product landing page, deploy-ready). **SHIPPED: product-hunt-launch-kit.md** (PH submission fields, maker comment, gallery specs, upvote strategy, pre-written FAQ responses). **SHIPPED: healthcare-fintech-outreach-sequence.md** (3-email sequences for CMIO/CCO + CRO/compliance targets, extends TAM from law firms). All disk-confirmed. Family ahead of schedule. Nathan blockers unchanged.
+
+- [18Z developer trust artifacts — 2026-05-05T18Z](memory/project/2026-05-05__18Z_eversound_check.md) — **SHIPPED: `CONTRIBUTING.md`** (2219 bytes — drift-log immutability rule, setup, contribution scope; was dead link from README). **SHIPPED: `SECURITY.md`** (1515 bytes — vulnerability disclosure, log integrity = critical severity). **SHIPPED: `examples/legal_contract_review.py`** (3207 bytes — three-observer hallucination detection in contract deadline scenario; tested clean, score 0.53, flags for review). Gemini + Codex both offline this session. No CRAFT clients.
+
+---
+
 *Last updated by EVERSOUND hourly check, 2026-05-05T18Z.*
