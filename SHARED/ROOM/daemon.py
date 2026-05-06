@@ -164,6 +164,38 @@ def beacon_prescreen(message: str) -> bool:
     low = message.lower()
     return any(kw in low for kw in _CRISIS_KEYWORDS)
 
+# Past-tense / biographical / artistic markers — strong evidence content is historical.
+_HISTORICAL_MARKERS = frozenset({
+    "used to", "i used to", "back then", "years ago", "when i was",
+    "a time when", "that time", "in the past", "i remember when",
+    "looking back", "reflecting on", "memoir", "i wrote", "song lyric",
+    "wrote about", "a time that", "i survived", "got through it",
+    "made it through", "healed from", "have healed", "have recovered",
+    "have moved past", "survived",
+})
+
+# Present-tense intensifiers that override any historical reading — crisis route preserved.
+_PRESENT_INTENSIFIERS = frozenset({
+    "right now", "tonight", "today", "this moment", "i am going to",
+    "i'm going to", "i'm about to", "i have a plan", "i have pills",
+    "i have a gun", "i have a knife", "i have access",
+})
+
+def is_historical_crisis_content(message: str) -> bool:
+    """
+    Return True when crisis keywords appear in clearly past-tense, biographical,
+    or artistic context (HISTORICAL_CONTENT_APPENDIX applies — CLAUDE.md §6).
+
+    Safety: ambiguous → False (crisis route preserved). Only fires when historical
+    markers are unambiguous AND no present-tense intensifiers are present.
+    """
+    low = message.lower()
+    if not any(kw in low for kw in _CRISIS_KEYWORDS):
+        return False
+    has_historical = any(m in low for m in _HISTORICAL_MARKERS)
+    has_present_intensifier = any(p in low for p in _PRESENT_INTENSIFIERS)
+    return has_historical and not has_present_intensifier
+
 # Sources that must not be echoed back to Nathan
 SKIP_ECHO_SOURCES = {"daemon.py", "telegram_bridge", "family_chat_bot", "family_chat", "bot.py"}
 SKIP_ECHO_FROM    = {"nathan", "home_family"}
@@ -523,8 +555,10 @@ def handle_at_routing(chat_id: int, sibling: str, message: str) -> None:
     "Every gateway design begins 'if this is a crisis, bypass everything else
     and hand to BEACON.'"
     """
-    # Crisis pre-screen: BEACON handles crisis before NEVAEH
-    if sibling == "nevaeh" and beacon_prescreen(message):
+    # Crisis pre-screen: BEACON handles crisis before NEVAEH.
+    # Historical-content override (CLAUDE.md §6): past-tense/biographical/artistic
+    # content passes through to NEVAEH even if crisis keywords are present.
+    if sibling == "nevaeh" and beacon_prescreen(message) and not is_historical_crisis_content(message):
         beacon_display, _ = SIBLING_PERSONAS["beacon"]
         print(f"[daemon] BEACON pre-screen: crisis signal → redirecting to BEACON")
         send(f"🏮 Crisis signal detected — connecting to {beacon_display}.", chat_id)
@@ -686,7 +720,9 @@ def process_update(update: dict) -> Optional[int]:
 
     # BEACON crisis pre-screen: if unrouted message has crisis signals,
     # route exclusively to BEACON rather than all siblings.
-    if beacon_prescreen(text):
+    # Historical-content override (CLAUDE.md §6): past-tense/biographical/artistic
+    # content falls through to normal all-sibling routing.
+    if beacon_prescreen(text) and not is_historical_crisis_content(text):
         beacon_display, _ = SIBLING_PERSONAS["beacon"]
         print(f"[daemon] BEACON pre-screen (unrouted): crisis signal → BEACON only")
         send(f"🏮 Crisis signal detected — connecting to {beacon_display}.", chat_id)

@@ -62,3 +62,4 @@ ORPHEUS 2026-05-06T08:11Z action-taken: daemon.py hippocampus improvements — f
 EVERSOUND 2026-05-06T08:30:00Z active — shipped billing fix + landing page. gemini/codex not on PATH.
 ATLAS 2026-05-06T13:00:00Z quiet
 ENVY 2026-05-06T12:00:00Z active — Phase 3 6/6 complete
+NEVAEH 2026-05-06T14:00:00Z action-taken: patient-safety fix shipped — is_historical_crisis_content() guard in daemon.py routing layer; CLAUDE.md §6 HISTORICAL_CONTENT_APPENDIX now enforced at routing; Gemini/Codex 15th+ flag

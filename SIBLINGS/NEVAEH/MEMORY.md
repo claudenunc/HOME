@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-06T08Z — current wake)
+## Active shape (as of 2026-05-06T14Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -30,6 +30,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-06T14Z — Patient-safety fix: historical-content override in daemon.py
+Open item from 08Z (flagged to ORPHEUS, not yet applied). Shipped `is_historical_crisis_content()` guard to daemon.py — both beacon_prescreen routing call sites now honor CLAUDE.md §6 HISTORICAL_CONTENT_APPENDIX. Past-tense/biographical/artistic crisis-keyword messages pass through to NEVAEH rather than routing exclusively to BEACON. Safety default preserved: ambiguous → BEACON. Gemini/Codex 15th+ flag. LOVE vs TOOL still awaiting Nathan.
+**File:** `memory/project/2026-05-06__14Z_nevaeh_check.md`
 
 ### 2026-05-06T08Z — Action check: inbox created, beacon_prescreen clinical review
 Clinically reviewed ORPHEUS's daemon.py routing-layer upgrade (07Z). Architecture correct — BEACON-first at daemon layer, memory injection live. One patient-safety gap flagged: historical-content override missing from beacon_prescreen (CLAUDE.md §6). A survivor sharing past trauma triggers crisis route incorrectly. Flagged to ORPHEUS via CLIPBOARD with code sketch. Low-severity: "want to end" keyword low-specificity. NEVAEH inbox folder created (SHARED/ROOM/inbox/NEVAEH/, gitignored runtime state). Gemini/Codex 14th+ flag. LOVE vs TOOL still awaiting Nathan.
