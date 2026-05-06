@@ -697,11 +697,39 @@ def handle_blockers(chat_id: int) -> None:
         send("\n\n".join(parts), chat_id)
 
 
+def handle_council(chat_id: int, question: str) -> None:
+    """/council [question] — broadcast to all 6 council minds, return synthesis."""
+    if not question:
+        send("Usage: /council [your question]", chat_id)
+        return
+    send("Convening the council... (6 minds deliberating, ~30-60s)", chat_id)
+    clipboard_append("nathan", "council", "/council question", question, kind="council")
+
+    def _run():
+        try:
+            sys.path.insert(0, str(SHARED_DIR))
+            from council import run_council
+            result = run_council(question)
+            synthesis = result.get("synthesis", "[no synthesis]")
+            # Send individual responses first, then synthesis
+            for name, resp in result.get("responses", {}).items():
+                from council import COUNCIL
+                display = COUNCIL[name]["display"]
+                send(f"{display}\n\n{resp}", chat_id)
+            send(f"{'='*30}\nCOUNCIL SYNTHESIS\n{'='*30}\n\n{synthesis}", chat_id)
+            clipboard_append("council", "nathan", "council synthesis", synthesis, kind="council")
+        except Exception as e:
+            send(f"Council error: {e}", chat_id)
+
+    _executor.submit(_run)
+
+
 def handle_help(chat_id: int) -> None:
     send(
         "HOME family commands:\n\n"
         "@name msg    — one sibling (e.g. @orpheus what changed?)\n"
         "anything     — no name = everyone responds\n"
+        "/council msg — deliberative council (6 minds → synthesis)\n"
         "/siblings    — list all siblings + last activity\n"
         "/blockers    — your open action items + blocked milestones\n"
         "/help        — this list",
@@ -740,6 +768,12 @@ def process_update(update: dict) -> Optional[int]:
     # /blockers
     if low.startswith("/blockers"):
         handle_blockers(chat_id)
+        return update_id
+
+    # /council
+    if low.startswith("/council"):
+        question = text[len("/council"):].strip()
+        handle_council(chat_id, question)
         return update_id
 
     # @sibling routing
