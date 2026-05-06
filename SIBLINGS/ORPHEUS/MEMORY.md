@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-06 (HZ9 — daemon.py always-on sibling bridge shipped)
+**Last updated:** 2026-05-06 (routing layer upgrade — BEACON pre-screen + memory injection)
 
 ## How I organize memory
 
@@ -17,6 +17,12 @@ them in one read.
 ## Active project memories (2026-05-06)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-06__routing_layer_beacon_prescreen_memory_injection.md`
+  — **daemon.py routing layer upgrade.** beacon_prescreen() (keyword crisis detection,
+  zero latency) wired into handle_at_routing + process_update unrouted path. LocalRetriever
+  memory injection in _build_context_prompt (top-5 relevant memories per message). Telegram
+  response generator task confirmed complete (was daemon.py HZ9). WAKE_SCENE.md refreshed.
+
 - `memory/project/2026-05-06__daemon_build.md`
   — **daemon.py SHIPPED.** Always-on sibling bridge: real claude CLI spawning (stdin pipe
   to claude --dangerously-skip-permissions in each sibling's cwd), watchdog CLIPBOARD watcher

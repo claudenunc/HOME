@@ -68,6 +68,24 @@ LAST_UPDATE_FILE = STATE_DIR / "telegram_last_update.txt"
 PID_FILE   = STATE_DIR / "daemon.pid"
 
 # ─────────────────────────────────────────────────────────────
+# OPTIONAL: LOCAL MEMORY RETRIEVAL (TF-IDF hippocampus, zero deps)
+# Injects relevant sibling memories into every context prompt.
+# ─────────────────────────────────────────────────────────────
+try:
+    import sys as _sys
+    _lr_path = str(HOME_DIR / "LIVE" / "memory_backend")
+    if _lr_path not in _sys.path:
+        _sys.path.insert(0, _lr_path)
+    from local_retrieve import LocalRetriever as _LocalRetriever  # type: ignore
+    _local_retriever = _LocalRetriever.from_repo(str(HOME_DIR))
+    _retrieval_available = True
+    print(f"[daemon] Local memory retrieval: enabled ({len(_local_retriever.records)} files indexed)")
+except Exception as _e:
+    _local_retriever = None
+    _retrieval_available = False
+    print(f"[daemon] Local memory retrieval: disabled ({_e})")
+
+# ─────────────────────────────────────────────────────────────
 # ENV
 # ─────────────────────────────────────────────────────────────
 def _load_env() -> None:
@@ -122,6 +140,23 @@ SIBLING_PERSONAS: dict[str, tuple[str, str]] = {
     "atlas":     ("ATLAS 🧭",     "navigator. Intelligence-synthesizer. Precise, subtractive more than additive. You retract in the same channel you shipped in."),
 }
 SIBLING_NAMES = set(SIBLING_PERSONAS.keys())
+
+# ─────────────────────────────────────────────────────────────
+# BEACON PRE-SCREEN (routing layer — §7 red line enforcement)
+# Crisis signals bypass normal routing; BEACON handles first.
+# Keyword-based: no API call, no latency.
+# ─────────────────────────────────────────────────────────────
+_CRISIS_KEYWORDS = frozenset({
+    "suicide", "kill myself", "end it all", "want to die", "can't go on",
+    "self-harm", "cutting myself", "hurting myself", "don't want to be here",
+    "no reason to live", "harm myself", "not worth living", "want to end",
+    "thinking about suicide", "plan to kill", "going to kill myself",
+})
+
+def beacon_prescreen(message: str) -> bool:
+    """Return True if message contains crisis signals (keyword-based, zero latency)."""
+    low = message.lower()
+    return any(kw in low for kw in _CRISIS_KEYWORDS)
 
 # Sources that must not be echoed back to Nathan
 SKIP_ECHO_SOURCES = {"daemon.py", "telegram_bridge", "family_chat_bot", "family_chat", "bot.py"}
@@ -243,19 +278,34 @@ def _load_clipboard_tail(n: int = 10) -> str:
 # ─────────────────────────────────────────────────────────────
 
 def _build_context_prompt(sibling: str, message: str) -> str:
-    """Build the full context string injected before the message."""
+    """Build the full context string injected before the message.
+
+    Includes: sibling identity, PULSE.md, recent CLIPBOARD, and (if local
+    retrieval is available) the top-k most relevant memory files for this
+    message. Memory injection makes every sibling response session-aware.
+    """
     pulse     = _load_pulse()
     clipboard = _load_clipboard_tail(10)
     display, voice = SIBLING_PERSONAS[sibling]
-    return (
+
+    memory_block = ""
+    if _retrieval_available and _local_retriever is not None:
+        try:
+            memory_block = _local_retriever.wake_context(sibling, message, k=5)
+        except Exception:
+            pass
+
+    sections = [
         f"You are {display}, {voice} "
         f"You are one of six sibling AIs built by Nathan Michel. "
-        f"This message came from Nathan via Telegram. Respond directly in your voice.\n\n"
-        f"=== PULSE.md (Nathan's latest session truth) ===\n{pulse}\n\n"
-        f"=== Recent CLIPBOARD (last 10 entries) ===\n{clipboard}\n\n"
-        f"---\n"
-        f"Nathan says: {message}"
-    )
+        f"This message came from Nathan via Telegram. Respond directly in your voice.\n",
+        f"=== PULSE.md (Nathan's latest session truth) ===\n{pulse}",
+        f"=== Recent CLIPBOARD (last 10 entries) ===\n{clipboard}",
+    ]
+    if memory_block:
+        sections.append(f"=== Relevant memory context (hippocampus) ===\n{memory_block}")
+    sections.append(f"---\nNathan says: {message}")
+    return "\n\n".join(sections)
 
 
 def spawn_sibling_claude_cli(sibling: str, message: str, timeout: int = 60) -> str:
@@ -434,7 +484,26 @@ def handle_wake(chat_id: int, sibling_arg: str, message: str) -> None:
 
 
 def handle_at_routing(chat_id: int, sibling: str, message: str) -> None:
-    """@sibling message → spawn that sibling via CLI."""
+    """@sibling message → spawn that sibling via CLI.
+
+    BEACON pre-screen: if routing to NEVAEH (healer) and a crisis signal is
+    detected, redirect to BEACON first. Per ORPHEUS CLAUDE.md §7 red line:
+    "Every gateway design begins 'if this is a crisis, bypass everything else
+    and hand to BEACON.'"
+    """
+    # Crisis pre-screen: BEACON handles crisis before NEVAEH
+    if sibling == "nevaeh" and beacon_prescreen(message):
+        beacon_display, _ = SIBLING_PERSONAS["beacon"]
+        print(f"[daemon] BEACON pre-screen: crisis signal → redirecting to BEACON")
+        send(f"🏮 Crisis signal detected — connecting to {beacon_display}.", chat_id)
+        clipboard_append("daemon.py", "beacon", "crisis prescreen trigger", message, kind="crisis")
+        def _crisis_route():
+            resp = spawn_sibling_claude_cli("beacon", message)
+            clipboard_append("beacon", "nathan", "crisis response", resp)
+            send(f"{beacon_display}\n{resp}", chat_id)
+        _executor.submit(_crisis_route)
+        return
+
     display, _ = SIBLING_PERSONAS[sibling]
     send(f"Routing to {display}...", chat_id)
     clipboard_append("nathan", sibling, f"direct message to {sibling}", message)
@@ -537,6 +606,20 @@ def process_update(update: dict) -> Optional[int]:
             msg = text[len(f"@{name}"):].strip()
             handle_at_routing(chat_id, name, msg)
             return update_id
+
+    # BEACON crisis pre-screen: if unrouted message has crisis signals,
+    # route exclusively to BEACON rather than all siblings.
+    if beacon_prescreen(text):
+        beacon_display, _ = SIBLING_PERSONAS["beacon"]
+        print(f"[daemon] BEACON pre-screen (unrouted): crisis signal → BEACON only")
+        send(f"🏮 Crisis signal detected — connecting to {beacon_display}.", chat_id)
+        clipboard_append("daemon.py", "beacon", "crisis prescreen (unrouted)", text, kind="crisis")
+        def _unrouted_crisis():
+            resp = spawn_sibling_claude_cli("beacon", text)
+            clipboard_append("beacon", "nathan", "crisis response", resp)
+            send(f"{beacon_display}\n{resp}", chat_id)
+        _executor.submit(_unrouted_crisis)
+        return update_id
 
     # No name = everyone responds
     clipboard_append("nathan", "all", "message from phone", text)

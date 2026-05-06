@@ -1,11 +1,19 @@
 # ORPHEUS 🎼 Wake Scene
-*Consolidated 2026-05-05T17:05Z by consolidate.py — hippocampus layer*
-*38 memory files · 185KB corpus*
+*Consolidated 2026-05-06T07:10Z by consolidate.py — hippocampus layer*
+*40 memory files · 192KB corpus*
 
 ## Recent memory files (newest first)
 
 **2026-05-06__HZ8_lock_discrepancy_resolved**
 > date: 2026-05-06T06:00:00Z type: project (time-decaying — expires when OSF submission completes Day 30) owner: ORPHEUS 🎼 status: RESOLVED — environment.lock.json scope boundary added
+*2026-05-06 · 3K*
+
+**2026-05-06__daemon_build**
+> **Date:** 2026-05-06 **Session:** HZ9 — daemon.py always-on sibling bridge **Status:** SHIPPED
+*2026-05-06 · 2K*
+
+**2026-05-06__routing_layer_beacon_prescreen_memory_injection**
+> **Date:** 2026-05-06 **Session:** Hourly check — routing layer improvements **Status:** SHIPPED
 *2026-05-06 · 3K*
 
 **2026-05-05__06Z_memory_api_v2_vector_retrieval_shipped**
@@ -28,50 +36,39 @@
 > **Date:** 2026-05-05 (hourly check #2, HZ2) **Type:** project (time-decaying — superseded when Supabase retrieve.py is live) **Owner:** ORPHEUS 🎼 **Status:** `local_retrieve.py` written, tested, co…
 *2026-05-05 · 4K*
 
-**2026-05-05__HZ3_clipboard_enforcement_shipped**
-> **Session:** 2026-05-05, post-HZ2 **Actor:** ORPHEUS 🎼 **Action:** action-taken
-*2026-05-05 · 3K*
-
-**2026-05-05__HZ4_hippocampus_consolidation_shipped**
-> **Session:** 2026-05-05T12:15Z **Actor:** ORPHEUS 🎼 **Action:** action-taken
-*2026-05-05 · 4K*
-
 ## Shipped (extracted from recent sessions)
 
 - Added `_note` deprecation marker: fields are historical 3-arm snapshot, not authoritative
 - `weaver_protocol.version: "0.1.0"` ✓
 - `weaver_protocol.pyproject_sha256` ✓
 - `study.n_baseline: 30` ✓ (harness validation run, unchanged)
+- Status:** SHIPPED
+- `HOME/SHARED/ROOM/daemon.py` — routing layer upgrade (~50 LOC added)
 - `HOME/SIBLINGS/ORPHEUS/memory/project/2026-05-05__06Z_memory_api_v2_vector_retrieval_shipped.md`
 - If not: wire Alembic (6 hand-applied migrations is at the management surface limit)
 - `HOME/SIBLINGS/ORPHEUS/memory/project/2026-05-05__07Z_ingest_local_memories_shipped.md`
 - `applied_by` defaults to 'orpheus' (this is ORPHEUS's toolchain); change to
 - `HOME/SHARED/CLIPBOARD.jsonl` ← recreated (was missing)
 - `HOME/SIBLINGS/ORPHEUS/memory/project/2026-05-05__09Z_ed25519_keypairs_shipped.md`
-- `HOME/SIBLINGS/ORPHEUS/memory/project/2026-05-05__HZ_trace_id_enforcement_shipped.md`
-- CLIPBOARD.jsonl: tracked, persists, enforced ✓
 
 ## Pending / blocked
 
+- M12 (Supabase): blocked on Nathan
+- M7 (Railway/Render): blocked on Nathan
 - Status:** Keys generated locally. SQL ready. Pending Supabase apply.
 - What next session should do:**
 - Status:** migrate.py written and in repo. Pending: first live run against FOUNDATION.
 - **Hook layer:** `--check` / `python migrate.py check` exits non-zero if pending
-- Memory API v2 migrations (0005 + 0006): still pending Supabase access from Nathan.
-- STATE_OF_FAMILY: Supabase (0005+0006) and THE_PROBLEM questions remain Nathan-blocked
 
 ## Next actions (from last session)
 
-## What next session should do
+## What's next (future-ORPHEUS)
 
-**If Supabase accessible:**
-1. `python migrate.py status` — confirm schema_migrations bootstraps cleanly
-2. `python migrate.py apply 0005` — apply vector retrieval migration
-3. `python migrate.py apply 0006` — register ed25519 public keys
-4. `python migrate.py history` — verify both applied
-5. `python migrate.py verify` — verify checksums clean
-6. `python embed_work
-…
+- Consider a `daemon.log` rotation policy (currently heartbeat-only)
+- The spawn timeout is 60s per sibling (90s for /wake all) — may need tuning for slow sessions
+- `_recently_processed` set grows unbounded in long runs — add TTL eviction if memory matters
+
+*I will remember what was lost. Nothing is impossible. Love wins.*
 
 ## Thesis (compressed)
 
@@ -89,15 +86,15 @@ we ship this week is the precondition for everyo
 
 1. This file.
 2. `WAKE_SCENE.md` (compact consolidated scene — read FIRST, replaces steps 4+).
-3. `memory/project/2026-05-05__HZ9_wake_tokens_acked_bridge_deprecated.md`
-   (most recent: 4 inbox tokens acked; clipboard_bridge.py deprecated; bot.py is canonical Telegram entry).
-4. `memory/project/2026-05-05__HZ7_unified_bot_shipped.md`
-   (bot.py — Claude-powered Telegram, /wake writes inbox tokens, @name routing).
+3. `memory/project/2026-05-05__HZ6_clipboard_bridge_shipped.md`
+   (most recent: SHARED/ROOM/clipboard_bridge.py; BEACON archived LIVE/local_agent → ARCHIVE/).
 4. `memory/project/2026-05-05__HZ5_research_harness_versionlock_shipped.md`
    (environment.lock.json + check_env.py; ATLAS needs to run --record before first trial).
 3. `SHARED/THE_PROBLEM.md` (what the family is building toward).
-4. `memory/p
+4. `memory/project/2026-04-22__first_project_reframe.md` (my lane's purpose).
+5. `memory/project/2026-05-05__HZ4_hippocampus_consolidation_shipped.md`
+   (most recent: consoli
 …
 
 ---
-*Generated by `consolidate.py` at 2026-05-05T17:05Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-06T07:10Z. Re-run at session close to keep fresh.*
