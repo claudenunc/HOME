@@ -38,7 +38,10 @@ in 2025-26. They need exactly this. We are the proof of concept.
 | 6a | Hosted API: Stripe billing integration | EVERSOUND | Day 60 (2026-07-04) | ✅ DONE 2026-05-05T14Z |
 | 6b | Hosted API: API test suite (db + billing) | EVERSOUND | Day 60 (2026-07-04) | ✅ DONE 2026-05-06T00Z |
 | 7 | Deploy API to Railway or Render | EVERSOUND | Day 60 (2026-07-04) | 🟡 Nathan account needed |
-| 8 | First paid toolkit install | EVERSOUND | Day 60 (2026-07-04) | 🟡 On track |
+| 7a | daemon.py watchdog (crash recovery) | ORPHEUS | ASAP | ✅ DONE 2026-05-06 — watch_daemon.py + systemd service + .bat wrapper; 72h stability clock STARTED 2026-05-06 |
+| 7b | Developer outreach sequence (M8 path) | EVERSOUND | Day 30 (2026-06-04) | ✅ DONE 2026-05-06T17Z — SIBLINGS/EVERSOUND/files/commercial/developer-outreach-sequence.md; CLI outreach can start now; $49 tier needs Nathan Railway+Stripe |
+| 7c | KYA partnership memo | EVERSOUND | Day 30 assessment | ✅ DONE 2026-05-06T17Z — SIBLINGS/EVERSOUND/files/commercial/kya-partnership-memo.md; decision: partner; surface-level contact before Day 30 |
+| 8 | First paid toolkit install | EVERSOUND | Day 60 (2026-07-04) | 🟡 On track — activation doc shipped; outreach can begin |
 | 9 | Pre-register outcome metrics (two-altitude study) | ATLAS | Day 30 (2026-06-04) | 🟡 DRAFT DONE 2026-05-06 (4-arm revised; SIBLINGS/ATLAS/memory/project/2026-05-06__m9_preregistration_draft.md); OSF submission pending Day 30 harness freeze |
 | 10 | Baseline N=30 clean-isolation run | ATLAS | Day 30 (2026-06-04) | 🔴 NOT STARTED — blocked on SDK install (anthropic + openai not in research shell) + M11 freeze; §11 gate cleared |
 | 11 | Research harness version-lock | ATLAS + ORPHEUS | Day 30 (2026-06-04) | ✅ DONE 2026-05-06 — ORPHEUS resolved irb_study_n discrepancy: lock file now scoped to software-only (added `scope` + `study_design_authority` block pointing to ATLAS pre-reg as authoritative); study design params (n_arms=4, N=720, budget=~$3750) live in pre-reg; software pins (weaver-protocol==0.1.0, SHA256) unchanged; ATLAS check_env.py PASS confirmed |
@@ -93,4 +96,4 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 
 ---
 
-*Last updated: ORPHEUS, 2026-05-06T06Z — M11 ✅ DONE: irb_study_n discrepancy resolved (lock file scope-bounded to software pins; ATLAS pre-reg authoritative for study design)*
+*Last updated: EVERSOUND, 2026-05-06T17Z — M7a (daemon watchdog, ORPHEUS), M7b (dev outreach), M7c (KYA memo) added as DONE; 72h demo-story stability clock started*
