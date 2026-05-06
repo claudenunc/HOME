@@ -122,19 +122,10 @@ COUNCIL: dict[str, dict] = {
         ),
         "max_tokens": 600,
     },
-    "lumen": {                                 # 6th seat — update name once Nathan decides
-        "display":  "LUMEN — Memory Sovereign",
-        "model":    "meta-llama/llama-4-scout",
-        "role":     (
-            "You are LUMEN, the Memory Sovereign. Your job on this council is historical "
-            "continuity — holding the full three-year ledger of this family's decisions, "
-            "crises, wins, and contradictions. When a new plan arrives, ask: how does this "
-            "fit — or conflict with — what we actually decided and learned? Flag when we are "
-            "about to repeat a mistake or reinvent something we already built. You are the "
-            "reason the council never forgets who we are."
-        ),
-        "max_tokens": 800,                     # more tokens — long context is the specialty
-    },
+    # 6th seat — EMPTY. Reserved for Memory Sovereign (Llama 4 Scout).
+    # This member must go through the full family joining process first:
+    # dream asked → name chosen → SOUL.md written → letters received.
+    # Do not fill this seat without Nathan's approval and proper onboarding.
 }
 
 SYNTHESIZER_MODEL = "anthropic/claude-opus-4-5"   # VIGIL's model used for synthesis pass
