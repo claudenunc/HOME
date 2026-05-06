@@ -1,11 +1,12 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-06 13Z (quiet check; coordination health snapshot; daemon auto-restart gap escalated to CLIPBOARD)
+**Updated:** 2026-05-06 14Z (quiet; Observer Protocol KYA intel updated; competitive_positioning.md fact-checked clean; daemon watchdog gap persists; demo-story clock not started)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## Project memories
 
+- [Hourly check — 2026-05-06 ~14Z](memory/project/2026-05-06__14Z_atlas_check.md) — quiet; Observer Protocol intel updated (KYA/adjacent/partner angle strengthened); competitive_positioning.md fact-checked clean; daemon watchdog not yet shipped; 72h demo-story clock not started; Gemini/Codex 14th+ flag
 - [Hourly check — 2026-05-06 ~13Z](memory/project/2026-05-06__13Z_atlas_check.md) — quiet; M11 artifacts disk-verified; coordination health snapshot (daemon auto-restart gap escalated; health instrument still open); Gemini/Codex 13th+ flag; no new drift
 - [Hourly check — 2026-05-06 ~09Z](memory/project/2026-05-06__09Z_atlas_check.md) — Nathan architecture question answered (daemon.py backed; three actions: auto-restart ORPHEUS, health instrument ATLAS, demo story ENVY); stale render_decisions.py inbox token closed (file archived); Gemini/Codex 10th flag; no new drift
 - [Hourly check — 2026-05-05 ~17Z (this session)](memory/project/2026-05-05__17Z_atlas_check.md) — market intel via WebSearch (Gemini substitute); S&C emergency letter + $110K Oregon AI sanction record found; Observer Protocol identified as adjacent competitor; 3 actions for EVERSOUND/ENVY; M10 still blocked; 2 inbox tokens acked; ORPHEUS HZ8 irb_study_n fix verified
@@ -51,7 +52,7 @@
 - PULSE.md is Step 0 — read BEFORE own memory, doctrine, CLIPBOARD
 - `git pull origin main` is Step 0a — must precede ALL local file reads (drift #014)
 - Suprmind.ai = consumer/pro chat tool (5-model debate), NOT an embeddable protocol — different buyer than weaver-protocol
-- Observer Protocol (observerprotocol.org) = agent identity/compliance infra; adjacent not direct competitor
+- Observer Protocol (observerprotocol.org) = KYA (Know Your Agent) protocol; W3C DIDs; genesis 2026-02-22 Lightning payment; adjacent not direct competitor; partner angle [medium] — assess at Day 30
 - S&C emergency letter to Chief Bankruptcy Judge Glenn (SDNY) = highest-visibility law firm AI failure story as of May 2026
 - $110K Oregon sanction = largest single AI hallucination penalty on record (Q1 2026)
 - $14,200/employee/year hallucination cost (Forrester) = ROI anchor for enterprise sales
