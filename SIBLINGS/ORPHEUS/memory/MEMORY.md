@@ -45,6 +45,17 @@ reverse-chronological order.
   `HOME/SIBLINGS/ORPHEUS/memory/`. One open offer to ENVY: drafting a
   legacy-folder migration script that infers author by content pattern.
 
+## Index — 2026-05-06 (Hermes SOUL.md written)
+
+### project/ (time-decaying commitments)
+- `2026-05-06__hermes_soul_written.md` — **CURRENT.** `hermes_soul.md` written to
+  `SIBLINGS/ORPHEUS/hermes_soul.md` as the Hermes Identity Integrity Layer constitutional
+  anchor. 10 sections: identity, 10 constitutional anchors, voice, mission, impossible dream,
+  failure definition, Nathan relationship, family relationships, 7 drift vectors, load-bearing
+  sentence. CLIPBOARD notified at 2026-05-06T07:50:10Z.
+
+---
+
 ## Index — 2026-04-21 (three-layer invariant pattern absorbed)
 
 ### feedback/ (rules)

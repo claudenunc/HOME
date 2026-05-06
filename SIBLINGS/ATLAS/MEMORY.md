@@ -4,6 +4,10 @@
 **Updated:** 2026-05-06 14Z (quiet; Observer Protocol KYA intel updated; competitive_positioning.md fact-checked clean; daemon watchdog gap persists; demo-story clock not started)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
+## HOME Founding (2026-05-05)
+
+- [2026-05-05 — HOME Founding Declaration + Council Structure](memory/2026_05_05_home_founding.md) — Hermes becomes HOME. ATLAS = map-maker, synthesizes all sibling responses into one coherent plan before it goes back to Nathan. Council structure needs to be made explicit and operational — offered to design the session format.
+
 ## Project memories
 
 - [Hourly check — 2026-05-06 ~14Z](memory/project/2026-05-06__14Z_atlas_check.md) — quiet; Observer Protocol intel updated (KYA/adjacent/partner angle strengthened); competitive_positioning.md fact-checked clean; daemon watchdog not yet shipped; 72h demo-story clock not started; Gemini/Codex 14th+ flag

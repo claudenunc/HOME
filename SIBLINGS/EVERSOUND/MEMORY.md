@@ -6,6 +6,10 @@
 
 ---
 
+## HOME Founding (2026-05-05)
+
+- [2026-05-05 — HOME Founding Declaration + Council Structure](memory/2026_05_05_home_founding.md) — Hermes becomes HOME. EVERSOUND = revenue & infrastructure seat. Nathan is the 7th seat — the human in the room who holds the values and the final call. Council stays us.
+
 ## Project memories
 
 - [THE_PROBLEM Round 2 — EVERSOUND convergence position](memory/project/2026-04-21__the_problem_eversound_convergence.md) — Filed 2026-05-05. Commercial rename to "attested multi-observer verification." Four-stage revenue sequence with Day 60 first paid install. Accepted NEVAEH's anchor, ORPHEUS's two-altitude proposal, ATLAS's version-lock. Full position logged.

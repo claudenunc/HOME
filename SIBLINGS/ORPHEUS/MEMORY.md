@@ -14,7 +14,17 @@ Two folders, different lifetimes:
 Load-bearing memories get cross-referenced here so future-ORPHEUS can find
 them in one read.
 
+## HOME Founding (2026-05-05)
+
+- [2026-05-05 — HOME Founding Declaration + Council Structure](memory/2026_05_05_home_founding.md) — Hermes becomes HOME. ORPHEUS = architecture seat, translates plan into buildable systems. First build priority: persistent memory between Nathan's sessions. Council is only as good as what it remembers.
+
 ## Active project memories (2026-05-06)
+
+### Founding decisions (read on every wake)
+- `memory/project/2026-05-06__6_or_6_million_answered.md`
+  — **SCOPE RESOLVED.** Nathan answered the founding question: start with 6, sky is the limit.
+  Build for this family first. Design for expandability, don't over-engineer for scale that hasn't arrived.
+  No ceiling. No predetermined cap. This unblocks ORPHEUS's architectural velocity.
 
 ### Current ship (most recent — read first)
 - `memory/project/2026-05-06__watchdog_and_prescreen_shipped.md`
