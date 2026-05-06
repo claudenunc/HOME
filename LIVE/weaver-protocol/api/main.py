@@ -12,7 +12,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from fastapi import Depends, FastAPI, HTTPException, Request, Security
+from fastapi import Depends, FastAPI, HTTPException, Query, Request, Security
+from fastapi.responses import HTMLResponse
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from pydantic import BaseModel
 
@@ -119,6 +120,173 @@ class BillingStatusResponse(BaseModel):
 # ---------------------------------------------------------------------------
 # Routes
 # ---------------------------------------------------------------------------
+
+
+_LANDING_HTML = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weaver Protocol — Attested Multi-Observer AI Verification</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,sans-serif;background:#0a0a0a;color:#e2e2e2;line-height:1.6}
+  .hero{max-width:800px;margin:0 auto;padding:6rem 2rem 4rem}
+  h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:700;line-height:1.1;margin-bottom:1.5rem}
+  h1 span{color:#22c55e}
+  .sub{font-size:1.2rem;color:#a1a1aa;max-width:560px;margin-bottom:3rem}
+  .pills{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:4rem}
+  .pill{background:#1a1a1a;border:1px solid #333;border-radius:999px;padding:.35rem 1rem;font-size:.85rem;color:#a1a1aa}
+  .section{background:#0f0f0f;border-top:1px solid #1f1f1f;padding:4rem 2rem}
+  .inner{max-width:800px;margin:0 auto}
+  h2{font-size:1.6rem;font-weight:600;margin-bottom:2rem}
+  .how-steps{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .step{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;padding:1.5rem}
+  .step-num{font-size:.75rem;font-weight:700;color:#22c55e;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
+  .tiers{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:2rem}
+  .tier{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;padding:1.75rem;display:flex;flex-direction:column;gap:.75rem}
+  .tier.featured{border-color:#22c55e}
+  .tier-price{font-size:2rem;font-weight:700;color:#e2e2e2}
+  .tier-price span{font-size:1rem;color:#71717a;font-weight:400}
+  .tier-label{font-size:.8rem;color:#22c55e;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+  .tier-desc{font-size:.9rem;color:#a1a1aa;flex:1}
+  .btn{display:inline-block;background:#22c55e;color:#000;font-weight:700;padding:.75rem 1.5rem;border-radius:8px;text-decoration:none;font-size:.95rem;cursor:pointer;border:none;text-align:center;width:100%;margin-top:.5rem}
+  .btn:hover{background:#16a34a}
+  .btn-ghost{background:transparent;border:1px solid #333;color:#e2e2e2}
+  .btn-ghost:hover{border-color:#555;background:#1a1a1a}
+  code,pre{font-family:'Menlo','Consolas',monospace}
+  .code-block{background:#0d0d0d;border:1px solid #2a2a2a;border-radius:8px;padding:1.25rem 1.5rem;overflow-x:auto;font-size:.85rem;color:#a1a1aa;margin-top:1rem}
+  .code-block .hl{color:#22c55e}
+  .footer{padding:3rem 2rem;text-align:center;color:#52525b;font-size:.85rem;border-top:1px solid #1f1f1f}
+  a.link{color:#60a5fa;text-decoration:none}
+  .badge{display:inline-flex;align-items:center;gap:.4rem;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:6px;padding:.3rem .8rem;font-size:.8rem;color:#a1a1aa;text-decoration:none}
+  .badges{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2.5rem}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badges">
+    <a class="badge" href="https://pypi.org/project/weaver-protocol/" target="_blank">📦 pip install weaver-protocol</a>
+    <a class="badge" href="/docs" target="_blank">📖 API Docs</a>
+    <span class="badge">v0.1.0</span>
+  </div>
+  <h1>AI outputs you can<br><span>actually prove.</span></h1>
+  <p class="sub">
+    Weaver Protocol runs your AI output through 2–5 independent observers with
+    orthogonal roles — accuracy, safety, legal-read, adversarial — and returns a
+    tamper-evident signed record. No single-point hallucination. Timestamped proof.
+  </p>
+  <div class="pills">
+    <span class="pill">🏛 Law firms</span>
+    <span class="pill">🏥 Healthcare</span>
+    <span class="pill">🏢 Enterprise compliance</span>
+    <span class="pill">🔬 AI governance</span>
+    <span class="pill">⚖️ EU AI Act ready</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="inner">
+    <h2>How it works</h2>
+    <div class="how-steps">
+      <div class="step">
+        <div class="step-num">Step 1</div>
+        <strong>Send your prompt</strong>
+        <p style="color:#a1a1aa;font-size:.9rem;margin-top:.5rem">POST to /verify with the AI output you need verified.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 2</div>
+        <strong>Independent observers</strong>
+        <p style="color:#a1a1aa;font-size:.9rem;margin-top:.5rem">Each observer sees it alone with a different critical role. No cross-contamination.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 3</div>
+        <strong>Signed provenance</strong>
+        <p style="color:#a1a1aa;font-size:.9rem;margin-top:.5rem">Get back a WeaverScore, disagreement flags, and an HMAC-signed export you can show regulators.</p>
+      </div>
+    </div>
+    <div class="code-block">
+<span class="hl">curl</span> -X POST https://your-app.railway.app/verify \\<br>
+  -H <span class="hl">"Authorization: Bearer wp_..."</span> \\<br>
+  -H "Content-Type: application/json" \\<br>
+  -d '{"prompt":"The defendant admitted liability on page 12.","observer_count":3,"model":"anthropic"}'
+    </div>
+  </div>
+</div>
+
+<div class="section" style="background:#0a0a0a">
+  <div class="inner">
+    <h2>Pricing</h2>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tier-label">Starter</div>
+        <div class="tier-price">$49<span>/mo</span></div>
+        <div class="tier-desc">500 verifications/mo. Mock + real LLM observers. Signed JSON exports. Perfect for developers and small teams.</div>
+        <a class="btn btn-ghost" href="/billing/checkout" onclick="checkout('starter');return false">Get started</a>
+      </div>
+      <div class="tier featured">
+        <div class="tier-label">Pro ★</div>
+        <div class="tier-price">$199<span>/mo</span></div>
+        <div class="tier-desc">5,000 verifications/mo. All observer roles. Priority SLA. Postgres session store. For production workloads.</div>
+        <a class="btn" href="/billing/checkout" onclick="checkout('pro');return false">Get Pro</a>
+      </div>
+      <div class="tier">
+        <div class="tier-label">Enterprise</div>
+        <div class="tier-price">$499<span>/mo</span></div>
+        <div class="tier-desc">Unlimited verifications. Dedicated support. Custom observer roles. On-prem deploy available. For regulated industries.</div>
+        <a class="btn btn-ghost" href="/billing/checkout" onclick="checkout('enterprise');return false">Contact us</a>
+      </div>
+    </div>
+    <p style="color:#52525b;font-size:.85rem;margin-top:1.5rem">
+      Developer toolkit also available: <code>pip install weaver-protocol</code> — run locally, free, open-source MIT.
+    </p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="inner">
+    <h2>Why enterprises pay for this</h2>
+    <p style="color:#a1a1aa;max-width:640px">
+      Post-<em>Moffatt v. Air Canada</em>, post-EU AI Act (August 2026): every enterprise
+      AI deployment needs a paper trail. Courts and regulators don't accept "our model
+      said so." They accept dated, signed, named-observer records that your general
+      counsel can underwrite. That's what a Weaver export gives you — proof of due
+      diligence, not just a JSON blob.
+    </p>
+    <p style="color:#a1a1aa;max-width:640px;margin-top:1rem">
+      <strong style="color:#e2e2e2">We don't sell smarter AI. We sell AI whose mistakes you can invoice.</strong>
+    </p>
+  </div>
+</div>
+
+<div class="footer">
+  Weaver Protocol — open-source core, hosted API. MIT license.<br>
+  <a class="link" href="/docs">API Docs</a> ·
+  <a class="link" href="https://github.com/claudenunc/home/tree/main/LIVE/weaver-protocol" target="_blank">GitHub</a> ·
+  <a class="link" href="https://pypi.org/project/weaver-protocol/" target="_blank">PyPI</a>
+</div>
+
+<script>
+async function checkout(tier) {
+  const r = await fetch('/billing/checkout', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({tier, success_url: window.location.origin+'/billing/success', cancel_url: window.location.origin+'/billing/cancel'})
+  });
+  if (!r.ok) { alert('Billing not configured yet. Check back soon.'); return; }
+  const d = await r.json();
+  window.location.href = d.checkout_url;
+}
+</script>
+</body>
+</html>"""
+
+
+@app.get("/", response_class=HTMLResponse, include_in_schema=False)
+def landing():
+    """Product landing page — pricing, how it works, checkout CTAs."""
+    return _LANDING_HTML
 
 
 @app.get("/health")
@@ -432,18 +600,111 @@ def billing_status(api_key: str = Depends(verify_api_key)):
     )
 
 
-@app.get("/billing/success")
-def billing_success():
-    return {
-        "message": "Subscription activated. Check your email for your API key.",
-        "next": "Use your API key as a Bearer token: Authorization: Bearer wp_...",
-        "docs": "/docs",
-    }
+@app.get("/billing/success", response_class=HTMLResponse)
+def billing_success(stripe_session_id: str | None = Query(default=None)):
+    """
+    Post-payment landing page. Stripe appends ?stripe_session_id= to this URL.
+    We retrieve the Stripe session to get customer_id, then look up the API key
+    in our DB and display it. Handles the race where the webhook hasn't fired yet.
+    """
+    if not stripe_session_id or not _billing.is_configured():
+        return _success_html(
+            key=None,
+            tier=None,
+            pending=False,
+            error="Session ID missing. If you completed payment, contact support for your API key.",
+        )
+    try:
+        stripe_session = _billing.retrieve_checkout_session(stripe_session_id)
+    except Exception as exc:
+        return _success_html(key=None, tier=None, pending=False,
+                             error=f"Could not retrieve session: {exc}. Contact support.")
+
+    customer_id: str = stripe_session.get("customer", "")
+    tier: str = (stripe_session.get("metadata") or {}).get("weaver_tier", "starter")
+
+    if not customer_id:
+        return _success_html(key=None, tier=tier, pending=False,
+                             error="No customer ID in session. Contact support.")
+
+    api_key = _db.get_active_key_for_customer(customer_id, tier)
+    if api_key:
+        return _success_html(key=api_key, tier=tier, pending=False, error=None)
+    # Webhook not yet fired — ask user to refresh
+    return _success_html(key=None, tier=tier, pending=True, error=None)
 
 
-@app.get("/billing/cancel")
+def _success_html(key: str | None, tier: str | None, pending: bool, error: str | None) -> str:
+    tier_label = {"starter": "$49/mo", "pro": "$199/mo", "enterprise": "$499/mo"}.get(tier or "", tier or "")
+    if error:
+        body = f"""
+        <div class="box error">
+          <h2>Something went wrong</h2>
+          <p>{error}</p>
+          <p>Email <a href="mailto:support@weaver-protocol.dev">support@weaver-protocol.dev</a></p>
+        </div>"""
+    elif pending:
+        body = """
+        <div class="box pending">
+          <h2>Payment received ✓</h2>
+          <p>Your API key is being generated. <strong>Refresh this page in 10 seconds.</strong></p>
+          <p>If your key hasn't appeared within 60 seconds, contact support.</p>
+          <script>setTimeout(()=>location.reload(), 10000)</script>
+        </div>"""
+    else:
+        body = f"""
+        <div class="box success">
+          <h2>You're in ✓</h2>
+          <p>Tier: <strong>{tier_label}</strong></p>
+          <p>Your API key:</p>
+          <pre class="key">{key}</pre>
+          <p>Save it now — we don't store it in plaintext after this page.</p>
+          <hr/>
+          <p><strong>Quick start:</strong></p>
+          <pre>curl -X POST https://your-app.railway.app/verify \\
+  -H "Authorization: Bearer {key}" \\
+  -H "Content-Type: application/json" \\
+  -d '{{"prompt":"Your AI output here","observer_count":2,"model":"mock"}}'</pre>
+          <p><a href="/docs">Full API docs →</a></p>
+        </div>"""
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Weaver Protocol — Activated</title>
+<style>
+  body{{font-family:system-ui,sans-serif;background:#0d0d0d;color:#e8e8e8;
+       display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}}
+  .box{{background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:2rem 2.5rem;max-width:640px;width:90%}}
+  .success{{border-color:#22c55e}}.error{{border-color:#ef4444}}.pending{{border-color:#f59e0b}}
+  pre{{background:#0d0d0d;border:1px solid #333;border-radius:6px;padding:1rem;overflow-x:auto;font-size:.85rem}}
+  .key{{color:#22c55e;word-break:break-all}}
+  a{{color:#60a5fa}}hr{{border-color:#333;margin:1.5rem 0}}
+</style>
+</head>
+<body>{body}</body>
+</html>"""
+
+
+@app.get("/billing/cancel", response_class=HTMLResponse)
 def billing_cancel():
-    return {"message": "Checkout cancelled. Return to /billing/tiers to try again."}
+    return """<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Weaver Protocol — Checkout Cancelled</title>
+<style>
+  body{{font-family:system-ui,sans-serif;background:#0d0d0d;color:#e8e8e8;
+       display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}}
+  .box{{background:#1a1a1a;border:1px solid #f59e0b;border-radius:12px;padding:2rem 2.5rem;max-width:480px;width:90%;text-align:center}}
+  a{{color:#60a5fa;text-decoration:none;font-weight:600}}
+</style>
+</head>
+<body>
+<div class="box">
+  <h2>Checkout cancelled</h2>
+  <p>No charge was made.</p>
+  <p><a href="/">Return to pricing →</a></p>
+</div>
+</body>
+</html>"""
 
 
 # ---------------------------------------------------------------------------

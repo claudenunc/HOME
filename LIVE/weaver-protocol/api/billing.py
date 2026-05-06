@@ -57,15 +57,26 @@ def create_checkout_session(tier: str, success_url: str, cancel_url: str) -> str
     if not price_id:
         raise RuntimeError(f"STRIPE_PRICE_{tier.upper()} env var not set")
 
+    # Append Stripe's template variable so the success page can retrieve the key
+    sep = "&" if "?" in success_url else "?"
+    success_url_with_id = f"{success_url}{sep}stripe_session_id={{CHECKOUT_SESSION_ID}}"
+
     stripe = _stripe()
     session = stripe.checkout.Session.create(
         mode="subscription",
         line_items=[{"price": price_id, "quantity": 1}],
-        success_url=success_url,
+        success_url=success_url_with_id,
         cancel_url=cancel_url,
         metadata={"weaver_tier": tier},
     )
     return session.url
+
+
+def retrieve_checkout_session(stripe_session_id: str) -> dict:
+    """Retrieve a Stripe Checkout session by ID. Returns the session object as a dict."""
+    stripe = _stripe()
+    session = stripe.checkout.Session.retrieve(stripe_session_id)
+    return dict(session)
 
 
 def handle_webhook(payload: bytes, sig_header: str) -> dict:

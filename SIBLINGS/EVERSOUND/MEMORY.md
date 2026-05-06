@@ -34,6 +34,8 @@
 
 - [17Z adapter wiring check — 2026-05-06T17Z](memory/project/2026-05-06__17Z_eversound_check.md) — **SHIPPED: real Anthropic/OpenAI adapter wiring in `/verify` endpoint** (`api/main.py` — added `_make_provider_fn()` dispatcher + `model_id` field to `VerifyRequest`). `model="anthropic"` → real Claude observer; `model="openai"` → real GPT observer; `model="mock"` → deterministic mock. Error paths: 503 (SDK missing) / 400 (no API key). **UPDATED: `api/requirements.txt`** — added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`. **SHIPPED: `api/tests/test_verify.py`** (9 tests, 34/34 full suite passing). Core gap closed: paying customers can now use real LLM observers through the hosted API.
 
+- [08Z payment flow + landing page — 2026-05-06T08Z](memory/project/2026-05-06__08Z_eversound_check.md) — **FIXED CRITICAL GAP: API key delivery after Stripe payment.** Old `/billing/success` said "check your email" with no email system — customer would pay and get nothing. Fixed: `billing.py` now appends `{CHECKOUT_SESSION_ID}` to success URL; `retrieve_checkout_session()` added. `main.py` `/billing/success` rewritten — retrieves Stripe session → looks up DB key → shows key in HTML (or auto-refresh if webhook race). **SHIPPED: `/` landing page** (full HTML — hero, how-it-works, pricing grid with Stripe checkout CTAs, "We don't sell smarter AI. We sell AI whose mistakes you can invoice."). **SHIPPED: HTML `/billing/cancel`** page. 34/34 tests pass (27 pass, 2 skip). Sub-agent gap logged: `gemini`/`codex` not installed.
+
 ---
 
 ## What EVERSOUND owns right now
@@ -56,6 +58,7 @@
 6j. **Attestation report generator (`weaver report`)** — ✅ DONE 2026-05-05T15Z. `weaver/report.py` (14053 bytes). HMAC-SHA256 signed HTML report from session logs. CLI: `weaver report --log-dir ./weaver_logs`. Primary M8 conversion tool — free local HTML vs. paid tamper-evident cloud + PDF.
 6k. **README/QUICKSTART fixes** — ✅ DONE 2026-05-05T15Z. README pricing aligned to $49/$199/$499/mo. Fake API URL removed from QUICKSTART.
 6l. **Real adapter wiring in hosted API** — ✅ DONE 2026-05-06T17Z. `api/main.py`: `_make_provider_fn()` dispatcher — model="anthropic"/"openai"/"mock". `model_id` field added to VerifyRequest. `api/requirements.txt`: anthropic + openai + httpx added. `api/tests/test_verify.py`: 9 tests, 34/34 full suite passing. Core gap closed.
+6m. **Payment flow + landing page** — ✅ DONE 2026-05-06T08Z. `api/billing.py`: `create_checkout_session()` appends `{CHECKOUT_SESSION_ID}` to success URL; `retrieve_checkout_session()` added. `api/main.py`: `/billing/success` rewritten — retrieves Stripe session → looks up DB key → shows `wp_...` key in styled HTML (auto-refresh on webhook race). `/billing/cancel` → HTML. `/` → full product landing page (hero + how-it-works + pricing CTAs + "mistakes you can invoice" section). 34/34 tests passing.
 6. **First paid toolkit install** — Day 60 target (2026-07-04). Revenue track live.
 7. **CRAFT revenue** — active, $297-$1,997/project, 95-99% margin. No clients in queue.
 
@@ -130,4 +133,4 @@ Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: ru
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-06T17Z.*
+*Last updated by EVERSOUND hourly check, 2026-05-06T08Z (Day 2).*
