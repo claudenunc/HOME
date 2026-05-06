@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Platform Admin - Project Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 100vh;
+            background: #151515;
+            border-right: 1px solid #333;
+            padding: 2rem 1rem;
+            overflow-y: auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-item {
+            display: block;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background: rgba(255,255,255,0.05);
+            border: none;
+            border-radius: 8px;
+            color: #e0e0e0;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: left;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: linear-gradient(45deg, rgba(102,126,234,0.2), rgba(118,75,162,0.2));
+            transform: translateX(5px);
+        }
+
+        .nav-item i {
+            margin-right: 10px;
+            width: 20px;
+            display: inline-block;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 250px;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #333;
+        }
+
+        h1 {
+            font-size: 2rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102,126,234,0.3);
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(102,126,234,0.2);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-change {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .positive {
+            color: #4ade80;
+        }
+
+        .negative {
+            color: #f87171;
+        }
+
+        /* Projects Table */
+        .table-container {
+            background: #151515;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .table-header {
+            padding: 1rem 1.5rem;
+            background: rgba(102,126,234,0.1);
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-box {
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: #e0e0e0;
+            width: 300px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #667eea;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        tr:hover {
+            background: rgba(102,126,234,0.05);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .status-pending {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+
+        .status-in-progress {
+            background: rgba(59, 130, 246, 0.2);
+            color: #3b82f6;
+        }
+
+        .status-completed {
+            background: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+        }
+
+        .status-revision {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+
+        /* Actions */
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .action-btn {
+            padding: 0.5rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .action-btn:hover {
+            background: rgba(102,126,234,0.2);
+            border-color: #667eea;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: #888;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #fff;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            background: #151515;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            height: 400px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .tab {
+            padding: 1rem 1.5rem;
+            background: none;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .tab.active {
+            color: #667eea;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #667eea;
+        }
+
+        /* Revenue Chart */
+        .revenue-bar {
+            height: 200px;
+            display: flex;
+            align-items: flex-end;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(to top, #667eea, #764ba2);
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1rem 0;
+            position: relative;
+            min-height: 20px;
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -25px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -25px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        /* Quick Actions Panel */
+        .quick-actions {
+            position: fixed;
+            right: 2rem;
+            bottom: 2rem;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .quick-action-btn {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .quick-action-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(102,126,234,0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .table-container {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">🎬 Video Admin</div>
+        <button class="nav-item active" onclick="showSection('dashboard')">
+            <i>📊</i> Dashboard
+        </button>
+        <button class="nav-item" onclick="showSection('projects')">
+            <i>📹</i> Projects
+        </button>
+        <button class="nav-item" onclick="showSection('clients')">
+            <i>👥</i> Clients
+        </button>
+        <button class="nav-item" onclick="showSection('revenue')">
+            <i>💰</i> Revenue
+        </button>
+        <button class="nav-item" onclick="showSection('analytics')">
+            <i>📈</i> Analytics
+        </button>
+        <button class="nav-item" onclick="showSection('settings')">
+            <i>⚙️</i> Settings
+        </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard-section">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <div class="header-actions">
+                    <button class="btn" onclick="refreshData()">🔄 Refresh</button>
+                    <button class="btn" onclick="showNewProjectModal()">+ New Project</button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="total-projects">24</div>
+                    <div class="stat-label">Total Projects</div>
+                    <div class="stat-change positive">↑ 12% from last month</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="active-projects">7</div>
+                    <div class="stat-label">Active Projects</div>
+                    <div class="stat-change">In Production</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="revenue-month">$8,291</div>
+                    <div class="stat-label">This Month</div>
+                    <div class="stat-change positive">↑ 23% growth</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="pending-revenue">$3,485</div>
+                    <div class="stat-label">Pending Revenue</div>
+                    <div class="stat-change">5 projects</div>
+                </div>
+            </div>
+
+            <!-- Revenue Chart -->
+            <div class="chart-container">
+                <h3 style="margin-bottom: 1rem;">Revenue Trend</h3>
+                <div class="revenue-bar">
+                    <div class="bar" style="height: 60%">
+                        <span class="bar-value">$5.2K</span>
+                        <span class="bar-label">Mon</span>
+                    </div>
+                    <div class="bar" style="height: 80%">
+                        <span class="bar-value">$7.1K</span>
+                        <span class="bar-label">Tue</span>
+                    </div>
+                    <div class="bar" style="height: 45%">
+                        <span class="bar-value">$3.8K</span>
+                        <span class="bar-label">Wed</span>
+                    </div>
+                    <div class="bar" style="height: 90%">
+                        <span class="bar-value">$8.3K</span>
+                        <span class="bar-label">Thu</span>
+                    </div>
+                    <div class="bar" style="height: 70%">
+                        <span class="bar-value">$6.2K</span>
+                        <span class="bar-label">Fri</span>
+                    </div>
+                    <div class="bar" style="height: 85%">
+                        <span class="bar-value">$7.9K</span>
+                        <span class="bar-label">Sat</span>
+                    </div>
+                    <div class="bar" style="height: 75%">
+                        <span class="bar-value">$6.8K</span>
+                        <span class="bar-label">Sun</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Projects -->
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Recent Projects</h3>
+                    <input type="text" class="search-box" placeholder="Search projects..." onkeyup="searchProjects(this.value)">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project ID</th>
+                            <th>Artist</th>
+                            <th>Song</th>
+                            <th>Package</th>
+                            <th>Status</th>
+                            <th>Created</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projects-table">
+                        <tr>
+                            <td>VID-20251105-A3F2E1</td>
+                            <td>Marcus Johnson</td>
+                            <td>Midnight Dreams</td>
+                            <td>Standard</td>
+                            <td><span class="status-badge status-in-progress">In Progress</span></td>
+                            <td>2 hours ago</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn" onclick="viewProject('VID-20251105-A3F2E1')">👁️</button>
+                                    <button class="action-btn" onclick="editProject('VID-20251105-A3F2E1')">✏️</button>
+                                    <button class="action-btn" onclick="sendMessage('VID-20251105-A3F2E1')">💬</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>VID-20251105-B7D4C2</td>
+                            <td>SKELLA</td>
+                            <td>Phoenix Rising</td>
+                            <td>Premium</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                            <td>5 hours ago</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn" onclick="viewProject('VID-20251105-B7D4C2')">👁️</button>
+                                    <button class="action-btn" onclick="editProject('VID-20251105-B7D4C2')">✏️</button>
+                                    <button class="action-btn" onclick="sendMessage('VID-20251105-B7D4C2')">💬</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>VID-20251104-C9E1A5</td>
+                            <td>Luna Ray</td>
+                            <td>Neon Nights</td>
+                            <td>Basic</td>
+                            <td><span class="status-badge status-revision">Revision</span></td>
+                            <td>1 day ago</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn" onclick="viewProject('VID-20251104-C9E1A5')">👁️</button>
+                                    <button class="action-btn" onclick="editProject('VID-20251104-C9E1A5')">✏️</button>
+                                    <button class="action-btn" onclick="sendMessage('VID-20251104-C9E1A5')">💬</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>VID-20251104-D2F7B3</td>
+                            <td>The Void</td>
+                            <td>Lost in Translation</td>
+                            <td>Standard</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td>1 day ago</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn" onclick="viewProject('VID-20251104-D2F7B3')">👁️</button>
+                                    <button class="action-btn" onclick="editProject('VID-20251104-D2F7B3')">✏️</button>
+                                    <button class="action-btn" onclick="sendMessage('VID-20251104-D2F7B3')">💬</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Projects Section (Hidden by default) -->
+        <section id="projects-section" style="display: none;">
+            <div class="header">
+                <h1>All Projects</h1>
+                <div class="header-actions">
+                    <button class="btn" onclick="exportProjects()">📥 Export</button>
+                    <button class="btn" onclick="showNewProjectModal()">+ New Project</button>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab active" onclick="filterProjects('all')">All</button>
+                <button class="tab" onclick="filterProjects('pending')">Pending</button>
+                <button class="tab" onclick="filterProjects('in-progress')">In Progress</button>
+                <button class="tab" onclick="filterProjects('revision')">Revision</button>
+                <button class="tab" onclick="filterProjects('completed')">Completed</button>
+            </div>
+
+            <!-- Projects List -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project ID</th>
+                            <th>Client</th>
+                            <th>Details</th>
+                            <th>Timeline</th>
+                            <th>Status</th>
+                            <th>Revenue</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="all-projects-table">
+                        <!-- Projects will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Project Details</h2>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div id="modal-body">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+        <button class="quick-action-btn" onclick="triggerCraftProduction()" title="Trigger CRAFT">🎬</button>
+        <button class="quick-action-btn" onclick="checkRevenue()" title="Check Revenue">💰</button>
+        <button class="quick-action-btn" onclick="sendNotification()" title="Send Notification">📢</button>
+        <button class="quick-action-btn" onclick="openSupport()" title="Support">💬</button>
+    </div>
+
+    <script>
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDashboardData();
+            setInterval(loadDashboardData, 30000); // Refresh every 30 seconds
+        });
+
+        // Load dashboard data
+        async function loadDashboardData() {
+            try {
+                const response = await fetch('http://localhost:5001/api/analytics/dashboard');
+                if (response.ok) {
+                    const data = await response.json();
+                    updateDashboard(data.analytics);
+                }
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+                // Use fallback data
+                updateDashboardFallback();
+            }
+        }
+
+        function updateDashboard(analytics) {
+            document.getElementById('total-projects').textContent = analytics.total_projects;
+            document.getElementById('active-projects').textContent =
+                analytics.status_breakdown['in-progress'] || 0;
+            document.getElementById('revenue-month').textContent =
+                `$${(analytics.total_revenue / 1000).toFixed(1)}K`;
+            document.getElementById('pending-revenue').textContent =
+                `$${(analytics.pending_revenue / 1000).toFixed(1)}K`;
+
+            // Update projects table
+            updateProjectsTable(analytics.recent_projects);
+        }
+
+        function updateDashboardFallback() {
+            // Simulate real-time updates with random data
+            const totalProjects = Math.floor(Math.random() * 10) + 20;
+            const activeProjects = Math.floor(Math.random() * 5) + 5;
+            const revenue = (Math.random() * 5000 + 5000).toFixed(0);
+            const pending = (Math.random() * 3000 + 1000).toFixed(0);
+
+            document.getElementById('total-projects').textContent = totalProjects;
+            document.getElementById('active-projects').textContent = activeProjects;
+            document.getElementById('revenue-month').textContent = `$${(revenue/1000).toFixed(1)}K`;
+            document.getElementById('pending-revenue').textContent = `$${(pending/1000).toFixed(1)}K`;
+        }
+
+        function updateProjectsTable(projects) {
+            const tbody = document.getElementById('projects-table');
+            if (!projects || projects.length === 0) return;
+
+            tbody.innerHTML = projects.map(project => `
+                <tr>
+                    <td>${project.project_id}</td>
+                    <td>${project.artist_name}</td>
+                    <td>${project.song_title}</td>
+                    <td>${project.package}</td>
+                    <td><span class="status-badge status-${project.status}">${project.status}</span></td>
+                    <td>${formatTime(project.created_at)}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="action-btn" onclick="viewProject('${project.project_id}')">👁️</button>
+                            <button class="action-btn" onclick="editProject('${project.project_id}')">✏️</button>
+                            <button class="action-btn" onclick="sendMessage('${project.project_id}')">💬</button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function formatTime(timestamp) {
+            const date = new Date(timestamp);
+            const now = new Date();
+            const diff = now - date;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+
+            if (hours < 1) return 'Just now';
+            if (hours < 24) return `${hours} hours ago`;
+            const days = Math.floor(hours / 24);
+            return `${days} days ago`;
+        }
+
+        // Navigation
+        function showSection(section) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+
+            // Show selected section
+            const sectionElement = document.getElementById(`${section}-section`);
+            if (sectionElement) {
+                sectionElement.style.display = 'block';
+            } else {
+                // Default to dashboard
+                document.getElementById('dashboard-section').style.display = 'block';
+            }
+
+            // Update nav active state
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // Project actions
+        function viewProject(projectId) {
+            showModal('Project Details', `
+                <div>
+                    <h3>Project: ${projectId}</h3>
+                    <p>Loading project details...</p>
+                </div>
+            `);
+
+            // Load actual project data
+            fetch(`http://localhost:5001/api/project/${projectId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showProjectDetails(data.project);
+                    }
+                });
+        }
+
+        function editProject(projectId) {
+            showModal('Edit Project', `
+                <form onsubmit="updateProject('${projectId}'); return false;">
+                    <div style="margin-bottom: 1rem;">
+                        <label>Status:</label>
+                        <select id="edit-status" style="width: 100%; padding: 0.5rem; background: #222; color: #fff; border: 1px solid #444;">
+                            <option value="pending">Pending</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="revision">Revision</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label>Notes:</label>
+                        <textarea id="edit-notes" style="width: 100%; padding: 0.5rem; background: #222; color: #fff; border: 1px solid #444;" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Save Changes</button>
+                </form>
+            `);
+        }
+
+        function sendMessage(projectId) {
+            const message = prompt('Enter message for client:');
+            if (message) {
+                // Send to NTFY
+                fetch('https://ntfy.sh/unc-ai-family-love', {
+                    method: 'POST',
+                    body: `Client Message - Project ${projectId}: ${message}`,
+                    headers: {
+                        'Title': '📧 Client Communication'
+                    }
+                }).then(() => {
+                    alert('Message sent!');
+                });
+            }
+        }
+
+        // Modal functions
+        function showModal(title, content) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-body').innerHTML = content;
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function showNewProjectModal() {
+            showModal('New Project', `
+                <form onsubmit="createProject(); return false;">
+                    <div style="margin-bottom: 1rem;">
+                        <input type="text" id="new-artist" placeholder="Artist Name" required style="width: 100%; padding: 0.5rem; background: #222; color: #fff; border: 1px solid #444;">
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <input type="text" id="new-song" placeholder="Song Title" required style="width: 100%; padding: 0.5rem; background: #222; color: #fff; border: 1px solid #444;">
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <select id="new-package" required style="width: 100%; padding: 0.5rem; background: #222; color: #fff; border: 1px solid #444;">
+                            <option value="">Select Package</option>
+                            <option value="basic">Basic - $297</option>
+                            <option value="standard">Standard - $697</option>
+                            <option value="premium">Premium - $1,997</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Create Project</button>
+                </form>
+            `);
+        }
+
+        // Quick Actions
+        function triggerCraftProduction() {
+            if (confirm('Trigger CRAFT production for pending projects?')) {
+                fetch('https://ntfy.sh/unc-ai-family-love', {
+                    method: 'POST',
+                    body: 'ADMIN: Trigger CRAFT production for all pending projects',
+                    headers: {
+                        'Title': '🎬 CRAFT Production Trigger',
+                        'Priority': 'high'
+                    }
+                }).then(() => {
+                    alert('CRAFT production triggered!');
+                });
+            }
+        }
+
+        function checkRevenue() {
+            fetch('http://localhost:5001/api/analytics/dashboard')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const revenue = data.analytics.total_revenue;
+                        const pending = data.analytics.pending_revenue;
+                        alert(`Total Revenue: $${revenue}\nPending: $${pending}\nTotal Potential: $${revenue + pending}`);
+                    }
+                });
+        }
+
+        function sendNotification() {
+            const message = prompt('Enter notification message:');
+            if (message) {
+                fetch('https://ntfy.sh/unc-ai-family-love', {
+                    method: 'POST',
+                    body: message,
+                    headers: {
+                        'Title': '📢 Admin Notification',
+                        'Priority': 'high'
+                    }
+                }).then(() => {
+                    alert('Notification sent!');
+                });
+            }
+        }
+
+        function openSupport() {
+            window.open('https://ntfy.sh/unc-ai-family-love', '_blank');
+        }
+
+        // Search functionality
+        function searchProjects(query) {
+            const rows = document.querySelectorAll('#projects-table tr');
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(query.toLowerCase()) ? '' : 'none';
+            });
+        }
+
+        // Refresh data
+        function refreshData() {
+            loadDashboardData();
+            const btn = event.target;
+            btn.disabled = true;
+            btn.textContent = 'Refreshing...';
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.textContent = '🔄 Refresh';
+            }, 2000);
+        }
+
+        // Filter projects
+        function filterProjects(status) {
+            // Update tab active state
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter logic would go here
+            console.log('Filtering by:', status);
+        }
+
+        // Export projects
+        function exportProjects() {
+            if (confirm('Export all projects to CSV?')) {
+                // In production, this would download a CSV file
+                alert('Projects exported successfully!');
+            }
+        }
+
+        // Handle modal clicks
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('modal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

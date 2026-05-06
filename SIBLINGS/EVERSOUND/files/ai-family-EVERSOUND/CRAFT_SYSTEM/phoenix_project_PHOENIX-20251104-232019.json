@@ -1,0 +1,361 @@
+{
+  "production": {
+    "project_id": "PHOENIX-20251104-232019",
+    "artist": "eNVy",
+    "song": "Phoenix Down",
+    "audio_file": "C:\\Users\\natej\\OneDrive\\Desktop\\phoenix.mp3",
+    "duration": "3:50",
+    "created": "2025-11-04T23:20:19.200770",
+    "visual_concept": {
+      "theme": "Death and Rebirth Through Fire",
+      "style": "Dark Cinematic with Phoenix Transformation",
+      "color_evolution": [
+        "Act 1: Dark reds, blacks, orange (destruction)",
+        "Act 2: Grays, whites, silver (transition)",
+        "Act 3: Golds, blues, bright orange (rebirth)"
+      ]
+    },
+    "key_scenes": [
+      {
+        "timestamp": "0:00-0:20",
+        "name": "The Match Strike",
+        "description": "Single match illuminates face, flames spread in circle",
+        "vfx": [
+          "Fire particles",
+          "Light flicker",
+          "Smoke atmosphere"
+        ]
+      },
+      {
+        "timestamp": "0:20-1:00",
+        "name": "Destruction Phase",
+        "description": "Walking through burning cityscape, buildings crumbling",
+        "vfx": [
+          "City destruction",
+          "Fire wings forming",
+          "Thermal camera effect"
+        ]
+      },
+      {
+        "timestamp": "1:00-1:30",
+        "name": "The Fall",
+        "description": "Falling backwards in slow motion into crater",
+        "vfx": [
+          "360 rotation",
+          "Ash particles",
+          "Ground shatter"
+        ]
+      },
+      {
+        "timestamp": "1:30-2:10",
+        "name": "First Rising",
+        "description": "Phoenix wings burst, levitation from crater",
+        "vfx": [
+          "CGI phoenix wings",
+          "Particle explosion",
+          "Lens flares"
+        ]
+      },
+      {
+        "timestamp": "2:10-2:40",
+        "name": "Transformation",
+        "description": "Mirror maze showing stages of growth",
+        "vfx": [
+          "Multiple reflections",
+          "Fire tattoos",
+          "Time-lapse effects"
+        ]
+      },
+      {
+        "timestamp": "2:40-3:20",
+        "name": "The Question",
+        "description": "Minimalist power, direct camera address",
+        "vfx": [
+          "Spotlight effects",
+          "Visual responses to lyrics",
+          "Color explosion"
+        ]
+      },
+      {
+        "timestamp": "3:20-3:50",
+        "name": "Full Phoenix",
+        "description": "Complete transformation, flying over rebuilt city",
+        "vfx": [
+          "Full phoenix form",
+          "City rebuilding",
+          "Sun rays",
+          "Maximum particles"
+        ]
+      }
+    ],
+    "status": "IN_PRODUCTION",
+    "estimated_completion": "24-48 hours",
+    "budget_tier": "PREMIUM ($1,997)"
+  },
+  "shot_list": [
+    {
+      "shot": "A001",
+      "scene": "INTRO",
+      "type": "Close-up",
+      "description": "Fire/match elements shot 1",
+      "duration": "2-3 seconds",
+      "vfx": "Fire particles"
+    },
+    {
+      "shot": "A002",
+      "scene": "INTRO",
+      "type": "Close-up",
+      "description": "Fire/match elements shot 2",
+      "duration": "2-3 seconds",
+      "vfx": "Fire particles"
+    },
+    {
+      "shot": "A003",
+      "scene": "INTRO",
+      "type": "Close-up",
+      "description": "Fire/match elements shot 3",
+      "duration": "2-3 seconds",
+      "vfx": "Fire particles"
+    },
+    {
+      "shot": "A004",
+      "scene": "INTRO",
+      "type": "Close-up",
+      "description": "Fire/match elements shot 4",
+      "duration": "2-3 seconds",
+      "vfx": "Fire particles"
+    },
+    {
+      "shot": "A005",
+      "scene": "INTRO",
+      "type": "Close-up",
+      "description": "Fire/match elements shot 5",
+      "duration": "2-3 seconds",
+      "vfx": "Fire particles"
+    },
+    {
+      "shot": "B006",
+      "scene": "VERSE 1",
+      "type": "Wide",
+      "description": "Performance/narrative shot 1",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B007",
+      "scene": "VERSE 1",
+      "type": "Medium",
+      "description": "Performance/narrative shot 2",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B008",
+      "scene": "VERSE 1",
+      "type": "Close-up",
+      "description": "Performance/narrative shot 3",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B009",
+      "scene": "VERSE 1",
+      "type": "Aerial",
+      "description": "Performance/narrative shot 4",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B010",
+      "scene": "VERSE 1",
+      "type": "Wide",
+      "description": "Performance/narrative shot 5",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B011",
+      "scene": "VERSE 1",
+      "type": "Medium",
+      "description": "Performance/narrative shot 6",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B012",
+      "scene": "VERSE 1",
+      "type": "Close-up",
+      "description": "Performance/narrative shot 7",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B013",
+      "scene": "VERSE 1",
+      "type": "Aerial",
+      "description": "Performance/narrative shot 8",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B014",
+      "scene": "VERSE 1",
+      "type": "Wide",
+      "description": "Performance/narrative shot 9",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B015",
+      "scene": "VERSE 1",
+      "type": "Medium",
+      "description": "Performance/narrative shot 10",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B016",
+      "scene": "VERSE 2",
+      "type": "Wide",
+      "description": "Performance/narrative shot 1",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B017",
+      "scene": "VERSE 2",
+      "type": "Medium",
+      "description": "Performance/narrative shot 2",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B018",
+      "scene": "VERSE 2",
+      "type": "Close-up",
+      "description": "Performance/narrative shot 3",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B019",
+      "scene": "VERSE 2",
+      "type": "Aerial",
+      "description": "Performance/narrative shot 4",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B020",
+      "scene": "VERSE 2",
+      "type": "Wide",
+      "description": "Performance/narrative shot 5",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B021",
+      "scene": "VERSE 2",
+      "type": "Medium",
+      "description": "Performance/narrative shot 6",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B022",
+      "scene": "VERSE 2",
+      "type": "Close-up",
+      "description": "Performance/narrative shot 7",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B023",
+      "scene": "VERSE 2",
+      "type": "Aerial",
+      "description": "Performance/narrative shot 8",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B024",
+      "scene": "VERSE 2",
+      "type": "Wide",
+      "description": "Performance/narrative shot 9",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "B025",
+      "scene": "VERSE 2",
+      "type": "Medium",
+      "description": "Performance/narrative shot 10",
+      "duration": "3-4 seconds",
+      "vfx": "Various effects per treatment"
+    },
+    {
+      "shot": "C026",
+      "scene": "CHORUS",
+      "type": "Dynamic",
+      "description": "Phoenix transformation shot 1",
+      "duration": "2-3 seconds",
+      "vfx": "Heavy CGI wings and particles"
+    },
+    {
+      "shot": "C027",
+      "scene": "CHORUS",
+      "type": "Dynamic",
+      "description": "Phoenix transformation shot 2",
+      "duration": "2-3 seconds",
+      "vfx": "Heavy CGI wings and particles"
+    },
+    {
+      "shot": "C028",
+      "scene": "CHORUS",
+      "type": "Dynamic",
+      "description": "Phoenix transformation shot 3",
+      "duration": "2-3 seconds",
+      "vfx": "Heavy CGI wings and particles"
+    },
+    {
+      "shot": "C029",
+      "scene": "CHORUS",
+      "type": "Dynamic",
+      "description": "Phoenix transformation shot 4",
+      "duration": "2-3 seconds",
+      "vfx": "Heavy CGI wings and particles"
+    },
+    {
+      "shot": "C030",
+      "scene": "CHORUS",
+      "type": "Dynamic",
+      "description": "Phoenix transformation shot 5",
+      "duration": "2-3 seconds",
+      "vfx": "Heavy CGI wings and particles"
+    },
+    {
+      "shot": "C031",
+      "scene": "CHORUS",
+      "type": "Dynamic",
+      "description": "Phoenix transformation shot 6",
+      "duration": "2-3 seconds",
+      "vfx": "Heavy CGI wings and particles"
+    },
+    {
+      "shot": "C032",
+      "scene": "CHORUS",
+      "type": "Dynamic",
+      "description": "Phoenix transformation shot 7",
+      "duration": "2-3 seconds",
+      "vfx": "Heavy CGI wings and particles"
+    },
+    {
+      "shot": "C033",
+      "scene": "CHORUS",
+      "type": "Dynamic",
+      "description": "Phoenix transformation shot 8",
+      "duration": "2-3 seconds",
+      "vfx": "Heavy CGI wings and particles"
+    }
+  ]
+}

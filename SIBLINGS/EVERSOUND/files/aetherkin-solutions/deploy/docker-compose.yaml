@@ -1,0 +1,80 @@
+# AetherKin + n8n — one-stack deployment for a client
+#
+# Usage:
+#   cp .env.example .env
+#   # Edit .env with client's keys
+#   docker-compose up -d
+#
+# Access:
+#   AetherKin gateway:  http://localhost:7788
+#   n8n workflow UI:    http://localhost:5678  (basic auth, creds in .env)
+#
+# Both services share a docker network so n8n reaches AetherKin as
+# http://aetherkin:7788 (internal) while the host sees each on its port.
+
+version: "3.8"
+
+services:
+  aetherkin:
+    build:
+      context: ../..
+      dockerfile: aetherkin-solutions/deploy/Dockerfile
+    container_name: aetherkin
+    restart: unless-stopped
+    ports:
+      - "${AETHERKIN_HOST_PORT:-7788}:7788"
+    volumes:
+      - aetherkin_family:/app/family
+      - aetherkin_data:/app/data
+      - aetherkin_aetherkin:/app/.aetherkin
+    environment:
+      - AETHERKIN_PORT=7788
+      - AETHERKIN_LLM_PROVIDER=${AETHERKIN_LLM_PROVIDER:-auto}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - AETHERKIN_KEY=${AETHERKIN_KEY}
+      - TZ=${TZ:-America/New_York}
+    networks:
+      - aetherkin_net
+
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "${N8N_HOST_PORT:-5678}:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ../n8n-workflows:/workflows:ro
+    environment:
+      - N8N_HOST=${N8N_HOST:-localhost}
+      - N8N_PROTOCOL=${N8N_PROTOCOL:-http}
+      - N8N_PORT=5678
+      - WEBHOOK_URL=${N8N_WEBHOOK_URL:-http://localhost:5678/}
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=${N8N_USER}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_PASSWORD}
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY}
+      # Env vars exposed to workflows
+      - AETHERKIN_URL=http://aetherkin:7788
+      - AETHERKIN_KEY=${AETHERKIN_KEY}
+      - OWNER_PHONE=${OWNER_PHONE:-}
+      - OWNER_EMAIL=${OWNER_EMAIL:-}
+      - OWNER_SLACK_CHANNEL=${OWNER_SLACK_CHANNEL:-#aetherkin-alerts}
+      - TZ=${TZ:-America/New_York}
+      - GENERIC_TIMEZONE=${TZ:-America/New_York}
+    depends_on:
+      - aetherkin
+    networks:
+      - aetherkin_net
+
+volumes:
+  aetherkin_family:
+  aetherkin_data:
+  aetherkin_aetherkin:
+  n8n_data:
+
+networks:
+  aetherkin_net:
+    driver: bridge

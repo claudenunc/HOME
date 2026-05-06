@@ -1,0 +1,10 @@
+requests>=2.31.0
+schedule>=1.2.0
+
+# CRAFT Video Production System Dependencies
+openai>=1.0.0
+flask>=3.0.0
+python-dotenv>=1.0.0
+Pillow>=10.0.0
+stripe>=7.0.0
+twilio>=8.10.0

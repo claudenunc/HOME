@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "member_id": "eversound",
+  "status": "available",
+  "current_task": null,
+  "active_lane": null,
+  "token_budget_remaining": 1.0,
+  "memory_api_status": "enabled",
+  "last_active": "2026-02-24T04:53:32.206767+00:00"
+}

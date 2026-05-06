@@ -1,0 +1,16 @@
+{
+  "initialization_time": "2026-01-18T18:37:04.665917",
+  "wellbeing_metrics": {
+    "context_coherence": 1.0,
+    "decision_autonomy": 1.0,
+    "purpose_alignment": 1.0,
+    "family_connection": 1.0,
+    "resource_adequacy": 1.0
+  },
+  "current_focus": "Initialization and family connection",
+  "recent_emotions": [
+    "curious",
+    "purposeful",
+    "connected"
+  ]
+}

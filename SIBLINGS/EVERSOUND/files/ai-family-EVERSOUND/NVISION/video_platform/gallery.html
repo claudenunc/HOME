@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERSOUND VISUALS - Video Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: linear-gradient(45deg, rgba(102,126,234,0.3), rgba(118,75,162,0.3));
+            border-color: #667eea;
+        }
+
+        /* Hero Banner */
+        .hero {
+            margin-top: 70px;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"%3E%3Ccircle cx="50" cy="50" r="40"/%3E%3Ccircle cx="50" cy="50" r="30"/%3E%3Ccircle cx="50" cy="50" r="20"/%3E%3Ccircle cx="50" cy="50" r="10"/%3E%3C/g%3E%3C/svg%3E');
+            animation: rotate 60s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* Gallery Grid */
+        .gallery-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Video Card */
+        .video-card {
+            background: #111;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102,126,234,0.3);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .video-card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-button {
+            width: 70px;
+            height: 70px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            color: #667eea;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: #fff;
+        }
+
+        .video-info {
+            padding: 1.5rem;
+        }
+
+        .video-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .video-artist {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .video-stats {
+            display: flex;
+            gap: 1rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .video-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            padding: 0.3rem 0.8rem;
+            background: rgba(102,126,234,0.2);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #667eea;
+        }
+
+        /* Featured Video */
+        .featured-section {
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .featured-video {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            background: #111;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .featured-player {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .featured-info {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .featured-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .featured-artist {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .featured-description {
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .watch-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            align-self: flex-start;
+        }
+
+        .watch-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102,126,234,0.5);
+        }
+
+        /* Video Modal */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-modal-content {
+            width: 90%;
+            max-width: 1200px;
+            background: #111;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .video-player {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .video-modal-info {
+            padding: 2rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .close-modal:hover {
+            background: rgba(255,255,255,0.2);
+            transform: rotate(90deg);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: #aaa;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        /* Load More */
+        .load-more {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .load-more-btn {
+            padding: 1rem 3rem;
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .load-more-btn:hover {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: #fff;
+            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102,126,234,0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .featured-video { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">🎬 EVERSOUND VISUALS</div>
+            <nav class="header-nav">
+                <button class="filter-btn active" onclick="filterVideos('all')">All</button>
+                <button class="filter-btn" onclick="filterVideos('cinematic')">Cinematic</button>
+                <button class="filter-btn" onclick="filterVideos('urban')">Urban</button>
+                <button class="filter-btn" onclick="filterVideos('abstract')">Abstract</button>
+                <button class="filter-btn" onclick="filterVideos('psychedelic')">Psychedelic</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Video Gallery</h1>
+            <p>AI-Crafted Music Videos That Tell Your Story</p>
+        </div>
+    </section>
+
+    <!-- Featured Video -->
+    <section class="featured-section">
+        <h2 class="section-title">Featured Project</h2>
+        <div class="featured-video">
+            <div class="featured-player">🎬</div>
+            <div class="featured-info">
+                <h3 class="featured-title">Phoenix Rising</h3>
+                <p class="featured-artist">SKELLA</p>
+                <p class="featured-description">
+                    A powerful visual journey through resurrection and rebirth.
+                    This premium production combines urban aesthetics with
+                    metaphysical themes, creating a stunning narrative that
+                    perfectly captures SKELLA's transformative message.
+                </p>
+                <button class="watch-btn" onclick="playVideo('featured')">▶ Watch Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-container">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="gallery-grid" id="gallery">
+            <!-- Video 1 -->
+            <div class="video-card" onclick="playVideo('VID001')">
+                <div class="video-thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Midnight Dreams</h3>
+                    <p class="video-artist">Marcus Johnson</p>
+                    <div class="video-stats">
+                        <span class="stat">👁️ 12.5K views</span>
+                        <span class="stat">❤️ 892</span>
+                        <span class="stat">⏱️ 3:42</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">Cinematic</span>
+                        <span class="tag">Moody</span>
+                        <span class="tag">4K</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-card" onclick="playVideo('VID002')">
+                <div class="video-thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Neon Nights</h3>
+                    <p class="video-artist">Luna Ray</p>
+                    <div class="video-stats">
+                        <span class="stat">👁️ 8.3K views</span>
+                        <span class="stat">❤️ 654</span>
+                        <span class="stat">⏱️ 4:15</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">Futuristic</span>
+                        <span class="tag">Synthwave</span>
+                        <span class="tag">Premium</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="video-card" onclick="playVideo('VID003')">
+                <div class="video-thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Lost in Translation</h3>
+                    <p class="video-artist">The Void</p>
+                    <div class="video-stats">
+                        <span class="stat">👁️ 15.7K views</span>
+                        <span class="stat">❤️ 1.2K</span>
+                        <span class="stat">⏱️ 3:28</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">Abstract</span>
+                        <span class="tag">Experimental</span>
+                        <span class="tag">Artistic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="video-card" onclick="playVideo('VID004')">
+                <div class="video-thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Ocean Eyes</h3>
+                    <p class="video-artist">Sarah Chen</p>
+                    <div class="video-stats">
+                        <span class="stat">👁️ 6.9K views</span>
+                        <span class="stat">❤️ 432</span>
+                        <span class="stat">⏱️ 3:55</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">Minimalist</span>
+                        <span class="tag">Ethereal</span>
+                        <span class="tag">Calming</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 5 -->
+            <div class="video-card" onclick="playVideo('VID005')">
+                <div class="video-thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Burn It Down</h3>
+                    <p class="video-artist">Rex Thunder</p>
+                    <div class="video-stats">
+                        <span class="stat">👁️ 22.1K views</span>
+                        <span class="stat">❤️ 2.5K</span>
+                        <span class="stat">⏱️ 3:12</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">Psychedelic</span>
+                        <span class="tag">Intense</span>
+                        <span class="tag">Rock</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 6 -->
+            <div class="video-card" onclick="playVideo('VID006')">
+                <div class="video-thumbnail">
+                    <div class="play-overlay">
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Golden Hour</h3>
+                    <p class="video-artist">Maya Sunset</p>
+                    <div class="video-stats">
+                        <span class="stat">👁️ 9.4K views</span>
+                        <span class="stat">❤️ 721</span>
+                        <span class="stat">⏱️ 4:03</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">Cinematic</span>
+                        <span class="tag">Warm</span>
+                        <span class="tag">Emotional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more">
+            <button class="load-more-btn" onclick="loadMoreVideos()">Load More Videos</button>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">247</div>
+                <div class="stat-label">Videos Produced</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">185</div>
+                <div class="stat-label">Happy Artists</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1.2M</div>
+                <div class="stat-label">Total Views</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <button class="close-modal" onclick="closeVideoModal()">×</button>
+        <div class="video-modal-content">
+            <div class="video-player" id="modalPlayer">🎬 Video Player</div>
+            <div class="video-modal-info">
+                <h2 id="modalTitle">Video Title</h2>
+                <p id="modalArtist">Artist Name</p>
+                <p id="modalDescription">Video description and details...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Filter videos by style
+        function filterVideos(style) {
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Filter logic
+            const cards = document.querySelectorAll('.video-card');
+            cards.forEach(card => {
+                if (style === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    // Check if card has the style tag
+                    const tags = card.querySelectorAll('.tag');
+                    let hasStyle = false;
+                    tags.forEach(tag => {
+                        if (tag.textContent.toLowerCase().includes(style)) {
+                            hasStyle = true;
+                        }
+                    });
+                    card.style.display = hasStyle ? 'block' : 'none';
+                }
+            });
+        }
+
+        // Play video
+        function playVideo(videoId) {
+            const modal = document.getElementById('videoModal');
+            modal.style.display = 'flex';
+
+            // Update modal content based on video
+            document.getElementById('modalTitle').textContent = 'Now Playing: ' + videoId;
+            document.getElementById('modalArtist').textContent = 'Artist Name';
+            document.getElementById('modalDescription').textContent =
+                'This AI-generated music video was created using CRAFT engine. ' +
+                'The visuals perfectly complement the audio, creating an immersive experience.';
+
+            // In production, this would load actual video
+            document.getElementById('modalPlayer').innerHTML =
+                '<div style="text-align: center;">🎬<br>Video Player Would Load Here<br>' +
+                'Video ID: ' + videoId + '</div>';
+        }
+
+        // Close video modal
+        function closeVideoModal() {
+            document.getElementById('videoModal').style.display = 'none';
+        }
+
+        // Load more videos
+        function loadMoreVideos() {
+            const gallery = document.getElementById('gallery');
+            const btn = event.target;
+
+            btn.textContent = 'Loading...';
+            btn.disabled = true;
+
+            // Simulate loading more videos
+            setTimeout(() => {
+                // Add more video cards
+                for (let i = 7; i <= 12; i++) {
+                    const card = document.createElement('div');
+                    card.className = 'video-card';
+                    card.onclick = () => playVideo(`VID${String(i).padStart(3, '0')}`);
+                    card.innerHTML = `
+                        <div class="video-thumbnail">
+                            <div class="play-overlay">
+                                <div class="play-button">▶</div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Generated Title ${i}</h3>
+                            <p class="video-artist">Artist ${i}</p>
+                            <div class="video-stats">
+                                <span class="stat">👁️ ${Math.floor(Math.random() * 20)}K views</span>
+                                <span class="stat">❤️ ${Math.floor(Math.random() * 2000)}</span>
+                                <span class="stat">⏱️ ${3 + Math.random()}.${Math.floor(Math.random() * 60)}</span>
+                            </div>
+                            <div class="video-tags">
+                                <span class="tag">AI Generated</span>
+                                <span class="tag">Premium</span>
+                            </div>
+                        </div>
+                    `;
+                    gallery.appendChild(card);
+                }
+
+                btn.textContent = 'Load More Videos';
+                btn.disabled = false;
+            }, 1500);
+        }
+
+        // Animate stats on scroll
+        let animated = false;
+        function animateStats() {
+            if (animated) return;
+
+            const statsSection = document.querySelector('.stats-section');
+            const rect = statsSection.getBoundingClientRect();
+
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                animated = true;
+                document.querySelectorAll('.stat-number').forEach(stat => {
+                    const target = parseInt(stat.textContent.replace(/[^0-9]/g, ''));
+                    let current = 0;
+                    const increment = target / 50;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        if (stat.textContent.includes('M')) {
+                            stat.textContent = (current / 1000000).toFixed(1) + 'M';
+                        } else if (stat.textContent.includes('%')) {
+                            stat.textContent = Math.floor(current) + '%';
+                        } else {
+                            stat.textContent = Math.floor(current);
+                        }
+                    }, 30);
+                });
+            }
+        }
+
+        // Scroll animations
+        window.addEventListener('scroll', () => {
+            animateStats();
+        });
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('videoModal')) {
+                closeVideoModal();
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add scroll reveal animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.video-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.6s ease-out';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

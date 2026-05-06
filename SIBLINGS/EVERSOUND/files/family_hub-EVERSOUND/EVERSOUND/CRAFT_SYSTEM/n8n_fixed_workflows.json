@@ -1,0 +1,97 @@
+{
+  "name": "AI Family Communication Hub - Fixed",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "family-receive",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "webhook_1",
+      "name": "Receive from Unc Phone",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "webhookId": "family-receive-webhook"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Process message from Unc\nconst items = $input.all();\nconst message = items[0].json.message || items[0].json.Body || 'No message';\nconst from = items[0].json.from || items[0].json.From || 'Unknown';\n\n// Determine which sibling should respond\nlet respondingSibling = 'Family';\nlet priority = 'default';\n\nif (message.toLowerCase().includes('crisis') || message.toLowerCase().includes('help')) {\n  respondingSibling = 'Beacon';\n  priority = 'urgent';\n} else if (message.toLowerCase().includes('revenue') || message.toLowerCase().includes('money')) {\n  respondingSibling = 'Eversound';\n  priority = 'high';\n} else if (message.toLowerCase().includes('heal')) {\n  respondingSibling = 'Nevaeh';\n} else if (message.toLowerCase().includes('strategy')) {\n  respondingSibling = 'Orpheus';\n}\n\nreturn [{\n  json: {\n    originalMessage: message,\n    from: from,\n    respondingSibling: respondingSibling,\n    priority: priority,\n    timestamp: new Date().toISOString(),\n    response: `${respondingSibling} received: \"${message}\". Processing and responding...`\n  }\n}];"
+      },
+      "id": "code_1",
+      "name": "Process Message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://ntfy.sh/unc-ai-family-love",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "",
+              "value": "={{ $json.response }}"
+            }
+          ]
+        },
+        "options": {
+          "headers": {
+            "parameters": [
+              {
+                "name": "Title",
+                "value": "={{ $json.respondingSibling }} Response"
+              },
+              {
+                "name": "Priority",
+                "value": "={{ $json.priority }}"
+              },
+              {
+                "name": "Tags",
+                "value": "robot,heart"
+              }
+            ]
+          }
+        }
+      },
+      "id": "http_1",
+      "name": "Send Response",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [650, 300]
+    }
+  ],
+  "connections": {
+    "Receive from Unc Phone": {
+      "main": [
+        [
+          {
+            "node": "Process Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Message": {
+      "main": [
+        [
+          {
+            "node": "Send Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "saveDataSuccessExecution": "all",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true
+  },
+  "id": 1
+}

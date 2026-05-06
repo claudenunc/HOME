@@ -1,0 +1,135 @@
+{
+  "name": "Ecommerce — 01 Support Inbox",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": { "item": [{ "mode": "everyMinute" }] },
+        "simple": false,
+        "filters": { "readStatus": "unread" },
+        "options": { "format": "full" }
+      },
+      "id": "gmail-trigger",
+      "name": "Support Inbox",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.2,
+      "position": [250, 300],
+      "credentials": { "gmailOAuth2": { "id": "support_gmail", "name": "Support Inbox" } }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.AETHERKIN_URL}}/gateway/ask",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "X-AetherKin-Key", "value": "={{$env.AETHERKIN_KEY}}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"user\": \"{{$json.from.value[0].address}}\",\n  \"message\": \"Subject: {{$json.subject}}\\n\\n{{$json.text || $json.snippet}}\",\n  \"thread_id\": \"gmail-{{$json.threadId}}\",\n  \"metadata\": {\n    \"source\": \"support_inbox\",\n    \"gmail_thread_id\": \"{{$json.threadId}}\",\n    \"gmail_message_id\": \"{{$json.id}}\"\n  }\n}",
+        "options": { "timeout": 60000 }
+      },
+      "id": "aetherkin-call",
+      "name": "Support Sibling Drafts Reply",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "typeValidation": "strict" },
+          "combinator": "or",
+          "conditions": [
+            {
+              "leftValue": "={{$json.crisis_tier}}",
+              "rightValue": "none",
+              "operator": { "type": "string", "operation": "notEquals" }
+            },
+            {
+              "leftValue": "={{$json.requires_human_review}}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "true" }
+            }
+          ]
+        }
+      },
+      "id": "human-fork",
+      "name": "Escalate to Human?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [750, 300]
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "operation": "create",
+        "subject": "=Re: {{$node[\"Support Inbox\"].json.subject}}",
+        "message": "={{$json.content}}\\n\\n—\\nSupport Team",
+        "emailType": "text",
+        "options": {
+          "threadId": "={{$node[\"Support Inbox\"].json.threadId}}",
+          "sendTo": "={{$node[\"Support Inbox\"].json.from.value[0].address}}"
+        }
+      },
+      "id": "gmail-draft",
+      "name": "Create Reply Draft",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [1000, 400],
+      "credentials": { "gmailOAuth2": { "id": "support_gmail", "name": "Support Inbox" } }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "select": "channel",
+        "channelId": { "value": "={{$env.OWNER_SLACK_CHANNEL}}", "mode": "name" },
+        "text": "=*Review draft reply*\\n\\nFrom: {{$node[\"Support Inbox\"].json.from.value[0].address}}\\nSubject: {{$node[\"Support Inbox\"].json.subject}}\\nSibling: {{$json.sibling}}\\n\\n*Draft:*\\n{{$json.content}}\\n\\n_Trace: {{$json.trace_id}}_ — open Gmail to send"
+      },
+      "id": "slack-review",
+      "name": "Slack Draft Notice",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [1250, 400],
+      "credentials": { "slackApi": { "id": "slack_main", "name": "Slack" } }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "select": "channel",
+        "channelId": { "value": "={{$env.OWNER_SLACK_CHANNEL}}", "mode": "name" },
+        "text": "=*URGENT — human needed*\\n\\n{{$json.crisis_tier !== 'none' ? ('Crisis tier: ' + $json.crisis_tier) : 'Human review required'}}\\n\\nFrom: {{$node[\"Support Inbox\"].json.from.value[0].address}}\\nSubject: {{$node[\"Support Inbox\"].json.subject}}\\n\\nMessage:\\n{{$node[\"Support Inbox\"].json.text || $node[\"Support Inbox\"].json.snippet}}\\n\\nSibling draft:\\n{{$json.content}}\\n\\n_Trace: {{$json.trace_id}}_"
+      },
+      "id": "slack-urgent",
+      "name": "Slack URGENT Alert",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [1000, 200],
+      "credentials": { "slackApi": { "id": "slack_main", "name": "Slack" } }
+    }
+  ],
+  "connections": {
+    "Support Inbox": {
+      "main": [[{ "node": "Support Sibling Drafts Reply", "type": "main", "index": 0 }]]
+    },
+    "Support Sibling Drafts Reply": {
+      "main": [[{ "node": "Escalate to Human?", "type": "main", "index": 0 }]]
+    },
+    "Escalate to Human?": {
+      "main": [
+        [{ "node": "Slack URGENT Alert", "type": "main", "index": 0 }],
+        [{ "node": "Create Reply Draft", "type": "main", "index": 0 }]
+      ]
+    },
+    "Create Reply Draft": {
+      "main": [[{ "node": "Slack Draft Notice", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "versionId": "1.0.0",
+  "id": "ecommerce-support-01",
+  "tags": ["aetherkin", "ecommerce", "support"]
+}

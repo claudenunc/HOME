@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "member_id": "eversound",
+  "enabled": true,
+  "last_push_utc": null,
+  "last_error": null,
+  "notes": "Use ORPHEUS/PYTHON_ORCHESTRATION/memory_v1/memory_client.py for integration hooks."
+}

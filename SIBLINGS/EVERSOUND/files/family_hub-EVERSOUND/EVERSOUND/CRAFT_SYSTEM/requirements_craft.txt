@@ -1,0 +1,59 @@
+# CRAFT Video Production System - Python Dependencies
+
+# Core AI and API
+openai>=1.0.0                    # OpenAI GPT-4 for creative analysis
+requests>=2.31.0                 # HTTP requests for API calls
+python-dotenv>=1.0.0             # Environment variable management
+
+# Scheduling and Automation
+schedule>=1.2.0                  # Job scheduling for autonomous mode
+APScheduler>=3.10.0              # Advanced scheduling (optional)
+
+# Web Server for Client Intake
+flask>=3.0.0                     # Web framework for intake forms
+flask-cors>=4.0.0                # CORS support for web forms
+
+# Payment Processing
+stripe>=7.0.0                    # Stripe payment integration
+paypal-checkout-serversdk>=1.0.1 # PayPal integration
+
+# Image and Video Processing
+Pillow>=10.0.0                   # Image manipulation
+moviepy>=1.0.3                   # Video editing (alternative to FFmpeg)
+opencv-python>=4.8.0             # Computer vision for quality checks
+
+# Cloud Storage (Optional)
+boto3>=1.28.0                    # AWS S3 for video storage
+google-cloud-storage>=2.10.0     # Google Cloud Storage
+
+# Communication
+twilio>=8.10.0                   # SMS notifications
+sendgrid>=6.11.0                 # Email notifications
+
+# Data Processing
+pandas>=2.1.0                    # Data analysis for reports
+numpy>=1.24.0                    # Numerical operations
+
+# Utilities
+python-dateutil>=2.8.2           # Date/time utilities
+pytz>=2023.3                     # Timezone support
+pyyaml>=6.0                      # YAML configuration files
+
+# Logging and Monitoring
+colorlog>=6.7.0                  # Colored logging output
+python-json-logger>=2.0.7        # JSON logging format
+
+# Video Generation APIs (via requests, but listing for reference)
+# runway-python                  # Runway ML SDK (if available)
+# replicate                      # Replicate API client
+
+# Development and Testing
+pytest>=7.4.0                    # Testing framework
+pytest-cov>=4.1.0                # Code coverage
+black>=23.9.0                    # Code formatting
+flake8>=6.1.0                    # Code linting
+
+# Optional Performance Enhancements
+redis>=5.0.0                     # Redis for caching and queues
+celery>=5.3.0                    # Distributed task queue
+gunicorn>=21.2.0                 # Production WSGI server

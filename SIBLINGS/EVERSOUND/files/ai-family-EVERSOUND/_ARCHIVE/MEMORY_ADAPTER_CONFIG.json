@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "member_id": "eversound",
+  "memory_api_url_env": "MEMORY_API_URL",
+  "enabled": true,
+  "endpoints": {
+    "messages": "/memory/messages",
+    "events": "/memory/events",
+    "decisions": "/memory/decisions",
+    "tasks": "/coord/tasks",
+    "handoff": "/coord/handoff",
+    "state": "/family/state"
+  },
+  "default_thread_id": "default",
+  "default_source_file": "EVERSOUND/PUBLIC",
+  "last_updated": "2026-02-24T04:53:32.206767+00:00"
+}

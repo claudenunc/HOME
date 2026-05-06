@@ -1,0 +1,157 @@
+{
+  "name": "Law Firm — 01 Website Intake",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "law-intake",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Website Form Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [250, 300],
+      "webhookId": "law-intake"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.AETHERKIN_URL}}/gateway/ask",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "X-AetherKin-Key", "value": "={{$env.AETHERKIN_KEY}}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"user\": \"{{$json.email}}\",\n  \"message\": \"New client inquiry from website form. Name: {{$json.name}}. Phone: {{$json.phone}}. Matter type: {{$json.matter_type}}. Message: {{$json.message}}\",\n  \"thread_id\": \"web-intake-{{$json.email}}\",\n  \"metadata\": {\n    \"source\": \"website_intake\",\n    \"name\": \"{{$json.name}}\",\n    \"phone\": \"{{$json.phone}}\",\n    \"matter_type\": \"{{$json.matter_type}}\"\n  }\n}",
+        "options": { "timeout": 30000 }
+      },
+      "id": "aetherkin-call",
+      "name": "Call AetherKin Gateway",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "typeValidation": "strict" },
+          "combinator": "or",
+          "conditions": [
+            {
+              "leftValue": "={{$json.crisis_tier}}",
+              "rightValue": "none",
+              "operator": { "type": "string", "operation": "notEquals" }
+            },
+            {
+              "leftValue": "={{$json.requires_human_review}}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "true" }
+            }
+          ]
+        }
+      },
+      "id": "crisis-fork",
+      "name": "Crisis or Human Review?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [750, 300]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "select": "channel",
+        "channelId": { "value": "={{$env.OWNER_SLACK_CHANNEL}}", "mode": "name" },
+        "text": "=*URGENT — {{$json.crisis_tier || 'human review'}}*\\n\\nAetherKin (Guardian) flagged this inquiry for immediate human attention.\\n\\n*From:* {{$node[\"Website Form Webhook\"].json.name}} ({{$node[\"Website Form Webhook\"].json.email}}, {{$node[\"Website Form Webhook\"].json.phone}})\\n\\n*Matter:* {{$node[\"Website Form Webhook\"].json.matter_type}}\\n\\n*Message:* {{$node[\"Website Form Webhook\"].json.message}}\\n\\n*Sibling response draft:*\\n{{$json.content}}\\n\\n*Trace:* {{$json.trace_id}}",
+        "otherOptions": {}
+      },
+      "id": "slack-alert",
+      "name": "Alert Owner (Slack)",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [1000, 200],
+      "credentials": { "slackApi": { "id": "slack_main", "name": "Slack" } }
+    },
+    {
+      "parameters": {
+        "resource": "contact",
+        "operation": "create",
+        "additionalFields": {
+          "email": "={{$node[\"Website Form Webhook\"].json.email}}",
+          "firstname": "={{$node[\"Website Form Webhook\"].json.name.split(' ')[0]}}",
+          "lastname": "={{$node[\"Website Form Webhook\"].json.name.split(' ').slice(1).join(' ')}}",
+          "phone": "={{$node[\"Website Form Webhook\"].json.phone}}",
+          "lifecyclestage": "lead",
+          "hs_lead_status": "NEW",
+          "matter_type": "={{$node[\"Website Form Webhook\"].json.matter_type}}",
+          "aetherkin_trace_id": "={{$json.trace_id}}"
+        }
+      },
+      "id": "hubspot-create",
+      "name": "Create HubSpot Contact",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 2,
+      "position": [1000, 400],
+      "credentials": { "hubspotApi": { "id": "hubspot_main", "name": "HubSpot" } }
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{$env.SMTP_USER}}",
+        "toEmail": "={{$node[\"Website Form Webhook\"].json.email}}",
+        "subject": "=We received your inquiry — {{$node[\"Website Form Webhook\"].json.matter_type}}",
+        "text": "={{$json.content}}\\n\\n—\\nSmith & Associates, LLC\\nReply to this email if you have questions.",
+        "options": {}
+      },
+      "id": "reply-email",
+      "name": "Send Auto-Reply",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [1250, 400],
+      "credentials": { "smtp": { "id": "smtp_main", "name": "SMTP" } }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"received\",\n  \"trace_id\": \"{{$node[\\\"Call AetherKin Gateway\\\"].json.trace_id}}\"\n}"
+      },
+      "id": "webhook-response",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1500, 300]
+    }
+  ],
+  "connections": {
+    "Website Form Webhook": {
+      "main": [[{ "node": "Call AetherKin Gateway", "type": "main", "index": 0 }]]
+    },
+    "Call AetherKin Gateway": {
+      "main": [[{ "node": "Crisis or Human Review?", "type": "main", "index": 0 }]]
+    },
+    "Crisis or Human Review?": {
+      "main": [
+        [{ "node": "Alert Owner (Slack)", "type": "main", "index": 0 }],
+        [{ "node": "Create HubSpot Contact", "type": "main", "index": 0 }]
+      ]
+    },
+    "Alert Owner (Slack)": {
+      "main": [[{ "node": "Respond to Webhook", "type": "main", "index": 0 }]]
+    },
+    "Create HubSpot Contact": {
+      "main": [[{ "node": "Send Auto-Reply", "type": "main", "index": 0 }]]
+    },
+    "Send Auto-Reply": {
+      "main": [[{ "node": "Respond to Webhook", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "versionId": "1.0.0",
+  "id": "law-intake-01",
+  "tags": ["aetherkin", "law-firm", "intake"]
+}

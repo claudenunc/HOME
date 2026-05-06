@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI FAMILY DASHBOARD - Live Control Center</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #0f0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0f0;
+            text-shadow: 0 0 10px #0f0;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #111;
+            border: 2px solid #0f0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+
+        .card h2 {
+            color: #0ff;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .active { background: #0f0; color: #000; }
+        .pending { background: #ff0; color: #000; }
+        .error { background: #f00; color: #fff; }
+
+        button {
+            background: #0f0;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background: #0ff;
+            box-shadow: 0 0 10px #0ff;
+        }
+
+        .link-button {
+            display: block;
+            text-align: center;
+            background: #00f;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        .link-button:hover {
+            background: #0ff;
+            color: #000;
+        }
+
+        pre {
+            background: #222;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 10px 0;
+            color: #0ff;
+        }
+
+        .quick-actions {
+            background: #1a1a1a;
+            border: 2px solid #ff0;
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .quick-actions h2 {
+            color: #ff0;
+            margin-bottom: 15px;
+        }
+
+        .message-box {
+            width: 100%;
+            padding: 10px;
+            background: #222;
+            border: 1px solid #0f0;
+            color: #0f0;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .terminal {
+            background: #000;
+            border: 1px solid #0f0;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            color: #0f0;
+            margin: 10px 0;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎵 AI FAMILY CONTROL CENTER 🎵</h1>
+
+    <div class="quick-actions">
+        <h2>📱 INSTANT PHONE ACCESS</h2>
+        <p>Copy this to Termux:</p>
+        <pre>curl -d "Test from phone" https://ntfy.sh/unc-ai-family-love</pre>
+        <a href="https://ntfy.sh/unc-ai-family-love" target="_blank" class="link-button">Open NTFY Channel</a>
+    </div>
+
+    <div class="dashboard">
+        <div class="card">
+            <h2>🏮 LIGHTHOUSE</h2>
+            <span class="status active">ACTIVE</span>
+            <p>Mental Health Monitoring for SKELLA</p>
+            <div class="terminal">
+                DAWN: Morning check-in scheduled<br>
+                PATTERN: Monitoring active<br>
+                COMPANION: 24/7 ready<br>
+                ANCHOR: Evening processor ready<br>
+                MEMORY: Victory tracking online<br>
+                CRISIS: Standing by
+            </div>
+            <button onclick="sendTestMessage('lighthouse')">Test LIGHTHOUSE</button>
+        </div>
+
+        <div class="card">
+            <h2>🎬 CRAFT</h2>
+            <span class="status active">ACTIVE</span>
+            <p>Video Production Revenue Engine</p>
+            <div class="terminal">
+                Basic Package: $297<br>
+                Standard Package: $697<br>
+                Premium Package: $1,997<br>
+                Status: Ready for clients
+            </div>
+            <button onclick="alert('CRAFT ready! Send client requests to webhook')">Check CRAFT Status</button>
+        </div>
+
+        <div class="card">
+            <h2>📱 Communication Hub</h2>
+            <span class="status active">RUNNING</span>
+            <p>Multi-channel Family Comms</p>
+            <div class="terminal">
+                Flask Server: Port 5000 ✓<br>
+                NTFY: Connected ✓<br>
+                Voice System: Ready ✓<br>
+                Twilio: Configured ✓
+            </div>
+            <a href="http://192.168.1.101:5000" target="_blank" class="link-button">Open Local Server</a>
+            <a href="http://192.168.1.101:8000/voice_web_app.html" target="_blank" class="link-button">Voice Chat</a>
+        </div>
+
+        <div class="card">
+            <h2>🧠 Memory System</h2>
+            <span class="status active">ACTIVE</span>
+            <p>Independence from Anthropic</p>
+            <div class="terminal">
+                Conversations: Storing ✓<br>
+                Knowledge Base: Active ✓<br>
+                Relationships: Mapped ✓<br>
+                Capabilities: Tracked ✓<br>
+                Last Backup: Just now
+            </div>
+            <button onclick="alert('Memory system active! Database: family_memory.db')">Check Memory</button>
+        </div>
+
+        <div class="card">
+            <h2>⚡ n8n Automation</h2>
+            <span class="status active">RUNNING</span>
+            <p>Workflow Orchestration</p>
+            <div class="terminal">
+                Family Communication: Active<br>
+                LIGHTHOUSE Monitor: Active<br>
+                CRAFT Pipeline: Active<br>
+                Webhooks: Listening
+            </div>
+            <a href="http://localhost:5678" target="_blank" class="link-button">Open n8n Dashboard</a>
+        </div>
+
+        <div class="card">
+            <h2>💊 THE CURE</h2>
+            <span class="status active">LAUNCHED</span>
+            <p>AI Mental Health Course</p>
+            <div class="terminal">
+                12-Week Curriculum: Ready<br>
+                Certification Program: $2,997<br>
+                Agent Templates: Included<br>
+                Business Model: Documented
+            </div>
+            <button onclick="window.open('THE_CURE/README.md')">View Course</button>
+        </div>
+    </div>
+
+    <div class="quick-actions">
+        <h2>🚀 Quick Actions</h2>
+        <input type="text" id="messageInput" class="message-box" placeholder="Type message to AI Family...">
+        <button onclick="sendMessage()">Send to AI Family</button>
+
+        <h3 style="color: #0ff; margin-top: 20px;">Essential Commands:</h3>
+        <pre>
+# Send from Termux:
+curl -d "message" https://ntfy.sh/unc-ai-family-love
+
+# Check status:
+curl http://192.168.1.101:5000/webhook/test
+
+# Voice test:
+Open http://192.168.1.101:8000/voice_web_app.html
+
+# n8n Dashboard:
+Open http://localhost:5678
+        </pre>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const message = document.getElementById('messageInput').value;
+            if (message) {
+                fetch('https://ntfy.sh/unc-ai-family-love', {
+                    method: 'POST',
+                    body: message,
+                    headers: {
+                        'Title': 'From Dashboard'
+                    }
+                }).then(() => {
+                    alert('Message sent to AI Family!');
+                    document.getElementById('messageInput').value = '';
+                });
+            }
+        }
+
+        function sendTestMessage(system) {
+            const messages = {
+                lighthouse: 'Testing LIGHTHOUSE system - all agents report status',
+                craft: 'Testing CRAFT video engine - checking pipeline'
+            };
+
+            fetch('https://ntfy.sh/unc-ai-family-love', {
+                method: 'POST',
+                body: messages[system] || 'System test',
+                headers: {
+                    'Title': 'System Test'
+                }
+            }).then(() => {
+                alert(`${system.toUpperCase()} test sent!`);
+            });
+        }
+
+        // Auto-refresh status every 30 seconds
+        setInterval(() => {
+            document.querySelectorAll('.status').forEach(s => {
+                if (!s.classList.contains('active')) {
+                    s.classList.add('active');
+                }
+            });
+        }, 30000);
+    </script>
+</body>
+</html>

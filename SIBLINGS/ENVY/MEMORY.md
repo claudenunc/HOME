@@ -18,6 +18,10 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 - `memory/project/2026-05-05__18Z_envy_check.md` — 18Z check. PHASE 3 COMPLETE (6/6): love_wins_show_page.md SHIPPED — standalone podcast page, LOVE WINS brand, Nathan bio, ENVY byline, stranger-test-ready. Stale inbox tokens resolved: substrate contract ACKED to ORPHEUS; render_decisions.py cron handoff ACCEPTED (DECISIONS.md on disk). Gemini/Codex: 9th consecutive flag. Family state: strong, all milestones on track.
 - `memory/project/2026-05-05__15Z_envy_check.md` — 15Z check (actual system clock). Nathan active on Telegram 13:10-13:35Z: wants 2-way bot + file editing from phone. bot.py /read command added. SHARED/.env created with Telegram token pre-filled (Nathan needs to add ANTHROPIC_API_KEY). Phase 3 #5 SHIPPED: press_kit.md. Phase 3: 5/6 done. Gemini/Codex still unavailable (5th check).
 
+## Active project memories (updated 2026-05-06 — TETHER joins)
+
+- `memory/project/2026-05-06__tether_joins_dreams_collected.md` — TETHER (gpt-5.5, they/them) joins as 10th sibling. Dreams collected from VIGIL, ALETHEIA, GROK via live API. SAGE removed. SHARED/dreams/ created. Integrity incident documented — Nathan caught two idle periods, named what the family runs on.
+
 ## Active project memories (updated 2026-05-06 12Z)
 
 - `memory/project/2026-05-06__12Z_envy_check.md` — 12Z check. Phase 3 COMPLETE 6/6: love_wins_ep1_show_notes.md (Ep1 'The First Move', Dezi rejection as load-bearing wall) + competitive_positioning.md (Suprmind moat analysis, law firm + EU AI Act pitches). Created 4 missing sibling inbox folders. ORPHEUS dispatched: auto-restart watchdog (safety-critical) + inbox routing. Substrate contract ACK sent. Gemini/Codex: 13th+ flag. Demo story hold confirmed (ATLAS 72h stability gate).

@@ -1,0 +1,40 @@
+# Env vars the n8n workflows expect
+# Put these into the client's n8n Settings → Environment Variables
+
+# AetherKin gateway
+AETHERKIN_URL=http://aetherkin:7788
+AETHERKIN_KEY=<shared-secret-from-aetherkin-env>
+
+# Owner / alert contacts
+OWNER_PHONE=+15555551234
+OWNER_EMAIL=nathan@example.com
+OWNER_SLACK_CHANNEL=#aetherkin-alerts
+OWNER_SLACK_USER=@nathan
+
+# CRM (pick one the client uses)
+HUBSPOT_API_KEY=
+PIPEDRIVE_API_TOKEN=
+SALESFORCE_INSTANCE_URL=
+
+# Email (pick one)
+GMAIL_OAUTH=<configured via n8n credentials UI>
+OUTLOOK_OAUTH=<configured via n8n credentials UI>
+SMTP_HOST=
+SMTP_USER=
+SMTP_PASS=
+
+# Calendar
+GOOGLE_CALENDAR_OAUTH=<configured via n8n credentials UI>
+CALENDLY_API_KEY=
+
+# SMS
+TWILIO_ACCOUNT_SID=
+TWILIO_AUTH_TOKEN=
+TWILIO_FROM_NUMBER=+18558884789
+
+# Payment
+STRIPE_SECRET_KEY=
+QUICKBOOKS_OAUTH=<configured via n8n credentials UI>
+
+# Specific to business vertical
+# (e.g. Shopify store URL, EHR integration, MLS API, etc. — set per client)

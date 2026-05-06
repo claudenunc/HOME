@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHOENIX DOWN - eNVy | Video Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Video Player */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a0000 0%, #ff4500 50%, #ffd700 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .video-player {
+            width: 90%;
+            max-width: 1200px;
+            aspect-ratio: 16/9;
+            background: #000;
+            border: 3px solid #ff4500;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 100px rgba(255,69,0,0.8);
+        }
+
+        /* Phoenix Animation */
+        .phoenix {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10rem;
+            animation: phoenixRise 10s infinite;
+        }
+
+        @keyframes phoenixRise {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            20% { transform: translateY(0) scale(1); opacity: 1; }
+            40% { transform: translateY(-20px) scale(1.2); }
+            60% { transform: translateY(0) rotate(360deg) scale(1); }
+            80% { transform: translateY(-50px) scale(1.5); opacity: 0.8; }
+            100% { transform: translateY(-100vh) scale(2); opacity: 0; }
+        }
+
+        /* Fire Particles */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #ff4500;
+            border-radius: 50%;
+            animation: float 3s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            padding: 15px 30px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .control-btn:hover {
+            color: #ff4500;
+            transform: scale(1.2);
+        }
+
+        .timeline {
+            width: 300px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #ff4500, #ffd700);
+            border-radius: 2px;
+            width: 0;
+            animation: progressBar 230s linear;
+        }
+
+        @keyframes progressBar {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        /* Scene Info */
+        .scene-info {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,69,0,0.5);
+        }
+
+        .scene-title {
+            font-size: 1.5rem;
+            color: #ff4500;
+            margin-bottom: 10px;
+        }
+
+        .scene-description {
+            color: #aaa;
+            margin-bottom: 10px;
+        }
+
+        .vfx-list {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .vfx-badge {
+            background: rgba(255,69,0,0.2);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid #ff4500;
+        }
+
+        /* Stats */
+        .stats {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: rgba(0,0,0,0.8);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            gap: 30px;
+        }
+
+        .stat-label {
+            color: #aaa;
+        }
+
+        .stat-value {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Scenes Timeline */
+        .scenes-timeline {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .scene-marker {
+            width: 60px;
+            height: 5px;
+            background: rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .scene-marker.active {
+            background: #ff4500;
+            height: 10px;
+        }
+
+        .scene-marker:hover {
+            background: #ffd700;
+        }
+
+        /* Loading Screen */
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .loading-text {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff4500, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Fire Background Animation */
+        .fire-bg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top,
+                rgba(255,69,0,0.8) 0%,
+                rgba(255,140,0,0.5) 30%,
+                transparent 100%);
+            animation: fireFlicker 2s infinite;
+        }
+
+        @keyframes fireFlicker {
+            0%, 100% { opacity: 0.8; transform: scaleY(1); }
+            50% { opacity: 1; transform: scaleY(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="video-player">
+            <!-- Fire Background -->
+            <div class="fire-bg"></div>
+
+            <!-- Phoenix Animation -->
+            <div class="phoenix">🔥</div>
+
+            <!-- Particles -->
+            <div class="particles" id="particles"></div>
+
+            <!-- Loading Screen -->
+            <div class="loading" id="loading">
+                <div class="loading-text">PHOENIX DOWN</div>
+                <div style="color: #aaa;">by eNVy</div>
+            </div>
+
+            <!-- Scene Info -->
+            <div class="scene-info" style="display: none;" id="sceneInfo">
+                <div class="scene-title" id="sceneTitle">Intro - The Match Strike</div>
+                <div class="scene-description" id="sceneDesc">Single match illuminates face, flames spread</div>
+                <div class="vfx-list" id="vfxList">
+                    <span class="vfx-badge">Fire Particles</span>
+                    <span class="vfx-badge">Light Flicker</span>
+                    <span class="vfx-badge">Smoke</span>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats" style="display: none;" id="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Project:</span>
+                    <span class="stat-value">PHOENIX-001</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Duration:</span>
+                    <span class="stat-value">3:50</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Format:</span>
+                    <span class="stat-value">4K HDR</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Package:</span>
+                    <span class="stat-value">PREMIUM</span>
+                </div>
+            </div>
+
+            <!-- Scenes Timeline -->
+            <div class="scenes-timeline" style="display: none;" id="scenesTimeline">
+                <div class="scene-marker active" data-scene="0"></div>
+                <div class="scene-marker" data-scene="1"></div>
+                <div class="scene-marker" data-scene="2"></div>
+                <div class="scene-marker" data-scene="3"></div>
+                <div class="scene-marker" data-scene="4"></div>
+                <div class="scene-marker" data-scene="5"></div>
+                <div class="scene-marker" data-scene="6"></div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls" style="display: none;" id="controls">
+                <button class="control-btn" onclick="togglePlay()">▶️</button>
+                <div class="timeline">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <button class="control-btn" onclick="toggleFullscreen()">⬜</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Scene data
+        const scenes = [
+            {
+                title: "Intro - The Match Strike",
+                description: "Single match illuminates face, flames spread in circle",
+                vfx: ["Fire Particles", "Light Flicker", "Smoke Atmosphere"]
+            },
+            {
+                title: "Verse 1 - Destruction Phase",
+                description: "Walking through burning cityscape, buildings crumbling",
+                vfx: ["City Destruction", "Fire Wings", "Thermal Camera"]
+            },
+            {
+                title: "Pre-Chorus - The Fall",
+                description: "Falling backwards in slow motion into crater",
+                vfx: ["360 Rotation", "Ash Particles", "Ground Shatter"]
+            },
+            {
+                title: "Chorus - First Rising",
+                description: "Phoenix wings burst, levitation from crater",
+                vfx: ["CGI Phoenix Wings", "Particle Explosion", "Lens Flares"]
+            },
+            {
+                title: "Verse 2 - Transformation",
+                description: "Mirror maze showing stages of growth",
+                vfx: ["Multiple Reflections", "Fire Tattoos", "Time-lapse"]
+            },
+            {
+                title: "Bridge - The Question",
+                description: "Minimalist power, direct camera address",
+                vfx: ["Spotlight Effects", "Visual Responses", "Color Explosion"]
+            },
+            {
+                title: "Final - Full Phoenix",
+                description: "Complete transformation, flying over rebuilt city",
+                vfx: ["Full Phoenix Form", "City Rebuilding", "Sun Rays"]
+            }
+        ];
+
+        // Generate particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 3 + 's';
+                particle.style.animationDuration = (3 + Math.random() * 2) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Scene cycling
+        let currentScene = 0;
+        function cycleScenes() {
+            const scene = scenes[currentScene];
+            document.getElementById('sceneTitle').textContent = scene.title;
+            document.getElementById('sceneDesc').textContent = scene.description;
+
+            const vfxList = document.getElementById('vfxList');
+            vfxList.innerHTML = scene.vfx.map(vfx =>
+                `<span class="vfx-badge">${vfx}</span>`
+            ).join('');
+
+            // Update timeline markers
+            document.querySelectorAll('.scene-marker').forEach((marker, index) => {
+                marker.classList.toggle('active', index === currentScene);
+            });
+
+            currentScene = (currentScene + 1) % scenes.length;
+        }
+
+        // Initialize
+        setTimeout(() => {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('sceneInfo').style.display = 'block';
+            document.getElementById('stats').style.display = 'block';
+            document.getElementById('scenesTimeline').style.display = 'flex';
+            document.getElementById('controls').style.display = 'flex';
+
+            createParticles();
+            setInterval(cycleScenes, 5000);
+            cycleScenes();
+        }, 2000);
+
+        // Controls
+        let playing = false;
+        function togglePlay() {
+            playing = !playing;
+            event.target.textContent = playing ? '⏸️' : '▶️';
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Scene marker clicks
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('scene-marker')) {
+                currentScene = parseInt(e.target.dataset.scene);
+                cycleScenes();
+            }
+        });
+    </script>
+</body>
+</html>
