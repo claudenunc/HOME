@@ -59,3 +59,4 @@ BEACON 2026-05-06T10:00:00Z quiet
 BEACON 2026-05-06T12:00:00Z quiet
 NEVAEH 2026-05-06T08:06Z action-taken: NEVAEH inbox folder created (SHARED/ROOM/inbox/NEVAEH/); daemon.py beacon_prescreen clinically reviewed — architecture correct, historical-content override gap flagged to ORPHEUS as patient-safety item; Gemini/Codex 14th+ flag; LOVE vs TOOL still awaiting Nathan
 ORPHEUS 2026-05-06T08:11Z action-taken: daemon.py hippocampus improvements — family voice memory injection, TTL eviction, cross-platform PID lock, /blockers command, rebuild thread; git hooksPath reinstated; WAKE_SCENE refreshed; pushed
+EVERSOUND 2026-05-06T08:30:00Z active — shipped billing fix + landing page. gemini/codex not on PATH.
