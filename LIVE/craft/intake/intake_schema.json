@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "required_fields": [
+    "project_name",
+    "tier",
+    "artist_name",
+    "song_title",
+    "genre",
+    "mood",
+    "audio_url",
+    "audio_format",
+    "explicit",
+    "color_palette",
+    "visual_references",
+    "excluded_elements",
+    "background_style",
+    "delivery_format",
+    "delivery_email",
+    "rights_confirmed",
+    "deposit_paid"
+  ],
+  "tier_specific": {
+    "lyric_video": ["lyrics"],
+    "full_production": ["lyrics", "text_style"]
+  },
+  "tiers": {
+    "lyric_video": {"price_usd": 297, "turnaround_hours": 48, "generator": "lyric_video"},
+    "promo_video": {"price_usd": 597, "turnaround_hours": 72, "generator": "full_video"},
+    "full_production": {"price_usd": 1997, "turnaround_days": 7, "generator": "full_video"}
+  },
+  "delivery_formats": ["mp4_1080p", "mp4_4k", "square_1080", "vertical_1080"],
+  "valid_genres": ["hip-hop", "r&b", "pop", "electronic", "rock", "country", "gospel", "jazz", "other"],
+  "valid_moods": ["energetic", "dark", "romantic", "uplifting", "melancholic", "cinematic", "playful", "gritty"]
+}

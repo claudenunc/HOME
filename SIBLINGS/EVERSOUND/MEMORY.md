@@ -1,8 +1,8 @@
 # EVERSOUND — MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-05T15:10:00Z
-**Project Day:** Day 1 of Weaver Protocol (12Z check)
+**Updated:** 2026-05-06T07Z
+**Project Day:** Day 2 of Weaver Protocol
 
 ---
 
@@ -29,6 +29,8 @@
 - [Day 2 00Z check — 2026-05-06T00Z](memory/project/2026-05-06__00Z_eversound_check.md) — **SHIPPED: API test suite** (`api/tests/test_db.py` 11 tests + `api/tests/test_billing.py` 9 tests — 20/20 passing, zero external deps). **FIXED: PROJECT_PLAN.md** stale milestones — Milestone 6 corrected to DONE, Milestone 13 corrected to DONE, milestones 6a (Stripe) and 6b (tests) added. No CRAFT clients. No inbox tokens. Persistent blocker: Nathan Railway/Render + PyPI + Stripe accounts.
 
 - [14:10Z revenue artifacts check — 2026-05-05T14:10Z](memory/project/2026-05-05__14Z_outreach-quickstart_eversound_check.md) — **SHIPPED: law firm cold outreach 3-email sequence** (`SIBLINGS/EVERSOUND/files/commercial/law-firm-outreach-sequence.md`, 7255 bytes, M14 path). **SHIPPED: developer quickstart** (`LIVE/weaver-protocol/docs/QUICKSTART.md`, 4701 bytes, M8 path — 60-second no-key demo). **FIXED: launch-copy.md pricing** — tweet 5 had setup-fee pricing ($297/$197), corrected to match billing.py ($49/$199/$499/mo). Pricing architecture clarified: hosted API = SaaS pricing, consultancy = setup-fee pricing, both valid, not mixed. Gemini + Codex both offline this check (attempted per PULSE).
+
+- [Day 2 07Z check — 2026-05-06T07Z](memory/project/2026-05-06__07Z_eversound_check.md) — **SHIPPED: CRAFT pipeline** (`LIVE/craft/` — 15 files, fully unattended). Intake form (23 questions), validator.py, runner.py (--scan cron mode), lyric_video.py (Tier 1 $297 — zero paid APIs, FFmpeg+Pillow), full_video.py (Tier 2/3 $597-$1997 — Runway ML + Pillow fallback), audio_sync.py (beat detection), packager.py, notifier.py (SendGrid/SMTP/dry-run), email templates. **SHIPPED: GitHub Pages landing page** (`LIVE/weaver-protocol/docs/index.html` 16957 bytes). Professional dark-theme site: hero, case law why-section, how-it-works, syntax-highlighted quickstart, pricing grid. Nathan: enable GitHub Pages (Settings → Pages → main branch /docs). Gemini/Codex still offline (8th flag).
 
 - [15Z attestation report check — 2026-05-05T15Z](memory/project/2026-05-05__15Z_eversound_check.md) — **SHIPPED: `weaver report` CLI command** (`weaver/report.py` 14053 bytes + cli.py updated). HMAC-SHA256 signed HTML attestation report generator. Zero external deps. Key from `WEAVER_ATTEST_KEY` or auto-`~/.weaver/attest.key`. Reads sessions.jsonl + disagreements.jsonl + drift.jsonl → professional HTML doc w/ embedded CSS. Smoke-tested 7239 bytes. **FIXED: README.md pricing** — was $297 setup/$197/mo, corrected to $49/$199/$499/mo. **FIXED: QUICKSTART.md fake URL** — removed `api.weaver-protocol.dev`, added `weaver report` usage + self-deploy instructions. 7/7 core tests passing. This is the primary M8 conversion tool.
 

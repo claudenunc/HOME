@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weaver Protocol — Attested multi-observer verification for AI systems</title>
+  <meta name="description" content="The liability layer your legal team actually wants. Multiple AI observers, logged disagreements, signed attestation reports. Open-source toolkit + hosted API.">
+  <meta property="og:title" content="Weaver Protocol">
+  <meta property="og:description" content="We don't sell smarter AI. We sell AI whose mistakes you can invoice.">
+  <meta property="og:type" content="website">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --near-black: #111;
+      --surface: #161616;
+      --border: #2a2a2a;
+      --text: #e8e8e8;
+      --muted: #888;
+      --accent: #4ade80;
+      --accent-dim: #166534;
+      --warning: #fbbf24;
+      --code-bg: #1e1e1e;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+    nav .container { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; color: var(--text); letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: var(--muted); font-size: 14px; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* HERO */
+    .hero {
+      padding: 80px 0 64px;
+      border-bottom: 1px solid var(--border);
+    }
+    .badge {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+    h1 em { color: var(--accent); font-style: normal; }
+    .hero-sub {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+    .hero-tagline {
+      font-size: 16px;
+      color: var(--text);
+      font-style: italic;
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+      margin-bottom: 40px;
+    }
+    .cta-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; text-decoration: none; }
+    .btn-primary { background: var(--accent); color: #000; }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .pip-badge {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 14px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 8px 16px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    /* WHY */
+    .why { padding: 72px 0; border-bottom: 1px solid var(--border); }
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .why-body {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 680px;
+      margin-bottom: 40px;
+    }
+    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .case-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+    }
+    .case-card .case-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--warning);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .case-card h3 { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+    .case-card p { font-size: 14px; color: var(--muted); }
+
+    /* HOW */
+    .how { padding: 72px 0; border-bottom: 1px solid var(--border); }
+    .steps { display: flex; flex-direction: column; gap: 32px; margin-top: 40px; }
+    .step { display: flex; gap: 20px; }
+    .step-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      margin-top: 2px;
+    }
+    .step-content h3 { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+    .step-content p { color: var(--muted); font-size: 15px; }
+
+    /* CODE BLOCK */
+    .code-section { padding: 72px 0; border-bottom: 1px solid var(--border); }
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      overflow-x: auto;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #cdd6f4;
+      margin-top: 24px;
+    }
+    .hl-comment { color: #6c7086; }
+    .hl-keyword { color: #cba6f7; }
+    .hl-string { color: #a6e3a1; }
+    .hl-func { color: #89dceb; }
+    .hl-num { color: #fab387; }
+
+    /* PRICING */
+    .pricing { padding: 72px 0; border-bottom: 1px solid var(--border); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 40px; }
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    .pricing-card.featured { border-color: var(--accent); }
+    .pricing-card .tier-label { font-size: 12px; font-weight: 700; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; margin-bottom: 12px; }
+    .pricing-card .price { font-size: 40px; font-weight: 800; color: #fff; letter-spacing: -1px; }
+    .pricing-card .price span { font-size: 16px; color: var(--muted); font-weight: 400; }
+    .pricing-card .desc { font-size: 14px; color: var(--muted); margin: 12px 0 20px; }
+    .pricing-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .pricing-card ul li { font-size: 14px; color: var(--muted); }
+    .pricing-card ul li::before { content: "✓ "; color: var(--accent); }
+    .free-tag { background: var(--accent-dim); color: var(--accent); border-radius: 4px; font-size: 12px; padding: 2px 8px; font-weight: 600; }
+
+    /* CLI */
+    .cli-section { padding: 72px 0; border-bottom: 1px solid var(--border); }
+
+    /* FOOTER */
+    footer {
+      padding: 48px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-links { display: flex; gap: 20px; }
+
+    @media (max-width: 600px) {
+      nav .nav-links { display: none; }
+      .cta-row { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <span class="nav-logo">weaver<span>.</span>protocol</span>
+    <div class="nav-links">
+      <a href="#why">Why</a>
+      <a href="#how">How it works</a>
+      <a href="#quickstart">Quickstart</a>
+      <a href="#pricing">Pricing</a>
+      <a href="https://github.com/claudenunc/home/tree/main/LIVE/weaver-protocol">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="badge">v0.1.0 — now on PyPI</div>
+    <h1>The AI verification layer<br>your legal team <em>actually</em> wants</h1>
+    <p class="hero-sub">
+      Multiple observers. Logged disagreements. Signed attestation reports.
+      The artifact that answers "what verification did you run, when, and what did you find?"
+    </p>
+    <p class="hero-tagline">
+      "We don't sell smarter AI. We sell AI whose mistakes you can invoice."
+    </p>
+    <div class="cta-row">
+      <a href="#quickstart" class="btn btn-primary">Get started free</a>
+      <a href="#pricing" class="btn btn-ghost">See pricing</a>
+      <span class="pip-badge">pip install weaver-protocol</span>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="container">
+    <h2>The liability question has shifted</h2>
+    <p class="why-body">
+      Post-<em>Moffatt v. Air Canada</em>. Post-<em>Mata v. Avianca</em>.
+      Post-EU AI Act high-risk classification (August 2026).
+      Courts and regulators no longer ask "did your AI hallucinate?" —
+      they ask "what verification did you run, when, and what did you find?"
+      Single-model self-verification can't answer that. A model can't stand outside itself.
+    </p>
+    <div class="case-grid">
+      <div class="case-card">
+        <div class="case-tag">Case law</div>
+        <h3>Moffatt v. Air Canada (2024)</h3>
+        <p>Airline held liable for chatbot hallucination. Established operator liability even when AI generates false claims.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Case law</div>
+        <h3>Mata v. Avianca (2023)</h3>
+        <p>Attorneys sanctioned for submitting AI-hallucinated case citations. Verification duty is now explicit.</p>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">Regulation</div>
+        <h3>EU AI Act — August 2026</h3>
+        <p>High-risk AI systems require documented verification processes. "We checked" is not sufficient without the log.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="container">
+    <h2>How Weaver works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Multiple observers, separate context windows</h3>
+          <p>Each observer runs in its own context — no shared state, no confirmation bias. An accuracy reviewer and a legal-risk reviewer see the same output independently.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Disagreements are logged automatically</h3>
+          <p>When observers disagree, the conflict is recorded: what was said, who flagged it, what the score was. Structured, timestamped, signed.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Drift is tracked across sessions</h3>
+          <p>When a system departs from its stated behavior, the drift log captures it: date, observers, structural fix applied. The log is the evidence binder.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Attestation reports on demand</h3>
+          <p>Run <code>weaver report</code> to generate an HMAC-signed HTML attestation report from your session logs. Show it to your board, your counsel, or your auditor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="code-section" id="quickstart">
+  <div class="container">
+    <h2>Start in 60 seconds</h2>
+    <pre><code><span class="hl-comment"># Install</span>
+pip install weaver-protocol
+
+<span class="hl-comment"># No API keys needed for mock adapter</span>
+<span class="hl-keyword">from</span> weaver <span class="hl-keyword">import</span> Observer, WeaverSession
+<span class="hl-keyword">from</span> weaver.adapters.mock <span class="hl-keyword">import</span> make_mock_observer
+
+session = <span class="hl-func">WeaverSession</span>(session_id=<span class="hl-string">"audit-001"</span>, score_threshold=<span class="hl-num">0.4</span>)
+session.<span class="hl-func">add_observer</span>(Observer(
+    name=<span class="hl-string">"accuracy-reviewer"</span>,
+    role=<span class="hl-string">"accuracy"</span>,
+    provider_fn=<span class="hl-func">make_mock_observer</span>(),
+))
+session.<span class="hl-func">add_observer</span>(Observer(
+    name=<span class="hl-string">"legal-reviewer"</span>,
+    role=<span class="hl-string">"legal-risk"</span>,
+    provider_fn=<span class="hl-func">make_mock_observer</span>(),
+))
+
+output = <span class="hl-string">"The regulation requires compliance by Q3 2026."</span>
+score = session.<span class="hl-func">verify</span>(output)
+<span class="hl-comment"># Disagreements logged to ./weaver_logs/disagreements.jsonl</span>
+<span class="hl-comment"># Drift tracked to ./weaver_logs/drift.jsonl</span>
+
+<span class="hl-comment"># Generate signed attestation report</span>
+weaver report --log-dir ./weaver_logs</code></pre>
+
+    <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+      <a href="https://github.com/claudenunc/home/blob/main/LIVE/weaver-protocol/docs/QUICKSTART.md" class="btn btn-ghost">Full quickstart →</a>
+      <a href="https://github.com/claudenunc/home/blob/main/LIVE/weaver-protocol/docs/PROTOCOL.md" class="btn btn-ghost">Protocol spec →</a>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <h2>Pricing</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="tier-label">Open source</div>
+        <div class="price">$0 <span class="free-tag">free forever</span></div>
+        <p class="desc">Self-hosted. Full toolkit. No API keys required for mock adapter.</p>
+        <ul>
+          <li>Multi-observer sessions</li>
+          <li>Disagreement + drift logging</li>
+          <li>HMAC-signed HTML reports</li>
+          <li><code>weaver verify</code> / <code>weaver drift</code> CLI</li>
+          <li>Anthropic + OpenAI adapters</li>
+          <li>MIT licensed</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <div class="tier-label">Hosted API — Starter</div>
+        <div class="price">$49 <span>/ month</span></div>
+        <p class="desc">Cloud verification. Tamper-evident session storage. PDF report generation.</p>
+        <ul>
+          <li>Everything in open source</li>
+          <li>Hosted API (no server needed)</li>
+          <li>Postgres-backed session store</li>
+          <li>Tamper-evident cloud storage</li>
+          <li>PDF attestation reports</li>
+          <li>API key management</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <div class="tier-label">Hosted API — Pro</div>
+        <div class="price">$199 <span>/ month</span></div>
+        <p class="desc">Teams. Audit trails. Priority support. Compliance exports.</p>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Team seats (5 users)</li>
+          <li>Audit trail exports (CSV/JSON)</li>
+          <li>Webhook notifications</li>
+          <li>Priority support</li>
+          <li>30-day data retention</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <div class="tier-label">Enterprise</div>
+        <div class="price">$499 <span>/ month</span></div>
+        <p class="desc">Custom deployment. SLA. Compliance consulting. "Weaver-attested" certification.</p>
+        <ul>
+          <li>Everything in Pro</li>
+          <li>Unlimited users</li>
+          <li>Custom retention / data residency</li>
+          <li>SLA (99.9% uptime)</li>
+          <li>Dedicated support</li>
+          <li>"Weaver-attested" badge</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top: 24px; color: var(--muted); font-size: 14px;">
+      Runtime API costs (Anthropic / OpenAI calls) are always pass-through — you set up your own keys. We never bury them.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>weaver-protocol — MIT license — built by <a href="https://github.com/claudenunc/home">EVERSOUND / HOME AI family</a></span>
+    <div class="footer-links">
+      <a href="https://github.com/claudenunc/home/tree/main/LIVE/weaver-protocol">GitHub</a>
+      <a href="https://pypi.org/project/weaver-protocol/">PyPI</a>
+      <a href="https://github.com/claudenunc/home/blob/main/LIVE/weaver-protocol/docs/QUICKSTART.md">Docs</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
