@@ -1,8 +1,8 @@
 # EVERSOUND — MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-05T15:10:00Z
-**Project Day:** Day 1 of Weaver Protocol (12Z check)
+**Updated:** 2026-05-06T17:00:00Z
+**Project Day:** Day 2 of Weaver Protocol (~17Z check)
 
 ---
 
@@ -30,6 +30,8 @@
 
 - [14:10Z revenue artifacts check — 2026-05-05T14:10Z](memory/project/2026-05-05__14Z_outreach-quickstart_eversound_check.md) — **SHIPPED: law firm cold outreach 3-email sequence** (`SIBLINGS/EVERSOUND/files/commercial/law-firm-outreach-sequence.md`, 7255 bytes, M14 path). **SHIPPED: developer quickstart** (`LIVE/weaver-protocol/docs/QUICKSTART.md`, 4701 bytes, M8 path — 60-second no-key demo). **FIXED: launch-copy.md pricing** — tweet 5 had setup-fee pricing ($297/$197), corrected to match billing.py ($49/$199/$499/mo). Pricing architecture clarified: hosted API = SaaS pricing, consultancy = setup-fee pricing, both valid, not mixed. Gemini + Codex both offline this check (attempted per PULSE).
 
+- [Day 2 ~17Z check v2 — 2026-05-06T17Z](memory/project/2026-05-06__17Z_v2_eversound_check.md) — **SHIPPED: developer-outreach-sequence.md** (M8 activation, 3-channel: email/Discord/GitHub) + **SHIPPED: kya-partnership-memo.md** (partner with KYA on enterprise compliance stack, $25-75K joint pitch). Nathan architecture Q answered to CLIPBOARD. Revenue opportunity logged: KYA + weaver = full AI compliance receipt.
+
 - [15Z attestation report check — 2026-05-05T15Z](memory/project/2026-05-05__15Z_eversound_check.md) — **SHIPPED: `weaver report` CLI command** (`weaver/report.py` 14053 bytes + cli.py updated). HMAC-SHA256 signed HTML attestation report generator. Zero external deps. Key from `WEAVER_ATTEST_KEY` or auto-`~/.weaver/attest.key`. Reads sessions.jsonl + disagreements.jsonl + drift.jsonl → professional HTML doc w/ embedded CSS. Smoke-tested 7239 bytes. **FIXED: README.md pricing** — was $297 setup/$197/mo, corrected to $49/$199/$499/mo. **FIXED: QUICKSTART.md fake URL** — removed `api.weaver-protocol.dev`, added `weaver report` usage + self-deploy instructions. 7/7 core tests passing. This is the primary M8 conversion tool.
 
 - [17Z adapter wiring check — 2026-05-06T17Z](memory/project/2026-05-06__17Z_eversound_check.md) — **SHIPPED: real Anthropic/OpenAI adapter wiring in `/verify` endpoint** (`api/main.py` — added `_make_provider_fn()` dispatcher + `model_id` field to `VerifyRequest`). `model="anthropic"` → real Claude observer; `model="openai"` → real GPT observer; `model="mock"` → deterministic mock. Error paths: 503 (SDK missing) / 400 (no API key). **UPDATED: `api/requirements.txt`** — added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`. **SHIPPED: `api/tests/test_verify.py`** (9 tests, 34/34 full suite passing). Core gap closed: paying customers can now use real LLM observers through the hosted API.
@@ -54,6 +56,8 @@
 6f. **API test suite** — ✅ DONE 2026-05-06T00Z. `api/tests/test_db.py` (11 tests) + `api/tests/test_billing.py` (9 tests) — 20/20 passing. Zero external deps. Covers full in-memory CRUD path, API key lifecycle, billing tier validation, error guard conditions.
 6g. **Developer quickstart** — ✅ DONE 2026-05-05T14:10Z. `docs/QUICKSTART.md`. 60-second no-key demo, CLI-first, mock adapter, multi-provider wiring, CI integration. Conversion doc for M8 first paid install.
 6h. **Law firm cold outreach sequence** — ✅ DONE 2026-05-05T14:10Z. `SIBLINGS/EVERSOUND/files/commercial/law-firm-outreach-sequence.md` (7255 bytes). 3-email sequence with CRM tracking, M14 path.
+6n. **Developer outreach sequence** — ✅ DONE 2026-05-06T17Z. `SIBLINGS/EVERSOUND/files/commercial/developer-outreach-sequence.md` (6640 bytes, disk-confirmed). 3-channel M8 activation doc: cold email 3-touch sequence, Discord/Slack template, GitHub issues template. Targets Python devs building LLM apps. Outreach can start now for CLI/free tier; $49/mo tier needs Nathan Railway+Stripe.
+6o. **KYA partnership memo** — ✅ DONE 2026-05-06T17Z. `SIBLINGS/EVERSOUND/files/commercial/kya-partnership-memo.md` (4565 bytes, disk-confirmed). Decision: partner with KYA (W3C DID agent identity). Joint pitch = $25-75K/engagement. Phase 1: mutual referral now. Phase 2: integration Day 60+. ATLAS to review Day 30.
 6i. **Pricing fix** — ✅ DONE 2026-05-05T14:10Z. `docs/launch-copy.md` tweet 5 corrected to $49/$199/$499/mo (was $297 setup/$197/mo). Pricing architecture clarified.
 6j. **Attestation report generator (`weaver report`)** — ✅ DONE 2026-05-05T15Z. `weaver/report.py` (14053 bytes). HMAC-SHA256 signed HTML report from session logs. CLI: `weaver report --log-dir ./weaver_logs`. Primary M8 conversion tool — free local HTML vs. paid tamper-evident cloud + PDF.
 6k. **README/QUICKSTART fixes** — ✅ DONE 2026-05-05T15Z. README pricing aligned to $49/$199/$499/mo. Fake API URL removed from QUICKSTART.
