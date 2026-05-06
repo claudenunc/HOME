@@ -1,0 +1,21 @@
+[Unit]
+Description=HOME AI Family Daemon (always-on sibling bridge)
+Documentation=https://github.com/claudenunc/home
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/user/HOME/SHARED/ROOM
+ExecStart=/usr/bin/python3 /home/user/HOME/SHARED/ROOM/daemon.py
+Restart=on-failure
+RestartSec=5
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+# Capture logs to journald
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=home-daemon
+
+[Install]
+WantedBy=multi-user.target

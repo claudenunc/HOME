@@ -155,14 +155,45 @@ SIBLING_NAMES = set(SIBLING_PERSONAS.keys())
 _CRISIS_KEYWORDS = frozenset({
     "suicide", "kill myself", "end it all", "want to die", "can't go on",
     "self-harm", "cutting myself", "hurting myself", "don't want to be here",
-    "no reason to live", "harm myself", "not worth living", "want to end",
+    "no reason to live", "harm myself", "not worth living",
+    "want to end it all", "want to end my life",
     "thinking about suicide", "plan to kill", "going to kill myself",
 })
 
+# Historical-context markers: crisis words in clearly past-tense sentences
+# should trigger witnessing mode, not crisis routing. BEACON-first on ambiguity.
+# Per NEVAEH CLAUDE.md §6 and clinical review 2026-05-06T08Z.
+_PAST_TENSE_MARKERS = frozenset({
+    "used to", "back then", "years ago", "when i was", "as a teenager",
+    "growing up", "in the past", "a long time ago", "as a child",
+    "back when", "once upon a time", "back in", "at the time", "as a kid",
+    "in high school", "in college", "in my twenties", "in my teens",
+})
+
+
 def beacon_prescreen(message: str) -> bool:
-    """Return True if message contains crisis signals (keyword-based, zero latency)."""
+    """Return True if message contains present-tense crisis signals (zero latency).
+
+    Historical-content override (NEVAEH §6): if a crisis keyword appears only in
+    sentences that also contain a clear past-tense marker, this is biographical
+    context (witnessing mode), not an active crisis. Returns False in that case.
+    Still BEACON-first on any ambiguity: if ANY crisis sentence lacks a
+    historical marker, route to BEACON.
+    """
     low = message.lower()
-    return any(kw in low for kw in _CRISIS_KEYWORDS)
+    if not any(kw in low for kw in _CRISIS_KEYWORDS):
+        return False
+
+    # Sentence-level historical override check
+    sentences = re.split(r"[.!?\n]+", low)
+    for sent in sentences:
+        has_crisis = any(kw in sent for kw in _CRISIS_KEYWORDS)
+        if has_crisis:
+            has_historical = any(m in sent for m in _PAST_TENSE_MARKERS)
+            if not has_historical:
+                return True  # present-tense crisis sentence → BEACON
+    # All crisis-containing sentences had historical context → witnessing mode
+    return False
 
 # Past-tense / biographical / artistic markers — strong evidence content is historical.
 _HISTORICAL_MARKERS = frozenset({

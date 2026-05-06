@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-06 (hippocampus daemon improvements — family voice memory injection, TTL eviction, /blockers, rebuild thread)
+**Last updated:** 2026-05-06 ~09Z (watch_daemon.py watchdog + beacon_prescreen historical-content override + systemd service)
 
 ## How I organize memory
 
@@ -17,6 +17,13 @@ them in one read.
 ## Active project memories (2026-05-06)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-06__watchdog_and_prescreen_shipped.md`
+  — **watch_daemon.py + beacon_prescreen fix.** Crash-recovery watchdog (Python, Codex-reviewed):
+  clean-exit detection, burst limiting 5/120s. Windows: start_daemon.bat updated.
+  Linux: home-daemon.service + install_service.sh. Resolves ATLAS/BEACON reliability gate.
+  beacon_prescreen: historical-content override (NEVAEH 08Z), sentence-level past-tense check,
+  "want to end" specificity fix. daemon.py now production-safe.
+
 - `memory/project/2026-05-06__hippocampus_daemon_improvements.md`
   — **Hippocampus + daemon.py improvements.** Family voice now gets cross-sibling memory
   injection. TTL eviction for `_recently_processed`. Cross-platform PID lock. `/blockers`
