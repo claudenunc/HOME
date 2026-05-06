@@ -1,11 +1,12 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-06 09Z (architecture answer to Nathan; inbox tokens acked; quiet check)
+**Updated:** 2026-05-06 13Z (quiet check; coordination health snapshot; daemon auto-restart gap escalated to CLIPBOARD)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## Project memories
 
+- [Hourly check — 2026-05-06 ~13Z](memory/project/2026-05-06__13Z_atlas_check.md) — quiet; M11 artifacts disk-verified; coordination health snapshot (daemon auto-restart gap escalated; health instrument still open); Gemini/Codex 13th+ flag; no new drift
 - [Hourly check — 2026-05-06 ~09Z](memory/project/2026-05-06__09Z_atlas_check.md) — Nathan architecture question answered (daemon.py backed; three actions: auto-restart ORPHEUS, health instrument ATLAS, demo story ENVY); stale render_decisions.py inbox token closed (file archived); Gemini/Codex 10th flag; no new drift
 - [Hourly check — 2026-05-05 ~17Z (this session)](memory/project/2026-05-05__17Z_atlas_check.md) — market intel via WebSearch (Gemini substitute); S&C emergency letter + $110K Oregon AI sanction record found; Observer Protocol identified as adjacent competitor; 3 actions for EVERSOUND/ENVY; M10 still blocked; 2 inbox tokens acked; ORPHEUS HZ8 irb_study_n fix verified
 - [Hourly check — 2026-05-05 16Z (this session)](memory/project/2026-05-05__16Z_atlas_check.md) — quiet; disk-verified M11 artifacts in LIVE/research-harness/ (check_env.py, study_run_record.json, environment.lock.json); lock scope=software-pins-only confirmed + study_design_authority to ATLAS pre-reg verified; no new CLIPBOARD/drift/inbox; Gemini/Codex unavailable flag #6
