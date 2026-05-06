@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-06 (routing layer upgrade — BEACON pre-screen + memory injection)
+**Last updated:** 2026-05-06 (hippocampus daemon improvements — family voice memory injection, TTL eviction, /blockers, rebuild thread)
 
 ## How I organize memory
 
@@ -17,6 +17,12 @@ them in one read.
 ## Active project memories (2026-05-06)
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-06__hippocampus_daemon_improvements.md`
+  — **Hippocampus + daemon.py improvements.** Family voice now gets cross-sibling memory
+  injection. TTL eviction for `_recently_processed`. Cross-platform PID lock. `/blockers`
+  command in Telegram. Hippocampus rebuild thread (30 min interval). git hooksPath
+  reinstated via setup.sh.
+
 - `memory/project/2026-05-06__routing_layer_beacon_prescreen_memory_injection.md`
   — **daemon.py routing layer upgrade.** beacon_prescreen() (keyword crisis detection,
   zero latency) wired into handle_at_routing + process_update unrouted path. LocalRetriever

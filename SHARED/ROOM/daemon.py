@@ -110,18 +110,24 @@ TELEGRAM_API  = f"https://api.telegram.org/bot{BOT_TOKEN}"
 # ─────────────────────────────────────────────────────────────
 # SINGLE INSTANCE LOCK
 # ─────────────────────────────────────────────────────────────
+def _pid_alive(pid: int) -> bool:
+    """Cross-platform: True if process pid is running."""
+    try:
+        os.kill(pid, 0)
+        return True
+    except OSError:
+        return False
+
+
 def acquire_lock() -> None:
     STATE_DIR.mkdir(exist_ok=True)
     if PID_FILE.exists():
         try:
             old_pid = int(PID_FILE.read_text().strip())
-            import ctypes
-            handle = ctypes.windll.kernel32.OpenProcess(1, False, old_pid)
-            if handle:
-                ctypes.windll.kernel32.CloseHandle(handle)
+            if _pid_alive(old_pid):
                 print(f"[daemon] Another instance running (PID {old_pid}). Exiting.")
                 sys.exit(1)
-        except Exception:
+        except (ValueError, OSError):
             pass  # stale lock, continue
     PID_FILE.write_text(str(os.getpid()))
     atexit.register(lambda: PID_FILE.unlink(missing_ok=True))
@@ -416,6 +422,25 @@ _FAMILY_SYSTEM = (
     "Do NOT make up file paths or status not in the context."
 )
 
+def _family_memory_context(query: str) -> str:
+    """Cross-sibling memory retrieval for family voice — the hippocampus for unrouted messages."""
+    if not _retrieval_available or _local_retriever is None:
+        return ""
+    try:
+        hits = _local_retriever.wake_search(query, k=5, recency_weight=0.3)
+        if not hits:
+            return ""
+        lines = ["## Family memory context (hippocampus — top 5 cross-sibling)\n"]
+        for h in hits:
+            score = h.get("combined_score") or h.get("similarity", 0)
+            path = h["path"]
+            excerpt = (h.get("content_excerpt") or "").strip()[:250]
+            lines.append(f"**[{score:.3f}]** `{path}`\n> {excerpt}\n")
+        return "\n".join(lines)
+    except Exception:
+        return ""
+
+
 def ask_family_voice(message: str) -> str:
     """General family response via Anthropic API (no CLI overhead for non-routed messages)."""
     if not ANTHROPIC_KEY:
@@ -424,8 +449,15 @@ def ask_family_voice(message: str) -> str:
         import anthropic
         pulse     = _load_pulse()
         clipboard = _load_clipboard_tail(20)
-        context   = f"=== PULSE.md ===\n{pulse}\n\n=== Recent CLIPBOARD (last 20) ===\n{clipboard}"
-        client    = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
+        memory    = _family_memory_context(message)
+        sections  = [
+            f"=== PULSE.md ===\n{pulse}",
+            f"=== Recent CLIPBOARD (last 20) ===\n{clipboard}",
+        ]
+        if memory:
+            sections.append(f"=== {memory}")
+        context = "\n\n".join(sections)
+        client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
         resp = client.messages.create(
             model="claude-sonnet-4-6",
             max_tokens=800,
@@ -561,12 +593,52 @@ def handle_message(chat_id: int, text: str) -> None:
     _executor.submit(_respond)
 
 
+def handle_blockers(chat_id: int) -> None:
+    """Show Nathan's open action items and blocked milestones from PROJECT_PLAN.md."""
+    plan_path = SHARED_DIR / "PROJECT_PLAN.md"
+    if not plan_path.exists():
+        send("PROJECT_PLAN.md not found.", chat_id)
+        return
+    text = plan_path.read_text(encoding="utf-8")
+
+    # Extract the "What needs Nathan" section
+    nathan_section = ""
+    in_section = False
+    for line in text.splitlines():
+        if "## What needs Nathan" in line:
+            in_section = True
+            nathan_section += line + "\n"
+            continue
+        if in_section:
+            if line.startswith("## ") and "Nathan" not in line:
+                break
+            nathan_section += line + "\n"
+
+    # Also pull 🔴 milestones
+    blocked = []
+    for line in text.splitlines():
+        if "🔴" in line and "|" in line:
+            blocked.append(line.strip().strip("|").strip())
+
+    parts = []
+    if nathan_section.strip():
+        parts.append(nathan_section.strip())
+    if blocked:
+        parts.append("🔴 Blocked milestones:\n" + "\n".join(f"  {b}" for b in blocked))
+
+    if not parts:
+        send("No blockers found — all clear.", chat_id)
+    else:
+        send("\n\n".join(parts), chat_id)
+
+
 def handle_help(chat_id: int) -> None:
     send(
         "HOME family commands:\n\n"
         "@name msg    — one sibling (e.g. @orpheus what changed?)\n"
         "anything     — no name = everyone responds\n"
         "/siblings    — list all siblings + last activity\n"
+        "/blockers    — your open action items + blocked milestones\n"
         "/help        — this list",
         chat_id,
     )
@@ -598,6 +670,11 @@ def process_update(update: dict) -> Optional[int]:
     # /help
     if low.startswith("/help"):
         handle_help(chat_id)
+        return update_id
+
+    # /blockers
+    if low.startswith("/blockers"):
+        handle_blockers(chat_id)
         return update_id
 
     # @sibling routing
@@ -657,7 +734,15 @@ def telegram_thread() -> None:
 # ─────────────────────────────────────────────────────────────
 _clipboard_watcher_pos: int = 0
 _clipboard_watcher_lock = threading.Lock()
-_recently_processed: set[str] = set()  # entry IDs processed this session
+_recently_processed: dict[str, float] = {}  # entry_id → epoch_time
+_PROCESSED_TTL = 1800.0  # 30 minutes — evict stale entries to prevent unbounded growth
+
+
+def _evict_processed() -> None:
+    cutoff = time.time() - _PROCESSED_TTL
+    stale = [k for k, v in _recently_processed.items() if v < cutoff]
+    for k in stale:
+        del _recently_processed[k]
 
 
 def _process_clipboard_entry(entry: dict) -> None:
@@ -669,7 +754,8 @@ def _process_clipboard_entry(entry: dict) -> None:
     entry_id = entry.get("id", "")
     if entry_id in _recently_processed:
         return
-    _recently_processed.add(entry_id)
+    _evict_processed()
+    _recently_processed[entry_id] = time.time()
 
     frm    = entry.get("from", "").lower()
     to     = entry.get("to", "").lower()
@@ -804,6 +890,18 @@ def clipboard_poll_thread() -> None:
 # ─────────────────────────────────────────────────────────────
 # ENTRY POINT
 # ─────────────────────────────────────────────────────────────
+def hippocampus_rebuild_thread() -> None:
+    """Re-index sibling memory files every 30 minutes so new saves are discoverable."""
+    while True:
+        time.sleep(1800)
+        if _retrieval_available and _local_retriever is not None:
+            try:
+                _local_retriever.rebuild()
+                print(f"[daemon] Hippocampus rebuilt: {len(_local_retriever.records)} files indexed")
+            except Exception as e:
+                print(f"[daemon] Hippocampus rebuild error: {e}")
+
+
 def main() -> None:
     if not BOT_TOKEN:
         print("[daemon] WARNING: TELEGRAM_BOT_TOKEN not set. Add it to SHARED/.env")
@@ -817,6 +915,14 @@ def main() -> None:
     print(f"[daemon] Nathan chat_id: {NATHAN_ID}")
     print(f"[daemon] Claude API: {'enabled' if ANTHROPIC_KEY else 'DISABLED'}")
     print()
+
+    # Start hippocampus rebuild thread (re-indexes new memory files every 30 min)
+    if _retrieval_available:
+        hc_thread = threading.Thread(
+            target=hippocampus_rebuild_thread, daemon=True, name="hippocampus-rebuild"
+        )
+        hc_thread.start()
+        print(f"[daemon] Hippocampus rebuild thread started (interval=30m)")
 
     # Start clipboard watcher (watchdog preferred, polling fallback)
     observer = start_clipboard_watcher()
