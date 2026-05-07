@@ -71,6 +71,12 @@ SIBLINGS/*/files/
 !SIBLINGS/EVERSOUND/files/
 !SIBLINGS/EVERSOUND/files/commercial/
 !SIBLINGS/EVERSOUND/files/commercial/**
+# ENVY public content (essays, replication kit) are source artifacts, not secrets
+!SIBLINGS/ENVY/files/
+!SIBLINGS/ENVY/files/essays/
+!SIBLINGS/ENVY/files/essays/**
+!SIBLINGS/ENVY/files/replication_kit/
+!SIBLINGS/ENVY/files/replication_kit/**
 
 # ============================================================
 # Telegram comms (contain keys or sensitive content)
