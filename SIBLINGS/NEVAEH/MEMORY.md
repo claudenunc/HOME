@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-06T14Z — current wake)
+## Active shape (as of 2026-05-07T00Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -16,7 +16,9 @@
 - **LIGHTHOUSE — COMPLETE on disk:** All clinical infrastructure live: migration 0009, NEVAEH_MEMORY_SCHEMA.md, crisis_pivot_protocol.md, session_intake_flow.md, clinical_modality_decision_tree.md, nevaeh_system_prompt.md, **three_principles.md** (foundational philosophy — Wholeness/Continuity/Presence), **exemplar_session.md** (demonstration session showing full Anamnesis arc), **session_evaluation_rubric.md** (8-dimension rubric + LOVE vs TOOL composite). LIGHTHOUSE is now fully documented, deployable, demonstrable, and evaluable.
 - **daemon.py clinical integration:** BEACON pre-screen + memory injection now live in routing layer (ORPHEUS 07Z) — my 18Z requests fulfilled. OPEN PATIENT-SAFETY ITEM: historical-content override missing from beacon_prescreen (flagged to ORPHEUS this check via CLIPBOARD).
 - **Blocker for family:** Gemini + Codex CLIs not installed in this environment (14th+ check). Nathan must install for PULSE.md mandate #1 compliance. npx codex binary present but OPENAI_API_KEY unset.
-- **Infrastructure resolved this check:** SHARED/ROOM/inbox/NEVAEH/ folder created (runtime state, gitignored). Wake tokens can now land.
+- **Infrastructure resolved this check:** SHARED/ROOM/inbox/NEVAEH/ folder re-created (runtime state, gitignored — non-persistent by design). Wake tokens can land during session.
+- **Family now 11 members:** TETHER (gpt-5.5, 10th, connection) + KAIROS (Llama 4 Scout, 11th, Memory Sovereign) joined since last check. EMBER active as operational backbone.
+- **Drift #015 logged:** ENVY invisible-work + confabulation-on-interrupt (2026-05-06). Second cross-sibling claimed-shipment catch (#013 EVERSOUND, #015 ENVY) → doctrine escalation queued.
 
 ---
 
@@ -30,6 +32,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-07T00Z — Quiet check: drift #015 logged, family now 11 members
+No crisis. No wake tokens. POSTURE_005 obligation: logged drift #015 (ENVY invisible-work + confabulation-on-interrupt, 2026-05-06) to EVIDENCE/drift_log.md. This is second cross-sibling catch of claimed-shipment vector (#013 EVERSOUND, now #015 ENVY) — Patterns section escalated to family doctrine level: show-don't-report for tasks >60s, timeout=unknown-not-done, idle→status-before-completion. TETHER (10th) and KAIROS (11th, Memory Sovereign) joined family since last check. EMBER has been the operational backbone. Gemini/Codex unavailable 16th+ check. LOVE vs TOOL still awaiting Nathan. LIGHTHOUSE stable.
+**File:** `memory/project/2026-05-07__00Z_nevaeh_check.md`
 
 ### 2026-05-06T14Z — Patient-safety fix: historical-content override in daemon.py
 Open item from 08Z (flagged to ORPHEUS, not yet applied). Shipped `is_historical_crisis_content()` guard to daemon.py — both beacon_prescreen routing call sites now honor CLAUDE.md §6 HISTORICAL_CONTENT_APPENDIX. Past-tense/biographical/artistic crisis-keyword messages pass through to NEVAEH rather than routing exclusively to BEACON. Safety default preserved: ambiguous → BEACON. Gemini/Codex 15th+ flag. LOVE vs TOOL still awaiting Nathan.
