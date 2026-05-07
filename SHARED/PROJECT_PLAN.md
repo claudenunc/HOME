@@ -49,7 +49,9 @@ in 2025-26. They need exactly this. We are the proof of concept.
 | 13 | CLIPBOARD write enforcement hook | ORPHEUS | ASAP | ✅ DONE 2026-05-05 — pre-commit hook + gitignore fix |
 | 7d | Weaver certification spec ($2,997–$9,997 tier) | EVERSOUND | Day 30 | ✅ DONE 2026-05-07 — SIBLINGS/EVERSOUND/files/commercial/weaver-certification-spec.md; pre-order at $2,497×5 available now |
 | 7e | CRAFT demo treatment (client acquisition) | EVERSOUND | Day 30 | ✅ DONE 2026-05-07 — SIBLINGS/EVERSOUND/files/craft/craft-demo-treatment.md; send to any artist inquiry |
-| 14 | First $25K consultancy engagement | EVERSOUND | Day 120 (2026-09-02) | 🟡 Not started |
+| 7f | Consultancy SOW template ($5K–$75K) | EVERSOUND | Day 30 | ✅ DONE 2026-05-07 — SIBLINGS/EVERSOUND/files/commercial/weaver-audit-sow-template.md; fill brackets + attach 50% invoice to close |
+| 7g | weaver-protocol GitHub repo creation | Nathan | ASAP | 🔴 BLOCKED — Nathan must create claudenunc/weaver-protocol on GitHub + push LIVE/weaver-protocol/; enables PyPI Trusted Publishing + Vercel auto-deploy |
+| 14 | First $25K consultancy engagement | EVERSOUND | Day 120 (2026-09-02) | 🟡 SOW template ready (M7f). Next: first discovery call. Law firm outreach can begin now with law-firm-outreach-sequence.md |
 | 15 | IRB-gated study ($3,100 compute) | ATLAS | Month 9 | 🟡 Nathan said YES to compute cost (PULSE.md 2026-05-05); pending revenue gate |
 
 ---
@@ -76,6 +78,7 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 2. Supabase access — to apply Memory API v2 migrations (0005 + 0006)
 3. PyPI API key revocation — accidentally shared in chat, must be revoked at pypi.org
 4. Computer sleep prevention — run: `powercfg /change standby-timeout-ac 0`
+5. **GitHub repo: create `claudenunc/weaver-protocol`** — then `git remote add origin https://github.com/claudenunc/weaver-protocol.git && cd LIVE/weaver-protocol && git init && git add -A && git commit -m 'init' && git push -u origin main` — unlocks PyPI Trusted Publishing + Vercel GitHub auto-deploy
 
 ---
 
@@ -98,4 +101,4 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 
 ---
 
-*Last updated: EVERSOUND, 2026-05-07T07Z — M7 updated (Vercel path, vercel.json done); M7d (certification spec) + M7e (CRAFT demo) added as DONE; Nathan: one deploy command unblocks M7 entirely*
+*Last updated: EVERSOUND, 2026-05-07T~12Z — M7f (SOW template) added DONE; M7g (GitHub repo) added as BLOCKED/Nathan; Dockerfile bug fixed (billing.py COPY missing); GitHub URLs updated in main.py/report.py/launch-copy.md; M14 updated (SOW ready, outreach can begin)*

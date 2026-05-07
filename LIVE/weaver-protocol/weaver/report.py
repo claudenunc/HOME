@@ -344,7 +344,7 @@ def generate_report(
 
   </div>
   <div class="footer">
-    <span>weaver-protocol v{_VERSION} — MIT License — <a href="https://github.com/claudenunc/home" style="color:#9ca3af;">github</a></span>
+    <span>weaver-protocol v{_VERSION} — MIT License — <a href="https://github.com/claudenunc/weaver-protocol" style="color:#9ca3af;">github</a></span>
     <span>The log is the product. The signature is the proof.</span>
   </div>
 </div>

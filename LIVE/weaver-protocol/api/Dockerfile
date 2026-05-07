@@ -11,6 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY api/main.py .
 COPY api/db.py .
+COPY api/billing.py .
 
 ENV WEAVER_API_KEYS=""
 ENV PORT=8000

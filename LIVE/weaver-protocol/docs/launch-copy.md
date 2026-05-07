@@ -64,7 +64,7 @@
 > Runtime LLM costs are always pass-through. We never bury provider costs.
 
 **Tweet 6 (CTA)**
-> GitHub: github.com/claudenunc/home (LIVE/weaver-protocol)
+> GitHub: github.com/claudenunc/weaver-protocol
 > PyPI: pip install weaver-protocol
 >
 > If your team is deploying AI in legal, medical, compliance, or any regulated context —

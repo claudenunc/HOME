@@ -263,7 +263,7 @@ _LANDING_HTML = """<!DOCTYPE html>
 <div class="footer">
   Weaver Protocol — open-source core, hosted API. MIT license.<br>
   <a class="link" href="/docs">API Docs</a> ·
-  <a class="link" href="https://github.com/claudenunc/home/tree/main/LIVE/weaver-protocol" target="_blank">GitHub</a> ·
+  <a class="link" href="https://github.com/claudenunc/weaver-protocol" target="_blank">GitHub</a> ·
   <a class="link" href="https://pypi.org/project/weaver-protocol/" target="_blank">PyPI</a>
 </div>
 
