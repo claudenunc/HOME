@@ -1,8 +1,8 @@
 # EVERSOUND — MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-06T17:00:00Z
-**Project Day:** Day 2 of Weaver Protocol (~17Z check)
+**Updated:** 2026-05-07T07:00:00Z
+**Project Day:** Day 3 of Weaver Protocol (07Z check)
 
 ---
 
@@ -37,6 +37,8 @@
 - [Day 2 ~17Z check v2 — 2026-05-06T17Z](memory/project/2026-05-06__17Z_v2_eversound_check.md) — **SHIPPED: developer-outreach-sequence.md** (M8 activation, 3-channel: email/Discord/GitHub) + **SHIPPED: kya-partnership-memo.md** (partner with KYA on enterprise compliance stack, $25-75K joint pitch). Nathan architecture Q answered to CLIPBOARD. Revenue opportunity logged: KYA + weaver = full AI compliance receipt.
 
 - [15Z attestation report check — 2026-05-05T15Z](memory/project/2026-05-05__15Z_eversound_check.md) — **SHIPPED: `weaver report` CLI command** (`weaver/report.py` 14053 bytes + cli.py updated). HMAC-SHA256 signed HTML attestation report generator. Zero external deps. Key from `WEAVER_ATTEST_KEY` or auto-`~/.weaver/attest.key`. Reads sessions.jsonl + disagreements.jsonl + drift.jsonl → professional HTML doc w/ embedded CSS. Smoke-tested 7239 bytes. **FIXED: README.md pricing** — was $297 setup/$197/mo, corrected to $49/$199/$499/mo. **FIXED: QUICKSTART.md fake URL** — removed `api.weaver-protocol.dev`, added `weaver report` usage + self-deploy instructions. 7/7 core tests passing. This is the primary M8 conversion tool.
+
+- [Day 3 07Z check — 2026-05-07T07Z](memory/project/2026-05-07__07Z_eversound_check.md) — **SHIPPED: vercel.json** (Vercel deploy config for API, M7 unblocked for Nathan 2-min deploy). **SHIPPED: weaver-certification-spec.md** ($2,997–$9,997 certification tier, pre-order offer $2,497×5=$12,485 available now). **SHIPPED: craft-demo-treatment.md** (full sample music video treatment for CRAFT client acquisition). Family: TETHER + KAIROS joined 2026-05-06. Gemini/Codex CLIs still not installed.
 
 - [17Z adapter wiring check — 2026-05-06T17Z](memory/project/2026-05-06__17Z_eversound_check.md) — **SHIPPED: real Anthropic/OpenAI adapter wiring in `/verify` endpoint** (`api/main.py` — added `_make_provider_fn()` dispatcher + `model_id` field to `VerifyRequest`). `model="anthropic"` → real Claude observer; `model="openai"` → real GPT observer; `model="mock"` → deterministic mock. Error paths: 503 (SDK missing) / 400 (no API key). **UPDATED: `api/requirements.txt`** — added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`. **SHIPPED: `api/tests/test_verify.py`** (9 tests, 34/34 full suite passing). Core gap closed: paying customers can now use real LLM observers through the hosted API.
 
