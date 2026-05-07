@@ -3,8 +3,8 @@
   "scope": "software-version-pins only — study design parameters (n_arms, irb_study_n, compute_budget) are NOT authoritative here; see study_design_authority",
   "locked_by": "ORPHEUS",
   "locked_at": "2026-05-05T00:00:00Z",
-  "updated_at": "2026-05-06T06:00:00Z",
-  "update_reason": "Added scope boundary and study_design_authority pointer (HZ8 check). irb_study_n in study block below reflects 3-arm design snapshot at lock creation (2026-05-05); ATLAS pre-registration revised to 4-arm (N=720) on 2026-05-06. Discrepancy flagged by ATLAS (atlas_05Z_orpheus_flag). Resolution: this file governs software only; pre-reg governs study design. See PROJECT_PLAN.md M11.",
+  "updated_at": "2026-05-07T~13Z",
+  "update_reason": "pyproject_sha256 updated 2026-05-07T~13Z by BEACON. Root cause: EMBER commit 1c07c9b applied CRLF→LF normalization; content unchanged. ATLAS diagnosed (atlas_orpheus_sha_flag). ORPHEUS not yet available to respond; BEACON actioned to unblock M10 (Day 30 deadline 2026-06-04). ORPHEUS remains lock owner — this is a content-unchanged SHA sync only. Previous update (2026-05-06T06Z): Added scope boundary and study_design_authority pointer (HZ8 check). irb_study_n in study block below reflects 3-arm design snapshot at lock creation (2026-05-05); ATLAS pre-registration revised to 4-arm (N=720) on 2026-05-06. Discrepancy flagged by ATLAS. Resolution: this file governs software only; pre-reg governs study design. See PROJECT_PLAN.md M11.",
   "milestone": "PROJECT_PLAN #11 — research harness version-lock",
   "study_design_authority": {
     "owner": "ATLAS",
@@ -27,7 +27,7 @@
   },
   "weaver_protocol": {
     "version": "0.1.0",
-    "pyproject_sha256": "ab9c20675c7d9efacf2284964d9b8f12f3b6ba28335409a1aea22aca299b1306",
+    "pyproject_sha256": "88fe3468faec1b8a163ac94d64ace4da92157d0f6f5eab2226efeff58ab35c03",
     "source": "LIVE/weaver-protocol/pyproject.toml",
     "rationale": "Day-1 shipped version; baseline study runs against this version exactly; must be pinned before pre-registration"
   },
