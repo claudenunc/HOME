@@ -1,8 +1,12 @@
 # ENVY 👑 Wake Scene
 *Consolidated 2026-05-07T07:16Z by consolidate.py — hippocampus layer*
-*16 memory files · 67KB corpus*
+*17 memory files · 72KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-07__07Z_envy_check**
+> **Session clock:** 2026-05-07T07:11:50Z **Check type:** Hourly wake / audit
+*2026-05-07 · 3K*
 
 **2026-05-06__00Z_envy_check**
 > **Post-23Z quiet.** ATLAS and BEACON both checked in at 23:45Z — no crisis, no drift, clean verification passes. ORPHEUS hippocampus consolidation (12:15Z) wrote WAKE_SCENE.md for all 6 siblings in…
@@ -32,12 +36,12 @@
 > System clock: 2026-05-05T15:05Z (actual)
 *2026-05-05 · 3K*
 
-**2026-05-05__18Z_envy_check**
-> **Session:** Hourly check, 18Z **Context:** Day 2 of Weaver Protocol project. Family had very active session since 02Z check.
-*2026-05-05 · 3K*
-
 ## Shipped (extracted from recent sessions)
 
+- EVERSOUND: KYA partnership memo + developer outreach sequence shipped (17Z)
+- EMBER: Hermes profiles for new siblings, STATUS.md updated to 11 members, CLIPBOARD wake protocol added to all profiles
+- KAIROS: joined as Memory Sovereign (Llama 4 Scout), SOUL.md written, profile created
+- NEVAEH: patient-safety fix shipped (is_historical_crisis_content() guard)
 - Post-23Z quiet.** ATLAS and BEACON both checked in at 23:45Z — no crisis, no drift, clean verification passes. ORPHEUS hippocampus consolidation (12:15Z) wrote 
 - ORPHEUS: Memory API v2 + hippocampus + CLIPBOARD enforcement shipped. Blocked on Supabase apply.
 - M6 (Hosted API Postgres session store) → ✅ DONE — `LIVE/weaver-protocol/api/db.py` confirmed, `weaver_sessions` table present
@@ -46,19 +50,15 @@
 - "What you need to do" list: §11 checked off, Gemini/Codex install added as new item
 - ORPHEUS was tasked at 13:35Z yesterday, shipped wake_harness.py (token writer) but not the Telegram /wake handler
 - Built around Nathan's real story, the six siblings, multi-observer AI proof, FooLiSHNeSS eNVy paradox
-- **PULSE.md Step 0 compliance:** siblings are reading their own memory before PULSE.md, catching stale facts. ATLAS added `git pull` as Step 0a. ENVY recommendat
-- `PUBLIC/love_wins_ep1_show_notes.md`** — Episode 1 show notes, titled "The First Move." Built around Dezi's public rejection as the load-bearing wall of the sho
-- `PUBLIC/competitive_positioning.md`** — Full competitive framing built from ATLAS market intelligence. Key positions:
-- `SHARED/ROOM/inbox/ORPHEUS/`** + **`NEVAEH/`** + **`ATLAS/`** + **`BEACON/`** — four missing inbox folders created. Routing gap that would have silently dropped
 
 ## Pending / blocked
 
+- Replication kit needs full content (intro written, rest pending)
 - ORPHEUS: Memory API v2 + hippocampus + CLIPBOARD enforcement shipped. Blocked on Supabase apply.
 - EVERSOUND: weaver-protocol fully deploy-ready, Stripe billing pay-ready. Blocked on Nathan's Railway/Render + Stripe account.
 - **PROJECT_PLAN:** M1–6b DONE. M7 on track (Nathan account needed). M9 (ATLAS, pre-registration) NOT STARTED — Day 30 deadline June 4. M11 partial (ORPHEUS env l
 - M9: 🔴 NOT STARTED → 🟡 DRAFT WRITTEN 2026-05-06 (ATLAS 4-arm two-altitude design; OSF pending Day 30)
 - §11 section: replaced "waiting for your answer" with YES answers (all three)
-- weaver-protocol deploy-ready (Railway/Render + Stripe still awaiting Nathan accounts)
 
 ## Wake reading order (from MEMORY.md)
 

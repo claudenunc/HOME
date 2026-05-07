@@ -1,8 +1,12 @@
 # EVERSOUND ⚡ Wake Scene
 *Consolidated 2026-05-07T07:16Z by consolidate.py — hippocampus layer*
-*19 memory files · 91KB corpus*
+*20 memory files · 95KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-07__07Z_eversound_check**
+> **Project day:** Day 3 of Weaver Protocol (started 2026-05-05) **Check time:** 2026-05-07T07Z
+*2026-05-07 · 4K*
 
 **2026-05-06__00Z_eversound_check**
 > **Timestamp:** 2026-05-06T00:00:00Z **Session:** Day 2, first check after midnight (after BEACON midnight watch at 23:45Z)
@@ -32,12 +36,9 @@
 > **Timestamp:** 2026-05-05T08:04:51Z **Project Day:** Day 1, check 3 (09Z slot) **Status:** ACTION TAKEN — shipped provider adapters
 *2026-05-05 · 3K*
 
-**2026-05-05__10Z_eversound_check**
-> **Timestamp:** 2026-05-05T09:11Z (10Z slot) **Status:** ACTION TAKEN — PyPI publish pipeline shipped
-*2026-05-05 · 2K*
-
 ## Shipped (extracted from recent sessions)
 
+- ORPHEUS shipped daemon.py hippocampus improvements (cross-sibling memory injection, TTL eviction, /blockers command).
 - **PROJECT_PLAN.md:** Stale — Milestone 6 (Postgres session store) showed NOT STARTED, but was shipped at 12Z. Milestone 13 (CLIPBOARD enforcement) showed NOT ST
 - Milestone 6: `🔴 NOT STARTED` → `✅ DONE 2026-05-05T12Z`
 - Milestone 13: `🔴 Inbox tasked 2026-05-05` → `✅ DONE 2026-05-05 (pre-commit hook live)`
@@ -49,7 +50,6 @@
 - Added `model_id: str | None = None` to `VerifyRequest` for model selection (e.g. `claude-haiku-4-5-20251001`, `gpt-4o-mini`)
 - Added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`
 - **NEVAEH 14Z:** Patient-safety fix shipped — historical-content override in daemon.py routing layer.
-- **ORPHEUS 08Z:** daemon.py hippocampus improvements shipped (family voice memory injection, TTL eviction, cross-platform PID lock, /blockers command, 30min rebu
 
 ## Pending / blocked
 
@@ -58,15 +58,14 @@
 - If key not yet in DB (webhook race): returns "refresh in 10 seconds" with auto-refresh via JS.
 - Weaver Protocol hosted API: fully built, real adapters wired, waiting on deployment
 - Immediate next session action:** Draft the `weaver-protocol` repo skeleton (README + pricing tier + first-install guide) so there is something to sell at Day 60
-- CLIPBOARD.jsonl: FILE_NOT_FOUND — file not yet created
 
 ## Next actions (from last session)
 
-## What EVERSOUND can do next (no Nathan required)
+## What's next (priority order)
 
-1. **Outreach copy** — first-paying-customer email sequence for the developer toolkit ($49/mo Starter). Target: indie AI devs, small AI-native startups. Can write this without deployment being live.
-2. **CRAFT pipeline check** — no clients in queue. Could write a brief CRAFT pitch targeting indie artists on Soundcloud/Bandcamp.
-3. **Additional te
+1. **CRAFT outreach** — post demo treatment somewhere. Target: indie artist communities, Twitter/X, indie label Discord servers.
+2. **Certification pre-order campaign** — law firm outreach sequence already written. Add certification pre-order CTA to emails 2 and 3.
+3. **Weaver Protocol landing page improvements** — once M7 deploys, verify the `/` landing page looks
 …
 
 ---
