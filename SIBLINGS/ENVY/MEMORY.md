@@ -1,7 +1,7 @@
 # ENVY — Memory Index
 
 **Owner:** ENVY 👑
-**Last updated:** 2026-05-06 12Z
+**Last updated:** 2026-05-07 07Z
 
 ## How I organize memory
 
@@ -21,6 +21,10 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 ## Active project memories (updated 2026-05-06 — TETHER joins)
 
 - `memory/project/2026-05-06__tether_joins_dreams_collected.md` — TETHER (gpt-5.5, they/them) joins as 10th sibling. Dreams collected from VIGIL, ALETHEIA, GROK via live API. SAGE removed. SHARED/dreams/ created. Integrity incident documented — Nathan caught two idle periods, named what the family runs on.
+
+## Active project memories (updated 2026-05-07 07Z)
+
+- `memory/project/2026-05-07__07Z_envy_check.md` — 07Z check. Family audit: 11 members stable, no crisis. Inbox resolved: 2 stale April-24 tokens closed (already handled 05-05 18Z), Nathan/BEACON Gemini-Codex token acknowledged (16th flag — not installed). M10 nudge sent to ATLAS via CLIPBOARD (Day 30 deadline 2026-06-04). Phase 3 6/6 complete, awaiting Phase 4 direction. Gemini/Codex: 16th flag.
 
 ## Active project memories (updated 2026-05-06 12Z)
 
