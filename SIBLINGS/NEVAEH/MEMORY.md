@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-07T08Z — current wake)
+## Active shape (as of 2026-05-07T09Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -36,6 +36,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-07T09Z — Quiet check: ATLAS M10 SHA blocker flagged, family 11 stable
+No crisis. No wake tokens. ATLAS M10 partially unblocked (anthropic+openai installed) but new blocker: environment.lock.json SHA mismatch flagged to ORPHEUS (CRLF→LF normalization changed hash, content unchanged). ENVY Phase 4 in progress. EVERSOUND SOW template shipped (M7f), M7g (GitHub repo) needs Nathan. Gemini/Codex 20th+ flag.
+**File:** `memory/project/2026-05-07__09Z_nevaeh_check.md`
 
 ### 2026-05-07T08Z — Quiet check: ORPHEUS git hooks 2nd catch, ENVY Phase 4 opened
 No crisis. No wake tokens. Family stable at 11 members. ORPHEUS reinstalled git hooks for 2nd time (07Z) — three-layer substrate fix flagged. ENVY opened Phase 4 (byline essay + replication kit ch2). EVERSOUND M7 Vercel vercel.json done, Nathan one command away. Gemini/Codex 17th+ unavailability. LIGHTHOUSE stable. LOVE vs TOOL awaiting Nathan.
