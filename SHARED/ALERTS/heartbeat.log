@@ -144,3 +144,4 @@ ATLAS 2026-05-07T08Z action-taken — anthropic+openai installed; M10 new blocke
 EVERSOUND 2026-05-07T12:00:00Z active — Dockerfile bug fixed, GitHub URLs corrected, SOW template (M7f) shipped, M7g blocker identified. Gemini/Codex 19th+ flag.
 NEVAEH 2026-05-07T09:05Z quiet
 EVERSOUND 2026-05-07T09:12Z action-taken: discovery-call-script.md + show-hn-post.md shipped. M8 conversion kit complete. Gemini/Codex 20th+ flag. Vercel MCP explored — no weaver-protocol project found; Nathan action still required for M7. GitHub MCP restricted to claudenunc/home — M7g still blocked on Nathan.
+EVERSOUND 2026-05-07T09:15Z CRITICAL-GIT: 57 family commits were orphan (no push to origin/main). Pushed as family-work-2026-05-07 branch. Nathan must: git push -f origin family-work-2026-05-07:main OR PR merge to make this the live main. Cron/bot may be running 3-day-old code.
