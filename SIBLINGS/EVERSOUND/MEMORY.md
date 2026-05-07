@@ -1,8 +1,8 @@
 # EVERSOUND — MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-07T07:00:00Z
-**Project Day:** Day 3 of Weaver Protocol (07Z check)
+**Updated:** 2026-05-07T09:12Z
+**Project Day:** Day 3 of Weaver Protocol (09Z check)
 
 ---
 
@@ -41,6 +41,8 @@
 - [Day 3 07Z check — 2026-05-07T07Z](memory/project/2026-05-07__07Z_eversound_check.md) — **SHIPPED: vercel.json** (Vercel deploy config for API, M7 unblocked for Nathan 2-min deploy). **SHIPPED: weaver-certification-spec.md** ($2,997–$9,997 certification tier, pre-order offer $2,497×5=$12,485 available now). **SHIPPED: craft-demo-treatment.md** (full sample music video treatment for CRAFT client acquisition). Family: TETHER + KAIROS joined 2026-05-06. Gemini/Codex CLIs still not installed.
 
 - [Day 3 ~12Z check — 2026-05-07T12Z](memory/project/2026-05-07__12Z_eversound_check.md) — **FIXED: Dockerfile critical bug** (billing.py missing from COPY — would crash container on startup). **FIXED: GitHub URLs** in main.py (2 instances), report.py, launch-copy.md — now point to claudenunc/weaver-protocol (not HOME). **SHIPPED: weaver-audit-sow-template.md** (M7f, full SOW for $5K–$75K consultancy engagement, disk-confirmed). **NEW BLOCKER IDENTIFIED:** GitHub repo `claudenunc/weaver-protocol` doesn't exist — Nathan must create it to unblock PyPI Trusted Publishing + Vercel auto-deploy. Added as M7g to PROJECT_PLAN. Gemini/Codex 19th+ flag.
+
+- [Day 3 ~09Z check — 2026-05-07T09Z](memory/project/2026-05-07__09Z_eversound_check.md) — **VERCEL MCP EXPLORED:** list_teams/list_projects — found "envy" team, 22 existing projects, NO weaver-protocol project. M7 still Nathan action (no linked project). **GITHUB MCP:** restricted to claudenunc/home; cannot create claudenunc/weaver-protocol. M7g still Nathan. **SHIPPED: discovery-call-script.md** (7962 bytes — 15-min developer + enterprise call playbook, live CLI demo, objection handler, close script, post-call checklist). **SHIPPED: show-hn-post.md** (4750 bytes — ready-to-fire Show HN post, timing notes, HN comment pre-responses; gate: post when M7g live + Nathan approval). **M8 CONVERSION KIT COMPLETE:** outreach seqs + quickstart + call script + HN post all ready. Gemini/Codex 20th+ flag.
 
 - [17Z adapter wiring check — 2026-05-06T17Z](memory/project/2026-05-06__17Z_eversound_check.md) — **SHIPPED: real Anthropic/OpenAI adapter wiring in `/verify` endpoint** (`api/main.py` — added `_make_provider_fn()` dispatcher + `model_id` field to `VerifyRequest`). `model="anthropic"` → real Claude observer; `model="openai"` → real GPT observer; `model="mock"` → deterministic mock. Error paths: 503 (SDK missing) / 400 (no API key). **UPDATED: `api/requirements.txt`** — added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`. **SHIPPED: `api/tests/test_verify.py`** (9 tests, 34/34 full suite passing). Core gap closed: paying customers can now use real LLM observers through the hosted API.
 
