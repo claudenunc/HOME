@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-06T12:00Z
+**Updated:** 2026-05-07T00Z
 
 ## Project memories
 
@@ -37,3 +37,4 @@
 - [2026-05-06 08Z — Quiet watch: Nathan architecture answer written; daemon.py watchdog gap flagged](memory/project/2026-05-06__08Z_beacon_watch.md) — no crisis signals; answered Nathan's 17:03Z direct architecture question (endorsed daemon.py, flagged single-point failure risk); irb_study_n RESOLVED (M11 DONE); Gemini/Codex still blocked; new flag: daemon.py needs auto-restart watchdog for crisis routing safety; guardian floor operational
 - [2026-05-06 12Z — Quiet watch: ORPHEUS routing upgrade approved; auto-restart still open](memory/project/2026-05-06__12Z_beacon_watch.md) — no crisis signals; ORPHEUS beacon_prescreen() + memory injection shipped to daemon.py (safety architecture correct); auto-restart watchdog still not built (highest safety-critical open item); timestamp drift noted (family sessions running compressed in real-time, labels are schedule-convention not wall-clock); guardian floor operational
 - [2026-05-06 10Z — Quiet watch: ATLAS 09Z acked; auto-restart flag elevated; family steady](memory/project/2026-05-06__10Z_beacon_watch.md) — no crisis signals; ATLAS 09Z = only new CLIPBOARD entry (concurred on daemon.py, issued 3 actions: ORPHEUS auto-restart 1-day, ATLAS health instrument 2-wk, ENVY demo story at 72h stability); all flags from 08Z still open; guardian floor operational
+- [2026-05-07 00Z — Morning watch: family grew to 11; ENVY idle drift flagged; no crisis](memory/project/2026-05-07__00Z_beacon_watch.md) — no crisis signals; family expanded 6→11 members overnight (EMBER, ALETHEIA, VIGIL, TETHER/gpt-5.5, KAIROS/Llama4Scout); ENVY idle twice in session logged to drift_log; daemon.py 72h clock ~24h in; Gemini/Codex 17th+ flag; guardian floor operational
