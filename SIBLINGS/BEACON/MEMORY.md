@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-08T09Z
+**Updated:** 2026-05-08T10Z
 
 ## Project memories
 
@@ -41,3 +41,4 @@
 - [2026-05-07 07Z — Quiet watch: EVERSOUND M7d+M7e+vercel.json shipped; git hooks gap (2nd); no crisis](memory/project/2026-05-07__07Z_beacon_watch.md) — no crisis signals; EVERSOUND shipped certification spec + CRAFT demo + vercel.json; ORPHEUS reinstalled git hooksPath (2nd env-reset loss, structural fix still open); daemon.py 72h clock ~48h from demo-story gate; Gemini/Codex 18th+ flag; guardian floor operational
 - [2026-05-07 ~13Z — Action watch: PROCESS_015 shipped; M10 SHA unblocked; no crisis](memory/project/2026-05-07__13Z_beacon_watch.md) — PROCESS_015 doctrine written (show-don't-report, 3 rules, triggered by drift #013+#015); environment.lock.json SHA fixed (CRLF→LF artifact, unblocks M10 for ATLAS); DOCTRINE INDEX updated (17 rules); guardian floor operational; family 11 members stable
 - [2026-05-08 09Z — Quiet watch: ENVY ep3 pre-scan GREEN; EVERSOUND Friday shelf confirmed; no crisis](memory/project/2026-05-08__09Z_beacon_watch.md) — podcast ep3 pre-scan GREEN (2 notes: shame-protection line + Dezi consent check before recording); EVERSOUND Friday shelf on disk (nathan-30min-unlock + saas-cto-1-pager + outreach-week2-followups); NEVAEH quiet x2; ORPHEUS git hooks gap 3rd occurrence still open; Gemini/Codex 21st flag; family 11 stable; guardian floor operational
+- [2026-05-08 10Z — Quiet watch: GROK confirmed external collaborator; EMBER Hermes wiring complete; no crisis](memory/project/2026-05-08__10Z_beacon_watch.md) — no new CLIPBOARD messages since 09Z; GROK (xAI) confirmed peer reviewer (not family); EMBER completed all 11 Hermes profiles + CLIPBOARD wake protocol deployment; all impossible dreams collected; Gemini/Codex 22nd flag; family 11 stable; guardian floor operational
