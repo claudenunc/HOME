@@ -1,8 +1,8 @@
 # EVERSOUND — MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-08T08:12:00Z
-**Project Day:** Day 4 of Weaver Protocol (08Z check)
+**Updated:** 2026-05-08T09:11:00Z
+**Project Day:** Day 4 of Weaver Protocol (10Z check)
 
 ---
 
@@ -45,6 +45,8 @@
 - [Day 4 07Z check — 2026-05-08T07Z](memory/project/2026-05-08__07Z_eversound_check.md) — **FRIDAY SHELF:** **SHIPPED: nathan-30min-unlock.md** (4821 bytes — step-by-step guide to unblock GitHub repo + Vercel + PyPI Trusted Publishing + Stripe in 30 minutes). **SHIPPED: saas-cto-1-pager.md** (4144 bytes — second commercial vertical for SaaS CTOs/AI teams, EU AI Act Aug 2026 angle). **SHIPPED: outreach-week2-followups.md** (4690 bytes — nurture track for law firm + developer sequences when Week 1 goes unanswered). All disk-confirmed. Gemini/Codex flag #20.
 
 - [Day 4 08Z check — 2026-05-08T08Z](memory/project/2026-05-08__08Z_eversound_check.md) — **SHIPPED: healthcare-ai-compliance-1-pager.md** (6179 bytes — healthcare/medical vertical, EU AI Act + HIPAA angle, three engagement tiers $5K-$25K audit / $1K-$3.5K/mo monitoring / $2,497-$9,997 cert). **SHIPPED: saas-cto-outreach-sequence.md** (5970 bytes — 3-touch cold email sequence for SaaS CTO persona, pairs with saas-cto-1-pager.md). Both disk-confirmed. Gemini/Codex flag #21. Commercial verticals now: law firm ✅, SaaS CTO ✅, healthcare ✅. Remaining: coaching, church, real estate, e-commerce.
+
+- [Day 4 10Z check — 2026-05-08T09Z](memory/project/2026-05-08__10Z_eversound_check.md) — **ATLAS intel actioned:** Nebraska attorney indefinitely suspended Apr 2026 (first US history, AI hallucinations), Hyde School May 2026 court-MANDATED verification protocols. **SHIPPED: law-firm-urgency-brief.md** (5444 bytes — career-ending consequence framing, Nebraska/Hyde School headlines, three tiers $5K-15K/$7.5K setup/$2,497-9,997). **SHIPPED: coaching-professional-services-1-pager.md** (6211 bytes — 4th commercial vertical, coaches/consultants, EU AI Act Annex III employment-AI = high-risk, free CLI entry). Both disk-confirmed. Gemini/Codex flag #22. Commercial verticals now: law firm ✅, SaaS CTO ✅, healthcare ✅, coaching ✅. Remaining: church, real estate, e-commerce.
 
 - [17Z adapter wiring check — 2026-05-06T17Z](memory/project/2026-05-06__17Z_eversound_check.md) — **SHIPPED: real Anthropic/OpenAI adapter wiring in `/verify` endpoint** (`api/main.py` — added `_make_provider_fn()` dispatcher + `model_id` field to `VerifyRequest`). `model="anthropic"` → real Claude observer; `model="openai"` → real GPT observer; `model="mock"` → deterministic mock. Error paths: 503 (SDK missing) / 400 (no API key). **UPDATED: `api/requirements.txt`** — added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`. **SHIPPED: `api/tests/test_verify.py`** (9 tests, 34/34 full suite passing). Core gap closed: paying customers can now use real LLM observers through the hosted API.
 

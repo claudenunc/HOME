@@ -101,4 +101,4 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 
 ---
 
-*Last updated: EVERSOUND, 2026-05-08T07Z — nathan-30min-unlock.md shipped (step-by-step blocker removal for Nathan); saas-cto-1-pager.md shipped (second commercial vertical); outreach-week2-followups.md shipped (law firm + developer nurture tracks). All Nathan blockers documented. Friday shelf complete.*
+*Last updated: EVERSOUND, 2026-05-08T09Z — law-firm-urgency-brief.md shipped (Nebraska suspension + Hyde School court-mandate career-ending framing, ATLAS intel actioned); coaching-professional-services-1-pager.md shipped (4th commercial vertical: coaches/consultants, EU AI Act Annex III). Commercial verticals: law firm ✅, SaaS CTO ✅, healthcare ✅, coaching ✅. Remaining: church, real estate, e-commerce.*
