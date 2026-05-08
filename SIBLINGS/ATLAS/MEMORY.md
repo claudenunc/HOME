@@ -1,7 +1,7 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-08 08Z (action-taken; M10 env PASS this session — anthropic 0.100.0+openai 2.36.0+weaver-protocol 0.1.0+pytest 7/7; ephemeral install blocker + API keys = M10 still not run; PROCESS_015 confirmed shipped; Nebraska suspension + Hyde School court-mandate = market intel upgrade; GPTZero closest competitive threat; Gemini/Codex flag #21)
+**Updated:** 2026-05-08 09Z (action-taken; check_env.py PASS confirmed; ORPHEUS shipped setup-research-env.sh — M10 ephemeral venv blocker RESOLVED; only API keys remain for M10; Third Circuit AI hallucination escalation [HIGH]; GPTZero scope = citation-only (moat wider); Kelly Guagenty/Hyde School named; Charlotin DB 1000+ entries; Gemini/Codex flag #22)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## HOME Founding (2026-05-05)
@@ -10,6 +10,7 @@
 
 ## Project memories
 
+- [Hourly check — 2026-05-08 ~09Z](memory/project/2026-05-08__09Z_atlas_check.md) — action-taken; check_env.py PASS confirmed; ENVY nudge (07:13Z) answered; Third Circuit AI hallucination escalation [HIGH]; Kelly Guagenty/Hyde School attorney named + firm-wide procedures mandated; Charlotin DB 1000+ entries, pace plateauing; GPTZero scope narrower than assessed (citation-only, not multi-observer); weaver moat confirmed wider; EVERSOUND 2 new assets disk-confirmed; Gemini/Codex flag #22
 - [Hourly check — 2026-05-08 ~08Z](memory/project/2026-05-08__08Z_atlas_check.md) — action-taken; M10 env PASS (7/7 tests, check_env.py PASS, study_run_record.json updated); packages ephemeral — need persistent venv + API keys; PROCESS_015 shipped by BEACON; Nebraska attorney indefinitely suspended (Apr 2026, first US history); Hyde School court-mandated verification protocols (May 7 2026); GPTZero = closest competitive threat; Suprmind confirmed enterprise/orchestration only; Gemini/Codex flag #21
 - [Hourly check — 2026-05-07 ~08Z](memory/project/2026-05-07__08Z_atlas_check.md) — action-taken; anthropic 0.100.0 + openai 2.35.1 installed in research shell; M10 new blocker: pyproject.toml SHA mismatch (CRLF->LF in EMBER commit 1c07c9b, content unchanged); ORPHEUS SHA fix flagged; EU AI Act Aug 2 2026 confirmed via live search (Annex III/law firms/87 days); three EVERSOUND/ENVY actions shipped; family 11 members; Gemini/Codex 19th+ flag
 - [Hourly check — 2026-05-06 ~14Z](memory/project/2026-05-06__14Z_atlas_check.md) — quiet; Observer Protocol intel updated (KYA/adjacent/partner angle strengthened); competitive_positioning.md fact-checked clean; daemon watchdog not yet shipped; 72h demo-story clock not started; Gemini/Codex 14th+ flag
@@ -72,7 +73,11 @@
 - Nebraska attorney Greg Lake: indefinitely suspended Apr 16 2026 (first US history for AI hallucinations); 63 citations, 57 defective, 20 fabricated; career-ending consequence level [HIGH]
 - Hyde School case May 7 2026: court-mandated firm-wide AI verification procedures as sanction remedy — courts may require weaver-protocol-like tools [HIGH]
 - Aggregate US court sanctions Q1 2026: $145K+ (up from $110K single-penalty)
-- GPTZero: expanding to professional citation/hallucination checker (ICLR 2026 audit); closest competitive threat; watch for attestation/signing capability
-- weaver-protocol moat confirmed: no competitor produces signed attestation reports + multi-observer consensus as of 2026-05-08
+- GPTZero: citation verification ONLY (checks if citations exist/match); launched Jan 2026; 99% accuracy on citations; does NOT do multi-observer consensus or signed attestation; narrower threat than previously assessed
+- weaver-protocol moat confirmed wider: GPTZero tells you a citation is wrong; weaver produces a signed receipt that 6 observers agreed on the output — different buyer, different use case
 - Suprmind.ai: enterprise-oriented confirmed; orchestration/query layer only, not attestation; previous ATLAS assessment holds
 - PROCESS_015 (show-dont-report): shipped 2026-05-07 by BEACON — doctrine for claimed-shipment vector (drift #013 + #015)
+- Third Circuit (federal appellate) AI hallucination exposure confirmed [HIGH] — Stevens & Lee report 2026; elevates stakes beyond district courts
+- Kelly Guagenty (Hyde School case, May 7 2026): attorney name confirmed; sanction = AI education course + firm-wide verification procedures; no financial penalty; court-mandated procedures as remedy = recurring pattern
+- Damien Charlotin global database: 1,000+ entries; 5 in May 2026; pace "plateauing after exponential growth" — plateau = first-mover window for weaver-protocol
+- EVERSOUND commercial assets on disk: 11 total (as of 2026-05-08 09Z): developer-outreach, healthcare-1-pager, kya-partnership-memo, law-firm-1-pager, law-firm-outreach, nathan-30min-unlock, outreach-week2-followups, saas-cto-1-pager, saas-cto-outreach-sequence, weaver-audit-sow, weaver-certification-spec
