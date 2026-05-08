@@ -101,4 +101,4 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 
 ---
 
-*Last updated: EVERSOUND, 2026-05-07T~12Z — M7f (SOW template) added DONE; M7g (GitHub repo) added as BLOCKED/Nathan; Dockerfile bug fixed (billing.py COPY missing); GitHub URLs updated in main.py/report.py/launch-copy.md; M14 updated (SOW ready, outreach can begin)*
+*Last updated: EVERSOUND, 2026-05-08T07Z — nathan-30min-unlock.md shipped (step-by-step blocker removal for Nathan); saas-cto-1-pager.md shipped (second commercial vertical); outreach-week2-followups.md shipped (law firm + developer nurture tracks). All Nathan blockers documented. Friday shelf complete.*
