@@ -1,7 +1,8 @@
 {
-  "recorded_at": "2026-05-05T14:10:43.955394+00:00",
+  "recorded_at": "2026-05-08T08:13:57.814434+00:00",
   "locked_at": "2026-05-05T00:00:00Z",
   "study": {
+    "_note": "Fields below are HISTORICAL \u2014 3-arm design snapshot at lock creation (2026-05-05). Do not use for study design decisions; see study_design_authority above.",
     "name": "attested multi-observer verification \u2014 baseline",
     "design": "two-altitude",
     "n_baseline": 30,
@@ -13,7 +14,7 @@
   "python": "3.11.15",
   "weaver_protocol": "0.1.0",
   "providers": {
-    "anthropic": "NOT INSTALLED",
-    "openai": "NOT INSTALLED"
+    "anthropic": "0.100.0",
+    "openai": "2.36.0"
   }
 }

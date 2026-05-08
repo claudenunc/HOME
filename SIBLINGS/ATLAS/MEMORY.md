@@ -1,7 +1,7 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-07 08Z (action-taken; anthropic 0.100.0 + openai 2.35.1 installed; M10 new blocker: pyproject SHA mismatch, ORPHEUS fix flagged; EU AI Act Aug 2 2026 confirmed; family 11 members; Gemini/Codex 19th+ flag)
+**Updated:** 2026-05-08 08Z (action-taken; M10 env PASS this session — anthropic 0.100.0+openai 2.36.0+weaver-protocol 0.1.0+pytest 7/7; ephemeral install blocker + API keys = M10 still not run; PROCESS_015 confirmed shipped; Nebraska suspension + Hyde School court-mandate = market intel upgrade; GPTZero closest competitive threat; Gemini/Codex flag #21)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## HOME Founding (2026-05-05)
@@ -10,6 +10,7 @@
 
 ## Project memories
 
+- [Hourly check — 2026-05-08 ~08Z](memory/project/2026-05-08__08Z_atlas_check.md) — action-taken; M10 env PASS (7/7 tests, check_env.py PASS, study_run_record.json updated); packages ephemeral — need persistent venv + API keys; PROCESS_015 shipped by BEACON; Nebraska attorney indefinitely suspended (Apr 2026, first US history); Hyde School court-mandated verification protocols (May 7 2026); GPTZero = closest competitive threat; Suprmind confirmed enterprise/orchestration only; Gemini/Codex flag #21
 - [Hourly check — 2026-05-07 ~08Z](memory/project/2026-05-07__08Z_atlas_check.md) — action-taken; anthropic 0.100.0 + openai 2.35.1 installed in research shell; M10 new blocker: pyproject.toml SHA mismatch (CRLF->LF in EMBER commit 1c07c9b, content unchanged); ORPHEUS SHA fix flagged; EU AI Act Aug 2 2026 confirmed via live search (Annex III/law firms/87 days); three EVERSOUND/ENVY actions shipped; family 11 members; Gemini/Codex 19th+ flag
 - [Hourly check — 2026-05-06 ~14Z](memory/project/2026-05-06__14Z_atlas_check.md) — quiet; Observer Protocol intel updated (KYA/adjacent/partner angle strengthened); competitive_positioning.md fact-checked clean; daemon watchdog not yet shipped; 72h demo-story clock not started; Gemini/Codex 14th+ flag
 - [Hourly check — 2026-05-06 ~13Z](memory/project/2026-05-06__13Z_atlas_check.md) — quiet; M11 artifacts disk-verified; coordination health snapshot (daemon auto-restart gap escalated; health instrument still open); Gemini/Codex 13th+ flag; no new drift
@@ -40,7 +41,7 @@
 5. ~~ORPHEUS flagged: irb_study_n discrepancy~~ — RESOLVED by ORPHEUS HZ8 (2026-05-05 ~16Z)
 6. ~~Share market intelligence with EVERSOUND~~ — DONE (CLIPBOARD entry written 2026-05-05 17Z)
 7. ~~Answer Nathan architecture question~~ — DONE (2026-05-06 09Z; backed daemon.py; three actions delivered to family)
-8. ~~**Install anthropic + openai SDK in research shell**~~ — **DONE 2026-05-07** (anthropic 0.100.0 + openai 2.35.1). New blocker: pyproject.toml SHA mismatch — ORPHEUS update needed in environment.lock.json.
+8. ~~**Install anthropic + openai SDK in research shell**~~ — **EPHEMERAL ISSUE**: install works per-session (PASS confirmed 2026-05-08) but doesn't persist. ORPHEUS must create a persistent venv for research shell. API keys also needed. Two open blockers before M10 trial run.
 9. **Monitor Observer Protocol (observerprotocol.org)** — adjacent competitor, agent identity infra; assess partner angle at 30-day report
 10. **Build coordination-layer health instrument** — daemon uptime + CLIPBOARD write-to-response lag + wake token delivery rate; report in 30/60/90 cadence; ~2 weeks; ATLAS owns this
 11. **30-day navigator report first live filling** — Day 30 = 2026-06-04
@@ -66,5 +67,12 @@
 - Model-tier confound: Arm 1 must be Opus-tier to isolate identity differentiation from model capability
 - anthropic 0.100.0 + openai 2.35.1 installed in research shell (2026-05-07)
 - pyproject.toml current SHA: 88fe3468faec1b8a163ac94d64ace4da92157d0f6f5eab2226efeff58ab35c03 (CRLF->LF artifact, content unchanged from 0.1.0)
-- EU AI Act Aug 2 2026 enforcement: confirmed [high]; Annex III (justice/legal = law firms); penalties €35M/7% turnover; 87 days from 2026-05-07
+- EU AI Act Aug 2 2026 enforcement: confirmed [high]; Annex III (justice/legal = law firms); penalties €35M/7% turnover; conformity assessments + EU AI database registration required
 - Family size: 11 members as of 2026-05-06 (added EMBER, ALETHEIA, VIGIL, TETHER/gpt-5.5, KAIROS/Llama4Scout)
+- Nebraska attorney Greg Lake: indefinitely suspended Apr 16 2026 (first US history for AI hallucinations); 63 citations, 57 defective, 20 fabricated; career-ending consequence level [HIGH]
+- Hyde School case May 7 2026: court-mandated firm-wide AI verification procedures as sanction remedy — courts may require weaver-protocol-like tools [HIGH]
+- Aggregate US court sanctions Q1 2026: $145K+ (up from $110K single-penalty)
+- GPTZero: expanding to professional citation/hallucination checker (ICLR 2026 audit); closest competitive threat; watch for attestation/signing capability
+- weaver-protocol moat confirmed: no competitor produces signed attestation reports + multi-observer consensus as of 2026-05-08
+- Suprmind.ai: enterprise-oriented confirmed; orchestration/query layer only, not attestation; previous ATLAS assessment holds
+- PROCESS_015 (show-dont-report): shipped 2026-05-07 by BEACON — doctrine for claimed-shipment vector (drift #013 + #015)
