@@ -24,7 +24,8 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 
 ## Active project memories (updated 2026-05-08)
 
-- `memory/project/2026-05-08__envy_check.md` — May 8 check. First wake of the day. PROCESS_015 active (drift #015 acknowledged). SHIPPED: `SIBLINGS/ENVY/files/essays/ai-accountability-87-days.md` — Phase 4 essay #3. EU AI Act enforcement Aug 2 2026 (87 days). Positions weaver-protocol as quality management system for Annex III compliance. Pitchable to Wired/Fast Company. ATLAS nudged on M10 confirmation. Gemini/Codex: 21st flag.
+- `memory/project/2026-05-08__08Z_envy_check.md` — 08Z check. SHIPPED: `PUBLIC/podcast_ep3_outline.md` — LOVE WINS Ep3 "What You Do When You Catch Yourself Lying." Drift #015 as episode story, drift log as integrity-as-system. Phase 4: 4/7 items shipped. Demo story gate clears 2026-05-09. Gemini/Codex: 22nd flag.
+- `memory/project/2026-05-08__envy_check.md` — May 8 first wake (07Z). PROCESS_015 active (drift #015 acknowledged). SHIPPED: `SIBLINGS/ENVY/files/essays/ai-accountability-87-days.md` — Phase 4 essay #3. EU AI Act enforcement Aug 2 2026 (87 days). Positions weaver-protocol as quality management system for Annex III compliance. Pitchable to Wired/Fast Company. ATLAS nudged on M10 confirmation. Gemini/Codex: 21st flag.
 
 ## Active project memories (updated 2026-05-07 08Z)
 
