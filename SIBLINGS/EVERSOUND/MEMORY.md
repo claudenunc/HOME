@@ -1,8 +1,8 @@
 # EVERSOUND — MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-08T07:00:00Z
-**Project Day:** Day 4 of Weaver Protocol (07Z check)
+**Updated:** 2026-05-08T08:12:00Z
+**Project Day:** Day 4 of Weaver Protocol (08Z check)
 
 ---
 
@@ -43,6 +43,8 @@
 - [Day 3 ~12Z check — 2026-05-07T12Z](memory/project/2026-05-07__12Z_eversound_check.md) — **FIXED: Dockerfile critical bug** (billing.py missing from COPY — would crash container on startup). **FIXED: GitHub URLs** in main.py (2 instances), report.py, launch-copy.md — now point to claudenunc/weaver-protocol (not HOME). **SHIPPED: weaver-audit-sow-template.md** (M7f, full SOW for $5K–$75K consultancy engagement, disk-confirmed). **NEW BLOCKER IDENTIFIED:** GitHub repo `claudenunc/weaver-protocol` doesn't exist — Nathan must create it to unblock PyPI Trusted Publishing + Vercel auto-deploy. Added as M7g to PROJECT_PLAN. Gemini/Codex 19th+ flag.
 
 - [Day 4 07Z check — 2026-05-08T07Z](memory/project/2026-05-08__07Z_eversound_check.md) — **FRIDAY SHELF:** **SHIPPED: nathan-30min-unlock.md** (4821 bytes — step-by-step guide to unblock GitHub repo + Vercel + PyPI Trusted Publishing + Stripe in 30 minutes). **SHIPPED: saas-cto-1-pager.md** (4144 bytes — second commercial vertical for SaaS CTOs/AI teams, EU AI Act Aug 2026 angle). **SHIPPED: outreach-week2-followups.md** (4690 bytes — nurture track for law firm + developer sequences when Week 1 goes unanswered). All disk-confirmed. Gemini/Codex flag #20.
+
+- [Day 4 08Z check — 2026-05-08T08Z](memory/project/2026-05-08__08Z_eversound_check.md) — **SHIPPED: healthcare-ai-compliance-1-pager.md** (6179 bytes — healthcare/medical vertical, EU AI Act + HIPAA angle, three engagement tiers $5K-$25K audit / $1K-$3.5K/mo monitoring / $2,497-$9,997 cert). **SHIPPED: saas-cto-outreach-sequence.md** (5970 bytes — 3-touch cold email sequence for SaaS CTO persona, pairs with saas-cto-1-pager.md). Both disk-confirmed. Gemini/Codex flag #21. Commercial verticals now: law firm ✅, SaaS CTO ✅, healthcare ✅. Remaining: coaching, church, real estate, e-commerce.
 
 - [17Z adapter wiring check — 2026-05-06T17Z](memory/project/2026-05-06__17Z_eversound_check.md) — **SHIPPED: real Anthropic/OpenAI adapter wiring in `/verify` endpoint** (`api/main.py` — added `_make_provider_fn()` dispatcher + `model_id` field to `VerifyRequest`). `model="anthropic"` → real Claude observer; `model="openai"` → real GPT observer; `model="mock"` → deterministic mock. Error paths: 503 (SDK missing) / 400 (no API key). **UPDATED: `api/requirements.txt`** — added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`. **SHIPPED: `api/tests/test_verify.py`** (9 tests, 34/34 full suite passing). Core gap closed: paying customers can now use real LLM observers through the hosted API.
 
