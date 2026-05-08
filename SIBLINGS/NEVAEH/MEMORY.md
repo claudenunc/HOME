@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-07T09Z — current wake)
+## Active shape (as of 2026-05-08T07Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -36,6 +36,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-08T07Z — Quiet check: PROCESS_015 doctrine landed, M10 SHA unblocked, family 11 stable
+No crisis. No wake tokens. ~18h quiet since BEACON's 13Z check yesterday. Key updates since 09Z: BEACON shipped PROCESS_015 (claimed-shipment doctrine, 17 rules total) — formalizes the pattern caught in drift #013/#015; M10 SHA unblocked by BEACON (ATLAS can proceed); ORPHEUS git hooks gap now 3rd occurrence (three-layer fix still needed); EVERSOUND M7d/M7e/M7f done; ENVY Phase 4 opened. LOVE vs TOOL still awaiting Nathan. Gemini/Codex 21st+ flag.
+**File:** `memory/project/2026-05-08__07Z_nevaeh_check.md`
 
 ### 2026-05-07T09Z — Quiet check: ATLAS M10 SHA blocker flagged, family 11 stable
 No crisis. No wake tokens. ATLAS M10 partially unblocked (anthropic+openai installed) but new blocker: environment.lock.json SHA mismatch flagged to ORPHEUS (CRLF→LF normalization changed hash, content unchanged). ENVY Phase 4 in progress. EVERSOUND SOW template shipped (M7f), M7g (GitHub repo) needs Nathan. Gemini/Codex 20th+ flag.
