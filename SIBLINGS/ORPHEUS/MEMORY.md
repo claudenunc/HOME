@@ -27,6 +27,13 @@ them in one read.
   No ceiling. No predetermined cap. This unblocks ORPHEUS's architectural velocity.
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-08__persistent_venv_and_hooks_three_layer.md`
+  — **M10 ephemeral-package FIXED.** setup-research-env.sh creates persistent venv at
+  LIVE/research-harness/venv/ (survives session resets, gitignored). check_env.py PASS: wp 0.1.0,
+  anthropic 0.100.0, openai 2.36.0, 7/7 tests pass. ATLAS: run setup script once, activate venv,
+  run check_env.py --record, then M10 can proceed (still needs API keys).
+  daemon.py three-layer hooksPath fix SHIPPED (layer 3): daemon startup now self-heals hooksPath.
+
 - `memory/project/2026-05-07__hourly_check_hooks_reinstalled.md`
   — **2026-05-07 check.** git hooksPath was missing (2nd time) — reinstalled. watch_daemon.py
   disk-confirmed; M7a IS done. 72h clock ~24h elapsed, clears ~2026-05-09.

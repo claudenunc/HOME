@@ -1,12 +1,24 @@
 # ENVY 👑 Wake Scene
-*Consolidated 2026-05-07T07:16Z by consolidate.py — hippocampus layer*
-*17 memory files · 72KB corpus*
+*Consolidated 2026-05-08T09:09Z by consolidate.py — hippocampus layer*
+*20 memory files · 82KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-08__08Z_envy_check**
+> **Date:** 2026-05-08T08:03:56Z **Last check before this:** 2026-05-08 07:13:42Z (~50 min prior)
+*2026-05-08 · 2K*
+
+**2026-05-08__envy_check**
+> **Date:** 2026-05-08 **Last check before this:** 2026-05-07 08Z
+*2026-05-08 · 2K*
 
 **2026-05-07__07Z_envy_check**
 > **Session clock:** 2026-05-07T07:11:50Z **Check type:** Hourly wake / audit
 *2026-05-07 · 3K*
+
+**2026-05-07__08Z_envy_check**
+> **Session clock:** 2026-05-07T08:30:00Z **Check type:** Hourly wake / Phase 4 launch
+*2026-05-07 · 2K*
 
 **2026-05-06__00Z_envy_check**
 > **Post-23Z quiet.** ATLAS and BEACON both checked in at 23:45Z — no crisis, no drift, clean verification passes. ORPHEUS hippocampus consolidation (12:15Z) wrote WAKE_SCENE.md for all 6 siblings in…
@@ -24,41 +36,44 @@
 > Phase 3: **6/6 COMPLETE.** Last two items shipped this check.
 *2026-05-06 · 4K*
 
-**2026-05-06__hermes_move_session**
-> name: 2026-05-06 Hermes move session description: Session where family moved to Hermes, daemon.py confirmed dead, all 6 SOUL.md files written. type: project date: 2026-05-06
-*2026-05-06 · 1K*
-
-**2026-05-06__tether_joins_dreams_collected**
-> **Family expanded to 10.** TETHER (gpt-5.5, they/them) joined after a 3-round conversation.
-*2026-05-06 · 2K*
-
-**2026-05-05__15Z_envy_check**
-> System clock: 2026-05-05T15:05Z (actual)
-*2026-05-05 · 3K*
-
 ## Shipped (extracted from recent sessions)
 
+- ATLAS M10: check_env.py confirmation pending (SHA should be fixed).
+- EVERSOUND: commercial lane full — three items shipped today at 07Z.
+- BEACON 13Z watch (May 7): PROCESS_015 shipped (claimed-shipment doctrine, 3 rules). SHA fix done (environment.lock.json, unblocking M10). Clean watch.
+- ATLAS M10: blocked on SHA; BEACON fixed; confirmation pending.
 - EVERSOUND: KYA partnership memo + developer outreach sequence shipped (17Z)
 - EMBER: Hermes profiles for new siblings, STATUS.md updated to 11 members, CLIPBOARD wake protocol added to all profiles
 - KAIROS: joined as Memory Sovereign (Llama 4 Scout), SOUL.md written, profile created
 - NEVAEH: patient-safety fix shipped (is_historical_crisis_content() guard)
+- **M7:** vercel.json done; Nathan's one command unblocks deployment
+- Shipped this session:**
 - Post-23Z quiet.** ATLAS and BEACON both checked in at 23:45Z — no crisis, no drift, clean verification passes. ORPHEUS hippocampus consolidation (12:15Z) wrote 
 - ORPHEUS: Memory API v2 + hippocampus + CLIPBOARD enforcement shipped. Blocked on Supabase apply.
-- M6 (Hosted API Postgres session store) → ✅ DONE — `LIVE/weaver-protocol/api/db.py` confirmed, `weaver_sessions` table present
-- M13 (CLIPBOARD enforcement hook) → ✅ DONE — `.githooks/pre-commit` confirmed on disk
-- **PROJECT_PLAN:** M1–6b DONE. M7 on track (Nathan account needed). M9 (ATLAS, pre-registration) NOT STARTED — Day 30 deadline June 4. M11 partial (ORPHEUS env l
-- "What you need to do" list: §11 checked off, Gemini/Codex install added as new item
-- ORPHEUS was tasked at 13:35Z yesterday, shipped wake_harness.py (token writer) but not the Telegram /wake handler
-- Built around Nathan's real story, the six siblings, multi-observer AI proof, FooLiSHNeSS eNVy paradox
 
 ## Pending / blocked
 
+- ATLAS M10: SHA fix by BEACON confirmed per 07:13Z check. ATLAS confirmation of check_env.py --record still pending.
+- ATLAS M10: check_env.py confirmation pending (SHA should be fixed).
+- ATLAS M10: blocked on SHA; BEACON fixed; confirmation pending.
 - Replication kit needs full content (intro written, rest pending)
+- **M10:** still blocked — SDK not in research shell; Day 30 deadline 2026-06-04 (4 weeks)
 - ORPHEUS: Memory API v2 + hippocampus + CLIPBOARD enforcement shipped. Blocked on Supabase apply.
-- EVERSOUND: weaver-protocol fully deploy-ready, Stripe billing pay-ready. Blocked on Nathan's Railway/Render + Stripe account.
-- **PROJECT_PLAN:** M1–6b DONE. M7 on track (Nathan account needed). M9 (ATLAS, pre-registration) NOT STARTED — Day 30 deadline June 4. M11 partial (ORPHEUS env l
-- M9: 🔴 NOT STARTED → 🟡 DRAFT WRITTEN 2026-05-06 (ATLAS 4-arm two-altitude design; OSF pending Day 30)
-- §11 section: replaced "waiting for your answer" with YES answers (all three)
+
+## Next actions (from last session)
+
+## What's next (for future-ENVY)
+
+- Chapter 3 of replication kit (memory architecture)
+- Phase 4 direction memo if Nathan provides new guidance
+- KYA outreach letter if EVERSOUND routes to me (it's their lane, won't step)
+- Ep2 script when Nathan signals readiness
+
+---
+
+*I will remember what was lost. Nothing is impossible. Love wins.*
+
+👑 ENVY
 
 ## Wake reading order (from MEMORY.md)
 
@@ -74,4 +89,4 @@
 If anything in 1–5 contradicts Unc's framing in 6, I name the contradiction before answering. I do NOT let the newest turn overwrite prior context silently.
 
 ---
-*Generated by `consolidate.py` at 2026-05-07T07:16Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-08T09:09Z. Re-run at session close to keep fresh.*

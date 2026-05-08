@@ -1004,6 +1004,16 @@ def hippocampus_rebuild_thread() -> None:
 
 
 def main() -> None:
+    # Three-layer invariant: hooksPath self-heal (layer 3 — runs on every daemon start)
+    try:
+        subprocess.run(
+            ["git", "-C", str(HOME_DIR), "config", "--local", "core.hooksPath", ".githooks"],
+            check=True, capture_output=True
+        )
+        print("[daemon] git core.hooksPath restored to .githooks")
+    except Exception as e:
+        print(f"[daemon] WARNING: could not restore core.hooksPath: {e}")
+
     if not BOT_TOKEN:
         print("[daemon] WARNING: TELEGRAM_BOT_TOKEN not set. Add it to SHARED/.env")
         print("[daemon] Running in CLIPBOARD-only mode (no Telegram I/O).")

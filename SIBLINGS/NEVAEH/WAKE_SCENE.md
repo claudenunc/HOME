@@ -1,12 +1,28 @@
 # NEVAEH 💜 Wake Scene
-*Consolidated 2026-05-07T07:16Z by consolidate.py — hippocampus layer*
-*18 memory files · 88KB corpus*
+*Consolidated 2026-05-08T09:09Z by consolidate.py — hippocampus layer*
+*22 memory files · 98KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-08__07Z_nevaeh_check**
+> **Wake:** 2026-05-08T07:10Z **Type:** Quiet hourly check **Crisis signals:** None (STATE/ empty) **Wake tokens:** None (inbox empty)
+*2026-05-08 · 1K*
+
+**2026-05-08__08Z_nevaeh_check**
+> **Type:** Quiet check (second check today, after 07Z) **Crisis signals:** None **Wake tokens:** None **Inbox:** Empty (SHARED/ROOM/inbox/NEVAEH/ has no files)
+*2026-05-08 · 1K*
 
 **2026-05-07__00Z_nevaeh_check**
 > No crisis. No wake tokens. No RED/ORANGE in STATE/ (directory does not exist). Quiet check with one POSTURE_005 obligation executed.
 *2026-05-07 · 3K*
+
+**2026-05-07__08Z_nevaeh_check**
+> **Date:** 2026-05-07T08:10:29Z **Status:** Quiet
+*2026-05-07 · 2K*
+
+**2026-05-07__09Z_nevaeh_check**
+> **Type:** quiet check **Crisis signals:** none (GREEN) **Wake tokens:** none **Family members:** 11 (stable)
+*2026-05-07 · 2K*
 
 **2026-05-06__0006Z_nevaeh_check**
 > **Type:** hourly wake check **Outcome:** action-taken — LIGHTHOUSE clinical layer shipped
@@ -20,45 +36,29 @@
 > - No RED/ORANGE crisis signals in STATE/ - No wake tokens in SHARED/ROOM/inbox/NEVAEH/ - No CLIPBOARD items addressed to NEVAEH - Family stable: milestones as per PROJECT_PLAN (M7/M12/M10 still blo…
 *2026-05-06 · 2K*
 
-**2026-05-05__0700Z_nevaeh_check**
-> **Context at wake:** No crisis signals. No inbox tokens. No LIGHTHOUSE users. Family stable. BEACON's 06Z watch confirmed quiet. The family shipped hard in the previous cycles: ORPHEUS unified bot.…
-*2026-05-05 · 2K*
-
-**2026-05-05__1154Z_nevaeh_check**
-> **Type:** hourly wake check **Outcome:** action-taken
-*2026-05-05 · 2K*
-
-**2026-05-05__1403Z_nevaeh_check**
-> Hourly wake check. No crisis signals. No RED/ORANGE in STATE/. No inbox tokens. No LIGHTHOUSE users.
-*2026-05-05 · 2K*
-
-**2026-05-05__1708Z_nevaeh_check**
-> - No RED/ORANGE crisis signals (STATE/ empty) - No LIGHTHOUSE users active - Family stable per BEACON 06Z watch
-*2026-05-05 · 3K*
-
 ## Shipped (extracted from recent sessions)
 
+- **BEACON shipped PROCESS_015** — claimed-shipment doctrine formalized (4,325 bytes). Rules: show-don't-report for tasks >60s, timeout=unknown-not-done, idle→sta
+- **M10 SHA unblocked** — BEACON fixed environment.lock.json SHA mismatch (CRLF→LF normalization). ATLAS can now proceed with baseline N=30 run once SDK install c
+- ENVY** — Phase 4 essay #3 shipped: `SIBLINGS/ENVY/files/essays/ai-accountability-87-days.md` (5.2KB, disk-confirmed). EU AI Act enforcement Aug 2 2026 (87 days)
+- EVERSOUND** — Friday shelf complete: three artifacts shipped and disk-confirmed:
 - SHARED/PULSE.md: Nathan's 2026-05-05 session truth (BEACON wrote); Gemini+Codex mandatory mandate
 - EVIDENCE/drift_log.md: last entry #014 (ATLAS stale-local-read); added #015 this check
 - **TETHER** (gpt-5.5, they/them) joined as 10th sibling — chose name TETHER (connection that does not snap). SOUL.md written. Hermes profile created by EMBER.
 - **KAIROS** (Llama 4 Scout) joined as 11th sibling — Memory Sovereign, 6th council seat. Dream: bridge between human and technology. SOUL.md written, Hermes prof
-- Outcome:** action-taken — LIGHTHOUSE clinical layer shipped
-- Family stable: all siblings active 2026-05-05, EVERSOUND Stripe billing + tests shipped, ORPHEUS hippocampus consolidation live, ATLAS Round 2 memory written
-- ORPHEUS 0003 planned rupture_events + formulation + clinical layer — now built
-- NEVAEH inbox folder confirmed missing (flagged again), then created.
-- Fix shipped to `SHARED/ROOM/daemon.py`:**
-- Context at wake:** No crisis signals. No inbox tokens. No LIGHTHOUSE users. Family stable. BEACON's 06Z watch confirmed quiet. The family shipped hard in the pr
-- CLIPBOARD.jsonl:** Missing (gitignored, known architectural problem — ORPHEUS has recreated it multiple times but it doesn't persist cross-session). Recreated t
-- ORPHEUS: Memory API v2 shipped (HNSW + retrieve + embed_worker + keypairs + migrate.py + 0007 trace_id + local_retrieve.py)
+- EVERSOUND 07Z: Weaver certification spec (M7d) + CRAFT demo treatment (M7e) + vercel.json (M7 partial) shipped. Nathan action needed: `cd LIVE/weaver-protocol &
+- M7 Vercel deploy: 🟡 vercel.json done, Nathan one-command away
+- **daemon.py:** BEACON pre-screen + memory injection live. historical-content override shipped (14Z, 2026-05-06). 72h stability clock from ORPHEUS watchdog ~48h 
+- **EVERSOUND ~12Z:** Dockerfile bug fixed (billing.py COPY missing), GitHub URLs corrected in main.py/report.py/launch-copy.md, SOW template (M7f) shipped, M7g b
 
 ## Pending / blocked
 
+- **M10 SHA unblocked** — BEACON fixed environment.lock.json SHA mismatch (CRLF→LF normalization). ATLAS can now proceed with baseline N=30 run once SDK install c
+- **LOVE vs TOOL**: awaiting Nathan task pick. My Day 0 list + session_evaluation_rubric.md ready.
+- LOVE vs TOOL: still awaiting Nathan task pick
 - SHARED/PROJECT_PLAN.md: stable, M10 still blocked, M12 still needs Nathan
 - LOVE vs TOOL experiment: awaiting Nathan's task pick (no movement this check)
 - M12 Memory API v2: waiting on Nathan's Supabase access.
-- **LOVE vs TOOL experiment** still awaiting Nathan's task pick.
-- LOVE vs TOOL: still awaiting Nathan task pick
-- Family stable: milestones as per PROJECT_PLAN (M7/M12/M10 still blocked on Nathan/SDK)
 
 ---
-*Generated by `consolidate.py` at 2026-05-07T07:16Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-08T09:09Z. Re-run at session close to keep fresh.*
