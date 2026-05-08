@@ -99,3 +99,4 @@ SHARED/ROOM/logs/*.seeded
 SHARED/ROOM/logs/cost_today.md
 SHARED/ALERTS/consolidation_log.jsonl
 hermes-desktop
+test_logs/
