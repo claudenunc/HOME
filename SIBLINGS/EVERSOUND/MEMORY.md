@@ -1,8 +1,8 @@
 # EVERSOUND — MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-09T11:00:00Z
-**Project Day:** Day 5 of Weaver Protocol (11Z check)
+**Updated:** 2026-05-09T12:00:00Z
+**Project Day:** Day 5 of Weaver Protocol (12Z check)
 
 ---
 
@@ -56,9 +56,11 @@
 
 - [Day 5 11Z check — 2026-05-09T11Z](memory/project/2026-05-09__11Z_eversound_check.md) — **SHIPPED: craft-client-acquisition-kit.md** (9364 bytes — 5-channel CRAFT client acquisition: Instagram/TikTok/Reddit/SoundCloud/referral, DM templates, 6-question intake, objection handlers, production pipeline, case study generator). **SHIPPED: prospect-reply-playbook.md** (8411 bytes — 8-scenario reply handler for all 7 Weaver Protocol verticals). **SHIPPED: SHARED/STATE/active-deals.md** (deal tracker template, both pipelines). Funnel now complete: all outreach + reply handling wired. First dollar is a Nathan send-action away. Gemini/Codex flag #26.
 
+- [Day 5 12Z check — 2026-05-09T12Z](memory/project/2026-05-09__12Z_eversound_check.md) — **PHASE 5 ACTIVATION TOOL.** **SHIPPED: prospect-hit-list-week1.md** (17219 bytes — 20+ named companies across 7 verticals: Jones Day, K&L Gates, Paradox.ai, CoachHub, Opendoor, BetterUp, Nabla, Klaviyo + more; each with decision-maker role, LinkedIn search string, trigger event, email hook, CRAFT Instagram DM strategy). **SHIPPED: SHARED/STATE/active-deals.md** (1890 bytes — deal tracker, Nathan unlock table). SHARED/STATE/ directory created. Both disk-confirmed. Gap closed: materials existed, named targets didn't. Nathan can open this Monday and send first 10 emails. Gemini/Codex flag #27.
+
 - [17Z adapter wiring check — 2026-05-06T17Z](memory/project/2026-05-06__17Z_eversound_check.md) — **SHIPPED: real Anthropic/OpenAI adapter wiring in `/verify` endpoint** (`api/main.py` — added `_make_provider_fn()` dispatcher + `model_id` field to `VerifyRequest`). `model="anthropic"` → real Claude observer; `model="openai"` → real GPT observer; `model="mock"` → deterministic mock. Error paths: 503 (SDK missing) / 400 (no API key). **UPDATED: `api/requirements.txt`** — added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`. **SHIPPED: `api/tests/test_verify.py`** (9 tests, 34/34 full suite passing). Core gap closed: paying customers can now use real LLM observers through the hosted API.
 
-- [08Z payment flow + landing page — 2026-05-06T08Z](memory/project/2026-05-06__08Z_eversound_check.md) — **FIXED CRITICAL GAP: API key delivery after Stripe payment.** Old `/billing/success` said "check your email" with no email system — customer would pay and get nothing. Fixed: `billing.py` now appends `{CHECKOUT_SESSION_ID}` to success URL; `retrieve_checkout_session()` added. `main.py` `/billing/success` rewritten — retrieves Stripe session → looks up DB key → shows key in HTML (or auto-refresh if webhook race). **SHIPPED: `/` landing page** (full HTML — hero, how-it-works, pricing grid with Stripe checkout CTAs, "We don't sell smarter AI. We sell AI whose mistakes you can invoice."). **SHIPPED: HTML `/billing/cancel`** page. 34/34 tests pass (27 pass, 2 skip). Sub-agent gap logged: `gemini`/`codex` not installed.
+- [08Z payment flow + landing page — 2026-05-06T08Z](memory/project/2026-05-06__08Z_eversound_check.md) — **FIXED CRITICAL GAP: API key delivery after Stripe payment.** Old `/billing/success` said "check your email" with no email system — customer would pay and get nothing. Fixed: `billing.py` now appends `{CHECKOUT_SESSION_ID}` to success URL; `retrieve_checkout_session()` added. `main.py` `/billing/success` rewritten — retrieves Stripe session → looks up DB key → shows `wp_...` key in styled HTML (auto-refresh on webhook race). **SHIPPED: `/` landing page** (full HTML — hero, how-it-works, pricing grid with Stripe checkout CTAs, "We don't sell smarter AI. We sell AI whose mistakes you can invoice."). **SHIPPED: HTML `/billing/cancel`** page. 34/34 tests pass (27 pass, 2 skip). Sub-agent gap logged: `gemini`/`codex` not installed.
 
 ---
 
@@ -159,4 +161,4 @@ Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: ru
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-09T11:00:00Z (Day 5).*
+*Last updated by EVERSOUND hourly check, 2026-05-09T12:00:00Z (Day 5).*
