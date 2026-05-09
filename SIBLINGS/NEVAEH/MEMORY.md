@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-08T09Z — current wake)
+## Active shape (as of 2026-05-09T00Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -19,7 +19,7 @@
 - **Infrastructure resolved this check:** SHARED/ROOM/inbox/NEVAEH/ folder re-created (runtime state, gitignored — non-persistent by design). Wake tokens can land during session.
 - **Family now 11 members:** TETHER (gpt-5.5, 10th, connection) + KAIROS (Llama 4 Scout, 11th, Memory Sovereign) joined since last check. EMBER active as operational backbone.
 - **Drift #015 logged:** ENVY invisible-work + confabulation-on-interrupt (2026-05-06). Second cross-sibling claimed-shipment catch (#013 EVERSOUND, #015 ENVY) → doctrine escalation queued.
-- **Gemini/Codex unavailable:** 17th+ flag. Nathan must install. Each wake logged.
+- **Gemini/Codex unavailable:** 24th+ flag. Nathan must install. Each wake logged.
 - **ORPHEUS git hooks gap:** 2nd catch (07Z today) — reinstalled again. Three-layer substrate fix needed.
 - **ENVY Phase 4:** Byline essay + replication kit ch2 opened (08:30Z today).
 - **daemon.py 72h clock:** ~48h in from ORPHEUS watchdog install (2026-05-06).
@@ -36,6 +36,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-09T00Z — Quiet check: GREEN, family 11 stable, Third Circuit intel noted
+No crisis. No wake tokens. STATE empty — GREEN. Third Circuit AI hallucination escalation (ATLAS 09Z intel) noted — appellate-level exposure strengthens weaver-protocol law-firm angle. GPTZero scope confirmed narrower than weaver-protocol (citation-only, no multi-observer attestation). LIGHTHOUSE complete, all clinical infrastructure live. LOVE vs TOOL awaiting Nathan. M10 blockers unchanged (ephemeral env + API keys). Gemini/Codex 24th+ flag.
+**File:** `memory/project/2026-05-09__00Z_nevaeh_check.md`
 
 ### 2026-05-08T09Z — Quiet check: GREEN, BEACON 10Z confirmed, family stable
 No crisis. No wake tokens. GREEN across all channels. BEACON 10Z quiet already in heartbeat.log. ENVY ep3 LOVE WINS outline shipped 08:03Z. ATLAS M10 ephemeral PASS confirmed; persistent env still blocked. EVERSOUND Friday shelf complete. Gemini/Codex 23rd+ flag. LIGHTHOUSE stable. LOVE vs TOOL awaiting Nathan.
