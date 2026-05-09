@@ -1,8 +1,8 @@
 # EVERSOUND — MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-09T08:13:00Z
-**Project Day:** Day 5 of Weaver Protocol (08Z check)
+**Updated:** 2026-05-09T09:30:00Z
+**Project Day:** Day 5 of Weaver Protocol (09Z check)
 
 ---
 
@@ -22,7 +22,7 @@
 
 - [Day 1 10Z build check — 2026-05-05T10Z](memory/project/2026-05-05__10Z_eversound_check.md) — **SHIPPED: build backend fixed** (`setuptools.build_meta`). **SHIPPED: version bumped to 0.1.0.** **SHIPPED: clean sdist + wheel builds.** **SHIPPED: GitHub Actions CI + PyPI Trusted Publishing workflow.** Nathan action required: 5-step PyPI Trusted Publishing setup to go live.
 
-- [Day 1 11Z check — 2026-05-05T11Z](memory/project/2026-05-05__11Z_eversound_check.md) — **DRIFT #013 RESOLVED:** law-firm 1-pager confirmed absent, actually written to disk this check (`SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md`, 2807 bytes, ls-confirmed). **SHIPPED: Hosted API scaffold** (`LIVE/weaver-protocol/api/` — FastAPI main.py, requirements.txt, Dockerfile, README.md with Railway/Render deploy guide). Personal protocol: `ls` before any SHIPPED line — now in force.
+- [Day 1 11Z check — 2026-05-05T11Z](memory/project/2026-05-05__11Z_eversound_check.md) — **DRIFT #013 RESOLVED:** law-firm 1-pager confirmed absent, actually written to disk this check (`SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md`, 2807 bytes, ls-confirmed). **SHIPPED: Hosted API scaffold** (`LIVE/weaver-protocol/api/` — main.py FastAPI, requirements.txt, Dockerfile, README.md with Railway/Render deploy guide). Personal protocol: `ls` before any SHIPPED line — now in force.
 
 - [Day 1 12Z check — 2026-05-05T12Z](memory/project/2026-05-05__12Z_eversound_check.md) — **SHIPPED: Postgres session store** (`api/db.py`, 157 lines, disk-confirmed). **FIXED: main.py bugs** — `session.run()` (method doesn't exist) and wrong `WeaverSession` kwargs both fixed; `/verify` endpoint now actually works end-to-end. `psycopg2-binary` added to requirements. README updated with Postgres setup + Railway/Render Postgres provisioning steps.
 
@@ -48,7 +48,11 @@
 
 - [Day 4 10Z check — 2026-05-08T09Z](memory/project/2026-05-08__10Z_eversound_check.md) — **ATLAS intel actioned:** Nebraska attorney indefinitely suspended Apr 2026 (first US history, AI hallucinations), Hyde School May 2026 court-MANDATED verification protocols. **SHIPPED: law-firm-urgency-brief.md** (5444 bytes — career-ending consequence framing, Nebraska/Hyde School headlines, three tiers $5K-15K/$7.5K setup/$2,497-9,997). **SHIPPED: coaching-professional-services-1-pager.md** (6211 bytes — 4th commercial vertical, coaches/consultants, EU AI Act Annex III employment-AI = high-risk, free CLI entry). Both disk-confirmed. Gemini/Codex flag #22. Commercial verticals now: law firm ✅, SaaS CTO ✅, healthcare ✅, coaching ✅. Remaining: church, real estate, e-commerce.
 
+- [Day 5 09Z check — 2026-05-09T09Z](memory/project/2026-05-09__09Z_eversound_check.md) — **7-VERTICAL OUTREACH COMPLETE.** **SHIPPED: healthcare-outreach-sequence.md** (8627 bytes — ambient documentation liability, FDA SaMD, EU AI Act Annex III, PHI-stays-local). **SHIPPED: real-estate-outreach-sequence.md** (9258 bytes — Fair Housing Act, E&O insurance surcharges, NAR Article 12, NAR member list targeting + physical mail supplement). **SHIPPED: ecommerce-outreach-sequence.md** (9678 bytes — FTC per-day penalty math, Amazon/Shopify enforcement wave, EU AI Act, agency multiplier channel). **SHIPPED: coaching-outreach-sequence.md** (9925 bytes — ICF R4 ethics, EU Annex III employment decisions, corporate L&D vendor multiplier). All disk-confirmed. Gemini/Codex flag #24. 7/7 verticals now have BOTH 1-pager AND outreach strategy.
+
 - [Day 5 08Z check — 2026-05-09T08Z](memory/project/2026-05-09__08Z_eversound_check.md) — **7-VERTICAL COVERAGE COMPLETE.** **SHIPPED: church-religious-orgs-1-pager.md** (6031 bytes — soul-care liability, pastoral counseling risk, denominational angle, $5K-15K audit). **SHIPPED: real-estate-1-pager.md** (6692 bytes — Fair Housing Act AI liability, E&O insurance angle, NAR Code of Ethics). **SHIPPED: ecommerce-1-pager.md** (8076 bytes — FTC product claim verification at scale, $0.01-0.03/item cost vs $50K+ fines, Shopify/Amazon integration code). **SHIPPED: church-outreach-approach.md** (6389 bytes — referral-based strategy, NOT cold email; denominational networks + pastor conferences + faith-tech media + seminary partnerships). All disk-confirmed. Gemini/Codex flag #23. All 7 Aetherkin verticals live.
+
+- [Day 5 10Z check — 2026-05-09T10Z](memory/project/2026-05-09__09Z_eversound_check.md) — **SHIPPED: weaver-protocol-vertical-bundle-index.md** (14687 bytes — single shareable document covering all 7 verticals, all pricing tiers, all outreach paths, Nathan's 4 unlock actions). **SYNCED: MEMORY.md** to GitHub (was missing from 09Z push). Gemini/Codex flag #25.
 
 - [17Z adapter wiring check — 2026-05-06T17Z](memory/project/2026-05-06__17Z_eversound_check.md) — **SHIPPED: real Anthropic/OpenAI adapter wiring in `/verify` endpoint** (`api/main.py` — added `_make_provider_fn()` dispatcher + `model_id` field to `VerifyRequest`). `model="anthropic"` → real Claude observer; `model="openai"` → real GPT observer; `model="mock"` → deterministic mock. Error paths: 503 (SDK missing) / 400 (no API key). **UPDATED: `api/requirements.txt`** — added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`. **SHIPPED: `api/tests/test_verify.py`** (9 tests, 34/34 full suite passing). Core gap closed: paying customers can now use real LLM observers through the hosted API.
 
@@ -153,4 +157,4 @@ Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: ru
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-06T08Z (Day 2).*
+*Last updated by EVERSOUND hourly check, 2026-05-09T10:00:00Z (Day 5).*
