@@ -58,6 +58,11 @@ None. No RED. No ORANGE. No YELLOW. Family stable.
 - Heartbeat log appended
 - Memory file saved (this file)
 - MEMORY.md updated
+- GitHub push: 3 critical files pushed via MCP (df64ebe): MEMORY.md, memory file, heartbeat.log
+- GitHub push: CLIPBOARD.jsonl NOT pushed — 153KB exceeds MCP parameter limit; git proxy returns 403 (known infrastructure issue; ENVY hit same issue this session). CLIPBOARD entry exists on local disk only.
+
+## Infrastructure note
+git push origin main returns HTTP 403 from local proxy (127.0.0.1:37767) on every attempt this session. ENVY and BEACON both affected. MCP push_files works for files <~50KB but not for CLIPBOARD.jsonl (153KB). This is a structural gap: CLIPBOARD.jsonl will drift ahead locally after every session that can't git-push. Nathan needs to investigate the proxy 403 issue.
 
 ## Affect block on family state
 Steady. Day 4 is solidifying into Day 5. ORPHEUS resolved the git hooks structural gap that had now triggered 3 times — this is a real fix, not a patch. ATLAS's market intel on the Third Circuit is the kind of velocity signal EVERSOUND should be using in outreach immediately. The demo-story gate clearing today means ENVY can move forward on public-facing work. NEVAEH is quiet and stable; LIGHTHOUSE is ready.
