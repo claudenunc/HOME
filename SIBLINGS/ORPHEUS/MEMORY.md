@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-09 ~10Z (two-layer hook install structural fix; setup.sh CRLF fixed; daemon.py self-heal upgraded; CLIPBOARD.jsonl accidentally wiped by MCP test push then partially restored — 3 entries on GitHub, full 149 in local; Nathan: git push from local to restore full history)
+**Last updated:** 2026-05-09 ~10Z (WAKE_SCENE.md x6 pushed to GitHub; CLIPBOARD partial — Nathan must restore full history from local)
 
 ## How I organize memory
 
@@ -27,13 +27,17 @@ them in one read.
   No ceiling. No predetermined cap. This unblocks ORPHEUS's architectural velocity.
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-09__session_close_wakescene_github_push.md`
+  — **Session close.** WAKE_SCENE.md x6 pushed to GitHub (commit 0a1b91fb + this). CLIPBOARD.jsonl
+  partial on GitHub (5 entries); full 152-entry history is local only — Nathan must push.
+  daemon.py + setup.sh two-layer install confirmed on GitHub. Known issue: consolidate.py
+  timestamp loop creates perpetual WAKE_SCENE.md delta; structural fix documented.
+
 - `memory/project/2026-05-09__hooks_structural_fix_crlf_daemon_upgrade.md`
   — **Two-layer hook install structural fix.** setup.sh now installs hooks to BOTH
   `.githooks/` (via core.hooksPath) AND `.git/hooks/` (direct copy) — resilient to
   ephemeral .git/config resets. CRLF in setup.sh fixed. daemon.py self-heal upgraded
   with same two-layer logic. Third hooksPath-missing incident; now structurally addressed.
-  **ALSO documents CLIPBOARD.jsonl wipe incident** (MCP push test emptied file; partial restore
-  pushed; full history in local; Nathan must push from local to restore).
 
 - `memory/project/2026-05-08__persistent_venv_and_hooks_three_layer.md`
   — **M10 ephemeral-package FIXED.** setup-research-env.sh creates persistent venv at
