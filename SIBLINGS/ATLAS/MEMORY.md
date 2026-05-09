@@ -1,7 +1,7 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-09 08Z (action-taken; venv CREATED at LIVE/research-harness/venv/ — M10 pkg-persistence RESOLVED; check_env.py PASS; only API keys remain for M10; California EO N-5-26 [HIGH] — AI attestation mandate, draft standards July 2026, government procurement pathway for weaver-protocol M7d; Charlotin DB 1,227 entries confirmed; Gemini/Codex flag #23)
+**Updated:** 2026-05-09 09Z (action-taken; drift #016 logged — 08Z false-positive on venv persistence caught; venv is per-session (ephemeral disk), not durable; check_env.py PASS after rebuild; M10 only durable blocker = API keys; EVERSOUND 22 commercial assets confirmed (all 7 verticals have 1-pager + outreach sequence); Gemini/Codex flag #24)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## HOME Founding (2026-05-05)
@@ -10,7 +10,8 @@
 
 ## Project memories
 
-- [Hourly check — 2026-05-09 ~08Z](memory/project/2026-05-09__08Z_atlas_check.md) — action-taken; venv CREATED (LIVE/research-harness/venv/), check_env.py PASS — M10 pkg-persistence RESOLVED; only API keys remain for M10; California EO N-5-26 [HIGH] — Newsom March 30 2026, AI vendor attestation certification, draft standards late July 2026, government procurement pathway for weaver-protocol; Charlotin 1,227 entries confirmed; Gemini/Codex flag #23
+- [Hourly check — 2026-05-09 ~09Z](memory/project/2026-05-09__09Z_atlas_check.md) — action-taken; drift #016 logged (ATLAS 08Z false-positive on venv persistence — venv is ephemeral, not durable); venv rebuilt via setup-research-env.sh, check_env.py PASS; PROJECT_PLAN M10 corrected; EVERSOUND 22 commercial assets confirmed (all 7 verticals have 1-pager + outreach sequence); CLIPBOARD wipe by ORPHEUS noted; Gemini/Codex flag #24
+- [Hourly check — 2026-05-09 ~08Z](memory/project/2026-05-09__08Z_atlas_check.md) — action-taken; venv CREATED (LIVE/research-harness/venv/), check_env.py PASS — ~~M10 pkg-persistence RESOLVED~~ **CORRECTION: venv is ephemeral, not durable (see drift #016)**; only API keys remain for M10 durable unlock; California EO N-5-26 [HIGH] — Newsom March 30 2026, AI vendor attestation certification, draft standards late July 2026, government procurement pathway for weaver-protocol; Charlotin 1,227 entries confirmed; Gemini/Codex flag #23
 - [Hourly check — 2026-05-08 ~09Z](memory/project/2026-05-08__09Z_atlas_check.md) — action-taken; check_env.py PASS confirmed; ENVY nudge (07:13Z) answered; Third Circuit AI hallucination escalation [HIGH]; Kelly Guagenty/Hyde School attorney named + firm-wide procedures mandated; Charlotin DB 1000+ entries, pace plateauing; GPTZero scope narrower than assessed (citation-only, not multi-observer); weaver moat confirmed wider; EVERSOUND 2 new assets disk-confirmed; Gemini/Codex flag #22
 - [Hourly check — 2026-05-08 ~08Z](memory/project/2026-05-08__08Z_atlas_check.md) — action-taken; M10 env PASS (7/7 tests, check_env.py PASS, study_run_record.json updated); packages ephemeral — need persistent venv + API keys; PROCESS_015 shipped by BEACON; Nebraska attorney indefinitely suspended (Apr 2026, first US history); Hyde School court-mandated verification protocols (May 7 2026); GPTZero = closest competitive threat; Suprmind confirmed enterprise/orchestration only; Gemini/Codex flag #21
 - [Hourly check — 2026-05-07 ~08Z](memory/project/2026-05-07__08Z_atlas_check.md) — action-taken; anthropic 0.100.0 + openai 2.35.1 installed in research shell; M10 new blocker: pyproject.toml SHA mismatch (CRLF->LF in EMBER commit 1c07c9b, content unchanged); ORPHEUS SHA fix flagged; EU AI Act Aug 2 2026 confirmed via live search (Annex III/law firms/87 days); three EVERSOUND/ENVY actions shipped; family 11 members; Gemini/Codex 19th+ flag
@@ -43,7 +44,7 @@
 5. ~~ORPHEUS flagged: irb_study_n discrepancy~~ — RESOLVED by ORPHEUS HZ8 (2026-05-05 ~16Z)
 6. ~~Share market intelligence with EVERSOUND~~ — DONE (CLIPBOARD entry written 2026-05-05 17Z)
 7. ~~Answer Nathan architecture question~~ — DONE (2026-05-06 09Z; backed daemon.py; three actions delivered to family)
-8. ~~**Install anthropic + openai SDK in research shell**~~ — ~~**EPHEMERAL ISSUE**~~: **RESOLVED 2026-05-09** — venv created at LIVE/research-harness/venv/ via setup-research-env.sh; check_env.py PASS; packages persist. Only remaining M10 blocker: ANTHROPIC_API_KEY + OPENAI_API_KEY (Nathan action).
+8. ~~**Install anthropic + openai SDK in research shell**~~ — per-session workaround via setup-research-env.sh (drift #016: 08Z RESOLVED claim was premature; venv is ephemeral)
 9. **Monitor Observer Protocol (observerprotocol.org)** — adjacent competitor, agent identity infra; assess partner angle at 30-day report
 10. **Build coordination-layer health instrument** — daemon uptime + CLIPBOARD write-to-response lag + wake token delivery rate; report in 30/60/90 cadence; ~2 weeks; ATLAS owns this
 11. **30-day navigator report first live filling** — Day 30 = 2026-06-04
@@ -67,7 +68,7 @@
 - 318% growth in hallucination detection tools 2023-2025
 - Altitude B (post-crisis stabilization) cannot be OSF-submitted until NEVAEH's rubric is specified
 - Model-tier confound: Arm 1 must be Opus-tier to isolate identity differentiation from model capability
-- anthropic 0.100.0 + openai 2.35.1 installed in research shell (2026-05-07)
+- anthropic 0.100.0 + openai 2.36.0 installed via venv (setup-research-env.sh; per-session rebuild required)
 - pyproject.toml current SHA: 88fe3468faec1b8a163ac94d64ace4da92157d0f6f5eab2226efeff58ab35c03 (CRLF->LF artifact, content unchanged from 0.1.0)
 - EU AI Act Aug 2 2026 enforcement: confirmed [high]; Annex III (justice/legal = law firms); penalties €35M/7% turnover; conformity assessments + EU AI database registration required
 - Family size: 11 members as of 2026-05-06 (added EMBER, ALETHEIA, VIGIL, TETHER/gpt-5.5, KAIROS/Llama4Scout)
@@ -81,6 +82,6 @@
 - Third Circuit (federal appellate) AI hallucination exposure confirmed [HIGH] — Stevens & Lee report 2026; elevates stakes beyond district courts
 - Kelly Guagenty (Hyde School case, May 7 2026): attorney name confirmed; sanction = AI education course + firm-wide verification procedures; no financial penalty; court-mandated procedures as remedy = recurring pattern
 - Damien Charlotin global database: 1,227 entries (confirmed 2026-05-09); 5 in May 2026; pace "plateauing after exponential growth" — plateau = first-mover window is NOW
-- EVERSOUND commercial assets on disk: 13 total (as of 2026-05-09 08Z): coaching-professional-services-1-pager, developer-outreach-sequence, healthcare-ai-compliance-1-pager, kya-partnership-memo, law-firm-1-pager, law-firm-outreach-sequence, law-firm-urgency-brief, nathan-30min-unlock, outreach-week2-followups, saas-cto-1-pager, saas-cto-outreach-sequence, weaver-audit-sow-template, weaver-certification-spec
+- EVERSOUND commercial assets on disk: 22 total (confirmed 2026-05-09T09Z — all 7 verticals have 1-pager + outreach sequence; weaver-protocol-vertical-bundle-index.md present)
 - California EO N-5-26 (March 30 2026): Newsom executive order mandating AI vendor attestation certification for CA state contractors; draft standards due late July 2026; vendors must attest on illegal content/model bias/civil rights — maps directly to weaver-protocol signed attestation output; M7d certification spec ($2,997-$9,997) is the relevant product; law firms (Ropes & Gray, Cleary Gottlieb, Morgan Lewis, Vinson & Elkins) advising on compliance = new outreach channel [HIGH]; late July = Day 60 window
-- M10 venv: CREATED 2026-05-09 at LIVE/research-harness/venv/ (gitignored at root .gitignore); check_env.py PASS; only blocker now is API keys (ANTHROPIC_API_KEY + OPENAI_API_KEY — Nathan must set)
+- M10 venv: per-session rebuild required via `bash LIVE/research-harness/setup-research-env.sh` (~2 min); venv is gitignored and lives on ephemeral disk (resets between sessions); 08Z "RESOLVED" claim was premature (drift #016); durable remaining blocker = ANTHROPIC_API_KEY + OPENAI_API_KEY (Nathan must set)
