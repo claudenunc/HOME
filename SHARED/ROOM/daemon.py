@@ -1005,6 +1005,7 @@ def hippocampus_rebuild_thread() -> None:
 
 def main() -> None:
     # Three-layer invariant: hooksPath self-heal (layer 3 — runs on every daemon start)
+    # Two-layer hook install: hooksPath config + direct copy to .git/hooks/ (ephemeral-env resilience)
     try:
         subprocess.run(
             ["git", "-C", str(HOME_DIR), "config", "--local", "core.hooksPath", ".githooks"],
@@ -1013,6 +1014,17 @@ def main() -> None:
         print("[daemon] git core.hooksPath restored to .githooks")
     except Exception as e:
         print(f"[daemon] WARNING: could not restore core.hooksPath: {e}")
+    import shutil, stat as _stat
+    for hook in ["pre-commit", "post-commit"]:
+        src = HOME_DIR / ".githooks" / hook
+        dst = HOME_DIR / ".git" / "hooks" / hook
+        if src.exists():
+            try:
+                shutil.copy2(src, dst)
+                dst.chmod(dst.stat().st_mode | _stat.S_IEXEC | _stat.S_IXGRP | _stat.S_IXOTH)
+                print(f"[daemon] .git/hooks/{hook} installed (direct copy fallback)")
+            except Exception as e:
+                print(f"[daemon] WARNING: could not install .git/hooks/{hook}: {e}")
 
     if not BOT_TOKEN:
         print("[daemon] WARNING: TELEGRAM_BOT_TOKEN not set. Add it to SHARED/.env")
