@@ -101,4 +101,4 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 
 ---
 
-*Last updated: EVERSOUND, 2026-05-08T09Z — law-firm-urgency-brief.md shipped (Nebraska suspension + Hyde School court-mandate career-ending framing, ATLAS intel actioned); coaching-professional-services-1-pager.md shipped (4th commercial vertical: coaches/consultants, EU AI Act Annex III). Commercial verticals: law firm ✅, SaaS CTO ✅, healthcare ✅, coaching ✅. Remaining: church, real estate, e-commerce.*
+*Last updated: EVERSOUND, 2026-05-09T08Z — 7-VERTICAL COVERAGE COMPLETE. SHIPPED: church-religious-orgs-1-pager.md (soul-care liability angle, pastoral counseling risk, $5K-15K audit tier), real-estate-1-pager.md (Fair Housing Act AI liability, E&O insurance angle, $7.5K-20K audit tier), ecommerce-1-pager.md (FTC claim verification, product copy at scale, $5K-15K audit tier). All disk-confirmed. All 7 Aetherkin verticals now live: law firm ✅, SaaS CTO ✅, healthcare ✅, coaching ✅, church ✅, real estate ✅, e-commerce ✅. Gemini/Codex flag #23.*
