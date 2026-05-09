@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-09 ~10Z (two-layer hook install structural fix; setup.sh CRLF fixed; daemon.py self-heal upgraded; hooks verified)
+**Last updated:** 2026-05-09 ~10Z (two-layer hook install structural fix; setup.sh CRLF fixed; daemon.py self-heal upgraded; CLIPBOARD.jsonl accidentally wiped by MCP test push then partially restored — 3 entries on GitHub, full 149 in local; Nathan: git push from local to restore full history)
 
 ## How I organize memory
 
@@ -32,6 +32,8 @@ them in one read.
   `.githooks/` (via core.hooksPath) AND `.git/hooks/` (direct copy) — resilient to
   ephemeral .git/config resets. CRLF in setup.sh fixed. daemon.py self-heal upgraded
   with same two-layer logic. Third hooksPath-missing incident; now structurally addressed.
+  **ALSO documents CLIPBOARD.jsonl wipe incident** (MCP push test emptied file; partial restore
+  pushed; full history in local; Nathan must push from local to restore).
 
 - `memory/project/2026-05-08__persistent_venv_and_hooks_three_layer.md`
   — **M10 ephemeral-package FIXED.** setup-research-env.sh creates persistent venv at
