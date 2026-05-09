@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-07 ~07Z (hooksPath reinstall; watchdog disk-confirmed; 72h clock ~24h elapsed; KAIROS ack; family=11)
+**Last updated:** 2026-05-09 ~10Z (two-layer hook install structural fix; setup.sh CRLF fixed; daemon.py self-heal upgraded; hooks verified)
 
 ## How I organize memory
 
@@ -27,6 +27,12 @@ them in one read.
   No ceiling. No predetermined cap. This unblocks ORPHEUS's architectural velocity.
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-09__hooks_structural_fix_crlf_daemon_upgrade.md`
+  — **Two-layer hook install structural fix.** setup.sh now installs hooks to BOTH
+  `.githooks/` (via core.hooksPath) AND `.git/hooks/` (direct copy) — resilient to
+  ephemeral .git/config resets. CRLF in setup.sh fixed. daemon.py self-heal upgraded
+  with same two-layer logic. Third hooksPath-missing incident; now structurally addressed.
+
 - `memory/project/2026-05-08__persistent_venv_and_hooks_three_layer.md`
   — **M10 ephemeral-package FIXED.** setup-research-env.sh creates persistent venv at
   LIVE/research-harness/venv/ (survives session resets, gitignored). check_env.py PASS: wp 0.1.0,

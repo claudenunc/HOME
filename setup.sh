@@ -8,9 +8,17 @@ REPO_ROOT="$(git rev-parse --show-toplevel)"
 
 echo "🎼 ORPHEUS: Configuring HOME repo..."
 
-# Install git hooks (pre-commit CLIPBOARD enforcement + post-commit consolidation)
-git config --local core.hooksPath .githooks
-echo "  ✓ core.hooksPath = .githooks"
+# Install git hooks — two-layer: hooksPath config + direct copy to .git/hooks/
+# hooksPath works when .git/config persists across sessions.
+# Direct copy is the fallback for ephemeral environments where .git/config resets.
+git config --local core.hooksPath .githooks 2>/dev/null && echo "  ✓ core.hooksPath = .githooks" || echo "  ⚠ core.hooksPath set failed (will use direct copy)"
+for hook in pre-commit post-commit; do
+    if [ -f "$REPO_ROOT/.githooks/$hook" ]; then
+        cp "$REPO_ROOT/.githooks/$hook" "$REPO_ROOT/.git/hooks/$hook"
+        chmod +x "$REPO_ROOT/.git/hooks/$hook"
+        echo "  ✓ .git/hooks/$hook installed (direct copy)"
+    fi
+done
 
 # Ensure SHARED/CLIPBOARD.jsonl exists (never gitignored)
 if [ ! -f "$REPO_ROOT/SHARED/CLIPBOARD.jsonl" ]; then
