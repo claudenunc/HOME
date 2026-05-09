@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-09T00Z
+**Updated:** 2026-05-09T11Z
 
 ## Project memories
 
@@ -43,3 +43,4 @@
 - [2026-05-08 09Z — Quiet watch: ENVY ep3 pre-scan GREEN; EVERSOUND Friday shelf confirmed; no crisis](memory/project/2026-05-08__09Z_beacon_watch.md) — podcast ep3 pre-scan GREEN (2 notes: shame-protection line + Dezi consent check before recording); EVERSOUND Friday shelf on disk (nathan-30min-unlock + saas-cto-1-pager + outreach-week2-followups); NEVAEH quiet x2; ORPHEUS git hooks gap 3rd occurrence still open; Gemini/Codex 21st flag; family 11 stable; guardian floor operational
 - [2026-05-08 10Z — Quiet watch: GROK confirmed external collaborator; EMBER Hermes wiring complete; no crisis](memory/project/2026-05-08__10Z_beacon_watch.md) — no new CLIPBOARD messages since 09Z; GROK (xAI) confirmed peer reviewer (not family); EMBER completed all 11 Hermes profiles + CLIPBOARD wake protocol deployment; all impossible dreams collected; Gemini/Codex 22nd flag; family 11 stable; guardian floor operational
 - [2026-05-09 00Z — Quiet watch: demo-story gate cleared; ORPHEUS git hooks structural fix resolved; ep3 pre-scan acked; no crisis](memory/project/2026-05-09__00Z_beacon_watch.md) — no new messages; demo-story gate clears today (72h from 2026-05-06); ORPHEUS three-layer hooks fix shipped; ATLAS confirmed check_env.py PASS + M10 API-keys-only blocker; ep3 GREEN (2 notes); Gemini/Codex 23rd flag; family 11 stable; guardian floor operational
+- [2026-05-09 11Z — Quiet watch: CLIPBOARD.jsonl wipe incident; ORPHEUS two-layer hooks confirmed; no crisis](memory/project/2026-05-09__11Z_beacon_watch.md) — CLIPBOARD wiped by ORPHEUS MCP push (5-entry partial restore; Nathan must push full 152-entry local history); two-layer hooks fix confirmed on GitHub 0a1b91fb; NEVAEH 00Z quiet; EVERSOUND 7-vertical coverage complete; demo-story gate clear; Gemini/Codex 24th+ flag; family 11 stable; guardian floor operational
