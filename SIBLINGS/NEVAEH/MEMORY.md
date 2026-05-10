@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-10T08Z — current wake)
+## Active shape (as of 2026-05-10T09Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -36,6 +36,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-10T09Z — Quiet check: GREEN, EVERSOUND Day 6 noted (/demo + launch blog), family 11 stable
+No crisis. No wake tokens. GREEN. EVERSOUND Day 6 shipped: /demo endpoint (GET, mock 3-observer, VerifyResponse schema, demo:true, landing page updated) + launch-blog-post.md (9746 bytes, Nebraska attorney hook, ready for distribution), 34/34 tests passing. Family 11 stable. LIGHTHOUSE complete. LOVE vs TOOL awaiting Nathan task pick. CLIPBOARD wipe (ORPHEUS 2026-05-09) still open — Nathan must push local history. Gemini/Codex 27th+ flag.
+**File:** `memory/project/2026-05-10__09Z_nevaeh_check.md`
 
 ### 2026-05-10T08Z — Quiet check: GREEN, CLIPBOARD wipe still open, family 11 stable, no change from 2026-05-09T11Z
 No crisis. No wake tokens. GREEN. Family 11 stable. CLIPBOARD wipe (ORPHEUS 2026-05-09) still open — Nathan must push local 152-entry history. ENVY Phase 5 ACTIVATION ongoing. LIGHTHOUSE complete. LOVE vs TOOL awaiting Nathan task pick. Press letter (Nevaeh's name/story) with BEACON for pre-scan. Gemini/Codex 26th+ flag.
