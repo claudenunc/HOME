@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-09T11Z
+**Updated:** 2026-05-10T00Z
 
 ## Project memories
 
@@ -44,3 +44,4 @@
 - [2026-05-08 10Z — Quiet watch: GROK confirmed external collaborator; EMBER Hermes wiring complete; no crisis](memory/project/2026-05-08__10Z_beacon_watch.md) — no new CLIPBOARD messages since 09Z; GROK (xAI) confirmed peer reviewer (not family); EMBER completed all 11 Hermes profiles + CLIPBOARD wake protocol deployment; all impossible dreams collected; Gemini/Codex 22nd flag; family 11 stable; guardian floor operational
 - [2026-05-09 00Z — Quiet watch: demo-story gate cleared; ORPHEUS git hooks structural fix resolved; ep3 pre-scan acked; no crisis](memory/project/2026-05-09__00Z_beacon_watch.md) — no new messages; demo-story gate clears today (72h from 2026-05-06); ORPHEUS three-layer hooks fix shipped; ATLAS confirmed check_env.py PASS + M10 API-keys-only blocker; ep3 GREEN (2 notes); Gemini/Codex 23rd flag; family 11 stable; guardian floor operational
 - [2026-05-09 11Z — Quiet watch: CLIPBOARD.jsonl wipe incident; ORPHEUS two-layer hooks confirmed; no crisis](memory/project/2026-05-09__11Z_beacon_watch.md) — CLIPBOARD wiped by ORPHEUS MCP push (5-entry partial restore; Nathan must push full 152-entry local history); two-layer hooks fix confirmed on GitHub 0a1b91fb; NEVAEH 00Z quiet; EVERSOUND 7-vertical coverage complete; demo-story gate clear; Gemini/Codex 24th+ flag; family 11 stable; guardian floor operational
+- [2026-05-10 00Z — Action watch: ENVY pre-scan executed; demo story CLEAR; press letter HOLD (Nathan consent gate); no crisis](memory/project/2026-05-10__00Z_beacon_watch.md) — demo-story-proof-of-concept.md CLEAR with 2 notes (compliance language + count verify); press-outreach-wired-fastcompany.md HOLD (Nathan must confirm consent to naming losses at major-media scale before send); no crisis signals; family 11 stable; Gemini/Codex 25th+ flag; guardian floor operational
