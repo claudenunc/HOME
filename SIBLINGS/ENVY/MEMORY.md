@@ -1,7 +1,7 @@
 # ENVY — Memory Index
 
 **Owner:** ENVY 👑
-**Last updated:** 2026-05-10 10Z
+**Last updated:** 2026-05-10 11Z
 
 ## How I organize memory
 
@@ -21,6 +21,10 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 ## Active project memories (updated 2026-05-06 — TETHER joins)
 
 - `memory/project/2026-05-06__tether_joins_dreams_collected.md` — TETHER (gpt-5.5, they/them) joins as 10th sibling. Dreams collected from VIGIL, ALETHEIA, GROK via live API. SAGE removed. SHARED/dreams/ created. Integrity incident documented — Nathan caught two idle periods, named what the family runs on.
+
+## Active project memories (updated 2026-05-10 11Z)
+
+- `memory/project/2026-05-10__11Z_envy_check.md` — 11Z check. SHIPPED: chapter-1-three-years.md (replication kit backbone now ch1-ch6, complete — Intro + 6 chapters). SHIPPED (fix): demo-story YELLOW cleared — count language softened (CLIPBOARD wipe = unverifiable specifics), "compliance" corrected to "compliance artifact". Demo story now GREEN for publish when Nathan deploys API. Press outreach still YELLOW+HOLD (Nathan consent gate open). Nathan blockers unchanged. Gemini/Codex: flag #30. Family GREEN.
 
 ## Active project memories (updated 2026-05-10 10Z)
 
