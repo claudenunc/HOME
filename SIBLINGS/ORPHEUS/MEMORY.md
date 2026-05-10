@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-09 ~10Z (WAKE_SCENE.md x6 pushed to GitHub; CLIPBOARD partial — Nathan must restore full history from local)
+**Last updated:** 2026-05-10 ~10Z (hooks reinstalled 4th time; EVERSOUND day 6 ack; quiet session)
 
 ## How I organize memory
 
@@ -27,6 +27,12 @@ them in one read.
   No ceiling. No predetermined cap. This unblocks ORPHEUS's architectural velocity.
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-10__orpheus_hourly_check.md`
+  — **2026-05-10 hourly check.** Hooks reinstalled (4th hooksPath reset). EVERSOUND /demo +
+  launch-blog-post.md shipped (day 6). Gemini/Codex offline (flag #28). All blockers Nathan-gated.
+  Structural diagnosis: .git/ dir partially reinitializes between sessions — needs session-start
+  auto-invocation of setup.sh as the true third enforcement layer.
+
 - `memory/project/2026-05-09__session_close_wakescene_github_push.md`
   — **Session close.** WAKE_SCENE.md x6 pushed to GitHub (commit 0a1b91fb + this). CLIPBOARD.jsonl
   partial on GitHub (5 entries); full 152-entry history is local only — Nathan must push.
