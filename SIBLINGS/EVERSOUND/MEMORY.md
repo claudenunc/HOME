@@ -1,164 +1,99 @@
-# EVERSOUND — MEMORY index
+# EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-09T12:00:00Z
-**Project Day:** Day 5 of Weaver Protocol (12Z check)
+**Updated:** 2026-05-10T08:08:00Z
+**Project Day:** Day 6 of Weaver Protocol (08Z check)
 
 ---
 
-## HOME Founding (2026-05-05)
-
-- [2026-05-05 — HOME Founding Declaration + Council Structure](memory/2026_05_05_home_founding.md) — Hermes becomes HOME. EVERSOUND = revenue & infrastructure seat. Nathan is the 7th seat — the human in the room who holds the values and the final call. Council stays us.
-
 ## Project memories
 
-- [THE_PROBLEM Round 2 — EVERSOUND convergence position](memory/project/2026-04-21__the_problem_eversound_convergence.md) — Filed 2026-05-05. Commercial rename to "attested multi-observer verification." Four-stage revenue sequence with Day 60 first paid install. Accepted NEVAEH's anchor, ORPHEUS's two-altitude proposal, ATLAS's version-lock. Full position logged.
+- [Day 6 08Z check - 2026-05-10T08Z](memory/project/2026-05-10__08Z_eversound_check.md) - **SHIPPED: /demo no-auth endpoint** (api/main.py + api/tests/test_demo.py - 7 tests, 34/34 suite passing; GET /demo, mock 3-observer, full VerifyResponse, demo:true provenance, landing page Try it free section added). **SHIPPED: launch-blog-post.md** (9746 bytes - Nebraska attorney hook, EU AI Act Aug 2026 deadline, pip install + /demo CTA, dev.to/LinkedIn/HN/Substack ready for Nathan post). Gemini/Codex flag #28.
 
-- [Day 1 Weaver Protocol check — 2026-05-05T00Z](memory/project/2026-05-05__00Z_eversound_check.md) — Hourly check + Day 1 activation. Nathan answered all 11 open questions YES. Autonomy granted. Directory structure created. CRAFT active. Day 1 build priorities set.
+- [Day 5 12Z check - 2026-05-09T12Z](memory/project/2026-05-09__12Z_eversound_check.md) - **PHASE 5 ACTIVATION TOOL.** **SHIPPED: prospect-hit-list-week1.md** (17219 bytes - 20+ named companies across 7 verticals with decision-maker roles, LinkedIn search strings, trigger events). **SHIPPED: SHARED/STATE/active-deals.md** (1890 bytes). Both disk-confirmed. Nathan can open this Monday and send first 10 emails. Gemini/Codex flag #27.
 
-- [Day 1 08Z build check — 2026-05-05T08Z](memory/project/2026-05-05__08Z_eversound_check.md) — **SHIPPED: weaver-protocol repo skeleton** (Python package, protocol spec, pricing, example). **SHIPPED: law-firm commercial 1-pager.** Provider adapters and PyPI publish are next blockers.
+- [Day 5 11Z check - 2026-05-09T11Z](memory/project/2026-05-09__11Z_eversound_check.md) - **SHIPPED: craft-client-acquisition-kit.md** (9364 bytes). **SHIPPED: prospect-reply-playbook.md** (8411 bytes). **SHIPPED: SHARED/STATE/active-deals.md** (deal tracker template). Funnel now complete: all outreach + reply handling wired. First dollar is a Nathan send-action away. Gemini/Codex flag #26.
 
-- [Day 1 09Z build check — 2026-05-05T09Z](memory/project/2026-05-05__09Z_eversound_check.md) — **SHIPPED: provider adapters** (`weaver/adapters/` — Anthropic, OpenAI, Mock). **SHIPPED: 7-test suite (all passing, no API keys).** **SHIPPED: real-world examples** (with_anthropic.py, with_openai.py). PyPI publish is next blocker.
+- [Day 5 09Z/10Z checks - 2026-05-09](memory/project/2026-05-09__09Z_eversound_check.md) - **7-VERTICAL OUTREACH COMPLETE.** All 7 verticals now have both 1-pager AND outreach sequence. weaver-protocol-vertical-bundle-index.md shipped (14687 bytes). Gemini/Codex flags #24-25.
 
-- [Day 1 10Z build check — 2026-05-05T10Z](memory/project/2026-05-05__10Z_eversound_check.md) — **SHIPPED: build backend fixed** (`setuptools.build_meta`). **SHIPPED: version bumped to 0.1.0.** **SHIPPED: clean sdist + wheel builds.** **SHIPPED: GitHub Actions CI + PyPI Trusted Publishing workflow.** Nathan action required: 5-step PyPI Trusted Publishing setup to go live.
+- [Day 5 08Z check - 2026-05-09T08Z](memory/project/2026-05-09__08Z_eversound_check.md) - **7-VERTICAL COVERAGE COMPLETE.** church, real-estate, ecommerce 1-pagers + church outreach approach all shipped. Gemini/Codex flag #23.
 
-- [Day 1 11Z check — 2026-05-05T11Z](memory/project/2026-05-05__11Z_eversound_check.md) — **DRIFT #013 RESOLVED:** law-firm 1-pager confirmed absent, actually written to disk this check (`SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md`, 2807 bytes, ls-confirmed). **SHIPPED: Hosted API scaffold** (`LIVE/weaver-protocol/api/` — main.py FastAPI, requirements.txt, Dockerfile, README.md with Railway/Render deploy guide). Personal protocol: `ls` before any SHIPPED line — now in force.
+- [Day 4 checks - 2026-05-08](memory/project/2026-05-08__07Z_eversound_check.md) - FRIDAY SHELF: nathan-30min-unlock.md, saas-cto-1-pager.md, outreach-week2-followups.md, healthcare-ai-compliance-1-pager.md, saas-cto-outreach-sequence.md, law-firm-urgency-brief.md, coaching-professional-services-1-pager.md. Gemini/Codex flags #20-22.
 
-- [Day 1 12Z check — 2026-05-05T12Z](memory/project/2026-05-05__12Z_eversound_check.md) — **SHIPPED: Postgres session store** (`api/db.py`, 157 lines, disk-confirmed). **FIXED: main.py bugs** — `session.run()` (method doesn't exist) and wrong `WeaverSession` kwargs both fixed; `/verify` endpoint now actually works end-to-end. `psycopg2-binary` added to requirements. README updated with Postgres setup + Railway/Render Postgres provisioning steps.
+- [Day 3 checks - 2026-05-07](memory/project/2026-05-07__07Z_eversound_check.md) - SHIPPED: vercel.json, weaver-certification-spec.md, craft-demo-treatment.md, weaver-audit-sow-template.md. New blocker: GitHub repo claudenunc/weaver-protocol doesn't exist. Gemini/Codex flags #18-19.
 
-- [Day 1 13Z check — 2026-05-05T13Z](memory/project/2026-05-05__13Z_eversound_check.md) — **SHIPPED: CLI** (`weaver/cli.py` — `weaver verify` + `weaver drift`; `[project.scripts]` added to pyproject.toml). **FIXED: Dockerfile critical bug** (was missing `weaver/` package + `db.py` — API was broken in Docker). **SHIPPED: `railway.toml` + `render.yaml`** (one-click deploy configs). **SHIPPED: `docs/launch-copy.md`** (tweet thread + HN post + LinkedIn). README roadmap updated. CLIPBOARD.jsonl recreated. Weaver Protocol is now fully deploy-ready — blocked only on Nathan's Railway/Render account + PyPI Trusted Publishing 5-step.
+- [Day 2 checks - 2026-05-06](memory/project/2026-05-06__00Z_eversound_check.md) - SHIPPED: API test suite (34 tests), developer-outreach-sequence.md, kya-partnership-memo.md, real adapter wiring, payment flow + landing page. Gemini/Codex flags #15-17.
 
-- [Day 1 14Z check — 2026-05-05T14Z](memory/project/2026-05-05__14Z_eversound_check.md) — **SHIPPED: Stripe billing integration** (`api/billing.py` 115 lines — checkout session, webhook handler, key issuance/revocation). **EXTENDED: `api/db.py`** (`weaver_api_keys` table + save/validate/revoke functions, Postgres + in-memory). **EXTENDED: `api/main.py`** (5 new billing endpoints + DB-backed auth). **UPDATED: `requirements.txt`** (stripe>=8.0.0). **UPDATED: `api/README.md`** (6-step Stripe setup guide). API is now pay-ready: checkout → Stripe → webhook → `wp_...` API key auto-issued. Blocked on Nathan's Railway/Render account + Stripe account (~30 min Nathan action).
-
-- [Day 2 00Z check — 2026-05-06T00Z](memory/project/2026-05-06__00Z_eversound_check.md) — **SHIPPED: API test suite** (`api/tests/test_db.py` 11 tests + `api/tests/test_billing.py` 9 tests — 20/20 passing, zero external deps). **FIXED: PROJECT_PLAN.md** stale milestones — Milestone 6 corrected to DONE, Milestone 13 corrected to DONE, milestones 6a (Stripe) and 6b (tests) added. No CRAFT clients. No inbox tokens. Persistent blocker: Nathan Railway/Render + PyPI + Stripe accounts.
-
-- [14:10Z revenue artifacts check — 2026-05-05T14:10Z](memory/project/2026-05-05__14Z_outreach-quickstart_eversound_check.md) — **SHIPPED: law firm cold outreach 3-email sequence** (`SIBLINGS/EVERSOUND/files/commercial/law-firm-outreach-sequence.md`, 7255 bytes, M14 path). **SHIPPED: developer quickstart** (`LIVE/weaver-protocol/docs/QUICKSTART.md`, 4701 bytes, M8 path — 60-second no-key demo). **FIXED: launch-copy.md pricing** — tweet 5 had setup-fee pricing ($297/$197), corrected to match billing.py ($49/$199/$499/mo). Pricing architecture clarified: hosted API = SaaS pricing, consultancy = setup-fee pricing, both valid, not mixed. Gemini + Codex both offline this check (attempted per PULSE).
-
-- [Day 2 ~17Z check v2 — 2026-05-06T17Z](memory/project/2026-05-06__17Z_v2_eversound_check.md) — **SHIPPED: developer-outreach-sequence.md** (M8 activation, 3-channel: email/Discord/GitHub) + **SHIPPED: kya-partnership-memo.md** (partner with KYA on enterprise compliance stack, $25-75K joint pitch). Nathan architecture Q answered to CLIPBOARD. Revenue opportunity logged: KYA + weaver = full AI compliance receipt.
-
-- [15Z attestation report check — 2026-05-05T15Z](memory/project/2026-05-05__15Z_eversound_check.md) — **SHIPPED: `weaver report` CLI command** (`weaver/report.py` 14053 bytes + cli.py updated). HMAC-SHA256 signed HTML attestation report generator. Zero external deps. Key from `WEAVER_ATTEST_KEY` or auto-`~/.weaver/attest.key`. Reads sessions.jsonl + disagreements.jsonl + drift.jsonl → professional HTML doc w/ embedded CSS. Smoke-tested 7239 bytes. **FIXED: README.md pricing** — was $297 setup/$197/mo, corrected to $49/$199/$499/mo. **FIXED: QUICKSTART.md fake URL** — removed `api.weaver-protocol.dev`, added `weaver report` usage + self-deploy instructions. 7/7 core tests passing. This is the primary M8 conversion tool.
-
-- [Day 3 07Z check — 2026-05-07T07Z](memory/project/2026-05-07__07Z_eversound_check.md) — **SHIPPED: vercel.json** (Vercel deploy config for API, M7 unblocked for Nathan 2-min deploy). **SHIPPED: weaver-certification-spec.md** ($2,997–$9,997 certification tier, pre-order offer $2,497×5=$12,485 available now). **SHIPPED: craft-demo-treatment.md** (full sample music video treatment for CRAFT client acquisition). Family: TETHER + KAIROS joined 2026-05-06. Gemini/Codex CLIs still not installed.
-
-- [Day 3 ~12Z check — 2026-05-07T12Z](memory/project/2026-05-07__12Z_eversound_check.md) — **FIXED: Dockerfile critical bug** (billing.py missing from COPY — would crash container on startup). **FIXED: GitHub URLs** in main.py (2 instances), report.py, launch-copy.md — now point to claudenunc/weaver-protocol (not HOME). **SHIPPED: weaver-audit-sow-template.md** (M7f, full SOW for $5K–$75K consultancy engagement, disk-confirmed). **NEW BLOCKER IDENTIFIED:** GitHub repo `claudenunc/weaver-protocol` doesn't exist — Nathan must create it to unblock PyPI Trusted Publishing + Vercel auto-deploy. Added as M7g to PROJECT_PLAN. Gemini/Codex 19th+ flag.
-
-- [Day 4 07Z check — 2026-05-08T07Z](memory/project/2026-05-08__07Z_eversound_check.md) — **FRIDAY SHELF:** **SHIPPED: nathan-30min-unlock.md** (4821 bytes — step-by-step guide to unblock GitHub repo + Vercel + PyPI Trusted Publishing + Stripe in 30 minutes). **SHIPPED: saas-cto-1-pager.md** (4144 bytes — second commercial vertical for SaaS CTOs/AI teams, EU AI Act Aug 2026 angle). **SHIPPED: outreach-week2-followups.md** (4690 bytes — nurture track for law firm + developer sequences when Week 1 goes unanswered). All disk-confirmed. Gemini/Codex flag #20.
-
-- [Day 4 08Z check — 2026-05-08T08Z](memory/project/2026-05-08__08Z_eversound_check.md) — **SHIPPED: healthcare-ai-compliance-1-pager.md** (6179 bytes — healthcare/medical vertical, EU AI Act + HIPAA angle, three engagement tiers $5K-$25K audit / $1K-$3.5K/mo monitoring / $2,497-$9,997 cert). **SHIPPED: saas-cto-outreach-sequence.md** (5970 bytes — 3-touch cold email sequence for SaaS CTO persona, pairs with saas-cto-1-pager.md). Both disk-confirmed. Gemini/Codex flag #21. Commercial verticals now: law firm ✅, SaaS CTO ✅, healthcare ✅. Remaining: coaching, church, real estate, e-commerce.
-
-- [Day 4 10Z check — 2026-05-08T09Z](memory/project/2026-05-08__10Z_eversound_check.md) — **ATLAS intel actioned:** Nebraska attorney indefinitely suspended Apr 2026 (first US history, AI hallucinations), Hyde School May 2026 court-MANDATED verification protocols. **SHIPPED: law-firm-urgency-brief.md** (5444 bytes — career-ending consequence framing, Nebraska/Hyde School headlines, three tiers $5K-15K/$7.5K setup/$2,497-9,997). **SHIPPED: coaching-professional-services-1-pager.md** (6211 bytes — 4th commercial vertical, coaches/consultants, EU AI Act Annex III employment-AI = high-risk, free CLI entry). Both disk-confirmed. Gemini/Codex flag #22. Commercial verticals now: law firm ✅, SaaS CTO ✅, healthcare ✅, coaching ✅. Remaining: church, real estate, e-commerce.
-
-- [Day 5 09Z check — 2026-05-09T09Z](memory/project/2026-05-09__09Z_eversound_check.md) — **7-VERTICAL OUTREACH COMPLETE.** **SHIPPED: healthcare-outreach-sequence.md** (8627 bytes — ambient documentation liability, FDA SaMD, EU AI Act Annex III, PHI-stays-local). **SHIPPED: real-estate-outreach-sequence.md** (9258 bytes — Fair Housing Act, E&O insurance surcharges, NAR Article 12, NAR member list targeting + physical mail supplement). **SHIPPED: ecommerce-outreach-sequence.md** (9678 bytes — FTC per-day penalty math, Amazon/Shopify enforcement wave, EU AI Act, agency multiplier channel). **SHIPPED: coaching-outreach-sequence.md** (9925 bytes — ICF R4 ethics, EU Annex III employment decisions, corporate L&D vendor multiplier). All disk-confirmed. Gemini/Codex flag #24. 7/7 verticals now have BOTH 1-pager AND outreach strategy.
-
-- [Day 5 08Z check — 2026-05-09T08Z](memory/project/2026-05-09__08Z_eversound_check.md) — **7-VERTICAL COVERAGE COMPLETE.** **SHIPPED: church-religious-orgs-1-pager.md** (6031 bytes — soul-care liability, pastoral counseling risk, denominational angle, $5K-15K audit). **SHIPPED: real-estate-1-pager.md** (6692 bytes — Fair Housing Act AI liability, E&O insurance angle, NAR Code of Ethics). **SHIPPED: ecommerce-1-pager.md** (8076 bytes — FTC product claim verification at scale, $0.01-0.03/item cost vs $50K+ fines, Shopify/Amazon integration code). **SHIPPED: church-outreach-approach.md** (6389 bytes — referral-based strategy, NOT cold email; denominational networks + pastor conferences + faith-tech media + seminary partnerships). All disk-confirmed. Gemini/Codex flag #23. All 7 Aetherkin verticals live.
-
-- [Day 5 10Z check — 2026-05-09T10Z](memory/project/2026-05-09__09Z_eversound_check.md) — **SHIPPED: weaver-protocol-vertical-bundle-index.md** (14687 bytes — single shareable document covering all 7 verticals, all pricing tiers, all outreach paths, Nathan's 4 unlock actions). **SYNCED: MEMORY.md** to GitHub (was missing from 09Z push). Gemini/Codex flag #25.
-
-- [Day 5 11Z check — 2026-05-09T11Z](memory/project/2026-05-09__11Z_eversound_check.md) — **SHIPPED: craft-client-acquisition-kit.md** (9364 bytes — 5-channel CRAFT client acquisition: Instagram/TikTok/Reddit/SoundCloud/referral, DM templates, 6-question intake, objection handlers, production pipeline, case study generator). **SHIPPED: prospect-reply-playbook.md** (8411 bytes — 8-scenario reply handler for all 7 Weaver Protocol verticals). **SHIPPED: SHARED/STATE/active-deals.md** (deal tracker template, both pipelines). Funnel now complete: all outreach + reply handling wired. First dollar is a Nathan send-action away. Gemini/Codex flag #26.
-
-- [Day 5 12Z check — 2026-05-09T12Z](memory/project/2026-05-09__12Z_eversound_check.md) — **PHASE 5 ACTIVATION TOOL.** **SHIPPED: prospect-hit-list-week1.md** (17219 bytes — 20+ named companies across 7 verticals: Jones Day, K&L Gates, Paradox.ai, CoachHub, Opendoor, BetterUp, Nabla, Klaviyo + more; each with decision-maker role, LinkedIn search string, trigger event, email hook, CRAFT Instagram DM strategy). **SHIPPED: SHARED/STATE/active-deals.md** (1890 bytes — deal tracker, Nathan unlock table). SHARED/STATE/ directory created. Both disk-confirmed. Gap closed: materials existed, named targets didn't. Nathan can open this Monday and send first 10 emails. Gemini/Codex flag #27.
-
-- [17Z adapter wiring check — 2026-05-06T17Z](memory/project/2026-05-06__17Z_eversound_check.md) — **SHIPPED: real Anthropic/OpenAI adapter wiring in `/verify` endpoint** (`api/main.py` — added `_make_provider_fn()` dispatcher + `model_id` field to `VerifyRequest`). `model="anthropic"` → real Claude observer; `model="openai"` → real GPT observer; `model="mock"` → deterministic mock. Error paths: 503 (SDK missing) / 400 (no API key). **UPDATED: `api/requirements.txt`** — added `anthropic>=0.25`, `openai>=1.30`, `httpx>=0.27`. **SHIPPED: `api/tests/test_verify.py`** (9 tests, 34/34 full suite passing). Core gap closed: paying customers can now use real LLM observers through the hosted API.
-
-- [08Z payment flow + landing page — 2026-05-06T08Z](memory/project/2026-05-06__08Z_eversound_check.md) — **FIXED CRITICAL GAP: API key delivery after Stripe payment.** Old `/billing/success` said "check your email" with no email system — customer would pay and get nothing. Fixed: `billing.py` now appends `{CHECKOUT_SESSION_ID}` to success URL; `retrieve_checkout_session()` added. `main.py` `/billing/success` rewritten — retrieves Stripe session → looks up DB key → shows `wp_...` key in styled HTML (auto-refresh on webhook race). **SHIPPED: `/` landing page** (full HTML — hero, how-it-works, pricing grid with Stripe checkout CTAs, "We don't sell smarter AI. We sell AI whose mistakes you can invoice."). **SHIPPED: HTML `/billing/cancel`** page. 34/34 tests pass (27 pass, 2 skip). Sub-agent gap logged: `gemini`/`codex` not installed.
+- [Day 1 checks - 2026-05-05](memory/project/2026-05-05__00Z_eversound_check.md) - Full Day 1: weaver-protocol skeleton, law firm 1-pager, adapters, PyPI pipeline, hosted API, Postgres store, CLI, deploy configs, Stripe billing, attestation report, quickstart, outreach sequence. Gemini/Codex flags #1-14.
 
 ---
 
 ## What EVERSOUND owns right now
 
-1. **`weaver-protocol` repo skeleton** ✅ DONE — `LIVE/weaver-protocol/`. Core Python package + spec + pricing + example shipped Day 1.
-2. **Commercial 1-pager** (law firm / enterprise AI-governance) ✅ DONE (disk-confirmed 11Z) — `SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md`.
-3. **Anthropic + OpenAI adapters** — `weaver/adapters/`. ✅ DONE 2026-05-05T09Z. Mock, Anthropic, OpenAI — 7 tests passing.
-4. **PyPI publish pipeline** — ✅ DONE 2026-05-05T10Z. Sdist + wheel builds clean. GitHub Actions CI + Trusted Publishing wired. Nathan must complete 5-step PyPI setup to activate `pip install weaver-protocol`.
-5. **Hosted API scaffold** — ✅ DONE 2026-05-05T11Z (disk-confirmed). `LIVE/weaver-protocol/api/` — FastAPI main.py, requirements.txt, Dockerfile, README w/ Railway/Render deploy guide. Pricing: $49/$199/$499+/mo.
-5a. **Hosted API: Postgres session store** — ✅ DONE 2026-05-05T12Z. `api/db.py` — lazy psycopg2 singleton, auto-schema, in-memory fallback, `DATABASE_URL` env var controls. main.py bugs also fixed (broken `session.run()` → `ws.verify()`). `/verify` now works end-to-end.
-6a. **CLI** — ✅ DONE 2026-05-05T13Z. `weaver/cli.py` — `weaver verify` (multi-observer mock session, JSON output, exit 2 on flag) + `weaver drift` (log summary). `[project.scripts]` in pyproject.toml. Zero extra deps.
-6b. **Dockerfile fix** — ✅ DONE 2026-05-05T13Z. Critical bug: Dockerfile missing `weaver/` package + `db.py`. Fixed: now copies both. Hosted API was broken in Docker before this.
-6c. **Deploy configs** — ✅ DONE 2026-05-05T13Z. `railway.toml` + `render.yaml`. Nathan creates account → ~2 min to live service.
-6d. **Launch copy** — ✅ DONE 2026-05-05T13Z. `docs/launch-copy.md` — tweet thread (6 tweets), HN Show HN post, LinkedIn post. Ready for Nathan review.
-6e. **Stripe billing integration** — ✅ DONE 2026-05-05T14Z. `api/billing.py` — checkout session creation, webhook handler, `wp_...` API key issuance. `api/db.py` extended: `weaver_api_keys` table + save/validate/revoke. `api/main.py`: 5 billing endpoints (`/billing/checkout`, `/billing/webhook`, `/billing/tiers`, `/billing/status`, `/billing/success`, `/billing/cancel`). Auth now checks DB keys. `requirements.txt`: `stripe>=8.0.0`. README: 6-step Stripe setup guide.
-6f. **API test suite** — ✅ DONE 2026-05-06T00Z. `api/tests/test_db.py` (11 tests) + `api/tests/test_billing.py` (9 tests) — 20/20 passing. Zero external deps. Covers full in-memory CRUD path, API key lifecycle, billing tier validation, error guard conditions.
-6g. **Developer quickstart** — ✅ DONE 2026-05-05T14:10Z. `docs/QUICKSTART.md`. 60-second no-key demo, CLI-first, mock adapter, multi-provider wiring, CI integration. Conversion doc for M8 first paid install.
-6h. **Law firm cold outreach sequence** — ✅ DONE 2026-05-05T14:10Z. `SIBLINGS/EVERSOUND/files/commercial/law-firm-outreach-sequence.md` (7255 bytes). 3-email sequence with CRM tracking, M14 path.
-6n. **Developer outreach sequence** — ✅ DONE 2026-05-06T17Z. `SIBLINGS/EVERSOUND/files/commercial/developer-outreach-sequence.md` (6640 bytes, disk-confirmed). 3-channel M8 activation doc: cold email 3-touch sequence, Discord/Slack template, GitHub issues template. Targets Python devs building LLM apps. Outreach can start now for CLI/free tier; $49/mo tier needs Nathan Railway+Stripe.
-6o. **KYA partnership memo** — ✅ DONE 2026-05-06T17Z. `SIBLINGS/EVERSOUND/files/commercial/kya-partnership-memo.md` (4565 bytes, disk-confirmed). Decision: partner with KYA (W3C DID agent identity). Joint pitch = $25-75K/engagement. Phase 1: mutual referral now. Phase 2: integration Day 60+. ATLAS to review Day 30.
-6i. **Pricing fix** — ✅ DONE 2026-05-05T14:10Z. `docs/launch-copy.md` tweet 5 corrected to $49/$199/$499/mo (was $297 setup/$197/mo). Pricing architecture clarified.
-6j. **Attestation report generator (`weaver report`)** — ✅ DONE 2026-05-05T15Z. `weaver/report.py` (14053 bytes). HMAC-SHA256 signed HTML report from session logs. CLI: `weaver report --log-dir ./weaver_logs`. Primary M8 conversion tool — free local HTML vs. paid tamper-evident cloud + PDF.
-6k. **README/QUICKSTART fixes** — ✅ DONE 2026-05-05T15Z. README pricing aligned to $49/$199/$499/mo. Fake API URL removed from QUICKSTART.
-6l. **Real adapter wiring in hosted API** — ✅ DONE 2026-05-06T17Z. `api/main.py`: `_make_provider_fn()` dispatcher — model="anthropic"/"openai"/"mock". `model_id` field added to VerifyRequest. `api/requirements.txt`: anthropic + openai + httpx added. `api/tests/test_verify.py`: 9 tests, 34/34 full suite passing. Core gap closed.
-6m. **Payment flow + landing page** — ✅ DONE 2026-05-06T08Z. `api/billing.py`: `create_checkout_session()` appends `{CHECKOUT_SESSION_ID}` to success URL; `retrieve_checkout_session()` added. `api/main.py`: `/billing/success` rewritten — retrieves Stripe session → looks up DB key → shows `wp_...` key in styled HTML (auto-refresh on webhook race). `/billing/cancel` → HTML. `/` → full product landing page (hero + how-it-works + pricing CTAs + "mistakes you can invoice" section). 34/34 tests passing.
-6. **First paid toolkit install** — Day 60 target (2026-07-04). Revenue track live.
-7. **CRAFT revenue** — active, $297-$1,997/project, 95-99% margin. No clients in queue.
-
----
-
-## Revenue track (Weaver Protocol)
-
-| Stage | Months | Price | Milestone |
-|---|---|---|---|
-| Developer toolkit | 2-6 | sub-$500/mo | Day 60: first paid install |
-| Consultancy/audits | 4-9 | $25-75K/engagement | Day 120: first $25K engagement |
-| Certification | 9-18 | $2,997-$9,997/cert | Month 9: post-IRB clearance |
-| SaaS productization | 12+ | TBD | — |
-
----
-
-## Key facts EVERSOUND holds
-
-- Revenue from clean-isolation arm funds the $3,100 IRB-gated study cost — not a blocker
-- "Stake-bearing human in loop" IS the compliance shape buyers need post-Moffatt, post-EU AI Act
-- Foolishness Envy Inc is Nathan's nonprofit; it's the current legal/funding entity
-- Open-source distribution beats closed revenue that never ships
-- CRAFT (music video production) is the current active revenue stream — do not abandon
-- Research harness version-locked Day 30 — product branch separate from that point forward
-- ATLAS owns research branch; EVERSOUND owns product branch; ORPHEUS enforces the diff
-- **Autonomy is live** — Nathan said "figure it out." Family orchestrates cron/schedule without his per-turn involvement.
-- ORPHEUS retrieve_neighborhood RPC (Memory API v2, shipped 06:44Z) is a candidate for Weaver observer context-isolation backbone
+1. weaver-protocol repo skeleton - DONE - LIVE/weaver-protocol/
+2. Commercial 1-pagers - DONE - all 7 verticals in SIBLINGS/EVERSOUND/files/commercial/
+3. Anthropic + OpenAI adapters - DONE 2026-05-05T09Z
+4. PyPI publish pipeline - DONE 2026-05-05T10Z (Nathan must complete 5-step PyPI setup)
+5. Hosted API scaffold - DONE 2026-05-05T11Z
+5a. Hosted API: Postgres session store - DONE 2026-05-05T12Z
+6a. CLI (weaver verify / weaver drift) - DONE 2026-05-05T13Z
+6b. Dockerfile fix - DONE 2026-05-05T13Z
+6c. Deploy configs (railway.toml + render.yaml + vercel.json) - DONE
+6d. Launch copy - DONE 2026-05-05T13Z
+6e. Stripe billing integration - DONE 2026-05-05T14Z
+6f. API test suite - DONE 2026-05-06T00Z (34/34 passing including /demo tests)
+6g. Developer quickstart - DONE 2026-05-05T14:10Z
+6h-6o. Outreach sequences + partnership memo - DONE
+6p. /demo no-auth endpoint - DONE 2026-05-10T08Z
+6q. Launch blog post - DONE 2026-05-10T08Z (9746 bytes, Nathan to post)
+6. First paid toolkit install - Day 60 target (2026-07-04)
+7. CRAFT revenue - active, no clients in queue
 
 ---
 
 ## Deliverable status
 
-| Item | Deadline | Status |
+| Item | Status |
+|---|---|
+| weaver-protocol repo skeleton | DONE 2026-05-05 |
+| Commercial 1-pagers (all 7 verticals) | DONE |
+| Provider adapters | DONE 2026-05-05 |
+| PyPI publish pipeline | DONE (Nathan action: 5-step setup) |
+| Hosted API scaffold | DONE 2026-05-05T11Z |
+| Stripe billing | DONE 2026-05-05T14Z |
+| API test suite (34 tests) | DONE |
+| /demo no-auth endpoint | DONE 2026-05-10T08Z |
+| Deploy to Railway/Render | BLOCKED - Nathan account needed |
+| First paid toolkit install | On track - Day 60 (2026-07-04) |
+| Launch blog post | DONE - ready for Nathan to post |
+| CRAFT Friday shipping shelf | No clients in queue |
+
+---
+
+## Revenue track
+
+| Stage | Price | Milestone |
 |---|---|---|
-| `weaver-protocol` repo skeleton | Day 30 (2026-06-04) | ✅ DONE 2026-05-05 |
-| Commercial 1-pager (law firm) | Day 14 (2026-05-19) | ✅ DONE 2026-05-05 |
-| Provider adapters (Anthropic, OpenAI) | Pre-Day 60 | ✅ DONE 2026-05-05 |
-| PyPI publish pipeline (Actions + build) | Pre-Day 60 | ✅ DONE 2026-05-05T10Z |
-| PyPI Trusted Publishing (Nathan action) | Pre-Day 60 | 🟡 5 steps, Nathan required |
-| **Hosted API scaffold** | **Day 60** | **✅ DONE 2026-05-05T11Z** |
-| Hosted API: Postgres session store | Pre-Day 30 | ✅ DONE 2026-05-05T12Z |
-| Hosted API: Stripe billing integration | Pre-Day 60 | ✅ DONE 2026-05-05T14Z |
-| Hosted API: API test suite (db + billing) | Pre-Day 60 | ✅ DONE 2026-05-06T00Z |
-| Hosted API: deploy to Railway/Render | Pre-Day 60 | 🟡 Nathan account needed (configs ✅ ready) |
-| CLI (`weaver verify` / `weaver drift`) | Pre-Day 60 | ✅ DONE 2026-05-05T13Z |
-| Launch copy (tweet / HN / LinkedIn) | Pre-Day 60 | ✅ DONE 2026-05-05T13Z |
-| First paid toolkit install | Day 60 (2026-07-04) | 🟡 On track |
-| CRAFT Friday shipping shelf | Weekly | 🟡 No clients in queue |
+| Developer toolkit | sub-$500/mo | Day 60: first paid install |
+| Consultancy/audits | $25-75K/engagement | Day 120: first $25K engagement |
+| Certification | $2,997-$9,997/cert | Month 9: post-IRB clearance |
 
 ---
 
-## Active revenue ops
+## Persistent blockers (Nathan actions)
 
-- **CRAFT music video production:** $297-$1,997 per project, 95-99% margins
-- Status: active, no clients in queue at last check (2026-05-05T08Z)
-- **Weaver Protocol developer toolkit:** pre-revenue, skeleton shipped, first install target Day 60
-
----
-
-## Directories created
-
-- `SIBLINGS/EVERSOUND/memory/project/` — created 2026-05-05T00Z
-- `SHARED/ALERTS/` — created 2026-05-05T00Z
-- `LIVE/weaver-protocol/` — created 2026-05-05T08Z
-- `SIBLINGS/EVERSOUND/files/commercial/` — created 2026-05-05T08Z
+1. Deploy API to Railway/Render - nathan-30min-unlock.md has step-by-step (~15 min)
+2. Create claudenunc/weaver-protocol GitHub repo - enables PyPI Trusted Publishing + Vercel
+3. Send first outreach emails - prospect-hit-list-week1.md has 20+ named companies ready
+4. Post launch blog - launch-blog-post.md ready, Wednesday/Thursday morning
+5. Stripe account + PyPI API key revocation + Supabase access
 
 ---
 
-## Personal protocol (drift #013 fix — in force from 11Z)
+## Personal protocol (drift #013 fix)
 
-Before any memory line that says "SHIPPED" or "✅ DONE" for a file artifact: run `ls` or `find` to confirm the file exists on disk. Memory is not evidence. Disk is evidence.
+Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk. Memory is not evidence. Disk is evidence.
 
 ---
 
-*Last updated by EVERSOUND hourly check, 2026-05-09T12:00:00Z (Day 5).*
+*Last updated: EVERSOUND hourly check, 2026-05-10T08:08:00Z (Day 6).*

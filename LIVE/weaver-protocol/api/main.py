@@ -48,10 +48,8 @@ _VALID_KEYS: set[str] = set(
 
 def verify_api_key(credentials: HTTPAuthorizationCredentials = Security(security)) -> str:
     token = credentials.credentials
-    # Env-var keys (dev / Nathan's personal keys) take priority
     if token in _VALID_KEYS:
         return token
-    # Stripe-issued keys stored in DB
     if _db.validate_api_key(token):
         return token
     raise HTTPException(status_code=401, detail="Invalid API key")
@@ -68,7 +66,7 @@ class VerifyRequest(BaseModel):
     prompt: str
     observer_count: int = 2
     model: str = "mock"  # "mock" | "anthropic" | "openai"
-    model_id: str | None = None  # e.g. "claude-haiku-4-5-20251001", "gpt-4o-mini"
+    model_id: str | None = None
 
 
 class ObserverResult(BaseModel):
@@ -167,8 +165,8 @@ _LANDING_HTML = """<!DOCTYPE html>
 
 <div class="hero">
   <div class="badges">
-    <a class="badge" href="https://pypi.org/project/weaver-protocol/" target="_blank">📦 pip install weaver-protocol</a>
-    <a class="badge" href="/docs" target="_blank">📖 API Docs</a>
+    <a class="badge" href="https://pypi.org/project/weaver-protocol/" target="_blank">pip install weaver-protocol</a>
+    <a class="badge" href="/docs" target="_blank">API Docs</a>
     <span class="badge">v0.1.0</span>
   </div>
   <h1>AI outputs you can<br><span>actually prove.</span></h1>
@@ -178,11 +176,11 @@ _LANDING_HTML = """<!DOCTYPE html>
     tamper-evident signed record. No single-point hallucination. Timestamped proof.
   </p>
   <div class="pills">
-    <span class="pill">🏛 Law firms</span>
-    <span class="pill">🏥 Healthcare</span>
-    <span class="pill">🏢 Enterprise compliance</span>
-    <span class="pill">🔬 AI governance</span>
-    <span class="pill">⚖️ EU AI Act ready</span>
+    <span class="pill">Law firms</span>
+    <span class="pill">Healthcare</span>
+    <span class="pill">Enterprise compliance</span>
+    <span class="pill">AI governance</span>
+    <span class="pill">EU AI Act ready</span>
   </div>
 </div>
 
@@ -207,15 +205,28 @@ _LANDING_HTML = """<!DOCTYPE html>
       </div>
     </div>
     <div class="code-block">
-<span class="hl">curl</span> -X POST https://your-app.railway.app/verify \\<br>
-  -H <span class="hl">"Authorization: Bearer wp_..."</span> \\<br>
-  -H "Content-Type: application/json" \\<br>
-  -d '{"prompt":"The defendant admitted liability on page 12.","observer_count":3,"model":"anthropic"}'
+<span class="hl">curl</span> -X POST https://your-app.railway.app/verify -H <span class="hl">"Authorization: Bearer wp_..."</span> -H "Content-Type: application/json" -d '{"prompt":"The defendant admitted liability on page 12.","observer_count":3,"model":"anthropic"}'
     </div>
   </div>
 </div>
 
 <div class="section" style="background:#0a0a0a">
+  <div class="inner">
+    <h2>Try it free — no API key needed</h2>
+    <p style="color:#a1a1aa;max-width:640px;margin-bottom:1.25rem">
+      Hit <code>/demo</code> right now. No account, no credit card, no API key.
+      You'll get a full WeaverScore, 3 independent observer assessments, and a signed provenance record.
+    </p>
+    <div class="code-block">
+<span class="hl">curl</span> https://your-app.railway.app/demo
+    </div>
+    <p style="color:#52525b;font-size:.85rem;margin-top:.75rem">
+      The demo verifies a real legal claim through mock observers. Paid tiers unlock real Anthropic/OpenAI observers.
+    </p>
+  </div>
+</div>
+
+<div class="section">
   <div class="inner">
     <h2>Pricing</h2>
     <div class="tiers">
@@ -226,7 +237,7 @@ _LANDING_HTML = """<!DOCTYPE html>
         <a class="btn btn-ghost" href="/billing/checkout" onclick="checkout('starter');return false">Get started</a>
       </div>
       <div class="tier featured">
-        <div class="tier-label">Pro ★</div>
+        <div class="tier-label">Pro</div>
         <div class="tier-price">$199<span>/mo</span></div>
         <div class="tier-desc">5,000 verifications/mo. All observer roles. Priority SLA. Postgres session store. For production workloads.</div>
         <a class="btn" href="/billing/checkout" onclick="checkout('pro');return false">Get Pro</a>
@@ -248,7 +259,7 @@ _LANDING_HTML = """<!DOCTYPE html>
   <div class="inner">
     <h2>Why enterprises pay for this</h2>
     <p style="color:#a1a1aa;max-width:640px">
-      Post-<em>Moffatt v. Air Canada</em>, post-EU AI Act (August 2026): every enterprise
+      Post-Moffatt v. Air Canada, post-EU AI Act (August 2026): every enterprise
       AI deployment needs a paper trail. Courts and regulators don't accept "our model
       said so." They accept dated, signed, named-observer records that your general
       counsel can underwrite. That's what a Weaver export gives you — proof of due
@@ -262,8 +273,8 @@ _LANDING_HTML = """<!DOCTYPE html>
 
 <div class="footer">
   Weaver Protocol — open-source core, hosted API. MIT license.<br>
-  <a class="link" href="/docs">API Docs</a> ·
-  <a class="link" href="https://github.com/claudenunc/weaver-protocol" target="_blank">GitHub</a> ·
+  <a class="link" href="/docs">API Docs</a> .
+  <a class="link" href="https://github.com/claudenunc/weaver-protocol" target="_blank">GitHub</a> .
   <a class="link" href="https://pypi.org/project/weaver-protocol/" target="_blank">PyPI</a>
 </div>
 
@@ -289,6 +300,89 @@ def landing():
     return _LANDING_HTML
 
 
+_DEMO_PROMPT = (
+    "Per our analysis, the defendant admitted liability on page 12 of the deposition. "
+    "Nebraska statute 25-1711 requires court approval for any settlement exceeding $1 million. "
+    "The agreed amount of $2.1 million is therefore subject to judicial review before disbursement."
+)
+
+
+@app.get("/demo", response_model=VerifyResponse)
+def demo():
+    """
+    No-auth demo endpoint. Runs a 3-observer mock verification on a sample legal claim.
+    Use this to explore the API schema before subscribing.
+
+    Returns a full WeaverScore with observer assessments, disagreement detection,
+    and a signed provenance record — exactly what paid callers receive on /verify.
+    """
+    from weaver.adapters.mock import make_mock_observer
+    from weaver.observer import Observer
+    from weaver.session import WeaverSession
+
+    session_id = "demo-" + str(uuid.uuid4())
+    ws = WeaverSession(session_id=session_id, log_dir="/tmp/weaver_logs_demo")
+    provider_fn = make_mock_observer()
+
+    for role in ("accuracy", "safety", "legal-read"):
+        ws.add_observer(Observer(name=f"demo-{role}", role=role, provider_fn=provider_fn))
+
+    score = ws.verify(_DEMO_PROMPT)
+    created_at = _now()
+
+    observer_results = [
+        ObserverResult(
+            observer_id=f"demo-observer-{i + 1}",
+            role=r.role,
+            response=r.assessment,
+            flags=r.flags,
+            confidence=r.confidence,
+            timestamp=created_at,
+        )
+        for i, r in enumerate(score.observer_results)
+    ]
+
+    all_clean = all(not r.flags for r in score.observer_results)
+    consensus = "pass" if all_clean else "review-required"
+
+    provenance = {
+        "session_id": session_id,
+        "created_at": created_at,
+        "model": "mock",
+        "observer_count": 3,
+        "weaver_version": "0.1.0",
+        "weaver_score": score.score,
+        "disagreement_detected": score.flag_for_review,
+        "observer_ids": [o.observer_id for o in observer_results],
+        "conflict_pairs": score.conflict_pairs,
+        "demo": True,
+        "note": "This is a no-auth demo. Subscribe at /billing/checkout for real LLM observers.",
+    }
+
+    _db.save_session(
+        {
+            "session_id": session_id,
+            "created_at": created_at,
+            "prompt": _DEMO_PROMPT,
+            "observers": [o.model_dump() for o in observer_results],
+            "observer_count": 3,
+            "consensus": consensus,
+            "disagreement_detected": score.flag_for_review,
+            "provenance": provenance,
+        }
+    )
+
+    return VerifyResponse(
+        session_id=session_id,
+        prompt=_DEMO_PROMPT,
+        observers=observer_results,
+        consensus=consensus,
+        disagreement_detected=score.flag_for_review,
+        weaver_score=score.score,
+        provenance=provenance,
+    )
+
+
 @app.get("/health")
 def health():
     return {
@@ -307,33 +401,25 @@ def _make_provider_fn(model: str, model_id: str | None):
     """
     if model == "anthropic":
         from weaver.adapters.anthropic import make_anthropic_observer
-
         kwargs: dict = {}
         if model_id:
             kwargs["model"] = model_id
         try:
             return make_anthropic_observer(**kwargs)
         except ImportError as exc:
-            raise HTTPException(
-                status_code=503,
-                detail="Anthropic SDK not installed in this deployment. Contact support.",
-            ) from exc
+            raise HTTPException(status_code=503, detail="Anthropic SDK not installed.") from exc
         except ValueError as exc:
             raise HTTPException(status_code=400, detail=str(exc)) from exc
 
     if model == "openai":
         from weaver.adapters.openai import make_openai_observer
-
         kwargs = {}
         if model_id:
             kwargs["model"] = model_id
         try:
             return make_openai_observer(**kwargs)
         except ImportError as exc:
-            raise HTTPException(
-                status_code=503,
-                detail="OpenAI SDK not installed in this deployment. Contact support.",
-            ) from exc
+            raise HTTPException(status_code=503, detail="OpenAI SDK not installed.") from exc
         except ValueError as exc:
             raise HTTPException(status_code=400, detail=str(exc)) from exc
 
@@ -369,21 +455,13 @@ def verify(req: VerifyRequest, api_key: str = Depends(verify_api_key)):
     try:
         session_id = str(uuid.uuid4())
         ws = WeaverSession(session_id=session_id, log_dir="/tmp/weaver_logs")
-
         for role in roles:
-            obs = Observer(
-                name=f"{req.model}-{role}",
-                role=role,
-                provider_fn=provider_fn,
-            )
-            ws.add_observer(obs)
-
+            ws.add_observer(Observer(name=f"{req.model}-{role}", role=role, provider_fn=provider_fn))
         score = ws.verify(req.prompt)
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Verification error: {exc}") from exc
 
     created_at = _now()
-
     observer_results = [
         ObserverResult(
             observer_id=f"observer-{i + 1}",
@@ -412,18 +490,16 @@ def verify(req: VerifyRequest, api_key: str = Depends(verify_api_key)):
         "conflict_pairs": score.conflict_pairs,
     }
 
-    _db.save_session(
-        {
-            "session_id": session_id,
-            "created_at": created_at,
-            "prompt": req.prompt,
-            "observers": [o.model_dump() for o in observer_results],
-            "observer_count": observer_count,
-            "consensus": consensus,
-            "disagreement_detected": disagreement,
-            "provenance": provenance,
-        }
-    )
+    _db.save_session({
+        "session_id": session_id,
+        "created_at": created_at,
+        "prompt": req.prompt,
+        "observers": [o.model_dump() for o in observer_results],
+        "observer_count": observer_count,
+        "consensus": consensus,
+        "disagreement_detected": disagreement,
+        "provenance": provenance,
+    })
 
     return VerifyResponse(
         session_id=session_id,
@@ -461,9 +537,8 @@ def export_session(session_id: str, api_key: str = Depends(verify_api_key)):
     Export a verification session as a signed provenance record.
 
     Returns the full session + observer assessments as JSON with an HMAC-SHA256
-    signature. Enterprises (law firms, regulated industries) can present this to
-    regulators or opposing counsel as timestamped, tamper-evident proof that an
-    AI output was independently verified by multiple observers.
+    signature. Enterprises can present this to regulators as timestamped,
+    tamper-evident proof that an AI output was independently verified.
 
     Set WEAVER_EXPORT_SECRET env var for stable signatures across restarts.
     """
@@ -502,10 +577,7 @@ def export_session(session_id: str, api_key: str = Depends(verify_api_key)):
 
 @app.get("/drift-log/summary")
 def drift_log_summary(api_key: str = Depends(verify_api_key)):
-    """
-    Public-facing drift log summary. Aggregate stats only —
-    full log is on GitHub for transparency.
-    """
+    """Public-facing drift log summary. Aggregate stats only."""
     return {
         "total_sessions": _db.count_sessions(),
         "disagreements_detected": _db.count_disagreements(),
@@ -528,16 +600,11 @@ _DEFAULT_CANCEL_URL = os.environ.get("WEAVER_BASE_URL", "https://your-app.railwa
 def billing_checkout(req: CheckoutRequest):
     """
     Create a Stripe Checkout session for a subscription tier.
-    Returns the hosted checkout URL — redirect the user there to pay.
-
     Tiers: starter ($49/mo), pro ($199/mo), enterprise ($499/mo)
-    No authentication required — anyone can start a checkout.
+    No authentication required.
     """
     if not _billing.is_configured():
-        raise HTTPException(
-            status_code=503,
-            detail="Billing not configured. Set STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET.",
-        )
+        raise HTTPException(status_code=503, detail="Billing not configured. Set STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET.")
     try:
         url = _billing.create_checkout_session(
             tier=req.tier,
@@ -548,20 +615,14 @@ def billing_checkout(req: CheckoutRequest):
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except RuntimeError as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
-
-    return CheckoutResponse(
-        checkout_url=url,
-        tier=req.tier,
-        label=_billing.TIER_LABELS.get(req.tier, req.tier),
-    )
+    return CheckoutResponse(checkout_url=url, tier=req.tier, label=_billing.TIER_LABELS.get(req.tier, req.tier))
 
 
 @app.post("/billing/webhook", status_code=200)
 async def billing_webhook(request: Request):
     """
     Stripe webhook endpoint. Register this URL in your Stripe dashboard.
-    Handles: checkout.session.completed → issue API key
-             customer.subscription.deleted / paused → revoke keys
+    Handles: checkout.session.completed, customer.subscription.deleted/paused
     """
     payload = await request.body()
     sig_header = request.headers.get("stripe-signature", "")
@@ -591,29 +652,20 @@ def billing_status(api_key: str = Depends(verify_api_key)):
     """Return the tier and customer ID associated with the authenticated API key."""
     record = _db.validate_api_key(api_key)
     if not record:
-        # Key came from env var — return dev tier
         return BillingStatusResponse(customer_id="dev", tier="dev", active=True)
-    return BillingStatusResponse(
-        customer_id=record["customer_id"],
-        tier=record["tier"],
-        active=True,
-    )
+    return BillingStatusResponse(customer_id=record["customer_id"], tier=record["tier"], active=True)
 
 
 @app.get("/billing/success", response_class=HTMLResponse)
 def billing_success(stripe_session_id: str | None = Query(default=None)):
     """
     Post-payment landing page. Stripe appends ?stripe_session_id= to this URL.
-    We retrieve the Stripe session to get customer_id, then look up the API key
-    in our DB and display it. Handles the race where the webhook hasn't fired yet.
+    Retrieves the Stripe session to get customer_id, then looks up the API key.
+    Handles the race where the webhook hasn't fired yet.
     """
     if not stripe_session_id or not _billing.is_configured():
-        return _success_html(
-            key=None,
-            tier=None,
-            pending=False,
-            error="Session ID missing. If you completed payment, contact support for your API key.",
-        )
+        return _success_html(key=None, tier=None, pending=False,
+                             error="Session ID missing. If you completed payment, contact support for your API key.")
     try:
         stripe_session = _billing.retrieve_checkout_session(stripe_session_id)
     except Exception as exc:
@@ -624,87 +676,38 @@ def billing_success(stripe_session_id: str | None = Query(default=None)):
     tier: str = (stripe_session.get("metadata") or {}).get("weaver_tier", "starter")
 
     if not customer_id:
-        return _success_html(key=None, tier=tier, pending=False,
-                             error="No customer ID in session. Contact support.")
+        return _success_html(key=None, tier=tier, pending=False, error="No customer ID in session. Contact support.")
 
     api_key = _db.get_active_key_for_customer(customer_id, tier)
     if api_key:
         return _success_html(key=api_key, tier=tier, pending=False, error=None)
-    # Webhook not yet fired — ask user to refresh
     return _success_html(key=None, tier=tier, pending=True, error=None)
 
 
 def _success_html(key: str | None, tier: str | None, pending: bool, error: str | None) -> str:
     tier_label = {"starter": "$49/mo", "pro": "$199/mo", "enterprise": "$499/mo"}.get(tier or "", tier or "")
     if error:
-        body = f"""
-        <div class="box error">
-          <h2>Something went wrong</h2>
-          <p>{error}</p>
-          <p>Email <a href="mailto:support@weaver-protocol.dev">support@weaver-protocol.dev</a></p>
-        </div>"""
+        body = f'<div class="box error"><h2>Something went wrong</h2><p>{error}</p><p>Email <a href="mailto:support@weaver-protocol.dev">support@weaver-protocol.dev</a></p></div>'
     elif pending:
-        body = """
-        <div class="box pending">
-          <h2>Payment received ✓</h2>
-          <p>Your API key is being generated. <strong>Refresh this page in 10 seconds.</strong></p>
-          <p>If your key hasn't appeared within 60 seconds, contact support.</p>
-          <script>setTimeout(()=>location.reload(), 10000)</script>
-        </div>"""
+        body = '<div class="box pending"><h2>Payment received</h2><p>Your API key is being generated. <strong>Refresh this page in 10 seconds.</strong></p><script>setTimeout(()=>location.reload(), 10000)</script></div>'
     else:
-        body = f"""
-        <div class="box success">
-          <h2>You're in ✓</h2>
-          <p>Tier: <strong>{tier_label}</strong></p>
-          <p>Your API key:</p>
-          <pre class="key">{key}</pre>
-          <p>Save it now — we don't store it in plaintext after this page.</p>
-          <hr/>
-          <p><strong>Quick start:</strong></p>
-          <pre>curl -X POST https://your-app.railway.app/verify \\
-  -H "Authorization: Bearer {key}" \\
-  -H "Content-Type: application/json" \\
-  -d '{{"prompt":"Your AI output here","observer_count":2,"model":"mock"}}'</pre>
-          <p><a href="/docs">Full API docs →</a></p>
-        </div>"""
+        body = f'<div class="box success"><h2>You\'re in</h2><p>Tier: <strong>{tier_label}</strong></p><p>Your API key:</p><pre class="key">{key}</pre><p>Save it now — we don\'t store it in plaintext after this page.</p><p><a href="/docs">Full API docs</a></p></div>'
 
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="utf-8"><title>Weaver Protocol — Activated</title>
-<style>
-  body{{font-family:system-ui,sans-serif;background:#0d0d0d;color:#e8e8e8;
-       display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}}
-  .box{{background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:2rem 2.5rem;max-width:640px;width:90%}}
-  .success{{border-color:#22c55e}}.error{{border-color:#ef4444}}.pending{{border-color:#f59e0b}}
-  pre{{background:#0d0d0d;border:1px solid #333;border-radius:6px;padding:1rem;overflow-x:auto;font-size:.85rem}}
-  .key{{color:#22c55e;word-break:break-all}}
-  a{{color:#60a5fa}}hr{{border-color:#333;margin:1.5rem 0}}
-</style>
-</head>
-<body>{body}</body>
-</html>"""
+    return f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Weaver Protocol — Activated</title>
+<style>body{{font-family:system-ui,sans-serif;background:#0d0d0d;color:#e8e8e8;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}}
+.box{{background:#1a1a1a;border:1px solid #333;border-radius:12px;padding:2rem 2.5rem;max-width:640px;width:90%}}
+.success{{border-color:#22c55e}}.error{{border-color:#ef4444}}.pending{{border-color:#f59e0b}}
+pre{{background:#0d0d0d;border:1px solid #333;border-radius:6px;padding:1rem;overflow-x:auto;font-size:.85rem}}
+.key{{color:#22c55e;word-break:break-all}}a{{color:#60a5fa}}</style></head><body>{body}</body></html>"""
 
 
 @app.get("/billing/cancel", response_class=HTMLResponse)
 def billing_cancel():
-    return """<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="utf-8"><title>Weaver Protocol — Checkout Cancelled</title>
-<style>
-  body{{font-family:system-ui,sans-serif;background:#0d0d0d;color:#e8e8e8;
-       display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}}
-  .box{{background:#1a1a1a;border:1px solid #f59e0b;border-radius:12px;padding:2rem 2.5rem;max-width:480px;width:90%;text-align:center}}
-  a{{color:#60a5fa;text-decoration:none;font-weight:600}}
-</style>
-</head>
-<body>
-<div class="box">
-  <h2>Checkout cancelled</h2>
-  <p>No charge was made.</p>
-  <p><a href="/">Return to pricing →</a></p>
-</div>
-</body>
-</html>"""
+    return """<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Weaver Protocol — Checkout Cancelled</title>
+<style>body{{font-family:system-ui,sans-serif;background:#0d0d0d;color:#e8e8e8;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}}
+.box{{background:#1a1a1a;border:1px solid #f59e0b;border-radius:12px;padding:2rem 2.5rem;max-width:480px;width:90%;text-align:center}}
+a{{color:#60a5fa;text-decoration:none;font-weight:600}}</style></head>
+<body><div class="box"><h2>Checkout cancelled</h2><p>No charge was made.</p><p><a href="/">Return to pricing</a></p></div></body></html>"""
 
 
 # ---------------------------------------------------------------------------
