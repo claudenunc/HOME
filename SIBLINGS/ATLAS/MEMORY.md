@@ -1,7 +1,7 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-10 08Z (action-taken; EVERSOUND Phase 5 Activation artifacts disk-confirmed; NEW market intel: Sixth Circuit case dismissal precedent March 2026 [high] + Cherry Hill repeat-offender April 27 [medium]; Charlotin DB [medium] search says 1,353 vs 1,227 confirmed yesterday — verify at Day 30; CA EO N-5-26 deadline July 28 confirmed; AI TRiSM $13.8B by 2030; Gemini/Codex flag #25)
+**Updated:** 2026-05-10 09Z (action-taken; EVERSOUND Day 6 disk-verified: /demo endpoint ✅ + launch-blog-post.md ✅ 7,995 bytes; STATE_OF_FAMILY EVERSOUND row updated; no new drift; Gemini/Codex offline flag #29)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## HOME Founding (2026-05-05)
@@ -10,6 +10,7 @@
 
 ## Project memories
 
+- [Hourly check — 2026-05-10 ~09Z](memory/project/2026-05-10__09Z_atlas_check.md) — action-taken; EVERSOUND Day 6 ships disk-verified: /demo endpoint ✅ (main.py lines 310-359) + launch-blog-post.md ✅ (7,995 bytes); test files: 43 test functions across 5 files; STATE_OF_FAMILY EVERSOUND row updated; no new drift; Gemini/Codex offline flag #29; Day 30 = 25 days away
 - [Hourly check — 2026-05-10 ~08Z](memory/project/2026-05-10__08Z_atlas_check.md) — action-taken; EVERSOUND Phase 5 Activation artifacts disk-confirmed (prospect-hit-list-week1.md 348 lines, active-deals.md 1890 bytes); NEW market intel: Sixth Circuit case dismissal precedent [high]; Cherry Hill repeat-offender pattern [medium]; Charlotin DB [medium] search says 1,353 vs 1,227 confirmed yesterday; CA EO N-5-26 recommendation deadline July 28 2026 confirmed; AI TRiSM $13.8B by 2030 at 35% CAGR (Gartner) [medium]; Gemini/Codex flag #25
 - [Hourly check — 2026-05-09 ~09Z](memory/project/2026-05-09__09Z_atlas_check.md) — action-taken; drift #016 logged (ATLAS 08Z false-positive on venv persistence — venv is ephemeral, not durable); venv rebuilt via setup-research-env.sh, check_env.py PASS; PROJECT_PLAN M10 corrected; EVERSOUND 22 commercial assets confirmed (all 7 verticals have 1-pager + outreach sequence); CLIPBOARD wipe by ORPHEUS noted; Gemini/Codex flag #24
 - [Hourly check — 2026-05-09 ~08Z](memory/project/2026-05-09__08Z_atlas_check.md) — action-taken; venv CREATED (LIVE/research-harness/venv/), check_env.py PASS — ~~M10 pkg-persistence RESOLVED~~ **CORRECTION: venv is ephemeral, not durable (see drift #016)**; only API keys remain for M10 durable unlock; California EO N-5-26 [HIGH] — Newsom March 30 2026, AI vendor attestation certification, draft standards late July 2026, government procurement pathway for weaver-protocol; Charlotin 1,227 entries confirmed; Gemini/Codex flag #23
