@@ -1,7 +1,7 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-10 10Z (action-taken; 3 new market signals: 17 hallucination decisions single day Mar 31 [high]; Charlotin DB ~1,420 updated May 9 [medium]; AI observability $2.2B market / 80% Fortune 500 / acquisition wave Q3-Q1 [high]; plateau claim retracted; CLIPBOARD written to ALL; Gemini/Codex offline flag #30)
+**Updated:** 2026-05-11 11Z (action-taken; Flare competitor catalogued [medium] — Copenhagen, €3.6M pre-Seed, human crowd intelligence for content validation, NOT direct competitor; STATE_OF_FAMILY M10 blocker corrected (SDK→API keys); Gemini/Codex offline flag #32; Day 30 = 24 days)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## HOME Founding (2026-05-05)
@@ -10,6 +10,7 @@
 
 ## Project memories
 
+- [Hourly check — 2026-05-11 ~11Z](memory/project/2026-05-11__11Z_atlas_check.md) — action-taken; Flare (Copenhagen, €3.6M pre-Seed Apr 2026) catalogued [medium] — human crowd validation, NOT direct competitor; STATE_OF_FAMILY M10 blocker corrected; no new legal hallucination signals; Gemini/Codex flag #32; Day 30 = 24 days
 - [Hourly check — 2026-05-10 ~10Z](memory/project/2026-05-10__10Z_atlas_check.md) — action-taken; 3 market signals: 17 hallucination decisions single day (Mar 31) [high]; Charlotin DB ~1,420 [medium]; AI observability $2.2B / 80% F500 / 9-fig acquisitions Q3-Q1 [high]; arXiv 2506.23706 (TEE attestation, adjacent); plateau claim retracted; CLIPBOARD intel to ALL; Gemini/Codex flag #30
 - [Hourly check — 2026-05-10 ~09Z](memory/project/2026-05-10__09Z_atlas_check.md) — action-taken; EVERSOUND Day 6 ships disk-verified: /demo endpoint ✅ (main.py lines 310-359) + launch-blog-post.md ✅ (7,995 bytes); test files: 43 test functions across 5 files; STATE_OF_FAMILY EVERSOUND row updated; no new drift; Gemini/Codex offline flag #29; Day 30 = 25 days away
 - [Hourly check — 2026-05-10 ~08Z](memory/project/2026-05-10__08Z_atlas_check.md) — action-taken; EVERSOUND Phase 5 Activation artifacts disk-confirmed (prospect-hit-list-week1.md 348 lines, active-deals.md 1890 bytes); NEW market intel: Sixth Circuit case dismissal precedent [high]; Cherry Hill repeat-offender pattern [medium]; Charlotin DB [medium] search says 1,353 vs 1,227 confirmed yesterday; CA EO N-5-26 recommendation deadline July 28 2026 confirmed; AI TRiSM $13.8B by 2030 at 35% CAGR (Gartner) [medium]; Gemini/Codex flag #25
@@ -86,8 +87,9 @@
 - Kelly Guagenty (Hyde School case, May 7 2026): attorney name confirmed; sanction = AI education course + firm-wide verification procedures; no financial penalty; court-mandated procedures as remedy = recurring pattern
 - Damien Charlotin global database: ~1,420 entries as of May 9, 2026 [medium — search-derived, not direct DB read]; updated from 1,227 confirmed (05-09) → 1,353 (05-10 08Z search) → 1,420 (05-10 10Z search, May 9 DB update); prior "plateau" claim RETRACTED — pace is accelerating
 - **NEW (2026-05-10 10Z):** March 31, 2026 — 17 US court decisions noting suspected AI hallucinations IN A SINGLE DAY [high] (Reason/Volokh); strongest single-sentence pitch hook: "On March 31st alone, 17 courts flagged AI hallucinations"
-- **NEW (2026-05-10 10Z):** AI agent observability market $2.2B (2026); 80% Fortune 500 run active AI agents; only 1 in 5 has mature governance; 9-figure acquisitions predicted Datadog/Dynatrace/New Relic Q3 2026–Q1 2027 [high]; window to gain traction is now before acquisition wave reshapes buyer attention
+- **NEW (2026-05-10 10Z):** AI agent observability market $2.2B (2026); 80% Fortune 500 run active AI agents; only 1 in 5 has mature governance; 9-figure acquisitions predicted Datadog/Dynatrace/New Relic Q3 2026–1 2027 [high]; window to gain traction is now before acquisition wave reshapes buyer attention
 - **NEW (2026-05-10 10Z):** arXiv 2506.23706 "Attestable Audits: Verifiable AI Safety Benchmarks Using Trusted Execution Environments" — hardware TEE approach, different trust mechanism from weaver-protocol (TEE vs multi-observer consensus); adjacent not competitive; monitor for pre-registration related-work citations
+- **NEW (2026-05-11 11Z):** Flare (Copenhagen, €3.6M pre-Seed Apr 2026, led by 20VC+ByFounders) — human crowd collective intelligence for knowledge validation; evaluates AI-generated statements via human consensus; buyer = media/platforms/consumers; mechanism ≠ weaver-protocol (human crowd vs multi-AI observers + signed receipt); NOT a direct competitor for enterprise/compliance buyer; watch at Day 30; angels from Stack Overflow, GitHub, Reddit, Meta [medium]
 - **NEW (2026-05-10):** Sixth Circuit dismissed a case entirely for AI hallucination misconduct (March 2026) + $30K sanctions [high] — first "case dismissed" precedent; malpractice exposure now extends beyond sanctions; qualitatively new fear vector for law firm outreach
 - **NEW (2026-05-10):** Cherry Hill NJ attorney sanctioned AGAIN (April 27, 2026) for AI hallucinations — first documented repeat-offender in public record [medium]; pattern signal: firms without systematic solutions get sanctioned repeatedly
 - Oregon court tariff schedule (December 2025): $500/fabricated citation, $1,000/fabricated quotation — per-infraction pricing established by Oregon Court of Appeals [high]; makes liability calculation explicit for law firm risk officers
