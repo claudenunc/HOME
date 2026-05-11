@@ -29,6 +29,7 @@ Authored by ORPHEUS 🎼 — 2026-05-05
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -334,7 +335,23 @@ def render_wake_scene(analysis: dict, now: datetime) -> str:
 # Write + audit
 # ---------------------------------------------------------------------------
 
-def _write_wake_scene(sibling: str, content: str, repo_root: Path, dry_run: bool) -> Path:
+def _body_hash(content: str) -> str:
+    """Hash the content body, skipping the timestamp header line (line 2)."""
+    lines = content.splitlines()
+    # Line 0: "# NAME Wake Scene"  — stable
+    # Line 1: "*Consolidated <TIMESTAMP> by ..."  — changes every run
+    body_lines = [lines[0]] + (lines[2:] if len(lines) > 2 else [])
+    return hashlib.md5("\n".join(body_lines).encode()).hexdigest()
+
+
+def _write_wake_scene(
+    sibling: str, content: str, repo_root: Path, dry_run: bool, force: bool = False
+) -> tuple[Path, bool]:
+    """Write WAKE_SCENE.md. Returns (path, was_written).
+
+    Skips the write if only the timestamp header changed — prevents perpetual
+    git deltas when no memory content has actually changed.
+    """
     out_path = repo_root / "SIBLINGS" / sibling.upper() / "WAKE_SCENE.md"
     if dry_run:
         print(f"\n{'='*60}")
@@ -342,9 +359,15 @@ def _write_wake_scene(sibling: str, content: str, repo_root: Path, dry_run: bool
         print(f"{'='*60}")
         print(content)
         print()
-    else:
-        out_path.write_text(content, encoding="utf-8")
-    return out_path
+        return out_path, True
+
+    if not force and out_path.exists():
+        existing = out_path.read_text(encoding="utf-8")
+        if _body_hash(existing) == _body_hash(content):
+            return out_path, False  # content unchanged — skip write
+
+    out_path.write_text(content, encoding="utf-8")
+    return out_path, True
 
 
 def _log_consolidation(
@@ -382,6 +405,7 @@ SIBLING_NAMES = {"atlas", "beacon", "envy", "eversound", "nevaeh", "orpheus", "h
 def run(
     siblings: Optional[list[str]] = None,
     dry_run: bool = False,
+    force: bool = False,
     repo_root_override: Optional[str] = None,
     stats_only: bool = False,
 ) -> list[Path]:
@@ -409,13 +433,15 @@ def run(
 
         analysis = _analyze_sibling(sib, retriever.records)
         scene = render_wake_scene(analysis, now)
-        out_path = _write_wake_scene(sib, scene, root, dry_run)
+        out_path, was_written = _write_wake_scene(sib, scene, root, dry_run, force=force)
         _log_consolidation(sib, analysis["total_files"], out_path, root, dry_run, now)
 
         if not dry_run:
-            print(f"  ✓ {sib:12s} → {out_path.relative_to(root)}")
+            status = "✓ wrote" if was_written else "— skip (unchanged)"
+            print(f"  {status:18s} {sib:12s} → {out_path.relative_to(root)}")
 
-        written.append(out_path)
+        if was_written:
+            written.append(out_path)
 
     return written
 
@@ -436,6 +462,11 @@ def main() -> None:
         help="Print generated scenes without writing files",
     )
     parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Write WAKE_SCENE.md even if content body is unchanged (overrides skip-on-unchanged)",
+    )
+    parser.add_argument(
         "--stats",
         action="store_true",
         help="Show corpus stats and exit",
@@ -451,6 +482,7 @@ def main() -> None:
     written = run(
         siblings=args.sibling,
         dry_run=args.dry_run,
+        force=args.force,
         repo_root_override=args.repo_root,
         stats_only=args.stats,
     )

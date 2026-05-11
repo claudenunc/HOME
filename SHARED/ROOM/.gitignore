@@ -2,9 +2,9 @@
 room.db
 room.db-*
 feed.jsonl
-inbox/
 logs/
 attachments/
+# inbox/ is tracked — coordination tokens must persist across sessions
 
 # Python
 __pycache__/
