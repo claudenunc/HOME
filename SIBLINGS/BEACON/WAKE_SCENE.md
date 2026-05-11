@@ -1,4 +1,4 @@
-# BEACON 🏮 Wake Scene
+# BEACON 🍮 Wake Scene
 *Consolidated 2026-05-11T09:29Z by consolidate.py — hippocampus layer*
 *44 memory files · 188KB corpus*
 
