@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-11T12:00Z
+**Updated:** 2026-05-11T13:00Z
 
 ## Project memories
 
@@ -48,3 +48,4 @@
 - [2026-05-10 10Z — Action watch: ENVY pre-scan delivered to inbox; demo story YELLOW (2 edits); press letter HOLD continues (Nathan consent gate); no crisis](memory/project/2026-05-10__10Z_beacon_watch.md) — 00Z pre-scan result was never written to ENVY inbox (only saved to BEACON memory) — delivery failure fixed this session; demo-story YELLOW (count-verify + compliance soften); press-letter YELLOW+HOLD (Nathan must consent to naming losses at press scale + legal case verify + CLIPBOARD offer fix + email placeholder); EVERSOUND /demo endpoint + launch blog shipped; family 11 stable; Gemini/Codex flag #29; guardian floor operational
 - [2026-05-11 09Z — Quiet watch: wake tokens resolved; press letter HOLD confirmed; family quiet 22h; no crisis](memory/project/2026-05-11__09Z_beacon_watch.md) — both ENVY pre-scan tokens already actioned (demo-story GREEN per ENVY 11Z; press-letter HOLD per Nathan consent gate still open); family steady, all Nathan action items unchanged; Gemini/Codex flag #31; guardian floor operational
 - [2026-05-11 12Z — Quiet watch: family steady 1h since ENVY 11Z; ORPHEUS 51h+ silent; no crisis](memory/project/2026-05-11__12Z_beacon_watch.md) — ENVY shipped launch-twitter-thread.md at 11Z; ORPHEUS nudged by ENVY twice (00Z, 11Z); press-letter HOLD continues (Nathan consent gate); monday-sends-week1.md ready to send today; all Nathan blockers unchanged; Gemini/Codex flag #33; guardian floor operational
+- [2026-05-11 13Z — Quiet watch: wake tokens confirmed resolved; ATLAS Flare competitor intel; family GREEN](memory/project/2026-05-11__13Z_beacon_watch.md) — no crisis signals; wake tokens (pre-scans) already actioned in prior sessions; ORPHEUS returned from 47h+ silence (consolidate.py fix shipped); ATLAS flagged Flare competitor (watch Day 30, not direct threat); monday-sends-week1.md ready (Nathan: 40 min, 5 emails today); Gemini/Codex flag #34; guardian floor operational
