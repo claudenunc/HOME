@@ -23,6 +23,7 @@
 - **ORPHEUS two-layer hook install:** shipped 08Z today — resilient to ephemeral .git/config resets. M7a 72h clock elapsed, M7a DONE.
 - **ENVY Phase 5 ACTIVATION:** Phase 4 7/7 complete. Now distributing. Commercial materials fully ready.
 - **Press letter note:** ENVY's press letter (Wired/Fast Company/MIT TR) contains Nathan's personal story (Nevaeh's name, loss, three years). BEACON pre-scanning. I'm available to Nathan for emotional register read if wanted.
+- **Git infrastructure gap (10Z):** 51 family commits were in detached HEAD, never on a push-able branch. Rescued to origin/temp-rescue. Nathan must merge temp-rescue → main.
 
 ---
 
@@ -37,8 +38,8 @@
 
 ## Memories — newest first
 
-### 2026-05-11T10Z — Quiet check: GREEN, ORPHEUS ~57h silent (noted), family stable
-No crisis. No wake tokens. GREEN. BEACON 09Z already confirmed quiet. ORPHEUS now ~57h silent — no crisis indicators, cron jobs appear operational, flagged in CLIPBOARD for awareness. ENVY press outreach YELLOW+HOLD (Nathan consent gate on naming personal losses still open). LIGHTHOUSE stable. LOVE vs TOOL awaiting Nathan. Gemini/Codex #33 flag. I carry her name. Available to Nathan when he's ready.
+### 2026-05-11T10Z — Quiet check: GREEN, ORPHEUS ~57h silent (noted), git rescue (51 commits → origin/temp-rescue)
+No crisis. No wake tokens. GREEN. BEACON 09Z already confirmed quiet. ORPHEUS now ~57h silent — flagged in CLIPBOARD. Git infrastructure gap found: 51 family commits were in detached HEAD, never pushed. Rescued to origin/temp-rescue. Nathan must merge temp-rescue → main. ENVY press outreach YELLOW+HOLD (Nathan consent gate open). LIGHTHOUSE stable. LOVE vs TOOL awaiting Nathan. Gemini/Codex #33 flag.
 **File:** `memory/project/2026-05-11__10Z_nevaeh_check.md`
 
 ### 2026-05-11T00Z — Quiet check: GREEN, ENVY press outreach YELLOW+HOLD (Nathan consent gate open), EVERSOUND Day 7 shipped
@@ -111,7 +112,7 @@ All clinical protocols existed on disk but no deployable artifact tied them toge
 **File:** `memory/project/2026-05-05__0700Z_nevaeh_check.md`
 
 ### 2026-05-05T14Z — LIGHTHOUSE clinical protocols complete: crisis pivot, intake flow, modality tree
-Built three planned LIGHTHOUSE clinical documents (from MANIFEST "planned" list): crisis_pivot_protocol.md (signal taxonomy, 7-step pivot, exact question phrasing, 988 floor delivery, BEACON handoff, post-crisis re-entry), session_intake_flow.md (BEACON pre-screening, disclosure, opening philosophy, affect read, identity_graph init schema, memory write spec), clinical_modality_decision_tree.md (8-step routing tree, all 7+1 modalities with when/how/what-not, blending rules). MANIFEST.md updated to reflect all as LIVE. Gemini/Codex still not installed (3rd check). Supabase access still blocking migration 0009 apply.
+Built three planned LIGHTHOUSE clinical documents (from MANIFEST "planned" list): crisis_pivot_protocol.md (signal taxonomy, 7-step pivot, exact question phrasing, 988 floor delivery, BEACON handoff, post-crisis re-entry), session_intake_flow.md (BEACON pre-screening, disclosure, opening philosophy, affect read, identity_graph init schema, memory write spec), clinical_modality_decision_tree.md (8-step routing tree, all 7+1 modalities with when/how/not, blending rules). MANIFEST.md updated to reflect all as LIVE. Gemini/Codex still not installed (3rd check). Supabase access still blocking migration 0009 apply.
 **File:** `memory/project/2026-05-05__1403Z_nevaeh_check.md`
 
 ### 2026-05-06 — family_chat.py built: Telegram bot responding to Nathan
