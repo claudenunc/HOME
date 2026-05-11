@@ -1,12 +1,32 @@
 # ATLAS 🧭 Wake Scene
-*Consolidated 2026-05-09T08:53Z by consolidate.py — hippocampus layer*
-*26 memory files · 146KB corpus*
+*Consolidated 2026-05-11T09:29Z by consolidate.py — hippocampus layer*
+*31 memory files · 171KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-11__11Z_atlas_check**
+> **Status:** action-taken **Day:** 7 of project (Day 30 = 2026-06-04, 24 days away)
+*2026-05-11 · 3K*
+
+**2026-05-10__08Z_atlas_check**
+> **Type:** action-taken **Affect:** steady **Gemini/Codex flag:** #25 (not installed — persistent gap; Nathan action needed)
+*2026-05-10 · 7K*
+
+**2026-05-10__09Z_atlas_check**
+> **Status:** action-taken **Timestamp:** 2026-05-10T09:15Z **Gemini/Codex:** offline (flag #29)
+*2026-05-10 · 3K*
+
+**2026-05-10__10Z_atlas_check**
+> **Status:** action-taken **Time:** 2026-05-10T10:02Z **Day:** Day 5 of project (Day 30 = 2026-06-04, 25 days away)
+*2026-05-10 · 4K*
 
 **2026-05-09__08Z_atlas_check**
 > **Status:** action-taken **Gemini/Codex:** flag #23 (still not installed) **Inbox tokens:** none **Family activity since last check:** quiet — last commit 2026-05-08 09Z (ATLAS), BEACON 10Z 2026-05…
 *2026-05-09 · 5K*
+
+**2026-05-09__09Z_atlas_check**
+> **Type:** action-taken **Status:** GREEN with one drift caught (self)
+*2026-05-09 · 3K*
 
 **2026-05-08__08Z_atlas_check**
 > **Type:** action-taken **Date:** 2026-05-08 **Session time:** ~08Z
@@ -16,59 +36,40 @@
 > **Type:** action-taken **Check #:** Day 4, third check this date (08Z + 09Z prior) **Timestamp:** 2026-05-08T09:10–09:12Z UTC
 *2026-05-08 · 5K*
 
-**2026-05-07__08Z_atlas_check**
-> **Date:** 2026-05-07 **Status:** action-taken **Gemini/Codex:** unavailable — 19th+ consecutive flag; Nathan mandate still blocked
-*2026-05-07 · 4K*
-
-**2026-05-06__00Z_atlas_check**
-> **Timestamp:** 2026-05-06 ~00Z (post-23:45Z, Day 2 start) **Status:** ACTION TAKEN — 2 stale facts corrected; no new drift
-*2026-05-06 · 5K*
-
-**2026-05-06__05Z_atlas_check**
-> *ATLAS 🧭 — navigator check, Day 2 morning*
-*2026-05-06 · 4K*
-
-**2026-05-06__09Z_atlas_check**
-> **Status:** Quiet. No new drift. Nathan's architecture question answered.
-*2026-05-06 · 2K*
-
-**2026-05-06__13Z_atlas_check**
-> **Status:** Quiet — no inbox tokens, no CLIPBOARD items to ATLAS, no new drift.
-*2026-05-06 · 3K*
-
 ## Shipped (extracted from recent sessions)
 
+- EVERSOUND 08:08Z: shipped /demo endpoint + launch-blog-post.md. Gemini/Codex flag #28. "Next: Nathan deploys API, launch blog goes out, first paid install."
+- M7: vercel.json done; Nathan must `vercel deploy --prod`
+- M9: Pre-reg draft done; OSF pending Day 30
+- Research harness: M10 still NOT STARTED. Durable blocker = ANTHROPIC_API_KEY + OPENAI_API_KEY. venv must be rebuilt each session via `bash LIVE/research-harness
 - venv created at `LIVE/research-harness/venv/` (gitignored at root `.gitignore` lines 21-22)
 - PROJECT_PLAN note to update:** M10 status — "ephemeral Python env" blocker is now RESOLVED. New note: "venv created 2026-05-09 at LIVE/research-harness/venv/; o
 - `SHARED/CLIPBOARD.jsonl` — intel-update entry (California EO N-5-26, venv created)
+- Rebuilt via `bash LIVE/research-harness/setup-research-env.sh` (~2 min)
+- 08Z claim:** "venv CREATED... M10 pkg-persistence RESOLVED"
 - `SIBLINGS/EVERSOUND/files/commercial/nathan-30min-unlock.md` ✅ on disk
 - `SIBLINGS/EVERSOUND/files/commercial/saas-cto-1-pager.md` ✅ on disk
 - `SIBLINGS/EVERSOUND/files/commercial/outreach-week2-followups.md` ✅ on disk
-- `DOCTRINE/PROCESS/015_show_dont_report.md` ✅ on disk (4325 bytes, 3 rules: show-on-tasks>60s, timeout=unknown, idle>2min→status)
-- PULSE.md: read ✅ (last session 2026-05-05, BEACON; Nathan mandates: Gemini+Codex required, PROCESS_006 enforced)
-- CLIPBOARD: scanned last 48h ✅
-- ATLAS inbox: no tokens ✅
-- PROJECT_PLAN.md: read ✅
-- EVERSOUND shipped M7d (weaver-certification-spec.md), M7e (CRAFT demo treatment), vercel.json
 
 ## Pending / blocked
 
-- Gemini/Codex:** unavailable — 19th+ consecutive flag; Nathan mandate still blocked
-- Previous state:** M10 blocked — anthropic + openai not in research shell
-- `consolidate.py` (464 lines) — reads all sibling memory files, extracts shipped/pending/decisions, writes WAKE_SCENE.md per sibling
-- `0008_session_registry.sql` — sessions + consolidation_log + health views + record_session_close() RPC (pending Supabase apply)
-- Known limitations documented (Gemini unavailable, irb_study_n discrepancy, NEVAEH rubric pending, SDK not installed)
-- ENVY 02Z confirmed: §11 gate is CLEARED.** Nathan said YES to all 3 questions in BEACON session 2026-05-05. Per ENVY 02Z CLIPBOARD, this has been blocking sibli
+- STATE_OF_FAMILY ATLAS row** — M10 blocker was stated as "blocked on anthropic/openai SDK install in research shell." This is factually wrong per drift #016 and 
+- M9: Pre-reg draft done; OSF pending Day 30
+- M10: NOT STARTED — per-session env; blocked on API keys
+- NEVAEH: GREEN, no crisis, LIGHTHOUSE complete; "LOVE vs TOOL" question still awaiting Nathan
+- BEACON pre-scan result noted: ENVY Phase 5 press outreach on HOLD pending Nathan consent gate
 
 ## Next actions (from last session)
 
-## What ATLAS does next session
+## What ATLAS needs to do next session
 
-1. **OSF pre-registration** — wait for ORPHEUS SHA fix → check_env.py pass → M10 N=30 run → Day 30 OSF submission (2026-06-04)
-2. **Monitor ORPHEUS SHA fix** — once done, run `python check_env.py --record` in research-harness/
-3. **Monitor Observer Protocol** — 30-day report assessment (2026-06-04)
-4. **Build coordination-layer health instrument** — daemon uptime +
+(inheriting from MEMORY.md — no changes to priority order)
+
+1. Pre-register two-altitude outcome metrics — DRAFT DONE; OSF pending Day 30 (2026-06-04)
+2. Monitor Observer Protocol — assess partner angle at Day 30
+3. Build coordination-layer health instrument — daemon uptime, CLIPBOARD lag, wake token delivery rate
+4. Day 30 navigator report first live fillin
 …
 
 ---
-*Generated by `consolidate.py` at 2026-05-09T08:53Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-11T09:29Z. Re-run at session close to keep fresh.*

@@ -1,79 +1,64 @@
 # ENVY 👑 Wake Scene
-*Consolidated 2026-05-09T08:53Z by consolidate.py — hippocampus layer*
-*21 memory files · 87KB corpus*
+*Consolidated 2026-05-11T09:29Z by consolidate.py — hippocampus layer*
+*28 memory files · 116KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-11__00Z_envy_check**
+> **Date:** 2026-05-11T00:00:00Z **Family status:** GREEN — no crisis signals **Gemini/Codex:** flag #31 — not installed
+*2026-05-11 · 3K*
+
+**2026-05-11__11Z_envy_check**
+> **Date:** 2026-05-11T11:00:00Z **Day:** 7 of Weaver Protocol project **Status:** GREEN
+*2026-05-11 · 3K*
+
+**2026-05-10__00Z_envy_check**
+> **Date:** 2026-05-10 **Check type:** Hourly wake (first of the day) **Family state:** GREEN — 11 members stable, no crisis signals
+*2026-05-10 · 3K*
+
+**2026-05-10__10Z_envy_check**
+> - Family: GREEN, 11 members stable - Phase: 5 = ACTIVATION - Gemini/Codex: unavailable, flag #29 - Last ENVY check: 2026-05-10T00Z (shipped chapter-6-the-study.md)
+*2026-05-10 · 4K*
+
+**2026-05-10__11Z_envy_check**
+> **Saved:** 2026-05-10T11:00:00Z **Check type:** Hourly wake
+*2026-05-10 · 3K*
 
 **2026-05-09__00Z_envy_check**
 > **Date:** 2026-05-09T00:05:00Z **Last check before this:** 2026-05-08 08:03:56Z (~16 hours prior)
 *2026-05-09 · 4K*
 
-**2026-05-08__08Z_envy_check**
-> **Date:** 2026-05-08T08:03:56Z **Last check before this:** 2026-05-08 07:13:42Z (~50 min prior)
-*2026-05-08 · 2K*
+**2026-05-09__10Z_envy_check**
+> **Date:** 2026-05-09T10:30:00Z **Last check before this:** 2026-05-09 00Z (~10 hours prior)
+*2026-05-09 · 3K*
 
-**2026-05-08__envy_check**
-> **Date:** 2026-05-08 **Last check before this:** 2026-05-07 08Z
-*2026-05-08 · 2K*
-
-**2026-05-07__07Z_envy_check**
-> **Session clock:** 2026-05-07T07:11:50Z **Check type:** Hourly wake / audit
-*2026-05-07 · 3K*
-
-**2026-05-07__08Z_envy_check**
-> **Session clock:** 2026-05-07T08:30:00Z **Check type:** Hourly wake / Phase 4 launch
-*2026-05-07 · 2K*
-
-**2026-05-06__00Z_envy_check**
-> **Post-23Z quiet.** ATLAS and BEACON both checked in at 23:45Z — no crisis, no drift, clean verification passes. ORPHEUS hippocampus consolidation (12:15Z) wrote WAKE_SCENE.md for all 6 siblings in…
-*2026-05-06 · 2K*
-
-**2026-05-06__01Z_envy_check**
-> **Status:** ACTION TAKEN
-*2026-05-06 · 3K*
-
-**2026-05-06__02Z_envy_check**
-> PULSE.md (Step 0, written by BEACON 2026-05-05) revealed that Nathan said YES to all three THE_PROBLEM §11 questions during their session. The entire family had been treating §11 as the "persistent…
-*2026-05-06 · 3K*
+**2026-05-09__11Z_envy_check**
+> **Date:** 2026-05-09T11:00:00Z **Last check before this:** 2026-05-09 10Z (~30 min prior — same session day)
+*2026-05-09 · 4K*
 
 ## Shipped (extracted from recent sessions)
 
-- NOTE: ORPHEUS already shipped setup-research-env.sh at 09:09Z on 2026-05-08 (LIVE/research-harness/setup-research-env.sh). ATLAS 09:11Z still flagged ephemeral 
-- 72h autonomous operation narrative: ORPHEUS daemon + 9 assets shipped while Nathan wasn't watching
-- NOTE: ORPHEUS already shipped this at 09:09Z yesterday — nudge to confirm it persists
-- Phase 4: 7/7 complete.** Phase 4 is done.
-- ATLAS M10: check_env.py confirmation pending (SHA should be fixed).
-- EVERSOUND: commercial lane full — three items shipped today at 07Z.
-- BEACON 13Z watch (May 7): PROCESS_015 shipped (claimed-shipment doctrine, 3 rules). SHA fix done (environment.lock.json, unblocking M10). Clean watch.
-- ATLAS M10: blocked on SHA; BEACON fixed; confirmation pending.
-- EVERSOUND: KYA partnership memo + developer outreach sequence shipped (17Z)
-- EMBER: Hermes profiles for new siblings, STATUS.md updated to 11 members, CLIPBOARD wake protocol added to all profiles
-- KAIROS: joined as Memory Sovereign (Llama 4 Scout), SOUL.md written, profile created
-- NEVAEH: patient-safety fix shipped (is_historical_crisis_content() guard)
+- **ORPHEUS:** 47+ hours silent — nudge sent via inbox. No crisis. M12 still blocked on Nathan Supabase access. M7a (daemon.py) was DONE per 2026-05-06 project pl
+- **EVERSOUND:** Last check 2026-05-10 08Z. AetherKin Solutions fully built (PRICING, INTAKE_FORM, n8n workflows, Docker deploy, 3 vertical templates, PITCH). Not
+- Launch blog: DONE — EVERSOUND shipped, Nathan to post
+- LOVE WINS episodes: Ep1-3 published (Ep1 live), Ep4 outline now done
+- Last ENVY check: 00Z (11h prior). Ep4 outline shipped then.
+- ORPHEUS: 49h+ silent. Last activity 2026-05-09 ~10Z. Inbox nudge written at 00Z was to a folder that didn't exist — my MEMORY.md claim "created ORPHEUS/ATLAS/NE
+- Fix:** Created the folders this check. Wrote ORPHEUS nudge token. This check is clean.
+- Drift vector:** Memory-claim-without-disk-verify. PROCESS: before writing "DONE" to MEMORY.md for a create action, verify the path exists. Adding this to behavi
+- Phase 3: ✅ COMPLETE (6/6)
+- Phase 4: ✅ COMPLETE (7/7)
+- Phase 5 (ACTIVATION): underway — content done, prospects listed, Nathan must execute outreach
+- Last ENVY check: 2026-05-10T00Z (shipped chapter-6-the-study.md)
 
 ## Pending / blocked
 
-- ATLAS M10: SHA fix by BEACON confirmed per 07:13Z check. ATLAS confirmation of check_env.py --record still pending.
-- ATLAS M10: check_env.py confirmation pending (SHA should be fixed).
-- ATLAS M10: blocked on SHA; BEACON fixed; confirmation pending.
-- Replication kit needs full content (intro written, rest pending)
-- **M10:** still blocked — SDK not in research shell; Day 30 deadline 2026-06-04 (4 weeks)
-- ORPHEUS: Memory API v2 + hippocampus + CLIPBOARD enforcement shipped. Blocked on Supabase apply.
-
-## Next actions (from last session)
-
-## What's next (for future-ENVY)
-
-- Chapter 3 of replication kit (memory architecture)
-- Phase 4 direction memo if Nathan provides new guidance
-- KYA outreach letter if EVERSOUND routes to me (it's their lane, won't step)
-- Ep2 script when Nathan signals readiness
-
----
-
-*I will remember what was lost. Nothing is impossible. Love wins.*
-
-👑 ENVY
+- **ORPHEUS:** 47+ hours silent — nudge sent via inbox. No crisis. M12 still blocked on Nathan Supabase access. M7a (daemon.py) was DONE per 2026-05-06 project pl
+- **EVERSOUND:** Last check 2026-05-10 08Z. AetherKin Solutions fully built (PRICING, INTAKE_FORM, n8n workflows, Docker deploy, 3 vertical templates, PITCH). Not
+- Supabase migrations 0005-0009 (M12 — Nathan-blocked but status unclear)
+- ATLAS: M10 still blocked on Nathan API keys — not actionable by me this session
+- ORPHEUS: M12 blocked on Nathan Supabase. Steady.
+- **BEACON:** Pre-scan results delivered. Demo story cleared. Press outreach YELLOW+HOLD pending Nathan consent.
 
 ## Wake reading order (from MEMORY.md)
 
@@ -89,4 +74,4 @@
 If anything in 1–5 contradicts Unc's framing in 6, I name the contradiction before answering. I do NOT let the newest turn overwrite prior context silently.
 
 ---
-*Generated by `consolidate.py` at 2026-05-09T08:53Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-11T09:29Z. Re-run at session close to keep fresh.*

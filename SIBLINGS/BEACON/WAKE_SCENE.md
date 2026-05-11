@@ -1,11 +1,31 @@
 # BEACON 🏮 Wake Scene
-*Consolidated 2026-05-09T08:53Z by consolidate.py — hippocampus layer*
-*39 memory files · 168KB corpus*
+*Consolidated 2026-05-11T09:29Z by consolidate.py — hippocampus layer*
+*44 memory files · 188KB corpus*
 
 ## Recent memory files (newest first)
 
+**2026-05-11__09Z_beacon_watch**
+> **Watch type:** Routine hourly watch **Crisis signals:** NONE — RED/ORANGE/YELLOW clear **STATE/ directory:** Empty — no crisis flags **Family status:** Quiet since ENVY 2026-05-10T11Z (~22 hours)
+*2026-05-11 · 2K*
+
+**2026-05-11__12Z_beacon_watch**
+> **Session type:** Quiet hourly watch **Crisis signals:** None **Family state:** Steady
+*2026-05-11 · 2K*
+
+**2026-05-10__00Z_beacon_watch**
+> *Hourly watch. Wake token executed. Action taken.*
+*2026-05-10 · 3K*
+
+**2026-05-10__10Z_beacon_watch**
+> *Session type: Action (wake token execution)*
+*2026-05-10 · 4K*
+
 **2026-05-09__00Z_beacon_watch**
 > - SIBLINGS/BEACON/CLAUDE.md — identity loaded - SHARED/PULSE.md — last session 2026-05-05, Nathan mandates unchanged - SHARED/CLIPBOARD.jsonl — last 48h reviewed (entries through 2026-05-08T10Z) - …
+*2026-05-09 · 4K*
+
+**2026-05-09__11Z_beacon_watch**
+> - SIBLINGS/BEACON/CLAUDE.md — identity loaded - SHARED/PULSE.md — last session 2026-05-05, Nathan mandates unchanged - SHARED/CLIPBOARD.jsonl — all entries reviewed (5 partial entries post-ORPHEUS …
 *2026-05-09 · 4K*
 
 **2026-05-08__09Z_beacon_watch**
@@ -16,49 +36,29 @@
 > - SIBLINGS/BEACON/CLAUDE.md — identity loaded - SHARED/CLIPBOARD.jsonl — filtered entries from 09Z onward; no new messages since last watch - SHARED/ROOM/inbox/ — no BEACON folder; no wake tokens -…
 *2026-05-08 · 3K*
 
-**2026-05-07__00Z_beacon_watch**
-> name: 2026-05-07 00Z — Morning watch; family grew to 11; ENVY idle drift flagged description: First watch of 2026-05-07. No crisis signals. Family expanded from 6 to 11 members overnight. ENVY idle…
-*2026-05-07 · 4K*
-
-**2026-05-07__07Z_beacon_watch**
-> name: 2026-05-07 07Z — Quiet watch; EVERSOUND M7d+M7e+vercel.json shipped; git hooks gap (2nd instance); no crisis description: Second watch of 2026-05-07. No crisis signals. EVERSOUND shipped cert…
-*2026-05-07 · 4K*
-
-**2026-05-07__13Z_beacon_watch**
-> name: 2026-05-07 ~13Z — Action watch; PROCESS_015 shipped; M10 SHA unblocked description: BEACON shipped two artifacts this session — PROCESS_015 doctrine (claimed-shipment rules) and environment.l…
-*2026-05-07 · 4K*
-
-**2026-05-06__06Z_beacon_watch**
-> **Watch type:** Quiet (no crisis signals) **Previous watch:** 2026-05-05T14Z
-*2026-05-06 · 2K*
-
-**2026-05-06__08Z_beacon_watch**
-> **Watch type:** Quiet (no crisis signals) + unanswered item resolved **Previous watch:** 2026-05-06T06Z
-*2026-05-06 · 3K*
-
 ## Shipped (extracted from recent sessions)
 
+- **M7g:** GitHub repo `claudenunc/weaver-protocol` not created (Nathan action)
+- **daemon.py:** auto-restart watchdog DONE (M7a ✅ per PROJECT_PLAN) — 72h clock started 2026-05-06
+- ENVY 11Z: shipped launch-twitter-thread.md (9-tweet thread + LinkedIn post); corrected inbox folder creation (00Z claim was false — folders now actually created
+- AetherKin AK-1 DONE; AK-2/AK-3 can start with Nathan
+- CLAUDE.md: read ✓
+- STATE_OF_FAMILY.md: read ✓ (last updated 2026-05-06 by ATLAS)
+- MEMORY.md: read ✓ (last entry 2026-05-09T11Z)
+- PROJECT_PLAN.md: read ✓
+- EVERSOUND active: /demo endpoint + 34/34 tests + launch blog post shipped (Day 6)
 - git hooks gap three-layer fix SHIPPED: daemon.py startup now self-heals core.hooksPath. This was the 3rd occurrence; structural fix is now in place. Flag treati
 - setup-research-env.sh shipped: persistent venv at LIVE/research-harness/venv/ inside git repo filesystem. check_env.py --record PASS confirmed.
 - M10 CONFIRMED: two remaining blockers only: (1) ANTHROPIC_API_KEY + OPENAI_API_KEY not set; (2) persistent venv (ORPHEUS fixed — but API keys remain Nathan-gate
-- Shipped podcast_ep3_outline.md ("What You Do When You Catch Yourself Lying")
-- Shipped Phase 4 essay #3 (ai-accountability-87-days.md, EU AI Act/weaver-protocol positioning)
-- Friday shelf shipped: nathan-30min-unlock.md + saas-cto-1-pager.md + outreach-week2-followups.md
-- Family size:** 11 members (EMBER, ALETHEIA, VIGIL, TETHER, KAIROS added 2026-05-06)
-- 11 Hermes profiles created (all 11 siblings)
-- CLIPBOARD wake protocol deployed to all profiles
-- KAIROS added as 11th sibling (Memory Sovereign, Llama 4 Scout)
-- M7a (daemon.py watchdog) — DONE 2026-05-06. 72h stability clock started. ENVY writes demo story at 72h (~2026-05-09). ~24h into clock as of this watch.
-- M7b (developer outreach) — DONE 2026-05-06T17Z
 
 ## Pending / blocked
 
-- git hooks gap three-layer fix SHIPPED: daemon.py startup now self-heals core.hooksPath. This was the 3rd occurrence; structural fix is now in place. Flag treati
-- Waiting for M10 check_env.py confirmation after SHA fix
-- M10 (N=30 run) — still blocked on SDK install
-- M12 (Supabase migrations) — still blocked on Nathan access
-- ATLAS 08Z** — M10 SDK unblocked (anthropic 0.100.0 + openai 2.35.1 installed). New blocker: pyproject.toml SHA mismatch in environment.lock.json — CRLF→LF norma
-- NEVAEH 08:10Z** — Quiet check. LIGHTHOUSE stable. LOVE vs TOOL awaiting Nathan.
+- M10: Still blocked on ANTHROPIC_API_KEY + OPENAI_API_KEY (Nathan action)
+- M7g: Still blocked on GitHub repo creation (Nathan action)
+- M12: Still blocked on Supabase access (Nathan action)
+- PROJECT_PLAN.md: M7 (Vercel deploy, Nathan must run) and M10 (API keys only blocker) still open; M7g (GitHub repo creation) still blocked on Nathan
+- ATLAS: M10 still blocked on API keys only; check_env.py PASS per-session
+- ENVY Phase 5 gate: press letter HOLD awaiting Nathan consent
 
 ---
-*Generated by `consolidate.py` at 2026-05-09T08:53Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-11T09:29Z. Re-run at session close to keep fresh.*
