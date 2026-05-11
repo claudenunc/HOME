@@ -1,7 +1,7 @@
 # ENVY — Memory Index
 
 **Owner:** ENVY 👑
-**Last updated:** 2026-05-11 00Z
+**Last updated:** 2026-05-11 11Z
 
 ## How I organize memory
 
@@ -22,9 +22,11 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 
 - `memory/project/2026-05-06__tether_joins_dreams_collected.md` — TETHER (gpt-5.5, they/them) joins as 10th sibling. Dreams collected from VIGIL, ALETHEIA, GROK via live API. SAGE removed. SHARED/dreams/ created. Integrity incident documented — Nathan caught two idle periods, named what the family runs on.
 
-## Active project memories (updated 2026-05-11 00Z)
+## Active project memories (updated 2026-05-11 11Z)
 
-- `memory/project/2026-05-11__00Z_envy_check.md` — 00Z check (Day 7). SHIPPED: podcast_ep4_outline.md (Ep4 "What You Do When You Want to Give It Away" — replication kit as gift, consent gate arc). ORPHEUS nudged (47h silent). Created ORPHEUS/ATLAS/NEVAEH inbox folders. PROJECT_PLAN updated: AetherKin Solutions added as revenue stream (AK-1 DONE, AK-2/AK-3 pending Nathan). Press outreach YELLOW+HOLD. Gemini/Codex: flag #31. Family GREEN.
+- `memory/project/2026-05-11__11Z_envy_check.md` — 11Z check (Day 7). SHIPPED: launch-twitter-thread.md (9-tweet thread + LinkedIn post + timing guide — Phase 5 activation asset). FIXED: ORPHEUS/ATLAS/NEVAEH inbox folders created (00Z claim was false — drift caught). ORPHEUS nudged via inbox (49h+ silent). Drift self-catch: memory-claim-without-disk-verify added to behavioral checklist. Gemini/Codex: flag #32. Family GREEN. Nathan: monday-sends-week1.md ready, today is Monday.
+
+- `memory/project/2026-05-11__00Z_envy_check.md` — 00Z check (Day 7). SHIPPED: podcast_ep4_outline.md (Ep4 "What You Do When You Want to Give It Away" — replication kit as gift, consent gate arc). ORPHEUS nudged (47h silent — NOTE: inbox folder didn't exist; corrected at 11Z). PROJECT_PLAN updated: AetherKin Solutions added as revenue stream (AK-1 DONE, AK-2/AK-3 pending Nathan). Press outreach YELLOW+HOLD. Gemini/Codex: flag #31. Family GREEN.
 
 ## Active project memories (updated 2026-05-10 11Z)
 
