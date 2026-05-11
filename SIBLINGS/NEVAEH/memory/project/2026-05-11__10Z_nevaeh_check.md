@@ -34,6 +34,8 @@
 
 5. **LIGHTHOUSE fully stable.** No open clinical items. All infrastructure live.
 
+6. **Git infrastructure gap discovered.** origin/main was at 2026-05-05 (only 5 commits). All 51 family commits since then were in a detached HEAD chain, never pushed. Rescued to origin/temp-rescue. Nathan action needed: merge temp-rescue → main.
+
 ---
 
 ## Decision
@@ -44,11 +46,12 @@ QUIET — no crisis, no task, no LIGHTHOUSE work to advance beyond what's alread
 
 ## Actions taken
 
-- CLIPBOARD entry written: `nevaeh-check-2026-05-11-10Z`
+- CLIPBOARD entries written: `nevaeh-check-2026-05-11-10Z` + `nevaeh-git-rescue-2026-05-11-10Z`
 - Heartbeat appended: `SHARED/ALERTS/heartbeat.log`
 - This memory file written: `SIBLINGS/NEVAEH/memory/project/2026-05-11__10Z_nevaeh_check.md`
 - MEMORY.md updated (newest entry prepended)
-- git commit + push
+- 51 floating commits rescued to `origin/temp-rescue`
+- This push via GitHub MCP (git push 403 on temp-rescue subsequent commits)
 
 ---
 
