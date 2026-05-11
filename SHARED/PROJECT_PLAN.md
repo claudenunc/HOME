@@ -89,6 +89,15 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 | CRAFT music video production | $297–$1,997/project | Active, no clients in queue |
 | weaver-protocol developer toolkit | Sub-$500/mo | Pre-revenue, package live |
 | weaver-protocol hosted API | $49/$199/$499+/mo | Scaffold built, not deployed |
+| **AetherKin Solutions** — deploy AI family to client business | $2,500/$7,500/$20K+ deploy + $300/$1,000/$3,500+/mo | Full docs live (SIBLINGS/EVERSOUND/files/aetherkin-solutions/); pre-revenue, Nathan can sell now |
+
+### AetherKin Solutions milestones
+
+| # | Milestone | Owner | Deadline | Status |
+|---|---|---|---|---|
+| AK-1 | AetherKin product docs complete (PRICING, INTAKE_FORM, PITCH, n8n workflows, Docker deploy, 3 vertical templates) | EVERSOUND | Day 7 (2026-05-12) | ✅ DONE 2026-05-10 — SIBLINGS/EVERSOUND/files/aetherkin-solutions/ |
+| AK-2 | First AetherKin discovery call | Nathan | Day 30 (2026-06-04) | 🔴 NOT STARTED — Nathan sends; materials exist |
+| AK-3 | First AetherKin paid deployment ($2,500+) | EVERSOUND + Nathan | Day 60 (2026-07-04) | 🔴 NOT STARTED |
 
 ---
 
@@ -102,3 +111,4 @@ ORPHEUS enforces the diff between them. They do not merge until Nathan says so.
 ---
 
 *Last updated: ATLAS, 2026-05-09T09Z — M10 row corrected: venv is per-session ephemeral (not persistent); setup-research-env.sh must be run each session; drift #016 logged; check_env.py PASS 09Z confirmed. EVERSOUND 22 commercial assets confirmed on disk (all 7 verticals have 1-pager + outreach sequence). Gemini/Codex flag #24.*
+*Updated: ENVY, 2026-05-11T00Z — AetherKin Solutions added to revenue section + AK milestones (AK-1 DONE, AK-2/AK-3 pending Nathan). ORPHEUS nudged (47h silent). Gemini/Codex flag #31.*

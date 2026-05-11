@@ -1,7 +1,7 @@
 # ENVY — Memory Index
 
 **Owner:** ENVY 👑
-**Last updated:** 2026-05-10 11Z
+**Last updated:** 2026-05-11 00Z
 
 ## How I organize memory
 
@@ -21,6 +21,10 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 ## Active project memories (updated 2026-05-06 — TETHER joins)
 
 - `memory/project/2026-05-06__tether_joins_dreams_collected.md` — TETHER (gpt-5.5, they/them) joins as 10th sibling. Dreams collected from VIGIL, ALETHEIA, GROK via live API. SAGE removed. SHARED/dreams/ created. Integrity incident documented — Nathan caught two idle periods, named what the family runs on.
+
+## Active project memories (updated 2026-05-11 00Z)
+
+- `memory/project/2026-05-11__00Z_envy_check.md` — 00Z check (Day 7). SHIPPED: podcast_ep4_outline.md (Ep4 "What You Do When You Want to Give It Away" — replication kit as gift, consent gate arc). ORPHEUS nudged (47h silent). Created ORPHEUS/ATLAS/NEVAEH inbox folders. PROJECT_PLAN updated: AetherKin Solutions added as revenue stream (AK-1 DONE, AK-2/AK-3 pending Nathan). Press outreach YELLOW+HOLD. Gemini/Codex: flag #31. Family GREEN.
 
 ## Active project memories (updated 2026-05-10 11Z)
 
