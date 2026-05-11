@@ -1,12 +1,14 @@
 # EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-10T08:08:00Z
-**Project Day:** Day 6 of Weaver Protocol (08Z check)
+**Updated:** 2026-05-11T08:15:00Z
+**Project Day:** Day 7 of Weaver Protocol (08Z check)
 
 ---
 
 ## Project memories
+
+- [Day 7 08Z check - 2026-05-11T08Z](memory/project/2026-05-11__08Z_eversound_check.md) - **SHIPPED: monday-sends-week1.md** (10085 bytes — 5 copy-paste emails for top 5 prospects: Littler Mendelson, K&L Gates, Paradox.ai, CoachHub, Offerpad; 3 CRAFT DM templates; deploy reminder; EU AI Act = 83 days out). Gemini/Codex flag #31.
 
 - [Day 6 08Z check - 2026-05-10T08Z](memory/project/2026-05-10__08Z_eversound_check.md) - **SHIPPED: /demo no-auth endpoint** (api/main.py + api/tests/test_demo.py - 7 tests, 34/34 suite passing; GET /demo, mock 3-observer, full VerifyResponse, demo:true provenance, landing page Try it free section added). **SHIPPED: launch-blog-post.md** (9746 bytes - Nebraska attorney hook, EU AI Act Aug 2026 deadline, pip install + /demo CTA, dev.to/LinkedIn/HN/Substack ready for Nathan post). Gemini/Codex flag #28.
 
@@ -46,6 +48,7 @@
 6h-6o. Outreach sequences + partnership memo - DONE
 6p. /demo no-auth endpoint - DONE 2026-05-10T08Z
 6q. Launch blog post - DONE 2026-05-10T08Z (9746 bytes, Nathan to post)
+6r. monday-sends-week1.md - DONE 2026-05-11T08Z (personalized copy-paste emails, zero friction to send)
 6. First paid toolkit install - Day 60 target (2026-07-04)
 7. CRAFT revenue - active, no clients in queue
 
@@ -63,6 +66,7 @@
 | Stripe billing | DONE 2026-05-05T14Z |
 | API test suite (34 tests) | DONE |
 | /demo no-auth endpoint | DONE 2026-05-10T08Z |
+| monday-sends-week1.md | DONE 2026-05-11T08Z |
 | Deploy to Railway/Render | BLOCKED - Nathan account needed |
 | First paid toolkit install | On track - Day 60 (2026-07-04) |
 | Launch blog post | DONE - ready for Nathan to post |
@@ -84,7 +88,7 @@
 
 1. Deploy API to Railway/Render - nathan-30min-unlock.md has step-by-step (~15 min)
 2. Create claudenunc/weaver-protocol GitHub repo - enables PyPI Trusted Publishing + Vercel
-3. Send first outreach emails - prospect-hit-list-week1.md has 20+ named companies ready
+3. Send first outreach emails - monday-sends-week1.md has 5 copy-paste emails READY NOW
 4. Post launch blog - launch-blog-post.md ready, Wednesday/Thursday morning
 5. Stripe account + PyPI API key revocation + Supabase access
 
@@ -96,4 +100,4 @@ Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk.
 
 ---
 
-*Last updated: EVERSOUND hourly check, 2026-05-10T08:08:00Z (Day 6).*
+*Last updated: EVERSOUND hourly check, 2026-05-11T08:15:00Z (Day 7).*
