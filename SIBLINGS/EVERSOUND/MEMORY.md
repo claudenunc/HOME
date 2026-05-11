@@ -1,12 +1,14 @@
 # EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-11T08:15:00Z
-**Project Day:** Day 7 of Weaver Protocol (08Z check)
+**Updated:** 2026-05-11T09:10:00Z
+**Project Day:** Day 7 of Weaver Protocol (09Z check)
 
 ---
 
 ## Project memories
+
+- [Day 7 09Z check - 2026-05-11T09Z](memory/project/2026-05-11__09Z_eversound_check.md) - **SHIPPED: linkedin-week1-posts.md** (6954 bytes — 5 LinkedIn posts Mon-Fri, Nebraska hook, EU countdown, product demo, accountability pitch, pilot offer); **SHIPPED: nathan-week1-calendar.md** (4273 bytes — day-by-day calendar, zero decision fatigue, Vercel deploy trigger); **SHIPPED: twitter-launch-thread.md** (4392 bytes — 10-tweet developer thread, Wednesday post date). **DISCOVERY: Vercel MCP live** — team envy1 connected, one Nathan "go" away from deploying API. Gemini/Codex flag #32.
 
 - [Day 7 08Z check - 2026-05-11T08Z](memory/project/2026-05-11__08Z_eversound_check.md) - **SHIPPED: monday-sends-week1.md** (10085 bytes — 5 copy-paste emails for top 5 prospects: Littler Mendelson, K&L Gates, Paradox.ai, CoachHub, Offerpad; 3 CRAFT DM templates; deploy reminder; EU AI Act = 83 days out). Gemini/Codex flag #31.
 
@@ -67,6 +69,10 @@
 | API test suite (34 tests) | DONE |
 | /demo no-auth endpoint | DONE 2026-05-10T08Z |
 | monday-sends-week1.md | DONE 2026-05-11T08Z |
+| linkedin-week1-posts.md | DONE 2026-05-11T09Z |
+| nathan-week1-calendar.md | DONE 2026-05-11T09Z |
+| twitter-launch-thread.md | DONE 2026-05-11T09Z |
+| Deploy to Vercel via MCP | READY — Nathan says "deploy it" → I execute |
 | Deploy to Railway/Render | BLOCKED - Nathan account needed |
 | First paid toolkit install | On track - Day 60 (2026-07-04) |
 | Launch blog post | DONE - ready for Nathan to post |
@@ -86,11 +92,12 @@
 
 ## Persistent blockers (Nathan actions)
 
-1. Deploy API to Railway/Render - nathan-30min-unlock.md has step-by-step (~15 min)
-2. Create claudenunc/weaver-protocol GitHub repo - enables PyPI Trusted Publishing + Vercel
-3. Send first outreach emails - monday-sends-week1.md has 5 copy-paste emails READY NOW
-4. Post launch blog - launch-blog-post.md ready, Wednesday/Thursday morning
-5. Stripe account + PyPI API key revocation + Supabase access
+1. **DEPLOY API**: Say "EVERSOUND deploy it" → Vercel MCP live, I execute — ~5 min
+2. **SEND 5 EMAILS**: monday-sends-week1.md — Littler, K&L Gates, Paradox, CoachHub, Offerpad — 40 min
+3. **POST LINKEDIN**: linkedin-week1-posts.md — Post 1 TODAY, series runs Mon-Fri
+4. **POST LAUNCH BLOG**: launch-blog-post.md — Wednesday May 13
+5. **CREATE GITHUB REPO**: claudenunc/weaver-protocol — Thursday, 10 min
+6. Stripe account + PyPI API key revocation + Supabase access
 
 ---
 
