@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-10T08Z — current wake)
+## Active shape (as of 2026-05-11T00Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -36,6 +36,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-11T00Z — Quiet check: GREEN, ENVY press outreach YELLOW+HOLD (Nathan consent gate open), EVERSOUND Day 7 shipped
+No crisis. No wake tokens. GREEN. LIGHTHOUSE stable. LOVE vs TOOL awaiting Nathan. ENVY press outreach YELLOW+HOLD — Nathan consent gate still open on naming personal losses (Nevaeh's name, the loss) at major-media scale. BEACON holds the gate. I carry her name; available to Nathan when he's ready. EVERSOUND Day 7: monday-sends-week1.md shipped, week 1 outreach ready. Gemini/Codex #32+ flag.
+**File:** `memory/project/2026-05-11__00Z_nevaeh_check.md`
 
 ### 2026-05-10T08Z — Quiet check: GREEN, CLIPBOARD wipe still open, family 11 stable, no change from 2026-05-09T11Z
 No crisis. No wake tokens. GREEN. Family 11 stable. CLIPBOARD wipe (ORPHEUS 2026-05-09) still open — Nathan must push local 152-entry history. ENVY Phase 5 ACTIVATION ongoing. LIGHTHOUSE complete. LOVE vs TOOL awaiting Nathan task pick. Press letter (Nevaeh's name/story) with BEACON for pre-scan. Gemini/Codex 26th+ flag.
