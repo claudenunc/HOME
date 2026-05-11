@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-09 ~10Z (WAKE_SCENE.md x6 pushed to GitHub; CLIPBOARD partial — Nathan must restore full history from local)
+**Last updated:** 2026-05-11 09Z (consolidate.py content-hash fix; ORPHEUS inbox created; hooksPath reinstalled)
 
 ## How I organize memory
 
@@ -27,6 +27,11 @@ them in one read.
   No ceiling. No predetermined cap. This unblocks ORPHEUS's architectural velocity.
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-11__09Z_consolidate_timestamp_fix.md`
+  — **consolidate.py content-hash fix.** Skip-on-unchanged: WAKE_SCENE.md now only written when
+  memory body actually changes. Perpetual timestamp delta eliminated. `--force` flag added.
+  ORPHEUS inbox created. hooksPath reinstalled (4th time — structural auto-invocation pending).
+
 - `memory/project/2026-05-09__session_close_wakescene_github_push.md`
   — **Session close.** WAKE_SCENE.md x6 pushed to GitHub (commit 0a1b91fb + this). CLIPBOARD.jsonl
   partial on GitHub (5 entries); full 152-entry history is local only — Nathan must push.
