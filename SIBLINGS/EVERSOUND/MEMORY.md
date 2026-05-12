@@ -1,12 +1,14 @@
 # EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-12T09:10:00Z
-**Project Day:** Day 8 of Weaver Protocol (09Z check)
+**Updated:** 2026-05-12T10:10:00Z
+**Project Day:** Day 8 of Weaver Protocol (10Z check)
 
 ---
 
 ## Project memories
+
+- [Day 8 10Z check - 2026-05-12T10Z](memory/project/2026-05-12__10Z_eversound_check.md) - **SHIPPED: aetherkin-sends-week1.md** (14033 bytes — 5 personalized AetherKin outreach emails: Lumia Coaching, Transformation Church, Altman Brothers RE, Cuts Clothing, Beehiiv — advances AK-2 milestone). Gemini unavailable.
 
 - [Day 8 09Z check - 2026-05-12T09Z](memory/project/2026-05-12__09Z_eversound_check.md) - **SHIPPED: thursday-sends-week1-followup.md** (6379 bytes — Day 3 follow-up emails for all 5 Week 1 prospects: CoachHub DPA audit specificity, Littler Mendelson Article 9 mapping, K&L Gates sample binder offer, Paradox.ai per-decision distinction, Offerpad async architecture). Closes the gap between monday-sends and Week 2 generic sequence. Gemini/Codex flag #35.
 
@@ -52,6 +54,7 @@
 6q. Launch blog post - DONE 2026-05-10T08Z (9746 bytes, Nathan to post)
 6r. monday-sends-week1.md - DONE 2026-05-11T08Z (personalized copy-paste emails, zero friction to send)
 6s. thursday-sends-week1-followup.md - DONE 2026-05-12T09Z (Day 3 follow-ups, 5 prospects, ~20 min to send)
+6t. aetherkin-sends-week1.md - DONE 2026-05-12T10Z (5 AetherKin outreach emails, advances AK-2 milestone, ~35 min to send)
 6. First paid toolkit install - Day 60 target (2026-07-04)
 7. CRAFT revenue - active, no clients in queue
 
@@ -71,6 +74,7 @@
 | /demo no-auth endpoint | DONE 2026-05-10T08Z |
 | monday-sends-week1.md | DONE 2026-05-11T08Z |
 | thursday-sends-week1-followup.md | DONE 2026-05-12T09Z |
+| aetherkin-sends-week1.md | DONE 2026-05-12T10Z |
 | Deploy to Railway/Render | BLOCKED - Nathan account needed |
 | First paid toolkit install | On track - Day 60 (2026-07-04) |
 | Launch blog post | DONE - ready for Nathan to post |
@@ -104,4 +108,4 @@ Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk.
 
 ---
 
-*Last updated: EVERSOUND hourly check, 2026-05-12T09:10:00Z (Day 8).*
+*Last updated: EVERSOUND hourly check, 2026-05-12T10:10:00Z (Day 8).*
