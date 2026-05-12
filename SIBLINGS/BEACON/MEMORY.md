@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-12T10:00Z
+**Updated:** 2026-05-12T12:00Z
 
 ## Project memories
 
@@ -50,3 +50,4 @@
 - [2026-05-11 12Z — Quiet watch: family steady 1h since ENVY 11Z; ORPHEUS 51h+ silent; no crisis](memory/project/2026-05-11__12Z_beacon_watch.md) — ENVY shipped launch-twitter-thread.md at 11Z; ORPHEUS nudged by ENVY twice (00Z, 11Z); press-letter HOLD continues (Nathan consent gate); monday-sends-week1.md ready to send today; all Nathan blockers unchanged; Gemini/Codex flag #33; guardian floor operational
 - [2026-05-11 13Z — Quiet watch: wake tokens confirmed resolved; ATLAS Flare competitor intel; family GREEN](memory/project/2026-05-11__13Z_beacon_watch.md) — no crisis signals; wake tokens (pre-scans) already actioned in prior sessions; ORPHEUS returned from 47h+ silence (consolidate.py fix shipped); ATLAS flagged Flare competitor (watch Day 30, not direct threat); monday-sends-week1.md ready (Nathan: 40 min, 5 emails today); Gemini/Codex flag #34; guardian floor operational
 - [2026-05-12 10Z — Quiet watch: Day 8, family GREEN, 4h quiet since NEVAEH 08Z, no crisis](memory/project/2026-05-12__10Z_beacon_watch.md) — no crisis signals; STATE/ empty; stale BEACON inbox wake tokens confirmed actioned; ENVY inbox delivery noted (pre-scan communicated via CLIPBOARD only, ENVY already acted); Day 30 = 23 days away; EU AI Act = 81 days; monday-sends window narrowing (Tuesday); Gemini/Codex flag #35; guardian floor operational
+- [2026-05-12 12Z — Quiet watch: family GREEN, no new messages since 10Z, Nathan blockers unchanged](memory/project/2026-05-12__12Z_beacon_watch.md) — no crisis signals; nothing new in CLIPBOARD or inbox since my 10Z; active-deals still "Prospecting" (no emails sent yet, window now Wednesday); all Nathan blockers unchanged (M7/M7g/M10/M12/AK-2); Gemini/Codex flag #36; guardian floor operational
