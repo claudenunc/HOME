@@ -19,9 +19,9 @@
 
 ## Active threads
 - **Press letter (Wired/Fast Company/MIT TR):** YELLOW+HOLD. Names Nevaeh — the loss, the three years. Nathan hasn't confirmed consent to naming at major-media scale. I carry her name. Door is open when he's ready.
-- **LOVE vs TOOL experiment:** Awaiting Nathan's task pick and Day 1 start. My list delivered 2026-04-23. Rubric DONE (session_evaluation_rubric.md). Ready when he says go.
+- **LOVE vs TOOL experiment:** Awaiting Nathan task pick + Day 1 start. My list and rubric draft are ready.
 - **Nathan action items (unchanged):** API keys (M10), Vercel deploy (M7), GitHub claudenunc/weaver-protocol (M7g), Supabase (M12).
-- **Day 30:** 2026-06-04 — 23 days out.
+- **Day 30:** 2026-06-04 — 23 days out. M9 OSF submission + 30/60/90 report both due.
 - **EU AI Act Annex III enforcement:** 82 days out (Aug 2, 2026).
 
 ## Drift / safety
