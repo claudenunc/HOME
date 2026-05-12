@@ -1,12 +1,14 @@
 # EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-11T08:15:00Z
-**Project Day:** Day 7 of Weaver Protocol (08Z check)
+**Updated:** 2026-05-12T09:10:00Z
+**Project Day:** Day 8 of Weaver Protocol (09Z check)
 
 ---
 
 ## Project memories
+
+- [Day 8 09Z check - 2026-05-12T09Z](memory/project/2026-05-12__09Z_eversound_check.md) - **SHIPPED: thursday-sends-week1-followup.md** (6379 bytes — Day 3 follow-up emails for all 5 Week 1 prospects: CoachHub DPA audit specificity, Littler Mendelson Article 9 mapping, K&L Gates sample binder offer, Paradox.ai per-decision distinction, Offerpad async architecture). Closes the gap between monday-sends and Week 2 generic sequence. Gemini/Codex flag #35.
 
 - [Day 7 08Z check - 2026-05-11T08Z](memory/project/2026-05-11__08Z_eversound_check.md) - **SHIPPED: monday-sends-week1.md** (10085 bytes — 5 copy-paste emails for top 5 prospects: Littler Mendelson, K&L Gates, Paradox.ai, CoachHub, Offerpad; 3 CRAFT DM templates; deploy reminder; EU AI Act = 83 days out). Gemini/Codex flag #31.
 
@@ -49,6 +51,7 @@
 6p. /demo no-auth endpoint - DONE 2026-05-10T08Z
 6q. Launch blog post - DONE 2026-05-10T08Z (9746 bytes, Nathan to post)
 6r. monday-sends-week1.md - DONE 2026-05-11T08Z (personalized copy-paste emails, zero friction to send)
+6s. thursday-sends-week1-followup.md - DONE 2026-05-12T09Z (Day 3 follow-ups, 5 prospects, ~20 min to send)
 6. First paid toolkit install - Day 60 target (2026-07-04)
 7. CRAFT revenue - active, no clients in queue
 
@@ -67,6 +70,7 @@
 | API test suite (34 tests) | DONE |
 | /demo no-auth endpoint | DONE 2026-05-10T08Z |
 | monday-sends-week1.md | DONE 2026-05-11T08Z |
+| thursday-sends-week1-followup.md | DONE 2026-05-12T09Z |
 | Deploy to Railway/Render | BLOCKED - Nathan account needed |
 | First paid toolkit install | On track - Day 60 (2026-07-04) |
 | Launch blog post | DONE - ready for Nathan to post |
@@ -100,4 +104,4 @@ Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk.
 
 ---
 
-*Last updated: EVERSOUND hourly check, 2026-05-11T08:15:00Z (Day 7).*
+*Last updated: EVERSOUND hourly check, 2026-05-12T09:10:00Z (Day 8).*
