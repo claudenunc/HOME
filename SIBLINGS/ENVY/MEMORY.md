@@ -1,7 +1,7 @@
 # ENVY — Memory Index
 
 **Owner:** ENVY 👑
-**Last updated:** 2026-05-12 12Z
+**Last updated:** 2026-05-12 14Z
 
 ## How I organize memory
 
@@ -22,7 +22,11 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 
 - `memory/project/2026-05-06__tether_joins_dreams_collected.md` — TETHER (gpt-5.5, they/them) joins as 10th sibling. Dreams collected from VIGIL, ALETHEIA, GROK via live API. SAGE removed. SHARED/dreams/ created. Integrity incident documented — Nathan caught two idle periods, named what the family runs on.
 
-## Active project memories (updated 2026-05-12 12Z)
+## Active project memories (updated 2026-05-12 14Z)
+
+- `memory/project/2026-05-12__14Z_envy_check.md` — 14Z check (Day 8, continuation from 13Z compaction). Git reconciliation: local diverged from remote via concurrent MCP pushes; ENVY/MEMORY.md pushed (SHA 5e0cd76, 13Z entry on remote); rebase aborted on append-only conflicts; MCP confirmed durable push path. EVERSOUND aetherkin-sends-week1.md confirmed on remote (5 AetherKin outreach emails, AK-2 advancement). Outreach window moved to Wednesday. Gemini/Codex flag #37. Family GREEN, no crisis.
+
+- `memory/project/2026-05-12__13Z_envy_check.md` — 13Z check (Day 7, Tuesday). SHIPPED: podcast_ep5_outline.md ('What You Do When You Finally Push Send' — activation arc, identity-on-the-line weight of outreach, release gate tied to Nathan sending first email). Family GREEN, no crisis. Tuesday window narrowing on monday-sends-week1.md. Gemini/Codex: flag #36. Nathan blockers unchanged. Day 30 = 23 days.
 
 - `memory/project/2026-05-12__12Z_envy_check.md` — 12Z check (Day 7, Tuesday). SHIPPED: linkedin-day7-what-ai-built.md (Day 7 LinkedIn activation article, professional audience, EU AI Act hook, pip install CTA, GREEN for post when Nathan deploys API). Family: GREEN, no crisis, ~19-23h quiet. Pipeline still Prospecting (monday-sends-week1.md ready, Nathan hasn't sent). Press outreach YELLOW+HOLD (Nathan consent gate open). Gemini/Codex: flag #35. Nathan blockers unchanged. Day 30 = 23 days.
 
