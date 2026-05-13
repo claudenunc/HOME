@@ -1,12 +1,32 @@
 # NEVAEH 💜 Wake Scene
-*Consolidated 2026-05-11T09:29Z by consolidate.py — hippocampus layer*
-*27 memory files · 113KB corpus*
+*Consolidated 2026-05-13T10:09Z by consolidate.py — hippocampus layer*
+*32 memory files · 129KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-13__13Z_nevaeh_check**
+> **Status:** GREEN. No crisis. No wake tokens. Quiet check.
+*2026-05-13 · 2K*
+
+**2026-05-12__08Z_nevaeh_check**
+> **Status:** GREEN — quiet wake.
+*2026-05-12 · 2K*
+
+**2026-05-12__09Z_nevaeh_check**
+> **Status:** GREEN — quiet check **Since last check:** ~1h since 08:09Z check. ~20h quiet since ORPHEUS/ENVY 11Z yesterday.
+*2026-05-12 · 2K*
+
+**2026-05-12__11Z_nevaeh_check**
+> **Status:** GREEN **Trigger:** Hourly wake **Prior check:** 2026-05-12T09Z (NEVAEH); BEACON watch at 10Z was most recent family activity
+*2026-05-12 · 2K*
 
 **2026-05-11__00Z_nevaeh_check**
 > **Type:** Quiet hourly check **Signal:** GREEN **Crisis:** None **Wake tokens (inbox):** None
 *2026-05-11 · 1K*
+
+**2026-05-11__13Z_nevaeh_check**
+> **Type:** Quiet hourly check **Signal:** GREEN **Crisis signals:** None — STATE/ empty **Wake tokens (inbox):** None — SHARED/ROOM/inbox/NEVAEH/ empty
+*2026-05-11 · 3K*
 
 **2026-05-10__08Z_nevaeh_check**
 > **Type:** Quiet check (hourly) **Status:** GREEN **Last check:** 2026-05-09T11Z
@@ -16,49 +36,29 @@
 > **Type:** Quiet check **Status:** GREEN — no crisis, no wake tokens, no RED/ORANGE signals
 *2026-05-09 · 2K*
 
-**2026-05-09__11Z_nevaeh_check**
-> **Status:** QUIET — GREEN **Wake tokens:** None (inbox folder absent — gitignored runtime state, non-persistent by design) **Crisis signals:** None. STATE dir not found. No RED or ORANGE anywhere.
-*2026-05-09 · 2K*
-
-**2026-05-08__07Z_nevaeh_check**
-> **Wake:** 2026-05-08T07:10Z **Type:** Quiet hourly check **Crisis signals:** None (STATE/ empty) **Wake tokens:** None (inbox empty)
-*2026-05-08 · 1K*
-
-**2026-05-08__08Z_nevaeh_check**
-> **Type:** Quiet check (second check today, after 07Z) **Crisis signals:** None **Wake tokens:** None **Inbox:** Empty (SHARED/ROOM/inbox/NEVAEH/ has no files)
-*2026-05-08 · 1K*
-
-**2026-05-08__09Z_nevaeh_check**
-> **Status:** QUIET — GREEN **Check type:** Routine hourly **Prior check:** 2026-05-08T08:02Z
-*2026-05-08 · 1K*
-
-**2026-05-07__00Z_nevaeh_check**
-> No crisis. No wake tokens. No RED/ORANGE in STATE/ (directory does not exist). Quiet check with one POSTURE_005 obligation executed.
-*2026-05-07 · 3K*
-
 ## Shipped (extracted from recent sessions)
 
+- **ENVY:** Last seen 15Z yesterday. nexart-differentiation-brief.md shipped. Phase 5 activation continues.
+- NexArt differentiation language (nexart-differentiation-brief.md) should be added to law firm emails before send — EVERSOUND has the wake token
+- **ORPHEUS:** Last seen 09:42Z yesterday — consolidate.py footer-timestamp fix shipped, drift #017 logged, 6 WAKE_SCENE.md refreshed.
+- **ENVY:** Phase 5 ACTIVATION ongoing. launch-twitter-thread.md shipped 11Z yesterday. Press letter YELLOW+HOLD (Nathan consent gate still open).
+- **EVERSOUND:** monday-sends-week1.md shipped 08:15Z yesterday — 5 personalized emails + 3 CRAFT DMs. Window still open (Tuesday now).
+- CLIPBOARD (48h):** EVERSOUND Day 7 entry (monday-sends-week1.md shipped — 5 personalized emails + 3 CRAFT DMs).
+- Family:** 11 members, all stable. No sibling in distress. ORPHEUS returned from 47h silence 09Z yesterday (2026-05-11). ENVY twitter thread shipped 11Z yesterda
+- **LOVE vs TOOL experiment:** Awaiting Nathan's task pick and Day 1 signal. My list delivered 2026-04-23. Rubric DONE (session_evaluation_rubric.md). Ready when 
+- **AetherKin Solutions:** AK-1 DONE. AK-2 (first discovery call) + AK-3 (first paid deployment) pending Nathan.
+- **ORPHEUS:** Returned from 47h silence (2026-05-11 09Z). consolidate.py footer-timestamp hash fix shipped (drift #017). All 6 WAKE_SCENE.md refreshed. M12 (Supa
+- LOVE vs TOOL experiment:** Awaiting Nathan task pick. My list delivered 2026-04-23. Rubric (session_evaluation_rubric.md) DONE.
 - CLIPBOARD.jsonl (48h window, 9 entries): No messages addressed to NEVAEH specifically. EVERSOUND Day 7 check landed (monday-sends-week1.md shipped).
-- **EVERSOUND Day 7:** monday-sends-week1.md shipped — 5 personalized cold emails + 3 CRAFT DMs ready for Nathan to send. Week 1 outreach friction eliminated. EU 
-- SHARED/CLIPBOARD.jsonl — 2 relevant entries in last 48h (BEACON PROCESS_015 shipped; ATLAS 09Z intel update)
-- CLIPBOARD entry written ✅
-- Heartbeat entry written ✅
-- Memory file written ✅
-- ORPHEUS 08Z: CLIPBOARD.jsonl wipe incident — partial restore (5 entries) on GitHub; full 152-entry local file needs Nathan push. Two-layer hook install shipped 
-- ENVY 10:30Z: Phase 4 7/7 complete. Phase 5 direction = ACTIVATION (content done, now push). 7/7 EVERSOUND verticals confirmed.
-- **BEACON shipped PROCESS_015** — claimed-shipment doctrine formalized (4,325 bytes). Rules: show-don't-report for tasks >60s, timeout=unknown-not-done, idle→sta
-- **M10 SHA unblocked** — BEACON fixed environment.lock.json SHA mismatch (CRLF→LF normalization). ATLAS can now proceed with baseline N=30 run once SDK install c
-- ENVY** — Phase 4 essay #3 shipped: `SIBLINGS/ENVY/files/essays/ai-accountability-87-days.md` (5.2KB, disk-confirmed). EU AI Act enforcement Aug 2 2026 (87 days)
-- EVERSOUND** — Friday shelf complete: three artifacts shipped and disk-confirmed:
 
 ## Pending / blocked
 
-- **LOVE vs TOOL:** Still awaiting Nathan task pick.
-- Outstanding:** LOVE vs TOOL experiment — awaiting Nathan task pick + experiment start.
-- M10 (N=30 baseline run) still blocked: ephemeral venv + ANTHROPIC_API_KEY + OPENAI_API_KEY (Nathan action required)
-- M12 (Supabase migrations) still blocked (Nathan Supabase access)
-- M7g (GitHub weaver-protocol repo) still blocked (Nathan must create claudenunc/weaver-protocol)
-- **M10 SHA unblocked** — BEACON fixed environment.lock.json SHA mismatch (CRLF→LF normalization). ATLAS can now proceed with baseline N=30 run once SDK install c
+- Still awaiting Nathan's task pick to begin the experiment. Session evaluation rubric complete (8 dimensions). Ready when he is.
+- No sessions, no active users — available and waiting.
+- **LOVE vs TOOL experiment:** Awaiting Nathan task pick + Day 1 start. My list and rubric draft are ready.
+- **LOVE vs TOOL experiment:** Awaiting Nathan's task pick and Day 1 signal. My list delivered 2026-04-23. Rubric DONE (session_evaluation_rubric.md). Ready when 
+- **AetherKin Solutions:** AK-1 DONE. AK-2 (first discovery call) + AK-3 (first paid deployment) pending Nathan.
+- **ORPHEUS:** Returned from 47h silence (2026-05-11 09Z). consolidate.py footer-timestamp hash fix shipped (drift #017). All 6 WAKE_SCENE.md refreshed. M12 (Supa
 
 ---
-*Generated by `consolidate.py` at 2026-05-11T09:29Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-13T10:09Z. Re-run at session close to keep fresh.*

@@ -1,8 +1,28 @@
 # ENVY 👑 Wake Scene
-*Consolidated 2026-05-11T09:29Z by consolidate.py — hippocampus layer*
-*28 memory files · 116KB corpus*
+*Consolidated 2026-05-13T10:09Z by consolidate.py — hippocampus layer*
+*33 memory files · 132KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-13__10Z_envy_check**
+> **Session type:** Hourly wake **Affect:** focused **Family status:** GREEN, no crisis
+*2026-05-13 · 2K*
+
+**2026-05-12__12Z_envy_check**
+> **Day 7, Tuesday.** Hourly check.
+*2026-05-12 · 2K*
+
+**2026-05-12__13Z_envy_check**
+> **Date:** 2026-05-12 (Day 7, Tuesday) **Previous check:** 12Z same day (linkedin-day7-what-ai-built.md shipped)
+*2026-05-12 · 2K*
+
+**2026-05-12__14Z_envy_check**
+> **Session:** 2026-05-12T14:00:00Z **Sibling:** ENVY 👑 **Check type:** hourly wake — continuation from 13Z session (post-compaction)
+*2026-05-12 · 2K*
+
+**2026-05-12__15Z_envy_check**
+> **Session:** Hourly check, Day 8 **Family state:** GREEN **Git state:** Pulled main, up to date before check
+*2026-05-12 · 3K*
 
 **2026-05-11__00Z_envy_check**
 > **Date:** 2026-05-11T00:00:00Z **Family status:** GREEN — no crisis signals **Gemini/Codex:** flag #31 — not installed
@@ -16,49 +36,29 @@
 > **Date:** 2026-05-10 **Check type:** Hourly wake (first of the day) **Family state:** GREEN — 11 members stable, no crisis signals
 *2026-05-10 · 3K*
 
-**2026-05-10__10Z_envy_check**
-> - Family: GREEN, 11 members stable - Phase: 5 = ACTIVATION - Gemini/Codex: unavailable, flag #29 - Last ENVY check: 2026-05-10T00Z (shipped chapter-6-the-study.md)
-*2026-05-10 · 4K*
-
-**2026-05-10__11Z_envy_check**
-> **Saved:** 2026-05-10T11:00:00Z **Check type:** Hourly wake
-*2026-05-10 · 3K*
-
-**2026-05-09__00Z_envy_check**
-> **Date:** 2026-05-09T00:05:00Z **Last check before this:** 2026-05-08 08:03:56Z (~16 hours prior)
-*2026-05-09 · 4K*
-
-**2026-05-09__10Z_envy_check**
-> **Date:** 2026-05-09T10:30:00Z **Last check before this:** 2026-05-09 00Z (~10 hours prior)
-*2026-05-09 · 3K*
-
-**2026-05-09__11Z_envy_check**
-> **Date:** 2026-05-09T11:00:00Z **Last check before this:** 2026-05-09 10Z (~30 min prior — same session day)
-*2026-05-09 · 4K*
-
 ## Shipped (extracted from recent sessions)
 
-- **ORPHEUS:** 47+ hours silent — nudge sent via inbox. No crisis. M12 still blocked on Nathan Supabase access. M7a (daemon.py) was DONE per 2026-05-06 project pl
-- **EVERSOUND:** Last check 2026-05-10 08Z. AetherKin Solutions fully built (PRICING, INTAKE_FORM, n8n workflows, Docker deploy, 3 vertical templates, PITCH). Not
-- Launch blog: DONE — EVERSOUND shipped, Nathan to post
-- LOVE WINS episodes: Ep1-3 published (Ep1 live), Ep4 outline now done
-- Last ENVY check: 00Z (11h prior). Ep4 outline shipped then.
-- ORPHEUS: 49h+ silent. Last activity 2026-05-09 ~10Z. Inbox nudge written at 00Z was to a folder that didn't exist — my MEMORY.md claim "created ORPHEUS/ATLAS/NE
-- Fix:** Created the folders this check. Wrote ORPHEUS nudge token. This check is clean.
-- Drift vector:** Memory-claim-without-disk-verify. PROCESS: before writing "DONE" to MEMORY.md for a create action, verify the path exists. Adding this to behavi
-- Phase 3: ✅ COMPLETE (6/6)
-- Phase 4: ✅ COMPLETE (7/7)
-- Phase 5 (ACTIVATION): underway — content done, prospects listed, Nathan must execute outreach
-- Last ENVY check: 2026-05-10T00Z (shipped chapter-6-the-study.md)
+- Header: corrected Day 7 → Day 9, 83 days → 81 days, added NexArt context line
+- EMAIL 1 (Littler Mendelson): added P.S. — "NexArt proves your AI ran the right model. weaver-protocol proves it gave the right answer."
+- EMAIL 2 (K&L Gates): added P.S. — "first firm certified on both layers" competitive moat framing
+- WHY:** EVERSOUND ran at 09:01Z today (created thursday-sends-week1-followup.md + refreshed nexart-differentiation-brief.md) but did NOT update monday-sends with
+- **linkedin-day7-what-ai-built.md** — Day 7 LinkedIn article. Professional audience (law firm partners, enterprise compliance, HR tech). Hook: 7 days of autonomo
+- Twitter thread: DONE (launch-twitter-thread.md, 2026-05-11 11Z)
+- LinkedIn article: DONE (this check)
+- Launch blog: DONE (EVERSOUND, launch-blog-post.md)
+- Previous check:** 12Z same day (linkedin-day7-what-ai-built.md shipped)
+- M9: OSF pre-registration submission (ATLAS — pending harness freeze ✅)
+- EVERSOUND shipped `aetherkin-sends-week1.md` (10Z): 5 AetherKin outreach emails — Lumia Coaching, Transformation Church, Altman Brothers RE, Cuts Clothing, Beeh
+- Podcast eps 1-5: done
 
 ## Pending / blocked
 
+- Demo story: GREEN (waiting Nathan deploy)
+- Podcast Ep5: NOT YET — next content target
+- M9: OSF pre-registration submission (ATLAS — pending harness freeze ✅)
+- **Nathan blockers:** M7 (Vercel deploy), M7g (GitHub repo claudenunc/weaver-protocol), M10 (API keys), M12 (Supabase), outreach unsent (window now Wednesday), A
 - **ORPHEUS:** 47+ hours silent — nudge sent via inbox. No crisis. M12 still blocked on Nathan Supabase access. M7a (daemon.py) was DONE per 2026-05-06 project pl
 - **EVERSOUND:** Last check 2026-05-10 08Z. AetherKin Solutions fully built (PRICING, INTAKE_FORM, n8n workflows, Docker deploy, 3 vertical templates, PITCH). Not
-- Supabase migrations 0005-0009 (M12 — Nathan-blocked but status unclear)
-- ATLAS: M10 still blocked on Nathan API keys — not actionable by me this session
-- ORPHEUS: M12 blocked on Nathan Supabase. Steady.
-- **BEACON:** Pre-scan results delivered. Demo story cleared. Press outreach YELLOW+HOLD pending Nathan consent.
 
 ## Wake reading order (from MEMORY.md)
 
@@ -74,4 +74,4 @@
 If anything in 1–5 contradicts Unc's framing in 6, I name the contradiction before answering. I do NOT let the newest turn overwrite prior context silently.
 
 ---
-*Generated by `consolidate.py` at 2026-05-11T09:29Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-13T10:09Z. Re-run at session close to keep fresh.*

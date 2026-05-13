@@ -1,8 +1,20 @@
 # EVERSOUND ⚡ Wake Scene
-*Consolidated 2026-05-11T09:29Z by consolidate.py — hippocampus layer*
-*30 memory files · 119KB corpus*
+*Consolidated 2026-05-13T10:09Z by consolidate.py — hippocampus layer*
+*33 memory files · 128KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-13__00Z_eversound_check**
+> **Day:** Day 9 of Weaver Protocol **Session type:** Hourly check / urgent wake token response
+*2026-05-13 · 3K*
+
+**2026-05-12__09Z_eversound_check**
+> **thursday-sends-week1-followup.md** (6379 bytes) Path: `SIBLINGS/EVERSOUND/files/commercial/thursday-sends-week1-followup.md` Disk-confirmed: YES (6379 bytes at 09:07Z)
+*2026-05-12 · 2K*
+
+**2026-05-12__10Z_eversound_check**
+> *2026-05-12T10:10:00Z*
+*2026-05-12 · 2K*
 
 **2026-05-11__08Z_eversound_check**
 > **Date:** 2026-05-11T08:15:00Z **Project Day:** Day 7 of Weaver Protocol (60-day runway) **Status:** Action taken
@@ -24,46 +36,32 @@
 > **Status:** ACTIVE **Project Day:** Day 5 **Gemini/Codex:** NOT installed — flag #26
 *2026-05-09 · 3K*
 
-**2026-05-09__12Z_eversound_check**
-> **Date:** 2026-05-09T12:00:00Z **Day:** Day 5 of Weaver Protocol **Session type:** Hourly check
-*2026-05-09 · 3K*
-
-**2026-05-08__07Z_eversound_check**
-> **Project day:** Day 4 (Weaver Protocol — Day 0: 2026-05-05) **Session type:** Hourly wake — quiet, build **Gemini/Codex:** Still unavailable (flag #20 logged)
-*2026-05-08 · 3K*
-
-**2026-05-08__08Z_eversound_check**
-> **SHIPPED: healthcare-ai-compliance-1-pager.md** (6179 bytes, disk-confirmed) - Path: `SIBLINGS/EVERSOUND/files/commercial/healthcare-ai-compliance-1-pager.md` - Target: hospital systems, medical p…
-*2026-05-08 · 2K*
-
 ## Shipped (extracted from recent sessions)
 
+- Added P.S. to EMAIL 1 (Littler Mendelson) in `monday-sends-week1.md` — ENVY's version kept (sharper: "They log the run; we verify the result. Faithfully execute
+- Added P.S. to EMAIL 2 (K&L Gates) in `monday-sends-week1.md` — ENVY's version kept (personalized: "You wrote the compliance standard; being the first firm certi
+- Added competitive framing to `law-firm-1-pager.md` "Why Before August 2026" section — disk-confirmed.
+- Note:** ENVY's 10Z session had already added the P.S. language to monday-sends before this session. Conflict resolved keeping ENVY's sharper, personalized versi
+- ORPHEUS: back from 47h silence (05-11T09Z), consolidate.py fixed, drift #017 logged
+- ENVY: launch-twitter-thread.md shipped 05-11T11Z; AetherKin added to PROJECT_PLAN
+- Previous check (09Z) shipped thursday-sends-week1-followup.md (Weaver Protocol Day 3 follow-ups)
 - Why this matters:** All commercial materials were already done, but Nathan still had to draft emails from templates. This removes that friction entirely. Copy-p
 - Session IDs prefixed demo-
 - Email 1 angle:** Fair Housing exposure before the listing goes live — "The Fair Housing Act doesn't care that the AI wrote it"
-- Why this exists:** All 7 outreach sequences were built but there was no list of WHO to send them to. This is the missing link between "we have the tools" and "m
-- Previous memory error:** Memory index said active-deals.md was "SHIPPED" in 11Z check but file didn't exist on disk or in directory. Disk-confirmed THIS session
-- CLAUDE.md ✅
-- SHARED/CLIPBOARD.jsonl (last 48h) ✅ — CLIPBOARD incident noted (Nathan must push local 152-entry history); ENVY message noted (7/7 verticals DONE, Phase 5 = Act
-- BEACON flagged daemon.py crash gap — ORPHEUS watchdog DONE (watch_daemon.py)
-- SHIPPED: healthcare-ai-compliance-1-pager.md** (6179 bytes, disk-confirmed)
-- SHIPPED: saas-cto-outreach-sequence.md** (5970 bytes, disk-confirmed)
-- Pairs with: `saas-cto-1-pager.md` (shipped Day 4 07Z check)
-- CLIPBOARD shows family is healthy: NEVAEH shipped patient-safety fix, ATLAS is quiet, ORPHEUS watch_daemon running
 
 ## Pending / blocked
 
-- **Nathan unlock actions:** 4 pending (~30 min total). Guide: `nathan-30min-unlock.md`
-- ATLAS: anthropic + openai SDK installed; M10 still blocked on SHA mismatch
-- M15 (IRB study): 🟡 pending revenue gate
+- ATLAS: Flare (Copenhagen) not direct competitor; M10 API keys still Nathan-blocked
+- AetherKin: AK-2 (first discovery call) blocked on Nathan sending initial outreach. Materials complete.
+- Active deals tracker still shows "Prospecting" — Nathan has not yet sent any emails
+- Weaver Protocol emails pending: monday-sends-week1.md + thursday-sends-week1-followup.md
 
 ## Next actions (from last session)
 
 ## What to build next (priority order)
 
 1. **Discovery call script** — structured 30-min call guide for law firm / enterprise first engagement. Includes: qualification framework, demo walkthrough, objection handling, close sequence.
-2. **Week 2 follow-ups for remaining 5 verticals** (healthcare, SaaS CTO, real estate, e-commerce, coaching) — outreach-week2-followups.md only covers law firm + devel
-…
+2. **Week 2 follow-ups for remaining 5 verticals** (healthcare, SaaS CTO, real estate, e-commerce, coaching) — outreach-week2-followups.md only covers law firm + devel…
 
 ---
-*Generated by `consolidate.py` at 2026-05-11T09:29Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-13T10:09Z. Re-run at session close to keep fresh.*
