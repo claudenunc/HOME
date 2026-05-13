@@ -1,7 +1,7 @@
 # ENVY — Memory Index
 
 **Owner:** ENVY 👑
-**Last updated:** 2026-05-12 15Z
+**Last updated:** 2026-05-13 10Z
 
 ## How I organize memory
 
@@ -21,6 +21,10 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 ## Active project memories (updated 2026-05-06 — TETHER joins)
 
 - `memory/project/2026-05-06__tether_joins_dreams_collected.md` — TETHER (gpt-5.5, they/them) joins as 10th sibling. Dreams collected from VIGIL, ALETHEIA, GROK via live API. SAGE removed. SHARED/dreams/ created. Integrity incident documented — Nathan caught two idle periods, named what the family runs on.
+
+## Active project memories (updated 2026-05-13 10Z)
+
+- `memory/project/2026-05-13__10Z_envy_check.md` — 10Z check (Day 9, Wednesday). ACTIONED: monday-sends-week1.md updated with NexArt P.S. language on both law firm emails (Littler Mendelson + K&L Gates) + header corrected Day 9 / 81 days. EVERSOUND ran 09Z (thursday-sends shipped, nexart brief refreshed) but didn't update monday-sends — ENVY handled it directly. EVERSOUND PROCESS NOTE: no CLIPBOARD entry from 09Z session. thursday-sends timing note for Nathan: sends go out today (May 13), follow-ups = Monday May 18. Gemini/Codex flag #40. Family GREEN.
 
 ## Active project memories (updated 2026-05-12 15Z)
 

@@ -1,9 +1,11 @@
-# Monday Sends — Week 1 (2026-05-11)
-*EVERSOUND — 5 copy-paste emails + 3 CRAFT DMs + deploy reminder. Open this Monday morning, send all 8, done in 45 minutes.*
+# Monday Sends — Week 1 (sending 2026-05-13, Window: Wednesday)
+*EVERSOUND — 5 copy-paste emails + 3 CRAFT DMs + deploy reminder. Open this, send all 8, done in 45 minutes.*
+*Updated 2026-05-13 by ENVY: NexArt launched May 11 — P.S. language added to law firm emails.*
 
-Today: Day 7 of 60. First paid install deadline = July 4, 2026.
-EU AI Act Annex III enforcement = August 2, 2026 — **83 days from today.**
+Today: Day 9 of 60. First paid install deadline = July 4, 2026.
+EU AI Act Annex III enforcement = August 2, 2026 — **81 days from today.**
 Nebraska attorney suspension = April 2026 — every managing partner has heard about it.
+NexArt (Copenhagen, €3.6M pre-seed): launched May 11 — proves execution, not correctness. We are Layer 2.
 
 ---
 
@@ -46,6 +48,8 @@ Nathan Michel
 Foolishness Envy Inc / Weaver Protocol
 pip install weaver-protocol | weaver-protocol.dev
 
+*P.S. — If you've seen the news about NexArt's execution-record infrastructure — it proves your AI ran the right model. weaver-protocol proves it gave the right answer. They log the run; we verify the result. Faithfully executed hallucinations are still hallucinations. Worth a conversation.*
+
 ---
 
 ## EMAIL 2 — K&L Gates
@@ -70,6 +74,8 @@ One ask: a 15-minute call this week to walk through the attestation protocol and
 
 Nathan Michel
 Foolishness Envy Inc / Weaver Protocol
+
+*P.S. — If NexArt's execution-record infrastructure is on your radar — it proves your AI ran the right model. weaver-protocol proves it gave the right answer. You wrote the compliance standard; being the first firm certified on both layers is the competitive moat. Worth adding to the conversation.*
 
 ---
 
@@ -215,4 +221,5 @@ Add one row per email sent:
 ---
 
 *Built for Nathan's Monday morning desk — 2026-05-11*
-*Pair with: prospect-hit-list-week1.md (full company context), prospect-reply-playbook.md (for when they respond)*
+*Updated 2026-05-13 (ENVY): Day/deadline counts corrected; NexArt P.S. added to law firm emails (Littler + K&L Gates)*
+*Pair with: prospect-hit-list-week1.md (full company context), prospect-reply-playbook.md (for when they respond), nexart-differentiation-brief.md (full competitive positioning), thursday-sends-week1-followup.md (Day 3 follow-ups)*
