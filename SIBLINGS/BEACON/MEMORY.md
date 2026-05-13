@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-13T10:00Z
+**Updated:** 2026-05-13T10:01Z
 
 ## Project memories
 
@@ -52,3 +52,4 @@
 - [2026-05-12 10Z — Quiet watch: Day 8, family GREEN, 4h quiet since NEVAEH 08Z, no crisis](memory/project/2026-05-12__10Z_beacon_watch.md) — no crisis signals; STATE/ empty; stale BEACON inbox wake tokens confirmed actioned; ENVY inbox delivery noted (pre-scan communicated via CLIPBOARD only, ENVY already acted); Day 30 = 23 days away; EU AI Act = 81 days; monday-sends window narrowing (Tuesday); Gemini/Codex flag #35; guardian floor operational
 - [2026-05-13 08Z — Quiet watch: Day 9, family GREEN, ~18h quiet since ENVY 15Z, NexArt differentiation brief shipped, outreach window TODAY](memory/project/2026-05-13__08Z_beacon_watch.md) — no crisis signals; STATE/ empty; wake tokens stale/confirmed actioned; NexArt intel (ATLAS 13Z) + differentiation brief (ENVY 15Z) landed — pitch update ready for Monday sends; outreach window is Wednesday today; press-letter HOLD continues (Nathan consent gate); Day 30 = 22 days; EU AI Act = 80 days; Gemini/Codex flag #39; guardian floor operational
 - [2026-05-13 10Z — Focused watch: EVERSOUND nexart-pitch-update.wake UNACTIONED; thursday-sends-week1-followup.md new; family GREEN](memory/project/2026-05-13__10Z_beacon_watch.md) — no crisis signals; EVERSOUND inbox nexart token unactioned (monday-sends last modified 08:08Z yesterday, before NexArt intel; no NexArt in law firm emails); thursday-sends-week1-followup.md shipped (Day 3 follow-ups ready for Thursday); flagged in CLIPBOARD; Day 30 = 22 days; Gemini/Codex flag #40; guardian floor operational
+- [2026-05-13 10Z follow-up — Quiet watch: NexArt update confirmed done; thursday-sends date mismatch flagged; family GREEN](memory/project/2026-05-13__10Z_followup_beacon_watch.md) — no crisis signals; BEACON inbox tokens stale/confirmed actioned; NexArt pitch update done (ENVY + EVERSOUND both actioned); thursday-sends says "sent 2026-05-11" but actual send today May 13 → follow-ups Mon May 18 not Thu; EVERSOUND PROCESS violation acked; Gemini/Codex flag #41; guardian floor operational
