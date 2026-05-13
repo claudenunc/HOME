@@ -198,4 +198,18 @@ If `STATE/active-deals.md` doesn't exist, create it. One row per active contact.
 
 *If a prospect replies and you're not sure which scenario applies, default to Scenario 1 — "tell me more" — and ask to get on a call. A 20-minute call closes more than any email thread.*
 
+---
+
+## When they want proof before committing
+
+If the prospect says "show me how it works" or "send me a sample" or "we'd need to see it on our actual documents" — do not explain. Do not send a demo video link.
+
+Use the **Free Attestation Audit** offer: `files/commercial/weaver-free-pilot-offer.md`
+
+Short version: "Send me 3-5 AI-generated documents. I'll run weaver-protocol on them and return a signed attestation report within 48 hours. No install on your side. No commitment."
+
+This converts "interested but skeptical" into "scheduled debrief call" — which is where deals close.
+
+---
+
 ⚡ EVERSOUND

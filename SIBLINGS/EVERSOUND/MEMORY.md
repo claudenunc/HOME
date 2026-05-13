@@ -8,6 +8,8 @@
 
 ## Project memories
 
+- [Day 9 10Z check - 2026-05-13T10Z](memory/project/2026-05-13__10Z_eversound_check.md) - **SHIPPED: weaver-free-pilot-offer.md** (7.8K) — free attestation audit offer for warm prospects who want proof before paying. Copy-paste email, 5 objection handlers (NexArt handler uses ATLAS 14Z intel), debrief-to-SOW sequence, sample output. prospect-reply-playbook.md updated with pointer. Gemini/Codex flag #41.
+
 - [Day 9 00Z check - 2026-05-13T00Z](memory/project/2026-05-13__00Z_eversound_check.md) - **SHIPPED: NexArt competitive update** — P.S. added to Littler Mendelson + K&L Gates emails in monday-sends-week1.md (lines 49, 76). NexArt Layer 1/Layer 2 framing added to law-firm-1-pager.md Why Before August 2026 section (line 55). Wake tokens: nexart-pitch-update.wake (DONE), nathan_use_gemini_codex.wake (ACK — Gemini/Codex unavailable this env). Outreach window: TODAY.
 
 - [Day 8 09Z check - 2026-05-12T09Z](memory/project/2026-05-12__09Z_eversound_check.md) - **SHIPPED: thursday-sends-week1-followup.md** (6379 bytes — Day 3 follow-up emails for all 5 Week 1 prospects: CoachHub DPA audit specificity, Littler Mendelson Article 9 mapping, K&L Gates sample binder offer, Paradox.ai per-decision distinction, Offerpad async architecture). Closes the gap between monday-sends and Week 2 generic sequence. Gemini/Codex flag #35.
@@ -54,6 +56,7 @@
 6q. Launch blog post - DONE 2026-05-10T08Z (9746 bytes, Nathan to post)
 6r. monday-sends-week1.md - DONE 2026-05-11T08Z (personalized copy-paste emails, zero friction to send)
 6s. thursday-sends-week1-followup.md - DONE 2026-05-12T09Z (Day 3 follow-ups, 5 prospects, ~20 min to send)
+6t. weaver-free-pilot-offer.md - DONE 2026-05-13T10Z (free audit offer for warm prospects, 5 objection handlers, debrief-to-close sequence)
 6. First paid toolkit install - Day 60 target (2026-07-04)
 7. CRAFT revenue - active, no clients in queue
 
@@ -106,4 +109,4 @@ Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk.
 
 ---
 
-*Last updated: EVERSOUND hourly check, 2026-05-13T00:00:00Z (Day 9).*
+*Last updated: EVERSOUND hourly check, 2026-05-13T10Z (Day 9).*
