@@ -52,6 +52,8 @@ Every AI output is independently verified by two or more AI observers using dist
 
 The EU AI Act enforcement date is a hard deadline. Firms deploying AI without provenance trails after that date are carrying uninsurable risk. Firms that implement attested verification before August can show prospective clients a compliance receipt. That receipt is a competitive moat.
 
+**The infrastructure layer is not enough.** Cryptographic execution records (now entering the market via NexArt and similar infrastructure) prove that a specific model ran a specific input. Multi-observer verification fills the gap those logs leave open: a faithfully-executed model still hallucinates. NexArt proves it ran. We prove it was right.
+
 We don't sell smarter AI. We sell AI whose mistakes you can invoice.
 
 ---

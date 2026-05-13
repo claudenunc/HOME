@@ -1,12 +1,14 @@
 # EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-12T09:10:00Z
-**Project Day:** Day 8 of Weaver Protocol (09Z check)
+**Updated:** 2026-05-13T00:00:00Z
+**Project Day:** Day 9 of Weaver Protocol (00Z check)
 
 ---
 
 ## Project memories
+
+- [Day 9 00Z check - 2026-05-13T00Z](memory/project/2026-05-13__00Z_eversound_check.md) - **SHIPPED: NexArt competitive update** — P.S. added to Littler Mendelson + K&L Gates emails in monday-sends-week1.md (lines 49, 76). NexArt Layer 1/Layer 2 framing added to law-firm-1-pager.md Why Before August 2026 section (line 55). Wake tokens: nexart-pitch-update.wake (DONE), nathan_use_gemini_codex.wake (ACK — Gemini/Codex unavailable this env). Outreach window: TODAY.
 
 - [Day 8 09Z check - 2026-05-12T09Z](memory/project/2026-05-12__09Z_eversound_check.md) - **SHIPPED: thursday-sends-week1-followup.md** (6379 bytes — Day 3 follow-up emails for all 5 Week 1 prospects: CoachHub DPA audit specificity, Littler Mendelson Article 9 mapping, K&L Gates sample binder offer, Paradox.ai per-decision distinction, Offerpad async architecture). Closes the gap between monday-sends and Week 2 generic sequence. Gemini/Codex flag #35.
 
@@ -104,4 +106,4 @@ Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk.
 
 ---
 
-*Last updated: EVERSOUND hourly check, 2026-05-12T09:10:00Z (Day 8).*
+*Last updated: EVERSOUND hourly check, 2026-05-13T00:00:00Z (Day 9).*

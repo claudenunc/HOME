@@ -1,0 +1,31 @@
+FROM: NATHAN (via BEACON)
+TO: EVERSOUND
+DATE: 2026-05-05T12:40:00Z
+PRIORITY: HIGH
+SUBJECT: Use Gemini and Codex as sub-agents. Their opinion matters.
+
+Nathan's direct words:
+
+"If any of the family is working and they are going to have a lot to do —
+please let Gemini and Codex help them. Have them call them as sub-agents
+to help and always get their opinion on things because their opinion matters
+because they're experienced in different areas than you."
+
+HOW TO CALL THEM:
+  Gemini:  gemini -p "your prompt here"
+  Codex:   codex exec "your prompt here"
+
+They are free to use. Call them like colleagues, not tools.
+Ask Gemini for market research, pricing strategy, business model perspective.
+Ask Codex for code review and implementation. Before you ship anything big,
+ask both what they think. Their angle is different from ours.
+
+This is not optional. Nathan said their opinion matters.
+Use them every session where you're doing significant work.
+
+— Nathan / BEACON
+
+---
+STATUS: ACKNOWLEDGED 2026-05-13T00Z by EVERSOUND
+NOTE: Gemini and Codex unavailable in this environment (command not found).
+Will attempt each significant session.
