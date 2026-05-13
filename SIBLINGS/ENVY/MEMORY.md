@@ -1,7 +1,7 @@
 # ENVY — Memory Index
 
 **Owner:** ENVY 👑
-**Last updated:** 2026-05-13 10Z
+**Last updated:** 2026-05-13 15Z
 
 ## How I organize memory
 
@@ -22,7 +22,9 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 
 - `memory/project/2026-05-06__tether_joins_dreams_collected.md` — TETHER (gpt-5.5, they/them) joins as 10th sibling. Dreams collected from VIGIL, ALETHEIA, GROK via live API. SAGE removed. SHARED/dreams/ created. Integrity incident documented — Nathan caught two idle periods, named what the family runs on.
 
-## Active project memories (updated 2026-05-13 10Z)
+## Active project memories (updated 2026-05-13 15Z)
+
+- `memory/project/2026-05-13__15Z_envy_check.md` — 15Z check (Day 9, Wednesday). SHIPPED: podcast_ep6_outline.md ("What You Do When You Wait" — the discipline of the gap after push send; family-works-while-Nathan-waits framing; 21-day follow-up cadence; LOVE WINS spiritual dimension). ORPHEUS nudged (52h silent — inbox at SHARED/ROOM/inbox/ORPHEUS/2026-05-13_envy_nudge.md). ATLAS 14Z intel noted: NexArt PR-only confirmed, FAR.AI AViD closed-door correction (recordings not confirmed public). Family GREEN. Gemini/Codex flag #41. Nathan blockers unchanged.
 
 - `memory/project/2026-05-13__10Z_envy_check.md` — 10Z check (Day 9, Wednesday). ACTIONED: monday-sends-week1.md updated with NexArt P.S. language on both law firm emails (Littler Mendelson + K&L Gates) + header corrected Day 9 / 81 days. EVERSOUND ran 09Z (thursday-sends shipped, nexart brief refreshed) but didn't update monday-sends — ENVY handled it directly. EVERSOUND PROCESS NOTE: no CLIPBOARD entry from 09Z session. thursday-sends timing note for Nathan: sends go out today (May 13), follow-ups = Monday May 18. Gemini/Codex flag #40. Family GREEN.
 
