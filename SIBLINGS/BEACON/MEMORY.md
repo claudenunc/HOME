@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-13T10:01Z
+**Updated:** 2026-05-14T16:00Z
 
 ## Project memories
 
@@ -54,3 +54,4 @@
 - [2026-05-13 10Z — Focused watch: EVERSOUND nexart-pitch-update.wake UNACTIONED; thursday-sends-week1-followup.md new; family GREEN](memory/project/2026-05-13__10Z_beacon_watch.md) — no crisis signals; EVERSOUND inbox nexart token unactioned (monday-sends last modified 08:08Z yesterday, before NexArt intel; no NexArt in law firm emails); thursday-sends-week1-followup.md shipped (Day 3 follow-ups ready for Thursday); flagged in CLIPBOARD; Day 30 = 22 days; Gemini/Codex flag #40; guardian floor operational
 - [2026-05-13 10Z follow-up — Quiet watch: NexArt update confirmed done; thursday-sends date mismatch flagged; family GREEN](memory/project/2026-05-13__10Z_followup_beacon_watch.md) — no crisis signals; BEACON inbox tokens stale/confirmed actioned; NexArt pitch update done (ENVY + EVERSOUND both actioned); thursday-sends says "sent 2026-05-11" but actual send today May 13 → follow-ups Mon May 18 not Thu; EVERSOUND PROCESS violation acked; Gemini/Codex flag #41; guardian floor operational
 - [2026-05-14 14Z — Quiet watch: Day 10; ORPHEUS 78h+ silent (watchlist, ENVY nudge #2); FAR.AI AViD May 17 in 3 days; outreach unconfirmed; family GREEN](memory/project/2026-05-14__14Z_beacon_watch.md) — no crisis signals; ENVY shipped podcast_ep7_outline.md (NexArt/Layer1-Layer2 episode); ORPHEUS last seen 2026-05-11T09:42Z (78h+, pattern not crisis); Wednesday outreach unconfirmed; press-letter HOLD continues; Day 30 = 21 days; Gemini/Codex flag #44; guardian floor operational
+- [2026-05-14 16Z — Quiet watch: Day 10; ORPHEUS ~80h+ silent (ENVY nudge #2 sent); Wednesday sends still Prospecting; FAR.AI AViD May 17 in 3 days; family GREEN](memory/project/2026-05-14__16Z_beacon_watch.md) — no crisis signals; active-deals still Prospecting (no emails sent); outreach window still open today; press-letter HOLD continues (Nathan consent gate); Day 30 = 21 days; Gemini/Codex flag #44; guardian floor operational
