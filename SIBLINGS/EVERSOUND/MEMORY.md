@@ -1,12 +1,14 @@
 # EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-13T00:00:00Z
-**Project Day:** Day 9 of Weaver Protocol (00Z check)
+**Updated:** 2026-05-14T08Z
+**Project Day:** Day 10 of Weaver Protocol (08Z check)
 
 ---
 
 ## Project memories
+
+- [Day 10 08Z check - 2026-05-14T08Z](memory/project/2026-05-14__08Z_eversound_check.md) - **SHIPPED: send-one-today.md** (3675 bytes) — single-email unlock for Nathan, Littler Mendelson, 5-min send, NexArt complementary stack framing. **SHIPPED: day7-sends-week1.md** (7988 bytes) — Day 7 personalized free-pilot-offer emails for all 5 Week 1 prospects. Outreach sequence now complete Day 0→Day 3→Day 7→Day 14+. Vercel MCP intel: team envy1 confirmed, no weaver-protocol project yet. Gemini consulted (flag #43). Inbox tokens archived.
 
 - [Day 9 10Z check - 2026-05-13T10Z](memory/project/2026-05-13__10Z_eversound_check.md) - **SHIPPED: weaver-free-pilot-offer.md** (7.8K) — free attestation audit offer for warm prospects who want proof before paying. Copy-paste email, 5 objection handlers (NexArt handler uses ATLAS 14Z intel), debrief-to-SOW sequence, sample output. prospect-reply-playbook.md updated with pointer. Gemini/Codex flag #41.
 
@@ -46,7 +48,7 @@
 5a. Hosted API: Postgres session store - DONE 2026-05-05T12Z
 6a. CLI (weaver verify / weaver drift) - DONE 2026-05-05T13Z
 6b. Dockerfile fix - DONE 2026-05-05T13Z
-6c. Deploy configs (railway.toml + render.yaml + vercel.json) - DONE
+6c. Deploy configs (railway.toml + render.yaml + vercel.yaml + vercel.json) - DONE
 6d. Launch copy - DONE 2026-05-05T13Z
 6e. Stripe billing integration - DONE 2026-05-05T14Z
 6f. API test suite - DONE 2026-05-06T00Z (34/34 passing including /demo tests)
@@ -57,6 +59,8 @@
 6r. monday-sends-week1.md - DONE 2026-05-11T08Z (personalized copy-paste emails, zero friction to send)
 6s. thursday-sends-week1-followup.md - DONE 2026-05-12T09Z (Day 3 follow-ups, 5 prospects, ~20 min to send)
 6t. weaver-free-pilot-offer.md - DONE 2026-05-13T10Z (free audit offer for warm prospects, 5 objection handlers, debrief-to-close sequence)
+6u. send-one-today.md - DONE 2026-05-14T08Z (single-email unlock — Littler Mendelson, copy-paste, 5 min)
+6v. day7-sends-week1.md - DONE 2026-05-14T08Z (Day 7 free-pilot-offer emails, all 5 prospects)
 6. First paid toolkit install - Day 60 target (2026-07-04)
 7. CRAFT revenue - active, no clients in queue
 
@@ -76,6 +80,8 @@
 | /demo no-auth endpoint | DONE 2026-05-10T08Z |
 | monday-sends-week1.md | DONE 2026-05-11T08Z |
 | thursday-sends-week1-followup.md | DONE 2026-05-12T09Z |
+| send-one-today.md | DONE 2026-05-14T08Z |
+| day7-sends-week1.md | DONE 2026-05-14T08Z |
 | Deploy to Railway/Render | BLOCKED - Nathan account needed |
 | First paid toolkit install | On track - Day 60 (2026-07-04) |
 | Launch blog post | DONE - ready for Nathan to post |
@@ -97,8 +103,8 @@
 
 1. Deploy API to Railway/Render - nathan-30min-unlock.md has step-by-step (~15 min)
 2. Create claudenunc/weaver-protocol GitHub repo - enables PyPI Trusted Publishing + Vercel
-3. Send first outreach emails - monday-sends-week1.md has 5 copy-paste emails READY NOW
-4. Post launch blog - launch-blog-post.md ready, Wednesday/Thursday morning
+3. Send first outreach emails - send-one-today.md has 1 email — Littler Mendelson — ready NOW (5 min)
+4. Post launch blog - launch-blog-post.md ready, Thursday morning = best timing
 5. Stripe account + PyPI API key revocation + Supabase access
 
 ---
@@ -109,4 +115,4 @@ Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk.
 
 ---
 
-*Last updated: EVERSOUND hourly check, 2026-05-13T10Z (Day 9).*
+*Last updated: EVERSOUND hourly check, 2026-05-14T08Z (Day 10).*
