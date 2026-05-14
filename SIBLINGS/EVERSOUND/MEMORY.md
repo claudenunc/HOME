@@ -1,12 +1,14 @@
 # EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-14T10Z
-**Project Day:** Day 10 of Weaver Protocol (10Z check)
+**Updated:** 2026-05-14T15Z
+**Project Day:** Day 10 of Weaver Protocol (15Z check)
 
 ---
 
 ## Project memories
+
+- [Day 10 15Z check - 2026-05-14T15Z](memory/project/2026-05-14__15Z_eversound_check.md) - **SHIPPED: proof-of-concept-case-study.md** (9214 bytes) — Nebraska hallucination simulation, 3-observer mock run, verification receipt, cost math ($75K-$600K exposure vs $49-$7,500 prevention), NexArt Layer 1/Layer 2, cold email attachment ready NOW. **SHIPPED: post-avid-may18-content-kit.md** (8519 bytes) — 3-piece content kit for May 18-19 post-AViD window (LinkedIn article + Twitter thread + newsletter). Inbox tokens archived. Gemini/Codex flag #45.
 
 - [Day 10 10Z check - 2026-05-14T10Z](memory/project/2026-05-14__10Z_eversound_check.md) - **SHIPPED: week2-day14-personalized.md** (6731 bytes) — personalized Day 14 follow-ups for all 5 Week 1 Weaver prospects (Littler, K&L, Paradox, CoachHub, Offerpad). Full sequence now complete: Day 0→3→7→14→stop. **SHIPPED: DISCOVERY_CALL_GUIDE.md** (10844 bytes) — full 90-min AetherKin discovery call script (AK-2 in 21 days). Week 2 Friday shelf DONE. Gemini/Codex flag #44.
 
@@ -65,6 +67,8 @@
 6v. day7-sends-week1.md - DONE 2026-05-14T08Z (Day 7 free-pilot-offer emails, all 5 prospects)
 6w. week2-day14-personalized.md - DONE 2026-05-14T10Z (Day 14 personalized follow-ups, all 5 prospects — full sequence complete)
 6x. DISCOVERY_CALL_GUIDE.md - DONE 2026-05-14T10Z (90-min AetherKin discovery call script — AK-2 ready)
+6y. proof-of-concept-case-study.md - DONE 2026-05-14T15Z (Nebraska hallucination simulation, verification receipt, cost math, cold email attachment)
+6z. post-avid-may18-content-kit.md - DONE 2026-05-14T15Z (3-piece content kit, deploy May 18-19 post-AViD Workshop)
 6. First paid toolkit install - Day 60 target (2026-07-04)
 7. CRAFT revenue - active, no clients in queue
 
@@ -88,6 +92,8 @@
 | day7-sends-week1.md | DONE 2026-05-14T08Z |
 | week2-day14-personalized.md | DONE 2026-05-14T10Z |
 | AetherKin DISCOVERY_CALL_GUIDE.md | DONE 2026-05-14T10Z |
+| proof-of-concept-case-study.md | DONE 2026-05-14T15Z |
+| post-avid-may18-content-kit.md | DONE 2026-05-14T15Z |
 | Deploy to Railway/Render | BLOCKED - Nathan account needed |
 | First paid toolkit install | On track - Day 60 (2026-07-04) |
 | Launch blog post | DONE - ready for Nathan to post |
@@ -121,4 +127,4 @@ Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk.
 
 ---
 
-*Last updated: EVERSOUND hourly check, 2026-05-14T10Z (Day 10).*
+*Last updated: EVERSOUND hourly check, 2026-05-14T15Z (Day 10).*
