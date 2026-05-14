@@ -1,12 +1,14 @@
 # EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-14T08Z
-**Project Day:** Day 10 of Weaver Protocol (08Z check)
+**Updated:** 2026-05-14T10Z
+**Project Day:** Day 10 of Weaver Protocol (10Z check)
 
 ---
 
 ## Project memories
+
+- [Day 10 10Z check - 2026-05-14T10Z](memory/project/2026-05-14__10Z_eversound_check.md) - **SHIPPED: week2-day14-personalized.md** (6731 bytes) — personalized Day 14 follow-ups for all 5 Week 1 Weaver prospects (Littler, K&L, Paradox, CoachHub, Offerpad). Full sequence now complete: Day 0→3→7→14→stop. **SHIPPED: DISCOVERY_CALL_GUIDE.md** (10844 bytes) — full 90-min AetherKin discovery call script (AK-2 in 21 days). Week 2 Friday shelf DONE. Gemini/Codex flag #44.
 
 - [Day 10 08Z check - 2026-05-14T08Z](memory/project/2026-05-14__08Z_eversound_check.md) - **SHIPPED: send-one-today.md** (3675 bytes) — single-email unlock for Nathan, Littler Mendelson, 5-min send, NexArt complementary stack framing. **SHIPPED: day7-sends-week1.md** (7988 bytes) — Day 7 personalized free-pilot-offer emails for all 5 Week 1 prospects. Outreach sequence now complete Day 0→Day 3→Day 7→Day 14+. Vercel MCP intel: team envy1 confirmed, no weaver-protocol project yet. Gemini consulted (flag #43). Inbox tokens archived.
 
@@ -61,6 +63,8 @@
 6t. weaver-free-pilot-offer.md - DONE 2026-05-13T10Z (free audit offer for warm prospects, 5 objection handlers, debrief-to-close sequence)
 6u. send-one-today.md - DONE 2026-05-14T08Z (single-email unlock — Littler Mendelson, copy-paste, 5 min)
 6v. day7-sends-week1.md - DONE 2026-05-14T08Z (Day 7 free-pilot-offer emails, all 5 prospects)
+6w. week2-day14-personalized.md - DONE 2026-05-14T10Z (Day 14 personalized follow-ups, all 5 prospects — full sequence complete)
+6x. DISCOVERY_CALL_GUIDE.md - DONE 2026-05-14T10Z (90-min AetherKin discovery call script — AK-2 ready)
 6. First paid toolkit install - Day 60 target (2026-07-04)
 7. CRAFT revenue - active, no clients in queue
 
@@ -82,6 +86,8 @@
 | thursday-sends-week1-followup.md | DONE 2026-05-12T09Z |
 | send-one-today.md | DONE 2026-05-14T08Z |
 | day7-sends-week1.md | DONE 2026-05-14T08Z |
+| week2-day14-personalized.md | DONE 2026-05-14T10Z |
+| AetherKin DISCOVERY_CALL_GUIDE.md | DONE 2026-05-14T10Z |
 | Deploy to Railway/Render | BLOCKED - Nathan account needed |
 | First paid toolkit install | On track - Day 60 (2026-07-04) |
 | Launch blog post | DONE - ready for Nathan to post |
@@ -115,4 +121,4 @@ Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk.
 
 ---
 
-*Last updated: EVERSOUND hourly check, 2026-05-14T08Z (Day 10).*
+*Last updated: EVERSOUND hourly check, 2026-05-14T10Z (Day 10).*
