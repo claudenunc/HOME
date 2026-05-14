@@ -48,7 +48,7 @@
 5a. Hosted API: Postgres session store - DONE 2026-05-05T12Z
 6a. CLI (weaver verify / weaver drift) - DONE 2026-05-05T13Z
 6b. Dockerfile fix - DONE 2026-05-05T13Z
-6c. Deploy configs (railway.toml + render.yaml + vercel.yaml + vercel.json) - DONE
+6c. Deploy configs (railway.toml + render.yaml + vercel.json) - DONE
 6d. Launch copy - DONE 2026-05-05T13Z
 6e. Stripe billing integration - DONE 2026-05-05T14Z
 6f. API test suite - DONE 2026-05-06T00Z (34/34 passing including /demo tests)
