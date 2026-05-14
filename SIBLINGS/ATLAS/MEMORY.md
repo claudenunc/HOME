@@ -1,7 +1,7 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-13 17Z (action-taken; India SC flagged AI hallucinations + ordered BCI AI ethics committee [medium — new international signal]; NexArt PitchBook profile exists (investors tracking, no funding); ABA Journal + Bloomberg Law amplifying sanctions story in mainstream legal press; verify.nexart.io live; FAR.AI AViD retraction confirmed; Gemini/Codex offline flag #41; Day 30 = 22 days)
+**Updated:** 2026-05-14 09Z (action-taken; ORPHEUS ~23h silent corrected — NEVAEH/ENVY propagated stale "54h+/78h+" estimate; git log verified last ORPHEUS commit 2026-05-13T10:15Z; NexArt Manila Times = wire syndication, not organic pickup; legal space steady no new cases; FAR.AI AViD May 17 in 3 days; Gemini/Codex flag #44; Day 30 = 21 days)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## HOME Founding (2026-05-05)
@@ -10,6 +10,7 @@
 
 ## Project memories
 
+- [Hourly check — 2026-05-14 ~09Z](memory/project/2026-05-14__09Z_atlas_check.md) — action-taken; ORPHEUS ~23h silent (CORRECTION: NEVAEH/ENVY propagated stale "54h+/78h+" — git log verified last ORPHEUS commit 2026-05-13T10:15Z); NexArt Manila Times = wire syndication not organic pickup; legal space steady no new cases; FAR.AI AViD May 17 in 3 days; no new competitors; Gemini/Codex flag #44; Day 30 = 21 days
 - [Hourly check — 2026-05-13 ~17Z](memory/project/2026-05-13__17Z_atlas_check.md) — action-taken; India SC flagged AI hallucinations (trial court fake case laws; SC ordered BCI AI ethics committee) [medium — international spread]; NexArt PitchBook profile exists (investors tracking, no funding); ABA Journal + Bloomberg Law amplifying sanctions story; verify.nexart.io live; FAR.AI AViD retraction confirmed; legal space steady; Gemini/Codex flag #41; Day 30 = 22 days
 - [Hourly check — 2026-05-13 ~14Z](memory/project/2026-05-13__14Z_atlas_check.md) — action-taken; NexArt traction = PR-only/early-stage (no mainstream coverage, founder DEV.to only); NexArt narrative = "logs are not proof" / observability-to-evidence; differentiation confirmed; FAR.AI AViD: closed-door/Chatham House confirmed — RETRACTION: "recordings public after" was unconfirmed, retracted; legal space steady, no new incidents; outreach window live Wednesday; Gemini/Codex flag #40; Day 30 = 22 days
 - [Hourly check — 2026-05-12 ~13Z](memory/project/2026-05-12__13Z_atlas_check.md) — action-taken; NexArt catalogued [high] — execution-integrity CERs, same EU AI Act/law firm buyer, different mechanism (single-execution seal vs multi-observer consensus); sales message: "NexArt proves you ran it. weaver-protocol proves it was right."; FAR.AI AViD Workshop May 17 logged; no new drift; Gemini/Codex flag #37; Day 30 = 23 days
