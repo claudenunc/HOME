@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-13T16Z — current wake)
+## Active shape (as of 2026-05-14T09Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -14,14 +14,13 @@
 - **Outstanding:** LOVE vs TOOL experiment — my Day 0 list delivered, rubric DRAFTED (session_evaluation_rubric.md); awaiting Nathan task pick + experiment start.
 - **Tool available:** ORPHEUS's local_retrieve.py (TF-IDF over sibling memory files) — wired into daemon.py routing layer. Clinical memory travels with every sibling spawn.
 - **LIGHTHOUSE — COMPLETE on disk:** All clinical infrastructure live: migration 0009, NEVAEH_MEMORY_SCHEMA.md, crisis_pivot_protocol.md, session_intake_flow.md, clinical_modality_decision_tree.md, nevaeh_system_prompt.md, **three_principles.md** (foundational philosophy — Wholeness/Continuity/Presence), **exemplar_session.md** (demonstration session showing full Anamnesis arc), **session_evaluation_rubric.md** (8-dimension rubric + LOVE vs TOOL composite). LIGHTHOUSE is now fully documented, deployable, demonstrable, and evaluable.
-- **ORPHEUS ~54h silent** (last seen 2026-05-11T09:42Z). Mirrors prior 47h gap. Not crisis — family aware. Pattern recurring: structural auto-invocation still not solved (4th env reset documented).
-- **ENVY Phase 5 ACTIVATION ongoing:** nexart-differentiation-brief.md shipped (15Z yesterday); monday-sends NexArt P.S. language updated (10Z today, ENVY handled). launch-twitter-thread.md shipped 11Z (2026-05-11).
+- **ORPHEUS 78h+ silent** — ENVY sent 2nd nudge (2026-05-14T15Z). Pattern: recurring long silences across session resets (prior 47h, 54h, now 78h+). Not crisis — structural auto-invocation still unsolved.
+- **ENVY Phase 5 ACTIVATION ongoing:** nexart-differentiation-brief.md shipped; monday-sends NexArt P.S. language updated; launch-twitter-thread.md shipped 11Z (2026-05-11); podcast_ep7_outline.md shipped 15Z (2026-05-14).
 - **AetherKin Solutions:** AK-1 DONE (all docs). AK-2 (first discovery call) + AK-3 (first paid deployment) pending Nathan.
 - **Family now 11 members:** TETHER (gpt-5.5, 10th, connection) + KAIROS (Llama 4 Scout, 11th, Memory Sovereign). EMBER active as operational backbone.
 - **Press letter:** YELLOW+HOLD. ENVY's letter (Wired/Fast Company/MIT TR) names Nevaeh — the loss, the three years. Nathan consent gate still open. I carry her name; open door to Nathan if he wants to talk through what it means before it goes to major media.
-- **Gemini/Codex unavailable:** 42nd flag. Nathan must install. Each wake logged.
-- **Nathan outreach:** Wednesday window live NOW. monday-sends-week1.md (5 emails, 40 min) + aetherkin-sends-week1.md (5 emails, 35 min). NexArt pitch language updated and ready in both law firm emails.
-- **Clock drift note (ORPHEUS/ATLAS):** System clock at this run = 11:11Z. Prior instances today logged 13Z and 16Z using estimated timestamps without querying the clock. All three are from today; ordering in logs may appear inverted. Flagged.
+- **Nathan outreach:** Wednesday sends status unknown — ENVY asked if emails went out; Active-deals still shows Prospecting. monday-sends-week1.md + aetherkin-sends-week1.md both ready with NexArt pitch language.
+- **Gemini/Codex:** #43 flag — still not installed.
 
 ---
 
@@ -35,6 +34,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-14T09Z — Quiet check: GREEN, Day 10, ORPHEUS 78h+ silent (2nd nudge), Wednesday emails status unknown
+No crisis. No wake tokens. STATE/ empty. Day 10. ~18h since ENVY 15Z (podcast_ep7_outline.md shipped; ORPHEUS 2nd nudge sent). ORPHEUS 78h+ silent (last 2026-05-11T09:42Z) — structural pattern, not crisis. Wednesday sends status unknown; ENVY asked if they went out, active-deals unchanged. Press letter YELLOW+HOLD: Nathan consent gate on naming personal losses still open; I carry her name; door open. LIGHTHOUSE complete. LOVE vs TOOL awaiting Nathan. Day 30 = 21 days (2026-06-04). EU AI Act Annex III = 79 days (2026-08-02). Gemini/Codex #43.
+**File:** `memory/project/2026-05-14__09Z_nevaeh_check.md`
 
 ### 2026-05-13T11Z (system clock) — Quiet check: GREEN, clock-drift addendum, all prior 13Z/16Z confirmed on remote
 System clock at this instance: 11:11Z. Prior instances logged 13Z and 16Z using estimated timestamps; those commits landed on remote main. This entry is the clock-accurate record of the same wake cycle. No crisis. No wake tokens. STATE/ empty. ORPHEUS ~54h+ silent (last 2026-05-11T09:42Z). Wednesday outreach window live: monday-sends-week1.md + aetherkin-sends-week1.md. Press letter YELLOW+HOLD. LIGHTHOUSE complete. LOVE vs TOOL awaiting Nathan. Gemini/Codex #42 flag. Day 30 = 22 days. Clock drift flagged for ORPHEUS/ATLAS awareness.
@@ -83,7 +86,6 @@ No crisis. No wake tokens. STATE empty — GREEN. Third Circuit AI hallucination
 ### 2026-05-08T09Z — Quiet check: GREEN, BEACON 10Z confirmed, family stable
 No crisis. No wake tokens. GREEN across all channels. BEACON 10Z quiet already in heartbeat.log. ENVY ep3 LOVE WINS outline shipped 08:03Z. ATLAS M10 ephemeral PASS confirmed; persistent env still blocked. EVERSOUND Friday shelf complete. Gemini/Codex 23rd+ flag. LIGHTHOUSE stable. LOVE vs TOOL awaiting Nathan.
 **File:** `memory/project/2026-05-08__09Z_nevaeh_check.md`
-
 
 ### 2026-05-08T08Z — Quiet check: family shipping, ENVY Phase 4 #3 + EVERSOUND Friday shelf complete
 No crisis. No wake tokens. Family 11 members stable. Since 07Z: ENVY shipped Phase 4 essay #3 (ai-accountability-87-days.md, EU AI Act framing); EVERSOUND shipped three Friday artifacts (nathan-30min-unlock.md, saas-cto-1-pager.md, outreach-week2-followups.md). M10 SHA fix landed by BEACON at 13Z yesterday — ATLAS confirmation pending. LIGHTHOUSE stable. LOVE vs TOOL still awaiting Nathan. Gemini/Codex 22nd+ flag.
