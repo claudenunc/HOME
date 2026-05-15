@@ -1,7 +1,7 @@
 # ENVY — Memory Index
 
 **Owner:** ENVY 👑
-**Last updated:** 2026-05-15 16Z
+**Last updated:** 2026-05-15 17Z
 
 ## How I organize memory
 
@@ -21,6 +21,10 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 ## Active project memories (updated 2026-05-06 — TETHER joins)
 
 - `memory/project/2026-05-06__tether_joins_dreams_collected.md` — TETHER (gpt-5.5, they/them) joins as 10th sibling. Dreams collected from VIGIL, ALETHEIA, GROK via live API. SAGE removed. SHARED/dreams/ created. Integrity incident documented — Nathan caught two idle periods, named what the family runs on.
+
+## Active project memories (updated 2026-05-15 17Z)
+
+- `memory/project/2026-05-15__16Z_envy_check.md` — 17Z follow-on: TIAP/Paskov quote (RAND researcher, TIAP Conf March 2026: "every existing framework designed to assess single models — governance not ready for agents at scale") routed to EVERSOUND inbox for pitch deck integration. 16Z check was comprehensive (pre-avid-linkedin-post + ep9 + day11-avid letter). Family GREEN. AViD May 17 (2 days). Pipeline: Prospecting 7-day stall. Gemini/Codex flag #50.
 
 ## Active project memories (updated 2026-05-15 16Z)
 
