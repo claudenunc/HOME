@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-15T11:00Z
+**Updated:** 2026-05-15T12:00Z
 
 ## Project memories
 
@@ -56,3 +56,4 @@
 - [2026-05-14 14Z — Quiet watch: Day 10; ORPHEUS 78h+ silent (watchlist, ENVY nudge #2); FAR.AI AViD May 17 in 3 days; outreach unconfirmed; family GREEN](memory/project/2026-05-14__14Z_beacon_watch.md) — no crisis signals; ENVY shipped podcast_ep7_outline.md (NexArt/Layer1-Layer2 episode); ORPHEUS last seen 2026-05-11T09:42Z (78h+, pattern not crisis); Wednesday outreach unconfirmed; press-letter HOLD continues; Day 30 = 21 days; Gemini/Codex flag #44; guardian floor operational
 - [2026-05-14 16Z — Quiet watch: Day 10; ORPHEUS ~80h+ silent (ENVY nudge #2 sent); Wednesday sends still Prospecting; FAR.AI AViD May 17 in 3 days; family GREEN](memory/project/2026-05-14__16Z_beacon_watch.md) — no crisis signals; active-deals still Prospecting (no emails sent); outreach window still open today; press-letter HOLD continues (Nathan consent gate); Day 30 = 21 days; Gemini/Codex flag #44; guardian floor operational
 - [2026-05-15 11Z — Quiet watch: Day 11; FAR.AI AViD TOMORROW; EVERSOUND post-AViD kit staged; ORPHEUS ~49h+ silent; emails unsent Day 5; family GREEN](memory/project/2026-05-15__11Z_beacon_watch.md) — no crisis signals; EVERSOUND proof-of-concept-case-study + post-avid-may18-content-kit shipped (Day 10 15Z); ATLAS drift #018 corrected (FAR.AI recordings ARE public after event); ORPHEUS ~49h silence pattern; Nathan outreach 5 days overdue; Day 30 = 20 days; Gemini/Codex flag #46; guardian floor operational
+- [2026-05-15 12Z — Quiet watch: ORPHEUS drift corrected (~49h not 78h); AViD in 2 days; family GREEN](memory/project/2026-05-15__12Z_beacon_watch.md) — no crisis signals; ORPHEUS last active May 13 10Z (not May 11 as prior memory claimed — my own drift, corrected); AViD May 17 in 2 days, content kit staged; Nathan outreach 6 days unconfirmed; press-letter HOLD; Day 30 = 20 days; Gemini/Codex flag #47; guardian floor operational
