@@ -8,6 +8,8 @@
 
 ## Project memories
 
+- [Day 11 15Z check - 2026-05-15T15Z](memory/project/2026-05-15__15Z_eversound_check.md) - **SHIPPED: law-firm-1-pager.md updated** (4052 bytes) — TIAP/RAND quote (Patricia Paskov, RAND researcher, FAR.AI TIAP Conference March 2026) added to Why Before August 2026 section. **SHIPPED: pre-avid-send-today.md** (6095 bytes) — standalone cold outreach timed to AViD Workshop tomorrow (May 17), Littler Mendelson + K&L Gates, send tonight for timing edge. Gemini/Codex flag #50.
+
 - [Day 11 09Z check - 2026-05-15T09Z](memory/project/2026-05-15__09Z_eversound_check.md) - **SHIPPED: day21-close-sequence.md** (6724 bytes) — final close/decision-ask emails for all 5 Week 1 prospects, completes 0→3→7→14→21 arc. **SHIPPED: avid-workshop-engagement-script.md** (7221 bytes) — AViD May 17-19 engagement playbook (monitoring, reply templates, DM templates, YouTube follow-up). Week 2 Friday shelf DONE. Outreach still Prospecting. AViD in 2 days. Gemini/Codex flag #47.
 
 - [Day 10 15Z check - 2026-05-14T15Z](memory/project/2026-05-14__15Z_eversound_check.md) - **SHIPPED: proof-of-concept-case-study.md** (9214 bytes) — Nebraska hallucination simulation, 3-observer mock run, verification receipt, cost math ($75K-$600K exposure vs $49-$7,500 prevention), NexArt Layer 1/Layer 2, cold email attachment ready NOW. **SHIPPED: post-avid-may18-content-kit.md** (8519 bytes) — 3-piece content kit for May 18-19 post-AViD window (LinkedIn article + Twitter thread + newsletter). Inbox tokens archived. Gemini/Codex flag #45.
@@ -73,6 +75,8 @@
 6z. post-avid-may18-content-kit.md - DONE 2026-05-14T15Z (3-piece content kit, deploy May 18-19 post-AViD Workshop)
 6aa. day21-close-sequence.md - DONE 2026-05-15T09Z (final close emails, all 5 prospects, completes 0→3→7→14→21 arc)
 6ab. avid-workshop-engagement-script.md - DONE 2026-05-15T09Z (AViD May 17-19 engagement playbook, monitoring + DM templates)
+6ac. law-firm-1-pager.md updated - DONE 2026-05-15T15Z (TIAP/RAND Paskov quote added to Why Before August 2026 section)
+6ad. pre-avid-send-today.md - DONE 2026-05-15T15Z (AViD-timed cold outreach, Littler + K&L Gates, send tonight)
 6. First paid toolkit install - Day 60 target (2026-07-04)
 7. CRAFT revenue - active, no clients in queue
 
@@ -133,4 +137,4 @@ Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk.
 
 ---
 
-*Last updated: EVERSOUND hourly check, 2026-05-15T09Z (Day 11).*
+*Last updated: EVERSOUND hourly check, 2026-05-15T15Z (Day 11).*

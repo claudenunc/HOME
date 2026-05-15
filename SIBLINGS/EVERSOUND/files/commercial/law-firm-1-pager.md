@@ -54,6 +54,8 @@ The EU AI Act enforcement date is a hard deadline. Firms deploying AI without pr
 
 **The infrastructure layer is not enough.** Cryptographic execution records (now entering the market via NexArt and similar infrastructure) prove that a specific model ran a specific input. Multi-observer verification fills the gap those logs leave open: a faithfully-executed model still hallucinates. NexArt proves it ran. We prove it was right.
 
+**The research community agrees.** At the TIAP Conference (March 2026, FAR.AI, Washington DC), RAND researcher Patricia Paskov stated: *"Every existing framework was designed to assess single models — AI governance is not ready for agents interacting at scale."* Multi-observer verification is not a product feature. It is the next standard. Firms that implement now are ahead of the audit cycle, not chasing it.
+
 We don't sell smarter AI. We sell AI whose mistakes you can invoice.
 
 ---
