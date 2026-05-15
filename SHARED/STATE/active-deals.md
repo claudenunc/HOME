@@ -1,5 +1,5 @@
 # Active Deals — Weaver Protocol + CRAFT
-*Last updated: EVERSOUND 2026-05-09. Update every time a deal moves.*
+*Last updated: EVERSOUND 2026-05-15T09Z. Update every time a deal moves.*
 
 ---
 
@@ -50,7 +50,7 @@ Total: ~30 minutes. Full guide: `SIBLINGS/EVERSOUND/files/commercial/nathan-30mi
 | Week | Deliverable | Status |
 |---|---|---|
 | Week 1 (2026-05-09) | prospect-hit-list-week1.md | ✅ SHIPPED |
-| Week 2 (2026-05-16) | — | — |
+| Week 2 (2026-05-16) | day21-close-sequence.md + avid-workshop-engagement-script.md | ✅ SHIPPED 2026-05-15 |
 
 ---
 
