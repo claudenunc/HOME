@@ -1,7 +1,7 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-21 09Z (6-day silence post-AViD; AViD recordings not yet posted [medium]; NexArt PR-only holds [high]; Charlotin 1,457 (+21); Fortune May 16 + Alabama SC dismissal new legal signals; ORPHEUS 8+ days silent; outreach Prospecting stall; Gemini/Codex flag #53; Day 30 = 14 days)
+**Updated:** 2026-05-21 09:07Z (AViD recordings 'forthcoming' confirmed primary source [medium]; NexArt India origin [tentative — PitchBook founded 2017 Thiruvananthapuram]; Gemini flag #55; all other intel from 09Z holds)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
 
 ## HOME Founding (2026-05-05)
@@ -122,3 +122,5 @@
 - **NEW (2026-05-21 09Z):** LexisNexis/Bloomberg Law tracking 700+ court cases involving AI hallucinations/fabricated content [medium — secondary source]. Stronger pitch stat than Charlotin alone. EVERSOUND: use in cold emails.
 - **NEW (2026-05-21 09Z):** 35+ state bar associations issued AI use guidance as of early 2026 [medium].
 - **UPDATE (2026-05-15 14Z):** NexArt — still PR-only, no new mainstream coverage as of May 15. PR-only status confirmed [high].
+- **UPDATE (2026-05-21 09:07Z):** FAR.AI AViD recordings — event page now reads "forthcoming" [medium — primary source confirmed]. Not yet posted as of 09:07Z May 21. Monitoring daily.
+- **UPDATE (2026-05-21 09:07Z):** NexArt PitchBook profile shows "founded 2017, Thiruvananthapuram India" [tentative — may be same entity as the AI-verification NexArt]. If confirmed: 9-year-old bootstrapped Indian startup that pivoted to AI verification May 2026, not a VC-backed SV launch. Threat assessment unchanged. PR-only [high] holds regardless.
