@@ -8,11 +8,13 @@
 
 Your firm is deploying AI — research, document review, client intake, contract analysis. Fast. Also wrong, sometimes, in ways that are not logged, dated, or attributable.
 
-**Three data points from Q1 2026:**
+**Five data points — Q1–Q2 2026:**
 
 - **$110,000** — Oregon state-court sanction for AI hallucination, the largest hallucination penalty on record as of Q1 2026.
 - **$14,200 per employee per year** — productivity loss attributable to AI hallucinations, per Forrester Research.
 - **Sullivan & Cromwell emergency letter** to Chief Bankruptcy Judge Glenn (SDNY) citing AI hallucinations in a Chapter 15 filing. When S&C is writing emergency letters about AI errors, the pattern is clear.
+- **Alabama Supreme Court** dismissed an appeal (May 2026) where counsel submitted AI-fabricated citations — the first state supreme court-level consequence in this pattern. Appellate exposure is now on the table.
+- **700+ court cases** tracking AI misconduct across U.S. courts, per LexisNexis/Bloomberg (May 2026). Trial-level discipline has become appellate-level consequence. Fortune called it (May 16): *"Would you hire the lawyer who just got sanctioned for using AI?"* — your clients are reading it.
 
 **Moffatt v. Air Canada** established that a firm cannot disclaim AI errors made on its behalf. The **EU AI Act** (enforcement: August 2026) requires audit trails for high-risk AI deployments. If the error isn't in the log, the liability is on your P&L.
 

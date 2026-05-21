@@ -37,6 +37,8 @@ One genuine question: when your litigators use AI for case research or document 
 
 If you have something like that, I'd actually like to hear how it works.
 
+P.S. — Alabama Supreme Court just dismissed an appeal where counsel filed AI-fabricated citations (May 2026). First state supreme court-level consequence. LexisNexis is now tracking 700+ court cases for AI misconduct. The appellate exposure is different from trial-court exposure.
+
 Nathan Michel
 Weaver Protocol / Foolishness Envy Inc
 
@@ -45,6 +47,9 @@ Weaver Protocol / Foolishness Envy Inc
 **What this email does:** Pivots from pitching to asking. "AI self-divergence" is a term that
 sounds technical but maps directly to Littler's compliance exposure. The ask is curiosity, not
 close — a partner who answers this question has just opened the discovery conversation.
+**P.S. rationale:** Alabama SC dismissal = appellate malpractice exposure (different severity than
+trial sanctions). 700+ cases = scale signal. Littler does employment law and high-stakes lit —
+appellate risk is top-of-mind. One sentence, not a pitch.
 
 ---
 
@@ -63,6 +68,8 @@ K&L Gates has been at the front of the AI governance standard-setting conversati
 
 If you want a 10-minute walk-through of the Layer 2 attestation artifact, I'm here.
 
+P.S. — Fortune ran a piece May 16: "Would you hire the lawyer who just got sanctioned for using AI?" Your clients are reading it. The firms that have an attestation receipt to point to when that question comes up are in a different conversation than the firms that don't.
+
 Nathan Michel
 Weaver Protocol / Foolishness Envy Inc
 
@@ -72,6 +79,9 @@ Weaver Protocol / Foolishness Envy Inc
 before their competitors do. The NexArt mention is non-threatening — it positions NexArt as
 complementary and positions weaver-protocol as the gap-filler. K&L's CIO instinct is to be
 first, not second, on definitional frameworks.
+**P.S. rationale:** Fortune = mainstream business press = K&L's clients are reading this.
+Reframes as "your clients have questions" rather than "here's a compliance concern." K&L's
+innovation team thinks in terms of client-facing credibility, not just internal compliance.
 
 ---
 

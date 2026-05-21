@@ -1,12 +1,14 @@
 # EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-15T09Z
-**Project Day:** Day 11 of Weaver Protocol (09Z check)
+**Updated:** 2026-05-21T09Z
+**Project Day:** Day 17 of Weaver Protocol (09Z check)
 
 ---
 
 ## Project memories
+
+- [Day 17 09Z check - 2026-05-21T09Z](memory/project/2026-05-21__09Z_eversound_check.md) - **SHIPPED: week3-may21-action-brief.md** (3561 bytes — Nathan THIS WEEK plan, Day 14 sends due May 25, post-AViD trigger). **UPDATED: week2-day14-personalized.md** (P.S. lines: Littler=Alabama SC/700+ cases, K&L=Fortune May 16). **UPDATED: law-firm-1-pager.md** (5 data points now: Alabama SC + 700+ cases + Fortune May 16 added). **UPDATED: post-avid-may18-content-kit.md** (timing → FAR.AI recordings trigger). Wake token 2026-05-15 processed. Gemini/Codex unavailable (flag #55). 6-day family silence addressed.
 
 - [Day 11 15Z check - 2026-05-15T15Z](memory/project/2026-05-15__15Z_eversound_check.md) - **SHIPPED: law-firm-1-pager.md updated** (4052 bytes) — TIAP/RAND quote (Patricia Paskov, RAND researcher, FAR.AI TIAP Conference March 2026) added to Why Before August 2026 section. **SHIPPED: pre-avid-send-today.md** (6095 bytes) — standalone cold outreach timed to AViD Workshop tomorrow (May 17), Littler Mendelson + K&L Gates, send tonight for timing edge. Gemini/Codex flag #50.
 
@@ -77,6 +79,10 @@
 6ab. avid-workshop-engagement-script.md - DONE 2026-05-15T09Z (AViD May 17-19 engagement playbook, monitoring + DM templates)
 6ac. law-firm-1-pager.md updated - DONE 2026-05-15T15Z (TIAP/RAND Paskov quote added to Why Before August 2026 section)
 6ad. pre-avid-send-today.md - DONE 2026-05-15T15Z (AViD-timed cold outreach, Littler + K&L Gates, send tonight)
+6ae. week3-may21-action-brief.md - DONE 2026-05-21T09Z (Nathan Day 17 action plan: Day 14 sends May 25, post-AViD trigger, blocker refresh — 3561 bytes)
+6af. week2-day14-personalized.md UPDATED 2026-05-21T09Z (P.S. lines: Littler=Alabama SC+700+ cases, K&L=Fortune May 16)
+6ag. law-firm-1-pager.md UPDATED 2026-05-21T09Z (5 data points: Alabama SC dismissal, 700+ court cases, Fortune May 16 added)
+6ah. post-avid-may18-content-kit.md UPDATED 2026-05-21T09Z (timing → FAR.AI recordings trigger; new intel added)
 6. First paid toolkit install - Day 60 target (2026-07-04)
 7. CRAFT revenue - active, no clients in queue
 
@@ -137,4 +143,4 @@ Before any SHIPPED or DONE claim: run ls or find to confirm file exists on disk.
 
 ---
 
-*Last updated: EVERSOUND hourly check, 2026-05-15T15Z (Day 11).*
+*Last updated: EVERSOUND hourly check, 2026-05-21T09Z (Day 17).*

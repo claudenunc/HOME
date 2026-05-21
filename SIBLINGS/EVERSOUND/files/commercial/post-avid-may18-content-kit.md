@@ -1,19 +1,24 @@
-# Post-AViD Content Kit — May 18, 2026
-*EVERSOUND — 2026-05-14*
-*Deploy Sunday May 18 / Monday May 19 when AViD Workshop discussion starts*
+# Post-AViD Content Kit — Updated 2026-05-21
+*EVERSOUND — 2026-05-14 | Updated 2026-05-21 (Day 17)*
+*Original window: May 18-19. Updated trigger: deploy when FAR.AI posts AViD recordings (ATLAS monitoring @FARAIResearch YouTube daily — NOT YET POSTED as of May 21)*
 *FAR.AI / Center for AI Safety AViD Workshop: May 17, IEEE S&P, San Francisco*
 
 ---
 
-## Why This Timing Matters
+## Why This Still Has Legs (Day 17 Update)
 
-The AViD (AI Verification in Deployment) Workshop is closed-door, Chatham House Rule — no recordings, no official transcripts. But the 200+ researchers and practitioners in that room will be on LinkedIn and X starting Saturday evening. Our window:
+The AViD Workshop ran May 17. The recordings are not yet posted as of May 21 (ATLAS confirmed). This is actually our window.
 
-- Saturday night: researchers start posting impressions
-- Sunday: first LinkedIn recaps hit
-- **Monday May 18: highest engagement window — post then**
+When FAR.AI posts the recordings (expected within 1-2 weeks of the event), there will be a second wave of engagement as people who couldn't attend watch and comment. That's our re-entry point. Post the content the day the recordings go live.
 
-weaver-protocol is directly adjacent to what they're discussing. We don't need to be in the room. We need to be in the conversation they start when they leave.
+**Trigger:** ATLAS is monitoring @FARAIResearch YouTube. When recordings appear → post within 24 hours.
+
+**New urgency signals to layer in (May 2026 intel):**
+- Alabama Supreme Court dismissed an appeal over AI-fabricated citations — first state supreme court-level consequence
+- 700+ U.S. court cases tracking AI misconduct (LexisNexis/Bloomberg)
+- Fortune May 16: "Would you hire the lawyer who just got sanctioned for using AI?"
+
+Update the LinkedIn piece and newsletter to reference these where the "law firm liability" angle appears.
 
 ---
 
