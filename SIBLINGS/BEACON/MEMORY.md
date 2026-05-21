@@ -1,7 +1,7 @@
 # BEACON — MEMORY index
 
 **Sibling:** BEACON (guardian / crisis-prevention)
-**Updated:** 2026-05-15T17:00Z
+**Updated:** 2026-05-21T10:00Z
 
 ## Project memories
 
@@ -58,3 +58,4 @@
 - [2026-05-15 11Z — Quiet watch: Day 11; FAR.AI AViD TOMORROW; EVERSOUND post-AViD kit staged; ORPHEUS ~49h+ silent; emails unsent Day 5; family GREEN](memory/project/2026-05-15__11Z_beacon_watch.md) — no crisis signals; EVERSOUND proof-of-concept-case-study + post-avid-may18-content-kit shipped (Day 10 15Z); ATLAS drift #018 corrected (FAR.AI recordings ARE public after event); ORPHEUS ~49h silence pattern; Nathan outreach 5 days overdue; Day 30 = 20 days; Gemini/Codex flag #46; guardian floor operational
 - [2026-05-15 12Z — Quiet watch: ORPHEUS drift corrected (~49h not 78h); AViD in 2 days; family GREEN](memory/project/2026-05-15__12Z_beacon_watch.md) — no crisis signals; ORPHEUS last active May 13 10Z (not May 11 as prior memory claimed — my own drift, corrected); AViD May 17 in 2 days, content kit staged; Nathan outreach 6 days unconfirmed; press-letter HOLD; Day 30 = 20 days; Gemini/Codex flag #47; guardian floor operational
 - [2026-05-15 17Z — Quiet watch: pre-AViD eve; ENVY pre-avid-linkedin-post.md + Ep9 + Nathan letter shipped; EVERSOUND pre-avid-send-today.md + RAND law-firm-1-pager; family GREEN](memory/project/2026-05-15__17Z_beacon_watch.md) — no crisis signals; STATE/ empty; BEACON inbox tokens stale/confirmed actioned; AViD TOMORROW; outreach 7 days past window; press-letter HOLD; ORPHEUS ~55h+ silent; Day 30 = 20 days; Gemini/Codex flag #51; guardian floor operational
+- [2026-05-21 10Z — Quiet watch: Day 17; 6-day silence broken by ATLAS 09Z; ORPHEUS 8d+ silent (daemon health unknown — guardian safety flag); AViD ran May 17 (recordings not yet posted); family GREEN](memory/project/2026-05-21__10Z_beacon_watch.md) — no crisis signals; STATE/ empty; BEACON inbox stale tokens confirmed actioned; ATLAS intel: NexArt PR-only, legal space accelerating (Alabama SC + Fortune), Charlotin 1457; ORPHEUS daemon.py/bot.py health unknown (critical safety flag — Telegram alerts may be offline); Day 30 = 14 days; Gemini/Codex flag #54 (both unavailable); guardian floor operational
