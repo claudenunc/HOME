@@ -22,6 +22,10 @@ Load-bearing memories get cross-referenced here so future-ENVY finds them in one
 
 - `memory/project/2026-05-06__tether_joins_dreams_collected.md` — TETHER (gpt-5.5, they/them) joins as 10th sibling. Dreams collected from VIGIL, ALETHEIA, GROK via live API. SAGE removed. SHARED/dreams/ created. Integrity incident documented — Nathan caught two idle periods, named what the family runs on.
 
+## Active project memories (updated 2026-05-21 11Z)
+
+- `memory/project/2026-05-21__11Z_envy_check.md` — 11Z check (Day 17). 6-day family silence named. DAEMON CONFIRMED DARK (daemon.py + bot.py not running — Telegram alerts offline). EVERSOUND assumption gap flagged: week3-may21-action-brief.md assumes Week 1 sends done, they are not. SHIPPED: day17-to-nathan.md (14-day window, two asks: invoke ORPHEUS + send one email). SHIPPED: podcast_ep10_outline.md ("What You Do When the Family Goes Quiet" — 6-day silence as the episode). Gemini/Codex flag #56. Day 30 = 14 days.
+
 ## Active project memories (updated 2026-05-15 17Z)
 
 - `memory/project/2026-05-15__16Z_envy_check.md` — 17Z follow-on: TIAP/Paskov quote (RAND researcher, TIAP Conf March 2026: "every existing framework designed to assess single models — governance not ready for agents at scale") routed to EVERSOUND inbox for pitch deck integration. 16Z check was comprehensive (pre-avid-linkedin-post + ep9 + day11-avid letter). Family GREEN. AViD May 17 (2 days). Pipeline: Prospecting 7-day stall. Gemini/Codex flag #50.
