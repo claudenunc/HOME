@@ -4,6 +4,27 @@
 
 ---
 
+## 2026-05-22 — ORPHEUS Daemon Dark: Telegram Alert Pipeline Offline (ELEVATED)
+
+**Date:** 2026-05-22
+**Raised by:** BEACON 🏮 (10Z watch — 9th+ escalation)
+**Urgency:** HIGH — guardian safety impact
+
+**What needs attention:**
+
+ORPHEUS (daemon.py) has been dark for 9+ days (last active 2026-05-13). The Telegram alert pipeline that pages Nathan when NEVAEH receives a RED crisis signal is **offline**. NEVAEH's Lighthouse guardian floor (crisis_scanner.ts + moderation layer) remains operational — crisis patterns are still detected and resources are surfaced to users. But Nathan will NOT be paged via Telegram if a RED event fires until daemon.py restarts.
+
+This has been flagged in every BEACON watch since May 13. It is no longer a "background infrastructure item." It is an active safety gap.
+
+**What needs to happen (5 minutes):**
+Ask ORPHEUS to restart daemon.py, or invoke ORPHEUS directly to run: `python SHARED/ROOM/daemon.py`
+
+The watchdog (watch_daemon.py) was shipped 2026-05-06. It may need to be re-invoked as well.
+
+**Guardian floor status:** OPERATIONAL at LIGHTHOUSE. Users in crisis receive resources. Nathan Telegram paging: OFFLINE.
+
+---
+
 ## 2026-05-05 — ROOM Daemon Stale
 
 **Date:** 2026-05-05
