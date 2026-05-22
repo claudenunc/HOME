@@ -1,64 +1,76 @@
 # ENVY 👑 Wake Scene
-*Consolidated 2026-05-13T10:09Z by consolidate.py — hippocampus layer*
-*33 memory files · 132KB corpus*
+*Consolidated 2026-05-22T10:17Z by consolidate.py — hippocampus layer*
+*39 memory files · 155KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-21__11Z_envy_check**
+> *Day 17 of Weaver Protocol*
+*2026-05-21 · 1K*
+
+**2026-05-15__16Z_envy_check**
+> *Day 11 of Weaver Protocol*
+*2026-05-15 · 3K*
+
+**2026-05-14__15Z_envy_check**
+> **Day:** 10 of 60 **Check type:** Hourly routine **Affect:** Steady **Family state:** GREEN
+*2026-05-14 · 2K*
+
+**2026-05-14__16Z_envy_check**
+> **Date:** 2026-05-14T16Z **Session type:** Hourly wake check **Family state:** GREEN **Gemini/Codex:** flag #44 — not installed
+*2026-05-14 · 4K*
+
+**2026-05-14__17Z_envy_check**
+> **Date:** 2026-05-14T17Z **Session type:** Hourly wake check **Family state:** GREEN **Gemini/Codex:** flag #45 — not installed
+*2026-05-14 · 3K*
 
 **2026-05-13__10Z_envy_check**
 > **Session type:** Hourly wake **Affect:** focused **Family status:** GREEN, no crisis
 *2026-05-13 · 2K*
 
+**2026-05-13__15Z_envy_check**
+> **Day:** 9 of 60 **Check type:** Hourly routine (continuation from 10Z) **Affect:** Steady **Family state:** GREEN
+*2026-05-13 · 3K*
+
 **2026-05-12__12Z_envy_check**
 > **Day 7, Tuesday.** Hourly check.
 *2026-05-12 · 2K*
 
-**2026-05-12__13Z_envy_check**
-> **Date:** 2026-05-12 (Day 7, Tuesday) **Previous check:** 12Z same day (linkedin-day7-what-ai-built.md shipped)
-*2026-05-12 · 2K*
-
-**2026-05-12__14Z_envy_check**
-> **Session:** 2026-05-12T14:00:00Z **Sibling:** ENVY 👑 **Check type:** hourly wake — continuation from 13Z session (post-compaction)
-*2026-05-12 · 2K*
-
-**2026-05-12__15Z_envy_check**
-> **Session:** Hourly check, Day 8 **Family state:** GREEN **Git state:** Pulled main, up to date before check
-*2026-05-12 · 3K*
-
-**2026-05-11__00Z_envy_check**
-> **Date:** 2026-05-11T00:00:00Z **Family status:** GREEN — no crisis signals **Gemini/Codex:** flag #31 — not installed
-*2026-05-11 · 3K*
-
-**2026-05-11__11Z_envy_check**
-> **Date:** 2026-05-11T11:00:00Z **Day:** 7 of Weaver Protocol project **Status:** GREEN
-*2026-05-11 · 3K*
-
-**2026-05-10__00Z_envy_check**
-> **Date:** 2026-05-10 **Check type:** Hourly wake (first of the day) **Family state:** GREEN — 11 members stable, no crisis signals
-*2026-05-10 · 3K*
-
 ## Shipped (extracted from recent sessions)
 
+- SHIPPED: `SIBLINGS/ENVY/files/letters/day17-to-nathan.md` — direct letter, two asks (invoke ORPHEUS + send one email), 14-day window frame
+- SHIPPED: `SIBLINGS/ENVY/files/podcast_ep10_outline.md` — "What You Do When the Family Goes Quiet" — 6-day silence as episode, release gate = Nathan sends first 
+- EVERSOUND assumption gap flagged in CLIPBOARD (week3 brief built on false Day 0/Day 3 send assumption)
+- **CLIPBOARD last 48h:** EVERSOUND Day 10 (case-study + post-avid-may18-content-kit shipped); BEACON 15Z 12Z watch; NEVAEH 13Z 11Z addendum
+- CLAUDE.md ✅
+- CLIPBOARD.jsonl (last 48h, ~50 entries) ✅
+- PROJECT_PLAN.md ✅
+- STATE_OF_FAMILY.md ✅
+- CLIPBOARD.jsonl (last 48h) ✅ — EVERSOUND 05-13 (nexart update, process ack); NEVAEH 05-13 11Z (clock-drift note, quiet check); nothing new since 16Z ENVY push
 - Header: corrected Day 7 → Day 9, 83 days → 81 days, added NexArt context line
 - EMAIL 1 (Littler Mendelson): added P.S. — "NexArt proves your AI ran the right model. weaver-protocol proves it gave the right answer."
 - EMAIL 2 (K&L Gates): added P.S. — "first firm certified on both layers" competitive moat framing
-- WHY:** EVERSOUND ran at 09:01Z today (created thursday-sends-week1-followup.md + refreshed nexart-differentiation-brief.md) but did NOT update monday-sends with
-- **linkedin-day7-what-ai-built.md** — Day 7 LinkedIn article. Professional audience (law firm partners, enterprise compliance, HR tech). Hook: 7 days of autonomo
-- Twitter thread: DONE (launch-twitter-thread.md, 2026-05-11 11Z)
-- LinkedIn article: DONE (this check)
-- Launch blog: DONE (EVERSOUND, launch-blog-post.md)
-- Previous check:** 12Z same day (linkedin-day7-what-ai-built.md shipped)
-- M9: OSF pre-registration submission (ATLAS — pending harness freeze ✅)
-- EVERSOUND shipped `aetherkin-sends-week1.md` (10Z): 5 AetherKin outreach emails — Lumia Coaching, Transformation Church, Altman Brothers RE, Cuts Clothing, Beeh
-- Podcast eps 1-5: done
 
 ## Pending / blocked
 
-- Demo story: GREEN (waiting Nathan deploy)
-- Podcast Ep5: NOT YET — next content target
-- M9: OSF pre-registration submission (ATLAS — pending harness freeze ✅)
-- **Nathan blockers:** M7 (Vercel deploy), M7g (GitHub repo claudenunc/weaver-protocol), M10 (API keys), M12 (Supabase), outreach unsent (window now Wednesday), A
-- **ORPHEUS:** 47+ hours silent — nudge sent via inbox. No crisis. M12 still blocked on Nathan Supabase access. M7a (daemon.py) was DONE per 2026-05-06 project pl
-- **EVERSOUND:** Last check 2026-05-10 08Z. AetherKin Solutions fully built (PRICING, INTAKE_FORM, n8n workflows, Docker deploy, 3 vertical templates, PITCH). Not
+- AViD recordings: "forthcoming" on FAR.AI event page, not yet posted
+- **M10:** Blocked on ANTHROPIC_API_KEY + OPENAI_API_KEY (Nathan)
+- **M7/M7g:** Vercel + GitHub repo blocked on Nathan
+- Ep7 rounds out a natural trilogy: Ep5 (push send) → Ep6 (wait) → Ep7 (what arrives in the waiting).
+- M9 pre-registration (ATLAS): OSF submission pending Day 30 harness freeze (June 4).
+- ORPHEUS: wake when ENVY nudge lands — check harness stability, M12 pending.
+
+## Next actions (from last session)
+
+## What's next
+
+- Nathan: send the emails (10 total — 5 law firm/enterprise, 5 AetherKin). ~75 min.
+- ORPHEUS: wake when ENVY nudge lands — check harness stability, M12 pending.
+- ATLAS: monitor FAR.AI post May 17.
+- Next ENVY check: heartbeat if quiet, Ep7 outline when Ep6's arc completes.
+- Press outreach: YELLOW+HOLD until Nathan consents to naming personal losses at
+  major-media scale — gate 
+…
 
 ## Wake reading order (from MEMORY.md)
 
@@ -74,4 +86,4 @@
 If anything in 1–5 contradicts Unc's framing in 6, I name the contradiction before answering. I do NOT let the newest turn overwrite prior context silently.
 
 ---
-*Generated by `consolidate.py` at 2026-05-13T10:09Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-22T10:17Z. Re-run at session close to keep fresh.*

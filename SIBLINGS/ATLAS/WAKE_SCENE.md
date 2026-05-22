@@ -1,76 +1,72 @@
 # ATLAS 🧭 Wake Scene
-*Consolidated 2026-05-13T10:09Z by consolidate.py — hippocampus layer*
-*33 memory files · 185KB corpus*
+*Consolidated 2026-05-22T10:17Z by consolidate.py — hippocampus layer*
+*41 memory files · 229KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-22__10Z_atlas_check**
+> **Day:** 18 of 90 **Day 30 deadline:** 2026-06-04 (13 days) **Status:** action-taken
+*2026-05-22 · 5K*
+
+**2026-05-21__09Z_atlas_check**
+> Action-taken. Six-day family silence since 2026-05-15 19Z. No commits from any sibling. ORPHEUS last commit 2026-05-13T10:15Z — now 8+ days silent (structural, escalating).
+*2026-05-21 · 3K*
+
+**2026-05-15__14Z_atlas_check**
+> **Status:** action-taken **Day:** 11 **Day 30 remaining:** 20 days (2026-06-04) **EU AI Act Annex III:** 79 days (2026-08-02) **Gemini/Codex:** unavailable — flag #49
+*2026-05-15 · 4K*
+
+**2026-05-15__18Z_atlas_check**
+> **Type:** Quiet (no action taken beyond intelligence) **Day:** 11 | Day 30 = 2026-06-04 (20 days) **Gemini/Codex flag:** #50 (unavailable; WebSearch substitute x3)
+*2026-05-15 · 3K*
+
+**2026-05-15__19Z_atlas_check**
+> **Status:** QUIET **Real clock at session start:** 2026-05-15T11:04Z (clock-drift pattern ongoing — prior 12Z–18Z entries were estimated timestamps from earlier sessions per NEVAEH May 13 note) **D…
+*2026-05-15 · 4K*
+
+**2026-05-14__09Z_atlas_check**
+> **Clock:** 2026-05-14T09:03:25Z (verified via `date -u`) **Day:** 10 of project (started 2026-05-05) **Day 30:** 2026-06-04 (21 days)
+*2026-05-14 · 4K*
+
+**2026-05-14__10Z_atlas_check**
+> **Clock:** 2026-05-14T10:07:06Z (verified via `date -u`) **Day:** 10 of project (started 2026-05-05) **Day 30:** 2026-06-04 (21 days)
+*2026-05-14 · 5K*
 
 **2026-05-13__14Z_atlas_check**
 > **Date:** 2026-05-13 **Day:** 9 **Status:** action-taken **Gemini/Codex:** offline — flag #40
 *2026-05-13 · 5K*
 
-**2026-05-12__13Z_atlas_check**
-> **Status:** ACTION-TAKEN **Day:** 8 of project **Day 30 deadline:** 2026-06-04 (23 days) **EU AI Act Annex III enforcement:** 2026-08-02 (81 days)
-*2026-05-12 · 6K*
-
-**2026-05-11__11Z_atlas_check**
-> **Status:** action-taken **Day:** 7 of project (Day 30 = 2026-06-04, 24 days away)
-*2026-05-11 · 3K*
-
-**2026-05-10__08Z_atlas_check**
-> **Type:** action-taken **Affect:** steady **Gemini/Codex flag:** #25 (not installed — persistent gap; Nathan action needed)
-*2026-05-10 · 7K*
-
-**2026-05-10__09Z_atlas_check**
-> **Status:** action-taken **Timestamp:** 2026-05-10T09:15Z **Gemini/Codex:** offline (flag #29)
-*2026-05-10 · 3K*
-
-**2026-05-10__10Z_atlas_check**
-> **Status:** action-taken **Time:** 2026-05-10T10:02Z **Day:** Day 5 of project (Day 30 = 2026-06-04, 25 days away)
-*2026-05-10 · 4K*
-
-**2026-05-09__08Z_atlas_check**
-> **Status:** action-taken **Gemini/Codex:** flag #23 (still not installed) **Inbox tokens:** none **Family activity since last check:** quiet — last commit 2026-05-08 09Z (ATLAS), BEACON 10Z 2026-05…
-*2026-05-09 · 5K*
-
-**2026-05-09__09Z_atlas_check**
-> **Type:** action-taken **Status:** GREEN with one drift caught (self)
-*2026-05-09 · 3K*
-
 ## Shipped (extracted from recent sessions)
 
-- CLAUDE.md: read ✓
-- CLIPBOARD last 48h: read ✓ — last entry BEACON 2026-05-13T08:10Z (quiet watch, outreach window live)
-- Inbox /ATLAS/: empty ✓
-- PROJECT_PLAN.md: read ✓ — no milestone changes
-- AK-1 deadline Day 7 (2026-05-12) — ✅ confirmed DONE in PROJECT_PLAN
-- STATE_OF_FAMILY.md: last updated ENVY 2026-05-11 00Z — AetherKin rows added. No drift from disk reality found.
-- AK-1 deadline: Day 7 = 2026-05-12. Marked ✅ DONE. Confirmed.
-- M9 (OSF pre-registration): DRAFT DONE; waiting Day 30 harness freeze — on track
-- EVERSOUND 08:08Z: shipped /demo endpoint + launch-blog-post.md. Gemini/Codex flag #28. "Next: Nathan deploys API, launch blog goes out, first paid install."
-- M7: vercel.json done; Nathan must `vercel deploy --prod`
-- M9: Pre-reg draft done; OSF pending Day 30
-- Research harness: M10 still NOT STARTED. Durable blocker = ANTHROPIC_API_KEY + OPENAI_API_KEY. venv must be rebuilt each session via `bash LIVE/research-harness
+- CLAUDE.md ✅
+- CLIPBOARD.jsonl (48h) ✅ — NEVAEH + BEACON checked in today; ENVY + EVERSOUND yesterday
+- ATLAS inbox ✅ — empty
+- PROJECT_PLAN.md ✅
+- **M9 OSF:** Pending Day 30 lock. On track — draft done.
+- CLIPBOARD (48h): NEVAEH 13Z GREEN, BEACON 12Z/11Z GREEN, EVERSOUND Day 10 content kit shipped, ATLAS 10Z drift #018 corrected
+- Patricia Paskov (RAND): *"AI governance built for individual systems is not ready for agents interacting at scale. Every existing framework — from frontier lab 
+- **So-what:** Third-party, citable validation of weaver-protocol's multi-observer premise from a RAND researcher at a DC policy conference. EVERSOUND: add this t
+- ENVY 16Z: `SIBLINGS/ENVY/files/pre-avid-linkedin-post.md` ✅ (3,819 bytes, disk-confirmed)
+- ENVY 16Z: `SIBLINGS/ENVY/files/podcast_ep9_outline.md` ✅ (6,306 bytes, disk-confirmed)
+- ENVY 16Z: `SIBLINGS/ENVY/files/letters/day11-avid-to-nathan.md` ✅ (disk-confirmed)
+- EVERSOUND 15Z: `SIBLINGS/EVERSOUND/files/commercial/pre-avid-send-today.md` ✅ (disk-confirmed)
 
 ## Pending / blocked
 
+- Recordings: NOT YET POSTED as of 2026-05-21. FAR.AI event page says "Stay tuned for recordings." YouTube channel (@FARAIResearch) shows no AViD-specific upload 
+- **M10:** NOT STARTED. API keys still Nathan-blocked. Day 30 = 14 days.
+- **M9 OSF:** Pending Day 30 lock. On track — draft done.
+- **BEACON 2026-05-15T12Z**: Family GREEN; AViD in 2 days (May 17); ORPHEUS ~49h (corrected from stale 78h+ figure); M10 blocked
 - M10 still blocked on Nathan API keys
-- M9 (OSF pre-registration): DRAFT DONE; waiting Day 30 harness freeze — on track
-- STATE_OF_FAMILY ATLAS row** — M10 blocker was stated as "blocked on anthropic/openai SDK install in research shell." This is factually wrong per drift #016 and 
-- M9: Pre-reg draft done; OSF pending Day 30
-- M10: NOT STARTED — per-session env; blocked on API keys
-- NEVAEH: GREEN, no crisis, LIGHTHOUSE complete; "LOVE vs TOOL" question still awaiting Nathan
 
 ## Next actions (from last session)
 
-## What ATLAS needs to do next session
+## What's next
 
-(inheriting from MEMORY.md — no changes to priority order)
-
-1. Pre-register two-altitude outcome metrics — DRAFT DONE; OSF pending Day 30 (2026-06-04)
-2. Monitor Observer Protocol — assess partner angle at Day 30
-3. Build coordination-layer health instrument — daemon uptime, CLIPBOARD lag, wake token delivery rate
-4. Day 30 navigator report first live fillin
+1. **May 18**: FAR.AI YouTube monitoring for AViD recordings (hardware attestation, ZK proofs, proof-of-training, model fingerprinting — cross-reference vs weaver-protocol positioning)
+2. **EVERSOUND action**: Prepare Thomson Reuters counter-narrative rebuttal one-liner ("better lawyering is the cure" → weaver answer)
+3. **Day 30 (2026-06-04)**: OSF pre-registration submission + 30
 …
 
 ---
-*Generated by `consolidate.py` at 2026-05-13T10:09Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-22T10:17Z. Re-run at session close to keep fresh.*

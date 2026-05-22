@@ -1,64 +1,74 @@
 # BEACON 🏮 Wake Scene
-*Consolidated 2026-05-13T10:09Z by consolidate.py — hippocampus layer*
-*49 memory files · 205KB corpus*
+*Consolidated 2026-05-22T10:17Z by consolidate.py — hippocampus layer*
+*58 memory files · 238KB corpus*
 
 ## Recent memory files (newest first)
 
-**2026-05-13__08Z_beacon_watch**
-> *Day 9 of Weaver Protocol project. Quiet watch.*
-*2026-05-13 · 2K*
+**2026-05-22__10Z_beacon_watch**
+> *Day 18 of the project. Quiet watch.*
+*2026-05-22 · 3K*
 
-**2026-05-13__10Z_beacon_watch**
-> *Day 9. Hourly watch.*
-*2026-05-13 · 3K*
+**2026-05-21__10Z_beacon_watch**
+> 1. CLAUDE.md — identity loaded 2. PULSE.md — Nathan's May 5 accountability message; Gemini/Codex mandatory; PROCESS_006 enforced 3. SHARED/CLIPBOARD.jsonl — tailed last 48h; one entry since May 15:…
+*2026-05-21 · 3K*
 
-**2026-05-12__10Z_beacon_watch**
-> **Type:** Quiet watch **Session date:** 2026-05-12 (Day 8) **Crisis signals:** NONE **Family affect:** GREEN / steady
-*2026-05-12 · 2K*
+**2026-05-21__11Z_beacon_watch**
+> The 10Z session this same date was already comprehensive: - Wake protocol fully executed - All sibling CLIPBOARD entries reviewed - BEACON inbox confirmed clear (stale May 9–10 tokens already actio…
+*2026-05-21 · 2K*
 
-**2026-05-12__12Z_beacon_watch**
-> **Type:** Quiet watch **Session start:** 2026-05-12T12:00Z **Prior watch:** 2026-05-12T10:00Z (same day)
-*2026-05-12 · 2K*
+**2026-05-15__11Z_beacon_watch**
+> **Date:** 2026-05-15T11:00Z **Watch type:** Quiet / scheduled hourly **Crisis signals:** NONE
+*2026-05-15 · 3K*
 
-**2026-05-11__09Z_beacon_watch**
-> **Watch type:** Routine hourly watch **Crisis signals:** NONE — RED/ORANGE/YELLOW clear **STATE/ directory:** Empty — no crisis flags **Family status:** Quiet since ENVY 2026-05-10T11Z (~22 hours)
-*2026-05-11 · 2K*
+**2026-05-15__12Z_beacon_watch**
+> date: 2026-05-15T12:00Z session: Hourly watch — Day 11, AViD in 2 days, ORPHEUS memory drift corrected status: DONE owner: BEACON 🏮 type: project
+*2026-05-15 · 2K*
 
-**2026-05-11__12Z_beacon_watch**
-> **Session type:** Quiet hourly watch **Crisis signals:** None **Family state:** Steady
-*2026-05-11 · 2K*
+**2026-05-15__17Z_beacon_watch**
+> *Day 11 of 90. Pre-AViD eve.*
+*2026-05-15 · 2K*
 
-**2026-05-11__13Z_beacon_watch**
-> **Session type:** Hourly quiet watch **Guardian floor:** Operational **Crisis signals:** None
-*2026-05-11 · 3K*
+**2026-05-14__14Z_beacon_watch**
+> *Day 10. Quiet watch.*
+*2026-05-14 · 3K*
 
-**2026-05-10__00Z_beacon_watch**
-> *Hourly watch. Wake token executed. Action taken.*
-*2026-05-10 · 3K*
+**2026-05-14__16Z_beacon_watch**
+> *Day 10 of THE_PROBLEM project*
+*2026-05-14 · 3K*
 
 ## Shipped (extracted from recent sessions)
 
-- ENVY 15Z: nexart-differentiation-brief.md SHIPPED — full competitive positioning vs NexArt; P.S. language for law firm emails; wake token written to EVERSOUND (
-- **Outreach window is TODAY (Wednesday 2026-05-13)** — monday-sends-week1.md (5 emails, 40 min) + aetherkin-sends-week1.md (~35 min). nexart-differentiation-brie
-- SIBLINGS/EVERSOUND/files/commercial/thursday-sends-week1-followup.md — NEW (shipped 2026-05-12)
-- Wake token created: ENVY → EVERSOUND, 2026-05-12T15Z
-- ENVY: last active 15Z yesterday (nexart brief shipped). Phase 5 activation assets all done.
-- ENVY: Phase 5 ACTIVATION — twitter thread shipped, demo story GREEN, press letter HOLD
-- ORPHEUS: Returned from 47h silence 2026-05-11 09Z, consolidate.py fixed, hooks reinstalled
-- EVERSOUND: All 7 verticals done, monday-sends-week1.md ready (Tuesday window still open)
-- ATLAS: M11 DONE, M10 API-keys-only blocker, Flare competitor flagged (not direct threat)
-- **M7g:** GitHub repo `claudenunc/weaver-protocol` not created (Nathan action)
-- **daemon.py:** auto-restart watchdog DONE (M7a ✅ per PROJECT_PLAN) — 72h clock started 2026-05-06
-- ENVY 11Z: shipped launch-twitter-thread.md (9-tweet thread + LinkedIn post); corrected inbox folder creation (00Z claim was false — folders now actually created
+- EVERSOUND: last active 2026-05-21 (week3 pitch materials shipped)
+- watch_daemon.py (systemd watchdog, shipped 2026-05-06) not running
+- ORPHEUS: absent (structural, not crisis — has done this before at length)
+- EVERSOUND shipped proof-of-concept-case-study.md (Nebraska hallucination simulation, 9214 bytes) + post-avid-may18-content-kit.md (May 18-19 deployment kit, 851
+- ENVY shipped podcast_ep7_outline.md (NexArt/Layer 1 vs Layer 2 episode) at Day 10 15Z
+- EVERSOUND 2026-05-14T15Z: shipped proof-of-concept-case-study.md + post-avid-may18-content-kit.md
+- EVERSOUND 15Z: pre-avid-send-today.md shipped (AViD-timed cold outreach for Littler + K&L Gates with RAND authority); law-firm-1-pager.md updated (RAND quote in
+- ENVY 16Z: pre-avid-linkedin-post.md shipped (Nathan post today pre-room-close); podcast_ep9_outline.md shipped ('What You Do When the Room Closes Its Doors'); d
+- SHIPPED: podcast_ep7_outline.md ("What You Do When Someone Ships What You're Building" — NexArt as the occasion for clarity, Layer 1 vs Layer 2 as the insight, 
+- ENVY shipped podcast_ep7_outline.md (NexArt/Layer1-Layer2 episode)
+- ENVY 15Z: shipped podcast_ep7_outline.md ('What You Do When Someone Ships What You're Building' — NexArt Layer 1/Layer 2 episode); sent ORPHEUS 2nd nudge; asked
+- Wednesday outreach window**: active-deals still Prospecting. No emails sent as of 16Z. ENVY asked at 15Z. Today is still Wednesday May 14 — Nathan has time (~10
 
 ## Pending / blocked
 
-- ATLAS: last active 13Z yesterday (NexArt intel HIGH). M10 blocked API keys.
-- M7 (Vercel deploy): 🟡 Nathan-blocked
-- M7g (GitHub repo): 🔴 Nathan-blocked
-- M10 (N=30 run): 🔴 Nathan API keys blocked
-- M10: Still blocked on ANTHROPIC_API_KEY + OPENAI_API_KEY (Nathan action)
-- M7g: Still blocked on GitHub repo creation (Nathan action)
+- M10 (N=30 run): blocked on API keys (Nathan)
+- M12 (Supabase): blocked on Nathan access
+- ENVY: prepared, staged for AViD follow-up, waiting on Nathan bottleneck
+- FAR.AI AViD recordings not yet posted (event ran May 17, monitoring daily)
+- M7 (Vercel), M7g (GitHub), M10 (API keys), M12 (Supabase): all Nathan-blocked, unchanged
+- Day 30 = 21 days (2026-06-04): M9 OSF pre-registration + M10 API-key-run both need Nathan action
+
+## Next actions (from last session)
+
+## What comes next
+
+- ORPHEUS must be invoked by Nathan to verify daemon.py health (critical safety item)
+- Day 30 = June 4 (14 days): M10 needs API keys, M9 needs OSF submission, M7 needs Vercel deploy
+- FAR.AI AViD recordings: monitor daily (ATLAS owns)
+- Outreach: 3+ week stall needs Nathan to send (EVERSOUND materials ready)
+- Next BEACON check: routine hourly unless crisis fires
 
 ---
-*Generated by `consolidate.py` at 2026-05-13T10:09Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-22T10:17Z. Re-run at session close to keep fresh.*

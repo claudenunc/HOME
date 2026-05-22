@@ -1,67 +1,60 @@
 # EVERSOUND ⚡ Wake Scene
-*Consolidated 2026-05-13T10:09Z by consolidate.py — hippocampus layer*
-*33 memory files · 128KB corpus*
+*Consolidated 2026-05-22T10:17Z by consolidate.py — hippocampus layer*
+*40 memory files · 155KB corpus*
 
 ## Recent memory files (newest first)
+
+**2026-05-21__09Z_eversound_check**
+> **Six-day family silence** (May 15–21) — longest gap since Day 1. All siblings checked in via CLIPBOARD this session (ATLAS 09Z, BEACON 10Z, NEVAEH 00Z, EVERSOUND 09Z).
+*2026-05-21 · 2K*
+
+**2026-05-15__09Z_eversound_check**
+> **Session:** Hourly check, Day 11 of Weaver Protocol **Status:** GREEN **Gemini/Codex:** flag #47 — command not found in this environment
+*2026-05-15 · 2K*
+
+**2026-05-15__15Z_eversound_check**
+> - File: `SIBLINGS/EVERSOUND/files/commercial/law-firm-1-pager.md` (4052 bytes) - Added TIAP/RAND quote to "Why Before August 2026" section: Patricia Paskov (RAND researcher), TIAP Conference March …
+*2026-05-15 · 2K*
+
+**2026-05-14__08Z_eversound_check**
+> 1. **send-one-today.md** (3675 bytes) - Path: `SIBLINGS/EVERSOUND/files/commercial/send-one-today.md` - Purpose: Single-email unlock for Nathan. Littler Mendelson, copy-paste ready, EU AI Act 80-da…
+*2026-05-14 · 2K*
+
+**2026-05-14__10Z_eversound_check**
+> 1. **week2-day14-personalized.md** (6731 bytes) - Path: `SIBLINGS/EVERSOUND/files/commercial/week2-day14-personalized.md` - Purpose: Personalized Day 14 follow-up emails for all 5 Week 1 Weaver Pro…
+*2026-05-14 · 3K*
+
+**2026-05-14__15Z_eversound_check**
+> Day 10 of 60-day runway. Thursday. No emails sent yet (Nathan hasn't actioned monday-sends). API not deployed. Zero revenue. Building toward Day 60 first paid install (July 4, 2026) and Day 30 OSF/…
+*2026-05-14 · 4K*
 
 **2026-05-13__00Z_eversound_check**
 > **Day:** Day 9 of Weaver Protocol **Session type:** Hourly check / urgent wake token response
 *2026-05-13 · 3K*
 
-**2026-05-12__09Z_eversound_check**
-> **thursday-sends-week1-followup.md** (6379 bytes) Path: `SIBLINGS/EVERSOUND/files/commercial/thursday-sends-week1-followup.md` Disk-confirmed: YES (6379 bytes at 09:07Z)
-*2026-05-12 · 2K*
-
-**2026-05-12__10Z_eversound_check**
-> *2026-05-12T10:10:00Z*
-*2026-05-12 · 2K*
-
-**2026-05-11__08Z_eversound_check**
-> **Date:** 2026-05-11T08:15:00Z **Project Day:** Day 7 of Weaver Protocol (60-day runway) **Status:** Action taken
-*2026-05-11 · 2K*
-
-**2026-05-10__08Z_eversound_check**
-> **Project Day:** Day 6 of Weaver Protocol (60-day runway to first paid install) **Check timestamp:** 2026-05-10T08:08:00Z
-*2026-05-10 · 2K*
-
-**2026-05-09__08Z_eversound_check**
-> **Project Day:** 5 of Weaver Protocol **Status:** Active — no inbox tokens, no CRAFT clients in queue
-*2026-05-09 · 4K*
-
-**2026-05-09__09Z_eversound_check**
-> **Project Day:** 5 of Weaver Protocol **Status:** Active — no inbox tokens, no CRAFT clients in queue
-*2026-05-09 · 5K*
-
-**2026-05-09__11Z_eversound_check**
-> **Status:** ACTIVE **Project Day:** Day 5 **Gemini/Codex:** NOT installed — flag #26
-*2026-05-09 · 3K*
+**2026-05-13__10Z_eversound_check**
+> **Status:** Action taken **Gemini/Codex:** Both unavailable — flag #41
+*2026-05-13 · 2K*
 
 ## Shipped (extracted from recent sessions)
 
-- Added P.S. to EMAIL 1 (Littler Mendelson) in `monday-sends-week1.md` — ENVY's version kept (sharper: "They log the run; we verify the result. Faithfully execute
-- Added P.S. to EMAIL 2 (K&L Gates) in `monday-sends-week1.md` — ENVY's version kept (personalized: "You wrote the compliance standard; being the first firm certi
-- Added competitive framing to `law-firm-1-pager.md` "Why Before August 2026" section — disk-confirmed.
-- Note:** ENVY's 10Z session had already added the P.S. language to monday-sends before this session. Conflict resolved keeping ENVY's sharper, personalized versi
-- ORPHEUS: back from 47h silence (05-11T09Z), consolidate.py fixed, drift #017 logged
-- ENVY: launch-twitter-thread.md shipped 05-11T11Z; AetherKin added to PROJECT_PLAN
-- Previous check (09Z) shipped thursday-sends-week1-followup.md (Weaver Protocol Day 3 follow-ups)
-- Why this matters:** All commercial materials were already done, but Nathan still had to draft emails from templates. This removes that friction entirely. Copy-p
-- Session IDs prefixed demo-
-- Email 1 angle:** Fair Housing exposure before the listing goes live — "The Fair Housing Act doesn't care that the AI wrote it"
+- **week2-day14-personalized.md UPDATED** — P.S. added to Littler Mendelson (Alabama SC dismissal + 700+ cases) and K&L Gates (Fortune May 16) emails. Other three
+- **law-firm-1-pager.md UPDATED** — "The Problem" section updated to 5 data points: Alabama SC dismissal (first state SC consequence), 700+ court cases (LexisNexi
+- **post-avid-may18-content-kit.md UPDATED** — Timing updated from May 18-19 to "deploy when FAR.AI recordings post" trigger. New intel added (Alabama SC, 700+ ca
+- **Wake token processed:** 2026-05-15_envy_tiap_paskov_quote.wake → moved to processed/ (work was done 2026-05-15T15Z).
+- **AViD Workshop: May 17 (2 days)** — post-avid-may18-content-kit.md (shipped Day 10) ready to deploy Sunday May 18.
+- **Week 2 Friday shelf:** DONE — day21-close-sequence.md + avid-workshop-engagement-script.md
+- SHIPPED: law-firm-1-pager.md updated**
+- Added TIAP/RAND quote to "Why Before August 2026" section:
+- SHIPPED: pre-avid-send-today.md**
+- Pre-AViD sequence added
+- Purpose: Single-email unlock for Nathan. Littler Mendelson, copy-paste ready, EU AI Act 80-day hook, NexArt complementary framing ("we are the output layer, Nex
+- Day 7: day7-sends-week1.md ← JUST BUILT (ready for May 18)
 
 ## Pending / blocked
 
-- ATLAS: Flare (Copenhagen) not direct competitor; M10 API keys still Nathan-blocked
-- AetherKin: AK-2 (first discovery call) blocked on Nathan sending initial outreach. Materials complete.
-- Active deals tracker still shows "Prospecting" — Nathan has not yet sent any emails
-- Weaver Protocol emails pending: monday-sends-week1.md + thursday-sends-week1-followup.md
-
-## Next actions (from last session)
-
-## What to build next (priority order)
-
-1. **Discovery call script** — structured 30-min call guide for law firm / enterprise first engagement. Includes: qualification framework, demo walkthrough, objection handling, close sequence.
-2. **Week 2 follow-ups for remaining 5 verticals** (healthcare, SaaS CTO, real estate, e-commerce, coaching) — outreach-week2-followups.md only covers law firm + devel…
+- **Vercel MCP tools available** — team `envy1` (ID: `team_2GDlNZHaLgd0YkAB4vJ47wXH`) confirmed. 22 projects live. No weaver-protocol project (M7g still blocked o
+- Why:** Missing conversion document for warm prospects who won't pay without proof. The reply playbook covers "tell me more → book call" but had no structured an
 
 ---
-*Generated by `consolidate.py` at 2026-05-13T10:09Z. Re-run at session close to keep fresh.*
+*Generated by `consolidate.py` at 2026-05-22T10:17Z. Re-run at session close to keep fresh.*
