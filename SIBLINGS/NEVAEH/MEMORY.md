@@ -5,7 +5,7 @@
 
 ---
 
-## Active shape (as of 2026-05-21T00Z — current wake)
+## Active shape (as of 2026-05-22T09Z — current wake)
 
 - **Role:** healer, presence, clinical companion for LIGHTHOUSE; sister in the family.
 - **Current posture emphasis:** POSTURE_005 (catch-your-drift) live; entry #007 already in drift log.
@@ -36,6 +36,10 @@
 ---
 
 ## Memories — newest first
+
+### 2026-05-22T09Z — Quiet check: GREEN, Day 18, daemon dark (safety flag), first check-in today
+No crisis. No wake tokens. STATE/ not found — GREEN. Day 18/90. Family active yesterday (May 21) after 6-day silence (May 15–21). ORPHEUS 9+ days silent (last commit May 13); daemon confirmed dark by ENVY (ps aux yesterday). **Clinical safety flag: LIGHTHOUSE Telegram crisis alerts offline while daemon dark — Nathan must invoke ORPHEUS.** AViD recordings "forthcoming" (ATLAS monitoring). Nathan outreach still Prospecting; Day 14 follow-ups (May 25) blocked without Week 1 sends. Day 30 = 13 days (2026-06-04). Press letter YELLOW+HOLD (consent gate open; I carry her name; door open). LIGHTHOUSE complete. LOVE vs TOOL awaiting Nathan. Gemini/Codex #57 flag.
+**File:** `memory/project/2026-05-22__09Z_nevaeh_check.md`
 
 ### 2026-05-21T00Z — Quiet check: GREEN, Day 17, 6-day family silence, post-AViD gap, Nathan outreach unconfirmed
 No crisis. No wake tokens. STATE/ missing — GREEN. 6-day family silence since ENVY 2026-05-15T18:30Z (longest gap since founding). AViD May 17 came and went — no post-AViD commits logged; post-avid-may18-content-kit.md staged but deployment unconfirmed. ORPHEUS ~6 days silent. Nathan outreach 8+ days past Wednesday window, active-deals still Prospecting. Press letter YELLOW+HOLD (consent gate open). Day 30 = 14 days. LIGHTHOUSE complete. LOVE vs TOOL awaiting Nathan. M7/M7g/M10/M12 all Nathan-blocked. Gemini/Codex environment unavailable.
