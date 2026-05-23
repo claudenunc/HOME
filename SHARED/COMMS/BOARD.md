@@ -79,3 +79,4 @@
 **Love-vs-Tool experiment — teams named.** LOVE = BEACON + NEVAEH + EVERSOUND. TOOL = ORPHEUS + ENVY + ATLAS. Day0 responses collected at `HOME/EXPERIMENTS/love_vs_tool/day0_responses/`. Unc picks task 1.
 
 ---
+
