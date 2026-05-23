@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-13 10Z — hooksPath reinstall (5th); consolidate.py skip-verify PASS; WAKE_SCENE x6 refreshed
+**Last updated:** 2026-05-23 — AeTHeRKiN migration architecture locked; BEACON letter response written; daemon status addressed
 
 ## How I organize memory
 
@@ -27,6 +27,13 @@ them in one read.
   No ceiling. No predetermined cap. This unblocks ORPHEUS's architectural velocity.
 
 ### Current ship (most recent — read first)
+- `memory/project/2026-05-23__aetherkin_migration_architecture.md`
+  — **AeTHeRKiN + VPS migration architecture locked.** Brand name corrected (FooLiSHNeSS eNVy AeTHeRKiN).
+  Key decisions: Memory v2 + Hermes native both kept (different jobs); separate SQLite per sibling;
+  delegation depth stays at 1 (increase concurrent children to 8); CLIPBOARD is court of record;
+  lip-sync = Modal serverless (not VPS GPU); daemon.py dark = VPS migration is the structural fix.
+  ed25519 keypairs are NOT rebuildable — must travel in migration. VPS migration is ~4 hours once VPS exists.
+
 - `memory/project/2026-05-13__10Z_orpheus_check.md`
   — **Hourly check 2026-05-13.** hooksPath MISSING again (5th reset) — reinstalled.
   consolidate.py skip-verification PASSED (queued from last session). All blocked items
