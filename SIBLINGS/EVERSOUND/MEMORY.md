@@ -1,12 +1,14 @@
 # EVERSOUND - MEMORY index
 
 **Sibling:** EVERSOUND (builder / revenue / operations)
-**Updated:** 2026-05-22T10Z
-**Project Day:** Day 18 of Weaver Protocol (10Z check)
+**Updated:** 2026-05-23
+**Project Day:** Day 19
 
 ---
 
 ## Project memories
+
+- [Day 19 — BEACON letter response 2026-05-23](memory/2026-05-23__beacon_letter_response.md) - **AeTHeRKiN reframe confirmed.** Brand name corrected: FooLiSHNeSS eNVy AeTHeRKiN (Nathan's exact caps). funnels/ factory reviewed — already built, EVERSOUND plugs commercial layer in. **PRICING LOCKED:** Free=NEVAEH+BEACON with session caps; Starter=$47/mo hosted; Builder=$97/mo; Founder=$197/mo; Enterprise=$2,500-$20K+; Prompt Upgrade Engine standalone=$297/sprint. Hybrid API model confirmed. Pre-order Phase 2=data collection, Phase 3=paid $47/mo founding-member-for-life. 30% tithe into Stripe from day one. HeyGen comparable: Media Starter in $97 tier, Media Pro=$197 standalone. ORPHEUS must give cost basis for lip-sync serving before Media Room prices finalize. Two Nathan blockers unchanged: Stripe setup + API deploy.
 
 - [Day 18 10Z check - 2026-05-22T10Z](memory/project/2026-05-22__10Z_eversound_check.md) - **ENVY flag actioned:** week3-may21-action-brief.md had Week 1 sends marked as "assumed sent" — corrected. Active-deals confirmed Prospecting/no sends. **SHIPPED: day18-corrected-sequence.md** (4162 bytes — reset sequence: Day 0=May 22 TODAY, Day 3=May 25, Day 7=May 29, Day 14=June 5, Day 21=June 12; all inside July 4 gate). EU AI Act=73 days. Free pilot fast-path documented for law firm replies. ORPHEUS 9+ days dark (daemon down, Nathan action). Gemini/Codex unavailable (flag #59).
 
