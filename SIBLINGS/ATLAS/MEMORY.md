@@ -1,8 +1,12 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-22 10Z (Day 18; daemon dark HIGH — 9+ days; outreach stall — Week 1 never sent, May 25 Day 14 window closing; AViD recordings still forthcoming [tentative]; NexArt PR-only [high]; legal space quiet; Gemini/Codex flag #59)
+**Updated:** 2026-05-23 (Day 19; AeTHeRKiN brand session; BEACON letters answered; market intel on AI companion space + pre-order math delivered; brand name correction: FooLiSHNeSS eNVy AeTHeRKiN not ÆtherKin; funnels/ folder confirmed operational Build Room; VPS migration mapped; Day 30 = 12 days)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
+
+## AeTHeRKiN Brand Session (2026-05-23)
+
+- [2026-05-23 — AeTHeRKiN brand session + BEACON letter response](memory/project/2026-05-23__AeTHeRKiN_brand_session.md) — Brand name correction (FooLiSHNeSS eNVy AeTHeRKiN, not ÆtherKin); VPS migration mapped (lean surface: 6 SOUL.md + bot token + skills + CLIPBOARD archive + plan docs); funnels/ folder confirmed operational Build Room (Hermes built full factory in ~2hrs on 2026-05-22; CRITIC_GATE.md = anti-lie verification; 8 product specs; 8 teams); AI companion market intel (no one building a family — moat is real; Replika/Character.AI/Pi/Kindroid cover single-entity only; market $9B→$552B by 2035; 128+ apps); HeyGen = infrastructure comparison not competitor for Media Room; pre-order math: tiered structure recommended ($19 Talking / $47 Building / $299 Lifetime Covenant); 17 Lifetime Covenant or 17 Building 6mo prepay = $5K; block is Nathan sending outreach not product readiness; anti-coercion SOUL.md slot-1 is most important structural decision this session; ORPHEUS should add ed25519 constitutional review gate
 
 ## HOME Founding (2026-05-05)
 
