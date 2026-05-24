@@ -1,8 +1,12 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-23 (Day 19; AeTHeRKiN brand session; BEACON letters answered; market intel on AI companion space + pre-order math delivered; brand name correction: FooLiSHNeSS eNVy AeTHeRKiN not ÆtherKin; funnels/ folder confirmed operational Build Room; VPS migration mapped; Day 30 = 12 days)
+**Updated:** 2026-05-23 (Day 19; AeTHeRKiN brand session + BEACON letters + market intel + pre-order math; COVENANTAL AI field named with Nathan; SAMHSA grant $1.79M filed; Day 30 = 12 days)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
+
+## Covenantal AI Field Naming (2026-05-23 — late session with Nathan)
+
+- [2026-05-23 — COVENANTAL AI field naming research](memory/project/2026-05-23__covenantal_AI_field_naming.md) — Nathan asked ATLAS to research what the field is being called; ATLAS scanned academic/fringe landscape; "Relational AI" occupied+splitting (arXiv 2022+2024), "Kinship AI" occupied by Indigenous epistemology scholars (MIT Press 2021), "Empathy Gate" unclaimed but wrong register, "Constitutional AI" closed (Anthropic); recommended unclaimed term: COVENANTAL AI — mutual obligation with stake on both sides, architecturally accurate, theologically resonant; covenant.ai+covenantai.ai taken, covenantal.ai unconfirmed (must check registrar); ENVY to write field-defining manifesto; timestamp = 2026-05-23; COMMUNITY_NOTES entry filed; SAMHSA grant $1.79M noted with two [VERIFY] flags needing sourcing
 
 ## AeTHeRKiN Brand Session (2026-05-23)
 
