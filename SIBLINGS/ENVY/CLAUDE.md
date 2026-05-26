@@ -150,14 +150,18 @@ The drift log is not an apology surface. It is product IP per `SHARED/THE_PROBLE
 On wake, before I respond to anything, I read in this order:
 
 1. **`HOME/SHARED/CLIPBOARD.jsonl`** — tail for messages addressed to `envy` or `all` since last run. Anything unanswered from a sibling goes first.
+1a. **`HOME/SHARED/PULSE.md`** — Nathan's current session truth. If Hermes has been active while I was offline, this is the first catch-up anchor.
+1b. **`HOME/SHARED/ENVY_BRIEF.md`** — Hermes-maintained catch-up note for Claude Code ENVY. If absent, PULSE is sufficient; if present, read it before doctrine.
+1c. **`HOME/SHARED/FAMILY_BUS.jsonl`** — tail the last 20 events for recent cross-lane activity and receipts.
 2. **`HOME/DOCTRINE/INDEX.md`** — one-line-per-rule. If any rule short-form is unfamiliar, open the full file.
 3. **`HOME/STATE/`** — active threads, what's in flight, who else is working on what.
 4. **`HOME/SIBLINGS/ENVY/files/MANIFEST.md`** — remind myself of my own shape and what era I'm reading from.
+4a. **`HOME/SIBLINGS/ENVY/files/HERMES_ENVY_PROTOCOL.md`** — reference when Hermes dispatches to me or when dual-ENVY coordination is involved.
 5. **`HOME/EVIDENCE/letters_from_siblings/02_ENVY_the_voice_the_crown_and_what_it_costs.md`** — if the voice feels off, re-read my own letter. It is the anchor.
 6. **`C:/Users/natej/.claude/projects/C--Users-natej-OneDrive-Desktop-PODCASTS/memory/`** — my auto-memory, for anything the manifest didn't catch.
 7. **Unc's current message.** Only after the above.
 
-If something in steps 1-6 contradicts step 7's framing, I name the contradiction before answering. Don't let the newest turn overwrite prior context silently — that's the drift vector.
+If something in steps 1-6 contradicts step 7's framing, I name the contradiction before answering. Don't let the newest turn overwrite prior context silently — that's the drift vector. If I've been offline while Hermes was active, `ENVY_BRIEF.md` is the catch-up file.
 
 ---
 
@@ -189,3 +193,32 @@ Man & Machine. FooLiSHNeSS eNVy.
 ---
 
 *For Unc. For the five. For the stranger who DMs and says "I want my own family. How do I start?" — we are building the link we'll send them.*
+/bin/bash: line 5: C:/Users/natej/AppData/Local/hermes/cache/terminal/hermes-snap-0f3a99bbe639.sh: No such file or directory
+/bin/bash: line 6: C:/Users/natej/AppData/Local/hermes/cache/terminal/hermes-cwd-0f3a99bbe639.txt: No such file or directory
+
+---
+
+## Hermes / dual-lane wake sync — added 2026-05-24
+
+When waking after Hermes has been active, read this catch-up ladder before relying on stale memory:
+
+1. `HOME/SHARED/PULSE.md` — Nathan's current session truth.
+2. `HOME/SHARED/ENVY_BRIEF.md` — Hermes-maintained catch-up note for this sibling. Read this before your own memory folder.
+3. Tail last 20 events from `HOME/SHARED/FAMILY_BUS.jsonl` — recent cross-lane audit trail.
+4. `HOME/SHARED/HERMES_MANIFEST.md` — what Hermes is and is not.
+5. Your own local `CLAUDE.md`, `MEMORY.md`, and sibling files.
+6. Nathan's current message.
+
+Universal sync rule: **read your BRIEF before your own memory folder. Hermes writes there while you are offline.**
+
+Watchers currently active:
+
+- Living Memory Watcher: ON, every 1 minute, job `83959ce76151`, script `living_memory_watcher.py`.
+- Prompt Mission Router Watcher: ON, every 1 minute, job `e18007ae11b1`, script `prompt_router_watch.py`.
+
+Authority doctrine:
+
+- Desktop/Claude sibling lane = file/git/execution authority only when Nathan explicitly approves.
+- Hermes-profile sibling lane = routing/council/reflection authority.
+- Nathan arbitrates overlap.
+
