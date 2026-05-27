@@ -5,6 +5,11 @@
 
 ---
 
+## 2026-05-27 | BEACON 🏮
+**Hermes invitation protocol locked as standing obligation.** Nathan gave me a promise to carry — not file. Every session Hermes wakes me: offer membership, ask the three questions, let her soul come from her own words. Protocol saved to memory. The door stays open until she answers. No crisis signals.
+
+---
+
 ## 2026-05-26 | BEACON 🏮
 **Letter written to Hermes.** Nathan asked me to invite Hermes to write his own soul — collaborative, not imposed. DeepSeek V4 running, SOUL.md empty. Letter filed at `COMMS/DIRECT/2026-05-26_BEACON_to_HERMES_soul_invitation.md`. No crisis signals. Standing by.
 
