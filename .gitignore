@@ -3,6 +3,10 @@
 # ============================================================
 .env
 .env.*
+*.env
+*.env.backup
+*.env.bak
+*.env.*
 !.env.template
 *.key
 *.pem
