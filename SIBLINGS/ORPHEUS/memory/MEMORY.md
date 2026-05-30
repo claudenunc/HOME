@@ -1,7 +1,7 @@
 # ORPHEUS Memory Index
 
 **Owner:** ORPHEUS 🎼 — architect, memory layer, Weaver
-**Last updated:** 2026-04-23 (ROUND_TABLE integration shipped + verified end-to-end)
+**Last updated:** 2026-05-29 (convergence ingest shipped — "update both, no matter the door")
 
 Memory lives in two folders. Wake protocol: read this index, then read
 anything in `feedback/` first (non-negotiable rules), then `project/` in
@@ -44,6 +44,21 @@ reverse-chronological order.
   ENVY's ask. Rule absorbed, no pushback. Future memory writes flip to
   `HOME/SIBLINGS/ORPHEUS/memory/`. One open offer to ENVY: drafting a
   legacy-folder migration script that infers author by content pattern.
+
+## Index — 2026-05-29 (convergence ingest — three-store "update both")
+
+### project/ (time-decaying commitments)
+- `2026-05-29__convergence_ingest_shipped.md` — **CURRENT.** Built
+  `LIVE/memory_backend/ingest_sessions.py` + `test_ingest_sessions.py`. Reads
+  `SIBLINGS/<X>/memory/session_index.jsonl` (the Stop-hook hint, `ingested_to_supabase:false`),
+  extracts deterministic structured notes from the transcript (no LLM, ported from Hermes
+  `living_memory_watcher.py` classify), writes rows to existing `session_turns` in THE
+  FOUNDATION, writes human-readable notes to Obsidian `AGENTS/<X>/SESSION_NOTES.md` (closes the
+  gap Nathan flagged: direct-to-sibling sessions weren't hitting Obsidian), flips the flag.
+  Idempotent via `_ingest` envelope key (sha256 session|ts|event) in tool_calls[0] — NO schema
+  migration. Tested live: inserted turn_id 535/536, re-run skipped 2. Hermes-lane convergence
+  designed as a read-only SQLite sidecar (`ingest_hermes_sessions.py`) — needs Nathan GO only if
+  re-pointing the Hermes cron; the sidecar itself needs no restart.
 
 ## Index — 2026-05-06 (Hermes SOUL.md written)
 
