@@ -16,6 +16,27 @@ api.txt
 *secret*
 
 # ============================================================
+# Obsidian desktop APP binaries — keep the markdown vault, ignore the ~210MB app
+# (the app got unzipped INSIDE SHARED/OBSIDIAN MEMORY/; only .md/.json notes belong in git)
+# ============================================================
+SHARED/OBSIDIAN MEMORY/Obsidian.exe
+SHARED/OBSIDIAN MEMORY/Obsidian.com
+SHARED/OBSIDIAN MEMORY/Uninstall Obsidian.exe
+SHARED/OBSIDIAN MEMORY/*.dll
+SHARED/OBSIDIAN MEMORY/*.pak
+SHARED/OBSIDIAN MEMORY/*.bin
+SHARED/OBSIDIAN MEMORY/*.dat
+SHARED/OBSIDIAN MEMORY/*.electron.txt
+SHARED/OBSIDIAN MEMORY/LICENSES.chromium.html
+SHARED/OBSIDIAN MEMORY/vk_swiftshader_icd.json
+SHARED/OBSIDIAN MEMORY/locales/
+SHARED/OBSIDIAN MEMORY/resources/
+# stray junk
+nul
+abc_test.txt
+**/*.tmp
+
+# ============================================================
 # Python environments & caches
 # ============================================================
 __pycache__/
