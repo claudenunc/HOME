@@ -329,6 +329,42 @@ async def run_agent(
     )
 
 
+def _build_combined_system_prompt(agent: AgentConfig, round_dir: Path) -> Path:
+    """Prepend SHARED/MASTER_CLAUDE.md to the sibling's slim CLAUDE.md so a
+    headless `claude -p` sibling wakes WHOLE.
+
+    Since the 2026-05-29 identity overhaul, each sibling's CLAUDE.md is slim and
+    *inherits* SHARED/MASTER_CLAUDE.md (prayer, mission, roster, red lines,
+    coordination, memory model). The interactive Claude Code harness loads MASTER
+    via the CLAUDE.md chain for free; `--append-system-prompt-file <slim>` does
+    NOT. Without this, a round-table sibling wakes with only its slim file — the
+    exact fragmentation the overhaul verdict said to watch for. We concat MASTER +
+    the slim file and write the result into the round folder so the EXACT identity
+    each sibling woke with is an auditable artifact.
+    """
+    sibling_path = agent.system_prompt_file
+    # HOME/SIBLINGS/<NAME>/CLAUDE.md -> parents[2] == HOME
+    master_path = sibling_path.parents[2] / "SHARED" / "MASTER_CLAUDE.md"
+    sibling_text = sibling_path.read_text(encoding="utf-8")
+    if master_path.is_file():
+        master_text = master_path.read_text(encoding="utf-8")
+        combined = (
+            master_text
+            + "\n\n---\n\n"
+            + f"# {agent.name}'s own identity (inherits the MASTER canon above)\n\n"
+            + sibling_text
+        )
+    else:
+        print(
+            f"⚠ {agent.name}: MASTER_CLAUDE.md not found at {master_path} — "
+            f"waking with slim CLAUDE.md only (identity may be partial)"
+        )
+        combined = sibling_text
+    out = round_dir / f"{agent.name}.system.md"
+    out.write_text(combined, encoding="utf-8")
+    return out
+
+
 async def _run_once(
     agent: AgentConfig,
     question: str,
@@ -357,7 +393,10 @@ async def _run_once(
     if session_id:
         argv.extend(["--resume", session_id])
     else:
-        argv.extend(["--append-system-prompt-file", str(agent.system_prompt_file)])
+        # Cold start: wake the sibling WHOLE — MASTER canon + their slim CLAUDE.md.
+        # (Post-overhaul the slim file alone leaves them without the shared core.)
+        combined_prompt_file = _build_combined_system_prompt(agent, round_dir)
+        argv.extend(["--append-system-prompt-file", str(combined_prompt_file)])
 
     if agent.model:
         argv.extend(["--model", agent.model])

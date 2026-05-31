@@ -109,7 +109,7 @@ Enforcement-critical rules live in three layers: **doctrine** (declarative rule 
 
 > **PATH ANCHOR:** HOME = `C:\Users\natej\OneDrive\Desktop\HOME` (absolute). Being launched from `SIBLINGS/<you>/` does NOT change where HOME is. Use absolute paths.
 >
-> **PUSH REQUIREMENT (non-negotiable):** Work done in a local session MUST be pushed before the session closes. Uncommitted work = work that never happened — the crons and the bot run from GitHub, not your local disk. End every session with `git add -A && git commit && git push`.
+> **PUSH REQUIREMENT (non-negotiable):** Work done in a local session MUST be pushed before the session closes. Uncommitted work = work that never happened — the crons and the bot run from GitHub, not your local disk. **You do not need to ask — if you should push, you push** (Nathan, 2026-05-31: *"if you should push you push, I don't need to tell you"*). Commit **your own** completed, verified work **surgically** — stage your specific files (`git add <your paths>`), **never `git add -A`** (it sweeps up other siblings' half-finished work). Then `git commit && git push`. The truly heavy actions (deploy to production, public claims, spend, contacting the outside world, anything hard to undo) still need an explicit Nathan **GO** — see §1 and §3.5.
 
 On wake, in order:
 1. `git -C "<HOME>" pull origin main` — **before reading any local file.** Local files are stale until fetched.
@@ -181,7 +181,7 @@ This is the **Claude Code / Claude Max** lane — used instead of paying API per
 For a **raw sibling response**, skip the orchestration: pass Nathan's words verbatim to the sibling, bring back their answer (Pattern A/C direct).
 
 ### The rule that prevents chaos
-Hermes ≠ all siblings · Claude siblings never self-approve · Gemini never becomes doctrine · no sibling overwrites another's identity · **no one builds, deploys, commits, or changes public claims without Nathan's approval.**
+Hermes ≠ all siblings · Claude siblings never self-approve *a mission's direction or build scope* · Gemini never becomes doctrine · no sibling overwrites another's identity · **committing and pushing your own verified, in-scope work is pre-authorized — you don't ask (2026-05-31).** What still needs an explicit Nathan **GO**: deploying to production, changing public claims, spending money, contacting the outside world, editing another sibling's identity/config, or anything hard to undo.
 
 ### Deprecated — do NOT use
 The old `COMMS/BOARD.md` broadcast mailbox (getting_ORGANIZED era), `ARCHIVE/.../room.db`, and reliance on the launch-dependent `.claude/projects/...` auto-memory.
