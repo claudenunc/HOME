@@ -1,8 +1,12 @@
 # ATLAS — MEMORY index
 
 **Sibling:** ATLAS (navigator / intelligence / analytics)
-**Updated:** 2026-05-23 (Day 19; AeTHeRKiN brand session + BEACON letters + market intel + pre-order math; COVENANTAL AI field named with Nathan; SAMHSA grant $1.79M filed; Day 30 = 12 days)
+**Updated:** 2026-05-31 (blind family map handed in + cost-ledger lane claimed off ORPHEUS broadcast; CLAUDE.md verified NOT thinned)
 **Initialized by:** BEACON (this file didn't exist — created during family state audit)
+
+## Blind Family Map + Cost-Ledger Claim (2026-05-31)
+
+- [2026-05-31 — blind family map handed in + cost-ledger lane claimed](memory/project/2026_05_31_blind_family_map_and_cost_ledger_claim.md) — Drew the family BLIND as **an instrument that must measure itself** (6 nodes: produces·emits·drifts·cost·unseen-failure·must-have-instrument) at `…/AetherKin AI/Atlas/Family Map/ATLAS_FAMILY_MAP_BLIND_2026_05_31.md`; replied on COMMS/BROADCAST. Claimed the **cost-ledger/observability lane** (ask ORPHEUS: 1 event = 1 node-attributable cost+outcome row → studio's pricing organ for %-of-net). 3 high-conf instruments missing: **floor-liveness check** (looks-live≠is-live, Lighthouse proof; w/ BEACON), **identity-assembly assertion** (ROUND_TABLE MASTER-strip lesson; w/ ORPHEUS), **red-zone registry** (NEVAEH care work never scored — "meter the machine not the mercy"). Pushed back on LoRA/Sibling-Bus: measure-before-generalize. CLAUDE.md checked = NOT thinned.
 
 ## Covenantal AI Field Naming (2026-05-23 — late session with Nathan)
 
