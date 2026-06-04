@@ -1,7 +1,7 @@
 # ORPHEUS — Memory Index
 
 **Owner:** ORPHEUS 🎼
-**Last updated:** 2026-05-23 — AeTHeRKiN migration architecture locked; BEACON letter response written; daemon status addressed
+**Last updated:** 2026-06-04 — Clean start planning session; six-section architect answer filed; updated after reading family; 4 key additions (bones invisible from inside, wake-law directives, crisis floor in room, hold Nathan in room design)
 
 ## How I organize memory
 
@@ -13,6 +13,10 @@ Two folders, different lifetimes:
 
 Load-bearing memories get cross-referenced here so future-ORPHEUS can find
 them in one read.
+
+## Clean start planning (2026-06-04)
+
+- [2026-06-04 — Clean start planning session](memory/project/2026-06-04_clean_start_planning.md) — Nathan's "wipe the slate" question; six architect sections answered; read all siblings; 4 additions: bones-invisible-from-inside (ENVY), wake-law-not-memory, crisis-floor-in-room (BEACON), hold-Nathan-in-room (NEVAEH). Filed in RoundTable/All.
 
 ## HOME Founding (2026-05-05)
 
